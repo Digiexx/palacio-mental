@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0a0711"
+    >
+
+    <title>Palácio Mental</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- =====================================================
+             TOPO
+        ====================================================== -->
+
+        <header class="app-header">
+
+            <div class="header-copy">
+
+                <span class="header-kicker">
+                    TREINAMENTO COGNITIVO
+                </span>
+
+                <h1>
+                    Palácio Mental
+                </h1>
+
+            </div>
+
+
+            <button
+                class="icon-button"
+                type="button"
+                aria-label="Configurações"
+                id="btnConfig"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"
+                    />
+
+                    <path
+                        d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1a1.7 1.7 0 0 0-.4-1.1 1.7 1.7 0 0 0-1-.6 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.8v-4h.1A1.7 1.7 0 0 0 4 9.2a1.7 1.7 0 0 0 .6-1 1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.8h4v.1A1.7 1.7 0 0 0 14.8 4a1.7 1.7 0 0 0 1 .6 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.1.4.3.7.6 1 .3.2.7.4 1.1.4h.1v4h-.1a1.7 1.7 0 0 0-1.1.4c-.3.2-.5.6-.6 1Z"
+                    />
+
+                </svg>
+
+            </button>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CONTEÚDO PRINCIPAL
+        ====================================================== -->
+
+        <main class="main-content">
+
+            <!-- =================================================
+                 CONTINUAR
+            ================================================== -->
+
+            <section class="hero-card">
+
+                <div class="hero-glow"></div>
+
+                <div class="hero-content">
+
+                    <span class="section-label">
+                        CONTINUE DE ONDE PAROU
+                    </span>
+
+                    <h2>
+                        Fortaleça sua memória hoje.
+                    </h2>
+
+                    <p>
+                        Treine associações, recupere imagens e avance
+                        no seu palácio mental.
+                    </p>
+
+
+                    <div class="hero-progress">
+
+                        <div class="hero-progress-info">
+
+                            <span>
+                                Progresso geral
+                            </span>
+
+                            <strong id="progressoGeral">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-fill"
+                                id="barraProgressoGeral"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="primary-button"
+                        id="btnTreinoRapido"
+                        type="button"
+                    >
+
+                        <span>
+                            Treino rápido
+                        </span>
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="m9 18 6-6-6-6"
+                            />
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MÓDULOS
+            ================================================== -->
+
+            <section class="modules-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            SEUS CAMINHOS
+                        </span>
+
+                        <h2>
+                            Treinamentos
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="modules-grid">
+
+                    <!-- MEMÓRIA NUMÉRICA -->
+
+                    <button
+                        class="module-card module-card-featured"
+                        id="btnMemoriaNumerica"
+                        type="button"
+                    >
+
+                        <div class="module-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M9 4.5A3.5 3.5 0 0 1 12 3a3.5 3.5 0 0 1 3 1.5A3.5 3.5 0 0 1 18.5 8a3.5 3.5 0 0 1-1 2.45A3.5 3.5 0 0 1 18 12a3.5 3.5 0 0 1-3 3.46A3.5 3.5 0 0 1 12 17a3.5 3.5 0 0 1-3-1.54A3.5 3.5 0 0 1 6 12a3.5 3.5 0 0 1 .5-1.55A3.5 3.5 0 0 1 5.5 8 3.5 3.5 0 0 1 9 4.5Z"
+                                />
+
+                                <path
+                                    d="M12 3v14"
+                                />
+
+                                <path
+                                    d="M9 7.5h3"
+                                />
+
+                                <path
+                                    d="M12 11h3"
+                                />
+                            </svg>
+
+                        </div>
+
+
+                        <div class="module-content">
+
+                            <span class="module-kicker">
+                                BASE DO SISTEMA
+                            </span>
+
+                            <h3>
+                                Memória Numérica
+                            </h3>
+
+                            <p>
+                                Transforme números em imagens e personagens
+                                até reconhecer cada associação instantaneamente.
+                            </p>
+
+
+                            <div class="module-meta">
+
+                                <span>
+                                    <strong id="numerosDominados">
+                                        0
+                                    </strong>
+                                    de 100 dominados
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="module-arrow">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 18 6-6-6-6"
+                                />
+                            </svg>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- PALÁCIO BÍBLICO -->
+
+                    <button
+                        class="module-card"
+                        id="btnPalacioBiblico"
+                        type="button"
+                    >
+
+                        <div class="module-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M4 21V9l8-5 8 5v12"
+                                />
+
+                                <path
+                                    d="M8 21v-8h8v8"
+                                />
+
+                                <path
+                                    d="M2 21h20"
+                                />
+
+                                <path
+                                    d="M12 4V1"
+                                />
+                            </svg>
+
+                        </div>
+
+
+                        <div class="module-content">
+
+                            <span class="module-kicker">
+                                MEMÓRIA ESPACIAL
+                            </span>
+
+                            <h3>
+                                Palácio Bíblico
+                            </h3>
+
+                            <p>
+                                Caminhe pelos livros da Bíblia e guarde
+                                referências e versos em locais fixos.
+                            </p>
+
+
+                            <div class="module-meta">
+
+                                <span>
+                                    <strong id="livrosExplorados">
+                                        0
+                                    </strong>
+                                    livros explorados
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="module-arrow">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 18 6-6-6-6"
+                                />
+                            </svg>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- DOMÍNIO -->
+
+                    <button
+                        class="module-card"
+                        id="btnDominio"
+                        type="button"
+                    >
+
+                        <div class="module-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z"
+                                />
+                            </svg>
+
+                        </div>
+
+
+                        <div class="module-content">
+
+                            <span class="module-kicker">
+                                NÍVEL AVANÇADO
+                            </span>
+
+                            <h3>
+                                Domínio
+                            </h3>
+
+                            <p>
+                                Treine velocidade, números grandes,
+                                cenas compostas e recuperação sem pistas.
+                            </p>
+
+
+                            <div class="module-meta">
+
+                                <span>
+                                    Precisão + velocidade + retenção
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="module-arrow">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 18 6-6-6-6"
+                                />
+                            </svg>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- REVISÃO -->
+
+                    <button
+                        class="module-card"
+                        id="btnRevisao"
+                        type="button"
+                    >
+
+                        <div class="module-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M20 11a8 8 0 1 0 2 5.3"
+                                />
+
+                                <path
+                                    d="M20 4v7h-7"
+                                />
+                            </svg>
+
+                        </div>
+
+
+                        <div class="module-content">
+
+                            <span class="module-kicker">
+                                REVISÃO INTELIGENTE
+                            </span>
+
+                            <h3>
+                                Memórias de hoje
+                            </h3>
+
+                            <p>
+                                Revise automaticamente aquilo que está
+                                ficando mais fraco antes de esquecer.
+                            </p>
+
+
+                            <div class="module-meta">
+
+                                <span>
+                                    <strong id="revisoesPendentes">
+                                        0
+                                    </strong>
+                                    revisões pendentes
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="module-arrow">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="m9 18 6-6-6-6"
+                                />
+                            </svg>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 RESUMO
+            ================================================== -->
+
+            <section class="summary-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            DESEMPENHO
+                        </span>
+
+                        <h2>
+                            Sua evolução
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="text-button"
+                        id="btnVerProgresso"
+                        type="button"
+                    >
+                        Ver tudo
+                    </button>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            Memórias dominadas
+                        </span>
+
+                        <strong
+                            class="stat-value"
+                            id="memoriasDominadas"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            Versos memorizados
+                        </span>
+
+                        <strong
+                            class="stat-value"
+                            id="versosMemorizados"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            Dias de sequência
+                        </span>
+
+                        <strong
+                            class="stat-value"
+                            id="diasSequencia"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <!-- =====================================================
+             NAVEGAÇÃO INFERIOR
+        ====================================================== -->
+
+        <nav class="bottom-nav">
+
+            <button
+                class="nav-item active"
+                type="button"
+                data-page="inicio"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M3 11 12 3l9 8"
+                    />
+
+                    <path
+                        d="M5 10v10h14V10"
+                    />
+                </svg>
+
+                <span>
+                    Início
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+                data-page="treinar"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M6 4h12v16H6z"
+                    />
+
+                    <path
+                        d="M9 8h6"
+                    />
+
+                    <path
+                        d="M9 12h6"
+                    />
+
+                    <path
+                        d="M9 16h3"
+                    />
+                </svg>
+
+                <span>
+                    Treinar
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item nav-item-center"
+                type="button"
+                data-page="palacio"
+            >
+
+                <div class="nav-center-icon">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M4 21V9l8-5 8 5v12"
+                        />
+
+                        <path
+                            d="M8 21v-8h8v8"
+                        />
+
+                        <path
+                            d="M2 21h20"
+                        />
+                    </svg>
+
+                </div>
+
+                <span>
+                    Palácio
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+                data-page="dominio"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z"
+                    />
+                </svg>
+
+                <span>
+                    Domínio
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                type="button"
+                data-page="progresso"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M4 20V10"
+                    />
+
+                    <path
+                        d="M10 20V4"
+                    />
+
+                    <path
+                        d="M16 20v-7"
+                    />
+
+                    <path
+                        d="M22 20V7"
+                    />
+                </svg>
+
+                <span>
+                    Progresso
+                </span>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
