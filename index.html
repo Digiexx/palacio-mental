@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="theme-color"
-        content="#0a0711"
-    >
+    <meta name="theme-color" content="#0a0711">
 
     <title>Palácio Mental</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
     <div class="app-shell">
+
 
         <!-- =====================================================
              TOPO
@@ -44,24 +40,14 @@
             </div>
 
 
-            <button
-                class="icon-button"
-                type="button"
-                aria-label="Configurações"
-                id="btnConfig"
-            >
+            <button class="icon-button" type="button" aria-label="Configurações" id="btnConfig">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"
-                    />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                    <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
 
                     <path
-                        d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1a1.7 1.7 0 0 0-.4-1.1 1.7 1.7 0 0 0-1-.6 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.8v-4h.1A1.7 1.7 0 0 0 4 9.2a1.7 1.7 0 0 0 .6-1 1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.8h4v.1A1.7 1.7 0 0 0 14.8 4a1.7 1.7 0 0 0 1 .6 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.1.4.3.7.6 1 .3.2.7.4 1.1.4h.1v4h-.1a1.7 1.7 0 0 0-1.1.4c-.3.2-.5.6-.6 1Z"
-                    />
+                        d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1a1.7 1.7 0 0 0-.4-1.1 1.7 1.7 0 0 0-1-.6 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.8v-4h.1A1.7 1.7 0 0 0 4 9.2a1.7 1.7 0 0 0 .6-1 1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.8h4v.1A1.7 1.7 0 0 0 14.8 4a1.7 1.7 0 0 0 1 .6 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.1.4.3.7.6 1 .3.2.7.4 1.1.4h.1v4h-.1a1.7 1.7 0 0 0-1.1.4c-.3.2-.5.6-.6 1Z" />
 
                 </svg>
 
@@ -77,8 +63,459 @@
 
         <main class="main-content">
 
+
             <!-- =================================================
-                 CONTINUAR
+                 TELA — MEMÓRIA NUMÉRICA
+            ================================================== -->
+
+            <section class="app-screen screen-memoria" id="telaMemoriaNumerica" hidden>
+
+
+                <!-- CABEÇALHO DA TELA -->
+
+                <div class="screen-header">
+
+                    <button class="back-button" id="btnVoltarHome" type="button" aria-label="Voltar">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+
+                    </button>
+
+
+                    <div>
+
+                        <span class="section-label">
+                            MEMÓRIA NUMÉRICA
+                        </span>
+
+                        <h2>
+                            Transforme números em imagens
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     APRESENTAÇÃO DA MEMÓRIA NUMÉRICA
+                ================================================== -->
+
+                <section class="memory-hero">
+
+
+                    <div class="memory-hero-copy">
+
+                        <span class="module-kicker">
+                            PRIMEIRO PASSO
+                        </span>
+
+                        <h3>
+                            Crie imagens que sua mente não esquece.
+                        </h3>
+
+                        <p>
+                            Cada número será ligado a uma imagem única.
+                            Depois, você aprenderá a reconhecer, recordar
+                            e combinar essas imagens rapidamente.
+                        </p>
+
+                    </div>
+
+
+                    <div class="memory-hero-visual">
+
+                        <div class="memory-hero-visual">
+
+                            <div class="memory-image-frame">
+
+                                <img src="assets/imagens/memoria-numerica/capa-memoria-numerica.png"
+                                    alt="Ilustração do universo da memória numérica" class="memory-hero-image">
+
+                                <div class="memory-image-overlay"></div>
+
+                            </div>
+
+                        </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     CAMINHO DE APRENDIZAGEM
+                ================================================== -->
+
+                <section class="learning-path">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span class="section-label">
+                                COMO FUNCIONA
+                            </span>
+
+                            <h2>
+                                Seu caminho até o domínio
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learning-steps">
+
+
+                        <!-- ETAPA 01 -->
+
+                        <article class="learning-step">
+
+                            <span class="step-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Aprender
+                            </h3>
+
+                            <p>
+                                Conheça o número, o código
+                                e a imagem correspondente.
+                            </p>
+
+                        </article>
+
+
+                        <!-- ETAPA 02 -->
+
+                        <article class="learning-step">
+
+                            <span class="step-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Reconhecer
+                            </h3>
+
+                            <p>
+                                Veja a imagem e identifique
+                                rapidamente qual número ela representa.
+                            </p>
+
+                        </article>
+
+
+                        <!-- ETAPA 03 -->
+
+                        <article class="learning-step">
+
+                            <span class="step-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Recordar
+                            </h3>
+
+                            <p>
+                                Veja apenas o número e recupere
+                                a imagem sem nenhuma pista.
+                            </p>
+
+                        </article>
+
+
+                        <!-- ETAPA 04 -->
+
+                        <article class="learning-step">
+
+                            <span class="step-number">
+                                04
+                            </span>
+
+                            <h3>
+                                Dominar
+                            </h3>
+
+                            <p>
+                                Alcance velocidade suficiente
+                                para usar as imagens em sequências maiores.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     COMEÇAR TREINAMENTO
+                ================================================== -->
+
+                <section class="memory-start-card">
+
+
+                    <div class="memory-guide">
+
+                        <div class="guide-avatar">
+
+                            <img src="assets/imagens/personagens/mago-memoria.png" alt="Mago da Memória">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="memory-start-content">
+
+                        <span class="module-kicker">
+                            PRONTO PARA COMEÇAR?
+                        </span>
+
+                        <h3>
+                            Comece pelo nível Aprender.
+                        </h3>
+
+                        <p>
+                            Vamos iniciar com poucos números
+                            e aumentar a dificuldade conforme
+                            sua memória evolui.
+                        </p>
+
+
+                        <button class="primary-button" id="btnIniciarAprendizado" type="button">
+
+                            <span>
+                                Iniciar treino
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 TELA — APRENDER MEMÓRIA NUMÉRICA
+            ================================================== -->
+
+            <section class="app-screen screen-aprender" id="telaAprenderMemoria" hidden>
+
+
+                <div class="learn-background">
+
+                    <img src="assets/imagens/memoria-numerica/capa-aprender.png" alt="" aria-hidden="true">
+
+                    <div class="learn-background-overlay"></div>
+
+                </div>
+
+
+                <div class="learn-content">
+
+
+                    <div class="screen-header">
+
+                        <button class="back-button" id="btnVoltarMemoria" type="button"
+                            aria-label="Voltar para Memória Numérica">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Aprender
+                            </h2>
+
+                            <p>
+                                Conheça cada número e transforme-o
+                                em uma imagem fácil de lembrar.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="learn-floating-symbol learn-floating-symbol-1" aria-hidden="true">
+                        1
+                    </div>
+
+                    <div class="learn-floating-symbol learn-floating-symbol-2" aria-hidden="true">
+                        7
+                    </div>
+
+                    <div class="learn-floating-symbol learn-floating-symbol-3" aria-hidden="true">
+                        8
+                    </div>
+
+
+                    <div class="learn-intro-spacer"></div>
+
+
+                    <div class="learn-info-card">
+
+                        <div class="learn-info-icon">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7L12 3z" />
+                            </svg>
+
+                        </div>
+
+
+                        <div class="learn-info-content">
+
+                            <span class="module-kicker">
+                                COMO FUNCIONA
+                            </span>
+
+                            <h3>
+                                Crie uma conexão visual.
+                            </h3>
+
+                            <p>
+                                Você verá o número, o código
+                                correspondente e a imagem associada.
+                                Observe a relação e transforme essa
+                                conexão em uma memória forte.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="primary-button learn-start-button" id="btnComecarAprendizado" type="button">
+
+                        <span>
+                            Iniciar aprendizado
+                        </span>
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="memory-learning-stage" id="memoryLearningStage" hidden>
+
+                    <div class="learning-card">
+
+                        <div class="learning-card-top">
+
+                            <span class="learning-progress" id="learningProgress">
+                                01 / 10
+                            </span>
+
+                            <span class="learning-mode">
+                                APRENDER
+                            </span>
+
+                        </div>
+
+
+                        <div class="learning-number-area">
+
+                            <span class="learning-label">
+                                NÚMERO
+                            </span>
+
+                            <strong class="learning-number" id="learningNumero">
+                                01
+                            </strong>
+
+                        </div>
+
+
+                        <div class="learning-association">
+
+                            <div class="learning-code">
+
+                                <span>
+                                    CÓDIGO
+                                </span>
+
+                                <strong id="learningCodigo">
+                                    T
+                                </strong>
+
+                            </div>
+
+
+                            <div class="learning-word">
+
+                                <span>
+                                    ASSOCIAÇÃO
+                                </span>
+
+                                <strong id="learningPalavra">
+                                    TEIA
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                        <div class="learning-image-frame">
+
+                            <img src="assets/imagens/memoria-numerica/numeros/01-teia.webp"
+                                alt="Personagem Teia, associação visual do número 01" class="learning-image"
+                                id="learningImagem">
+
+                            <div class="learning-image-glow"></div>
+
+                        </div>                       
+
+
+                        <button class="primary-button learning-next-button" id="btnProximaMemoria" type="button">
+
+                            <span>
+                                Entendi
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+            <!-- =================================================
+                 HOME
             ================================================== -->
 
             <section class="hero-card">
@@ -86,7 +523,6 @@
                 <div class="hero-glow"></div>
 
                 <div class="hero-content">
-
                     <span class="section-label">
                         CONTINUE DE ONDE PAROU
                     </span>
@@ -118,33 +554,21 @@
 
                         <div class="progress-track">
 
-                            <div
-                                class="progress-fill"
-                                id="barraProgressoGeral"
-                            ></div>
+                            <div class="progress-fill" id="barraProgressoGeral"></div>
 
                         </div>
 
                     </div>
 
 
-                    <button
-                        class="primary-button"
-                        id="btnTreinoRapido"
-                        type="button"
-                    >
+                    <button class="primary-button" id="btnTreinoRapido" type="button">
 
                         <span>
                             Treino rápido
                         </span>
 
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="m9 18 6-6-6-6"
-                            />
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m9 18 6-6-6-6" />
                         </svg>
 
                     </button>
@@ -180,35 +604,24 @@
 
                 <div class="modules-grid">
 
+
                     <!-- MEMÓRIA NUMÉRICA -->
 
-                    <button
-                        class="module-card module-card-featured"
-                        id="btnMemoriaNumerica"
-                        type="button"
-                    >
+                    <button class="module-card module-card-featured" id="btnMemoriaNumerica" type="button">
 
                         <div class="module-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M9 4.5A3.5 3.5 0 0 1 12 3a3.5 3.5 0 0 1 3 1.5A3.5 3.5 0 0 1 18.5 8a3.5 3.5 0 0 1-1 2.45A3.5 3.5 0 0 1 18 12a3.5 3.5 0 0 1-3 3.46A3.5 3.5 0 0 1 12 17a3.5 3.5 0 0 1-3-1.54A3.5 3.5 0 0 1 6 12a3.5 3.5 0 0 1 .5-1.55A3.5 3.5 0 0 1 5.5 8 3.5 3.5 0 0 1 9 4.5Z"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
 
                                 <path
-                                    d="M12 3v14"
-                                />
+                                    d="M9 4.5A3.5 3.5 0 0 1 12 3a3.5 3.5 0 0 1 3 1.5A3.5 3.5 0 0 1 18.5 8a3.5 3.5 0 0 1-1 2.45A3.5 3.5 0 0 1 18 12a3.5 3.5 0 0 1-3 3.46A3.5 3.5 0 0 1 12 17a3.5 3.5 0 0 1-3-1.54A3.5 3.5 0 0 1 6 12a3.5 3.5 0 0 1 .5-1.55A3.5 3.5 0 0 1 5.5 8 3.5 3.5 0 0 1 9 4.5Z" />
 
-                                <path
-                                    d="M9 7.5h3"
-                                />
+                                <path d="M12 3v14" />
 
-                                <path
-                                    d="M12 11h3"
-                                />
+                                <path d="M9 7.5h3" />
+
+                                <path d="M12 11h3" />
+
                             </svg>
 
                         </div>
@@ -236,6 +649,7 @@
                                     <strong id="numerosDominados">
                                         0
                                     </strong>
+
                                     de 100 dominados
                                 </span>
 
@@ -246,13 +660,8 @@
 
                         <div class="module-arrow">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="m9 18 6-6-6-6"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
                             </svg>
 
                         </div>
@@ -263,33 +672,20 @@
 
                     <!-- PALÁCIO BÍBLICO -->
 
-                    <button
-                        class="module-card"
-                        id="btnPalacioBiblico"
-                        type="button"
-                    >
+                    <button class="module-card" id="btnPalacioBiblico" type="button">
 
                         <div class="module-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M4 21V9l8-5 8 5v12"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
 
-                                <path
-                                    d="M8 21v-8h8v8"
-                                />
+                                <path d="M4 21V9l8-5 8 5v12" />
 
-                                <path
-                                    d="M2 21h20"
-                                />
+                                <path d="M8 21v-8h8v8" />
 
-                                <path
-                                    d="M12 4V1"
-                                />
+                                <path d="M2 21h20" />
+
+                                <path d="M12 4V1" />
+
                             </svg>
 
                         </div>
@@ -317,6 +713,7 @@
                                     <strong id="livrosExplorados">
                                         0
                                     </strong>
+
                                     livros explorados
                                 </span>
 
@@ -327,13 +724,8 @@
 
                         <div class="module-arrow">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="m9 18 6-6-6-6"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
                             </svg>
 
                         </div>
@@ -344,21 +736,15 @@
 
                     <!-- DOMÍNIO -->
 
-                    <button
-                        class="module-card"
-                        id="btnDominio"
-                        type="button"
-                    >
+                    <button class="module-card" id="btnDominio" type="button">
 
                         <div class="module-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+
                                 <path
-                                    d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z"
-                                />
+                                    d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z" />
+
                             </svg>
 
                         </div>
@@ -393,13 +779,8 @@
 
                         <div class="module-arrow">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="m9 18 6-6-6-6"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
                             </svg>
 
                         </div>
@@ -410,25 +791,16 @@
 
                     <!-- REVISÃO -->
 
-                    <button
-                        class="module-card"
-                        id="btnRevisao"
-                        type="button"
-                    >
+                    <button class="module-card" id="btnRevisao" type="button">
 
                         <div class="module-icon">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M20 11a8 8 0 1 0 2 5.3"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
 
-                                <path
-                                    d="M20 4v7h-7"
-                                />
+                                <path d="M20 11a8 8 0 1 0 2 5.3" />
+
+                                <path d="M20 4v7h-7" />
+
                             </svg>
 
                         </div>
@@ -456,6 +828,7 @@
                                     <strong id="revisoesPendentes">
                                         0
                                     </strong>
+
                                     revisões pendentes
                                 </span>
 
@@ -466,13 +839,8 @@
 
                         <div class="module-arrow">
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="m9 18 6-6-6-6"
-                                />
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
                             </svg>
 
                         </div>
@@ -482,11 +850,8 @@
                 </div>
 
             </section>
-
-
-
             <!-- =================================================
-                 RESUMO
+                 RESUMO DE DESEMPENHO
             ================================================== -->
 
             <section class="summary-section">
@@ -506,11 +871,7 @@
                     </div>
 
 
-                    <button
-                        class="text-button"
-                        id="btnVerProgresso"
-                        type="button"
-                    >
+                    <button class="text-button" id="btnVerProgresso" type="button">
                         Ver tudo
                     </button>
 
@@ -525,10 +886,7 @@
                             Memórias dominadas
                         </span>
 
-                        <strong
-                            class="stat-value"
-                            id="memoriasDominadas"
-                        >
+                        <strong class="stat-value" id="memoriasDominadas">
                             0
                         </strong>
 
@@ -541,10 +899,7 @@
                             Versos memorizados
                         </span>
 
-                        <strong
-                            class="stat-value"
-                            id="versosMemorizados"
-                        >
+                        <strong class="stat-value" id="versosMemorizados">
                             0
                         </strong>
 
@@ -557,10 +912,7 @@
                             Dias de sequência
                         </span>
 
-                        <strong
-                            class="stat-value"
-                            id="diasSequencia"
-                        >
+                        <strong class="stat-value" id="diasSequencia">
                             0
                         </strong>
 
@@ -580,23 +932,11 @@
 
         <nav class="bottom-nav">
 
-            <button
-                class="nav-item active"
-                type="button"
-                data-page="inicio"
-            >
+            <button class="nav-item active" type="button" data-page="inicio">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M3 11 12 3l9 8"
-                    />
-
-                    <path
-                        d="M5 10v10h14V10"
-                    />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 11 12 3l9 8" />
+                    <path d="M5 10v10h14V10" />
                 </svg>
 
                 <span>
@@ -606,31 +946,13 @@
             </button>
 
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="treinar"
-            >
+            <button class="nav-item" type="button" data-page="treinar">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M6 4h12v16H6z"
-                    />
-
-                    <path
-                        d="M9 8h6"
-                    />
-
-                    <path
-                        d="M9 12h6"
-                    />
-
-                    <path
-                        d="M9 16h3"
-                    />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 4h12v16H6z" />
+                    <path d="M9 8h6" />
+                    <path d="M9 12h6" />
+                    <path d="M9 16h3" />
                 </svg>
 
                 <span>
@@ -640,29 +962,14 @@
             </button>
 
 
-            <button
-                class="nav-item nav-item-center"
-                type="button"
-                data-page="palacio"
-            >
+            <button class="nav-item nav-item-center" type="button" data-page="palacio">
 
                 <div class="nav-center-icon">
 
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M4 21V9l8-5 8 5v12"
-                        />
-
-                        <path
-                            d="M8 21v-8h8v8"
-                        />
-
-                        <path
-                            d="M2 21h20"
-                        />
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 21V9l8-5 8 5v12" />
+                        <path d="M8 21v-8h8v8" />
+                        <path d="M2 21h20" />
                     </svg>
 
                 </div>
@@ -674,19 +981,10 @@
             </button>
 
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="dominio"
-            >
+            <button class="nav-item" type="button" data-page="dominio">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z"
-                    />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z" />
                 </svg>
 
                 <span>
@@ -696,31 +994,13 @@
             </button>
 
 
-            <button
-                class="nav-item"
-                type="button"
-                data-page="progresso"
-            >
+            <button class="nav-item" type="button" data-page="progresso">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-                    <path
-                        d="M4 20V10"
-                    />
-
-                    <path
-                        d="M10 20V4"
-                    />
-
-                    <path
-                        d="M16 20v-7"
-                    />
-
-                    <path
-                        d="M22 20V7"
-                    />
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 20V10" />
+                    <path d="M10 20V4" />
+                    <path d="M16 20v-7" />
+                    <path d="M22 20V7" />
                 </svg>
 
                 <span>
@@ -737,4 +1017,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
