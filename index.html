@@ -212,21 +212,16 @@
 
 
         <!-- =====================================================
-             TOPO
-        ====================================================== -->
+     TOPO
+====================================================== -->
 
         <header class="app-header">
 
             <div class="header-copy">
-
-                <span class="header-kicker">
-                    TREINAMENTO COGNITIVO
-                </span>
-
-                <h1>
-                    Palácio Mental
-                </h1>
-
+                <!--
+            Espaço mantido propositalmente vazio.
+            O título principal da tela agora fica no HERO.
+        -->
             </div>
 
 
@@ -705,21 +700,40 @@
 
             </section>
             <!-- =================================================
-                 HOME
-            ================================================== -->
+     HOME — HERO CINEMATOGRÁFICO
+================================================== -->
 
-            <section class="hero-card">
+            <section class="hero-card hero-palacio">
 
-                <div class="hero-glow"></div>
+                <!-- IMAGEM PRINCIPAL -->
+                <div class="hero-palacio-image">
 
+                    <img src="assets/imagens/home/palacio-home.webp" alt="" aria-hidden="true">
+
+                    <!-- Faz a imagem se fundir com o fundo da Home -->
+                    <div class="hero-palacio-gradient"></div>
+
+                </div>
+
+
+                <!-- CONTEÚDO -->
                 <div class="hero-content">
+
                     <span class="section-label">
                         CONTINUE DE ONDE PAROU
                     </span>
 
+
                     <h2>
-                        Fortaleça sua memória hoje.
+                        <span class="hero-title-line">
+                            FORTALEÇA
+                        </span>
+
+                        <span class="hero-title-gradient">
+                            SUA MENTE
+                        </span>
                     </h2>
+
 
                     <p>
                         Treine associações, recupere imagens e avance
@@ -727,6 +741,7 @@
                     </p>
 
 
+                    <!-- PROGRESSO -->
                     <div class="hero-progress">
 
                         <div class="hero-progress-info">
@@ -751,6 +766,7 @@
                     </div>
 
 
+                    <!-- TREINO RÁPIDO -->
                     <button class="primary-button" id="btnTreinoRapido" type="button">
 
                         <span>
@@ -758,7 +774,7 @@
                         </span>
 
                         <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="m9 18 6-6-6-6" />
+                            <path d="m9 18 6-6-6-6"></path>
                         </svg>
 
                     </button>
@@ -766,8 +782,6 @@
                 </div>
 
             </section>
-
-
 
             <!-- =================================================
                  MÓDULOS

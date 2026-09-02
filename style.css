@@ -959,7 +959,7 @@ button {
 
     .main-content {
         padding:
-            18px 14px 45px;
+            0 14px 45px;
     }
 
     .hero-card {
@@ -4640,14 +4640,10 @@ button {
     pointer-events: none;
 
     animation:
-        portalTelaImersao 950ms
-        cubic-bezier(
-            0.20,
+        portalTelaImersao 950ms cubic-bezier(0.20,
             0.72,
             0.20,
-            1
-        )
-        forwards;
+            1) forwards;
 }
 
 
@@ -4677,21 +4673,18 @@ button {
     z-index: 50;
 
     transform:
-        translate(-50%, -50%)
-        scale(0);
+        translate(-50%, -50%) scale(0);
 
     opacity: 0;
 
     background:
-        radial-gradient(
-            circle,
+        radial-gradient(circle,
             rgba(255, 255, 255, 0.98) 0%,
             rgba(198, 225, 255, 0.95) 10%,
             rgba(116, 88, 255, 0.82) 27%,
             rgba(139, 52, 255, 0.55) 43%,
             rgba(63, 21, 130, 0.18) 63%,
-            transparent 74%
-        );
+            transparent 74%);
 
     box-shadow:
         0 0 35px rgba(174, 210, 255, 0.90),
@@ -4699,14 +4692,10 @@ button {
         0 0 150px rgba(122, 55, 255, 0.65);
 
     animation:
-        portalOndaEnergia 950ms
-        cubic-bezier(
-            0.18,
+        portalOndaEnergia 950ms cubic-bezier(0.18,
             0.70,
             0.18,
-            1
-        )
-        forwards;
+            1) forwards;
 }
 
 
@@ -4714,21 +4703,16 @@ button {
    BACKGROUND — APROXIMAÇÃO DO PORTAL
 ========================================================= */
 
-.portal-screen.portal-saindo
-.portal-background {
+.portal-screen.portal-saindo .portal-background {
 
     transform-origin:
         50% 52%;
 
     animation:
-        portalBackgroundImersao 950ms
-        cubic-bezier(
-            0.18,
+        portalBackgroundImersao 950ms cubic-bezier(0.18,
             0.72,
             0.16,
-            1
-        )
-        forwards;
+            1) forwards;
 }
 
 
@@ -4736,13 +4720,10 @@ button {
    CONTEÚDO — DESAPARECE ANTES DO CLARÃO
 ========================================================= */
 
-.portal-screen.portal-saindo
-.portal-content {
+.portal-screen.portal-saindo .portal-content {
 
     animation:
-        portalConteudoImersao 650ms
-        ease-out
-        forwards;
+        portalConteudoImersao 650ms ease-out forwards;
 }
 
 
@@ -4750,16 +4731,12 @@ button {
    PARTÍCULAS E ELEMENTOS FLUTUANTES
 ========================================================= */
 
-.portal-screen.portal-saindo
-.portal-floating-elements,
+.portal-screen.portal-saindo .portal-floating-elements,
 
-.portal-screen.portal-saindo
-.portal-particles {
+.portal-screen.portal-saindo .portal-particles {
 
     animation:
-        portalParticulasImersao 800ms
-        ease-out
-        forwards;
+        portalParticulasImersao 800ms ease-out forwards;
 }
 
 
@@ -4801,8 +4778,7 @@ button {
     0% {
 
         transform:
-            translate(-50%, -50%)
-            scale(0);
+            translate(-50%, -50%) scale(0);
 
         opacity: 0;
     }
@@ -4811,8 +4787,7 @@ button {
     12% {
 
         transform:
-            translate(-50%, -50%)
-            scale(0.8);
+            translate(-50%, -50%) scale(0.8);
 
         opacity: 0.45;
     }
@@ -4821,8 +4796,7 @@ button {
     38% {
 
         transform:
-            translate(-50%, -50%)
-            scale(3.5);
+            translate(-50%, -50%) scale(3.5);
 
         opacity: 0.85;
     }
@@ -4831,8 +4805,7 @@ button {
     72% {
 
         transform:
-            translate(-50%, -50%)
-            scale(16);
+            translate(-50%, -50%) scale(16);
 
         opacity: 1;
     }
@@ -4841,8 +4814,7 @@ button {
     100% {
 
         transform:
-            translate(-50%, -50%)
-            scale(45);
+            translate(-50%, -50%) scale(45);
 
         opacity: 1;
     }
@@ -4872,10 +4844,7 @@ button {
             scale(1.02);
 
         filter:
-            brightness(1.03)
-            saturate(1.05)
-            contrast(1.02)
-            blur(0);
+            brightness(1.03) saturate(1.05) contrast(1.02) blur(0);
     }
 
 
@@ -4885,10 +4854,7 @@ button {
             scale(1.05);
 
         filter:
-            brightness(1.15)
-            saturate(1.12)
-            contrast(1.04)
-            blur(0);
+            brightness(1.15) saturate(1.12) contrast(1.04) blur(0);
     }
 
 
@@ -4898,10 +4864,7 @@ button {
             scale(1.11);
 
         filter:
-            brightness(1.38)
-            saturate(1.22)
-            contrast(1.05)
-            blur(1px);
+            brightness(1.38) saturate(1.22) contrast(1.05) blur(1px);
     }
 
 
@@ -4911,10 +4874,7 @@ button {
             scale(1.18);
 
         filter:
-            brightness(1.75)
-            saturate(1.30)
-            contrast(1.06)
-            blur(4px);
+            brightness(1.75) saturate(1.30) contrast(1.06) blur(4px);
     }
 
 }
@@ -5021,6 +4981,620 @@ button {
 
         filter:
             brightness(3);
+    }
+
+}
+
+
+.app-header {
+    display: none !important;
+}
+
+
+/* =========================================================
+   HERO PRINCIPAL
+========================================================= */
+
+.hero-card.hero-palacio {
+
+    position: relative;
+
+    display: block !important;
+
+    /*
+       LARGURA DA TELA:
+
+       O conteúdo principal possui 14px de espaço
+       em cada lateral.
+
+       14px + 14px = 28px
+
+       Aqui o HERO recupera esses 28px para
+       encostar nas bordas da tela.
+    */
+
+    width:
+        calc(100% + 28px);
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    margin:
+        0 -14px !important;
+
+    padding:
+        0 18px 24px;
+
+    border: none;
+
+    border-radius: 0;
+
+    background:
+        linear-gradient(180deg,
+            #080411 0%,
+            #090512 55%,
+            #080410 100%);
+
+    box-shadow: none;
+}
+
+/* =========================================================
+   IMAGEM — MENINO + PALÁCIO
+========================================================= */
+
+.hero-palacio-image {
+
+    position: relative;
+
+    display: block;
+
+    width:
+        calc(100% + 36px);
+
+    height:
+        500px;
+
+    margin:
+        0 -18px;
+
+    overflow: hidden;
+
+    border-radius: 0;
+}
+
+
+.hero-palacio-image img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       POSIÇÃO DA IMAGEM
+
+       menor porcentagem = imagem sobe
+       maior porcentagem = imagem desce
+    */
+
+    object-position:
+        center 10%;
+}
+
+
+/* =========================================================
+   FUSÃO DA IMAGEM COM A PARTE PRETA
+========================================================= */
+
+.hero-palacio-gradient {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            transparent 0%,
+            transparent 55%,
+            rgba(8, 4, 17, 0.05) 66%,
+            rgba(8, 4, 17, 0.45) 82%,
+            #080411 100%);
+}
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.hero-palacio .hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: block !important;
+
+    width: 100% !important;
+
+    max-width: none !important;
+
+    margin:
+        -38px 0 0;
+
+    padding: 0;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CONTINUE DE ONDE PAROU
+========================================================= */
+
+.hero-palacio .section-label {
+
+    display: block;
+
+    margin:
+        0 0 12px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2.4px;
+
+    line-height:
+        1.2;
+
+    text-align: center;
+
+    color:
+        #c178ff;
+}
+
+
+/* =========================================================
+   FORTALEÇA SUA MENTE
+========================================================= */
+
+.hero-palacio h2 {
+
+    display: block;
+
+    width: 100%;
+
+    max-width:
+        430px;
+
+    margin:
+        0 auto 20px;
+
+    padding: 0;
+
+    /*
+       TAMANHO DO TÍTULO
+
+       54px = atual
+       50px = menor
+       58px = maior
+    */
+
+    font-size:
+        54px;
+
+    line-height:
+        0.86;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -3px;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-style:
+        italic;
+}
+
+/* =========================================================
+   FORTALEÇA
+   Efeito: brilho suave percorrendo o gradiente
+========================================================= */
+
+.hero-title-line {
+
+    display: block;
+
+    background:
+        linear-gradient(100deg,
+            #ff6fd8 0%,
+            #f06df4 25%,
+
+            /* PONTO DE LUZ */
+            #ffd9ff 45%,
+
+            #c86dff 62%,
+            #9f79ff 100%);
+
+    /*
+       200% permite que o gradiente se movimente
+       suavemente dentro das letras.
+    */
+
+    background-size:
+        200% 100%;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    text-shadow:
+        0 0 24px rgba(236, 92, 255, 0.18);
+
+    animation:
+        brilhoTitulo 5s ease-in-out infinite;
+}
+
+/* =========================================================
+   SUA MENTE
+   Efeito: brilho suave percorrendo o gradiente
+========================================================= */
+
+.hero-title-gradient {
+
+    display: block;
+
+    background:
+        linear-gradient(100deg,
+            #c16cff 0%,
+            #a06fff 25%,
+
+            /* PONTO DE LUZ */
+            #d9e5ff 45%,
+
+            #778cff 62%,
+            #46c4ff 100%);
+
+    background-size:
+        200% 100%;
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    text-shadow:
+        0 0 30px rgba(81, 141, 255, 0.20);
+
+    animation:
+        brilhoTitulo 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — BRILHO DO TÍTULO
+
+   5s = atual
+   7s = mais lento e discreto
+   3s = mais rápido e perceptível
+========================================================= */
+
+@keyframes brilhoTitulo {
+
+    0%,
+    100% {
+        background-position:
+            100% center;
+    }
+
+    50% {
+        background-position:
+            0% center;
+    }
+}
+
+/* =========================================================
+   DESCRIÇÃO
+========================================================= */
+
+.hero-palacio .hero-content>p {
+
+    display: block;
+
+    width:
+        min(100%, 390px);
+
+    margin:
+        0 auto 32px;
+
+    /*
+       TEXTO DE APOIO
+
+       17px = atual
+       16px = menor
+       18px = maior
+    */
+
+    font-size:
+        17px;
+
+    line-height:
+        1.55;
+
+    font-weight:
+        400;
+
+    text-align:
+        center;
+
+    letter-spacing:
+        0.1px;
+
+    color:
+        rgba(247, 242, 255, 0.90);
+}
+
+/* =========================================================
+   PROGRESSO
+========================================================= */
+
+.hero-palacio .hero-progress {
+
+    display: block;
+
+    width: 100%;
+
+    margin:
+        0 0 22px;
+
+    text-align: left;
+}
+
+
+.hero-palacio .hero-progress-info {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    width: 100%;
+
+    margin-bottom:
+        9px;
+
+    font-size:
+        13px;
+
+    color:
+        rgba(245, 241, 255, 0.86);
+}
+
+
+.hero-palacio .hero-progress-info strong {
+
+    color:
+        #ffffff;
+
+    font-weight:
+        800;
+}
+
+
+.hero-palacio .progress-track {
+
+    display: block;
+
+    width: 100%;
+
+    height:
+        8px;
+
+    overflow: hidden;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(197, 184, 232, 0.16);
+}
+
+
+.hero-palacio .progress-fill {
+
+    height:
+        100%;
+
+    border-radius:
+        inherit;
+
+    background:
+        linear-gradient(90deg,
+            #6d25ff 0%,
+            #a160ff 60%,
+            #c18cff 100%);
+
+    box-shadow:
+        0 0 16px rgba(145, 72, 255, 0.60);
+}
+
+
+/* =========================================================
+   BOTÃO — TREINO RÁPIDO
+========================================================= */
+
+.hero-palacio .primary-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        center;
+
+    position: relative;
+
+    width: 100%;
+
+    min-height:
+        60px;
+
+    margin: 0;
+
+    padding:
+        0 52px;
+
+    border: 0;
+
+    border-radius:
+        15px;
+
+    background:
+        linear-gradient(90deg,
+            #6e24ec 0%,
+            #933ef3 52%,
+            #612be2 100%);
+
+    box-shadow:
+        0 12px 30px rgba(104, 37, 235, 0.32);
+
+    color:
+        #ffffff;
+
+    font-size:
+        16px;
+
+    font-weight:
+        800;
+}
+
+
+.hero-palacio .primary-button svg {
+
+    position: absolute;
+
+    right:
+        20px;
+
+    width:
+        21px;
+
+    height:
+        21px;
+
+    fill: none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+/* =========================================================
+   MOBILE — AJUSTES MANUAIS
+========================================================= */
+
+@media (max-width: 620px) {
+
+    /* =====================================================
+       IMAGEM
+
+       500px = altura atual
+
+       530px = mais alta
+       470px = mais baixa
+    ===================================================== */
+
+    .hero-palacio-image {
+
+        height:
+            500px;
+    }
+
+
+    /* =====================================================
+       MENINO + CASTELO
+
+       center 42% = posição atual
+
+       35% = imagem sobe
+       50% = imagem desce
+    ===================================================== */
+
+    .hero-palacio-image img {
+
+        object-position:
+            center 10%;
+    }
+
+
+    /* =====================================================
+       TEXTO
+
+       -38px = posição atual
+
+       -60px = sobe
+       -20px = desce
+    ===================================================== */
+
+    .hero-palacio .hero-content {
+
+        margin-top:
+            -38px;
+    }
+
+
+    /* =====================================================
+       TÍTULO
+
+       45px = tamanho atual
+
+       48px = maior
+       42px = menor
+    ===================================================== */
+
+    .hero-palacio h2 {
+
+        font-size:
+            54px;
     }
 
 }
