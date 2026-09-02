@@ -44,7 +44,7 @@
     --nav-height: 82px;
 
     --transition:
-        220ms cubic-bezier(.2,.8,.2,1);
+        220ms cubic-bezier(.2, .8, .2, 1);
 }
 
 
@@ -75,21 +75,15 @@ body {
     color: var(--text);
 
     background:
-        radial-gradient(
-            circle at 20% -10%,
+        radial-gradient(circle at 20% -10%,
             rgba(124, 58, 237, 0.18),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 90% 15%,
+            transparent 35%),
+        radial-gradient(circle at 90% 15%,
             rgba(157, 92, 255, 0.08),
-            transparent 30%
-        ),
-        linear-gradient(
-            180deg,
+            transparent 30%),
+        linear-gradient(180deg,
             var(--bg-soft),
-            var(--bg)
-        );
+            var(--bg));
 
     -webkit-font-smoothing:
         antialiased;
@@ -119,10 +113,7 @@ button {
     min-height: 100vh;
 
     padding-bottom:
-        calc(
-            var(--nav-height)
-            + 34px
-        );
+        calc(var(--nav-height) + 34px);
 }
 
 
@@ -164,11 +155,9 @@ button {
 
 .app-header h1 {
     font-size:
-        clamp(
-            1.7rem,
+        clamp(1.7rem,
             4vw,
-            2.35rem
-        );
+            2.35rem);
 
     font-weight: 800;
 
@@ -192,7 +181,7 @@ button {
     color: var(--text-soft);
 
     background:
-        rgba(255,255,255,0.03);
+        rgba(255, 255, 255, 0.03);
 
     cursor: pointer;
 
@@ -250,28 +239,23 @@ button {
     min-height: 340px;
 
     padding:
-        clamp(
-            26px,
+        clamp(26px,
             5vw,
-            52px
-        );
+            52px);
 
     display: flex;
     align-items: center;
 
     border:
-        1px solid
-        var(--line-purple);
+        1px solid var(--line-purple);
 
     border-radius:
         var(--radius-xl);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(124,58,237,0.14),
-            rgba(255,255,255,0.015) 42%
-        ),
+        linear-gradient(145deg,
+            rgba(124, 58, 237, 0.14),
+            rgba(255, 255, 255, 0.015) 42%),
         var(--surface);
 
     box-shadow:
@@ -290,12 +274,10 @@ button {
     border-radius: 50%;
 
     background:
-        radial-gradient(
-            circle,
-            rgba(157,92,255,0.32),
-            rgba(124,58,237,0.10) 38%,
-            transparent 70%
-        );
+        radial-gradient(circle,
+            rgba(157, 92, 255, 0.32),
+            rgba(124, 58, 237, 0.10) 38%,
+            transparent 70%);
 
     filter: blur(4px);
 
@@ -307,10 +289,8 @@ button {
 
     z-index: 2;
 
-    width: min(
-        650px,
-        100%
-    );
+    width: min(650px,
+            100%);
 }
 
 .section-label {
@@ -323,11 +303,9 @@ button {
     margin-bottom: 14px;
 
     font-size:
-        clamp(
-            2.15rem,
+        clamp(2.15rem,
             6vw,
-            4.2rem
-        );
+            4.2rem);
 
     line-height: 0.98;
 
@@ -337,7 +315,7 @@ button {
         -0.06em;
 }
 
-.hero-content > p {
+.hero-content>p {
     max-width: 580px;
 
     color: var(--text-soft);
@@ -376,7 +354,7 @@ button {
     border-radius: 999px;
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255, 255, 255, 0.07);
 }
 
 .progress-fill {
@@ -386,16 +364,13 @@ button {
     border-radius: inherit;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             var(--purple),
             var(--purple-2),
-            var(--purple-3)
-        );
+            var(--purple-3));
 
     box-shadow:
-        0 0 22px
-        rgba(157,92,255,0.40);
+        0 0 22px rgba(157, 92, 255, 0.40);
 
     transition:
         width 500ms ease;
@@ -425,19 +400,16 @@ button {
     color: white;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--purple),
-            var(--purple-2)
-        );
+            var(--purple-2));
 
     font-weight: 750;
 
     cursor: pointer;
 
     box-shadow:
-        0 10px 35px
-        rgba(124,58,237,0.25);
+        0 10px 35px rgba(124, 58, 237, 0.25);
 
     transition:
         transform var(--transition),
@@ -449,8 +421,7 @@ button {
         translateY(-2px);
 
     box-shadow:
-        0 15px 42px
-        rgba(124,58,237,0.34);
+        0 15px 42px rgba(124, 58, 237, 0.34);
 }
 
 .primary-button svg {
@@ -488,11 +459,9 @@ button {
 
 .section-heading h2 {
     font-size:
-        clamp(
-            1.45rem,
+        clamp(1.45rem,
             4vw,
-            2rem
-        );
+            2rem);
 
     letter-spacing:
         -0.04em;
@@ -507,7 +476,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0,1fr));
+        repeat(2, minmax(0, 1fr));
 
     gap: 14px;
 }
@@ -539,8 +508,7 @@ button {
     overflow: hidden;
 
     border:
-        1px solid
-        var(--line);
+        1px solid var(--line);
 
     border-radius:
         var(--radius-lg);
@@ -548,18 +516,15 @@ button {
     color: var(--text);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.025),
-            transparent 70%
-        ),
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.025),
+            transparent 70%),
         var(--surface);
 
     cursor: pointer;
 
     box-shadow:
-        0 12px 38px
-        rgba(0,0,0,0.16);
+        0 12px 38px rgba(0, 0, 0, 0.16);
 
     transition:
         transform var(--transition),
@@ -576,21 +541,18 @@ button {
         var(--line-purple);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(124,58,237,0.08),
-            transparent 70%
-        ),
+        linear-gradient(145deg,
+            rgba(124, 58, 237, 0.08),
+            transparent 70%),
         var(--surface-2);
 
     box-shadow:
-        0 18px 48px
-        rgba(0,0,0,0.28);
+        0 18px 48px rgba(0, 0, 0, 0.28);
 }
 
 .module-card-featured {
     border-color:
-        rgba(157,92,255,0.19);
+        rgba(157, 92, 255, 0.19);
 }
 
 .module-card-featured::before {
@@ -607,7 +569,7 @@ button {
     border-radius: 50%;
 
     background:
-        rgba(124,58,237,0.11);
+        rgba(124, 58, 237, 0.11);
 
     filter: blur(18px);
 
@@ -632,8 +594,7 @@ button {
     justify-content: center;
 
     border:
-        1px solid
-        rgba(157,92,255,0.19);
+        1px solid rgba(157, 92, 255, 0.19);
 
     border-radius: 16px;
 
@@ -673,14 +634,13 @@ button {
     color: var(--text-muted);
 
     background:
-        rgba(255,255,255,0.03);
+        rgba(255, 255, 255, 0.03);
 
     transition:
         var(--transition);
 }
 
-.module-card:hover
-.module-arrow {
+.module-card:hover .module-arrow {
     color: var(--purple-3);
 
     transform:
@@ -761,7 +721,7 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0,1fr));
+        repeat(3, minmax(0, 1fr));
 
     gap: 12px;
 }
@@ -776,14 +736,13 @@ button {
     justify-content: space-between;
 
     border:
-        1px solid
-        var(--line);
+        1px solid var(--line);
 
     border-radius:
         var(--radius-md);
 
     background:
-        rgba(255,255,255,0.018);
+        rgba(255, 255, 255, 0.018);
 }
 
 .stat-label {
@@ -818,10 +777,8 @@ button {
         translateX(-50%);
 
     width:
-        min(
-            760px,
-            calc(100% - 20px)
-        );
+        min(760px,
+            calc(100% - 20px));
 
     height:
         var(--nav-height);
@@ -832,18 +789,17 @@ button {
     display: grid;
 
     grid-template-columns:
-        repeat(5,1fr);
+        repeat(5, 1fr);
 
     gap: 4px;
 
     border:
-        1px solid
-        rgba(255,255,255,0.08);
+        1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 24px;
 
     background:
-        rgba(14,11,20,0.90);
+        rgba(14, 11, 20, 0.90);
 
     backdrop-filter:
         blur(22px);
@@ -852,8 +808,7 @@ button {
         blur(22px);
 
     box-shadow:
-        0 18px 50px
-        rgba(0,0,0,0.42);
+        0 18px 50px rgba(0, 0, 0, 0.42);
 }
 
 .nav-item {
@@ -919,8 +874,7 @@ button {
         var(--purple-2);
 
     box-shadow:
-        0 0 12px
-        rgba(157,92,255,0.65);
+        0 0 12px rgba(157, 92, 255, 0.65);
 }
 
 
@@ -943,37 +897,31 @@ button {
     margin-top: -19px;
 
     border:
-        1px solid
-        rgba(196,167,255,0.24);
+        1px solid rgba(196, 167, 255, 0.24);
 
     border-radius: 15px;
 
     color: white;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             var(--purple),
-            var(--purple-2)
-        );
+            var(--purple-2));
 
     box-shadow:
-        0 8px 28px
-        rgba(124,58,237,0.36);
+        0 8px 28px rgba(124, 58, 237, 0.36);
 
     transition:
         transform var(--transition),
         box-shadow var(--transition);
 }
 
-.nav-item-center:hover
-.nav-center-icon {
+.nav-item-center:hover .nav-center-icon {
     transform:
         translateY(-2px);
 
     box-shadow:
-        0 12px 35px
-        rgba(124,58,237,0.48);
+        0 12px 35px rgba(124, 58, 237, 0.48);
 }
 
 .nav-center-icon svg {
@@ -1114,6 +1062,7 @@ button {
     }
 
 }
+
 /* =========================================================
    TELA — MEMÓRIA NUMÉRICA
 ========================================================= */
@@ -1194,11 +1143,9 @@ button {
 
 .screen-header h2 {
     font-size:
-        clamp(
-            1.55rem,
+        clamp(1.55rem,
             4vw,
-            2.3rem
-        );
+            2.3rem);
 
     line-height: 1.05;
 
@@ -1223,31 +1170,25 @@ button {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.1fr)
-        minmax(250px, 0.9fr);
+        minmax(0, 1.1fr) minmax(250px, 0.9fr);
 
     align-items: center;
 
     gap: 28px;
 
     border:
-        1px solid
-        var(--line-purple);
+        1px solid var(--line-purple);
 
     border-radius:
         var(--radius-xl);
 
     background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(157,92,255,0.20),
-            transparent 30%
-        ),
-        linear-gradient(
-            145deg,
-            rgba(124,58,237,0.13),
-            rgba(255,255,255,0.015) 45%
-        ),
+        radial-gradient(circle at 80% 20%,
+            rgba(157, 92, 255, 0.20),
+            transparent 30%),
+        linear-gradient(145deg,
+            rgba(124, 58, 237, 0.13),
+            rgba(255, 255, 255, 0.015) 45%),
         var(--surface);
 
     box-shadow:
@@ -1268,11 +1209,9 @@ button {
     margin-bottom: 14px;
 
     font-size:
-        clamp(
-            2rem,
+        clamp(2rem,
             5vw,
-            3.2rem
-        );
+            3.2rem);
 
     line-height: 1;
 
@@ -1327,26 +1266,20 @@ button {
     gap: 10px;
 
     border:
-        1px solid
-        rgba(196,167,255,0.22);
+        1px solid rgba(196, 167, 255, 0.22);
 
     border-radius: 24px;
 
     background:
-        radial-gradient(
-            circle at 50% 35%,
-            rgba(157,92,255,0.22),
-            transparent 35%
-        ),
-        linear-gradient(
-            160deg,
-            rgba(124,58,237,0.14),
-            rgba(255,255,255,0.025)
-        );
+        radial-gradient(circle at 50% 35%,
+            rgba(157, 92, 255, 0.22),
+            transparent 35%),
+        linear-gradient(160deg,
+            rgba(124, 58, 237, 0.14),
+            rgba(255, 255, 255, 0.025));
 
     box-shadow:
-        inset 0 0 40px
-        rgba(157,92,255,0.04);
+        inset 0 0 40px rgba(157, 92, 255, 0.04);
 }
 
 
@@ -1355,11 +1288,9 @@ button {
         var(--purple-3);
 
     font-size:
-        clamp(
-            4rem,
+        clamp(4rem,
             10vw,
-            7rem
-        );
+            7rem);
 
     font-weight: 850;
 
@@ -1369,8 +1300,7 @@ button {
         -0.07em;
 
     text-shadow:
-        0 0 35px
-        rgba(157,92,255,0.35);
+        0 0 35px rgba(157, 92, 255, 0.35);
 }
 
 
@@ -1417,18 +1347,15 @@ button {
     padding: 20px;
 
     border:
-        1px solid
-        var(--line);
+        1px solid var(--line);
 
     border-radius:
         var(--radius-md);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.025),
-            transparent 70%
-        ),
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.025),
+            transparent 70%),
         var(--surface);
 
     transition:
@@ -1446,11 +1373,9 @@ button {
         var(--line-purple);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(124,58,237,0.08),
-            transparent 70%
-        ),
+        linear-gradient(145deg,
+            rgba(124, 58, 237, 0.08),
+            transparent 70%),
         var(--surface-2);
 }
 
@@ -1467,8 +1392,7 @@ button {
     margin-bottom: 20px;
 
     border:
-        1px solid
-        rgba(157,92,255,0.20);
+        1px solid rgba(157, 92, 255, 0.20);
 
     border-radius: 13px;
 
@@ -1526,18 +1450,15 @@ button {
     gap: 22px;
 
     border:
-        1px solid
-        var(--line-purple);
+        1px solid var(--line-purple);
 
     border-radius:
         var(--radius-lg);
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(124,58,237,0.10),
-            rgba(255,255,255,0.02)
-        ),
+        linear-gradient(135deg,
+            rgba(124, 58, 237, 0.10),
+            rgba(255, 255, 255, 0.02)),
         var(--surface);
 }
 
@@ -1560,8 +1481,7 @@ button {
     justify-content: center;
 
     border:
-        1px solid
-        rgba(196,167,255,0.25);
+        1px solid rgba(196, 167, 255, 0.25);
 
     border-radius: 24px;
 
@@ -1569,11 +1489,9 @@ button {
         var(--purple-3);
 
     background:
-        radial-gradient(
-            circle,
-            rgba(157,92,255,0.24),
-            rgba(124,58,237,0.08)
-        );
+        radial-gradient(circle,
+            rgba(157, 92, 255, 0.24),
+            rgba(124, 58, 237, 0.08));
 
     font-size: 1rem;
 
@@ -1588,11 +1506,9 @@ button {
     margin-bottom: 8px;
 
     font-size:
-        clamp(
-            1.35rem,
+        clamp(1.35rem,
             3vw,
-            1.8rem
-        );
+            1.8rem);
 
     letter-spacing:
         -0.035em;
@@ -1630,7 +1546,7 @@ button {
 
     .learning-steps {
         grid-template-columns:
-            repeat(2, minmax(0,1fr));
+            repeat(2, minmax(0, 1fr));
     }
 
 }
@@ -1711,6 +1627,7 @@ button {
     }
 
 }
+
 /* =========================================================
    IMAGEM PRINCIPAL — MEMÓRIA NUMÉRICA
 ========================================================= */
@@ -1726,8 +1643,7 @@ button {
     overflow: hidden;
 
     border:
-        1px solid
-        rgba(196, 167, 255, 0.24);
+        1px solid rgba(196, 167, 255, 0.24);
 
     border-radius: 24px;
 
@@ -1735,8 +1651,7 @@ button {
         var(--surface-2);
 
     box-shadow:
-        0 18px 55px
-        rgba(0, 0, 0, 0.34);
+        0 18px 55px rgba(0, 0, 0, 0.34);
 }
 
 
@@ -1750,13 +1665,11 @@ button {
     object-position: center;
 
     transition:
-        transform 650ms
-        cubic-bezier(.2, .8, .2, 1);
+        transform 650ms cubic-bezier(.2, .8, .2, 1);
 }
 
 
-.memory-image-frame:hover
-.memory-hero-image {
+.memory-image-frame:hover .memory-hero-image {
     transform:
         scale(1.035);
 }
@@ -1770,16 +1683,13 @@ button {
     pointer-events: none;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             rgba(8, 7, 13, 0.02),
             rgba(8, 7, 13, 0.08) 55%,
-            rgba(8, 7, 13, 0.38)
-        );
+            rgba(8, 7, 13, 0.38));
 
     box-shadow:
-        inset 0 0 50px
-        rgba(124, 58, 237, 0.10);
+        inset 0 0 50px rgba(124, 58, 237, 0.10);
 }
 
 
@@ -1816,8 +1726,7 @@ button {
     overflow: hidden;
 
     border:
-        1px solid
-        rgba(196, 167, 255, 0.30);
+        1px solid rgba(196, 167, 255, 0.30);
 
     border-radius: 22px;
 
@@ -1852,9 +1761,9 @@ button {
     border-radius: inherit;
 
     box-shadow:
-        inset 0 0 18px
-        rgba(157, 92, 255, 0.16);
+        inset 0 0 18px rgba(157, 92, 255, 0.16);
 }
+
 /* =========================================================
    TELA APRENDER — MEMÓRIA NUMÉRICA
 ========================================================= */
@@ -1898,14 +1807,10 @@ button {
     transform: scale(1.08);
 
     filter:
-        brightness(0.48)
-        saturate(1.15)
-        contrast(1.08);
+        brightness(0.48) saturate(1.15) contrast(1.08);
 
     animation:
-        learnBackgroundFloat 14s
-        ease-in-out
-        infinite alternate;
+        learnBackgroundFloat 14s ease-in-out infinite alternate;
 }
 
 
@@ -1915,18 +1820,14 @@ button {
     inset: 0;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             rgba(8, 7, 13, 0.72) 0%,
             rgba(8, 7, 13, 0.34) 36%,
             rgba(8, 7, 13, 0.48) 65%,
-            rgba(8, 7, 13, 0.94) 100%
-        ),
-        radial-gradient(
-            circle at 50% 45%,
+            rgba(8, 7, 13, 0.94) 100%),
+        radial-gradient(circle at 50% 45%,
             rgba(124, 58, 237, 0.08),
-            transparent 55%
-        );
+            transparent 55%);
 }
 
 
@@ -1957,12 +1858,10 @@ button {
 
 .screen-aprender .screen-header h2 {
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             #ffffff 0%,
             #e9dcff 45%,
-            #b78cff 100%
-        );
+            #b78cff 100%);
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -2013,9 +1912,7 @@ button {
         blur(0.2px);
 
     animation:
-        learnSymbolFloat 5s
-        ease-in-out
-        infinite;
+        learnSymbolFloat 5s ease-in-out infinite;
 }
 
 
@@ -2065,17 +1962,14 @@ button {
     overflow: hidden;
 
     border:
-        1px solid
-        rgba(196, 167, 255, 0.18);
+        1px solid rgba(196, 167, 255, 0.18);
 
     border-radius: 24px;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             rgba(23, 19, 31, 0.90),
-            rgba(18, 16, 26, 0.78)
-        );
+            rgba(18, 16, 26, 0.78));
 
     backdrop-filter:
         blur(16px);
@@ -2122,8 +2016,7 @@ button {
     place-items: center;
 
     border:
-        1px solid
-        rgba(157, 92, 255, 0.38);
+        1px solid rgba(157, 92, 255, 0.38);
 
     border-radius: 16px;
 
@@ -2131,8 +2024,7 @@ button {
         rgba(124, 58, 237, 0.14);
 
     box-shadow:
-        0 0 24px
-        rgba(124, 58, 237, 0.16);
+        0 0 24px rgba(124, 58, 237, 0.16);
 }
 
 
@@ -2213,17 +2105,13 @@ button {
         rotate(22deg);
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             transparent,
             rgba(255, 255, 255, 0.26),
-            transparent
-        );
+            transparent);
 
     animation:
-        learnButtonShine 4.5s
-        ease-in-out
-        infinite;
+        learnButtonShine 4.5s ease-in-out infinite;
 }
 
 
@@ -2233,14 +2121,12 @@ button {
 
     0% {
         transform:
-            scale(1.08)
-            translate3d(0, 0, 0);
+            scale(1.08) translate3d(0, 0, 0);
     }
 
     100% {
         transform:
-            scale(1.13)
-            translate3d(0, -8px, 0);
+            scale(1.13) translate3d(0, -8px, 0);
     }
 
 }
@@ -2251,16 +2137,14 @@ button {
     0%,
     100% {
         transform:
-            translateY(0)
-            rotate(-2deg);
+            translateY(0) rotate(-2deg);
 
         opacity: 0.55;
     }
 
     50% {
         transform:
-            translateY(-14px)
-            rotate(3deg);
+            translateY(-14px) rotate(3deg);
 
         opacity: 1;
     }
@@ -2306,8 +2190,8 @@ button {
     }
 
 
-   .learn-intro-spacer {
-    min-height: 250px;
+    .learn-intro-spacer {
+        min-height: 250px;
     }
 
     .learn-floating-symbol {
@@ -2364,6 +2248,7 @@ button {
     }
 
 }
+
 /* =========================================================
    CARD DE APRENDIZADO — MEMÓRIA NUMÉRICA
 ========================================================= */
@@ -2387,17 +2272,14 @@ button {
     padding: 24px;
 
     border:
-        1px solid
-        rgba(196, 167, 255, 0.18);
+        1px solid rgba(196, 167, 255, 0.18);
 
     border-radius: 28px;
 
     background:
-        linear-gradient(
-            145deg,
+        linear-gradient(145deg,
             rgba(18, 16, 26, 0.96),
-            rgba(10, 8, 16, 0.94)
-        );
+            rgba(10, 8, 16, 0.94));
 
     box-shadow:
         0 24px 70px rgba(0, 0, 0, 0.42),
@@ -2499,13 +2381,11 @@ button {
     line-height: 0.92;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #ffffff 0%,
             #d8c0ff 35%,
             #9d5cff 70%,
-            #7c3aed 100%
-        );
+            #7c3aed 100%);
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -2515,10 +2395,7 @@ button {
     color: transparent;
 
     filter:
-        drop-shadow(
-            0 0 18px
-            rgba(157, 92, 255, 0.26)
-        );
+        drop-shadow(0 0 18px rgba(157, 92, 255, 0.26));
 }
 
 
@@ -2543,8 +2420,7 @@ button {
     padding: 14px 16px;
 
     border:
-        1px solid
-        rgba(196, 167, 255, 0.14);
+        1px solid rgba(196, 167, 255, 0.14);
 
     border-radius: 18px;
 
@@ -2583,12 +2459,10 @@ button {
     font-size: 1.55rem;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             #ffffff,
             #c4a7ff,
-            #9d5cff
-        );
+            #9d5cff);
 
     -webkit-background-clip: text;
     background-clip: text;
@@ -2611,8 +2485,7 @@ button {
     overflow: hidden;
 
     border:
-        1px solid
-        rgba(196, 167, 255, 0.18);
+        1px solid rgba(196, 167, 255, 0.18);
 
     border-radius: 24px;
 
@@ -2637,13 +2510,11 @@ button {
         scale(1.01);
 
     transition:
-        transform 700ms
-        cubic-bezier(.2, .8, .2, 1);
+        transform 700ms cubic-bezier(.2, .8, .2, 1);
 }
 
 
-.learning-image-frame:hover
-.learning-image {
+.learning-image-frame:hover .learning-image {
     transform:
         scale(1.045);
 }
@@ -2657,15 +2528,12 @@ button {
     pointer-events: none;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             transparent 55%,
-            rgba(8, 7, 13, 0.26)
-        );
+            rgba(8, 7, 13, 0.26));
 
     box-shadow:
-        inset 0 0 50px
-        rgba(124, 58, 237, 0.10);
+        inset 0 0 50px rgba(124, 58, 237, 0.10);
 }
 
 
@@ -2689,8 +2557,7 @@ button {
         rgba(124, 58, 237, 0.08);
 
     border:
-        1px solid
-        rgba(157, 92, 255, 0.14);
+        1px solid rgba(157, 92, 255, 0.14);
 }
 
 
@@ -2703,8 +2570,7 @@ button {
         var(--purple-3);
 
     text-shadow:
-        0 0 14px
-        rgba(157, 92, 255, 0.70);
+        0 0 14px rgba(157, 92, 255, 0.70);
 }
 
 
@@ -2728,8 +2594,7 @@ button {
     justify-content: center;
 
     box-shadow:
-        0 12px 34px
-        rgba(124, 58, 237, 0.24);
+        0 12px 34px rgba(124, 58, 237, 0.24);
 }
 
 
@@ -2782,6 +2647,2380 @@ button {
 
     .learning-memory-tip {
         padding: 13px 14px;
+    }
+
+}
+
+/* =========================================================
+   PÁGINA 01 — PORTAL DE ENTRADA
+========================================================= */
+
+/*
+   ESTRUTURA GERAL
+
+   A Tela 01 funciona como uma tela independente.
+
+   IMPORTANTE:
+   - no celular ocupa toda a largura;
+   - no tablet/PC mantém proporção de aplicativo;
+   - evita que o background fique gigantesco no desktop;
+   - os elementos principais são posicionados em relação
+     à própria tela do portal, e não ao tamanho do monitor.
+*/
+
+.portal-screen {
+    position: fixed;
+
+    top: 0;
+    left: 50%;
+
+    z-index: 9999;
+
+    width: min(100%, 560px);
+    height: 100vh;
+    min-height: 100vh;
+
+    transform: translateX(-50%);
+
+    overflow: hidden;
+
+    background: #05040a;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND PRINCIPAL
+========================================================= */
+
+/*
+   IMAGEM PRINCIPAL DA TELA 01
+
+   DICAS:
+
+   brightness:
+   1 = brilho original
+   1.05 = 5% mais claro
+   1.10 = 10% mais claro
+
+   background-position:
+   center 50% = posição central
+   center 45% = imagem sobe
+   center 55% = imagem desce
+*/
+
+.portal-background {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(180deg,
+            rgba(5, 4, 10, 0.02) 0%,
+            rgba(5, 4, 10, 0.00) 48%,
+            rgba(5, 4, 10, 0.04) 100%),
+        url("assets/imagens/home/portal/backgrounds/fundo-portal-cerebro.webp"
+        );
+
+    background-size: cover;
+
+    background-position:
+        center 50%;
+
+    background-repeat: no-repeat;
+
+    filter:
+        brightness(1.03) saturate(1.06) contrast(1.02);
+
+    transform:
+        scale(1.015);
+
+    animation:
+        portalBackgroundRespirar 18s ease-in-out infinite alternate;
+}
+
+
+/*
+   MOVIMENTO DO FUNDO
+
+   Extremamente suave.
+   Não haverá mais aquele zoom evidente.
+*/
+
+@keyframes portalBackgroundRespirar {
+
+    from {
+        transform:
+            scale(1.015);
+    }
+
+    to {
+        transform:
+            scale(1.025);
+    }
+
+}
+
+
+/* =========================================================
+   CAMADA DE PARTÍCULAS
+========================================================= */
+
+.portal-particles {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: 0.68;
+
+    background-image:
+        radial-gradient(circle,
+            rgba(196, 167, 255, 0.72) 0 1px,
+            transparent 1.5px),
+        radial-gradient(circle,
+            rgba(34, 211, 238, 0.48) 0 1px,
+            transparent 1.5px);
+
+    background-size:
+        100px 100px,
+        157px 157px;
+
+    background-position:
+        0 0,
+        46px 68px;
+
+    animation:
+        portalParticlesMove 22s linear infinite;
+}
+
+
+@keyframes portalParticlesMove {
+
+    from {
+        background-position:
+            0 0,
+            46px 68px;
+    }
+
+    to {
+        background-position:
+            0 -180px,
+            110px -110px;
+    }
+
+}
+
+
+/* =========================================================
+   ELEMENTOS FLUTUANTES
+========================================================= */
+
+/*
+   Cristais e pequenos pontos luminosos criados em CSS.
+
+   O cérebro NÃO se move.
+   Apenas elementos secundários continuam animados.
+*/
+
+.portal-floating-elements {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+.portal-crystal {
+    position: absolute;
+
+    width: 22px;
+    height: 36px;
+
+    clip-path:
+        polygon(50% 0%,
+            88% 28%,
+            74% 78%,
+            50% 100%,
+            26% 78%,
+            12% 28%);
+
+    background:
+        linear-gradient(160deg,
+            rgba(255, 255, 255, 0.85) 0%,
+            rgba(196, 167, 255, 0.74) 22%,
+            rgba(157, 92, 255, 0.58) 48%,
+            rgba(34, 211, 238, 0.56) 75%,
+            rgba(124, 58, 237, 0.20) 100%);
+
+    opacity: 0.64;
+
+    filter:
+        drop-shadow(0 0 10px rgba(124, 58, 237, 0.55));
+
+    animation:
+        portalCrystalFloat 7s ease-in-out infinite;
+}
+
+
+.portal-crystal::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px 7px;
+
+    clip-path:
+        polygon(50% 0%,
+            100% 38%,
+            70% 100%,
+            30% 100%,
+            0% 38%);
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.40),
+            rgba(34, 211, 238, 0.08));
+}
+
+
+/* CRISTAL 01 — superior esquerdo */
+
+.portal-crystal-1 {
+    top: 15%;
+    left: 7%;
+
+    transform:
+        scale(0.78) rotate(-14deg);
+
+    animation-delay: 0s;
+}
+
+
+/* CRISTAL 02 — superior direito */
+
+.portal-crystal-2 {
+    top: 23%;
+    right: 7%;
+
+    transform:
+        scale(0.62) rotate(16deg);
+
+    animation-delay: -2s;
+}
+
+
+/* CRISTAL 03 — inferior esquerdo */
+
+.portal-crystal-3 {
+    top: 59%;
+    left: 6%;
+
+    transform:
+        scale(0.56) rotate(10deg);
+
+    animation-delay: -3.4s;
+}
+
+
+/* CRISTAL 04 — inferior direito */
+
+.portal-crystal-4 {
+    top: 64%;
+    right: 6%;
+
+    transform:
+        scale(0.70) rotate(-11deg);
+
+    animation-delay: -4.8s;
+}
+
+
+@keyframes portalCrystalFloat {
+
+    0%,
+    100% {
+        translate: 0 0;
+
+        opacity: 0.45;
+    }
+
+    50% {
+        translate: 0 -14px;
+
+        opacity: 0.88;
+    }
+
+}
+
+
+/* =========================================================
+   PONTOS DE ENERGIA
+========================================================= */
+
+.portal-energy-dot {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        #c4a7ff;
+
+    box-shadow:
+        0 0 10px rgba(196, 167, 255, 0.95),
+        0 0 22px rgba(124, 58, 237, 0.60);
+
+    animation:
+        portalEnergyDotFloat 5s ease-in-out infinite;
+}
+
+
+.portal-energy-dot-1 {
+    top: 19%;
+    left: 27%;
+}
+
+
+.portal-energy-dot-2 {
+    top: 48%;
+    right: 17%;
+
+    animation-delay: -1.8s;
+}
+
+
+.portal-energy-dot-3 {
+    top: 70%;
+    left: 22%;
+
+    animation-delay: -3.3s;
+}
+
+
+@keyframes portalEnergyDotFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0) scale(0.8);
+
+        opacity: 0.40;
+    }
+
+    50% {
+        transform:
+            translateY(-12px) scale(1.20);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.portal-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+/*
+   CONTROLA:
+
+   - ícone do cérebro;
+   - "Bem-vindo";
+   - "Senhor Natan";
+   - frase inferior.
+
+   DICA:
+   altere somente "top" para subir ou descer.
+
+   top menor = sobe
+   top maior = desce
+*/
+
+.portal-brand {
+    position: absolute;
+
+    top: 6.5%;
+    left: 50%;
+
+    z-index: 8;
+
+    width:
+        calc(100% - 48px);
+
+    max-width: 500px;
+
+    transform:
+        translateX(-50%);
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ÍCONE SUPERIOR
+========================================================= */
+
+.portal-brand-icon {
+    width: 44px;
+    height: 44px;
+
+    margin:
+        0 auto 10px;
+
+    display: grid;
+    place-items: center;
+
+    border:
+        1px solid rgba(196, 167, 255, 0.24);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(157, 92, 255, 0.18),
+            rgba(124, 58, 237, 0.05) 58%,
+            transparent 72%);
+
+    box-shadow:
+        0 0 20px rgba(157, 92, 255, 0.22);
+
+    animation:
+        portalBrandIconPulse 3.4s ease-in-out infinite;
+}
+
+
+.portal-brand-icon svg {
+    width: 26px;
+    height: 26px;
+
+    fill: none;
+
+    stroke:
+        #e8ddff;
+
+    stroke-width: 1.3;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    filter:
+        drop-shadow(0 0 7px rgba(196, 167, 255, 0.92));
+}
+
+
+@keyframes portalBrandIconPulse {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+
+        opacity: 0.82;
+    }
+
+    50% {
+        transform:
+            scale(1.06);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   BEM-VINDO
+========================================================= */
+
+.portal-welcome {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    line-height: 1;
+}
+
+
+.portal-welcome>span {
+    margin-bottom: 7px;
+
+    color:
+        rgba(248, 247, 252, 0.95);
+
+    font-size:
+        clamp(1rem,
+            3.6vw,
+            1.35rem);
+
+    font-weight: 550;
+
+    letter-spacing:
+        -0.03em;
+}
+
+
+/* =========================================================
+   SENHOR NATAN
+========================================================= */
+
+/*
+   TAMANHO DO NOME:
+
+   Para diminuir:
+   reduza o valor central (9.6vw).
+
+   Para aumentar:
+   aumente o valor central.
+
+   Exemplo:
+   8.8vw = menor
+   9.6vw = atual
+   10.5vw = maior
+*/
+
+.portal-name {
+    display: inline-block;
+
+    font-family:
+        "Segoe UI",
+        Inter,
+        sans-serif;
+
+    font-size:
+        clamp(2.25rem,
+            9.6vw,
+            3.55rem);
+
+    font-weight: 900;
+
+    line-height: 0.96;
+
+    letter-spacing:
+        -0.055em;
+
+    background:
+        linear-gradient(90deg,
+            #f3e8ff 0%,
+            #c084fc 20%,
+            #f472b6 42%,
+            #22d3ee 68%,
+            #60a5fa 83%,
+            #c084fc 100%);
+
+    background-size:
+        220% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    color: transparent;
+
+    filter:
+        drop-shadow(0 0 12px rgba(157, 92, 255, 0.20));
+
+    animation:
+        portalNameGradient 7s linear infinite;
+}
+
+
+@keyframes portalNameGradient {
+
+    from {
+        background-position:
+            0% center;
+    }
+
+    to {
+        background-position:
+            220% center;
+    }
+
+}
+
+
+/* =========================================================
+   FRASE SUPERIOR
+========================================================= */
+
+.portal-introduction {
+    max-width: 470px;
+
+    margin:
+        16px auto 0;
+
+    padding:
+        0 8px;
+
+    color:
+        rgba(248, 247, 252, 0.84);
+
+    font-size:
+        clamp(0.76rem,
+            2.8vw,
+            0.98rem);
+
+    line-height: 1.55;
+}
+
+
+.portal-introduction>span {
+    display: block;
+}
+
+
+.portal-introduction strong {
+    font-weight: 650;
+
+    background:
+        linear-gradient(90deg,
+            #f472b6,
+            #c084fc,
+            #60a5fa);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    color: transparent;
+}
+
+
+/* =========================================================
+   FOCO DO DIA + SUA EVOLUÇÃO
+========================================================= */
+
+/*
+   Os elementos NÃO possuem fundo.
+
+   Ambos são posicionados independentemente.
+
+   Mais abaixo existe uma área específica
+   para você regular a posição no celular.
+*/
+
+.portal-status {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 9;
+
+    pointer-events: none;
+}
+
+
+.portal-status-card {
+    position: absolute;
+
+    width: 120px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    pointer-events: none;
+}
+
+
+.portal-status-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: left;
+}
+
+
+.portal-status-label {
+    margin-bottom: 5px;
+
+    color:
+        #d8a7ff;
+
+    font-size: 0.65rem;
+
+    font-weight: 650;
+}
+
+
+.portal-status-content>strong {
+    color:
+        #ffffff;
+
+    font-size: 0.78rem;
+
+    line-height: 1.28;
+}
+
+
+/* =========================================================
+   FOCO DO DIA — POSIÇÃO BASE
+========================================================= */
+
+.portal-focus-card {
+    top: 42%;
+    left: 7%;
+}
+
+
+/* =========================================================
+   ÍCONE DO FOCO
+========================================================= */
+
+.portal-focus-indicator {
+    position: relative;
+
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 8px;
+
+    border:
+        4px solid rgba(244, 114, 182, 0.20);
+
+    border-top-color:
+        #f472b6;
+
+    border-right-color:
+        #c084fc;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 16px rgba(244, 114, 182, 0.20);
+
+    animation:
+        portalFocusRotate 8s linear infinite;
+}
+
+
+.portal-focus-indicator span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg,
+            #f472b6,
+            #c084fc);
+
+    box-shadow:
+        0 0 12px rgba(244, 114, 182, 0.60);
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+@keyframes portalFocusRotate {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   SUA EVOLUÇÃO — POSIÇÃO BASE
+========================================================= */
+
+.portal-progress-card {
+    top: 42%;
+    right: 7%;
+}
+
+
+.portal-progress-value {
+    margin-top: 0;
+
+    font-size:
+        1.65rem !important;
+
+    line-height: 1 !important;
+}
+
+
+/* =========================================================
+   GRÁFICO DA EVOLUÇÃO
+========================================================= */
+
+.portal-mini-chart {
+    width: 100%;
+
+    height: 30px;
+
+    margin-top: 6px;
+}
+
+
+.portal-mini-chart svg {
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+.portal-mini-chart path {
+    fill: none;
+
+    stroke:
+        #e879f9;
+
+    stroke-width: 3;
+
+    stroke-linecap: round;
+
+    filter:
+        drop-shadow(0 0 5px rgba(232, 121, 249, 0.50));
+}
+
+
+.portal-status-content small {
+    margin-top: 3px;
+
+    color:
+        rgba(248, 247, 252, 0.75);
+
+    font-size: 0.55rem;
+
+    line-height: 1.30;
+}
+
+
+/* =========================================================
+   ANTIGO PORTAL HTML
+========================================================= */
+
+/*
+   O cérebro e os círculos principais agora
+   fazem parte do próprio background.
+
+   Este elemento antigo não será mais exibido.
+
+   Mantemos o HTML temporariamente para evitar
+   alterações desnecessárias no index.html.
+*/
+
+.portal-core,
+.portal-core-glow,
+.portal-brain,
+.portal-brain-image,
+.portal-orbit {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ÁREA DE ENTRADA
+========================================================= */
+
+/*
+   CONTROLA:
+   TOQUE NO PORTAL
+   PARA ENTRAR
+   BOTÃO CIRCULAR
+
+   DICA:
+   altere somente "bottom".
+
+   bottom maior = sobe
+   bottom menor = desce
+*/
+
+.portal-entry-copy {
+    position: absolute;
+
+    left: 50%;
+    bottom: 7%;
+
+    z-index: 10;
+
+    width:
+        calc(100% - 40px);
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    color:
+        var(--purple-3);
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    pointer-events: auto;
+}
+
+
+.portal-entry-copy>span {
+    font-size: 0.72rem;
+
+    font-weight: 850;
+
+    letter-spacing: 0.28em;
+
+    text-shadow:
+        0 0 12px rgba(157, 92, 255, 0.40);
+}
+
+
+.portal-entry-copy>small {
+    color:
+        rgba(196, 167, 255, 0.72);
+
+    font-size: 0.52rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.24em;
+}
+
+
+/* =========================================================
+   BOTÃO CIRCULAR DE ENTRADA
+========================================================= */
+
+/*
+   FUTURAMENTE ESTE BOTÃO TERÁ:
+
+   - som;
+   - raio;
+   - flash;
+   - transição para Tela 02.
+*/
+
+.portal-enter-button {
+    position: relative;
+
+    width: 58px;
+    height: 58px;
+
+    margin-top: 13px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid rgba(196, 167, 255, 0.46);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(157, 92, 255, 0.20) 0%,
+            rgba(124, 58, 237, 0.09) 52%,
+            rgba(8, 7, 13, 0.38) 100%);
+
+    box-shadow:
+        0 0 15px rgba(157, 92, 255, 0.32),
+        0 0 34px rgba(124, 58, 237, 0.16);
+
+    color:
+        #ffffff;
+
+    cursor: pointer;
+
+    isolation: isolate;
+
+    transition:
+        transform 220ms ease,
+        box-shadow 220ms ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    .portal-enter-button:focus {
+        outline: none;
+    }
+
+    .portal-enter-button:focus-visible {
+        outline: none;
+    }
+}
+
+
+/* ANEL ROTATIVO */
+
+.portal-enter-ring {
+    position: absolute;
+
+    inset: 5px;
+
+    border:
+        3px solid rgba(244, 114, 182, 0.16);
+
+    border-top-color:
+        #f472b6;
+
+    border-right-color:
+        #9d5cff;
+
+    border-radius: 50%;
+
+    animation:
+        portalEnterRingRotate 8s linear infinite;
+}
+
+
+/* NÚCLEO CENTRAL */
+
+.portal-enter-core {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(135deg,
+            #f472b6,
+            #c084fc,
+            #22d3ee);
+
+    box-shadow:
+        0 0 8px rgba(244, 114, 182, 0.82),
+        0 0 20px rgba(157, 92, 255, 0.50);
+
+    animation:
+        portalEnterCorePulse 2.2s ease-in-out infinite;
+}
+
+
+/* SETAS */
+
+.portal-enter-button svg {
+    position: relative;
+
+    z-index: 3;
+
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+
+    stroke:
+        #ffffff;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    filter:
+        drop-shadow(0 0 6px rgba(196, 167, 255, 0.88));
+}
+
+
+.portal-enter-button:hover {
+    transform:
+        scale(1.06);
+
+    box-shadow:
+        0 0 22px rgba(157, 92, 255, 0.46),
+        0 0 50px rgba(124, 58, 237, 0.24);
+}
+
+
+.portal-enter-button:active {
+    transform:
+        scale(0.94);
+}
+
+
+@keyframes portalEnterRingRotate {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes portalEnterCorePulse {
+
+    0%,
+    100% {
+        transform:
+            scale(0.72);
+
+        opacity: 0.62;
+    }
+
+    50% {
+        transform:
+            scale(1.22);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR — AJUSTES PRINCIPAIS
+========================================================= */
+
+/*
+   Esta é a área que você poderá usar
+   para regular manualmente a Tela 01.
+
+   IMPORTANTE:
+   não use mais translateY de -200px, -300px etc.
+
+   Agora trabalharemos com:
+   top / bottom / left / right.
+*/
+
+@media (max-width: 620px) {
+
+    /* -----------------------------------------
+       TOPO
+
+       top menor = sobe
+       top maior = desce
+    ----------------------------------------- */
+
+    .portal-brand {
+        top: 4.8%;
+    }
+
+
+    /* -----------------------------------------
+       FOCO DO DIA
+
+       top menor = sobe
+       top maior = desce
+
+       left maior = vai para direita
+       left menor = vai para esquerda
+    ----------------------------------------- */
+
+    .portal-focus-card {
+        top: 40.5%;
+        left: 6%;
+    }
+
+
+    /* -----------------------------------------
+       SUA EVOLUÇÃO
+
+       top menor = sobe
+       top maior = desce
+
+       right maior = vai para esquerda
+       right menor = vai para direita
+    ----------------------------------------- */
+
+    .portal-progress-card {
+        top: 40.5%;
+        right: 6%;
+    }
+
+
+    /* -----------------------------------------
+       ÁREA "TOQUE NO PORTAL"
+
+       bottom maior = sobe
+       bottom menor = desce
+    ----------------------------------------- */
+
+    .portal-entry-copy {
+        bottom: 6%;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR MUITO PEQUENO
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .portal-brand {
+        top: 4%;
+    }
+
+
+    .portal-name {
+        font-size:
+            clamp(2rem,
+                10vw,
+                2.8rem);
+    }
+
+
+    .portal-introduction {
+        margin-top: 12px;
+
+        font-size: 0.72rem;
+    }
+
+
+    .portal-status-card {
+        width: 105px;
+    }
+
+
+    .portal-focus-card {
+        left: 5%;
+    }
+
+
+    .portal-progress-card {
+        right: 5%;
+    }
+
+
+    .portal-entry-copy {
+        bottom: 4.5%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+/*
+   A Tela 01 continua com aparência de aplicativo.
+   Não ocupa toda a largura do tablet.
+*/
+
+@media (min-width: 621px) and (max-width: 1024px) {
+
+    .portal-screen {
+        width: 520px;
+    }
+
+
+    .portal-brand {
+        top: 6%;
+    }
+
+
+    .portal-focus-card {
+        top: 41%;
+        left: 7%;
+    }
+
+
+    .portal-progress-card {
+        top: 41%;
+        right: 7%;
+    }
+
+
+    .portal-entry-copy {
+        bottom: 6%;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+/*
+   Mesmo no computador a Tela 01 permanece
+   com proporção de aplicativo.
+
+   Assim o cérebro não fica gigante na tela.
+*/
+
+@media (min-width: 1025px) {
+
+    .portal-screen {
+        width: 520px;
+    }
+
+
+    .portal-brand {
+        top: 6%;
+    }
+
+
+    .portal-focus-card {
+        top: 41%;
+        left: 7%;
+    }
+
+
+    .portal-progress-card {
+        top: 41%;
+        right: 7%;
+    }
+
+
+    .portal-entry-copy {
+        bottom: 6%;
+    }
+
+}
+
+
+/* =========================================================
+   TELAS BAIXAS
+========================================================= */
+
+/*
+   Exemplo:
+   notebook com pouca altura,
+   celular em modo paisagem etc.
+*/
+
+@media (max-height: 720px) {
+
+    .portal-brand {
+        top: 3.5%;
+    }
+
+
+    .portal-brand-icon {
+        width: 36px;
+        height: 36px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .portal-brand-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+
+    .portal-introduction {
+        margin-top: 10px;
+    }
+
+
+    .portal-focus-card,
+    .portal-progress-card {
+        top: 39%;
+    }
+
+
+    .portal-entry-copy {
+        bottom: 3%;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE — REDUZIR MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portal-background,
+    .portal-particles,
+    .portal-crystal,
+    .portal-energy-dot,
+    .portal-brand-icon,
+    .portal-name,
+    .portal-focus-indicator,
+    .portal-enter-ring,
+    .portal-enter-core {
+        animation: none !important;
+    }
+
+}
+
+/* =========================================================
+   TELA 01 — TABLET E DESKTOP IMERSIVO
+========================================================= */
+
+/*
+   ESTRATÉGIA:
+
+   CELULAR:
+   - continua como está.
+
+   TABLET / PC:
+   - o fundo ocupa toda a tela;
+   - a imagem não fica presa em 520px;
+   - o conteúdo continua centralizado;
+   - textos não esticam;
+   - Foco do dia e Sua evolução permanecem proporcionais.
+*/
+
+@media (min-width: 621px) {
+
+    /* =====================================================
+       TELA 01
+       
+       Ocupa o monitor inteiro.
+    ===================================================== */
+
+    .portal-screen {
+        left: 0;
+
+        width: 100vw;
+        max-width: none;
+
+        transform: none;
+
+        background: #05040a;
+    }
+
+
+    /* =====================================================
+       BACKGROUND
+       
+       Agora a arte ocupa toda a tela.
+       
+       DICA:
+       cover = preenche todo o espaço.
+    ===================================================== */
+
+    .portal-background {
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        margin-left: 0;
+
+        background-size: cover;
+
+        background-position:
+            center center;
+    }
+
+
+    /* =====================================================
+       PARTÍCULAS
+       
+       Agora podem ocupar todo o monitor.
+    ===================================================== */
+
+    .portal-particles {
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* =====================================================
+       ELEMENTOS FLUTUANTES
+       
+       Cristais e pontos de energia também podem
+       usar toda a área disponível.
+    ===================================================== */
+
+    .portal-floating-elements {
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    /* =====================================================
+       CONTEÚDO PRINCIPAL
+       
+       O fundo é full screen,
+       mas os textos continuam centralizados.
+    ===================================================== */
+
+    .portal-content {
+        position: relative;
+
+        top: 0;
+        left: 50%;
+
+        width: min(720px,
+                92vw);
+
+        height: 100%;
+
+        transform:
+            translateX(-50%);
+    }
+
+
+    /* =====================================================
+       CABEÇALHO
+    ===================================================== */
+
+    .portal-brand {
+        top: 6%;
+
+        width:
+            min(680px,
+                88vw);
+    }
+
+
+    /* =====================================================
+       SENHOR NATAN
+       
+       Em desktop pode crescer um pouco,
+       mas sem exagero.
+    ===================================================== */
+
+    .portal-name {
+        font-size:
+            clamp(3rem,
+                5vw,
+                5rem);
+    }
+
+
+    /* =====================================================
+       FOCO DO DIA
+    ===================================================== */
+
+    .portal-focus-card {
+        top: 41%;
+        left: 2%;
+    }
+
+
+    /* =====================================================
+       SUA EVOLUÇÃO
+    ===================================================== */
+
+    .portal-progress-card {
+        top: 41%;
+        right: 2%;
+    }
+
+
+    /* =====================================================
+       BOTÃO / TEXTO DE ENTRADA
+    ===================================================== */
+
+    .portal-entry-copy {
+        bottom: 5%;
+    }
+
+}
+
+/* =========================================================
+   TELA 01 — EFEITO DE ATIVAÇÃO DO PORTAL
+========================================================= */
+
+/*
+   Este efeito acontece quando o JavaScript adiciona:
+
+   .portal-ativado
+
+   SEQUÊNCIA:
+   1. botão pulsa;
+   2. brilho aumenta;
+   3. surge um flash;
+   4. partículas recebem mais intensidade.
+
+   A transição para a Tela 02 será adicionada depois.
+*/
+
+
+/* =========================================================
+   BOTÃO — PULSO DE ATIVAÇÃO
+========================================================= */
+
+.portal-screen.portal-ativado .portal-enter-button {
+
+    animation:
+        portalButtonActivate 650ms ease-out forwards;
+
+}
+
+
+/* =========================================================
+   ANEL DO BOTÃO — ACELERA AO CLICAR
+========================================================= */
+
+.portal-screen.portal-ativado .portal-enter-ring {
+
+    animation:
+        portalEnterRingActivate 650ms ease-out forwards;
+
+}
+
+
+/* =========================================================
+   PARTÍCULAS — AUMENTAM O BRILHO
+========================================================= */
+
+.portal-screen.portal-ativado .portal-particles {
+
+    opacity: 1;
+
+    filter:
+        brightness(1.45) saturate(1.25);
+
+}
+
+
+/* =========================================================
+   ELEMENTOS FLUTUANTES — REAGEM AO CLIQUE
+========================================================= */
+
+.portal-screen.portal-ativado .portal-floating-elements {
+
+    filter:
+        brightness(1.35) saturate(1.25);
+
+}
+
+
+/* =========================================================
+   FLASH CENTRAL
+========================================================= */
+
+/*
+   Criamos o flash sem precisar adicionar novo HTML.
+*/
+
+.portal-screen::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 50;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    background:
+        radial-gradient(circle at 50% 56%,
+            rgba(255, 255, 255, 0.92) 0%,
+            rgba(196, 167, 255, 0.75) 8%,
+            rgba(157, 92, 255, 0.44) 18%,
+            rgba(34, 211, 238, 0.20) 34%,
+            transparent 62%);
+
+}
+
+
+.portal-screen.portal-ativado::after {
+
+    animation:
+        portalFlashActivate 850ms ease-out forwards;
+
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes portalButtonActivate {
+
+    0% {
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 0 15px rgba(157, 92, 255, 0.32),
+            0 0 34px rgba(124, 58, 237, 0.16);
+    }
+
+
+    45% {
+        transform:
+            scale(1.22);
+
+        box-shadow:
+            0 0 28px rgba(244, 114, 182, 0.90),
+            0 0 65px rgba(157, 92, 255, 0.72),
+            0 0 110px rgba(34, 211, 238, 0.30);
+    }
+
+
+    100% {
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 0 18px rgba(157, 92, 255, 0.40),
+            0 0 38px rgba(124, 58, 237, 0.22);
+    }
+
+}
+
+
+@keyframes portalEnterRingActivate {
+
+    0% {
+        transform:
+            rotate(0deg) scale(1);
+    }
+
+
+    60% {
+        transform:
+            rotate(300deg) scale(1.18);
+
+        opacity: 1;
+    }
+
+
+    100% {
+        transform:
+            rotate(420deg) scale(1);
+
+        opacity: 0.82;
+    }
+
+}
+
+
+@keyframes portalFlashActivate {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            scale(0.65);
+    }
+
+
+    32% {
+        opacity: 0.95;
+
+        transform:
+            scale(1.05);
+    }
+
+
+    65% {
+        opacity: 0.40;
+
+        transform:
+            scale(1.22);
+    }
+
+
+    100% {
+        opacity: 0;
+
+        transform:
+            scale(1.42);
+    }
+
+}
+
+/* =========================================================
+   TELA 01 — RAIO DE ATIVAÇÃO
+========================================================= */
+
+/*
+   Este raio aparece somente quando a classe
+   .portal-ativado é adicionada pelo JavaScript.
+
+   OBJETIVO:
+   criar a sensação de que o botão envia energia
+   para o cérebro/portal antes da transição.
+*/
+
+
+/* =========================================================
+   RAIO VERTICAL
+========================================================= */
+
+.portal-screen::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 7%;
+
+    z-index: 45;
+
+    width: 4px;
+    height: 0;
+
+    transform:
+        translateX(-50%);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            rgba(34, 211, 238, 0) 0%,
+            rgba(34, 211, 238, 0.88) 22%,
+            rgba(196, 167, 255, 1) 52%,
+            rgba(244, 114, 182, 0.95) 78%,
+            rgba(255, 255, 255, 1) 100%);
+
+    box-shadow:
+        0 0 10px rgba(34, 211, 238, 0.90),
+        0 0 22px rgba(157, 92, 255, 0.90),
+        0 0 42px rgba(244, 114, 182, 0.55);
+
+}
+
+
+/* =========================================================
+   ATIVAÇÃO DO RAIO
+========================================================= */
+
+.portal-screen.portal-ativado::before {
+
+    animation:
+        portalEnergyBeam 700ms cubic-bezier(0.2,
+            0.8,
+            0.2,
+            1) forwards;
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO DO RAIO
+========================================================= */
+
+@keyframes portalEnergyBeam {
+
+    0% {
+
+        height: 0;
+
+        opacity: 0;
+
+        filter:
+            brightness(1);
+    }
+
+
+    20% {
+
+        opacity: 1;
+    }
+
+
+    65% {
+
+        height: 52%;
+
+        opacity: 1;
+
+        filter:
+            brightness(1.8);
+    }
+
+
+    100% {
+
+        height: 120%;
+
+        opacity: 0;
+
+        filter:
+            brightness(2.2);
+    }
+
+}
+
+/* =========================================================
+   TELA 01 — TRANSIÇÃO CINEMATOGRÁFICA PARA A TELA 02
+========================================================= */
+
+/*
+   EFEITO: "ENTRAR NO PORTAL"
+
+   SEQUÊNCIA:
+
+   1. pulso + raio já existentes são ativados;
+   2. o conteúdo começa a perder presença;
+   3. o cérebro/portal se aproxima;
+   4. uma onda de energia nasce no centro;
+   5. a onda cresce e ocupa toda a tela;
+   6. ocorre um clarão violeta/ciano;
+   7. JavaScript revela a Tela 02.
+
+   RESULTADO:
+   sensação de atravessar o portal,
+   e não simplesmente trocar de página.
+*/
+
+
+/* =========================================================
+   TELA COMPLETA — SAÍDA
+========================================================= */
+
+.portal-screen.portal-saindo {
+
+    pointer-events: none;
+
+    animation:
+        portalTelaImersao 950ms
+        cubic-bezier(
+            0.20,
+            0.72,
+            0.20,
+            1
+        )
+        forwards;
+}
+
+
+/* =========================================================
+   ONDA DE ENERGIA
+
+   Usa uma camada circular que nasce aproximadamente
+   na região central do portal e cresce até cobrir a tela.
+========================================================= */
+
+.portal-screen.portal-saindo::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 52%;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0);
+
+    opacity: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(198, 225, 255, 0.95) 10%,
+            rgba(116, 88, 255, 0.82) 27%,
+            rgba(139, 52, 255, 0.55) 43%,
+            rgba(63, 21, 130, 0.18) 63%,
+            transparent 74%
+        );
+
+    box-shadow:
+        0 0 35px rgba(174, 210, 255, 0.90),
+        0 0 80px rgba(130, 86, 255, 0.85),
+        0 0 150px rgba(122, 55, 255, 0.65);
+
+    animation:
+        portalOndaEnergia 950ms
+        cubic-bezier(
+            0.18,
+            0.70,
+            0.18,
+            1
+        )
+        forwards;
+}
+
+
+/* =========================================================
+   BACKGROUND — APROXIMAÇÃO DO PORTAL
+========================================================= */
+
+.portal-screen.portal-saindo
+.portal-background {
+
+    transform-origin:
+        50% 52%;
+
+    animation:
+        portalBackgroundImersao 950ms
+        cubic-bezier(
+            0.18,
+            0.72,
+            0.16,
+            1
+        )
+        forwards;
+}
+
+
+/* =========================================================
+   CONTEÚDO — DESAPARECE ANTES DO CLARÃO
+========================================================= */
+
+.portal-screen.portal-saindo
+.portal-content {
+
+    animation:
+        portalConteudoImersao 650ms
+        ease-out
+        forwards;
+}
+
+
+/* =========================================================
+   PARTÍCULAS E ELEMENTOS FLUTUANTES
+========================================================= */
+
+.portal-screen.portal-saindo
+.portal-floating-elements,
+
+.portal-screen.portal-saindo
+.portal-particles {
+
+    animation:
+        portalParticulasImersao 800ms
+        ease-out
+        forwards;
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — TELA COMPLETA
+========================================================= */
+
+@keyframes portalTelaImersao {
+
+    0% {
+        opacity: 1;
+    }
+
+
+    72% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — ONDA DE ENERGIA
+
+   O scale final controla o tamanho da explosão.
+
+   35 = menor
+   45 = atual
+   55 = maior
+========================================================= */
+
+@keyframes portalOndaEnergia {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity: 0;
+    }
+
+
+    12% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.8);
+
+        opacity: 0.45;
+    }
+
+
+    38% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(3.5);
+
+        opacity: 0.85;
+    }
+
+
+    72% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(16);
+
+        opacity: 1;
+    }
+
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(45);
+
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — ENTRADA VISUAL NO PORTAL
+
+   AJUSTE MANUAL:
+
+   scale(1.18) = aproximação atual.
+
+   Mais suave:
+   1.12
+
+   Mais impactante:
+   1.25
+========================================================= */
+
+@keyframes portalBackgroundImersao {
+
+    0% {
+
+        transform:
+            scale(1.02);
+
+        filter:
+            brightness(1.03)
+            saturate(1.05)
+            contrast(1.02)
+            blur(0);
+    }
+
+
+    35% {
+
+        transform:
+            scale(1.05);
+
+        filter:
+            brightness(1.15)
+            saturate(1.12)
+            contrast(1.04)
+            blur(0);
+    }
+
+
+    70% {
+
+        transform:
+            scale(1.11);
+
+        filter:
+            brightness(1.38)
+            saturate(1.22)
+            contrast(1.05)
+            blur(1px);
+    }
+
+
+    100% {
+
+        transform:
+            scale(1.18);
+
+        filter:
+            brightness(1.75)
+            saturate(1.30)
+            contrast(1.06)
+            blur(4px);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — CONTEÚDO
+
+   Os textos desaparecem antes da explosão,
+   deixando o portal assumir toda a atenção.
+========================================================= */
+
+@keyframes portalConteudoImersao {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+        filter:
+            blur(0);
+    }
+
+
+    45% {
+
+        opacity: 0.75;
+
+        transform:
+            scale(1.01);
+
+        filter:
+            blur(0);
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(1.04);
+
+        filter:
+            blur(4px);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — PARTÍCULAS
+
+   Antes de desaparecerem, as partículas ganham
+   intensidade, simulando uma descarga de energia.
+========================================================= */
+
+@keyframes portalParticulasImersao {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+        filter:
+            brightness(1);
+    }
+
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.05);
+
+        filter:
+            brightness(1.8);
+    }
+
+
+    75% {
+
+        opacity: 0.8;
+
+        transform:
+            scale(1.12);
+
+        filter:
+            brightness(2.5);
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            scale(1.20);
+
+        filter:
+            brightness(3);
     }
 
 }
