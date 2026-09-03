@@ -636,8 +636,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-    }
 
+        // =================================================
+        // BOTÃO — PRÓXIMO / CONCLUIR
+        // =================================================
+
+        const textoBotao =
+            btnProximaMemoria.querySelector(
+                "span"
+            );
+
+
+        if (memoria.numero === 100) {
+
+            if (textoBotao) {
+
+                textoBotao.textContent =
+                    "Concluir";
+
+            }
+
+        } else {
+
+            if (textoBotao) {
+
+                textoBotao.textContent =
+                    "Próximo";
+
+            }
+
+        }
+
+    }
     // =====================================================
     // ÍNDICE DA MEMÓRIA ATUAL
     //
@@ -826,14 +856,78 @@ document.addEventListener("DOMContentLoaded", () => {
             ];
 
 
-        if (!proximaMemoria) {
+        // =====================================================
+        // AINDA EXISTE MEMÓRIA NA FAIXA ATUAL
+        // =====================================================
+
+        if (proximaMemoria) {
+
+            indiceMemoriaAtual =
+                proximoIndice;
+
+
+            mostrarMemoria(
+                indiceMemoriaAtual
+            );
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+
+            return;
+
+        }
+
+
+        // =====================================================
+        // ÚLTIMA FAIXA — CONCLUIR APRENDIZADO
+        // =====================================================
+
+        if (faixaFimAtual >= 100) {
+
+            voltarParaMemoria();
+
+            return;
+
+        }
+
+
+        // =====================================================
+        // AVANÇAR AUTOMATICAMENTE PARA A PRÓXIMA FAIXA
+        // =====================================================
+
+        const novoInicio =
+            faixaFimAtual + 1;
+
+
+        const novoFim =
+            Math.min(
+                novoInicio + 9,
+                100
+            );
+
+
+        const memoriasProximaFaixa =
+            bancoMemoria.filter(
+                memoria =>
+                    memoria.numero >= novoInicio &&
+                    memoria.numero <= novoFim
+            );
+
+
+        if (
+            memoriasProximaFaixa.length === 0
+        ) {
 
             console.log(
-                `Faixa ${String(
-                    faixaInicioAtual
+                `A faixa ${String(
+                    novoInicio
                 ).padStart(2, "0")}–${String(
-                    faixaFimAtual
-                ).padStart(2, "0")} concluída.`
+                    novoFim
+                ).padStart(2, "0")} não possui memórias cadastradas.`
             );
 
             return;
@@ -841,9 +935,66 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        indiceMemoriaAtual =
-            proximoIndice;
+        faixaInicioAtual =
+            novoInicio;
 
+
+        faixaFimAtual =
+            novoFim;
+
+
+        indiceMemoriaAtual =
+            0;
+
+
+        // =====================================================
+        // ATUALIZAR NOME DA FAIXA NO TOPO
+        // =====================================================
+
+        if (learningRangeAtual) {
+
+            learningRangeAtual.textContent =
+                `${String(
+                    faixaInicioAtual
+                ).padStart(2, "0")}–${String(
+                    faixaFimAtual
+                ).padStart(2, "0")}`;
+
+        }
+
+
+        // =====================================================
+        // ATUALIZAR FAIXA ATIVA NO SELETOR
+        // =====================================================
+
+        learningRangeOptions.forEach(
+            botao => {
+
+                const inicioBotao =
+                    Number(
+                        botao.dataset.inicio
+                    );
+
+
+                const fimBotao =
+                    Number(
+                        botao.dataset.fim
+                    );
+
+
+                botao.classList.toggle(
+                    "active",
+                    inicioBotao === faixaInicioAtual &&
+                    fimBotao === faixaFimAtual
+                );
+
+            }
+        );
+
+
+        // =====================================================
+        // MOSTRAR PRIMEIRA MEMÓRIA DA NOVA FAIXA
+        // =====================================================
 
         mostrarMemoria(
             indiceMemoriaAtual
@@ -856,7 +1007,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
     // =====================================================
     // VOLTAR PARA HOME
     // =====================================================
