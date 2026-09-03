@@ -2794,29 +2794,44 @@ body [hidden][hidden] {
 .learning-card {
     position: relative;
 
+    width: 100%;
     max-width: 760px;
 
     margin: 0 auto;
 
+    /* Mantém espaço interno sem criar aparência de card */
     padding: 24px;
 
-    border:
-        1px solid rgba(196, 167, 255, 0.18);
+    /* =====================================================
+       TELA ABERTA
 
-    border-radius: 28px;
+       Removemos:
+       - borda externa;
+       - cantos arredondados;
+       - fundo do card;
+       - sombra externa.
 
-    background:
-        linear-gradient(145deg,
-            rgba(18, 16, 26, 0.96),
-            rgba(10, 8, 16, 0.94));
+       Assim o treinamento passa a fazer parte da própria
+       tela, sem parecer uma caixa dentro de outra caixa.
+    ====================================================== */
 
-    box-shadow:
-        0 24px 70px rgba(0, 0, 0, 0.42),
-        0 0 48px rgba(124, 58, 237, 0.12);
+    border: none;
+    border-radius: 0;
 
-    overflow: hidden;
+    background: transparent;
+
+    box-shadow: none;
+
+    overflow: visible;
 }
 
+
+/* =====================================================
+   LUZ AMBIENTE
+
+   Mantemos somente um brilho muito discreto no fundo.
+   Ele não cria borda nem moldura.
+===================================================== */
 
 .learning-card::before {
     content: "";
@@ -2832,25 +2847,104 @@ body [hidden][hidden] {
     border-radius: 50%;
 
     background:
-        rgba(124, 58, 237, 0.22);
+        rgba(124, 58, 237, 0.14);
 
     filter:
-        blur(60px);
+        blur(70px);
 
     pointer-events: none;
 }
-
 
 .learning-card-top {
     position: relative;
 
     z-index: 2;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
 
-    margin-bottom: 20px;
+    grid-template-columns:
+        44px 1fr auto;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR
+
+   Retorna para a Central da Memória Numérica.
+
+   38px = tamanho atual
+   42px = maior
+   34px = menor
+========================================================= */
+
+.learning-back-button {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
+
+    border:
+        1px solid rgba(177, 111, 255, 0.22);
+
+    border-radius: 12px;
+
+    color:
+        #c79bff;
+
+    background:
+        rgba(124, 58, 237, 0.08);
+
+    box-shadow:
+        inset 0 0 16px rgba(156, 86, 255, 0.04);
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        border-color 180ms ease,
+        background 180ms ease,
+        transform 180ms ease;
+}
+
+
+.learning-back-button:hover {
+    border-color:
+        rgba(190, 118, 255, 0.42);
+
+    background:
+        rgba(124, 58, 237, 0.16);
+}
+
+
+.learning-back-button:active {
+    transform:
+        scale(0.94);
+}
+
+
+.learning-back-button svg {
+    width: 18px;
+    height: 18px;
+
+    fill: none;
+
+    stroke:
+        currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 
@@ -2875,7 +2969,360 @@ body [hidden][hidden] {
 }
 
 
+/* =========================================================
+   SELETOR DE FAIXA
+
+   Fica abaixo do topo principal.
+   O botão abre o painel com as faixas 01–10 até 91–100.
+========================================================= */
+
+.learning-range-toggle {
+
+    grid-column:
+        1 / -1;
+
+    justify-self:
+        center;
+
+    min-width:
+        126px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        6px;
+
+    margin-top:
+        2px;
+
+    padding:
+        7px 12px;
+
+    border:
+        1px solid rgba(177, 111, 255, 0.18);
+
+    border-radius:
+        999px;
+
+    color:
+        rgba(238, 226, 255, 0.82);
+
+    background:
+        rgba(124, 58, 237, 0.07);
+
+    box-shadow:
+        inset 0 0 14px rgba(156, 86, 255, 0.035);
+
+    cursor:
+        pointer;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    transition:
+        background 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
+}
+
+
+.learning-range-toggle:hover {
+
+    border-color:
+        rgba(190, 118, 255, 0.34);
+
+    background:
+        rgba(124, 58, 237, 0.13);
+
+}
+
+
+.learning-range-toggle:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+.learning-range-toggle>span {
+
+    font-size:
+        0.58rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.12em;
+
+    color:
+        var(--text-muted);
+
+}
+
+
+.learning-range-toggle strong {
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.04em;
+
+    color:
+        #c79bff;
+
+}
+
+
+.learning-range-toggle svg {
+
+    width:
+        14px;
+
+    height:
+        14px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.8;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+}
+
+
+/* =========================================================
+   PAINEL DAS FAIXAS
+
+   DICA:
+   Aqui controlamos a caixa que aparece ao tocar em "FAIXA".
+========================================================= */
+
+.learning-range-panel {
+
+    position:
+        relative;
+
+    z-index:
+        8;
+
+    width:
+        100%;
+
+    max-width:
+        430px;
+
+    margin:
+        0 auto 20px;
+
+    padding:
+        14px;
+
+    border:
+        1px solid rgba(177, 111, 255, 0.20);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(25, 15, 43, 0.96),
+            rgba(11, 8, 19, 0.98));
+
+    box-shadow:
+        0 16px 42px rgba(0, 0, 0, 0.34),
+        inset 0 0 24px rgba(124, 58, 237, 0.05);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* TÍTULO "ESCOLHA UMA FAIXA" */
+
+.learning-range-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    text-align:
+        center;
+
+    font-size:
+        0.62rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.14em;
+
+    color:
+        rgba(221, 202, 255, 0.66);
+
+}
+
+
+/* =========================================================
+   GRADE DAS FAIXAS
+
+   Desktop:
+   5 colunas x 2 linhas.
+
+   Mobile:
+   também mantemos 5 colunas porque os botões são compactos.
+========================================================= */
+
+.learning-range-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        7px;
+
+}
+
+
+/* =========================================================
+   BOTÃO DE CADA FAIXA
+========================================================= */
+
+.learning-range-option {
+
+    min-width:
+        0;
+
+    padding:
+        9px 4px;
+
+    border:
+        1px solid rgba(177, 111, 255, 0.14);
+
+    border-radius:
+        10px;
+
+    font-family:
+        inherit;
+
+    font-size:
+        0.66rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.02em;
+
+    text-align:
+        center;
+
+    color:
+        rgba(232, 219, 255, 0.74);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    box-shadow:
+        inset 0 0 12px rgba(124, 58, 237, 0.025);
+
+    cursor:
+        pointer;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background 160ms ease,
+        color 160ms ease,
+        box-shadow 160ms ease;
+
+}
+
+
+.learning-range-option:hover {
+
+    border-color:
+        rgba(190, 118, 255, 0.36);
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+    color:
+        #ffffff;
+
+}
+
+
+.learning-range-option:active {
+
+    transform:
+        scale(0.95);
+
+}
+
+
+/* =========================================================
+   FAIXA ATUAL
+
+   A faixa selecionada ganha destaque violeta.
+========================================================= */
+
+.learning-range-option.active {
+
+    border-color:
+        rgba(190, 118, 255, 0.58);
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            rgba(124, 58, 237, 0.38),
+            rgba(91, 33, 182, 0.24));
+
+    box-shadow:
+        0 0 18px rgba(124, 58, 237, 0.16),
+        inset 0 0 16px rgba(196, 167, 255, 0.05);
+
+}
+
+
 .learning-number-area {
+
     position: relative;
 
     z-index: 2;
@@ -2883,25 +3330,30 @@ body [hidden][hidden] {
     text-align: center;
 
     margin-bottom: 18px;
+
 }
 
 
 .learning-label {
+
     display: block;
 
     margin-bottom: 4px;
 
     font-size: 0.72rem;
+
     font-weight: 800;
 
     letter-spacing: 0.16em;
 
     color:
         var(--text-muted);
+
 }
 
 
 .learning-number {
+
     display: inline-block;
 
     font-size:
@@ -2916,19 +3368,26 @@ body [hidden][hidden] {
             #9d5cff 70%,
             #7c3aed 100%);
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip:
+        text;
 
-    -webkit-text-fill-color: transparent;
+    background-clip:
+        text;
 
-    color: transparent;
+    -webkit-text-fill-color:
+        transparent;
+
+    color:
+        transparent;
 
     filter:
         drop-shadow(0 0 18px rgba(157, 92, 255, 0.26));
+
 }
 
 
 .learning-association {
+
     position: relative;
 
     z-index: 2;
@@ -2941,50 +3400,60 @@ body [hidden][hidden] {
     gap: 12px;
 
     margin-bottom: 20px;
+
 }
 
 
 .learning-code,
 .learning-word {
+
     padding: 14px 16px;
 
     border:
         1px solid rgba(196, 167, 255, 0.14);
 
-    border-radius: 18px;
+    border-radius:
+        18px;
 
     background:
         rgba(255, 255, 255, 0.025);
 
     text-align: center;
+
 }
 
 
 .learning-code span,
 .learning-word span {
+
     display: block;
 
     margin-bottom: 4px;
 
     font-size: 0.66rem;
+
     font-weight: 800;
 
     letter-spacing: 0.14em;
 
     color:
         var(--text-muted);
+
 }
 
 
 .learning-code strong {
+
     font-size: 2rem;
 
     color:
         var(--purple-3);
+
 }
 
 
 .learning-word strong {
+
     font-size: 1.55rem;
 
     background:
@@ -2993,16 +3462,23 @@ body [hidden][hidden] {
             #c4a7ff,
             #9d5cff);
 
-    -webkit-background-clip: text;
-    background-clip: text;
+    -webkit-background-clip:
+        text;
 
-    -webkit-text-fill-color: transparent;
+    background-clip:
+        text;
 
-    color: transparent;
+    -webkit-text-fill-color:
+        transparent;
+
+    color:
+        transparent;
+
 }
 
 
 .learning-image-frame {
+
     position: relative;
 
     width: 100%;
@@ -3016,23 +3492,28 @@ body [hidden][hidden] {
     border:
         1px solid rgba(196, 167, 255, 0.18);
 
-    border-radius: 24px;
+    border-radius:
+        24px;
 
     background:
         #0d0a14;
 
     box-shadow:
         0 18px 50px rgba(0, 0, 0, 0.34);
+
 }
 
 
 .learning-image {
+
     width: 100%;
+
     height: 100%;
 
     display: block;
 
     object-fit: cover;
+
     object-position: center;
 
     transform:
@@ -3040,16 +3521,20 @@ body [hidden][hidden] {
 
     transition:
         transform 700ms cubic-bezier(.2, .8, .2, 1);
+
 }
 
 
 .learning-image-frame:hover .learning-image {
+
     transform:
         scale(1.045);
+
 }
 
 
 .learning-image-glow {
+
     position: absolute;
 
     inset: 0;
@@ -3063,15 +3548,18 @@ body [hidden][hidden] {
 
     box-shadow:
         inset 0 0 50px rgba(124, 58, 237, 0.10);
+
 }
 
 
 .learning-memory-tip {
+
     position: relative;
 
     z-index: 2;
 
     display: flex;
+
     align-items: flex-start;
 
     gap: 12px;
@@ -3080,17 +3568,20 @@ body [hidden][hidden] {
 
     padding: 14px 16px;
 
-    border-radius: 18px;
+    border-radius:
+        18px;
 
     background:
         rgba(124, 58, 237, 0.08);
 
     border:
         1px solid rgba(157, 92, 255, 0.14);
+
 }
 
 
 .learning-memory-tip-icon {
+
     flex-shrink: 0;
 
     font-size: 1.1rem;
@@ -3100,20 +3591,25 @@ body [hidden][hidden] {
 
     text-shadow:
         0 0 14px rgba(157, 92, 255, 0.70);
+
 }
 
 
 .learning-memory-tip p {
+
     margin: 0;
 
     color:
         var(--text-soft);
 
-    line-height: 1.55;
+    line-height:
+        1.55;
+
 }
 
 
 .learning-next-button {
+
     position: relative;
 
     z-index: 2;
@@ -3124,58 +3620,227 @@ body [hidden][hidden] {
 
     box-shadow:
         0 12px 34px rgba(124, 58, 237, 0.24);
+
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 620px) {
 
     .memory-learning-stage {
-        padding-bottom: 105px;
+
+        padding-bottom:
+            105px;
+
     }
 
 
     .learning-card {
-        padding: 18px;
 
-        border-radius: 24px;
+        /* DICA:
+           diminua este valor para aproximar mais o conteúdo
+           das laterais do celular.
+        */
+
+        padding:
+            18px;
+
+        border-radius:
+            0;
+
+    }
+
+
+    .learning-card-top {
+
+        grid-template-columns:
+            38px 1fr auto;
+
+        gap:
+            10px;
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    .learning-back-button {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        border-radius:
+            11px;
+
+    }
+
+
+    .learning-back-button svg {
+
+        width:
+            17px;
+
+        height:
+            17px;
+
+    }
+
+
+    .learning-range-toggle {
+
+        min-width:
+            118px;
+
+        padding:
+            6px 10px;
+
+        margin-top:
+            0;
+
+    }
+
+
+    .learning-range-toggle>span {
+
+        font-size:
+            0.54rem;
+
+    }
+
+
+    .learning-range-toggle strong {
+
+        font-size:
+            0.68rem;
+
+    }
+
+
+    /* =====================================================
+       PAINEL DE FAIXAS — MOBILE
+
+       DICA:
+       padding menor = painel mais compacto.
+       gap menor = botões mais próximos.
+    ===================================================== */
+
+    .learning-range-panel {
+
+        width:
+            100%;
+
+        margin:
+            0 auto 18px;
+
+        padding:
+            11px;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .learning-range-label {
+
+        margin-bottom:
+            9px;
+
+        font-size:
+            0.56rem;
+
+    }
+
+
+    .learning-range-grid {
+
+        grid-template-columns:
+            repeat(5, 1fr);
+
+        gap:
+            5px;
+
+    }
+
+
+    .learning-range-option {
+
+        padding:
+            8px 2px;
+
+        border-radius:
+            9px;
+
+        font-size:
+            0.59rem;
+
+        letter-spacing:
+            -0.01em;
+
     }
 
 
     .learning-number {
-        font-size: 5.2rem;
+
+        font-size:
+            5.2rem;
+
     }
 
 
     .learning-association {
-        gap: 10px;
+
+        gap:
+            10px;
+
     }
 
 
     .learning-code,
     .learning-word {
-        padding: 12px;
+
+        padding:
+            12px;
+
     }
 
 
     .learning-code strong {
-        font-size: 1.7rem;
+
+        font-size:
+            1.7rem;
+
     }
 
 
     .learning-word strong {
-        font-size: 1.3rem;
+
+        font-size:
+            1.3rem;
+
     }
 
 
     .learning-image-frame {
-        border-radius: 20px;
+
+        border-radius:
+            20px;
+
     }
 
 
     .learning-memory-tip {
-        padding: 13px 14px;
+
+        padding:
+            13px 14px;
+
     }
 
 }

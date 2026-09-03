@@ -4,103 +4,6 @@
 // =====================================================
 
 
-// =====================================================
-// BANCO DE MEMÓRIA NUMÉRICA
-// =====================================================
-
-const bancoMemoria = [
-
-    {
-        numero: 1,
-        codigo: "T",
-        palavra: "Teia",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/01-teia.webp",
-        dominado: false
-    },
-
-    {
-        numero: 2,
-        codigo: "N",
-        palavra: "Noé",
-        categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/02-noe.webp",
-        dominado: false
-    },
-
-    {
-        numero: 3,
-        codigo: "M",
-        palavra: "Mãe",
-        categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/03-mae.webp",
-        dominado: false
-    },
-
-    {
-        numero: 4,
-        codigo: "C",
-        palavra: "Cão",
-        categoria: "animal",
-        imagem: "assets/imagens/memoria-numerica/numeros/04-cao.webp",
-        dominado: false
-    },
-
-    {
-        numero: 5,
-        codigo: "L",
-        palavra: "Lua",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/05-lua.webp",
-        dominado: false
-    },
-
-    {
-        numero: 6,
-        codigo: "S",
-        palavra: "Asa",
-        categoria: "símbolo",
-        imagem: "assets/imagens/memoria-numerica/numeros/06-asa.webp",
-        dominado: false
-    },
-
-    {
-        numero: 7,
-        codigo: "F",
-        palavra: "Fio",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/07-fio.webp",
-        dominado: false
-    },
-
-    {
-        numero: 8,
-        codigo: "G",
-        palavra: "Água",
-        categoria: "elemento",
-        imagem: "assets/imagens/memoria-numerica/numeros/08-agua.webp",
-        dominado: false
-    },
-
-    {
-        numero: 9,
-        codigo: "P",
-        palavra: "Pião",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/09-piao.webp",
-        dominado: false
-    },
-
-    {
-        numero: 10,
-        codigo: "TR",
-        palavra: "Touro",
-        categoria: "animal",
-        imagem: "assets/imagens/memoria-numerica/numeros/10-touro.webp",
-        dominado: false
-    }
-
-];
 
 // =====================================================
 // INICIALIZAÇÃO DO APLICATIVO
@@ -378,6 +281,12 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnVoltarCentralMemoria =
+        document.getElementById(
+            "btnVoltarCentralMemoria"
+        );
+
+
     const telaMemoriaNumerica =
         document.getElementById(
             "telaMemoriaNumerica"
@@ -459,6 +368,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnProximaMemoria =
         document.getElementById(
             "btnProximaMemoria"
+        );
+
+
+    const btnAbrirFaixasAprender =
+        document.getElementById(
+            "btnAbrirFaixasAprender"
+        );
+
+
+    const learningRangePanel =
+        document.getElementById(
+            "learningRangePanel"
+        );
+
+
+    const learningRangeAtual =
+        document.getElementById(
+            "learningRangeAtual"
+        );
+
+
+    const learningRangeOptions =
+        document.querySelectorAll(
+            ".learning-range-option"
         );
 
 
@@ -554,7 +487,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     // =====================================================
     // COMEÇAR APRENDIZADO
     // =====================================================
@@ -586,13 +518,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // ABRIR / FECHAR PAINEL DE FAIXAS
+    // =====================================================
+
+    function alternarPainelFaixas() {
+
+        if (
+            !learningRangePanel ||
+            !btnAbrirFaixasAprender
+        ) {
+
+            return;
+
+        }
+
+
+        const painelEstaAberto =
+            !learningRangePanel.hidden;
+
+
+        learningRangePanel.hidden =
+            painelEstaAberto;
+
+
+        btnAbrirFaixasAprender.setAttribute(
+            "aria-expanded",
+            String(
+                !painelEstaAberto
+            )
+        );
+
+    }
+
+
+    // =====================================================
     // MOSTRAR MEMÓRIA ATUAL
     // =====================================================
 
     function mostrarMemoria(indice) {
 
+        const memoriasDaFaixa =
+            bancoMemoria.filter(
+                memoria =>
+                    memoria.numero >= faixaInicioAtual &&
+                    memoria.numero <= faixaFimAtual
+            );
+
+
         const memoria =
-            bancoMemoria[indice];
+            memoriasDaFaixa[indice];
+
+
+        if (!memoria) {
+
+            console.log(
+                "Nenhuma memória disponível nesta faixa."
+            );
+
+            return;
+
+        }
 
 
         learningProgress.textContent =
@@ -600,7 +585,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 indice + 1
             ).padStart(2, "0")
             } / ${String(
-                bancoMemoria.length
+                memoriasDaFaixa.length
             ).padStart(2, "0")
             }`;
 
@@ -619,21 +604,49 @@ document.addEventListener("DOMContentLoaded", () => {
             memoria.palavra.toUpperCase();
 
 
-        learningImagem.src =
-            memoria.imagem;
+        // =================================================
+        // IMAGEM DA MEMÓRIA
+        // =================================================
 
+        if (memoria.imagem) {
 
-        learningImagem.alt =
-            `Associação visual do número ${String(
-                memoria.numero
-            ).padStart(2, "0")
-            } — ${memoria.palavra}`;
+            learningImagem.src =
+                memoria.imagem;
+
+            learningImagem.alt =
+                `Associação visual do número ${String(
+                    memoria.numero
+                ).padStart(2, "0")
+                } — ${memoria.palavra}`;
+
+            learningImagem.hidden =
+                false;
+
+        } else {
+
+            learningImagem.removeAttribute(
+                "src"
+            );
+
+            learningImagem.alt =
+                "";
+
+            learningImagem.hidden =
+                true;
+
+        }
 
     }
 
-
     // =====================================================
     // ÍNDICE DA MEMÓRIA ATUAL
+    //
+    // Agora este índice representa a posição DENTRO
+    // da faixa escolhida.
+    //
+    // Exemplo:
+    // 21 = posição 0 da faixa 21–30
+    // 22 = posição 1 da faixa 21–30
     // =====================================================
 
     let indiceMemoriaAtual =
@@ -641,25 +654,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // AVANÇAR MEMÓRIA
+    // FAIXA ATUAL DO APRENDIZADO
     // =====================================================
 
-    function avancarMemoria() {
-
-        const proximoIndice =
-            indiceMemoriaAtual + 1;
+    let faixaInicioAtual =
+        1;
 
 
-        const proximaMemoria =
-            bancoMemoria[
-            proximoIndice
-            ];
+    let faixaFimAtual =
+        10;
 
 
-        if (!proximaMemoria) {
+    // =====================================================
+    // SELECIONAR FAIXA DE APRENDIZADO
+    // =====================================================
+
+    function selecionarFaixaAprender(botao) {
+
+        const inicio =
+            Number(
+                botao.dataset.inicio
+            );
+
+
+        const fim =
+            Number(
+                botao.dataset.fim
+            );
+
+
+        const memoriasDisponiveis =
+            bancoMemoria.filter(
+                memoria =>
+                    memoria.numero >= inicio &&
+                    memoria.numero <= fim
+            );
+
+
+        // =================================================
+        // FAIXA AINDA NÃO CADASTRADA
+        // =================================================
+
+        if (
+            memoriasDisponiveis.length === 0
+        ) {
 
             console.log(
-                "Aprendizado concluído."
+                `A faixa ${String(
+                    inicio
+                ).padStart(2, "0")}–${String(
+                    fim
+                ).padStart(2, "0")} ainda não possui memórias cadastradas.`
             );
 
             return;
@@ -667,13 +712,128 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        if (!proximaMemoria.imagem) {
+        // =================================================
+        // DEFINE A NOVA FAIXA
+        // =================================================
+
+        faixaInicioAtual =
+            inicio;
+
+
+        faixaFimAtual =
+            fim;
+
+
+        indiceMemoriaAtual =
+            0;
+
+
+        // =================================================
+        // ATUALIZA O TEXTO DO BOTÃO
+        // =================================================
+
+        if (learningRangeAtual) {
+
+            learningRangeAtual.textContent =
+                `${String(
+                    inicio
+                ).padStart(2, "0")}–${String(
+                    fim
+                ).padStart(2, "0")}`;
+
+        }
+
+
+        // =================================================
+        // MUDA O DESTAQUE VISUAL DA FAIXA
+        // =================================================
+
+        learningRangeOptions.forEach(
+            opcao => {
+
+                opcao.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+
+        botao.classList.add(
+            "active"
+        );
+
+
+        // =================================================
+        // MOSTRA A PRIMEIRA MEMÓRIA DA NOVA FAIXA
+        // =================================================
+
+        mostrarMemoria(
+            indiceMemoriaAtual
+        );
+
+
+        // =================================================
+        // FECHA O PAINEL DE FAIXAS
+        // =================================================
+
+        if (learningRangePanel) {
+
+            learningRangePanel.hidden =
+                true;
+
+        }
+
+
+        if (btnAbrirFaixasAprender) {
+
+            btnAbrirFaixasAprender.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+    // =====================================================
+    // AVANÇAR MEMÓRIA
+    // =====================================================
+
+    function avancarMemoria() {
+
+        const memoriasDaFaixa =
+            bancoMemoria.filter(
+                memoria =>
+                    memoria.numero >= faixaInicioAtual &&
+                    memoria.numero <= faixaFimAtual
+            );
+
+
+        const proximoIndice =
+            indiceMemoriaAtual + 1;
+
+
+        const proximaMemoria =
+            memoriasDaFaixa[
+            proximoIndice
+            ];
+
+
+        if (!proximaMemoria) {
 
             console.log(
-                `A imagem do número ${String(
-                    proximaMemoria.numero
-                ).padStart(2, "0")
-                } ainda não foi adicionada.`
+                `Faixa ${String(
+                    faixaInicioAtual
+                ).padStart(2, "0")}–${String(
+                    faixaFimAtual
+                ).padStart(2, "0")} concluída.`
             );
 
             return;
@@ -910,6 +1070,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    if (btnVoltarCentralMemoria) {
+
+        btnVoltarCentralMemoria.addEventListener(
+            "click",
+            voltarParaMemoria
+        );
+
+    }
+
+
     if (btnComecarAprendizado) {
 
         btnComecarAprendizado.addEventListener(
@@ -918,6 +1088,38 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
+
+
+    if (btnAbrirFaixasAprender) {
+
+        btnAbrirFaixasAprender.addEventListener(
+            "click",
+            alternarPainelFaixas
+        );
+
+    }
+
+
+    // =====================================================
+    // ESCOLHER FAIXA — 01–10, 21–30 ETC.
+    // =====================================================
+
+    learningRangeOptions.forEach(
+        botao => {
+
+            botao.addEventListener(
+                "click",
+                () => {
+
+                    selecionarFaixaAprender(
+                        botao
+                    );
+
+                }
+            );
+
+        }
+    );
 
 
     if (btnProximaMemoria) {
