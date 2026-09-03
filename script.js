@@ -450,8 +450,8 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: "smooth"
         });
 
-    }   
-    
+    }
+
     // =====================================================
     // ABRIR TABELA MENTAL
     // =====================================================
@@ -573,6 +573,149 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
 
 
+                // =================================================
+                // ABRIR DETALHE DA MEMÓRIA
+                // =================================================
+
+                card.addEventListener(
+                    "click",
+                    () => {
+
+                        const mentalDetail =
+                            document.getElementById(
+                                "mentalDetail"
+                            );
+
+
+                        const mentalDetailNumber =
+                            document.getElementById(
+                                "mentalDetailNumber"
+                            );
+
+
+                        const mentalDetailCode =
+                            document.getElementById(
+                                "mentalDetailCode"
+                            );
+
+
+                        const mentalDetailWord =
+                            document.getElementById(
+                                "mentalDetailWord"
+                            );
+
+
+                        const mentalDetailImage =
+                            document.getElementById(
+                                "mentalDetailImage"
+                            );
+
+
+                        const mentalDetailImageArea =
+                            document.getElementById(
+                                "mentalDetailImageArea"
+                            );
+
+
+                        if (
+                            !mentalDetail ||
+                            !mentalDetailNumber ||
+                            !mentalDetailCode ||
+                            !mentalDetailWord ||
+                            !mentalDetailImage ||
+                            !mentalDetailImageArea
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        // =========================================
+                        // NÚMERO
+                        // =========================================
+
+                        mentalDetailNumber.textContent =
+                            String(
+                                memoria.numero
+                            ).padStart(
+                                2,
+                                "0"
+                            );
+
+
+                        // =========================================
+                        // CÓDIGO
+                        // =========================================
+
+                        mentalDetailCode.textContent =
+                            memoria.codigo;
+
+
+                        // =========================================
+                        // PALAVRA
+                        // =========================================
+
+                        mentalDetailWord.textContent =
+                            memoria.palavra.toUpperCase();
+
+
+                        // =========================================
+                        // IMAGEM
+                        //
+                        // Se existir imagem cadastrada,
+                        // mostramos normalmente.
+                        //
+                        // Se não existir, ocultamos somente
+                        // a área da imagem.
+                        // =========================================
+
+                        if (memoria.imagem) {
+
+                            mentalDetailImage.src =
+                                memoria.imagem;
+
+
+                            mentalDetailImage.alt =
+                                `Associação visual do número ${String(
+                                    memoria.numero
+                                ).padStart(
+                                    2,
+                                    "0"
+                                )} — ${memoria.palavra}`;
+
+
+                            mentalDetailImageArea.hidden =
+                                false;
+
+                        } else {
+
+                            mentalDetailImage.removeAttribute(
+                                "src"
+                            );
+
+
+                            mentalDetailImage.alt =
+                                "";
+
+
+                            mentalDetailImageArea.hidden =
+                                true;
+
+                        }
+
+
+                        // =========================================
+                        // ABRE O DETALHE
+                        // =========================================
+
+                        mentalDetail.hidden =
+                            false;
+
+                    }
+                );
+
+
                 mentalTableGrid.appendChild(
                     card
                 );
@@ -581,7 +724,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     // =====================================================
     // ABRIR TELA APRENDER
@@ -830,7 +972,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-        // =====================================================
+    // =====================================================
     // ÍNDICE DA MEMÓRIA ATUAL
     //
     // Agora este índice representa a posição DENTRO
@@ -1015,7 +1157,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const proximaMemoria =
             memoriasDaFaixa[
-                proximoIndice
+            proximoIndice
             ];
 
 
@@ -1199,7 +1341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-        // =====================================================
+    // =====================================================
     // TELA 01 — ATIVAR PORTAL
     // =====================================================
 
@@ -1398,6 +1540,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =====================================================
+    // BOTÃO ENTENDI — DETALHE DA MEMÓRIA
+    //
+    // Fecha somente o detalhe.
+    // A Tabela Mental permanece exatamente na faixa
+    // em que o usuário estava.
+    // =====================================================
+
+    const btnEntendiMentalDetail =
+        document.getElementById(
+            "btnEntendiMentalDetail"
+        );
+
+
+    if (btnEntendiMentalDetail) {
+
+        btnEntendiMentalDetail.addEventListener(
+            "click",
+            () => {
+
+                const mentalDetail =
+                    document.getElementById(
+                        "mentalDetail"
+                    );
+
+
+                if (!mentalDetail) {
+
+                    return;
+
+                }
+
+
+                mentalDetail.hidden =
+                    true;
+
+            }
+        );
+
+    }
     // =====================================================
     // ESCOLHER FAIXA — TABELA MENTAL
     //

@@ -108,25 +108,24 @@ const bancoMemoria = [
         codigo: "TT",
         palavra: "Teto",
         categoria: "objeto",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/11-teto.webp",
         dominado: false
     },
-
+    
     {
         numero: 12,
         codigo: "TN",
         palavra: "Tony",
         categoria: "personagem",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/12-tony.webp",
         dominado: false
     },
-
     {
         numero: 13,
         codigo: "TM",
         palavra: "Time",
         categoria: "personagem",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/13-time.webp",
         dominado: false
     },
 
@@ -135,7 +134,7 @@ const bancoMemoria = [
         codigo: "TC",
         palavra: "Taco",
         categoria: "objeto",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/14-taco.webp",
         dominado: false
     },
 
@@ -144,7 +143,7 @@ const bancoMemoria = [
         codigo: "TL",
         palavra: "Tela",
         categoria: "objeto",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/15-tela.webp",
         dominado: false
     },
 
@@ -153,7 +152,7 @@ const bancoMemoria = [
         codigo: "TS",
         palavra: "Tosse",
         categoria: "ação",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/16-tosse.webp",
         dominado: false
     },
 
@@ -162,7 +161,7 @@ const bancoMemoria = [
         codigo: "TF",
         palavra: "Tofu",
         categoria: "alimento",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/17-tofu.webp",
         dominado: false
     },
 
@@ -171,7 +170,7 @@ const bancoMemoria = [
         codigo: "TG",
         palavra: "Tiago",
         categoria: "personagem",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/18-tiago.webp",
         dominado: false
     },
 
@@ -180,7 +179,7 @@ const bancoMemoria = [
         codigo: "TP",
         palavra: "Tapa",
         categoria: "ação",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/19-tapa.webp",
         dominado: false
     },
 
@@ -189,10 +188,9 @@ const bancoMemoria = [
         codigo: "NR",
         palavra: "Nero",
         categoria: "personagem",
-        imagem: null,
+        imagem: "assets/imagens/memoria-numerica/numeros/20-nero.webp",
         dominado: false
     },
-
 
     // =================================================
     // 21–30
@@ -293,32 +291,190 @@ const bancoMemoria = [
     // 31–40
     // =================================================
 
-    { numero: 31, codigo: "MT", palavra: "Moto", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 32, codigo: "MN", palavra: "Mina", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 33, codigo: "MM", palavra: "Múmia", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 34, codigo: "MC", palavra: "Maca", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 35, codigo: "ML", palavra: "Mala", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 36, codigo: "MS", palavra: "Mesa", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 37, codigo: "MF", palavra: "Máfia", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 38, codigo: "MG", palavra: "Mago", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 39, codigo: "MP", palavra: "Mapa", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 40, codigo: "CR", palavra: "Cera", categoria: "objeto", imagem: null, dominado: false },
+    {
+        numero: 31,
+        codigo: "MT",
+        palavra: "Moto",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/31-moto.webp",
+        dominado: false
+    },
+
+    {
+        numero: 32,
+        codigo: "MN",
+        palavra: "Mina",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/32-mina.webp",
+        dominado: false
+    },
+
+    {
+        numero: 33,
+        codigo: "MM",
+        palavra: "Múmia",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/33-múmia.webp",
+        dominado: false
+    },
+
+    {
+        numero: 34,
+        codigo: "MC",
+        palavra: "Maca",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/34-maca.webp",
+        dominado: false
+    },
+
+    {
+        numero: 35,
+        codigo: "ML",
+        palavra: "Mala",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/35-mala.webp",
+        dominado: false
+    },
+
+    {
+        numero: 36,
+        codigo: "MS",
+        palavra: "Mesa",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/36-mesa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 37,
+        codigo: "MF",
+        palavra: "Máfia",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/37-máfia.webp",
+        dominado: false
+    },
+
+    {
+        numero: 38,
+        codigo: "MG",
+        palavra: "Mago",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/38-mago.webp",
+        dominado: false
+    },
+
+    {
+        numero: 39,
+        codigo: "MP",
+        palavra: "Mapa",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/39-mapa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 40,
+        codigo: "CR",
+        palavra: "Cera",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/40-cera.webp",
+        dominado: false
+    },
 
 
     // =================================================
     // 41–50
     // =================================================
 
-    { numero: 41, codigo: "CT", palavra: "Cota", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 42, codigo: "CN", palavra: "Cano", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 43, codigo: "CM", palavra: "Cama", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 44, codigo: "CC", palavra: "Coco", categoria: "alimento", imagem: null, dominado: false },
-    { numero: 45, codigo: "CL", palavra: "Cola", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 46, codigo: "CS", palavra: "Casa", categoria: "lugar", imagem: null, dominado: false },
-    { numero: 47, codigo: "CF", palavra: "Café", categoria: "alimento", imagem: null, dominado: false },
-    { numero: 48, codigo: "CG", palavra: "Cego", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 49, codigo: "CP", palavra: "Capa", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 50, codigo: "LR", palavra: "Louro", categoria: "animal", imagem: null, dominado: false },
+    {
+        numero: 41,
+        codigo: "CT",
+        palavra: "Cota",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/41-cota.webp",
+        dominado: false
+    },
+
+    {
+        numero: 42,
+        codigo: "CN",
+        palavra: "Cano",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/42-cano.webp",
+        dominado: false
+    },
+
+    {
+        numero: 43,
+        codigo: "CM",
+        palavra: "Cama",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/43-cama.webp",
+        dominado: false
+    },
+
+    {
+        numero: 44,
+        codigo: "CC",
+        palavra: "Coco",
+        categoria: "alimento",
+        imagem: "assets/imagens/memoria-numerica/numeros/44-coco.webp",
+        dominado: false
+    },
+
+    {
+        numero: 45,
+        codigo: "CL",
+        palavra: "Cola",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/45-cola.webp",
+        dominado: false
+    },
+
+    {
+        numero: 46,
+        codigo: "CS",
+        palavra: "Casa",
+        categoria: "lugar",
+        imagem: "assets/imagens/memoria-numerica/numeros/46-casa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 47,
+        codigo: "CF",
+        palavra: "Café",
+        categoria: "alimento",
+        imagem: "assets/imagens/memoria-numerica/numeros/47-café.webp",
+        dominado: false
+    },
+
+    {
+        numero: 48,
+        codigo: "CG",
+        palavra: "Cego",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/48-cego.webp",
+        dominado: false
+    },
+
+    {
+        numero: 49,
+        codigo: "CP",
+        palavra: "Capa",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/49-capa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 50,
+        codigo: "LR",
+        palavra: "Louro",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/50-louro.webp",
+        dominado: false
+    },
 
 
     // =================================================

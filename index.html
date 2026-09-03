@@ -737,8 +737,8 @@
                     <!-- =================================================
                          GRADE DE MEMÓRIAS
 
-                         Será preenchida pelo JavaScript
-                         somente em uma etapa futura.
+                         Preenchida dinamicamente pelo JavaScript
+                         conforme a faixa escolhida.
                     ================================================== -->
 
                     <section class="mental-table-content">
@@ -750,10 +750,107 @@
                     </section>
 
 
+                    <!-- =================================================
+                         DETALHE DA MEMÓRIA
+
+                         Fica oculto inicialmente.
+                         Ao tocar em um card da Tabela Mental,
+                         o JavaScript abrirá esta visualização.
+                    ================================================== -->
+
+                    <section class="mental-detail" id="mentalDetail" hidden>
+
+                        <div class="mental-detail-overlay" id="mentalDetailOverlay"></div>
+
+
+                        <div class="mental-detail-card" role="dialog" aria-modal="true"
+                            aria-labelledby="mentalDetailWord">
+
+
+                            <!-- =================================================
+                                 TOPO — CÓDIGO + PALAVRA
+
+                                 Exemplo:
+                                 T → TEIA
+                            ================================================== -->
+
+                            <div class="mental-detail-top">
+
+                                <div class="mental-detail-association">
+
+                                    <span class="mental-detail-code" id="mentalDetailCode">
+                                        T
+                                    </span>
+
+                                    <span class="mental-detail-arrow" aria-hidden="true">
+                                        →
+                                    </span>
+
+                                    <h3 class="mental-detail-word" id="mentalDetailWord">
+                                        TEIA
+                                    </h3>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- =================================================
+                                 IMAGEM DA ASSOCIAÇÃO
+
+                                 Quando a memória não possuir imagem,
+                                 o JavaScript poderá ocultar este bloco.
+                            ================================================== -->
+
+                            <div class="mental-detail-image-area" id="mentalDetailImageArea">
+
+                                <img class="mental-detail-image" id="mentalDetailImage" alt="">
+
+                                <div class="mental-detail-image-glow" aria-hidden="true"></div>
+
+                            </div>
+
+
+                            <!-- =================================================
+                                 NÚMERO
+
+                                 Fica sozinho e centralizado abaixo da imagem.
+                                 Exemplo: 01
+                            ================================================== -->
+
+                            <div class="mental-detail-content">
+
+                                <span class="mental-detail-number" id="mentalDetailNumber">
+                                    01
+                                </span>
+
+                            </div>
+
+
+                            <!-- =================================================
+                                 AÇÃO
+                            ================================================== -->
+
+                            <button class="mental-detail-button" id="btnEntendiMentalDetail" type="button">
+
+                                <span>
+                                    Entendi
+                                </span>
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+
+                            </button>
+
+
+                        </div>
+
+                    </section>
+
                 </div>
 
-            </section>
-            <!-- =================================================
+            </section> <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->
 
