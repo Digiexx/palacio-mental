@@ -253,14 +253,19 @@
                  TELA — MEMÓRIA NUMÉRICA
             ================================================== -->
 
+            <!-- =================================================
+     TELA — CENTRAL DA MEMÓRIA NUMÉRICA
+================================================== -->
+
             <section class="app-screen screen-memoria" id="telaMemoriaNumerica" hidden>
 
+                <!-- =================================================
+         CABEÇALHO
+    ================================================== -->
 
-                <!-- CABEÇALHO DA TELA -->
+                <div class="memory-central-header">
 
-                <div class="screen-header">
-
-                    <button class="back-button" id="btnVoltarHome" type="button" aria-label="Voltar">
+                    <button class="back-button" id="btnVoltarHome" type="button" aria-label="Voltar para a Home">
 
                         <svg viewBox="0 0 24 24" aria-hidden="true">
                             <path d="m15 18-6-6 6-6" />
@@ -272,11 +277,11 @@
                     <div>
 
                         <span class="section-label">
-                            MEMÓRIA NUMÉRICA
+                            CENTRAL DE TREINAMENTO
                         </span>
 
                         <h2>
-                            Transforme números em imagens
+                            Memória Numérica
                         </h2>
 
                     </div>
@@ -284,206 +289,241 @@
                 </div>
 
 
-
                 <!-- =================================================
-                     APRESENTAÇÃO DA MEMÓRIA NUMÉRICA
-                ================================================== -->
+         PAINEL DE PROGRESSO
+    ================================================== -->
 
-                <section class="memory-hero">
+                <section class="memory-dashboard">
 
-
-                    <div class="memory-hero-copy">
-
-                        <span class="module-kicker">
-                            PRIMEIRO PASSO
-                        </span>
-
-                        <h3>
-                            Crie imagens que sua mente não esquece.
-                        </h3>
-
-                        <p>
-                            Cada número será ligado a uma imagem única.
-                            Depois, você aprenderá a reconhecer, recordar
-                            e combinar essas imagens rapidamente.
-                        </p>
-
-                    </div>
-
-
-                    <div class="memory-hero-visual">
-
-                        <div class="memory-hero-visual">
-
-                            <div class="memory-image-frame">
-
-                                <img src="assets/imagens/memoria-numerica/capa-memoria-numerica.png"
-                                    alt="Ilustração do universo da memória numérica" class="memory-hero-image">
-
-                                <div class="memory-image-overlay"></div>
-
-                            </div>
-
-                        </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     CAMINHO DE APRENDIZAGEM
-                ================================================== -->
-
-                <section class="learning-path">
-
-                    <div class="section-heading">
+                    <div class="memory-dashboard-top">
 
                         <div>
 
-                            <span class="section-label">
-                                COMO FUNCIONA
+                            <span class="memory-dashboard-label">
+                                SEU DOMÍNIO
                             </span>
 
-                            <h2>
-                                Seu caminho até o domínio
-                            </h2>
+                            <strong>
+                                <span id="memoriaCentralDominados">
+                                    0
+                                </span>
+                                <small>/ 100</small>
+                            </strong>
 
+                        </div>
+
+
+                        <div class="memory-dashboard-percent">
+                            <span id="memoriaCentralPercentual">
+                                0%
+                            </span>
                         </div>
 
                     </div>
 
 
-                    <div class="learning-steps">
+                    <div class="memory-dashboard-track">
 
-
-                        <!-- ETAPA 01 -->
-
-                        <article class="learning-step">
-
-                            <span class="step-number">
-                                01
-                            </span>
-
-                            <h3>
-                                Aprender
-                            </h3>
-
-                            <p>
-                                Conheça o número, o código
-                                e a imagem correspondente.
-                            </p>
-
-                        </article>
-
-
-                        <!-- ETAPA 02 -->
-
-                        <article class="learning-step">
-
-                            <span class="step-number">
-                                02
-                            </span>
-
-                            <h3>
-                                Reconhecer
-                            </h3>
-
-                            <p>
-                                Veja a imagem e identifique
-                                rapidamente qual número ela representa.
-                            </p>
-
-                        </article>
-
-
-                        <!-- ETAPA 03 -->
-
-                        <article class="learning-step">
-
-                            <span class="step-number">
-                                03
-                            </span>
-
-                            <h3>
-                                Recordar
-                            </h3>
-
-                            <p>
-                                Veja apenas o número e recupere
-                                a imagem sem nenhuma pista.
-                            </p>
-
-                        </article>
-
-
-                        <!-- ETAPA 04 -->
-
-                        <article class="learning-step">
-
-                            <span class="step-number">
-                                04
-                            </span>
-
-                            <h3>
-                                Dominar
-                            </h3>
-
-                            <p>
-                                Alcance velocidade suficiente
-                                para usar as imagens em sequências maiores.
-                            </p>
-
-                        </article>
+                        <div class="memory-dashboard-fill" id="memoriaCentralBarra"></div>
 
                     </div>
+
+
+                    <p>
+                        Construa associações fortes e transforme
+                        números em imagens instantaneamente.
+                    </p>
 
                 </section>
 
 
-
                 <!-- =================================================
-                     COMEÇAR TREINAMENTO
-                ================================================== -->
+         ACESSOS PRINCIPAIS
+    ================================================== -->
 
-                <section class="memory-start-card">
+                <section class="memory-training-section">
 
+                    <div class="memory-central-title">
 
-                    <div class="memory-guide">
+                        <span class="section-label">
+                            TREINAMENTO
+                        </span>
 
-                        <div class="guide-avatar">
-
-                            <img src="assets/imagens/personagens/mago-memoria.png" alt="Mago da Memória">
-
-                        </div>
+                        <h3>
+                            Escolha seu caminho
+                        </h3>
 
                     </div>
 
 
-                    <div class="memory-start-content">
-
-                        <span class="module-kicker">
-                            PRONTO PARA COMEÇAR?
-                        </span>
-
-                        <h3>
-                            Comece pelo nível Aprender.
-                        </h3>
-
-                        <p>
-                            Vamos iniciar com poucos números
-                            e aumentar a dificuldade conforme
-                            sua memória evolui.
-                        </p>
+                    <div class="memory-training-grid">
 
 
-                        <button class="primary-button" id="btnIniciarAprendizado" type="button">
+                        <!-- TREINO RÁPIDO -->
+
+                        <button class="memory-training-card memory-training-featured" id="btnMemoriaTreinoRapido"
+                            type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+                                </svg>
+
+                            </div>
 
                             <span>
-                                Iniciar treino
+                                Treino
+                                <strong>Rápido</strong>
                             </span>
 
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
+                            <small>
+                                Começar agora
+                            </small>
+
+                        </button>
+
+
+                        <!-- APRENDER -->
+
+                        <button class="memory-training-card" id="btnIniciarAprendizado" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path
+                                        d="M9 4.5A3.5 3.5 0 0 1 12 3a3.5 3.5 0 0 1 3 1.5A3.5 3.5 0 0 1 18.5 8a3.5 3.5 0 0 1-1 2.45A3.5 3.5 0 0 1 18 12a3.5 3.5 0 0 1-3 3.46A3.5 3.5 0 0 1 12 17a3.5 3.5 0 0 1-3-1.54A3.5 3.5 0 0 1 6 12a3.5 3.5 0 0 1 .5-1.55A3.5 3.5 0 0 1 5.5 8 3.5 3.5 0 0 1 9 4.5Z" />
+
+                                    <path d="M12 3v14" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Aprender</strong>
+                            </span>
+
+                            <small>
+                                Número + imagem
+                            </small>
+
+                        </button>
+
+
+                        <!-- TABELA MENTAL -->
+
+                        <button class="memory-training-card" id="btnTabelaMental" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+
+                                    <path d="M3 9h18" />
+
+                                    <path d="M3 15h18" />
+
+                                    <path d="M9 3v18" />
+
+                                    <path d="M15 3v18" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                Tabela
+                                <strong>Mental</strong>
+                            </span>
+
+                            <small>
+                                Consulte 01–100
+                            </small>
+
+                        </button>
+
+
+                        <!-- FIXAR -->
+
+                        <button class="memory-training-card" id="btnFixarMemoria" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <circle cx="12" cy="12" r="8" />
+
+                                    <circle cx="12" cy="12" r="4" />
+
+                                    <circle cx="12" cy="12" r="1" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Fixar</strong>
+                            </span>
+
+                            <small>
+                                Fortaleça os fracos
+                            </small>
+
+                        </button>
+
+
+                        <!-- REVISAR -->
+
+                        <button class="memory-training-card" id="btnRevisarMemoria" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M20 11a8 8 0 1 0 2 5.3" />
+
+                                    <path d="M20 4v7h-7" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Revisar</strong>
+                            </span>
+
+                            <small>
+                                Revisão inteligente
+                            </small>
+
+                        </button>
+
+
+                        <!-- DESAFIAR -->
+
+                        <button class="memory-training-card" id="btnDesafiarMemoria" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path
+                                        d="M12 2 9.3 8.2 3 9l4.6 4.3L6.4 20 12 16.7 17.6 20l-1.2-6.7L21 9l-6.3-.8L12 2Z" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Desafiar</strong>
+                            </span>
+
+                            <small>
+                                Teste seu domínio
+                            </small>
 
                         </button>
 
@@ -492,8 +532,82 @@
                 </section>
 
 
-            </section>
+                <!-- =================================================
+         FAIXAS DE DOMÍNIO
+    ================================================== -->
 
+                <section class="memory-ranges">
+
+                    <div class="memory-central-title">
+
+                        <span class="section-label">
+                            MAPA DE DOMÍNIO
+                        </span>
+
+                        <h3>
+                            Suas faixas
+                        </h3>
+
+                    </div>
+
+
+                    <div class="memory-range-grid">
+
+                        <div class="memory-range-card">
+                            <span>01–10</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>11–20</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>21–30</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>31–40</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>41–50</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>51–60</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>61–70</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>71–80</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>81–90</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                        <div class="memory-range-card">
+                            <span>91–100</span>
+                            <strong>0/10</strong>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
 
             <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
@@ -787,6 +901,10 @@
                  MÓDULOS
             ================================================== -->
 
+            <!-- =================================================
+     SEUS CAMINHOS
+================================================== -->
+
             <section class="modules-section">
 
                 <div class="section-heading">
@@ -833,45 +951,21 @@
 
                         <div class="module-content">
 
-                            <span class="module-kicker">
-                                BASE DO SISTEMA
-                            </span>
-
                             <h3>
-                                Memória Numérica
+                                Memória
+                                <span>Numérica</span>
                             </h3>
 
-                            <p>
-                                Transforme números em imagens e personagens
-                                até reconhecer cada associação instantaneamente.
-                            </p>
-
-
-                            <div class="module-meta">
-
-                                <span>
-                                    <strong id="numerosDominados">
-                                        0
-                                    </strong>
-
-                                    de 100 dominados
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="module-arrow">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
+                            <small>
+                                <strong id="numerosDominados">
+                                    0
+                                </strong>
+                                / 100
+                            </small>
 
                         </div>
 
                     </button>
-
 
 
                     <!-- PALÁCIO BÍBLICO -->
@@ -897,45 +991,21 @@
 
                         <div class="module-content">
 
-                            <span class="module-kicker">
-                                MEMÓRIA ESPACIAL
-                            </span>
-
                             <h3>
-                                Palácio Bíblico
+                                Palácio
+                                <span>Bíblico</span>
                             </h3>
 
-                            <p>
-                                Caminhe pelos livros da Bíblia e guarde
-                                referências e versos em locais fixos.
-                            </p>
-
-
-                            <div class="module-meta">
-
-                                <span>
-                                    <strong id="livrosExplorados">
-                                        0
-                                    </strong>
-
-                                    livros explorados
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="module-arrow">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
+                            <small>
+                                <strong id="livrosExplorados">
+                                    0
+                                </strong>
+                                livros
+                            </small>
 
                         </div>
 
                     </button>
-
 
 
                     <!-- DOMÍNIO -->
@@ -956,44 +1026,21 @@
 
                         <div class="module-content">
 
-                            <span class="module-kicker">
-                                NÍVEL AVANÇADO
-                            </span>
-
                             <h3>
-                                Domínio
+                                Modo
+                                <span>Domínio</span>
                             </h3>
 
-                            <p>
-                                Treine velocidade, números grandes,
-                                cenas compostas e recuperação sem pistas.
-                            </p>
-
-
-                            <div class="module-meta">
-
-                                <span>
-                                    Precisão + velocidade + retenção
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="module-arrow">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
+                            <small>
+                                Avançado
+                            </small>
 
                         </div>
 
                     </button>
 
 
-
-                    <!-- REVISÃO -->
+                    <!-- REVISÃO INTELIGENTE -->
 
                     <button class="module-card" id="btnRevisao" type="button">
 
@@ -1012,40 +1059,17 @@
 
                         <div class="module-content">
 
-                            <span class="module-kicker">
-                                REVISÃO INTELIGENTE
-                            </span>
-
                             <h3>
-                                Memórias de hoje
+                                Revisão
+                                <span>Inteligente</span>
                             </h3>
 
-                            <p>
-                                Revise automaticamente aquilo que está
-                                ficando mais fraco antes de esquecer.
-                            </p>
-
-
-                            <div class="module-meta">
-
-                                <span>
-                                    <strong id="revisoesPendentes">
-                                        0
-                                    </strong>
-
-                                    revisões pendentes
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="module-arrow">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
+                            <small>
+                                <strong id="revisoesPendentes">
+                                    0
+                                </strong>
+                                pendentes
+                            </small>
 
                         </div>
 
@@ -1053,8 +1077,7 @@
 
                 </div>
 
-            </section>
-            <!-- =================================================
+            </section> <!-- =================================================
                  RESUMO DE DESEMPENHO
             ================================================== -->
 

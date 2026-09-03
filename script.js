@@ -102,7 +102,6 @@ const bancoMemoria = [
 
 ];
 
-
 // =====================================================
 // INICIALIZAÇÃO DO APLICATIVO
 // =====================================================
@@ -507,6 +506,26 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
 
+        // Oculta a tela introdutória "Como funciona"
+        learnContent.hidden =
+            true;
+
+
+        // Exibe diretamente a tela real de aprendizado
+        memoryLearningStage.hidden =
+            false;
+
+
+        // Sempre inicia pelo primeiro número
+        indiceMemoriaAtual =
+            0;
+
+
+        mostrarMemoria(
+            indiceMemoriaAtual
+        );
+
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -677,7 +696,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
 
     // =====================================================
     // VOLTAR PARA HOME

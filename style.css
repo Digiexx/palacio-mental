@@ -100,9 +100,17 @@ button {
     border: none;
 }
 
-[hidden] {
+/* =========================================================
+   CONTROLE GLOBAL DE ELEMENTOS OCULTOS
+
+   Garante que elementos com "hidden" desapareçam
+   mesmo quando algum componente usa display !important.
+========================================================= */
+
+body [hidden][hidden] {
     display: none !important;
 }
+
 
 /* =========================================================
    APP
@@ -115,7 +123,6 @@ button {
     padding-bottom:
         calc(var(--nav-height) + 34px);
 }
-
 
 /* =========================================================
    HEADER
@@ -444,20 +451,28 @@ button {
 
 .modules-section,
 .summary-section {
-    margin-top: 45px;
+
+    margin-top:
+        42px;
 }
 
 .section-heading {
+
     display: flex;
+
     align-items: flex-end;
+
     justify-content: space-between;
 
-    gap: 15px;
+    gap:
+        15px;
 
-    margin-bottom: 17px;
+    margin-bottom:
+        18px;
 }
 
 .section-heading h2 {
+
     font-size:
         clamp(1.45rem,
             4vw,
@@ -469,16 +484,26 @@ button {
 
 
 /* =========================================================
-   GRID DE MÓDULOS
+   GRID — SEUS CAMINHOS
+
+   MOBILE:
+   4 cards lado a lado.
+
+   Cada card ocupa a mesma largura.
 ========================================================= */
 
 .modules-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        repeat(4, minmax(0, 1fr));
 
-    gap: 14px;
+    gap:
+        9px;
+
+    width:
+        100%;
 }
 
 
@@ -487,44 +512,54 @@ button {
 ========================================================= */
 
 .module-card {
+
     position: relative;
 
-    width: 100%;
-    min-height: 250px;
+    display: flex;
 
-    padding: 24px;
+    flex-direction: column;
 
-    display: grid;
+    align-items: center;
 
-    grid-template-columns:
-        auto 1fr auto;
+    justify-content: flex-start;
 
-    align-items: flex-start;
+    width:
+        100%;
 
-    gap: 17px;
+    min-width:
+        0;
 
-    text-align: left;
+    min-height:
+        150px;
 
-    overflow: hidden;
+    padding:
+        16px 7px 13px;
+
+    overflow:
+        hidden;
 
     border:
-        1px solid var(--line);
+        1px solid rgba(171, 135, 255, 0.13);
 
     border-radius:
-        var(--radius-lg);
-
-    color: var(--text);
+        16px;
 
     background:
-        linear-gradient(145deg,
-            rgba(255, 255, 255, 0.025),
-            transparent 70%),
-        var(--surface);
+        linear-gradient(180deg,
+            rgba(105, 54, 177, 0.10) 0%,
+            rgba(32, 18, 52, 0.34) 100%);
 
-    cursor: pointer;
+    color:
+        var(--text);
+
+    text-align:
+        center;
+
+    cursor:
+        pointer;
 
     box-shadow:
-        0 12px 38px rgba(0, 0, 0, 0.16);
+        0 9px 24px rgba(0, 0, 0, 0.18);
 
     transition:
         transform var(--transition),
@@ -533,125 +568,158 @@ button {
         box-shadow var(--transition);
 }
 
+
+/* =========================================================
+   TOQUE / HOVER
+========================================================= */
+
 .module-card:hover {
+
     transform:
-        translateY(-4px);
+        translateY(-3px);
 
     border-color:
-        var(--line-purple);
+        rgba(183, 119, 255, 0.36);
 
     background:
-        linear-gradient(145deg,
-            rgba(124, 58, 237, 0.08),
-            transparent 70%),
-        var(--surface-2);
+        linear-gradient(180deg,
+            rgba(126, 62, 218, 0.16) 0%,
+            rgba(42, 22, 68, 0.42) 100%);
 
     box-shadow:
-        0 18px 48px rgba(0, 0, 0, 0.28);
+        0 12px 28px rgba(77, 28, 145, 0.20);
 }
 
+
+/* =========================================================
+   CARD DESTAQUE — MEMÓRIA NUMÉRICA
+========================================================= */
+
 .module-card-featured {
+
     border-color:
-        rgba(157, 92, 255, 0.19);
+        rgba(190, 118, 255, 0.31);
+
+    background:
+        linear-gradient(180deg,
+            rgba(129, 61, 224, 0.20) 0%,
+            rgba(45, 22, 72, 0.45) 100%);
 }
 
 .module-card-featured::before {
-    content: "";
 
-    position: absolute;
+    content:
+        "";
 
-    width: 240px;
-    height: 240px;
+    position:
+        absolute;
 
-    left: -100px;
-    bottom: -120px;
+    width:
+        90px;
 
-    border-radius: 50%;
+    height:
+        90px;
+
+    top:
+        -42px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
 
     background:
-        rgba(124, 58, 237, 0.11);
+        rgba(151, 76, 255, 0.16);
 
-    filter: blur(18px);
+    filter:
+        blur(20px);
 
-    pointer-events: none;
+    pointer-events:
+        none;
 }
 
 
 /* =========================================================
    ÍCONES
+
+   42px = tamanho atual da caixa
+   46px = maior
+   38px = menor
 ========================================================= */
 
 .module-icon {
-    position: relative;
 
-    z-index: 2;
+    position:
+        relative;
 
-    width: 52px;
-    height: 52px;
+    z-index:
+        2;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:
+        42px;
+
+    height:
+        42px;
+
+    flex:
+        0 0 42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        13px;
 
     border:
-        1px solid rgba(157, 92, 255, 0.19);
+        1px solid rgba(177, 111, 255, 0.22);
 
-    border-radius: 16px;
+    border-radius:
+        13px;
 
-    color: var(--purple-3);
+    color:
+        #be83ff;
 
     background:
-        var(--purple-soft);
-}
+        linear-gradient(145deg,
+            rgba(139, 70, 232, 0.18),
+            rgba(102, 55, 174, 0.07));
 
-.module-icon svg,
-.module-arrow svg {
-    fill: none;
-
-    stroke: currentColor;
-
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    box-shadow:
+        inset 0 0 14px rgba(156, 86, 255, 0.05);
 }
 
 .module-icon svg {
-    width: 24px;
-    height: 24px;
 
-    stroke-width: 1.55;
-}
+    width:
+        21px;
 
-.module-arrow {
-    width: 34px;
-    height: 34px;
+    height:
+        21px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    fill:
+        none;
 
-    border-radius: 11px;
+    stroke:
+        currentColor;
 
-    color: var(--text-muted);
+    stroke-width:
+        1.65;
 
-    background:
-        rgba(255, 255, 255, 0.03);
+    stroke-linecap:
+        round;
 
-    transition:
-        var(--transition);
-}
-
-.module-card:hover .module-arrow {
-    color: var(--purple-3);
-
-    transform:
-        translateX(3px);
-}
-
-.module-arrow svg {
-    width: 17px;
-    height: 17px;
-
-    stroke-width: 2;
+    stroke-linejoin:
+        round;
 }
 
 
@@ -660,106 +728,184 @@ button {
 ========================================================= */
 
 .module-content {
-    position: relative;
 
-    z-index: 2;
-}
+    position:
+        relative;
 
-.module-kicker {
-    margin-bottom: 8px;
-}
+    z-index:
+        2;
 
-.module-content h3 {
-    margin-bottom: 9px;
+    display:
+        flex;
 
-    font-size: 1.28rem;
+    flex-direction:
+        column;
 
-    letter-spacing:
-        -0.025em;
-}
+    align-items:
+        center;
 
-.module-content p {
-    max-width: 450px;
+    width:
+        100%;
 
-    color: var(--text-soft);
-
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.module-meta {
-    margin-top: 22px;
-
-    color: var(--text-muted);
-
-    font-size: 0.78rem;
-}
-
-.module-meta strong {
-    color: var(--purple-3);
+    min-width:
+        0;
 }
 
 
 /* =========================================================
-   RESUMO / STATS
+   NOME DO CAMINHO
 ========================================================= */
 
-.text-button {
-    padding: 8px 0;
+.module-content h3 {
 
-    color: var(--purple-3);
+    width:
+        100%;
 
-    background: transparent;
+    margin:
+        0 0 10px;
 
-    font-size: 0.82rem;
-    font-weight: 700;
+    color:
+        rgba(250, 247, 255, 0.96);
 
-    cursor: pointer;
-}
+    font-size:
+        12px;
 
-.stats-grid {
-    display: grid;
+    font-weight:
+        750;
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 12px;
-}
-
-.stat-card {
-    min-height: 125px;
-
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border:
-        1px solid var(--line);
-
-    border-radius:
-        var(--radius-md);
-
-    background:
-        rgba(255, 255, 255, 0.018);
-}
-
-.stat-label {
-    color: var(--text-muted);
-
-    font-size: 0.77rem;
-}
-
-.stat-value {
-    color: var(--text);
-
-    font-size: 2.05rem;
+    line-height:
+        1.14;
 
     letter-spacing:
-        -0.05em;
+        -0.2px;
+
+    text-align:
+        center;
 }
 
+.module-content h3 span {
+
+    display:
+        block;
+
+    margin-top:
+        2px;
+}
+
+
+/* =========================================================
+   STATUS PEQUENO
+
+   Ex.:
+   0 / 100
+   0 livros
+   Avançado
+   0 pendentes
+========================================================= */
+
+.module-content small {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin-top:
+        auto;
+
+    color:
+        rgba(190, 180, 211, 0.72);
+
+    font-size:
+        9px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.25;
+
+    text-align:
+        center;
+
+    white-space:
+        normal;
+}
+
+.module-content small strong {
+
+    color:
+        #bb7cff;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   AJUSTE PARA TELAS MUITO ESTREITAS
+
+   Não muda para duas colunas.
+   Apenas compacta um pouco os cards.
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .modules-grid {
+
+        gap:
+            6px;
+    }
+
+    .module-card {
+
+        min-height:
+            142px;
+
+        padding:
+            14px 5px 12px;
+
+        border-radius:
+            14px;
+    }
+
+    .module-icon {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        flex-basis:
+            38px;
+
+        margin-bottom:
+            11px;
+    }
+
+    .module-icon svg {
+
+        width:
+            19px;
+
+        height:
+            19px;
+    }
+
+    .module-content h3 {
+
+        font-size:
+            10.5px;
+    }
+
+    .module-content small {
+
+        font-size:
+            8px;
+    }
+}
 
 /* =========================================================
    NAVEGAÇÃO INFERIOR
@@ -1064,48 +1210,80 @@ button {
 }
 
 /* =========================================================
-   TELA — MEMÓRIA NUMÉRICA
+   CENTRAL — MEMÓRIA NUMÉRICA
+
+   Visual:
+   dashboard cognitivo + interface tecnológica
+   violeta / azul / dark premium
 ========================================================= */
 
 .screen-memoria {
+
+    position: relative;
+
     width: 100%;
+
+    padding-bottom:
+        115px;
 }
 
 
 /* =========================================================
-   CABEÇALHO DA TELA
+   CABEÇALHO
 ========================================================= */
 
-.screen-header {
+.memory-central-header {
+
     display: flex;
+
     align-items: center;
 
-    gap: 15px;
+    gap:
+        15px;
 
-    margin-bottom: 24px;
+    margin-bottom:
+        25px;
 }
 
 
+/* BOTÃO VOLTAR */
+
 .back-button {
-    width: 46px;
-    height: 46px;
 
-    flex: 0 0 46px;
+    width:
+        44px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height:
+        44px;
 
-    border: 1px solid var(--line);
+    flex:
+        0 0 44px;
 
-    border-radius: 14px;
+    display:
+        flex;
 
-    color: var(--purple-3);
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(162, 104, 255, 0.22);
+
+    border-radius:
+        13px;
+
+    color:
+        #b97cff;
 
     background:
-        rgba(255, 255, 255, 0.035);
+        linear-gradient(145deg,
+            rgba(120, 52, 210, 0.13),
+            rgba(255, 255, 255, 0.025));
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     transition:
         transform var(--transition),
@@ -1115,653 +1293,1004 @@ button {
 
 
 .back-button:hover {
+
     transform:
         translateX(-2px);
 
     border-color:
-        var(--line-purple);
+        rgba(186, 121, 255, 0.48);
 
     background:
-        var(--purple-soft);
+        rgba(124, 58, 237, 0.15);
 }
 
 
 .back-button svg {
-    width: 21px;
-    height: 21px;
 
-    fill: none;
+    width:
+        20px;
 
-    stroke: currentColor;
+    height:
+        20px;
 
-    stroke-width: 2;
+    fill:
+        none;
 
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
 }
 
 
-.screen-header h2 {
+/* TEXTO DO CABEÇALHO */
+
+.memory-central-header .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        #a96dff;
+
     font-size:
-        clamp(1.55rem,
-            4vw,
+        10px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        2px;
+}
+
+
+.memory-central-header h2 {
+
+    margin:
+        0;
+
+    font-size:
+        clamp(1.65rem,
+            5vw,
             2.3rem);
 
-    line-height: 1.05;
+    line-height:
+        1;
 
     letter-spacing:
         -0.045em;
-}
-
-
-/* =========================================================
-   HERO DA MEMÓRIA
-========================================================= */
-
-.memory-hero {
-    position: relative;
-
-    overflow: hidden;
-
-    min-height: 330px;
-
-    padding: 30px;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.1fr) minmax(250px, 0.9fr);
-
-    align-items: center;
-
-    gap: 28px;
-
-    border:
-        1px solid var(--line-purple);
-
-    border-radius:
-        var(--radius-xl);
-
-    background:
-        radial-gradient(circle at 80% 20%,
-            rgba(157, 92, 255, 0.20),
-            transparent 30%),
-        linear-gradient(145deg,
-            rgba(124, 58, 237, 0.13),
-            rgba(255, 255, 255, 0.015) 45%),
-        var(--surface);
-
-    box-shadow:
-        var(--shadow);
-}
-
-
-.memory-hero-copy {
-    position: relative;
-
-    z-index: 2;
-}
-
-
-.memory-hero-copy h3 {
-    max-width: 560px;
-
-    margin-bottom: 14px;
-
-    font-size:
-        clamp(2rem,
-            5vw,
-            3.2rem);
-
-    line-height: 1;
-
-    letter-spacing:
-        -0.05em;
-}
-
-
-.memory-hero-copy p {
-    max-width: 540px;
 
     color:
-        var(--text-soft);
-
-    line-height: 1.7;
+        #ffffff;
 }
 
 
 /* =========================================================
-   ÁREA VISUAL / IMAGEM
+   PAINEL — SEU DOMÍNIO
 ========================================================= */
 
-.memory-hero-visual {
-    position: relative;
+.memory-dashboard {
 
-    z-index: 2;
+    position:
+        relative;
 
-    display: flex;
+    overflow:
+        hidden;
 
-    align-items: center;
-    justify-content: center;
-}
-
-
-.memory-image-placeholder {
-    position: relative;
-
-    width: 100%;
-    max-width: 330px;
-
-    aspect-ratio: 4 / 5;
-
-    overflow: hidden;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 10px;
+    padding:
+        22px;
 
     border:
-        1px solid rgba(196, 167, 255, 0.22);
+        1px solid rgba(163, 101, 255, 0.20);
 
-    border-radius: 24px;
+    border-radius:
+        21px;
 
     background:
-        radial-gradient(circle at 50% 35%,
-            rgba(157, 92, 255, 0.22),
+        radial-gradient(circle at 90% 10%,
+            rgba(90, 106, 255, 0.15),
+            transparent 32%),
+        radial-gradient(circle at 10% 90%,
+            rgba(177, 59, 255, 0.11),
             transparent 35%),
-        linear-gradient(160deg,
-            rgba(124, 58, 237, 0.14),
-            rgba(255, 255, 255, 0.025));
+        linear-gradient(145deg,
+            rgba(27, 18, 44, 0.96),
+            rgba(13, 10, 23, 0.98));
 
     box-shadow:
-        inset 0 0 40px rgba(157, 92, 255, 0.04);
+        0 18px 45px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
 }
 
 
-.memory-number-preview {
-    color:
-        var(--purple-3);
+/* LUZ AMBIENTE */
 
-    font-size:
-        clamp(4rem,
-            10vw,
-            7rem);
+.memory-dashboard::before {
 
-    font-weight: 850;
+    content:
+        "";
 
-    line-height: 1;
+    position:
+        absolute;
 
-    letter-spacing:
-        -0.07em;
+    width:
+        150px;
 
-    text-shadow:
-        0 0 35px rgba(157, 92, 255, 0.35);
-}
+    height:
+        150px;
 
+    top:
+        -90px;
 
-.memory-image-label {
-    color:
-        var(--text-muted);
-
-    font-size: 0.65rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.12em;
-
-    line-height: 1.5;
-
-    text-align: center;
-}
-
-
-/* =========================================================
-   CAMINHO DE APRENDIZAGEM
-========================================================= */
-
-.learning-path {
-    margin-top: 46px;
-}
-
-
-.learning-steps {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-    gap: 13px;
-}
-
-
-.learning-step {
-    position: relative;
-
-    min-height: 190px;
-
-    padding: 20px;
-
-    border:
-        1px solid var(--line);
+    right:
+        -55px;
 
     border-radius:
-        var(--radius-md);
+        50%;
+
+    background:
+        rgba(124, 58, 237, 0.25);
+
+    filter:
+        blur(45px);
+
+    pointer-events:
+        none;
+}
+
+
+.memory-dashboard-top {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+}
+
+
+.memory-dashboard-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    color:
+        rgba(211, 197, 231, 0.60);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.8px;
+}
+
+
+.memory-dashboard-top strong {
+
+    display:
+        flex;
+
+    align-items:
+        baseline;
+
+    gap:
+        4px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        30px;
+
+    line-height:
+        1;
+}
+
+
+.memory-dashboard-top strong small {
+
+    color:
+        rgba(211, 197, 231, 0.45);
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+}
+
+
+/* PORCENTAGEM */
+
+.memory-dashboard-percent {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    min-width:
+        56px;
+
+    height:
+        56px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid rgba(178, 115, 255, 0.25);
+
+    border-radius:
+        16px;
 
     background:
         linear-gradient(145deg,
-            rgba(255, 255, 255, 0.025),
-            transparent 70%),
-        var(--surface);
+            rgba(125, 48, 235, 0.18),
+            rgba(65, 93, 255, 0.08));
+
+    box-shadow:
+        0 0 24px rgba(124, 58, 237, 0.12);
+}
+
+
+.memory-dashboard-percent span {
+
+    color:
+        #c990ff;
+
+    font-size:
+        14px;
+
+    font-weight:
+        850;
+}
+
+
+/* BARRA */
+
+.memory-dashboard-track {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    height:
+        6px;
+
+    margin:
+        19px 0 15px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(199, 179, 224, 0.11);
+}
+
+
+.memory-dashboard-fill {
+
+    width:
+        0%;
+
+    height:
+        100%;
+
+    border-radius:
+        inherit;
+
+    background:
+        linear-gradient(90deg,
+            #742cff 0%,
+            #b14dff 52%,
+            #4faeff 100%);
+
+    box-shadow:
+        0 0 16px rgba(156, 75, 255, 0.65);
 
     transition:
-        transform var(--transition),
-        border-color var(--transition),
-        background var(--transition);
+        width 600ms ease;
 }
 
 
-.learning-step:hover {
-    transform:
-        translateY(-3px);
+.memory-dashboard p {
 
-    border-color:
-        var(--line-purple);
+    position:
+        relative;
 
-    background:
-        linear-gradient(145deg,
-            rgba(124, 58, 237, 0.08),
-            transparent 70%),
-        var(--surface-2);
-}
+    z-index:
+        2;
 
+    max-width:
+        480px;
 
-.step-number {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 42px;
-    height: 42px;
-
-    margin-bottom: 20px;
-
-    border:
-        1px solid rgba(157, 92, 255, 0.20);
-
-    border-radius: 13px;
+    margin:
+        0;
 
     color:
-        var(--purple-3);
+        rgba(218, 210, 231, 0.68);
 
-    background:
-        var(--purple-soft);
+    font-size:
+        12px;
 
-    font-size: 0.74rem;
-
-    font-weight: 850;
-
-    letter-spacing: 0.08em;
-}
-
-
-.learning-step h3 {
-    margin-bottom: 8px;
-
-    font-size: 1.05rem;
-}
-
-
-.learning-step p {
-    color:
-        var(--text-soft);
-
-    font-size: 0.84rem;
-
-    line-height: 1.55;
+    line-height:
+        1.55;
 }
 
 
 /* =========================================================
-   CARD INICIAR TREINO
+   TÍTULOS DAS ÁREAS
 ========================================================= */
 
-.memory-start-card {
-    position: relative;
+.memory-training-section,
+.memory-ranges {
 
-    overflow: hidden;
-
-    margin-top: 42px;
-
-    padding: 26px;
-
-    display: grid;
-
-    grid-template-columns:
-        auto 1fr;
-
-    align-items: center;
-
-    gap: 22px;
-
-    border:
-        1px solid var(--line-purple);
-
-    border-radius:
-        var(--radius-lg);
-
-    background:
-        linear-gradient(135deg,
-            rgba(124, 58, 237, 0.10),
-            rgba(255, 255, 255, 0.02)),
-        var(--surface);
+    margin-top:
+        35px;
 }
 
 
-.memory-guide {
-    display: flex;
+.memory-central-title {
 
-    align-items: center;
-    justify-content: center;
+    margin-bottom:
+        16px;
 }
 
 
-.guide-avatar-placeholder {
-    width: 92px;
-    height: 92px;
+.memory-central-title .section-label {
 
-    display: flex;
+    display:
+        block;
 
-    align-items: center;
-    justify-content: center;
-
-    border:
-        1px solid rgba(196, 167, 255, 0.25);
-
-    border-radius: 24px;
+    margin-bottom:
+        6px;
 
     color:
-        var(--purple-3);
+        #a96dff;
 
-    background:
-        radial-gradient(circle,
-            rgba(157, 92, 255, 0.24),
-            rgba(124, 58, 237, 0.08));
+    font-size:
+        9px;
 
-    font-size: 1rem;
-
-    font-weight: 850;
+    font-weight:
+        850;
 
     letter-spacing:
-        0.12em;
+        2px;
 }
 
 
-.memory-start-content h3 {
-    margin-bottom: 8px;
+.memory-central-title h3 {
+
+    margin:
+        0;
+
+    color:
+        #ffffff;
 
     font-size:
-        clamp(1.35rem,
-            3vw,
-            1.8rem);
+        21px;
+
+    line-height:
+        1.1;
 
     letter-spacing:
         -0.035em;
 }
 
 
-.memory-start-content p {
-    max-width: 620px;
+/* =========================================================
+   GRID — MODOS DE TREINAMENTO
 
-    color:
-        var(--text-soft);
+   3 colunas no celular.
+   Visual inspirado em painel tecnológico.
+========================================================= */
 
-    line-height: 1.65;
+.memory-training-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        9px;
 }
 
 
 /* =========================================================
-   RESPONSIVIDADE — MEMÓRIA NUMÉRICA
+   CARD DE TREINAMENTO
 ========================================================= */
 
-@media (max-width: 820px) {
+.memory-training-card {
 
-    .memory-hero {
-        grid-template-columns:
-            1fr;
-    }
+    position:
+        relative;
 
-    .memory-hero-visual {
-        margin-top: 8px;
-    }
+    min-width:
+        0;
 
-    .memory-image-placeholder {
-        max-width: 290px;
-    }
+    min-height:
+        142px;
 
-    .learning-steps {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
+    padding:
+        14px 7px 12px;
 
-}
+    overflow:
+        hidden;
 
+    display:
+        flex;
 
-@media (max-width: 620px) {
+    flex-direction:
+        column;
 
-    .screen-header {
-        align-items: flex-start;
+    align-items:
+        center;
 
-        margin-bottom: 20px;
-    }
-
-    .back-button {
-        width: 42px;
-        height: 42px;
-
-        flex-basis: 42px;
-
-        border-radius: 13px;
-    }
-
-    .screen-header h2 {
-        font-size: 1.75rem;
-    }
-
-    .memory-hero {
-        min-height: auto;
-
-        padding: 23px 19px;
-
-        border-radius: 23px;
-    }
-
-    .memory-hero-copy h3 {
-        font-size: 2.15rem;
-    }
-
-    .memory-hero-copy p {
-        font-size: 0.9rem;
-    }
-
-    .memory-image-placeholder {
-        max-width: 250px;
-    }
-
-    .learning-path {
-        margin-top: 38px;
-    }
-
-    .learning-steps {
-        grid-template-columns:
-            1fr;
-    }
-
-    .learning-step {
-        min-height: auto;
-    }
-
-    .memory-start-card {
-        grid-template-columns:
-            1fr;
-
-        padding: 22px 19px;
-
-        gap: 18px;
-    }
-
-    .memory-guide {
-        justify-content: flex-start;
-    }
-
-    .guide-avatar-placeholder {
-        width: 72px;
-        height: 72px;
-
-        border-radius: 20px;
-    }
-
-}
-
-/* =========================================================
-   IMAGEM PRINCIPAL — MEMÓRIA NUMÉRICA
-========================================================= */
-
-.memory-image-frame {
-    position: relative;
-
-    width: 100%;
-    max-width: 360px;
-
-    aspect-ratio: 4 / 5;
-
-    overflow: hidden;
+    justify-content:
+        flex-start;
 
     border:
-        1px solid rgba(196, 167, 255, 0.24);
+        1px solid rgba(148, 105, 205, 0.15);
 
-    border-radius: 24px;
+    border-radius:
+        16px;
 
-    background:
-        var(--surface-2);
-
-    box-shadow:
-        0 18px 55px rgba(0, 0, 0, 0.34);
-}
-
-
-.memory-hero-image {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition:
-        transform 650ms cubic-bezier(.2, .8, .2, 1);
-}
-
-
-.memory-image-frame:hover .memory-hero-image {
-    transform:
-        scale(1.035);
-}
-
-
-.memory-image-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
+    color:
+        #ffffff;
 
     background:
         linear-gradient(180deg,
-            rgba(8, 7, 13, 0.02),
-            rgba(8, 7, 13, 0.08) 55%,
-            rgba(8, 7, 13, 0.38));
+            rgba(30, 19, 48, 0.86),
+            rgba(14, 11, 23, 0.96));
+
+    cursor:
+        pointer;
 
     box-shadow:
-        inset 0 0 50px rgba(124, 58, 237, 0.10);
+        0 10px 25px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
 }
 
 
-/* RESPONSIVIDADE */
+.memory-training-card:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(180, 105, 255, 0.42);
+
+    background:
+        linear-gradient(180deg,
+            rgba(54, 26, 88, 0.90),
+            rgba(17, 12, 28, 0.98));
+
+    box-shadow:
+        0 14px 32px rgba(70, 27, 132, 0.20);
+}
+
+
+/* =========================================================
+   ÍCONE TECNOLÓGICO
+========================================================= */
+
+.memory-training-icon {
+
+    position:
+        relative;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    flex:
+        0 0 48px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        12px;
+
+    border:
+        1px solid rgba(184, 99, 255, 0.34);
+
+    border-radius:
+        14px;
+
+    color:
+        #c278ff;
+
+    background:
+        radial-gradient(circle,
+            rgba(146, 59, 255, 0.23),
+            rgba(75, 29, 132, 0.10));
+
+    box-shadow:
+        inset 0 0 18px rgba(166, 79, 255, 0.08),
+        0 0 18px rgba(117, 47, 222, 0.10);
+}
+
+
+.memory-training-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        5px;
+
+    border:
+        1px solid rgba(201, 143, 255, 0.07);
+
+    border-radius:
+        10px;
+
+    pointer-events:
+        none;
+}
+
+
+.memory-training-icon svg {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        23px;
+
+    height:
+        23px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.65;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+    filter:
+        drop-shadow(0 0 5px rgba(185, 99, 255, 0.45));
+}
+
+
+/* =========================================================
+   TEXTO DO CARD
+========================================================= */
+
+.memory-training-card>span {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    color:
+        rgba(245, 240, 251, 0.88);
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.15;
+
+    text-align:
+        center;
+}
+
+
+.memory-training-card>span strong {
+
+    display:
+        block;
+
+    margin-top:
+        2px;
+
+    color:
+        #ffffff;
+
+    font-weight:
+        800;
+}
+
+
+.memory-training-card>small {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin-top:
+        auto;
+
+    padding-top:
+        8px;
+
+    color:
+        rgba(189, 178, 207, 0.50);
+
+    font-size:
+        8px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.2;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   CARD DESTAQUE — TREINO RÁPIDO
+========================================================= */
+
+.memory-training-featured {
+
+    border-color:
+        rgba(179, 86, 255, 0.42);
+
+    background:
+        radial-gradient(circle at 50% 10%,
+            rgba(161, 55, 255, 0.22),
+            transparent 48%),
+        linear-gradient(180deg,
+            rgba(61, 25, 103, 0.94),
+            rgba(19, 12, 31, 0.98));
+
+    box-shadow:
+        0 10px 28px rgba(94, 30, 173, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+
+.memory-training-featured .memory-training-icon {
+
+    color:
+        #d794ff;
+
+    border-color:
+        rgba(210, 122, 255, 0.50);
+
+    background:
+        radial-gradient(circle,
+            rgba(174, 72, 255, 0.30),
+            rgba(92, 32, 160, 0.13));
+
+    box-shadow:
+        0 0 24px rgba(156, 61, 255, 0.18);
+}
+
+
+/* =========================================================
+   MAPA DE DOMÍNIO
+========================================================= */
+
+.memory-range-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap:
+        7px;
+}
+
+
+.memory-range-card {
+
+    position:
+        relative;
+
+    min-width:
+        0;
+
+    min-height:
+        62px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
+
+    padding:
+        8px 3px;
+
+    border:
+        1px solid rgba(147, 105, 196, 0.13);
+
+    border-radius:
+        12px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(28, 19, 43, 0.75),
+            rgba(13, 10, 21, 0.90));
+}
+
+
+.memory-range-card span {
+
+    color:
+        rgba(235, 226, 247, 0.82);
+
+    font-size:
+        9px;
+
+    font-weight:
+        750;
+}
+
+
+.memory-range-card strong {
+
+    color:
+        #a96dff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   PEQUENO DETALHE TECNOLÓGICO NOS CARDS
+========================================================= */
+
+.memory-training-card::after,
+.memory-range-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        20%;
+
+    width:
+        60%;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(171, 93, 255, 0.40),
+            transparent);
+
+    opacity:
+        0.65;
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CENTRAL
+========================================================= */
 
 @media (max-width: 620px) {
 
-    .memory-image-frame {
-        max-width: 100%;
+    .screen-memoria {
 
-        aspect-ratio: 16 / 12;
+        padding-bottom:
+            105px;
     }
 
 
-    .memory-hero-image {
-        object-position:
-            center 48%;
+    .memory-central-header {
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .memory-dashboard {
+
+        padding:
+            19px;
+
+        border-radius:
+            19px;
+    }
+
+
+    .memory-training-section,
+    .memory-ranges {
+
+        margin-top:
+            31px;
+    }
+
+
+    .memory-training-grid {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap:
+            8px;
+    }
+
+
+    .memory-range-grid {
+
+        grid-template-columns:
+            repeat(5, minmax(0, 1fr));
+
+        gap:
+            6px;
     }
 
 }
+
 
 /* =========================================================
-   MAGO DA MEMÓRIA — AVATAR
+   TELAS MUITO ESTREITAS
+
+   Mantemos o painel compacto.
 ========================================================= */
 
-.guide-avatar {
-    position: relative;
+@media (max-width: 370px) {
 
-    width: 82px;
-    height: 82px;
+    .memory-training-grid {
 
-    flex-shrink: 0;
-
-    overflow: hidden;
-
-    border:
-        1px solid rgba(196, 167, 255, 0.30);
-
-    border-radius: 22px;
-
-    background:
-        var(--surface-2);
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.28),
-        0 0 24px rgba(124, 58, 237, 0.14);
-}
+        gap:
+            6px;
+    }
 
 
-.guide-avatar img {
-    width: 100%;
-    height: 100%;
+    .memory-training-card {
 
-    display: block;
+        min-height:
+            136px;
 
-    object-fit: cover;
-    object-position: center;
-}
+        padding:
+            12px 5px 10px;
+    }
 
 
-.guide-avatar::after {
-    content: "";
+    .memory-training-icon {
 
-    position: absolute;
-    inset: 0;
+        width:
+            43px;
 
-    pointer-events: none;
+        height:
+            43px;
 
-    border-radius: inherit;
+        flex-basis:
+            43px;
+    }
 
-    box-shadow:
-        inset 0 0 18px rgba(157, 92, 255, 0.16);
+
+    .memory-training-card>span {
+
+        font-size:
+            10px;
+    }
+
+
+    .memory-range-grid {
+
+        gap:
+            4px;
+    }
+
+
+    .memory-range-card {
+
+        min-height:
+            58px;
+
+        padding:
+            7px 2px;
+    }
+
+
+    .memory-range-card span,
+    .memory-range-card strong {
+
+        font-size:
+            8px;
+    }
+
 }
 
 /* =========================================================
