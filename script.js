@@ -275,6 +275,24 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnTabelaMental =
+        document.getElementById(
+            "btnTabelaMental"
+        );
+
+
+    const btnVoltarTabelaMental =
+        document.getElementById(
+            "btnVoltarTabelaMental"
+        );
+
+
+    const mentalTableRangeOptions =
+        document.querySelectorAll(
+            ".mental-table-range-option"
+        );
+
+
     const btnVoltarMemoria =
         document.getElementById(
             "btnVoltarMemoria"
@@ -290,6 +308,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const telaMemoriaNumerica =
         document.getElementById(
             "telaMemoriaNumerica"
+        );
+
+
+    const telaTabelaMental =
+        document.getElementById(
+            "telaTabelaMental"
         );
 
 
@@ -414,6 +438,63 @@ document.addEventListener("DOMContentLoaded", () => {
         telaAprenderMemoria.hidden =
             true;
 
+        telaTabelaMental.hidden =
+            true;
+
+        telaMemoriaNumerica.hidden =
+            false;
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }   
+    
+    // =====================================================
+    // ABRIR TABELA MENTAL
+    // =====================================================
+
+    function abrirTabelaMental() {
+
+        telaMemoriaNumerica.hidden =
+            true;
+
+        telaAprenderMemoria.hidden =
+            true;
+
+        telaTabelaMental.hidden =
+            false;
+
+
+        // Carrega inicialmente a faixa 01–10
+        gerarTabelaMental(
+            1,
+            10
+        );
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // =====================================================
+    // VOLTAR DA TABELA MENTAL
+    // =====================================================
+
+    function voltarDaTabelaMental() {
+
+        telaTabelaMental.hidden =
+            true;
+
+        telaAprenderMemoria.hidden =
+            true;
+
         telaMemoriaNumerica.hidden =
             false;
 
@@ -427,12 +508,91 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // GERAR TABELA MENTAL — QUALQUER FAIXA
+    // =====================================================
+
+    function gerarTabelaMental(
+        inicio,
+        fim
+    ) {
+
+        const mentalTableGrid =
+            document.getElementById(
+                "mentalTableGrid"
+            );
+
+
+        if (!mentalTableGrid) {
+
+            return;
+
+        }
+
+
+        const memoriasDaFaixa =
+            bancoMemoria.filter(
+                memoria =>
+                    memoria.numero >= inicio &&
+                    memoria.numero <= fim
+            );
+
+
+        mentalTableGrid.innerHTML =
+            "";
+
+
+        memoriasDaFaixa.forEach(
+            memoria => {
+
+                const card =
+                    document.createElement(
+                        "button"
+                    );
+
+
+                card.type =
+                    "button";
+
+
+                card.className =
+                    "mental-table-card";
+
+
+                card.innerHTML = `
+                    <span class="mental-table-number">
+                        ${String(memoria.numero).padStart(2, "0")}
+                    </span>
+
+                    <span class="mental-table-code">
+                        ${memoria.codigo}
+                    </span>
+
+                    <strong class="mental-table-word">
+                        ${memoria.palavra}
+                    </strong>
+                `;
+
+
+                mentalTableGrid.appendChild(
+                    card
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
     // ABRIR TELA APRENDER
     // =====================================================
 
     function abrirAprendizado() {
 
         telaMemoriaNumerica.hidden =
+            true;
+
+        telaTabelaMental.hidden =
             true;
 
         telaAprenderMemoria.hidden =
@@ -486,6 +646,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+
 
     // =====================================================
     // COMEÇAR APRENDIZADO
@@ -668,7 +829,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-    // =====================================================
+
+        // =====================================================
     // ÍNDICE DA MEMÓRIA ATUAL
     //
     // Agora este índice representa a posição DENTRO
@@ -832,6 +994,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
     // =====================================================
     // AVANÇAR MEMÓRIA
     // =====================================================
@@ -852,7 +1015,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const proximaMemoria =
             memoriasDaFaixa[
-            proximoIndice
+                proximoIndice
             ];
 
 
@@ -1007,6 +1170,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+
+
     // =====================================================
     // VOLTAR PARA HOME
     // =====================================================
@@ -1034,8 +1199,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    // =====================================================
+        // =====================================================
     // TELA 01 — ATIVAR PORTAL
     // =====================================================
 
@@ -1208,6 +1372,96 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
+
+
+    // =====================================================
+    // EVENTOS — TABELA MENTAL
+    // =====================================================
+
+    if (btnTabelaMental) {
+
+        btnTabelaMental.addEventListener(
+            "click",
+            abrirTabelaMental
+        );
+
+    }
+
+
+    if (btnVoltarTabelaMental) {
+
+        btnVoltarTabelaMental.addEventListener(
+            "click",
+            voltarDaTabelaMental
+        );
+
+    }
+
+
+    // =====================================================
+    // ESCOLHER FAIXA — TABELA MENTAL
+    //
+    // Esta lógica pertence somente à Tabela Mental.
+    // Não altera a faixa nem o funcionamento do Aprender.
+    // =====================================================
+
+    mentalTableRangeOptions.forEach(
+        botao => {
+
+            botao.addEventListener(
+                "click",
+                () => {
+
+                    const inicio =
+                        Number(
+                            botao.dataset.inicio
+                        );
+
+
+                    const fim =
+                        Number(
+                            botao.dataset.fim
+                        );
+
+
+                    // =========================================
+                    // CARREGA A FAIXA ESCOLHIDA
+                    // =========================================
+
+                    gerarTabelaMental(
+                        inicio,
+                        fim
+                    );
+
+
+                    // =========================================
+                    // REMOVE O DESTAQUE DA FAIXA ANTERIOR
+                    // =========================================
+
+                    mentalTableRangeOptions.forEach(
+                        opcao => {
+
+                            opcao.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    // =========================================
+                    // DESTACA A FAIXA ESCOLHIDA
+                    // =========================================
+
+                    botao.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+    );
 
 
     if (btnVoltarMemoria) {

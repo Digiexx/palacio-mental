@@ -533,8 +533,8 @@
 
 
                 <!-- =================================================
-         FAIXAS DE DOMÍNIO
-    ================================================== -->
+                     FAIXAS DE DOMÍNIO
+                ================================================== -->
 
                 <section class="memory-ranges">
 
@@ -609,6 +609,150 @@
 
             </section>
 
+
+            <!-- =================================================
+                 TELA — TABELA MENTAL
+            ================================================== -->
+
+            <section class="app-screen screen-tabela-mental" id="telaTabelaMental" hidden>
+
+                <div class="mental-table-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="mental-table-header">
+
+                        <button class="back-button" id="btnVoltarTabelaMental" type="button"
+                            aria-label="Voltar para a Central da Memória Numérica">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Tabela Mental
+                            </h2>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         APRESENTAÇÃO
+                    ================================================== -->
+
+                    <section class="mental-table-intro">
+
+                        <span class="section-label">
+                            VISÃO GERAL
+                        </span>
+
+                        <h3>
+                            Seus 100 códigos
+                            <strong>
+                                em um só lugar
+                            </strong>
+                        </h3>
+
+                        <p>
+                            Consulte rapidamente o número,
+                            o código e a associação correspondente.
+                        </p>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         SELETOR DE FAIXAS
+                    ================================================== -->
+
+                    <section class="mental-table-ranges">
+
+                        <span class="mental-table-range-label">
+                            ESCOLHA UMA FAIXA
+                        </span>
+
+
+                        <div class="mental-table-range-grid">
+
+                            <button class="mental-table-range-option active" type="button" data-inicio="1"
+                                data-fim="10">
+                                01–10
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="11" data-fim="20">
+                                11–20
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="21" data-fim="30">
+                                21–30
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="31" data-fim="40">
+                                31–40
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="41" data-fim="50">
+                                41–50
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="51" data-fim="60">
+                                51–60
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="61" data-fim="70">
+                                61–70
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="71" data-fim="80">
+                                71–80
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="81" data-fim="90">
+                                81–90
+                            </button>
+
+                            <button class="mental-table-range-option" type="button" data-inicio="91" data-fim="100">
+                                91–100
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         GRADE DE MEMÓRIAS
+
+                         Será preenchida pelo JavaScript
+                         somente em uma etapa futura.
+                    ================================================== -->
+
+                    <section class="mental-table-content">
+
+                        <div class="mental-table-grid" id="mentalTableGrid">
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </section>
             <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->
