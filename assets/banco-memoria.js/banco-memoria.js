@@ -106,9 +106,9 @@ const bancoMemoria = [
     {
         numero: 11,
         codigo: "TT",
-        palavra: "Teto",
+        palavra: "Tatu",
         categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/11-teto.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/11-tatu.webp",
         dominado: false
     },
     
@@ -477,84 +477,479 @@ const bancoMemoria = [
     },
 
 
-    // =================================================
+        // =================================================
     // 51–60
     // =================================================
 
-    { numero: 51, codigo: "LT", palavra: "Lata", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 52, codigo: "LN", palavra: "Lona", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 53, codigo: "LM", palavra: "Lama", categoria: "elemento", imagem: null, dominado: false },
-    { numero: 54, codigo: "LC", palavra: "Louca", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 55, codigo: "LL", palavra: "Lula", categoria: "animal", imagem: null, dominado: false },
-    { numero: 56, codigo: "LS", palavra: "Lisa", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 57, codigo: "LF", palavra: "Lufa", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 58, codigo: "LG", palavra: "Lego", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 59, codigo: "LP", palavra: "Lupa", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 60, codigo: "SR", palavra: "Sereia", categoria: "personagem", imagem: null, dominado: false },
+    {
+        numero: 51,
+        codigo: "LT",
+        palavra: "Lata",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/51-lata.webp",
+        dominado: false
+    },
+
+    {
+        numero: 52,
+        codigo: "LN",
+        palavra: "Lona",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/52-lona.webp",
+        dominado: false
+    },
+
+    {
+        numero: 53,
+        codigo: "LM",
+        palavra: "Lama",
+        categoria: "elemento",
+        imagem: "assets/imagens/memoria-numerica/numeros/53-lama.webp",
+        dominado: false
+    },
+
+    {
+        numero: 54,
+        codigo: "LC",
+        palavra: "Louca",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/54-louca.webp",
+        dominado: false
+    },
+
+    {
+        numero: 55,
+        codigo: "LL",
+        palavra: "Lula",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/55-lula.webp",
+        dominado: false
+    },
+
+    {
+        numero: 56,
+        codigo: "LS",
+        palavra: "Lisa",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/56-lisa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 57,
+        codigo: "LF",
+        palavra: "Lufa",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/57-lufa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 58,
+        codigo: "LG",
+        palavra: "Lego",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/58-lego.webp",
+        dominado: false
+    },
+
+    {
+        numero: 59,
+        codigo: "LP",
+        palavra: "Lupa",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/59-lupa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 60,
+        codigo: "SR",
+        palavra: "Sereia",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/60-sereia.webp",
+        dominado: false
+    },
 
 
     // =================================================
     // 61–70
     // =================================================
 
-    { numero: 61, codigo: "ST", palavra: "Sutiã", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 62, codigo: "SN", palavra: "Sino", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 63, codigo: "SM", palavra: "Sumô", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 64, codigo: "SC", palavra: "Saco", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 65, codigo: "SL", palavra: "Sela", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 66, codigo: "SS", palavra: "Sassá", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 67, codigo: "SF", palavra: "Sofá", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 68, codigo: "SG", palavra: "Sega", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 69, codigo: "SP", palavra: "Sopa", categoria: "alimento", imagem: null, dominado: false },
-    { numero: 70, codigo: "FR", palavra: "Faraó", categoria: "personagem", imagem: null, dominado: false },
+    {
+        numero: 61,
+        codigo: "ST",
+        palavra: "Seta",
+        categoria: "símbolo",
+        imagem: "assets/imagens/memoria-numerica/numeros/61-seta.webp",
+        dominado: false
+    },
+
+    {
+        numero: 62,
+        codigo: "SN",
+        palavra: "Sino",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/62-sino.webp",
+        dominado: false
+    },
+
+    {
+        numero: 63,
+        codigo: "SM",
+        palavra: "Sumô",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/63-sumô.webp",
+        dominado: false
+    },
+
+    {
+        numero: 64,
+        codigo: "SC",
+        palavra: "Saci",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/64-saci.webp",
+        dominado: false
+    },
+
+    {
+        numero: 65,
+        codigo: "SL",
+        palavra: "Sela",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/65-sela.webp",
+        dominado: false
+    },
+
+    {
+        numero: 66,
+        codigo: "SS",
+        palavra: "Sassá",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/66-sassá.webp",
+        dominado: false
+    },
+
+    {
+        numero: 67,
+        codigo: "SF",
+        palavra: "Sofá",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/67-sofá.webp",
+        dominado: false
+    },
+
+    {
+        numero: 68,
+        codigo: "SG",
+        palavra: "Saga",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/68-saga.webp",
+        dominado: false
+    },
+
+    {
+        numero: 69,
+        codigo: "SP",
+        palavra: "Sapo",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/69-sapo.webp",
+        dominado: false
+    },
+
+    {
+        numero: 70,
+        codigo: "FR",
+        palavra: "Faraó",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/70-faraó.webp",
+        dominado: false
+    },
 
 
     // =================================================
     // 71–80
     // =================================================
 
-    { numero: 71, codigo: "FT", palavra: "Foto", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 72, codigo: "FN", palavra: "Feno", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 73, codigo: "FM", palavra: "Fama", categoria: "conceito", imagem: null, dominado: false },
-    { numero: 74, codigo: "FC", palavra: "Faca", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 75, codigo: "FL", palavra: "Fila", categoria: "cena", imagem: null, dominado: false },
-    { numero: 76, codigo: "FS", palavra: "Fossa", categoria: "lugar", imagem: null, dominado: false },
-    { numero: 77, codigo: "FF", palavra: "Fofão", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 78, codigo: "FG", palavra: "Fogo", categoria: "elemento", imagem: null, dominado: false },
-    { numero: 79, codigo: "FP", palavra: "FIPE", categoria: "símbolo", imagem: null, dominado: false },
-    { numero: 80, codigo: "GR", palavra: "Guru", categoria: "personagem", imagem: null, dominado: false },
+    {
+        numero: 71,
+        codigo: "FT",
+        palavra: "Foto",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/71-foto.webp",
+        dominado: false
+    },
+
+    {
+        numero: 72,
+        codigo: "FN",
+        palavra: "Fino",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/72-fino.webp",
+        dominado: false
+    },
+
+    {
+        numero: 73,
+        codigo: "FM",
+        palavra: "Fama",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/73-fama.webp",
+        dominado: false
+    },
+
+    {
+        numero: 74,
+        codigo: "FC",
+        palavra: "Foca",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/74-foca.webp",
+        dominado: false
+    },
+
+    {
+        numero: 75,
+        codigo: "FL",
+        palavra: "Fila",
+        categoria: "conceito",
+        imagem: "assets/imagens/memoria-numerica/numeros/75-fila.webp",
+        dominado: false
+    },
+
+    {
+        numero: 76,
+        codigo: "FS",
+        palavra: "Fossa",
+        categoria: "lugar",
+        imagem: "assets/imagens/memoria-numerica/numeros/76-fossa.webp",
+        dominado: false
+    },
+
+    {
+        numero: 77,
+        codigo: "FF",
+        palavra: "Fofão",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/77-fofão.webp",
+        dominado: false
+    },
+
+    {
+        numero: 78,
+        codigo: "FG",
+        palavra: "Fogo",
+        categoria: "elemento",
+        imagem: "assets/imagens/memoria-numerica/numeros/78-fogo.webp",
+        dominado: false
+    },
+
+    {
+        numero: 79,
+        codigo: "FP",
+        palavra: "FIPE",
+        categoria: "conceito",
+        imagem: "assets/imagens/memoria-numerica/numeros/79-fipe.webp",
+        dominado: false
+    },
+
+    {
+        numero: 80,
+        codigo: "GR",
+        palavra: "Gari",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/80-gari.webp",
+        dominado: false
+    },
 
 
-    // =================================================
+        // =================================================
     // 81–90
     // =================================================
 
-    { numero: 81, codigo: "GT", palavra: "Gota", categoria: "elemento", imagem: null, dominado: false },
-    { numero: 82, codigo: "GN", palavra: "Gênio", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 83, codigo: "GM", palavra: "Gema", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 84, codigo: "GC", palavra: "Guca", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 85, codigo: "GL", palavra: "Gelo", categoria: "elemento", imagem: null, dominado: false },
-    { numero: 86, codigo: "GS", palavra: "Gesso", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 87, codigo: "GF", palavra: "Gafe", categoria: "cena", imagem: null, dominado: false },
-    { numero: 88, codigo: "GG", palavra: "Gugu", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 89, codigo: "GP", palavra: "Gapa", categoria: "personagem", imagem: null, dominado: false },
-    { numero: 90, codigo: "PR", palavra: "Pera", categoria: "alimento", imagem: null, dominado: false },
+    {
+        numero: 81,
+        codigo: "GT",
+        palavra: "Gato",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/81-gato.webp",
+        dominado: false
+    },
+
+    {
+        numero: 82,
+        codigo: "GN",
+        palavra: "Gênio",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/82-gênio.webp",
+        dominado: false
+    },
+
+    {
+        numero: 83,
+        codigo: "GM",
+        palavra: "Gema",
+        categoria: "alimento",
+        imagem: "assets/imagens/memoria-numerica/numeros/83-gema.webp",
+        dominado: false
+    },
+
+    {
+        numero: 84,
+        codigo: "GC",
+        palavra: "Guca",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/84-guca.webp",
+        dominado: false
+    },
+
+    {
+        numero: 85,
+        codigo: "GL",
+        palavra: "Galo",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/85-galo.webp",
+        dominado: false
+    },
+
+    {
+        numero: 86,
+        codigo: "GS",
+        palavra: "Gesso",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/86-gesso.webp",
+        dominado: false
+    },
+
+    {
+        numero: 87,
+        codigo: "GF",
+        palavra: "Gafe",
+        categoria: "conceito",
+        imagem: "assets/imagens/memoria-numerica/numeros/87-gafe.webp",
+        dominado: false
+    },
+
+    {
+        numero: 88,
+        codigo: "GG",
+        palavra: "Gugu",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/88-gugu.webp",
+        dominado: false
+    },
+
+    {
+        numero: 89,
+        codigo: "GP",
+        palavra: "Gipe",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/89-gipe.webp",
+        dominado: false
+    },
+
+    {
+        numero: 90,
+        codigo: "PR",
+        palavra: "Pera",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/90-pera.webp",
+        dominado: false
+    },
 
 
     // =================================================
     // 91–100
     // =================================================
 
-    { numero: 91, codigo: "PT", palavra: "Pato", categoria: "animal", imagem: null, dominado: false },
-    { numero: 92, codigo: "PN", palavra: "Pino", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 93, codigo: "PM", palavra: "Puma", categoria: "animal", imagem: null, dominado: false },
-    { numero: 94, codigo: "PC", palavra: "Pico", categoria: "lugar", imagem: null, dominado: false },
-    { numero: 95, codigo: "PL", palavra: "Pula", categoria: "ação", imagem: null, dominado: false },
-    { numero: 96, codigo: "PS", palavra: "Piso", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 97, codigo: "PF", palavra: "Pufe", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 98, codigo: "PG", palavra: "Pego", categoria: "ação", imagem: null, dominado: false },
-    { numero: 99, codigo: "PP", palavra: "Pipa", categoria: "objeto", imagem: null, dominado: false },
-    { numero: 100, codigo: "TRR", palavra: "Terror", categoria: "conceito", imagem: null, dominado: false }
+    {
+        numero: 91,
+        codigo: "PT",
+        palavra: "Pato",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/91-pato.webp",
+        dominado: false
+    },
+
+    {
+        numero: 92,
+        codigo: "PN",
+        palavra: "Pone",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/92-pone.webp",
+        dominado: false
+    },
+
+    {
+        numero: 93,
+        codigo: "PM",
+        palavra: "Puma",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/93-puma.webp",
+        dominado: false
+    },
+
+    {
+        numero: 94,
+        codigo: "PC",
+        palavra: "pica",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/94-Pica.webp",
+        dominado: false
+    },
+
+    {
+        numero: 95,
+        codigo: "PL",
+        palavra: "Paula",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/95-paula.webp",
+        dominado: false
+    },
+
+    {
+        numero: 96,
+        codigo: "PS",
+        palavra: "Peso",
+        categoria: "objeto",
+        imagem: "assets/imagens/memoria-numerica/numeros/96-peso.webp",
+        dominado: false
+    },
+
+    {
+        numero: 97,
+        codigo: "PF",
+        palavra: "Pufe",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/97-pufe.webp",
+        dominado: false
+    },
+
+    {
+        numero: 98,
+        codigo: "PG",
+        palavra: "Pagé",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/98-pagé.webp",
+        dominado: false
+    },
+
+    {
+        numero: 99,
+        codigo: "PP",
+        palavra: "Popó",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/99-popó.webp",
+        dominado: false
+    },
+
+    {
+        numero: 100,
+        codigo: "TRR",
+        palavra: "Torre",
+        categoria: "lugar",
+        imagem: "assets/imagens/memoria-numerica/numeros/100-torre.webp",
+        dominado: false
+    }
 
 ];
 
