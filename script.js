@@ -293,6 +293,168 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    // =====================================================
+    // FIXAR
+    // =====================================================
+
+    const btnFixar =
+        document.getElementById(
+            "btnFixar"
+        );
+
+
+    const btnVoltarFixar =
+        document.getElementById(
+            "btnVoltarFixar"
+        );
+
+
+    const telaFixarMemoria =
+        document.getElementById(
+            "telaFixarMemoria"
+        );
+
+
+    // =====================================================
+    // ELEMENTOS — TREINO FIXAR
+    // =====================================================
+
+    const fixarTrainingArea =
+        document.getElementById(
+            "fixarTrainingArea"
+        );
+
+
+    const fixarProgress =
+        document.getElementById(
+            "fixarProgress"
+        );
+
+
+    const fixarRangeAtual =
+        document.getElementById(
+            "fixarRangeAtual"
+        );
+
+
+    const fixarQuestion =
+        document.getElementById(
+            "fixarQuestion"
+        );
+
+
+    const fixarNumber =
+        document.getElementById(
+            "fixarNumber"
+        );
+
+
+    const fixarAnswer =
+        document.getElementById(
+            "fixarAnswer"
+        );
+
+
+    const fixarCode =
+        document.getElementById(
+            "fixarCode"
+        );
+
+
+    const fixarWord =
+        document.getElementById(
+            "fixarWord"
+        );
+
+
+    const fixarImageArea =
+        document.getElementById(
+            "fixarImageArea"
+        );
+
+
+    const fixarImage =
+        document.getElementById(
+            "fixarImage"
+        );
+
+
+    const btnRevelarFixar =
+        document.getElementById(
+            "btnRevelarFixar"
+        );
+
+
+    const fixarEvaluation =
+        document.getElementById(
+            "fixarEvaluation"
+        );
+
+
+    const btnNaoLembreiFixar =
+        document.getElementById(
+            "btnNaoLembreiFixar"
+        );
+
+
+    const btnLembreiFixar =
+        document.getElementById(
+            "btnLembreiFixar"
+        );
+
+
+    // =====================================================
+    // ELEMENTOS — RESULTADO DO FIXAR
+    // =====================================================
+
+    const fixarResult =
+        document.getElementById(
+            "fixarResult"
+        );
+
+
+    const fixarResultMessage =
+        document.getElementById(
+            "fixarResultMessage"
+        );
+
+
+    const fixarResultAcertos =
+        document.getElementById(
+            "fixarResultAcertos"
+        );
+
+
+    const fixarResultErros =
+        document.getElementById(
+            "fixarResultErros"
+        );
+
+
+    const fixarResultWeak =
+        document.getElementById(
+            "fixarResultWeak"
+        );
+
+
+    const fixarResultWeakList =
+        document.getElementById(
+            "fixarResultWeakList"
+        );
+
+
+    const btnRevisarErrosFixar =
+        document.getElementById(
+            "btnRevisarErrosFixar"
+        );
+
+
+    const btnFinalizarFixar =
+        document.getElementById(
+            "btnFinalizarFixar"
+        );
+
+
     const btnVoltarMemoria =
         document.getElementById(
             "btnVoltarMemoria"
@@ -416,10 +578,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const learningRangeOptions =
         document.querySelectorAll(
             ".learning-range-option"
-        );
-
-
-    // =====================================================
+        );    // =====================================================
     // ABRIR MEMÓRIA NUMÉRICA
     // =====================================================
 
@@ -439,6 +598,392 @@ document.addEventListener("DOMContentLoaded", () => {
             true;
 
         telaTabelaMental.hidden =
+            true;
+
+        telaFixarMemoria.hidden =
+            true;
+
+        telaMemoriaNumerica.hidden =
+            false;
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // =====================================================
+    // ABRIR FIXAR
+    // =====================================================
+
+    function abrirFixarMemoria() {
+
+        telaMemoriaNumerica.hidden =
+            true;
+
+        telaTabelaMental.hidden =
+            true;
+
+        telaAprenderMemoria.hidden =
+            true;
+
+        telaFixarMemoria.hidden =
+            false;
+
+
+        // =================================================
+        // CARREGA INICIALMENTE A MEMÓRIA 01
+        // =================================================
+
+        carregarMemoriaFixar(
+            1
+        );
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // =====================================================
+    // ESTADO DO TREINO — FIXAR
+    // =====================================================
+
+    let fixarNumeroAtual =
+        1;
+
+
+    let fixarErrosRodada =
+        [];
+
+
+    let fixarAcertosRodada =
+        [];
+
+
+    // =====================================================
+    // CARREGAR MEMÓRIA — FIXAR
+    // =====================================================
+
+    function carregarMemoriaFixar(
+        numero
+    ) {
+
+        const memoria =
+            bancoMemoria.find(
+                item =>
+                    Number(
+                        item.numero
+                    ) ===
+                    Number(
+                        numero
+                    )
+            );
+
+
+        if (!memoria) {
+
+            return;
+
+        }
+
+
+        // =================================================
+        // GARANTE QUE O TREINO ESTEJA VISÍVEL
+        // =================================================
+
+        fixarTrainingArea.hidden =
+            false;
+
+        fixarResult.hidden =
+            true;
+
+
+        // =================================================
+        // GUARDA QUAL MEMÓRIA ESTÁ SENDO TREINADA
+        // =================================================
+
+        fixarNumeroAtual =
+            Number(
+                memoria.numero
+            );
+
+
+        // =================================================
+        // MOSTRA SOMENTE A PERGUNTA
+        // =================================================
+
+        fixarQuestion.hidden =
+            false;
+
+        fixarAnswer.hidden =
+            true;
+
+        fixarEvaluation.hidden =
+            true;
+
+        btnRevelarFixar.hidden =
+            false;
+
+
+        // =================================================
+        // NÚMERO
+        // =================================================
+
+        fixarNumber.textContent =
+            String(
+                memoria.numero
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        // =================================================
+        // PROGRESSO
+        // =================================================
+
+        fixarProgress.textContent =
+            `${String(fixarNumeroAtual).padStart(2, "0")} / 10`;
+
+
+        // =================================================
+        // FAIXA ATUAL
+        // =================================================
+
+        fixarRangeAtual.textContent =
+            "01–10";
+
+
+        // =================================================
+        // PREPARA A RESPOSTA
+        // =================================================
+
+        fixarCode.textContent =
+            memoria.codigo;
+
+        fixarWord.textContent =
+            memoria.palavra.toUpperCase();
+
+
+        if (memoria.imagem) {
+
+            fixarImage.src =
+                memoria.imagem;
+
+            fixarImage.alt =
+                memoria.palavra;
+
+            fixarImageArea.hidden =
+                false;
+
+        } else {
+
+            fixarImage.removeAttribute(
+                "src"
+            );
+
+            fixarImage.alt =
+                "";
+
+            fixarImageArea.hidden =
+                true;
+
+        }
+
+    }
+
+
+    // =====================================================
+    // REVELAR MEMÓRIA — FIXAR
+    // =====================================================
+
+    function revelarMemoriaFixar() {
+
+        fixarQuestion.hidden =
+            true;
+
+        fixarAnswer.hidden =
+            false;
+
+        btnRevelarFixar.hidden =
+            true;
+
+        fixarEvaluation.hidden =
+            false;
+
+    }
+
+
+    // =====================================================
+    // FINALIZAR RODADA — FIXAR
+    // =====================================================
+
+    function finalizarRodadaFixar() {
+
+        // =================================================
+        // ESCONDE O TREINO
+        // =================================================
+
+        fixarTrainingArea.hidden =
+            true;
+
+
+        // =================================================
+        // MOSTRA O RESULTADO
+        // =================================================
+
+        fixarResult.hidden =
+            false;
+
+
+        // =================================================
+        // TOTAL DE ACERTOS
+        // =================================================
+
+        fixarResultAcertos.textContent =
+            fixarAcertosRodada.length;
+
+
+        // =================================================
+        // TOTAL DE MEMÓRIAS PARA REFORÇAR
+        // =================================================
+
+        fixarResultErros.textContent =
+            fixarErrosRodada.length;
+
+
+        // =================================================
+        // LIMPA A LISTA ANTERIOR
+        // =================================================
+
+        fixarResultWeakList.innerHTML =
+            "";
+
+
+        // =================================================
+        // SE NÃO HOUVE ERROS
+        // =================================================
+
+        if (
+            fixarErrosRodada.length ===
+            0
+        ) {
+
+            fixarResultMessage.textContent =
+                "Excelente! Você recuperou todas as associações desta rodada.";
+
+            fixarResultWeak.hidden =
+                true;
+
+            btnRevisarErrosFixar.hidden =
+                true;
+
+        } else {
+
+            fixarResultMessage.textContent =
+                "Algumas associações ainda precisam de reforço. Elas serão destacadas abaixo.";
+
+            fixarResultWeak.hidden =
+                false;
+
+            btnRevisarErrosFixar.hidden =
+                false;
+
+
+            // =============================================
+            // MONTA A LISTA DE MEMÓRIAS FRACAS
+            // =============================================
+
+            fixarErrosRodada.forEach(
+                numero => {
+
+                    const memoria =
+                        bancoMemoria.find(
+                            item =>
+                                Number(
+                                    item.numero
+                                ) ===
+                                Number(
+                                    numero
+                                )
+                        );
+
+
+                    if (!memoria) {
+
+                        return;
+
+                    }
+
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    item.className =
+                        "fixar-result-weak-item";
+
+
+                    item.innerHTML =
+                        `
+                            <span class="fixar-result-weak-number">
+                                ${String(memoria.numero).padStart(2, "0")}
+                            </span>
+
+                            <span class="fixar-result-weak-code">
+                                ${memoria.codigo}
+                            </span>
+
+                            <strong class="fixar-result-weak-word">
+                                ${memoria.palavra.toUpperCase()}
+                            </strong>
+                        `;
+
+
+                    fixarResultWeakList.appendChild(
+                        item
+                    );
+
+                }
+            );
+
+        }
+
+
+        // =================================================
+        // VOLTA PARA O TOPO DO RESULTADO
+        // =================================================
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // =====================================================
+    // VOLTAR DO FIXAR PARA A CENTRAL
+    // =====================================================
+
+    function voltarDoFixar() {
+
+        telaFixarMemoria.hidden =
+            true;
+
+        telaTabelaMental.hidden =
+            true;
+
+        telaAprenderMemoria.hidden =
             true;
 
         telaMemoriaNumerica.hidden =
@@ -481,7 +1026,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
 
     // =====================================================
     // VOLTAR DA TABELA MENTAL
@@ -1541,6 +2085,188 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // EVENTOS — FIXAR
+    // =====================================================
+
+    if (btnFixar) {
+
+        btnFixar.addEventListener(
+            "click",
+            abrirFixarMemoria
+        );
+
+    }
+
+
+    if (btnVoltarFixar) {
+
+        btnVoltarFixar.addEventListener(
+            "click",
+            voltarDoFixar
+        );
+
+    }
+
+
+    // =====================================================
+    // REVELAR MEMÓRIA — FIXAR
+    // =====================================================
+
+    if (btnRevelarFixar) {
+
+        btnRevelarFixar.addEventListener(
+            "click",
+            revelarMemoriaFixar
+        );
+
+    }
+
+
+    // =====================================================
+    // LEMBREI — FIXAR
+    //
+    // Registra o número atual como acerto.
+    //
+    // 01–09:
+    // avança para a próxima memória.
+    //
+    // 10:
+    // encerra a rodada e mostra o resultado.
+    // =====================================================
+
+    if (btnLembreiFixar) {
+
+        btnLembreiFixar.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // EVITA REGISTRAR O MESMO NÚMERO DUAS VEZES
+                // =========================================
+
+                if (
+                    !fixarAcertosRodada.includes(
+                        fixarNumeroAtual
+                    )
+                ) {
+
+                    fixarAcertosRodada.push(
+                        fixarNumeroAtual
+                    );
+
+                }
+
+
+                // =========================================
+                // REMOVE DOS ERROS CASO JÁ EXISTA
+                // =========================================
+
+                fixarErrosRodada =
+                    fixarErrosRodada.filter(
+                        numero =>
+                            numero !==
+                            fixarNumeroAtual
+                    );
+
+
+                // =========================================
+                // AVANÇA OU FINALIZA A RODADA
+                // =========================================
+
+                if (
+                    fixarNumeroAtual <
+                    10
+                ) {
+
+                    carregarMemoriaFixar(
+                        fixarNumeroAtual + 1
+                    );
+
+                } else {
+
+                    finalizarRodadaFixar();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // NÃO LEMBREI — FIXAR
+    //
+    // Registra o número atual como erro.
+    //
+    // 01–09:
+    // avança para a próxima memória.
+    //
+    // 10:
+    // encerra a rodada e mostra o resultado.
+    // =====================================================
+
+    if (btnNaoLembreiFixar) {
+
+        btnNaoLembreiFixar.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // EVITA REGISTRAR O MESMO NÚMERO DUAS VEZES
+                // =========================================
+
+                if (
+                    !fixarErrosRodada.includes(
+                        fixarNumeroAtual
+                    )
+                ) {
+
+                    fixarErrosRodada.push(
+                        fixarNumeroAtual
+                    );
+
+                }
+
+
+                // =========================================
+                // REMOVE DOS ACERTOS CASO JÁ EXISTA
+                // =========================================
+
+                fixarAcertosRodada =
+                    fixarAcertosRodada.filter(
+                        numero =>
+                            numero !==
+                            fixarNumeroAtual
+                    );
+
+
+                // =========================================
+                // AVANÇA OU FINALIZA A RODADA
+                // =========================================
+
+                if (
+                    fixarNumeroAtual <
+                    10
+                ) {
+
+                    carregarMemoriaFixar(
+                        fixarNumeroAtual + 1
+                    );
+
+                } else {
+
+                    finalizarRodadaFixar();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
     // BOTÃO ENTENDI — DETALHE DA MEMÓRIA
     //
     // Fecha somente o detalhe.
@@ -1580,6 +2306,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
+
     // =====================================================
     // ESCOLHER FAIXA — TABELA MENTAL
     //

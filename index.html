@@ -448,7 +448,7 @@
 
                         <!-- FIXAR -->
 
-                        <button class="memory-training-card" id="btnFixarMemoria" type="button">
+                        <button class="memory-training-card" id="btnFixar" type="button">
 
                             <div class="memory-training-icon">
 
@@ -473,7 +473,6 @@
                             </small>
 
                         </button>
-
 
                         <!-- REVISAR -->
 
@@ -850,7 +849,377 @@
 
                 </div>
 
-            </section> <!-- =================================================
+            </section>
+
+
+            <!-- =================================================
+                 TELA — FIXAR MEMÓRIA NUMÉRICA
+            ================================================== -->
+
+            <section class="app-screen screen-fixar" id="telaFixarMemoria" hidden>
+
+                <div class="fixar-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="fixar-header">
+
+                        <button class="back-button" id="btnVoltarFixar" type="button"
+                            aria-label="Voltar para a Central da Memória Numérica">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Fixar
+                            </h2>
+
+                            <p>
+                                Force sua mente a recuperar a associação
+                                antes de revelar a resposta.
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         ÁREA DO TREINO
+                    ================================================== -->
+
+                    <div id="fixarTrainingArea">
+
+
+                        <!-- =================================================
+                             TOPO DO TREINO
+                        ================================================== -->
+
+                        <div class="fixar-training-top">
+
+                            <span class="fixar-progress" id="fixarProgress">
+                                01 / 10
+                            </span>
+
+                            <span class="fixar-mode">
+                                FIXAR
+                            </span>
+
+                            <button class="fixar-range-button" id="btnFaixaFixar" type="button">
+
+                                <span>
+                                    FAIXA
+                                </span>
+
+                                <strong id="fixarRangeAtual">
+                                    01–10
+                                </strong>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             INSTRUÇÃO
+                        ================================================== -->
+
+                        <div class="fixar-instruction">
+
+                            <span class="module-kicker">
+                                RECUPERAÇÃO ATIVA
+                            </span>
+
+                            <p>
+                                Veja o número e tente visualizar
+                                a associação antes de revelar.
+                            </p>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CARD PRINCIPAL
+                        ================================================== -->
+
+                        <section class="fixar-card">
+
+
+                            <!-- =================================================
+                                 FASE 1 — SOMENTE O NÚMERO
+                            ================================================== -->
+
+                            <div class="fixar-question" id="fixarQuestion">
+
+                                <span class="fixar-question-label">
+                                    QUAL É A ASSOCIAÇÃO?
+                                </span>
+
+                                <strong class="fixar-number" id="fixarNumber">
+                                    01
+                                </strong>
+
+                                <span class="fixar-think">
+                                    Visualize a imagem em sua mente.
+                                </span>
+
+                            </div>
+
+
+                            <!-- =================================================
+                                 FASE 2 — RESPOSTA REVELADA
+
+                                 Começa oculta.
+                                 Depois o JavaScript mostrará:
+                                 código + palavra + imagem.
+                            ================================================== -->
+
+                            <div class="fixar-answer" id="fixarAnswer" hidden>
+
+                                <div class="fixar-association">
+
+                                    <span class="fixar-code" id="fixarCode">
+                                        T
+                                    </span>
+
+                                    <span class="fixar-arrow" aria-hidden="true">
+                                        →
+                                    </span>
+
+                                    <strong class="fixar-word" id="fixarWord">
+                                        TEIA
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="fixar-image-area" id="fixarImageArea">
+
+                                    <img class="fixar-image" id="fixarImage" alt="">
+
+                                    <div class="fixar-image-glow" aria-hidden="true"></div>
+
+                                </div>
+
+                            </div>
+
+
+                        </section>
+
+
+                        <!-- =================================================
+                             AÇÃO — REVELAR
+                        ================================================== -->
+
+                        <button class="primary-button fixar-reveal-button" id="btnRevelarFixar" type="button">
+
+                            <span>
+                                Revelar memória
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <!-- =================================================
+                             AUTOAVALIAÇÃO
+
+                             Só aparecerá depois que a memória for revelada.
+                        ================================================== -->
+
+                        <div class="fixar-evaluation" id="fixarEvaluation" hidden>
+
+                            <span class="fixar-evaluation-label">
+                                VOCÊ LEMBROU?
+                            </span>
+
+
+                            <div class="fixar-evaluation-actions">
+
+                                <button class="fixar-evaluation-button fixar-forgot" id="btnNaoLembreiFixar"
+                                    type="button">
+
+                                    <span aria-hidden="true">
+                                        ✕
+                                    </span>
+
+                                    <strong>
+                                        Não lembrei
+                                    </strong>
+
+                                </button>
+
+
+                                <button class="fixar-evaluation-button fixar-remembered" id="btnLembreiFixar"
+                                    type="button">
+
+                                    <span aria-hidden="true">
+                                        ✓
+                                    </span>
+
+                                    <strong>
+                                        Lembrei
+                                    </strong>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RESULTADO DA RODADA
+
+                         Fica oculto durante o treino.
+                         Será exibido após responder a última memória.
+                    ================================================== -->
+
+                    <section class="fixar-result" id="fixarResult" hidden>
+
+
+                        <!-- =================================================
+                             ÍCONE DE CONCLUSÃO
+                        ================================================== -->
+
+                        <div class="fixar-result-icon" aria-hidden="true">
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M12 3l2.3 4.7 5.2.8-3.8 3.7.9 5.2-4.6-2.5-4.6 2.5.9-5.2-3.8-3.7 5.2-.8L12 3z" />
+
+                            </svg>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             TÍTULO
+                        ================================================== -->
+
+                        <span class="module-kicker">
+                            TREINO CONCLUÍDO
+                        </span>
+
+                        <h3>
+                            Rodada concluída
+                        </h3>
+
+                        <p class="fixar-result-message" id="fixarResultMessage">
+                            Veja como sua memória respondeu nesta rodada.
+                        </p>
+
+
+                        <!-- =================================================
+                             RESUMO — ACERTOS E REFORÇO
+                        ================================================== -->
+
+                        <div class="fixar-result-stats">
+
+                            <div class="fixar-result-stat">
+
+                                <span>
+                                    ACERTOS
+                                </span>
+
+                                <strong id="fixarResultAcertos">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="fixar-result-stat">
+
+                                <span>
+                                    REFORÇAR
+                                </span>
+
+                                <strong id="fixarResultErros">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             MEMÓRIAS QUE PRECISAM DE REFORÇO
+
+                             O JavaScript preencherá esta área somente
+                             quando houver erros na rodada.
+                        ================================================== -->
+
+                        <div class="fixar-result-weak" id="fixarResultWeak">
+
+                            <span class="fixar-result-weak-label">
+                                MEMÓRIAS PARA REFORÇAR
+                            </span>
+
+                            <div class="fixar-result-weak-list" id="fixarResultWeakList">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             AÇÕES DO RESULTADO
+                        ================================================== -->
+
+                        <div class="fixar-result-actions">
+
+                            <button class="primary-button" id="btnRevisarErrosFixar" type="button">
+
+                                <span>
+                                    Revisar erros
+                                </span>
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+
+                            </button>
+
+
+                            <button class="fixar-result-back" id="btnFinalizarFixar" type="button">
+
+                                Voltar à Central
+
+                            </button>
+
+                        </div>
+
+
+                    </section>
+
+
+                </div>
+
+            </section>
+
+            <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->
 
@@ -1006,7 +1375,6 @@
                             </button>
 
                         </div>
-
 
                         <!-- =================================================
                              PAINEL DE FAIXAS
