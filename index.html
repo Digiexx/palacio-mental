@@ -918,7 +918,8 @@
                                 FIXAR
                             </span>
 
-                            <button class="fixar-range-button" id="btnFaixaFixar" type="button">
+                            <button class="fixar-range-button" id="btnFaixaFixar" type="button" aria-expanded="false"
+                                aria-controls="fixarRangeSelector">
 
                                 <span>
                                     FAIXA
@@ -929,6 +930,134 @@
                                 </strong>
 
                             </button>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             SELETOR DE FAIXAS — FIXAR
+
+                             Começa oculto.
+                             O JavaScript abrirá ao clicar em "FAIXA".
+                        ================================================== -->
+
+                        <div class="fixar-range-selector" id="fixarRangeSelector" hidden>
+
+                            <div class="fixar-range-selector-header">
+
+                                <span class="module-kicker">
+                                    ESCOLHA A FAIXA
+                                </span>
+
+                                <strong>
+                                    Qual grupo deseja fixar?
+                                </strong>
+
+                            </div>
+
+
+                            <div class="fixar-range-selector-grid">
+
+                                <button class="fixar-range-option is-active" type="button" data-fixar-inicio="1"
+                                    data-fixar-fim="10">
+
+                                    <span>
+                                        01–10
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="11"
+                                    data-fixar-fim="20">
+
+                                    <span>
+                                        11–20
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="21"
+                                    data-fixar-fim="30">
+
+                                    <span>
+                                        21–30
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="31"
+                                    data-fixar-fim="40">
+
+                                    <span>
+                                        31–40
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="41"
+                                    data-fixar-fim="50">
+
+                                    <span>
+                                        41–50
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="51"
+                                    data-fixar-fim="60">
+
+                                    <span>
+                                        51–60
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="61"
+                                    data-fixar-fim="70">
+
+                                    <span>
+                                        61–70
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="71"
+                                    data-fixar-fim="80">
+
+                                    <span>
+                                        71–80
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="81"
+                                    data-fixar-fim="90">
+
+                                    <span>
+                                        81–90
+                                    </span>
+
+                                </button>
+
+
+                                <button class="fixar-range-option" type="button" data-fixar-inicio="91"
+                                    data-fixar-fim="100">
+
+                                    <span>
+                                        91–100
+                                    </span>
+
+                                </button>
+
+                            </div>
 
                         </div>
 
@@ -1218,7 +1347,6 @@
                 </div>
 
             </section>
-
             <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->
