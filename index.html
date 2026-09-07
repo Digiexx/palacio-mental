@@ -1400,6 +1400,421 @@
                 </div>
 
             </section>
+
+
+            <!-- =================================================
+                 TELA — DESAFIAR MEMÓRIA NUMÉRICA
+            ================================================== -->
+
+            <section class="app-screen screen-desafiar" id="telaDesafiarMemoria" hidden>
+
+                <div class="desafiar-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="desafiar-header">
+
+                        <button class="back-button" id="btnVoltarDesafiar" type="button"
+                            aria-label="Voltar para a Central da Memória Numérica">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Desafiar
+                            </h2>
+
+                            <p>
+                                Coloque sua memória à prova
+                                e descubra o quanto você realmente domina.
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         ÁREA DO DESAFIO
+                    ================================================== -->
+
+                    <div id="desafiarTrainingArea">
+
+
+                        <!-- =================================================
+                             TOPO DO TREINO
+                        ================================================== -->
+
+                        <div class="desafiar-training-top">
+
+                            <span class="desafiar-progress" id="desafiarProgress">
+                                01 / 10
+                            </span>
+
+                            <span class="desafiar-mode">
+                                DESAFIAR
+                            </span>
+
+                            <button class="desafiar-range-button" id="btnFaixaDesafiar" type="button"
+                                aria-expanded="false" aria-controls="desafiarRangeSelector">
+
+                                <span>
+                                    FAIXA
+                                </span>
+
+                                <strong id="desafiarRangeAtual">
+                                    01–10
+                                </strong>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             SELETOR DE FAIXAS
+                        ================================================== -->
+
+                        <div class="desafiar-range-selector" id="desafiarRangeSelector" hidden>
+
+                            <div class="desafiar-range-selector-header">
+
+                                <span class="module-kicker">
+                                    ESCOLHA A FAIXA
+                                </span>
+
+                                <strong>
+                                    Qual grupo deseja desafiar?
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desafiar-range-selector-grid">
+
+                                <button class="desafiar-range-option is-active" type="button" data-desafiar-inicio="1"
+                                    data-desafiar-fim="10">
+
+                                    <span>
+                                        01–10
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="11"
+                                    data-desafiar-fim="20">
+
+                                    <span>
+                                        11–20
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="21"
+                                    data-desafiar-fim="30">
+
+                                    <span>
+                                        21–30
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="31"
+                                    data-desafiar-fim="40">
+
+                                    <span>
+                                        31–40
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="41"
+                                    data-desafiar-fim="50">
+
+                                    <span>
+                                        41–50
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="51"
+                                    data-desafiar-fim="60">
+
+                                    <span>
+                                        51–60
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="61"
+                                    data-desafiar-fim="70">
+
+                                    <span>
+                                        61–70
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="71"
+                                    data-desafiar-fim="80">
+
+                                    <span>
+                                        71–80
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="81"
+                                    data-desafiar-fim="90">
+
+                                    <span>
+                                        81–90
+                                    </span>
+
+                                </button>
+
+
+                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="91"
+                                    data-desafiar-fim="100">
+
+                                    <span>
+                                        91–100
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             INSTRUÇÃO
+                        ================================================== -->
+
+                        <div class="desafiar-instruction">
+
+                            <span class="module-kicker">
+                                NÚMERO → PALAVRA
+                            </span>
+
+                            <p>
+                                Veja o número e digite a palavra
+                                correspondente à associação.
+                            </p>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CARD PRINCIPAL
+                        ================================================== -->
+
+                        <section class="desafiar-card">
+
+                            <span class="desafiar-question-label">
+                                QUAL É A PALAVRA?
+                            </span>
+
+
+                            <strong class="desafiar-number" id="desafiarNumber">
+                                01
+                            </strong>
+
+
+                            <div class="desafiar-input-area">
+
+                                <input class="desafiar-input" id="desafiarResposta" type="text"
+                                    placeholder="Digite sua resposta" autocomplete="off">
+
+                            </div>
+
+
+                            <div class="desafiar-feedback" id="desafiarFeedback" hidden>
+
+                                <span id="desafiarFeedbackStatus"></span>
+
+                                <strong id="desafiarFeedbackResposta"></strong>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- =================================================
+                             AÇÃO — VERIFICAR
+                        ================================================== -->
+
+                        <button class="primary-button desafiar-check-button" id="btnVerificarDesafio" type="button">
+
+                            <span>
+                                Verificar resposta
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <!-- =================================================
+                             AÇÃO — PRÓXIMO
+                        ================================================== -->
+
+                        <button class="primary-button desafiar-next-button" id="btnProximoDesafio" type="button" hidden>
+
+                            <span>
+                                Próximo desafio
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RESULTADO — DESAFIAR
+                    ================================================== -->
+
+                    <section class="desafiar-result" id="desafiarResult" hidden>
+
+                        <div class="desafiar-result-header">
+
+                            <span class="module-kicker">
+                                DESAFIO CONCLUÍDO
+                            </span>
+
+                            <h3>
+                                Resultado da rodada
+                            </h3>
+
+                            <p id="desafiarResultMessage">
+                                Veja como foi seu desempenho nesta faixa.
+                            </p>
+
+                        </div>
+
+
+                        <div class="desafiar-result-summary">
+
+                            <div class="desafiar-result-stat">
+
+                                <span>
+                                    ACERTOS
+                                </span>
+
+                                <strong id="desafiarResultAcertos">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desafiar-result-stat">
+
+                                <span>
+                                    ERROS
+                                </span>
+
+                                <strong id="desafiarResultErros">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desafiar-result-stat">
+
+                                <span>
+                                    DOMÍNIO
+                                </span>
+
+                                <strong id="desafiarResultPercentual">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="desafiar-result-weak" id="desafiarResultWeak" hidden>
+
+                            <div class="desafiar-result-weak-header">
+
+                                <span class="module-kicker">
+                                    MEMÓRIAS PARA REFORÇAR
+                                </span>
+
+                                <strong>
+                                    Revise estes números
+                                </strong>
+
+                            </div>
+
+
+                            <div class="desafiar-result-weak-list" id="desafiarResultWeakList">
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="primary-button desafiar-restart-button" id="btnRefazerDesafio" type="button">
+
+                            <span>
+                                Refazer desafio
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                                <path d="M3 3v5h5" />
+                            </svg>
+
+                        </button>
+
+
+                        <button class="secondary-button desafiar-finish-button" id="btnFinalizarDesafio" type="button">
+
+                            <span>
+                                Voltar à Central
+                            </span>
+
+                        </button>
+
+                    </section>
+
+
+                </div>
+
+            </section>
             <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->
@@ -1556,7 +1971,6 @@
                             </button>
 
                         </div>
-
                         <!-- =================================================
                              PAINEL DE FAIXAS
 

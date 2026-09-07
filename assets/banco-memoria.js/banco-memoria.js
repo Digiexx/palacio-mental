@@ -244,7 +244,7 @@ const bancoMemoria = [
     {
         numero: 26,
         codigo: "NS",
-        palavra: "NASA",
+        palavra: "Nasa",
         categoria: "objeto",
         imagem: "assets/imagens/memoria-numerica/numeros/26-nasa.webp",
         dominado: false
@@ -796,9 +796,9 @@ const bancoMemoria = [
     {
         numero: 84,
         codigo: "GC",
-        palavra: "Guca",
+        palavra: "Geca",
         categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/84-guca.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/84-geca.webp",
         dominado: false
     },
 
@@ -891,9 +891,9 @@ const bancoMemoria = [
     {
         numero: 94,
         codigo: "PC",
-        palavra: "pica",
+        palavra: "Pica",
         categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/94-Pica.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/94-pica.webp",
         dominado: false
     },
 

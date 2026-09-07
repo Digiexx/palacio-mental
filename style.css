@@ -9789,6 +9789,1784 @@ body [hidden][hidden] {
 
 
 /* =========================================================
+   DESAFIAR — MEMÓRIA NUMÉRICA
+========================================================= */
+
+.screen-desafiar {
+
+    min-height:
+        100vh;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(143, 70, 255, 0.2),
+            transparent 34%),
+        radial-gradient(circle at 85% 38%,
+            rgba(88, 64, 255, 0.08),
+            transparent 28%),
+        linear-gradient(180deg,
+            #12091f 0%,
+            #08070d 100%);
+}
+
+
+.desafiar-container {
+
+    width:
+        100%;
+
+    max-width:
+        520px;
+
+    margin:
+        0 auto;
+
+    padding:
+        26px 20px 50px;
+}
+
+
+/* =========================================================
+   CABEÇALHO — DESAFIAR
+========================================================= */
+
+.desafiar-header {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        14px;
+
+    margin-bottom:
+        24px;
+}
+
+
+.desafiar-header>div {
+
+    flex:
+        1;
+}
+
+
+.desafiar-header .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        #a96dff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.8px;
+}
+
+
+.desafiar-header h2 {
+
+    margin:
+        0 0 7px;
+
+    font-size:
+        clamp(28px, 6vw, 36px);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -1.1px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 24px rgba(153, 83, 255, 0.17);
+}
+
+
+.desafiar-header p {
+
+    max-width:
+        360px;
+
+    margin:
+        0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.56);
+}
+
+
+/* =========================================================
+   TOPO DO DESAFIO
+========================================================= */
+
+.desafiar-training-top {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        17px;
+
+    padding:
+        11px 12px;
+
+    border:
+        1px solid rgba(159, 94, 255, 0.2);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+}
+
+
+.desafiar-progress {
+
+    font-size:
+        11px;
+
+    font-weight:
+        750;
+
+    color:
+        rgba(255, 255, 255, 0.8);
+}
+
+
+.desafiar-mode {
+
+    justify-self:
+        center;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.8px;
+
+    color:
+        #ba83ff;
+}
+
+
+.desafiar-range-button {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    padding:
+        6px 9px;
+
+    border:
+        1px solid rgba(167, 105, 255, 0.23);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(135, 69, 245, 0.1);
+
+    color:
+        #ffffff;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease;
+}
+
+
+.desafiar-range-button span {
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+    color:
+        rgba(255, 255, 255, 0.43);
+}
+
+
+.desafiar-range-button strong {
+
+    font-size:
+        10px;
+
+    color:
+        #cb9fff;
+}
+
+
+.desafiar-range-button:active {
+
+    transform:
+        scale(0.96);
+}
+
+
+/* =========================================================
+   SELETOR DE FAIXAS — DESAFIAR
+========================================================= */
+
+.desafiar-range-selector {
+
+    margin:
+        -6px 0 17px;
+
+    padding:
+        16px;
+
+    border:
+        1px solid rgba(167, 102, 255, 0.21);
+
+    border-radius:
+        19px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(42, 20, 68, 0.97),
+            rgba(16, 10, 27, 0.99));
+
+    box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+.desafiar-range-selector-header {
+
+    margin-bottom:
+        13px;
+}
+
+
+.desafiar-range-selector-header .module-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.desafiar-range-selector-header strong {
+
+    display:
+        block;
+
+    font-size:
+        13px;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+}
+
+
+.desafiar-range-selector-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        8px;
+}
+
+
+.desafiar-range-option {
+
+    min-height:
+        43px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        8px 10px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    color:
+        rgba(255, 255, 255, 0.67);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+}
+
+
+.desafiar-range-option.is-active {
+
+    border-color:
+        rgba(190, 130, 255, 0.48);
+
+    background:
+        linear-gradient(135deg,
+            rgba(147, 75, 255, 0.3),
+            rgba(101, 49, 190, 0.18));
+
+    color:
+        #e0c3ff;
+
+    box-shadow:
+        0 0 18px rgba(143, 69, 255, 0.13);
+}
+
+
+.desafiar-range-option:active {
+
+    transform:
+        scale(0.97);
+}
+
+
+/* =========================================================
+   INSTRUÇÃO — DESAFIAR
+========================================================= */
+
+.desafiar-instruction {
+
+    margin-bottom:
+        14px;
+
+    padding:
+        0 2px;
+}
+
+
+.desafiar-instruction .module-kicker {
+
+    display:
+        block;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.desafiar-instruction p {
+
+    margin:
+        5px 0 0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.5;
+
+    color:
+        rgba(255, 255, 255, 0.57);
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL — DESAFIAR
+========================================================= */
+
+.desafiar-card {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        360px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        34px 24px;
+
+    border:
+        1px solid rgba(170, 101, 255, 0.24);
+
+    border-radius:
+        28px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(40, 18, 66, 0.94),
+            rgba(12, 9, 20, 0.97));
+
+    box-shadow:
+        0 25px 64px rgba(0, 0, 0, 0.38),
+        0 0 34px rgba(116, 52, 213, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+    text-align:
+        center;
+
+}
+
+
+
+.desafiar-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        250px;
+
+    height:
+        250px;
+
+    top:
+        42%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(151, 78, 255, 0.22),
+            transparent 68%);
+
+    filter:
+        blur(4px);
+
+    pointer-events:
+        none;
+
+}
+
+
+
+.desafiar-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        18%;
+
+    right:
+        18%;
+
+    bottom:
+        0;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(183, 111, 255, 0.48),
+            transparent);
+
+    box-shadow:
+        0 0 16px rgba(157, 78, 255, 0.35);
+
+}
+
+
+
+.desafiar-question-label {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-bottom:
+        19px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        2px;
+
+    color:
+        rgba(210, 177, 255, 0.7);
+
+}
+
+
+
+.desafiar-number {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        block;
+
+    margin:
+        0 0 33px;
+
+    font-size:
+        clamp(96px, 25vw, 138px);
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -7px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 12px rgba(168, 90, 255, 0.55),
+        0 0 35px rgba(132, 61, 255, 0.38),
+        0 0 72px rgba(117, 47, 224, 0.14);
+
+}
+
+
+
+/* =========================================================
+   CAMPO DE RESPOSTA
+========================================================= */
+
+.desafiar-input-area {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    max-width:
+        340px;
+
+}
+
+
+
+.desafiar-input {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    padding:
+        0 17px;
+
+    border:
+        1px solid rgba(177, 111, 255, 0.24);
+
+    border-radius:
+        15px;
+
+    outline:
+        none;
+
+    background:
+        rgba(7, 5, 13, 0.56);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    font-size:
+        14px;
+
+    font-weight:
+        650;
+
+    text-align:
+        center;
+
+    color:
+        #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+
+.desafiar-input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.3);
+
+}
+
+
+
+.desafiar-input:focus {
+
+    border-color:
+        rgba(185, 119, 255, 0.58);
+
+    background:
+        rgba(17, 9, 29, 0.72);
+
+    box-shadow:
+        0 0 0 3px rgba(145, 76, 255, 0.08),
+        0 0 25px rgba(134, 62, 243, 0.1);
+
+}
+
+
+
+/* =========================================================
+   FEEDBACK
+========================================================= */
+
+.desafiar-feedback {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    max-width:
+        340px;
+
+    margin-top:
+        14px;
+
+    padding:
+        12px 14px;
+
+    border:
+        1px solid rgba(169, 101, 255, 0.16);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.4;
+
+    color:
+        rgba(255, 255, 255, 0.66);
+
+}
+
+
+
+.desafiar-feedback span {
+
+    display:
+        block;
+
+    margin-bottom:
+        4px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.2px;
+
+    color:
+        #ba83ff;
+
+}
+
+
+
+.desafiar-feedback strong {
+
+    display:
+        block;
+
+    font-size:
+        14px;
+
+    color:
+        #ffffff;
+
+}
+
+
+
+/* =========================================================
+   BOTÕES — DESAFIAR
+========================================================= */
+
+.desafiar-check-button,
+.desafiar-next-button {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    margin-top:
+        16px;
+
+    border-radius:
+        16px;
+
+}
+
+
+
+.desafiar-next-button {
+
+    margin-top:
+        10px;
+
+}
+
+
+
+/* =========================================================
+   RESULTADO — DESAFIAR
+========================================================= */
+
+.desafiar-result {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    width:
+        100%;
+
+    padding:
+        30px;
+
+    border:
+        1px solid rgba(168, 96, 255, 0.22);
+
+    border-radius:
+        28px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(39, 17, 66, 0.96),
+            rgba(12, 8, 21, 0.98));
+
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.42),
+        0 0 42px rgba(117, 50, 221, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+}
+
+
+
+.desafiar-result::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        320px;
+
+    height:
+        320px;
+
+    top:
+        -170px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(156, 80, 255, 0.22),
+            transparent 68%);
+
+    pointer-events:
+        none;
+
+}
+
+
+
+.desafiar-result::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        15%;
+
+    right:
+        15%;
+
+    top:
+        0;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(188, 124, 255, 0.58),
+            transparent);
+
+    box-shadow:
+        0 0 20px rgba(166, 92, 255, 0.4);
+
+}
+
+
+
+/* =========================================================
+   CABEÇALHO DO RESULTADO
+========================================================= */
+
+.desafiar-result-header {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-bottom:
+        26px;
+
+    text-align:
+        center;
+
+}
+
+
+
+.desafiar-result-header .module-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        9px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #b777ff;
+
+}
+
+
+
+.desafiar-result-header h3 {
+
+    margin:
+        0;
+
+    font-size:
+        clamp(25px, 6vw, 34px);
+
+    line-height:
+        1.05;
+
+    letter-spacing:
+        -1px;
+
+    background:
+        linear-gradient(90deg,
+            #ffffff,
+            #d5b6ff,
+            #9c65ff);
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+}
+
+
+
+.desafiar-result-header p {
+
+    max-width:
+        410px;
+
+    margin:
+        12px auto 0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+
+    color:
+        rgba(255, 255, 255, 0.56);
+
+}
+
+
+
+/* =========================================================
+   RESUMO DO RESULTADO
+========================================================= */
+
+.desafiar-result-summary {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap:
+        10px;
+
+    margin-bottom:
+        24px;
+
+}
+
+
+
+.desafiar-result-stat {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        106px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        16px 8px;
+
+    border:
+        1px solid rgba(169, 103, 255, 0.16);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018));
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+    text-align:
+        center;
+
+}
+
+
+
+.desafiar-result-stat::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    top:
+        -48px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(149, 76, 255, 0.11);
+
+    filter:
+        blur(15px);
+
+}
+
+
+
+.desafiar-result-stat span {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-bottom:
+        7px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.4px;
+
+    color:
+        rgba(211, 178, 255, 0.64);
+
+}
+
+
+
+.desafiar-result-stat strong {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    font-size:
+        31px;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -1px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 24px rgba(158, 84, 255, 0.3);
+
+}
+
+
+
+/* =========================================================
+   DOMÍNIO — DESTAQUE
+========================================================= */
+
+.desafiar-result-stat:last-child {
+
+    border-color:
+        rgba(181, 112, 255, 0.3);
+
+    background:
+        linear-gradient(180deg,
+            rgba(116, 49, 211, 0.22),
+            rgba(58, 25, 101, 0.12));
+
+}
+
+
+
+.desafiar-result-stat:last-child strong {
+
+    color:
+        #c797ff;
+
+    text-shadow:
+        0 0 20px rgba(172, 95, 255, 0.42);
+
+}
+
+
+
+/* =========================================================
+   MEMÓRIAS PARA REFORÇAR
+========================================================= */
+
+.desafiar-result-weak {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-top:
+        8px;
+
+    margin-bottom:
+        24px;
+
+    padding:
+        20px;
+
+    border:
+        1px solid rgba(164, 96, 255, 0.15);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(5, 4, 10, 0.28);
+
+}
+
+
+
+.desafiar-result-weak-header {
+
+    margin-bottom:
+        15px;
+
+}
+
+
+
+.desafiar-result-weak-header .module-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b979ff;
+
+}
+
+
+
+.desafiar-result-weak-header strong {
+
+    display:
+        block;
+
+    font-size:
+        15px;
+
+    color:
+        #ffffff;
+
+}
+
+
+
+.desafiar-result-weak-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        8px;
+
+}
+
+
+
+.desafiar-result-weak-item {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        38px 40px 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    min-height:
+        52px;
+
+    padding:
+        8px 11px;
+
+    border:
+        1px solid rgba(170, 102, 255, 0.13);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+}
+
+
+
+.desafiar-result-weak-number {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    border:
+        1px solid rgba(180, 112, 255, 0.22);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(129, 59, 223, 0.13);
+
+    font-size:
+        13px;
+
+    font-weight:
+        850;
+
+    color:
+        #ffffff;
+
+}
+
+
+
+.desafiar-result-weak-code {
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.8px;
+
+    color:
+        #b985ff;
+
+}
+
+
+
+.desafiar-result-weak-word {
+
+    overflow:
+        hidden;
+
+    font-size:
+        11px;
+
+    white-space:
+        nowrap;
+
+    text-overflow:
+        ellipsis;
+
+    color:
+        rgba(255, 255, 255, 0.84);
+
+}
+
+
+
+/* =========================================================
+   BOTÕES DO RESULTADO
+========================================================= */
+
+.desafiar-restart-button {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    margin-top:
+        4px;
+
+    border-radius:
+        16px;
+
+}
+
+
+
+.desafiar-finish-button {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        100%;
+
+    min-height:
+        50px;
+
+    margin-top:
+        10px;
+
+    border:
+        1px solid rgba(169, 102, 255, 0.2);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-size:
+        12px;
+
+    font-weight:
+        750;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    cursor:
+        pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+
+.desafiar-finish-button:hover {
+
+    border-color:
+        rgba(184, 119, 255, 0.38);
+
+    background:
+        rgba(155, 82, 255, 0.08);
+
+    color:
+        #ffffff;
+
+}
+
+
+
+.desafiar-finish-button:active {
+
+    transform:
+        scale(0.985);
+
+}
+
+
+
+/* =========================================================
+   MOBILE — DESAFIAR
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .desafiar-container {
+
+        max-width:
+            460px;
+
+        padding:
+            18px 16px 36px;
+
+    }
+
+
+
+    .desafiar-header {
+
+        gap:
+            12px;
+
+        margin-top:
+            6px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+
+    .desafiar-header h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+
+    .desafiar-header p {
+
+        max-width:
+            310px;
+
+        font-size:
+            12px;
+
+    }
+
+
+
+    .desafiar-card {
+
+        min-height:
+            340px;
+
+        padding:
+            30px 18px;
+
+        border-radius:
+            26px;
+
+    }
+
+
+
+    .desafiar-number {
+
+        margin-bottom:
+            30px;
+
+        font-size:
+            clamp(92px, 28vw, 128px);
+
+    }
+
+
+
+    .desafiar-range-selector-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+
+    .desafiar-result {
+
+        padding:
+            24px 16px 20px;
+
+        border-radius:
+            24px;
+
+    }
+
+
+
+    .desafiar-result-header {
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+
+    .desafiar-result-summary {
+
+        gap:
+            7px;
+
+        margin-bottom:
+            18px;
+
+    }
+
+
+
+    .desafiar-result-stat {
+
+        min-height:
+            94px;
+
+        padding:
+            13px 5px;
+
+        border-radius:
+            15px;
+
+    }
+
+
+
+    .desafiar-result-stat span {
+
+        font-size:
+            7px;
+
+        letter-spacing:
+            1px;
+
+    }
+
+
+
+    .desafiar-result-stat strong {
+
+        font-size:
+            27px;
+
+    }
+
+
+
+    .desafiar-result-weak {
+
+        padding:
+            16px 12px;
+
+        border-radius:
+            17px;
+
+    }
+
+
+
+    .desafiar-result-weak-list {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+
+    .desafiar-result-weak-item {
+
+        grid-template-columns:
+            38px 42px 1fr;
+
+    }
+
+}
+
+/* =========================================================
    BANNER DE INSTALAÇÃO — PWA
 ========================================================= */
 
@@ -10177,6 +11955,20 @@ body [hidden][hidden] {
 
         font-size:
             8px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE — POSIÇÃO DO CABEÇALHO MEMÓRIA NUMÉRICA
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .screen-memoria .memory-central-header {
+
+        margin-top:
+            20px;
     }
 
 }
