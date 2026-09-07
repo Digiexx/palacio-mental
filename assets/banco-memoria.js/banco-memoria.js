@@ -280,9 +280,9 @@ const bancoMemoria = [
     {
         numero: 30,
         codigo: "MR",
-        palavra: "Muro",
+        palavra: "Moro ( Juiz)",
         categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/30-muro.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/30-moro.webp",
         dominado: false
     },
 
@@ -493,9 +493,9 @@ const bancoMemoria = [
     {
         numero: 52,
         codigo: "LN",
-        palavra: "Lona",
+        palavra: "Lany",
         categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/52-lona.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/52-lany.webp",
         dominado: false
     },
 
@@ -538,9 +538,9 @@ const bancoMemoria = [
     {
         numero: 57,
         codigo: "LF",
-        palavra: "Lufa",
+        palavra: "Lufos",
         categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/57-lufa.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/57-lufos.webp",
         dominado: false
     },
 
@@ -565,9 +565,9 @@ const bancoMemoria = [
     {
         numero: 60,
         codigo: "SR",
-        palavra: "Sereia",
+        palavra: "Siri",
         categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/60-sereia.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/60-siri.webp",
         dominado: false
     },
 
@@ -615,9 +615,9 @@ const bancoMemoria = [
     {
         numero: 65,
         codigo: "SL",
-        palavra: "Sela",
+        palavra: "Sal",
         categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/65-sela.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/65-sal.webp",
         dominado: false
     },
 
@@ -674,9 +674,9 @@ const bancoMemoria = [
     {
         numero: 71,
         codigo: "FT",
-        palavra: "Foto",
+        palavra: "Fita",
         categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/71-foto.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/71-fita.webp",
         dominado: false
     },
 
@@ -710,18 +710,18 @@ const bancoMemoria = [
     {
         numero: 75,
         codigo: "FL",
-        palavra: "Fila",
+        palavra: "Filó",
         categoria: "conceito",
-        imagem: "assets/imagens/memoria-numerica/numeros/75-fila.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/75-filó.webp",
         dominado: false
     },
 
     {
         numero: 76,
         codigo: "FS",
-        palavra: "Fossa",
+        palavra: "Homem FASE",
         categoria: "lugar",
-        imagem: "assets/imagens/memoria-numerica/numeros/76-fossa.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/76-fase.webp",
         dominado: false
     },
 
@@ -823,9 +823,9 @@ const bancoMemoria = [
     {
         numero: 87,
         codigo: "GF",
-        palavra: "Gafe",
+        palavra: "Gefe",
         categoria: "conceito",
-        imagem: "assets/imagens/memoria-numerica/numeros/87-gafe.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/87-gefe.webp",
         dominado: false
     },
 
@@ -850,9 +850,9 @@ const bancoMemoria = [
     {
         numero: 90,
         codigo: "PR",
-        palavra: "Pera",
+        palavra: "Pare",
         categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/90-pera.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/90-pare.webp",
         dominado: false
     },
 
