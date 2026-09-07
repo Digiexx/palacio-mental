@@ -9,6 +9,12 @@
 
     <meta name="theme-color" content="#0a0711">
 
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
     <title>Palácio Mental</title>
 
     <link rel="stylesheet" href="style.css">
@@ -25,10 +31,167 @@
 
     <section class="portal-screen" id="portalScreen">
 
+
+        <!-- =====================================================
+             BANNER DE INSTALAÇÃO DO APP
+        ====================================================== -->
+
+        <div class="app-install-banner" id="appInstallBanner" hidden>
+
+            <div class="app-install-banner-icon" aria-hidden="true">
+
+                <img src="assets/icons/icon-192.png" alt="">
+
+            </div>
+
+
+            <div class="app-install-banner-content">
+
+                <strong>
+                    Instale o Palácio Mental
+                </strong>
+
+                <span>
+                    Tenha acesso rápido aos seus treinos direto no celular.
+                </span>
+
+            </div>
+
+
+            <button class="app-install-banner-button" id="btnInstalarApp" type="button">
+                Instalar
+            </button>
+
+
+            <button class="app-install-banner-close" id="btnFecharInstallBanner" type="button"
+                aria-label="Fechar aviso de instalação">
+                ×
+            </button>
+
+        </div>
+        <!-- =====================================================
+             MODAL PREMIUM DE INSTALAÇÃO
+        ====================================================== -->
+
+        <div class="app-install-modal" id="appInstallModal" hidden>
+
+            <div class="app-install-modal-backdrop"></div>
+
+
+            <div class="app-install-modal-card">
+
+                <div class="app-install-modal-icon" aria-hidden="true">
+
+                    <img src="assets/icons/icon-192.png" alt="">
+
+                </div>
+
+
+                <div class="app-install-modal-header">
+
+                    <span class="app-install-modal-eyebrow">
+                        PALÁCIO MENTAL
+                    </span>
+
+                    <h2>
+                        Leve seu Palácio com você
+                    </h2>
+
+                    <p>
+                        Instale o aplicativo e tenha acesso rápido aos seus treinos,
+                        direto da tela inicial do seu dispositivo.
+                    </p>
+
+                </div>
+
+
+                <div class="app-install-modal-benefits">
+
+                    <div class="app-install-benefit">
+
+                        <span class="app-install-benefit-icon">
+                            ⚡
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Acesso imediato
+                            </strong>
+
+                            <span>
+                                Entre no Palácio com apenas um toque.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="app-install-benefit">
+
+                        <span class="app-install-benefit-icon">
+                            📱
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Experiência de aplicativo
+                            </strong>
+
+                            <span>
+                                Abra em uma janela própria, sem distrações.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="app-install-benefit">
+
+                        <span class="app-install-benefit-icon">
+                            🧠
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Seu treino sempre por perto
+                            </strong>
+
+                            <span>
+                                Continue fortalecendo sua memória onde estiver.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="app-install-modal-actions">
+
+                    <button class="app-install-modal-primary" id="btnConfirmarInstalacaoApp" type="button">
+                        Instalar Palácio Mental
+                    </button>
+
+
+                    <button class="app-install-modal-secondary" id="btnCancelarInstalacaoApp" type="button">
+                        Agora não
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
         <div class="portal-background"></div>
 
         <div class="portal-particles" id="portalParticles" aria-hidden="true"></div>
-
 
         <div class="portal-floating-elements" aria-hidden="true">
 
@@ -54,6 +217,7 @@
             <div class="portal-brand">
 
                 <div class="portal-brand-icon" aria-hidden="true">
+
                     <svg viewBox="0 0 24 24">
 
                         <path
@@ -62,6 +226,7 @@
                         <path d="M12 3v14" />
 
                     </svg>
+
                 </div>
 
 
@@ -103,6 +268,7 @@
                         <span></span>
                     </div>
 
+
                     <div class="portal-status-content">
 
                         <span class="portal-status-label">
@@ -130,14 +296,18 @@
                             12%
                         </strong>
 
+
                         <div class="portal-mini-chart" aria-hidden="true">
+
                             <svg viewBox="0 0 120 45">
 
                                 <path
                                     d="M4 38 C18 37, 20 29, 31 31 S45 20, 55 25 S68 11, 79 18 S93 8, 101 12 S112 4, 116 3" />
 
                             </svg>
+
                         </div>
+
 
                         <small>
                             Continue avançando!
@@ -193,8 +363,11 @@
                     <span class="portal-enter-core" aria-hidden="true"></span>
 
                     <svg viewBox="0 0 24 24" aria-hidden="true">
+
                         <path d="m7 10 5 5 5-5" />
+
                         <path d="m7 5 5 5 5-5" />
+
                     </svg>
 
                 </button>
@@ -204,7 +377,6 @@
         </div>
 
     </section>
-
 
 
 
@@ -2072,6 +2244,51 @@
     ====================================================== -->
 
     <script src="script.js"></script>
+
+
+    <!-- =====================================================
+         SERVICE WORKER — INSTALAÇÃO PWA
+    ====================================================== -->
+
+    <script>
+
+        if ("serviceWorker" in navigator) {
+
+            window.addEventListener(
+                "load",
+                () => {
+
+                    navigator.serviceWorker
+                        .register(
+                            "./service-worker.js"
+                        )
+                        .then(
+                            registration => {
+
+                                console.log(
+                                    "Service Worker registrado:",
+                                    registration.scope
+                                );
+
+                            }
+                        )
+                        .catch(
+                            error => {
+
+                                console.error(
+                                    "Erro ao registrar Service Worker:",
+                                    error
+                                );
+
+                            }
+                        );
+
+                }
+            );
+
+        }
+
+    </script>
 
 </body>
 

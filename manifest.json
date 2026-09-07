@@ -1,0 +1,31 @@
+{
+    "name": "Palácio Mental",
+    "short_name": "Palácio Mental",
+    "description": "Treine sua memória, domine associações e construa seu Palácio Mental.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#07040d",
+    "theme_color": "#16072b",
+    "icons": [
+        {
+            "src": "assets/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/icon-512-maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

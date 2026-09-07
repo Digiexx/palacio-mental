@@ -2960,6 +2960,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
     // =====================================================
     // BOTÃO ENTENDI — DETALHE DA MEMÓRIA
     //
@@ -2999,7 +3000,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
 
-    }    // =====================================================
+    }
+
+
+    // =====================================================
     // ESCOLHER FAIXA — TABELA MENTAL
     //
     // Esta lógica pertence somente à Tabela Mental.
@@ -3143,6 +3147,502 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             voltarParaHome
         );
+
+    }
+
+
+    // =====================================================
+    // INSTALAÇÃO DO PWA — PALÁCIO MENTAL
+    //
+    // Captura a instalação oferecida pelo navegador
+    // e controla o banner e o modal personalizado.
+    // =====================================================
+
+    const appInstallBanner =
+        document.getElementById(
+            "appInstallBanner"
+        );
+
+
+    const btnInstalarApp =
+        document.getElementById(
+            "btnInstalarApp"
+        );
+
+
+    const btnFecharInstallBanner =
+        document.getElementById(
+            "btnFecharInstallBanner"
+        );
+
+
+    const appInstallModal =
+        document.getElementById(
+            "appInstallModal"
+        );
+
+
+    const btnConfirmarInstalacaoApp =
+        document.getElementById(
+            "btnConfirmarInstalacaoApp"
+        );
+
+
+    const btnCancelarInstalacaoApp =
+        document.getElementById(
+            "btnCancelarInstalacaoApp"
+        );
+
+
+    let pwaInstallPrompt =
+        null;
+
+
+    const PWA_DISMISS_KEY =
+        "palacioMentalPwaDismissedAt";
+
+
+    const PWA_DISMISS_DAYS =
+        7;
+
+
+    // =====================================================
+    // VERIFICA SE O APP JÁ ESTÁ INSTALADO
+    // =====================================================
+
+    function appJaEstaInstalado() {
+
+        const modoStandalone =
+            window.matchMedia(
+                "(display-mode: standalone)"
+            ).matches;
+
+
+        const standaloneIOS =
+            window.navigator.standalone ===
+            true;
+
+
+        return (
+            modoStandalone ||
+            standaloneIOS
+        );
+
+    }
+
+
+    // =====================================================
+    // VERIFICA SE O USUÁRIO RECUSOU RECENTEMENTE
+    // =====================================================
+
+    function instalacaoFoiAdiadaRecentemente() {
+
+        const valorSalvo =
+            localStorage.getItem(
+                PWA_DISMISS_KEY
+            );
+
+
+        if (!valorSalvo) {
+
+            return false;
+
+        }
+
+
+        const dataRecusa =
+            Number(
+                valorSalvo
+            );
+
+
+        if (
+            !Number.isFinite(
+                dataRecusa
+            )
+        ) {
+
+            localStorage.removeItem(
+                PWA_DISMISS_KEY
+            );
+
+
+            return false;
+
+        }
+
+
+        const agora =
+            Date.now();
+
+
+        const tempoDecorrido =
+            agora -
+            dataRecusa;
+
+
+        const seteDiasEmMilissegundos =
+            PWA_DISMISS_DAYS *
+            24 *
+            60 *
+            60 *
+            1000;
+
+
+        if (
+            tempoDecorrido >=
+            seteDiasEmMilissegundos
+        ) {
+
+            localStorage.removeItem(
+                PWA_DISMISS_KEY
+            );
+
+
+            return false;
+
+        }
+
+
+        return true;
+
+    }
+
+
+    // =====================================================
+    // REGISTRA QUE O USUÁRIO QUER ADIAR A INSTALAÇÃO
+    // =====================================================
+
+    function adiarInstalacao() {
+
+        localStorage.setItem(
+            PWA_DISMISS_KEY,
+            String(
+                Date.now()
+            )
+        );
+
+    }
+
+
+    // =====================================================
+    // MOSTRAR BANNER
+    // =====================================================
+
+    function mostrarBannerInstalacao() {
+
+        if (
+            !appInstallBanner ||
+            appJaEstaInstalado() ||
+            instalacaoFoiAdiadaRecentemente()
+        ) {
+
+            return;
+
+        }
+
+
+        appInstallBanner.hidden =
+            false;
+
+    }
+
+
+    // =====================================================
+    // ESCONDER BANNER
+    // =====================================================
+
+    function esconderBannerInstalacao() {
+
+        if (!appInstallBanner) {
+
+            return;
+
+        }
+
+
+        appInstallBanner.hidden =
+            true;
+
+    }
+
+
+    // =====================================================
+    // ABRIR MODAL PREMIUM
+    // =====================================================
+
+    function abrirModalInstalacao() {
+
+        if (
+            !appInstallModal ||
+            !pwaInstallPrompt
+        ) {
+
+            return;
+
+        }
+
+
+        appInstallModal.hidden =
+            false;
+
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    // =====================================================
+    // FECHAR MODAL PREMIUM
+    // =====================================================
+
+    function fecharModalInstalacao() {
+
+        if (!appInstallModal) {
+
+            return;
+
+        }
+
+
+        appInstallModal.hidden =
+            true;
+
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    // =====================================================
+    // CHROME / EDGE / ANDROID
+    //
+    // O navegador informa quando o PWA pode ser instalado.
+    // =====================================================
+
+    window.addEventListener(
+        "beforeinstallprompt",
+        event => {
+
+            event.preventDefault();
+
+
+            pwaInstallPrompt =
+                event;
+
+
+            mostrarBannerInstalacao();
+
+        }
+    );
+
+
+    // =====================================================
+    // BOTÃO INSTALAR — BANNER
+    //
+    // Primeiro apresenta nosso modal personalizado.
+    // =====================================================
+
+    if (btnInstalarApp) {
+
+        btnInstalarApp.addEventListener(
+            "click",
+            () => {
+
+                abrirModalInstalacao();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // CONFIRMAR INSTALAÇÃO — MODAL
+    //
+    // Somente aqui chamamos a janela oficial do navegador.
+    // =====================================================
+
+    if (btnConfirmarInstalacaoApp) {
+
+        btnConfirmarInstalacaoApp.addEventListener(
+            "click",
+            async () => {
+
+                if (!pwaInstallPrompt) {
+
+                    fecharModalInstalacao();
+
+                    return;
+
+                }
+
+
+                fecharModalInstalacao();
+
+
+                pwaInstallPrompt.prompt();
+
+
+                const escolha =
+                    await pwaInstallPrompt.userChoice;
+
+
+                if (
+                    escolha.outcome ===
+                    "accepted"
+                ) {
+
+                    localStorage.removeItem(
+                        PWA_DISMISS_KEY
+                    );
+
+
+                    esconderBannerInstalacao();
+
+                }
+
+
+                pwaInstallPrompt =
+                    null;
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // AGORA NÃO — MODAL
+    //
+    // Esconde o convite por 7 dias.
+    // =====================================================
+
+    if (btnCancelarInstalacaoApp) {
+
+        btnCancelarInstalacaoApp.addEventListener(
+            "click",
+            () => {
+
+                adiarInstalacao();
+
+
+                fecharModalInstalacao();
+
+
+                esconderBannerInstalacao();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // TOQUE NO FUNDO — FECHA O MODAL
+    //
+    // Não registra recusa.
+    // Apenas fecha o modal atual.
+    // =====================================================
+
+    if (appInstallModal) {
+
+        const appInstallModalBackdrop =
+            appInstallModal.querySelector(
+                ".app-install-modal-backdrop"
+            );
+
+
+        if (appInstallModalBackdrop) {
+
+            appInstallModalBackdrop.addEventListener(
+                "click",
+                () => {
+
+                    fecharModalInstalacao();
+
+                }
+            );
+
+        }
+
+    }
+
+
+    // =====================================================
+    // BOTÃO FECHAR — BANNER
+    //
+    // Esconde o convite por 7 dias.
+    // =====================================================
+
+    if (btnFecharInstallBanner) {
+
+        btnFecharInstallBanner.addEventListener(
+            "click",
+            () => {
+
+                adiarInstalacao();
+
+
+                esconderBannerInstalacao();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // INSTALAÇÃO CONCLUÍDA
+    // =====================================================
+
+    window.addEventListener(
+        "appinstalled",
+        () => {
+
+            pwaInstallPrompt =
+                null;
+
+
+            localStorage.removeItem(
+                PWA_DISMISS_KEY
+            );
+
+
+            fecharModalInstalacao();
+
+
+            esconderBannerInstalacao();
+
+
+            console.log(
+                "Palácio Mental instalado com sucesso."
+            );
+
+        }
+    );
+
+
+    // =====================================================
+    // GARANTIA EXTRA
+    //
+    // Se estiver sendo executado como aplicativo,
+    // banner e modal nunca devem aparecer.
+    // =====================================================
+
+    if (appJaEstaInstalado()) {
+
+        localStorage.removeItem(
+            PWA_DISMISS_KEY
+        );
+
+
+        fecharModalInstalacao();
+
+
+        esconderBannerInstalacao();
 
     }
 
