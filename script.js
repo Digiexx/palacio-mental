@@ -3155,7 +3155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // INSTALAÇÃO DO PWA — PALÁCIO MENTAL
     //
     // Captura a instalação oferecida pelo navegador
-    // e controla o banner e o modal personalizado.
+    // e controla o banner personalizado.
     // =====================================================
 
     const appInstallBanner =
@@ -3173,24 +3173,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnFecharInstallBanner =
         document.getElementById(
             "btnFecharInstallBanner"
-        );
-
-
-    const appInstallModal =
-        document.getElementById(
-            "appInstallModal"
-        );
-
-
-    const btnConfirmarInstalacaoApp =
-        document.getElementById(
-            "btnConfirmarInstalacaoApp"
-        );
-
-
-    const btnCancelarInstalacaoApp =
-        document.getElementById(
-            "btnCancelarInstalacaoApp"
         );
 
 
@@ -3368,58 +3350,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // ABRIR MODAL PREMIUM
-    // =====================================================
-
-    function abrirModalInstalacao() {
-
-        if (
-            !appInstallModal ||
-            !pwaInstallPrompt
-        ) {
-
-            return;
-
-        }
-
-
-        appInstallModal.hidden =
-            false;
-
-
-        document.body.style.overflow =
-            "hidden";
-
-    }
-
-
-    // =====================================================
-    // FECHAR MODAL PREMIUM
-    // =====================================================
-
-    function fecharModalInstalacao() {
-
-        if (!appInstallModal) {
-
-            return;
-
-        }
-
-
-        appInstallModal.hidden =
-            true;
-
-
-        document.body.style.overflow =
-            "";
-
-    }
-
-
-    // =====================================================
     // CHROME / EDGE / ANDROID
     //
     // O navegador informa quando o PWA pode ser instalado.
+    // Guardamos o evento para utilizar quando o usuário
+    // tocar no botão Instalar do nosso banner.
     // =====================================================
 
     window.addEventListener(
@@ -3442,45 +3377,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
     // BOTÃO INSTALAR — BANNER
     //
-    // Primeiro apresenta nosso modal personalizado.
+    // Abre DIRETAMENTE a confirmação oficial do navegador.
+    // Não existe mais modal intermediário.
     // =====================================================
 
     if (btnInstalarApp) {
 
         btnInstalarApp.addEventListener(
             "click",
-            () => {
-
-                abrirModalInstalacao();
-
-            }
-        );
-
-    }
-
-
-    // =====================================================
-    // CONFIRMAR INSTALAÇÃO — MODAL
-    //
-    // Somente aqui chamamos a janela oficial do navegador.
-    // =====================================================
-
-    if (btnConfirmarInstalacaoApp) {
-
-        btnConfirmarInstalacaoApp.addEventListener(
-            "click",
             async () => {
 
                 if (!pwaInstallPrompt) {
 
-                    fecharModalInstalacao();
-
                     return;
 
                 }
-
-
-                fecharModalInstalacao();
 
 
                 pwaInstallPrompt.prompt();
@@ -3505,68 +3416,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
+                if (
+                    escolha.outcome ===
+                    "dismissed"
+                ) {
+
+                    adiarInstalacao();
+
+
+                    esconderBannerInstalacao();
+
+                }
+
+
                 pwaInstallPrompt =
                     null;
 
             }
         );
-
-    }
-
-
-    // =====================================================
-    // AGORA NÃO — MODAL
-    //
-    // Esconde o convite por 7 dias.
-    // =====================================================
-
-    if (btnCancelarInstalacaoApp) {
-
-        btnCancelarInstalacaoApp.addEventListener(
-            "click",
-            () => {
-
-                adiarInstalacao();
-
-
-                fecharModalInstalacao();
-
-
-                esconderBannerInstalacao();
-
-            }
-        );
-
-    }
-
-
-    // =====================================================
-    // TOQUE NO FUNDO — FECHA O MODAL
-    //
-    // Não registra recusa.
-    // Apenas fecha o modal atual.
-    // =====================================================
-
-    if (appInstallModal) {
-
-        const appInstallModalBackdrop =
-            appInstallModal.querySelector(
-                ".app-install-modal-backdrop"
-            );
-
-
-        if (appInstallModalBackdrop) {
-
-            appInstallModalBackdrop.addEventListener(
-                "click",
-                () => {
-
-                    fecharModalInstalacao();
-
-                }
-            );
-
-        }
 
     }
 
@@ -3611,9 +3478,6 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
-            fecharModalInstalacao();
-
-
             esconderBannerInstalacao();
 
 
@@ -3629,7 +3493,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // GARANTIA EXTRA
     //
     // Se estiver sendo executado como aplicativo,
-    // banner e modal nunca devem aparecer.
+    // o banner nunca deve aparecer.
     // =====================================================
 
     if (appJaEstaInstalado()) {
@@ -3637,9 +3501,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem(
             PWA_DISMISS_KEY
         );
-
-
-        fecharModalInstalacao();
 
 
         esconderBannerInstalacao();
