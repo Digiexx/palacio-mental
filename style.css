@@ -646,9 +646,8 @@ body [hidden][hidden] {
 /* =========================================================
    ÍCONES
 
-   42px = tamanho atual da caixa
-   46px = maior
-   38px = menor
+   Ícones maiores e com mais presença visual
+   mantendo a identidade roxa/neon do Palácio Mental
 ========================================================= */
 
 .module-icon {
@@ -660,13 +659,13 @@ body [hidden][hidden] {
         2;
 
     width:
-        42px;
+        50px;
 
     height:
-        42px;
+        50px;
 
     flex:
-        0 0 42px;
+        0 0 50px;
 
     display:
         flex;
@@ -678,33 +677,82 @@ body [hidden][hidden] {
         center;
 
     margin-bottom:
-        13px;
+        15px;
 
     border:
-        1px solid rgba(177, 111, 255, 0.22);
+        1px solid rgba(187, 124, 255, 0.34);
 
     border-radius:
-        13px;
+        15px;
 
     color:
-        #be83ff;
+        #c78aff;
 
     background:
         linear-gradient(145deg,
-            rgba(139, 70, 232, 0.18),
-            rgba(102, 55, 174, 0.07));
+            rgba(132, 48, 238, 0.30),
+            rgba(73, 29, 133, 0.14));
 
     box-shadow:
-        inset 0 0 14px rgba(156, 86, 255, 0.05);
+        0 8px 22px rgba(95, 32, 181, 0.20),
+        0 0 22px rgba(151, 65, 255, 0.12),
+        inset 0 0 18px rgba(180, 101, 255, 0.10);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
 }
+
+
+.module-icon::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(184, 105, 255, 0.30) 0%,
+            rgba(137, 61, 255, 0.12) 42%,
+            transparent 72%);
+
+    filter:
+        blur(4px);
+
+    pointer-events:
+        none;
+}
+
 
 .module-icon svg {
 
+    position:
+        relative;
+
+    z-index:
+        2;
+
     width:
-        21px;
+        26px;
 
     height:
-        21px;
+        26px;
 
     fill:
         none;
@@ -713,13 +761,48 @@ body [hidden][hidden] {
         currentColor;
 
     stroke-width:
-        1.65;
+        1.7;
 
     stroke-linecap:
         round;
 
     stroke-linejoin:
         round;
+
+    filter:
+        drop-shadow(0 0 5px rgba(194, 124, 255, 0.60));
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+
+.module-card:hover .module-icon {
+
+    color:
+        #dfb5ff;
+
+    border-color:
+        rgba(202, 147, 255, 0.52);
+
+    box-shadow:
+        0 10px 28px rgba(95, 32, 181, 0.26),
+        0 0 30px rgba(151, 65, 255, 0.22),
+        inset 0 0 20px rgba(190, 115, 255, 0.14);
+
+    transform:
+        translateY(-2px);
+}
+
+
+.module-card:hover .module-icon svg {
+
+    transform:
+        scale(1.08);
+
+    filter:
+        drop-shadow(0 0 8px rgba(205, 145, 255, 0.78));
 }
 
 
@@ -873,25 +956,37 @@ body [hidden][hidden] {
     .module-icon {
 
         width:
-            38px;
+            44px;
 
         height:
-            38px;
+            44px;
 
         flex-basis:
-            38px;
+            44px;
 
         margin-bottom:
             11px;
+
+        border-radius:
+            13px;
+    }
+
+    .module-icon::before {
+
+        width:
+            30px;
+
+        height:
+            30px;
     }
 
     .module-icon svg {
 
         width:
-            19px;
+            23px;
 
         height:
-            19px;
+            23px;
     }
 
     .module-content h3 {
@@ -1085,12 +1180,21 @@ body [hidden][hidden] {
 @media (max-width: 820px) {
 
     .modules-grid {
+
         grid-template-columns:
-            1fr;
+            repeat(4, minmax(0, 1fr));
+
+        gap:
+            8px;
     }
 
     .module-card {
-        min-height: 225px;
+
+        min-height:
+            148px;
+
+        padding:
+            15px 6px 12px;
     }
 
 }
@@ -1128,22 +1232,70 @@ body [hidden][hidden] {
         margin-top: 38px;
     }
 
-    .module-card {
-        min-height: auto;
-
-        padding: 20px;
+    .modules-grid {
 
         grid-template-columns:
-            48px 1fr auto;
+            repeat(4, minmax(0, 1fr));
 
-        gap: 13px;
+        gap:
+            7px;
+    }
+
+    .module-card {
+
+        min-height:
+            142px;
+
+        padding:
+            14px 5px 11px;
+
+        gap:
+            0;
     }
 
     .module-icon {
-        width: 48px;
-        height: 48px;
 
-        border-radius: 14px;
+        width:
+            46px;
+
+        height:
+            46px;
+
+        flex-basis:
+            46px;
+
+        margin-bottom:
+            12px;
+
+        border-radius:
+            14px;
+    }
+
+    .module-icon svg {
+
+        width:
+            24px;
+
+        height:
+            24px;
+    }
+
+    .module-content h3 {
+
+        font-size:
+            10.5px;
+
+        line-height:
+            1.12;
+
+        margin-bottom:
+            8px;
+    }
+
+    .module-content small {
+
+        font-size:
+            8px;
     }
 
     .module-content p {
@@ -1184,9 +1336,22 @@ body [hidden][hidden] {
         font-size: 2.25rem;
     }
 
+    .modules-grid {
+
+        gap:
+            5px;
+    }
+
     .module-card {
-        grid-template-columns:
-            44px 1fr;
+
+        min-height:
+            136px;
+
+        padding:
+            12px 4px 10px;
+
+        border-radius:
+            13px;
     }
 
     .module-arrow {
@@ -1194,8 +1359,45 @@ body [hidden][hidden] {
     }
 
     .module-icon {
-        width: 44px;
-        height: 44px;
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        flex-basis:
+            40px;
+
+        margin-bottom:
+            10px;
+
+        border-radius:
+            12px;
+    }
+
+    .module-icon svg {
+
+        width:
+            21px;
+
+        height:
+            21px;
+    }
+
+    .module-content h3 {
+
+        font-size:
+            9.5px;
+
+        line-height:
+            1.12;
+    }
+
+    .module-content small {
+
+        font-size:
+            7.5px;
     }
 
     .stats-grid {

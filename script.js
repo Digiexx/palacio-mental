@@ -769,9 +769,6 @@ document.addEventListener("DOMContentLoaded", () => {
         modulosHome.hidden =
             true;
 
-        resumoHome.hidden =
-            true;
-
 
         telaAprenderMemoria.hidden =
             true;
@@ -1161,7 +1158,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     }
-
 
     // =====================================================
     // CARREGAR MEMÓRIA — DESAFIAR
