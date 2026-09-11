@@ -3017,6 +3017,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // EVENTOS — APRENDER
+    // =====================================================
+
+    if (btnVoltarMemoria) {
+
+        btnVoltarMemoria.addEventListener(
+            "click",
+            voltarParaMemoria
+        );
+
+    }
+
+
+    if (btnVoltarCentralMemoria) {
+
+        btnVoltarCentralMemoria.addEventListener(
+            "click",
+            voltarParaMemoria
+        );
+
+    }
+
+
+    if (btnComecarAprendizado) {
+
+        btnComecarAprendizado.addEventListener(
+            "click",
+            comecarAprendizado
+        );
+
+    }
+
+
+    if (btnAbrirFaixasAprender) {
+
+        btnAbrirFaixasAprender.addEventListener(
+            "click",
+            alternarPainelFaixas
+        );
+
+    }
+
+
+    // =====================================================
+    // ESCOLHER FAIXA — 01–10, 11–20 ETC.
+    // =====================================================
+
+    learningRangeOptions.forEach(
+        botao => {
+
+            botao.addEventListener(
+                "click",
+                () => {
+
+                    selecionarFaixaAprender(
+                        botao
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    if (btnProximaMemoria) {
+
+        btnProximaMemoria.addEventListener(
+            "click",
+            avancarMemoria
+        );
+
+    }
+
+
+    // =====================================================
     // EVENTOS — TABELA MENTAL
     // =====================================================
 
@@ -3035,6 +3111,817 @@ document.addEventListener("DOMContentLoaded", () => {
         btnVoltarTabelaMental.addEventListener(
             "click",
             voltarDaTabelaMental
+        );
+
+    }
+
+
+    // =====================================================
+    // ESCOLHER FAIXA — TABELA MENTAL
+    //
+    // Esta lógica pertence somente à Tabela Mental.
+    // Não altera a faixa nem o funcionamento do Aprender.
+    // =====================================================
+
+    mentalTableRangeOptions.forEach(
+        botao => {
+
+            botao.addEventListener(
+                "click",
+                () => {
+
+                    const inicio =
+                        Number(
+                            botao.dataset.inicio
+                        );
+
+
+                    const fim =
+                        Number(
+                            botao.dataset.fim
+                        );
+
+
+                    // =========================================
+                    // CARREGA A FAIXA ESCOLHIDA
+                    // =========================================
+
+                    gerarTabelaMental(
+                        inicio,
+                        fim
+                    );
+
+
+                    // =========================================
+                    // REMOVE O DESTAQUE DA FAIXA ANTERIOR
+                    // =========================================
+
+                    mentalTableRangeOptions.forEach(
+                        opcao => {
+
+                            opcao.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    // =========================================
+                    // DESTACA A FAIXA ESCOLHIDA
+                    // =========================================
+
+                    botao.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    // =====================================================
+    // BOTÃO ENTENDI — DETALHE DA MEMÓRIA
+    //
+    // Fecha somente o detalhe.
+    // A Tabela Mental permanece exatamente na faixa
+    // em que o usuário estava.
+    // =====================================================
+
+    const btnEntendiMentalDetail =
+        document.getElementById(
+            "btnEntendiMentalDetail"
+        );
+
+
+    if (btnEntendiMentalDetail) {
+
+        btnEntendiMentalDetail.addEventListener(
+            "click",
+            () => {
+
+                const mentalDetail =
+                    document.getElementById(
+                        "mentalDetail"
+                    );
+
+
+                if (!mentalDetail) {
+
+                    return;
+
+                }
+
+
+                mentalDetail.hidden =
+                    true;
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // EVENTOS — FIXAR
+    // =====================================================
+
+    if (btnFixar) {
+
+        btnFixar.addEventListener(
+            "click",
+            abrirFixarMemoria
+        );
+
+    }
+
+
+    if (btnVoltarFixar) {
+
+        btnVoltarFixar.addEventListener(
+            "click",
+            voltarDoFixar
+        );
+
+    }
+
+
+    // =====================================================
+    // ABRIR / FECHAR SELETOR DE FAIXAS — FIXAR
+    // =====================================================
+
+    if (
+        btnFaixaFixar &&
+        fixarRangeSelector
+    ) {
+
+        btnFaixaFixar.addEventListener(
+            "click",
+            () => {
+
+                const deveAbrir =
+                    fixarRangeSelector.hidden;
+
+
+                fixarRangeSelector.hidden =
+                    !deveAbrir;
+
+
+                btnFaixaFixar.setAttribute(
+                    "aria-expanded",
+                    String(deveAbrir)
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // ESCOLHER FAIXA — FIXAR
+    //
+    // Exemplo:
+    // 01–10
+    // 11–20
+    // 21–30
+    // ...
+    // 91–100
+    // =====================================================
+
+    fixarRangeOptions.forEach(
+        opcao => {
+
+            opcao.addEventListener(
+                "click",
+                () => {
+
+                    const inicio =
+                        Number(
+                            opcao.dataset.fixarInicio
+                        );
+
+
+                    const fim =
+                        Number(
+                            opcao.dataset.fixarFim
+                        );
+
+
+                    // =========================================
+                    // SEGURANÇA
+                    // =========================================
+
+                    if (
+                        !Number.isFinite(inicio) ||
+                        !Number.isFinite(fim)
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    // =========================================
+                    // DEFINE A NOVA FAIXA
+                    // =========================================
+
+                    fixarInicioAtual =
+                        inicio;
+
+
+                    fixarFimAtual =
+                        fim;
+
+
+                    // =========================================
+                    // INICIA UMA NOVA RODADA
+                    // =========================================
+
+                    fixarNumeroAtual =
+                        fixarInicioAtual;
+
+
+                    fixarErrosRodada =
+                        [];
+
+
+                    fixarAcertosRodada =
+                        [];
+
+
+                    // =========================================
+                    // GARANTE QUE NÃO ESTAMOS EM REVISÃO
+                    // =========================================
+
+                    limparRevisaoErrosFixar();
+
+
+                    // =========================================
+                    // REMOVE O DESTAQUE DA FAIXA ANTERIOR
+                    // =========================================
+
+                    fixarRangeOptions.forEach(
+                        botao => {
+
+                            botao.classList.remove(
+                                "is-active"
+                            );
+
+                        }
+                    );
+
+
+                    // =========================================
+                    // DESTACA A NOVA FAIXA
+                    // =========================================
+
+                    opcao.classList.add(
+                        "is-active"
+                    );
+
+
+                    // =========================================
+                    // FECHA O SELETOR
+                    // =========================================
+
+                    if (
+                        fixarRangeSelector
+                    ) {
+
+                        fixarRangeSelector.hidden =
+                            true;
+
+                    }
+
+
+                    if (
+                        btnFaixaFixar
+                    ) {
+
+                        btnFaixaFixar.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+
+
+                    // =========================================
+                    // GARANTE QUE O RESULTADO ESTEJA FECHADO
+                    // =========================================
+
+                    fixarResult.hidden =
+                        true;
+
+
+                    fixarTrainingArea.hidden =
+                        false;
+
+
+                    // =========================================
+                    // CARREGA O PRIMEIRO NÚMERO DA FAIXA
+                    // =========================================
+
+                    carregarMemoriaFixar(
+                        fixarInicioAtual
+                    );
+
+
+                    // =========================================
+                    // VOLTA PARA O TOPO
+                    // =========================================
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+            );
+
+        }
+    );
+
+
+    // =====================================================
+    // REVELAR MEMÓRIA — FIXAR
+    // =====================================================
+
+    if (btnRevelarFixar) {
+
+        btnRevelarFixar.addEventListener(
+            "click",
+            revelarMemoriaFixar
+        );
+
+    }
+
+
+    // =====================================================
+    // LEMBREI — FIXAR
+    //
+    // Registra o número atual como acerto.
+    //
+    // TREINO NORMAL:
+    // avança numericamente até o final da faixa escolhida.
+    //
+    // REVISÃO:
+    // avança somente pela fila de memórias erradas.
+    // =====================================================
+
+    if (btnLembreiFixar) {
+
+        btnLembreiFixar.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // EVITA REGISTRAR O MESMO NÚMERO DUAS VEZES
+                // =========================================
+
+                if (
+                    !fixarAcertosRodada.includes(
+                        fixarNumeroAtual
+                    )
+                ) {
+
+                    fixarAcertosRodada.push(
+                        fixarNumeroAtual
+                    );
+
+                }
+
+
+                // =========================================
+                // REMOVE DOS ERROS CASO JÁ EXISTA
+                //
+                // Na revisão isso significa que a memória
+                // foi recuperada com sucesso.
+                // =========================================
+
+                fixarErrosRodada =
+                    fixarErrosRodada.filter(
+                        numero =>
+                            numero !==
+                            fixarNumeroAtual
+                    );
+
+
+                // =========================================
+                // MODO REVISÃO
+                //
+                // Avança somente dentro da fila
+                // criada com as memórias erradas.
+                // =========================================
+
+                if (
+                    fixarModoRevisao
+                ) {
+
+                    // =====================================
+                    // AVANÇA A POSIÇÃO DA FILA
+                    // =====================================
+
+                    fixarIndiceRevisao++;
+
+
+                    // =====================================
+                    // AINDA EXISTE OUTRA MEMÓRIA PARA REVISAR
+                    // =====================================
+
+                    if (
+                        fixarIndiceRevisao <
+                        fixarFilaRevisao.length
+                    ) {
+
+                        carregarMemoriaFixar(
+                            fixarFilaRevisao[
+                            fixarIndiceRevisao
+                            ]
+                        );
+
+                    } else {
+
+                        // =================================
+                        // TERMINOU A FILA DE REVISÃO
+                        // =================================
+
+                        limparRevisaoErrosFixar();
+
+                        finalizarRodadaFixar();
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // MODO NORMAL
+                //
+                // Avança até o final da faixa escolhida.
+                //
+                // Exemplo:
+                // faixa 31–40 → termina no 40.
+                // faixa 91–100 → termina no 100.
+                // =========================================
+
+                if (
+                    fixarNumeroAtual <
+                    fixarFimAtual
+                ) {
+
+                    carregarMemoriaFixar(
+                        fixarNumeroAtual + 1
+                    );
+
+                } else {
+
+                    finalizarRodadaFixar();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // NÃO LEMBREI — FIXAR
+    //
+    // Registra o número atual como erro.
+    //
+    // TREINO NORMAL:
+    // avança numericamente até o final da faixa escolhida.
+    //
+    // REVISÃO:
+    // mantém a memória como erro
+    // e avança somente pela fila de revisão.
+    // =====================================================
+
+    if (btnNaoLembreiFixar) {
+
+        btnNaoLembreiFixar.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // EVITA REGISTRAR O MESMO NÚMERO DUAS VEZES
+                // =========================================
+
+                if (
+                    !fixarErrosRodada.includes(
+                        fixarNumeroAtual
+                    )
+                ) {
+
+                    fixarErrosRodada.push(
+                        fixarNumeroAtual
+                    );
+
+                }
+
+
+                // =========================================
+                // REMOVE DOS ACERTOS CASO JÁ EXISTA
+                //
+                // Na revisão isso significa que a memória
+                // ainda precisa de reforço.
+                // =========================================
+
+                fixarAcertosRodada =
+                    fixarAcertosRodada.filter(
+                        numero =>
+                            numero !==
+                            fixarNumeroAtual
+                    );
+
+
+                // =========================================
+                // MODO REVISÃO
+                //
+                // Avança somente dentro da fila
+                // criada com as memórias erradas.
+                // =========================================
+
+                if (
+                    fixarModoRevisao
+                ) {
+
+                    // =====================================
+                    // AVANÇA A POSIÇÃO DA FILA
+                    // =====================================
+
+                    fixarIndiceRevisao++;
+
+
+                    // =====================================
+                    // AINDA EXISTE OUTRA MEMÓRIA PARA REVISAR
+                    // =====================================
+
+                    if (
+                        fixarIndiceRevisao <
+                        fixarFilaRevisao.length
+                    ) {
+
+                        carregarMemoriaFixar(
+                            fixarFilaRevisao[
+                            fixarIndiceRevisao
+                            ]
+                        );
+
+                    } else {
+
+                        // =================================
+                        // TERMINOU A FILA DE REVISÃO
+                        // =================================
+
+                        limparRevisaoErrosFixar();
+
+                        finalizarRodadaFixar();
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // MODO NORMAL
+                //
+                // Avança até o final da faixa escolhida.
+                // =========================================
+
+                if (
+                    fixarNumeroAtual <
+                    fixarFimAtual
+                ) {
+
+                    carregarMemoriaFixar(
+                        fixarNumeroAtual + 1
+                    );
+
+                } else {
+
+                    finalizarRodadaFixar();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REVISAR ERROS — RESULTADO DO FIXAR
+    //
+    // Prepara a fila somente com as memórias
+    // marcadas como "Não lembrei"
+    // e abre a primeira memória da revisão.
+    // =====================================================
+
+    if (btnRevisarErrosFixar) {
+
+        btnRevisarErrosFixar.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // PREPARA A FILA DE REVISÃO
+                // =========================================
+
+                const revisaoPreparada =
+                    prepararRevisaoErrosFixar();
+
+
+                if (
+                    !revisaoPreparada
+                ) {
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // ESCONDE O RESULTADO
+                // =========================================
+
+                fixarResult.hidden =
+                    true;
+
+
+                // =========================================
+                // MOSTRA NOVAMENTE A ÁREA DE TREINO
+                // =========================================
+
+                fixarTrainingArea.hidden =
+                    false;
+
+
+                // =========================================
+                // FECHA O SELETOR DE FAIXAS
+                // =========================================
+
+                if (
+                    fixarRangeSelector
+                ) {
+
+                    fixarRangeSelector.hidden =
+                        true;
+
+                }
+
+
+                if (
+                    btnFaixaFixar
+                ) {
+
+                    btnFaixaFixar.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+
+                // =========================================
+                // ABRE A PRIMEIRA MEMÓRIA ERRADA
+                // =========================================
+
+                carregarMemoriaFixar(
+                    fixarFilaRevisao[
+                    fixarIndiceRevisao
+                    ]
+                );
+
+
+                // =========================================
+                // VOLTA PARA O TOPO
+                // =========================================
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR À CENTRAL — RESULTADO DO FIXAR
+    //
+    // Fecha o resultado,
+    // limpa os dados da rodada atual
+    // e retorna para a Central da Memória Numérica.
+    // =====================================================
+
+    if (btnFinalizarFixar) {
+
+        btnFinalizarFixar.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // LIMPA OS RESULTADOS DA RODADA
+                // =========================================
+
+                fixarNumeroAtual =
+                    fixarInicioAtual;
+
+
+                fixarErrosRodada =
+                    [];
+
+
+                fixarAcertosRodada =
+                    [];
+
+
+                // =========================================
+                // LIMPA A REVISÃO DOS ERROS
+                // =========================================
+
+                limparRevisaoErrosFixar();
+
+
+                // =========================================
+                // FECHA O SELETOR DE FAIXAS
+                // =========================================
+
+                if (
+                    fixarRangeSelector
+                ) {
+
+                    fixarRangeSelector.hidden =
+                        true;
+
+                }
+
+
+                if (
+                    btnFaixaFixar
+                ) {
+
+                    btnFaixaFixar.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+
+                // =========================================
+                // ESCONDE RESULTADO
+                // =========================================
+
+                fixarResult.hidden =
+                    true;
+
+
+                // =========================================
+                // PREPARA O TREINO PARA A PRÓXIMA ENTRADA
+                // =========================================
+
+                fixarTrainingArea.hidden =
+                    false;
+
+
+                fixarQuestion.hidden =
+                    false;
+
+
+                fixarAnswer.hidden =
+                    true;
+
+
+                fixarEvaluation.hidden =
+                    true;
+
+
+                btnRevelarFixar.hidden =
+                    false;
+
+
+                // =========================================
+                // RETORNA PARA A CENTRAL
+                // =========================================
+
+                voltarDoFixar();
+
+            }
         );
 
     }
@@ -3082,7 +3969,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     // =====================================================
     // REFAZER DESAFIO

@@ -1,5 +1,5 @@
 const CACHE_NAME =
-    "palacio-mental-v1.0.13";
+    "palacio-mental-v1.0.14";
 
 
 const ARQUIVOS_CACHE = [
@@ -28,13 +28,38 @@ self.addEventListener(
                     CACHE_NAME
                 )
                 .then(
-                    cache =>
-                        cache.addAll(
-                            ARQUIVOS_CACHE
-                        )
+                    async cache => {
+
+                        // =====================================
+                        // FORÇA A BUSCA DOS ARQUIVOS MAIS NOVOS
+                        // DURANTE A INSTALAÇÃO DO SERVICE WORKER
+                        // =====================================
+
+                        const requisicoes =
+                            ARQUIVOS_CACHE.map(
+                                arquivo =>
+                                    new Request(
+                                        arquivo,
+                                        {
+                                            cache:
+                                                "reload"
+                                        }
+                                    )
+                            );
+
+
+                        await cache.addAll(
+                            requisicoes
+                        );
+
+                    }
                 )
         );
 
+
+        // =================================================
+        // NÃO DEIXA O NOVO SERVICE WORKER ESPERANDO
+        // =================================================
 
         self.skipWaiting();
 
@@ -59,6 +84,10 @@ self.addEventListener(
                             nomes.map(
                                 nome => {
 
+                                    // =================================
+                                    // REMOVE CACHES DE VERSÕES ANTERIORES
+                                    // =================================
+
                                     if (
                                         nome !==
                                         CACHE_NAME
@@ -70,14 +99,18 @@ self.addEventListener(
 
                                     }
 
+
+                                    return Promise.resolve();
+
                                 }
                             )
                         )
                 )
+                .then(
+                    () =>
+                        self.clients.claim()
+                )
         );
-
-
-        self.clients.claim();
 
     }
 );
@@ -85,6 +118,14 @@ self.addEventListener(
 
 // =====================================================
 // FETCH
+//
+// ESTRATÉGIA:
+// NETWORK FIRST
+//
+// 1. Tenta buscar a versão mais recente na internet.
+// 2. Se encontrar, atualiza o cache.
+// 3. Se estiver offline ou a rede falhar,
+//    utiliza a última versão salva.
 // =====================================================
 
 self.addEventListener(
@@ -101,13 +142,93 @@ self.addEventListener(
         }
 
 
+        const url =
+            new URL(
+                event.request.url
+            );
+
+
+        // =================================================
+        // GERENCIA SOMENTE ARQUIVOS DO PRÓPRIO APP
+        // =================================================
+
+        if (
+            url.origin !==
+            self.location.origin
+        ) {
+
+            return;
+
+        }
+
+
         event.respondWith(
-            caches
-                .match(
-                    event.request
+
+            fetch(
+                new Request(
+                    event.request,
+                    {
+                        cache:
+                            "no-store"
+                    }
                 )
+            )
                 .then(
-                    respostaCache => {
+                    respostaRede => {
+
+                        // =========================================
+                        // SE A RESPOSTA FOR VÁLIDA,
+                        // GUARDA A VERSÃO MAIS NOVA NO CACHE
+                        // =========================================
+
+                        if (
+                            respostaRede &&
+                            respostaRede.ok
+                        ) {
+
+                            const copiaResposta =
+                                respostaRede.clone();
+
+
+                            caches
+                                .open(
+                                    CACHE_NAME
+                                )
+                                .then(
+                                    cache => {
+
+                                        cache.put(
+                                            event.request,
+                                            copiaResposta
+                                        );
+
+                                    }
+                                );
+
+                        }
+
+
+                        // =========================================
+                        // ENTREGA A VERSÃO DA REDE
+                        // =========================================
+
+                        return respostaRede;
+
+                    }
+                )
+                .catch(
+                    async () => {
+
+                        // =========================================
+                        // SEM INTERNET:
+                        // PROCURA A ÚLTIMA VERSÃO NO CACHE
+                        // =========================================
+
+                        const respostaCache =
+                            await caches.match(
+                                event.request
+                            );
+
 
                         if (
                             respostaCache
@@ -118,12 +239,37 @@ self.addEventListener(
                         }
 
 
-                        return fetch(
-                            event.request
-                        );
+                        // =========================================
+                        // PARA NAVEGAÇÃO, TENTA O INDEX
+                        // =========================================
+
+                        if (
+                            event.request.mode ===
+                            "navigate"
+                        ) {
+
+                            const paginaInicial =
+                                await caches.match(
+                                    "./index.html"
+                                );
+
+
+                            if (
+                                paginaInicial
+                            ) {
+
+                                return paginaInicial;
+
+                            }
+
+                        }
+
+
+                        return Response.error();
 
                     }
                 )
+
         );
 
     }
