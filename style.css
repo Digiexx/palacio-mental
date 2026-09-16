@@ -12161,6 +12161,7 @@ body [hidden][hidden] {
 
 }
 
+
 /* =========================================================
    MOBILE — POSIÇÃO DO CABEÇALHO MEMÓRIA NUMÉRICA
 ========================================================= */
@@ -12171,6 +12172,1293 @@ body [hidden][hidden] {
 
         margin-top:
             20px;
+    }
+
+}
+
+
+/* =========================================================
+   HOME — PALÁCIO MENTAL
+   NOVA IDENTIDADE VISUAL
+========================================================= */
+
+.home-palacio {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        calc(100vh - 120px);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    padding:
+        18px 16px 32px;
+
+    overflow:
+        hidden;
+
+    isolation:
+        isolate;
+}
+
+
+/* ATMOSFERA DE FUNDO */
+
+.home-palacio::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        420px;
+
+    height:
+        420px;
+
+    top:
+        70px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(127, 59, 255, 0.20) 0%,
+            rgba(82, 43, 210, 0.10) 34%,
+            rgba(22, 15, 66, 0.04) 58%,
+            transparent 72%);
+
+    filter:
+        blur(8px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+}
+
+
+.home-palacio::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        260px;
+
+    height:
+        260px;
+
+    top:
+        170px;
+
+    left:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(112, 59, 255, 0.10);
+
+    filter:
+        blur(70px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        -1;
+}
+
+
+/* =========================================================
+   IDENTIDADE
+========================================================= */
+
+.home-palacio-header {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        10px;
+}
+
+
+.home-palacio-brand-icon {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        8px;
+
+    border:
+        1px solid rgba(174, 113, 255, 0.28);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(146, 74, 255, 0.16),
+            rgba(71, 40, 137, 0.04));
+
+    box-shadow:
+        0 0 18px rgba(143, 73, 255, 0.18);
+}
+
+
+.home-palacio-brand-icon svg {
+
+    width:
+        21px;
+
+    height:
+        21px;
+
+    fill:
+        none;
+
+    stroke:
+        #bd8cff;
+
+    stroke-width:
+        1.35;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+    filter:
+        drop-shadow(0 0 5px rgba(169, 102, 255, 0.55));
+}
+
+
+.home-palacio-kicker {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        9px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        3.2px;
+
+    color:
+        rgba(209, 185, 255, 0.72);
+}
+
+
+.home-palacio-header h1 {
+
+    max-width:
+        320px;
+
+    margin:
+        0;
+
+    font-size:
+        clamp(22px, 7vw, 29px);
+
+    line-height:
+        1.04;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1px;
+
+    color:
+        #ffffff;
+}
+
+
+.home-palacio-header h1 span {
+
+    display:
+        block;
+
+    background:
+        linear-gradient(90deg,
+            #a96cff,
+            #e59bff,
+            #7f8cff);
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    text-shadow:
+        0 0 24px rgba(145, 76, 255, 0.18);
+}
+
+
+/* =========================================================
+   NÚCLEO VISUAL
+========================================================= */
+
+.home-palacio-core {
+
+    position:
+        relative;
+
+    width:
+        min(64vw, 250px);
+
+    aspect-ratio:
+        1 / 1;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex:
+        0 0 auto;
+
+    margin:
+        7px auto 4px;
+}
+
+
+.home-core-glow {
+
+    position:
+        absolute;
+
+    width:
+        82%;
+
+    height:
+        82%;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(178, 92, 255, 0.42) 0%,
+            rgba(109, 69, 255, 0.20) 38%,
+            rgba(58, 31, 147, 0.06) 62%,
+            transparent 76%);
+
+    filter:
+        blur(18px);
+
+    animation:
+        homeCorePulse 4.5s ease-in-out infinite;
+}
+
+
+.home-core-orbit {
+
+    position:
+        absolute;
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+}
+
+
+.home-core-orbit-outer {
+
+    width:
+        96%;
+
+    height:
+        96%;
+
+    border:
+        1px solid rgba(143, 91, 255, 0.16);
+
+    box-shadow:
+        0 0 24px rgba(101, 64, 255, 0.08);
+}
+
+
+.home-core-orbit-middle {
+
+    width:
+        84%;
+
+    height:
+        84%;
+
+    border:
+        1px solid rgba(189, 114, 255, 0.25);
+
+    border-top-color:
+        rgba(224, 168, 255, 0.85);
+
+    border-right-color:
+        rgba(116, 113, 255, 0.48);
+
+    box-shadow:
+        0 0 22px rgba(152, 77, 255, 0.16);
+
+    animation:
+        homeOrbitSpin 14s linear infinite;
+}
+
+
+.home-core-orbit-inner {
+
+    width:
+        73%;
+
+    height:
+        73%;
+
+    border:
+        1px solid rgba(123, 104, 255, 0.20);
+
+    border-left-color:
+        rgba(208, 133, 255, 0.70);
+
+    animation:
+        homeOrbitSpinReverse 10s linear infinite;
+}
+
+
+.home-core-image {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        68%;
+
+    height:
+        68%;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(189, 130, 255, 0.36);
+
+    border-radius:
+        50%;
+
+    background:
+        #090713;
+
+    box-shadow:
+        0 0 0 5px rgba(126, 68, 255, 0.035),
+        0 0 30px rgba(140, 68, 255, 0.34),
+        0 0 60px rgba(90, 55, 215, 0.18);
+
+    animation:
+        homeCoreFloat 5s ease-in-out infinite;
+}
+
+
+.home-core-image::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border-radius:
+        inherit;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+            transparent 28%,
+            rgba(12, 7, 29, 0.10) 60%,
+            rgba(5, 4, 13, 0.58) 100%);
+
+    pointer-events:
+        none;
+}
+
+
+.home-core-image img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    transform:
+        scale(1.18);
+
+    filter:
+        saturate(1.15) contrast(1.08);
+}
+
+
+/* =========================================================
+   MENSAGEM
+========================================================= */
+
+.home-palacio-message {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+    margin:
+        1px 0 12px;
+}
+
+
+.home-palacio-message p {
+
+    max-width:
+        300px;
+
+    margin:
+        0 auto;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.45;
+
+    font-weight:
+        500;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+}
+
+
+.home-palacio-message strong {
+
+    color:
+        #ffffff;
+
+    font-weight:
+        750;
+}
+
+
+/* =========================================================
+   PROGRESSO
+========================================================= */
+
+.home-palacio-progress {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        min(100%, 340px);
+
+    margin-bottom:
+        14px;
+}
+
+
+.home-palacio-progress-info {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        6px;
+}
+
+
+.home-palacio-progress-info span {
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+.home-palacio-progress-info strong {
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    color:
+        #c997ff;
+}
+
+
+/* =========================================================
+   BOTÃO INICIAR
+========================================================= */
+
+.home-palacio-start {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        min(100%, 340px);
+
+    min-height:
+        48px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    margin:
+        0 auto 19px;
+
+    border:
+        1px solid rgba(222, 178, 255, 0.26);
+
+    border-radius:
+        15px;
+
+    background:
+        linear-gradient(100deg,
+            #7a3cf0 0%,
+            #9a4dff 48%,
+            #7048f4 100%);
+
+    box-shadow:
+        0 10px 28px rgba(116, 56, 237, 0.27),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    color:
+        #ffffff;
+
+    overflow:
+        hidden;
+}
+
+
+.home-palacio-start::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -100%;
+
+    width:
+        70%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.16),
+            transparent);
+
+    transform:
+        skewX(-20deg);
+
+    animation:
+        homeButtonLight 5s ease-in-out infinite;
+}
+
+
+.home-palacio-start span {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        11px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.home-palacio-start svg {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+/* =========================================================
+   CAMINHOS PRINCIPAIS
+========================================================= */
+
+.home-palacio-paths {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        min(100%, 360px);
+
+    margin:
+        0 auto;
+}
+
+
+.home-palacio-paths-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        10px;
+
+    text-align:
+        center;
+
+    font-size:
+        8px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.7px;
+
+    color:
+        rgba(255, 255, 255, 0.34);
+}
+
+
+.home-palacio-paths-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        7px;
+}
+
+
+.home-path-card {
+
+    min-width:
+        0;
+
+    min-height:
+        105px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-start;
+
+    padding:
+        11px 4px 8px;
+
+    border:
+        1px solid rgba(156, 112, 255, 0.13);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(29, 23, 50, 0.82),
+            rgba(15, 12, 29, 0.90));
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        0 8px 20px rgba(0, 0, 0, 0.14);
+
+    color:
+        #ffffff;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.home-path-card:active {
+
+    transform:
+        scale(0.95);
+
+    border-color:
+        rgba(180, 119, 255, 0.42);
+
+    background:
+        linear-gradient(180deg,
+            rgba(45, 30, 76, 0.92),
+            rgba(20, 14, 39, 0.95));
+}
+
+
+.home-path-icon {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    flex:
+        0 0 38px;
+
+    margin-bottom:
+        8px;
+
+    border:
+        1px solid rgba(171, 111, 255, 0.17);
+
+    border-radius:
+        12px;
+
+    background:
+        radial-gradient(circle at 50% 30%,
+            rgba(150, 82, 255, 0.15),
+            rgba(73, 47, 138, 0.04));
+
+    box-shadow:
+        0 0 14px rgba(122, 71, 255, 0.08);
+}
+
+
+.home-path-icon svg {
+
+    width:
+        21px;
+
+    height:
+        21px;
+
+    fill:
+        none;
+
+    stroke:
+        #a976ff;
+
+    stroke-width:
+        1.45;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+    filter:
+        drop-shadow(0 0 4px rgba(157, 91, 255, 0.30));
+}
+
+
+.home-path-card strong {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin:
+        0;
+
+    font-size:
+        7px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.15px;
+
+    text-align:
+        center;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+}
+
+
+.home-path-card strong span {
+
+    display:
+        block;
+
+    color:
+        #b886ff;
+}
+
+
+.home-path-card small {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    margin-top:
+        4px;
+
+    font-size:
+        6.5px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        600;
+
+    text-align:
+        center;
+
+    color:
+        rgba(255, 255, 255, 0.34);
+}
+
+
+.home-path-card small span {
+
+    color:
+        rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   RODAPÉ DA HOME
+========================================================= */
+
+.home-palacio-footer {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    margin-top:
+        18px;
+
+    padding-bottom:
+        5px;
+
+    font-size:
+        7px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        rgba(255, 255, 255, 0.18);
+}
+
+
+.home-palacio-footer span {
+
+    margin:
+        0 4px;
+
+    color:
+        rgba(164, 99, 255, 0.42);
+}
+
+
+/* =========================================================
+   ANIMAÇÕES — HOME
+========================================================= */
+
+@keyframes homeCorePulse {
+
+    0%,
+    100% {
+
+        opacity:
+            0.68;
+
+        transform:
+            scale(0.96);
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.06);
+    }
+
+}
+
+
+@keyframes homeCoreFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-4px);
+    }
+
+}
+
+
+@keyframes homeOrbitSpin {
+
+    from {
+
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+@keyframes homeOrbitSpinReverse {
+
+    from {
+
+        transform:
+            rotate(360deg);
+    }
+
+    to {
+
+        transform:
+            rotate(0deg);
+    }
+
+}
+
+
+@keyframes homeButtonLight {
+
+    0%,
+    65% {
+
+        left:
+            -100%;
+    }
+
+    82% {
+
+        left:
+            135%;
+    }
+
+    100% {
+
+        left:
+            135%;
+    }
+
+}
+
+
+/* =========================================================
+   HOME — CELULARES MENORES
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .home-palacio {
+
+        padding-left:
+            11px;
+
+        padding-right:
+            11px;
+    }
+
+
+    .home-palacio-core {
+
+        width:
+            min(62vw, 225px);
+    }
+
+
+    .home-palacio-header h1 {
+
+        font-size:
+            23px;
+    }
+
+
+    .home-palacio-paths-grid {
+
+        gap:
+            5px;
+    }
+
+
+    .home-path-card {
+
+        min-height:
+            101px;
+
+        padding:
+            10px 2px 7px;
+
+        border-radius:
+            12px;
+    }
+
+
+    .home-path-icon {
+
+        width:
+            35px;
+
+        height:
+            35px;
+
+        flex-basis:
+            35px;
+    }
+
+
+    .home-path-icon svg {
+
+        width:
+            19px;
+
+        height:
+            19px;
+    }
+
+
+    .home-path-card strong {
+
+        font-size:
+            6.4px;
+    }
+
+
+    .home-path-card small {
+
+        font-size:
+            6px;
+    }
+
+}
+
+
+/* =========================================================
+   HOME — REDUZIR MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-core-glow,
+    .home-core-orbit-middle,
+    .home-core-orbit-inner,
+    .home-core-image,
+    .home-palacio-start::before {
+
+        animation:
+            none;
     }
 
 }

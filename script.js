@@ -647,13 +647,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function abrirMemoriaNumerica() {
 
-        heroHome.hidden =
-            true;
-
-        modulosHome.hidden =
-            true;
-
-
         telaAprenderMemoria.hidden =
             true;
 
@@ -676,7 +669,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
     // =====================================================
     // ABRIR FIXAR
     // =====================================================
