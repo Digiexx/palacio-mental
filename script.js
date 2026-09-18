@@ -545,21 +545,9 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    const heroHome =
+    const homePalacio =
         document.querySelector(
-            ".hero-card"
-        );
-
-
-    const modulosHome =
-        document.querySelector(
-            ".modules-section"
-        );
-
-
-    const resumoHome =
-        document.querySelector(
-            ".summary-section"
+            ".home-palacio"
         );
 
 
@@ -640,12 +628,14 @@ document.addEventListener("DOMContentLoaded", () => {
             ".learning-range-option"
         );
 
-
     // =====================================================
     // ABRIR MEMÓRIA NUMÉRICA
     // =====================================================
 
     function abrirMemoriaNumerica() {
+
+        homePalacio.hidden =
+            true;
 
         telaAprenderMemoria.hidden =
             true;
@@ -2700,13 +2690,7 @@ document.addEventListener("DOMContentLoaded", () => {
             true;
 
 
-        heroHome.hidden =
-            false;
-
-        modulosHome.hidden =
-            false;
-
-        resumoHome.hidden =
+        homePalacio.hidden =
             false;
 
 
@@ -2716,6 +2700,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+
 
     // =====================================================
     // EVENTOS — MEMÓRIA NUMÉRICA
@@ -2731,6 +2716,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    if (btnVoltarHome) {
+
+        btnVoltarHome.addEventListener(
+            "click",
+            voltarParaHome
+        );
+
+    }
+
+
     if (btnIniciarAprendizado) {
 
         btnIniciarAprendizado.addEventListener(
@@ -2739,7 +2734,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     // =====================================================
     // EVENTOS — APRENDER
