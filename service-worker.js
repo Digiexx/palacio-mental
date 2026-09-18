@@ -1,5 +1,5 @@
 const CACHE_NAME =
-    "palacio-mental-v1.0.14";
+    "palacio-mental-cache";
 
 
 const ARQUIVOS_CACHE = [

@@ -2205,7 +2205,7 @@
 
             </section>
 
-            
+
             <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->
@@ -2930,7 +2930,11 @@
 
                     navigator.serviceWorker
                         .register(
-                            "./service-worker.js"
+                            "./service-worker.js",
+                            {
+                                updateViaCache:
+                                    "none"
+                            }
                         )
                         .then(
                             registration => {
@@ -2939,6 +2943,25 @@
                                     "Service Worker registrado:",
                                     registration.scope
                                 );
+
+
+                                // =====================================
+                                // VERIFICA SE EXISTE UMA NOVA VERSÃO
+                                // DO SERVICE WORKER
+                                // =====================================
+
+                                registration
+                                    .update()
+                                    .catch(
+                                        error => {
+
+                                            console.warn(
+                                                "Não foi possível verificar atualização do Service Worker:",
+                                                error
+                                            );
+
+                                        }
+                                    );
 
                             }
                         )
