@@ -385,10 +385,34 @@
 
                         </button>
 
+
+                        <!-- VELOCIDADE -->
+
+                        <button class="memory-training-card" id="btnVelocidadeMemoria" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M13 2 4.5 13H11l-1 9 8.5-11H12l1-9Z" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Velocidade</strong>
+                            </span>
+
+                            <small>
+                                Responda mais rápido
+                            </small>
+
+                        </button>
+
                     </div>
 
                 </section>
-
 
                 <!-- =================================================
                      FAIXAS DE DOMÍNIO
@@ -1621,6 +1645,567 @@
                 </div>
 
             </section>
+
+
+            <!-- =================================================
+                 TELA — VELOCIDADE MEMÓRIA NUMÉRICA
+            ================================================== -->
+
+            <section class="app-screen screen-velocidade" id="telaVelocidadeMemoria" hidden>
+
+                <div class="velocidade-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="velocidade-header">
+
+                        <button class="back-button" id="btnVoltarVelocidade" type="button"
+                            aria-label="Voltar para a Central da Memória Numérica">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Velocidade
+                            </h2>
+
+                            <p>
+                                Treine sua memória para encontrar
+                                cada associação cada vez mais rápido.
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         CONTEÚDO INICIAL
+                    ================================================== -->
+
+                    <div class="velocidade-intro">
+
+                        <span class="module-kicker">
+                            TREINO DE VELOCIDADE
+                        </span>
+
+                        <h3>
+                            Pense rápido.
+                        </h3>
+
+                        <p>
+                            Escolha uma faixa, defina o tempo
+                            e teste a velocidade da sua memória.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CONFIGURAÇÃO DO TREINO
+                    ================================================== -->
+
+                    <div class="velocidade-config" id="velocidadeConfig">
+
+
+                        <!-- =================================================
+                             ESCOLHA DA FAIXA
+                        ================================================== -->
+
+                        <div class="velocidade-config-group">
+
+                            <div class="velocidade-config-header">
+
+                                <span class="module-kicker">
+                                    FAIXA
+                                </span>
+
+                                <strong>
+                                    Quais números deseja treinar?
+                                </strong>
+
+                            </div>
+
+
+                            <div class="velocidade-range-grid">
+
+                                <button class="velocidade-range-option is-active" type="button"
+                                    data-velocidade-inicio="1" data-velocidade-fim="10">
+                                    01–10
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="11"
+                                    data-velocidade-fim="20">
+                                    11–20
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="21"
+                                    data-velocidade-fim="30">
+                                    21–30
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="31"
+                                    data-velocidade-fim="40">
+                                    31–40
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="41"
+                                    data-velocidade-fim="50">
+                                    41–50
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="51"
+                                    data-velocidade-fim="60">
+                                    51–60
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="61"
+                                    data-velocidade-fim="70">
+                                    61–70
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="71"
+                                    data-velocidade-fim="80">
+                                    71–80
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="81"
+                                    data-velocidade-fim="90">
+                                    81–90
+                                </button>
+
+                                <button class="velocidade-range-option" type="button" data-velocidade-inicio="91"
+                                    data-velocidade-fim="100">
+                                    91–100
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             ESCOLHA DO TEMPO
+                        ================================================== -->
+
+                        <div class="velocidade-config-group">
+
+                            <div class="velocidade-config-header">
+
+                                <span class="module-kicker">
+                                    TEMPO DE RESPOSTA
+                                </span>
+
+                                <strong>
+                                    Quanto tempo para cada número?
+                                </strong>
+
+                            </div>
+
+
+                            <div class="velocidade-time-grid">
+
+                                <button class="velocidade-time-option is-active" type="button"
+                                    data-velocidade-tempo="10">
+                                    <strong>
+                                        10s
+                                    </strong>
+                                    <span>
+                                        Iniciante
+                                    </span>
+                                </button>
+
+
+                                <button class="velocidade-time-option" type="button" data-velocidade-tempo="7">
+                                    <strong>
+                                        7s
+                                    </strong>
+                                    <span>
+                                        Normal
+                                    </span>
+                                </button>
+
+
+                                <button class="velocidade-time-option" type="button" data-velocidade-tempo="5">
+                                    <strong>
+                                        5s
+                                    </strong>
+                                    <span>
+                                        Rápido
+                                    </span>
+                                </button>
+
+
+                                <button class="velocidade-time-option" type="button" data-velocidade-tempo="3">
+                                    <strong>
+                                        3s
+                                    </strong>
+                                    <span>
+                                        Extremo
+                                    </span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             INICIAR
+                        ================================================== -->
+
+                        <button class="primary-button velocidade-start-button" id="btnIniciarVelocidade" type="button">
+
+                            <span>
+                                Iniciar treino
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ÁREA DO TREINO — VELOCIDADE
+                    ================================================== -->
+
+                    <div class="velocidade-training-area" id="velocidadeTrainingArea" hidden>
+
+
+                        <!-- =================================================
+                             TOPO DO TREINO
+                        ================================================== -->
+
+                        <div class="velocidade-training-top">
+
+                            <span class="velocidade-progress" id="velocidadeProgress">
+                                01 / 10
+                            </span>
+
+                            <span class="velocidade-mode">
+                                VELOCIDADE
+                            </span>
+
+                            <span class="velocidade-training-time" id="velocidadeTrainingTime">
+                                10s
+                            </span>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CRONÔMETRO
+                        ================================================== -->
+
+                        <div class="velocidade-timer">
+
+                            <span>
+                                TEMPO
+                            </span>
+
+                            <strong id="velocidadeTimer">
+                                10
+                            </strong>
+
+
+                            <!-- =================================================
+                                 TEMPO ESGOTADO
+                            ================================================== -->
+
+                            <div class="velocidade-timeout-message" id="velocidadeTimeoutMessage" hidden>
+
+                                <span>
+                                    TEMPO ESGOTADO
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             NÚMERO
+                        ================================================== -->
+
+                        <div class="velocidade-question">
+
+                            <span class="module-kicker">
+                                QUAL É A ASSOCIAÇÃO?
+                            </span>
+
+
+                            <!-- =================================================
+                                 NÚMERO DA ASSOCIAÇÃO
+                            ================================================== -->
+
+                            <strong class="velocidade-number" id="velocidadeNumber">
+                                01
+                            </strong>
+
+
+                            <!-- =================================================
+                                 IMAGEM DA ASSOCIAÇÃO
+                            ================================================== -->
+
+                            <div class="velocidade-answer-image-area" id="velocidadeAnswerImageArea" hidden>
+
+                                <img class="velocidade-answer-image" id="velocidadeAnswerImage" src="" alt="">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             RESPOSTA
+                        ================================================== -->
+
+                        <div class="velocidade-answer" id="velocidadeAnswer" hidden>
+
+                            <span>
+                                ASSOCIAÇÃO
+                            </span>
+
+                            <strong id="velocidadeAnswerWord">
+                                TEIA
+                            </strong>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             REVELAR RESPOSTA
+                        ================================================== -->
+
+                        <button class="primary-button velocidade-reveal-button" id="btnRevelarVelocidade" type="button">
+
+                            <span>
+                                Mostrar resposta
+                            </span>
+
+                        </button>
+
+
+                        <!-- =================================================
+                             AVALIAÇÃO
+                        ================================================== -->
+
+                        <div class="velocidade-evaluation" id="velocidadeEvaluation" hidden>
+
+                            <span class="module-kicker">
+                                VOCÊ LEMBROU?
+                            </span>
+
+
+                            <div class="velocidade-evaluation-actions">
+
+                                <button class="secondary-button" id="btnNaoLembreiVelocidade" type="button">
+
+                                    <span>
+                                        Não lembrei
+                                    </span>
+
+                                </button>
+
+
+                                <button class="primary-button" id="btnLembreiVelocidade" type="button">
+
+                                    <span>
+                                        Lembrei
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RESULTADO — VELOCIDADE
+                    ================================================== -->
+
+                    <div class="velocidade-result" id="velocidadeResult" hidden>
+
+
+                        <!-- =================================================
+                             CONCLUSÃO
+                        ================================================== -->
+
+                        <div class="velocidade-result-header">
+
+                            <div class="velocidade-result-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M20 6 9 17l-5-5" />
+
+                                </svg>
+
+                            </div>
+
+
+                            <span class="module-kicker">
+                                TREINO CONCLUÍDO
+                            </span>
+
+
+                            <h3>
+                                Excelente treino!
+                            </h3>
+
+
+                            <p>
+                                Veja como sua memória respondeu
+                                nesta sessão.
+                            </p>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             APROVEITAMENTO
+                        ================================================== -->
+
+                        <div class="velocidade-result-score">
+
+                            <span>
+                                APROVEITAMENTO
+                            </span>
+
+                            <strong id="velocidadeResultPercent">
+                                70%
+                            </strong>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             ACERTOS E ERROS
+                        ================================================== -->
+
+                        <div class="velocidade-result-stats">
+
+                            <div class="velocidade-result-stat">
+
+                                <span>
+                                    ACERTOS
+                                </span>
+
+                                <strong id="velocidadeResultAcertos">
+                                    7
+                                </strong>
+
+                            </div>
+
+
+                            <div class="velocidade-result-stat">
+
+                                <span>
+                                    ERROS
+                                </span>
+
+                                <strong id="velocidadeResultErros">
+                                    3
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             PRECISA REFORÇAR
+                        ================================================== -->
+
+                        <div class="velocidade-result-review">
+
+                            <div class="velocidade-result-review-header">
+
+                                <span class="module-kicker">
+                                    PRECISA REFORÇAR
+                                </span>
+
+                                <p>
+                                    Associações que não vieram
+                                    à mente nesta rodada.
+                                </p>
+
+                            </div>
+
+
+                            <div class="velocidade-result-errors" id="velocidadeResultErrors">
+
+                                <!--
+                                    Os números errados serão
+                                    gerados pelo JavaScript.
+                                -->
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             AÇÕES
+                        ================================================== -->
+
+                        <div class="velocidade-result-actions">
+
+                            <button class="primary-button" id="btnRepetirVelocidade" type="button">
+
+                                <span>
+                                    Treinar novamente
+                                </span>
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M20 11a8.1 8.1 0 1 0-2.3 5.7" />
+                                    <path d="M20 4v7h-7" />
+                                </svg>
+
+                            </button>
+
+
+                            <button class="secondary-button" id="btnCentralVelocidade" type="button">
+
+                                <span>
+                                    Voltar à Central
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+            
             <!-- =================================================
                  TELA — APRENDER MEMÓRIA NUMÉRICA
             ================================================== -->

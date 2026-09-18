@@ -11769,6 +11769,2372 @@ body [hidden][hidden] {
 }
 
 /* =========================================================
+   VELOCIDADE — MEMÓRIA NUMÉRICA
+========================================================= */
+
+.screen-velocidade {
+
+    min-height:
+        100vh;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(143, 70, 255, 0.2),
+            transparent 34%),
+        radial-gradient(circle at 85% 38%,
+            rgba(88, 64, 255, 0.08),
+            transparent 28%),
+        linear-gradient(180deg,
+            #12091f 0%,
+            #08070d 100%);
+}
+
+
+.velocidade-container {
+
+    width:
+        100%;
+
+    max-width:
+        520px;
+
+    margin:
+        0 auto;
+
+    padding:
+        26px 20px 50px;
+}
+
+
+/* =========================================================
+   CABEÇALHO — VELOCIDADE
+========================================================= */
+
+.velocidade-header {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        14px;
+
+    margin-bottom:
+        24px;
+}
+
+
+.velocidade-header>div {
+
+    flex:
+        1;
+}
+
+
+.velocidade-header .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        #a96dff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.8px;
+}
+
+
+.velocidade-header h2 {
+
+    margin:
+        0 0 7px;
+
+    font-size:
+        clamp(28px, 6vw, 36px);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -1.1px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 24px rgba(153, 83, 255, 0.17);
+}
+
+
+.velocidade-header p {
+
+    max-width:
+        360px;
+
+    margin:
+        0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.56);
+}
+
+
+/* =========================================================
+   INTRODUÇÃO — VELOCIDADE
+========================================================= */
+
+.velocidade-intro {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    margin-bottom:
+        20px;
+
+    padding:
+        18px 19px;
+
+    border:
+        1px solid rgba(164, 99, 255, 0.16);
+
+    border-radius:
+        19px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(41, 20, 68, 0.72),
+            rgba(18, 11, 31, 0.82));
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+
+.velocidade-intro::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    top:
+        -90px;
+
+    right:
+        -55px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(153, 77, 255, 0.18),
+            transparent 70%);
+
+    pointer-events:
+        none;
+}
+
+
+.velocidade-intro .module-kicker {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.6px;
+
+    color:
+        #b981ff;
+}
+
+
+.velocidade-intro h3 {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin:
+        0 0 6px;
+
+    font-size:
+        21px;
+
+    line-height:
+        1.1;
+
+    letter-spacing:
+        -0.5px;
+
+    color:
+        #ffffff;
+}
+
+
+.velocidade-intro p {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    max-width:
+        390px;
+
+    margin:
+        0;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.54);
+}
+
+
+/* =========================================================
+   CONFIGURAÇÃO — VELOCIDADE
+========================================================= */
+
+.velocidade-config {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        18px;
+}
+
+
+.velocidade-config-group {
+
+    padding:
+        17px;
+
+    border:
+        1px solid rgba(167, 102, 255, 0.17);
+
+    border-radius:
+        19px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(32, 17, 52, 0.72),
+            rgba(13, 9, 23, 0.84));
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+
+.velocidade-config-header {
+
+    margin-bottom:
+        13px;
+}
+
+
+.velocidade-config-header .module-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.velocidade-config-header strong {
+
+    display:
+        block;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.4;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   FAIXAS — VELOCIDADE
+========================================================= */
+
+.velocidade-range-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap:
+        7px;
+}
+
+
+.velocidade-range-option {
+
+    appearance:
+        none;
+
+    min-width:
+        0;
+
+    min-height:
+        43px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        7px 4px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-family:
+        inherit;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.velocidade-range-option.is-active {
+
+    border-color:
+        rgba(190, 130, 255, 0.48);
+
+    background:
+        linear-gradient(135deg,
+            rgba(147, 75, 255, 0.34),
+            rgba(101, 49, 190, 0.2));
+
+    color:
+        #e5ceff;
+
+    box-shadow:
+        0 0 18px rgba(143, 69, 255, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+.velocidade-range-option:active {
+
+    transform:
+        scale(0.96);
+}
+
+
+/* =========================================================
+   TEMPOS — VELOCIDADE
+========================================================= */
+
+.velocidade-time-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        8px;
+}
+
+
+.velocidade-time-option {
+
+    appearance:
+        none;
+
+    min-width:
+        0;
+
+    min-height:
+        70px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        5px;
+
+    padding:
+        9px 4px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-family:
+        inherit;
+
+    color:
+        rgba(255, 255, 255, 0.64);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+.velocidade-time-option strong {
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+
+    font-weight:
+        850;
+
+    color:
+        #ffffff;
+}
+
+
+.velocidade-time-option span {
+
+    font-size:
+        8px;
+
+    line-height:
+        1;
+
+    font-weight:
+        700;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+.velocidade-time-option.is-active {
+
+    border-color:
+        rgba(190, 130, 255, 0.5);
+
+    background:
+        linear-gradient(145deg,
+            rgba(147, 75, 255, 0.31),
+            rgba(101, 49, 190, 0.17));
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 0 20px rgba(143, 69, 255, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+.velocidade-time-option.is-active strong {
+
+    color:
+        #d8b5ff;
+
+    text-shadow:
+        0 0 18px rgba(171, 94, 255, 0.4);
+}
+
+
+.velocidade-time-option.is-active span {
+
+    color:
+        rgba(230, 207, 255, 0.7);
+}
+
+
+.velocidade-time-option:active {
+
+    transform:
+        scale(0.96);
+}
+
+
+/* =========================================================
+   BOTÃO INICIAR — VELOCIDADE
+========================================================= */
+
+.velocidade-start-button {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    margin-top:
+        2px;
+
+    border-radius:
+        16px;
+}
+
+
+/* =========================================================
+   ÁREA DO TREINO — VELOCIDADE
+========================================================= */
+
+.velocidade-training-area {
+
+    width:
+        100%;
+}
+
+
+.velocidade-training-top {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        12px;
+
+    padding:
+        11px 12px;
+
+    border:
+        1px solid rgba(159, 94, 255, 0.2);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+}
+
+
+.velocidade-progress {
+
+    font-size:
+        11px;
+
+    font-weight:
+        750;
+
+    color:
+        rgba(255, 255, 255, 0.8);
+}
+
+
+.velocidade-mode {
+
+    justify-self:
+        center;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.8px;
+
+    color:
+        #ba83ff;
+}
+
+
+.velocidade-training-time {
+
+    min-width:
+        42px;
+
+    padding:
+        6px 8px;
+
+    border:
+        1px solid rgba(167, 105, 255, 0.23);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(135, 69, 245, 0.1);
+
+    font-size:
+        10px;
+
+    font-weight:
+        850;
+
+    text-align:
+        center;
+
+    color:
+        #cb9fff;
+}
+
+
+/* =========================================================
+   CRONÔMETRO — VELOCIDADE
+========================================================= */
+
+.velocidade-timer {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    width:
+        max-content;
+
+    min-width:
+        78px;
+
+    margin:
+        0 auto 12px;
+
+    padding:
+        7px 12px;
+
+    border:
+        1px solid rgba(168, 103, 255, 0.17);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.03);
+}
+
+
+.velocidade-timer span {
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.2px;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+.velocidade-timer strong {
+
+    min-width:
+        20px;
+
+    font-size:
+        16px;
+
+    line-height:
+        1;
+
+    color:
+        #c695ff;
+
+    text-align:
+        center;
+
+    text-shadow:
+        0 0 16px rgba(163, 86, 255, 0.38);
+}
+
+
+/* =========================================================
+   TEMPO ESGOTADO — VELOCIDADE
+========================================================= */
+
+.velocidade-timeout-message {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-left:
+        3px;
+
+    padding:
+        4px 7px;
+
+    border:
+        1px solid rgba(201, 139, 255, 0.28);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(139, 71, 255, 0.10);
+
+    box-shadow:
+        0 0 16px rgba(139, 71, 255, 0.10);
+
+    animation:
+        velocidadeTimeoutEntrada 0.25s ease;
+}
+
+
+.velocidade-timeout-message[hidden] {
+
+    display:
+        none;
+
+}
+
+
+.velocidade-timeout-message span {
+
+    font-size:
+        7px;
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        1px;
+
+    color:
+        #d6b2ff;
+
+    white-space:
+        nowrap;
+
+}
+
+
+@keyframes velocidadeTimeoutEntrada {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(0.88);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   NÚMERO — VELOCIDADE
+========================================================= */
+
+.velocidade-question {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        310px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        15px;
+
+    padding:
+        30px 20px;
+
+    border:
+        1px solid rgba(170, 101, 255, 0.24);
+
+    border-radius:
+        28px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(40, 18, 66, 0.94),
+            rgba(12, 9, 20, 0.97));
+
+    box-shadow:
+        0 25px 64px rgba(0, 0, 0, 0.38),
+        0 0 34px rgba(116, 52, 213, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+    text-align:
+        center;
+}
+
+
+.velocidade-question::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        250px;
+
+    height:
+        250px;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(151, 78, 255, 0.22),
+            transparent 68%);
+
+    filter:
+        blur(4px);
+
+    pointer-events:
+        none;
+}
+
+
+.velocidade-question .module-kicker {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-bottom:
+        23px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        2px;
+
+    color:
+        rgba(210, 177, 255, 0.7);
+}
+
+
+.velocidade-number {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        block;
+
+    font-size:
+        clamp(96px, 25vw, 138px);
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -7px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 12px rgba(168, 90, 255, 0.55),
+        0 0 35px rgba(132, 61, 255, 0.38),
+        0 0 72px rgba(117, 47, 224, 0.14);
+}
+
+
+/* =========================================================
+   RESPOSTA — VELOCIDADE
+========================================================= */
+
+.velocidade-answer {
+
+    margin-bottom:
+        12px;
+
+    padding:
+        17px;
+
+    border:
+        1px solid rgba(171, 103, 255, 0.2);
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(119, 52, 219, 0.14),
+            rgba(255, 255, 255, 0.025));
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   IMAGEM DA ASSOCIAÇÃO — VELOCIDADE
+========================================================= */
+
+.velocidade-answer-image-area {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
+
+    width:
+        100%;
+
+    height:
+        300px;
+
+    margin:
+        12px auto 0;
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(8, 5, 15, 0.18);
+
+    animation:
+        velocidadeImagemEntrada 0.3s ease;
+}
+
+
+.velocidade-answer-image-area[hidden] {
+
+    display:
+        none;
+
+}
+
+
+.velocidade-answer-image {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+    object-position:
+        center;
+
+}
+
+
+@keyframes velocidadeImagemEntrada {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+.velocidade-answer span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.velocidade-answer strong {
+
+    display:
+        block;
+
+    font-size:
+        24px;
+
+    line-height:
+        1.1;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 20px rgba(164, 88, 255, 0.3);
+}
+
+
+/* =========================================================
+   BOTÕES DO TREINO — VELOCIDADE
+========================================================= */
+
+.velocidade-reveal-button {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    border-radius:
+        16px;
+}
+
+
+.velocidade-evaluation {
+
+    margin-top:
+        15px;
+
+    padding:
+        17px;
+
+    border:
+        1px solid rgba(166, 100, 255, 0.15);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.velocidade-evaluation>.module-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    text-align:
+        center;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.velocidade-evaluation-actions {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        9px;
+
+    width:
+        100%;
+}
+
+
+.velocidade-evaluation-actions button {
+
+    width:
+        100%;
+
+    height:
+        54px;
+
+    min-height:
+        54px;
+
+    padding:
+        0 16px;
+
+    margin:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    box-sizing:
+        border-box;
+
+    border-radius:
+        14px;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
+
+    text-align:
+        center;
+}
+
+
+/* =====================================================
+   NÃO LEMBREI — VELOCIDADE
+===================================================== */
+
+#btnNaoLembreiVelocidade {
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid rgba(160, 105, 255, 0.28);
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    box-shadow:
+        inset 0 0 18px rgba(120, 65, 220, 0.04);
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+#btnNaoLembreiVelocidade:hover {
+
+    background:
+        rgba(139, 76, 255, 0.10);
+
+    border-color:
+        rgba(166, 111, 255, 0.48);
+
+}
+
+
+#btnNaoLembreiVelocidade:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================================================
+   RESULTADO — VELOCIDADE
+========================================================= */
+
+.velocidade-result {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        16px;
+
+    width:
+        100%;
+
+    animation:
+        velocidadeResultEntrada 0.35s ease;
+}
+
+
+.velocidade-result[hidden] {
+
+    display:
+        none;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DO RESULTADO
+========================================================= */
+
+.velocidade-result-header {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        28px 20px 24px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid rgba(153, 92, 255, 0.20);
+
+    border-radius:
+        24px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(144, 70, 255, 0.18),
+            rgba(18, 10, 31, 0.88) 58%,
+            rgba(8, 6, 16, 0.96) 100%
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        0 18px 40px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.velocidade-result-icon {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        14px;
+
+    border:
+        1px solid rgba(173, 113, 255, 0.35);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(151, 72, 255, 0.22),
+            rgba(92, 40, 176, 0.08)
+        );
+
+    box-shadow:
+        0 0 28px rgba(139, 70, 255, 0.18);
+
+}
+
+
+.velocidade-result-icon svg {
+
+    width:
+        27px;
+
+    height:
+        27px;
+
+    fill:
+        none;
+
+    stroke:
+        #b77cff;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+}
+
+
+.velocidade-result-header h3 {
+
+    margin:
+        7px 0 6px;
+
+    font-size:
+        24px;
+
+    font-weight:
+        800;
+
+    color:
+        #ffffff;
+
+}
+
+
+.velocidade-result-header p {
+
+    max-width:
+        310px;
+
+    margin:
+        0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.6;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+}
+
+
+/* =========================================================
+   APROVEITAMENTO
+========================================================= */
+
+.velocidade-result-score {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        180px;
+
+    padding:
+        22px;
+
+    border:
+        1px solid rgba(159, 91, 255, 0.26);
+
+    border-radius:
+        24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(52, 20, 91, 0.72),
+            rgba(15, 8, 27, 0.94)
+        );
+
+}
+
+
+.velocidade-result-score::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        170px;
+
+    height:
+        170px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(145, 73, 255, 0.12);
+
+    filter:
+        blur(34px);
+
+    pointer-events:
+        none;
+
+}
+
+
+.velocidade-result-score span {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin-bottom:
+        4px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #b77cff;
+
+}
+
+
+.velocidade-result-score strong {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    font-size:
+        clamp(66px, 18vw, 92px);
+
+    line-height:
+        1;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -4px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 24px rgba(154, 82, 255, 0.58),
+        0 0 55px rgba(122, 57, 235, 0.22);
+
+}
+
+
+/* =========================================================
+   ACERTOS E ERROS
+========================================================= */
+
+.velocidade-result-stats {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        10px;
+
+}
+
+
+.velocidade-result-stat {
+
+    min-height:
+        105px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        16px;
+
+    border:
+        1px solid rgba(158, 96, 255, 0.18);
+
+    border-radius:
+        19px;
+
+    background:
+        rgba(17, 10, 29, 0.78);
+
+}
+
+
+.velocidade-result-stat span {
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.6px;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+}
+
+
+.velocidade-result-stat strong {
+
+    font-size:
+        34px;
+
+    line-height:
+        1;
+
+    font-weight:
+        850;
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =========================================================
+   PRECISA REFORÇAR
+========================================================= */
+
+.velocidade-result-review {
+
+    padding:
+        18px;
+
+    border:
+        1px solid rgba(158, 96, 255, 0.18);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(15, 9, 25, 0.82);
+
+}
+
+
+.velocidade-result-review-header {
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.velocidade-result-review-header p {
+
+    margin:
+        5px 0 0;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+}
+
+
+.velocidade-result-errors {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        8px;
+
+}
+
+
+.velocidade-result-error {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    min-height:
+        58px;
+
+    padding:
+        9px 11px;
+
+    border:
+        1px solid rgba(168, 103, 255, 0.18);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+}
+
+
+.velocidade-result-error-number {
+
+    min-width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(143, 72, 255, 0.12);
+
+    font-size:
+        15px;
+
+    font-weight:
+        850;
+
+    color:
+        #c18cff;
+
+}
+
+
+.velocidade-result-error-word {
+
+    min-width:
+        0;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    font-size:
+        11px;
+
+    font-weight:
+        750;
+
+    color:
+        rgba(255, 255, 255, 0.86);
+
+}
+
+
+/* =========================================================
+   AÇÕES DO RESULTADO
+========================================================= */
+
+.velocidade-result-actions {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        9px;
+
+    padding-bottom:
+        10px;
+
+}
+
+
+.velocidade-result-actions button {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    margin:
+        0;
+
+    border-radius:
+        15px;
+
+    box-sizing:
+        border-box;
+
+}
+
+
+.velocidade-result-actions svg {
+
+    width:
+        18px;
+
+    height:
+        18px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+}
+
+
+#btnCentralVelocidade {
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid rgba(160, 105, 255, 0.24);
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+}
+
+
+/* =========================================================
+   ANIMAÇÃO — RESULTADO
+========================================================= */
+
+@keyframes velocidadeResultEntrada {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   MOBILE — VELOCIDADE
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .velocidade-container {
+
+        max-width:
+            460px;
+
+        padding:
+            18px 16px 36px;
+
+    }
+
+
+    .velocidade-header {
+
+        gap:
+            12px;
+
+        margin-top:
+            6px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .velocidade-header h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .velocidade-header p {
+
+        max-width:
+            310px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .velocidade-intro {
+
+        padding:
+            16px;
+
+        margin-bottom:
+            16px;
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .velocidade-config {
+
+        gap:
+            14px;
+
+    }
+
+
+    .velocidade-config-group {
+
+        padding:
+            14px 12px;
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .velocidade-range-grid {
+
+        gap:
+            5px;
+
+    }
+
+
+    .velocidade-range-option {
+
+        min-height:
+            40px;
+
+        padding:
+            6px 2px;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .velocidade-time-grid {
+
+        gap:
+            6px;
+
+    }
+
+
+    .velocidade-time-option {
+
+        min-height:
+            65px;
+
+        padding:
+            8px 2px;
+
+    }
+
+
+    .velocidade-time-option strong {
+
+        font-size:
+            18px;
+
+    }
+
+
+    .velocidade-time-option span {
+
+        font-size:
+            7px;
+
+    }
+
+
+    .velocidade-question {
+
+        min-height:
+            300px;
+
+        padding:
+            28px 16px;
+
+        border-radius:
+            26px;
+
+    }
+
+
+    .velocidade-number {
+
+        font-size:
+            clamp(92px, 28vw, 128px);
+
+    }
+
+
+    /* =====================================================
+       RESULTADO — MOBILE
+    ===================================================== */
+
+    .velocidade-result {
+
+        gap:
+            12px;
+
+    }
+
+
+    .velocidade-result-header {
+
+        padding:
+            22px 16px 20px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .velocidade-result-icon {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .velocidade-result-header h3 {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .velocidade-result-score {
+
+        min-height:
+            155px;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    .velocidade-result-score strong {
+
+        font-size:
+            68px;
+
+    }
+
+
+    .velocidade-result-stats {
+
+        gap:
+            8px;
+
+    }
+
+
+    .velocidade-result-stat {
+
+        min-height:
+            92px;
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .velocidade-result-stat strong {
+
+        font-size:
+            30px;
+
+    }
+
+
+    .velocidade-result-review {
+
+        padding:
+            15px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .velocidade-result-errors {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            6px;
+
+    }
+
+
+    .velocidade-result-error {
+
+        min-height:
+            54px;
+
+        padding:
+            7px 8px;
+
+        gap:
+            8px;
+
+    }
+
+
+    .velocidade-result-error-number {
+
+        min-width:
+            34px;
+
+        height:
+            34px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .velocidade-result-error-word {
+
+        font-size:
+            10px;
+
+    }
+
+}
+
+/* =========================================================
    BANNER DE INSTALAÇÃO — PWA
 ========================================================= */
 
@@ -11835,7 +14201,6 @@ body [hidden][hidden] {
     overflow:
         hidden;
 }
-
 
 /* LINHA DE LUZ SUPERIOR */
 

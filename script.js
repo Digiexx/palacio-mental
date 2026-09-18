@@ -171,6 +171,177 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnVelocidadeMemoria =
+        document.getElementById(
+            "btnVelocidadeMemoria"
+        );
+
+
+    const btnVoltarVelocidade =
+        document.getElementById(
+            "btnVoltarVelocidade"
+        );
+
+
+    const telaVelocidadeMemoria =
+        document.getElementById(
+            "telaVelocidadeMemoria"
+        );
+
+
+    const velocidadeRangeOptions =
+        document.querySelectorAll(
+            ".velocidade-range-option"
+        );
+
+
+    const velocidadeTimeOptions =
+        document.querySelectorAll(
+            ".velocidade-time-option"
+        );
+
+
+    const btnIniciarVelocidade =
+        document.getElementById(
+            "btnIniciarVelocidade"
+        );
+
+
+    const velocidadeConfig =
+        document.getElementById(
+            "velocidadeConfig"
+        );
+
+
+    const velocidadeTrainingArea =
+        document.getElementById(
+            "velocidadeTrainingArea"
+        );
+
+
+    const velocidadeProgress =
+        document.getElementById(
+            "velocidadeProgress"
+        );
+
+
+    const velocidadeTrainingTime =
+        document.getElementById(
+            "velocidadeTrainingTime"
+        );
+
+
+    const velocidadeTimer =
+        document.getElementById(
+            "velocidadeTimer"
+        );
+
+
+    const velocidadeTimeoutMessage =
+        document.getElementById(
+            "velocidadeTimeoutMessage"
+        );
+
+
+    const velocidadeNumber =
+        document.getElementById(
+            "velocidadeNumber"
+        );
+
+
+    const velocidadeAnswer =
+        document.getElementById(
+            "velocidadeAnswer"
+        );
+
+
+    const velocidadeAnswerWord =
+        document.getElementById(
+            "velocidadeAnswerWord"
+        );
+
+
+    const velocidadeAnswerImageArea =
+        document.getElementById(
+            "velocidadeAnswerImageArea"
+        );
+
+
+    const velocidadeAnswerImage =
+        document.getElementById(
+            "velocidadeAnswerImage"
+        );
+
+
+    const btnRevelarVelocidade =
+        document.getElementById(
+            "btnRevelarVelocidade"
+        );
+
+
+    const velocidadeEvaluation =
+        document.getElementById(
+            "velocidadeEvaluation"
+        );
+
+
+    const btnNaoLembreiVelocidade =
+        document.getElementById(
+            "btnNaoLembreiVelocidade"
+        );
+
+
+    const btnLembreiVelocidade =
+        document.getElementById(
+            "btnLembreiVelocidade"
+        );
+
+    // =====================================================
+    // RESULTADO — VELOCIDADE
+    // =====================================================
+
+    const velocidadeResult =
+        document.getElementById(
+            "velocidadeResult"
+        );
+
+
+    const velocidadeResultPercent =
+        document.getElementById(
+            "velocidadeResultPercent"
+        );
+
+
+    const velocidadeResultAcertos =
+        document.getElementById(
+            "velocidadeResultAcertos"
+        );
+
+
+    const velocidadeResultErros =
+        document.getElementById(
+            "velocidadeResultErros"
+        );
+
+
+    const velocidadeResultErrors =
+        document.getElementById(
+            "velocidadeResultErrors"
+        );
+
+
+    const btnRepetirVelocidade =
+        document.getElementById(
+            "btnRepetirVelocidade"
+        );
+
+
+    const btnCentralVelocidade =
+        document.getElementById(
+            "btnCentralVelocidade"
+        );
+
+
     const btnTabelaMental =
         document.getElementById(
             "btnTabelaMental"
@@ -187,7 +358,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(
             ".mental-table-range-option"
         );
-
 
     // =====================================================
     // FIXAR
@@ -315,7 +485,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById(
             "btnLembreiFixar"
         );
-
 
     // =====================================================
     // ELEMENTOS — TREINO DESAFIAR
@@ -748,6 +917,1166 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+
+
+    // =====================================================
+    // ABRIR VELOCIDADE
+    // =====================================================
+
+    function abrirVelocidadeMemoria() {
+
+        telaMemoriaNumerica.hidden =
+            true;
+
+        telaTabelaMental.hidden =
+            true;
+
+        telaAprenderMemoria.hidden =
+            true;
+
+        telaFixarMemoria.hidden =
+            true;
+
+        telaDesafiarMemoria.hidden =
+            true;
+
+        telaVelocidadeMemoria.hidden =
+            false;
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // =====================================================
+    // INICIAR TREINO — VELOCIDADE
+    // =====================================================
+
+    function iniciarTreinoVelocidade() {
+
+        // =================================================
+        // REINICIA OS RESULTADOS DA SESSÃO
+        // =================================================
+
+        velocidadeAcertos =
+            [];
+
+        velocidadeErros =
+            [];
+
+
+        // =================================================
+        // MONTA A FILA COM OS NÚMEROS DA FAIXA
+        // =================================================
+
+        velocidadeFila =
+            [];
+
+
+        for (
+            let numero = velocidadeInicioAtual;
+            numero <= velocidadeFimAtual;
+            numero++
+        ) {
+
+            velocidadeFila.push(
+                numero
+            );
+
+        }
+
+        // =================================================
+        // EMBARALHA A FILA
+        //
+        // Cada número aparece apenas uma vez.
+        // =================================================
+
+        for (
+            let indice = velocidadeFila.length - 1;
+            indice > 0;
+            indice--
+        ) {
+
+            const indiceAleatorio =
+                Math.floor(
+                    Math.random() *
+                    (indice + 1)
+                );
+
+
+            [
+                velocidadeFila[indice],
+                velocidadeFila[indiceAleatorio]
+            ] =
+                [
+                    velocidadeFila[indiceAleatorio],
+                    velocidadeFila[indice]
+                ];
+
+        }
+
+
+        // =================================================
+        // COMEÇA PELA PRIMEIRA POSIÇÃO
+        // =================================================
+
+        velocidadeIndiceAtual =
+            0;
+
+
+        const numeroInicial =
+            velocidadeFila[
+                velocidadeIndiceAtual
+            ];
+
+
+        // =================================================
+        // MOSTRA A ÁREA DO TREINO
+        // =================================================
+
+        velocidadeConfig.hidden =
+            true;
+
+        velocidadeResult.hidden =
+            true;
+
+        velocidadeTrainingArea.hidden =
+            false;
+
+
+        // =================================================
+        // REINICIA OS CONTROLES DA RODADA
+        // =================================================
+
+        velocidadeAnswer.hidden =
+            true;
+
+        velocidadeEvaluation.hidden =
+            true;
+
+        btnRevelarVelocidade.hidden =
+            false;
+
+        velocidadeTimeoutMessage.hidden =
+            true;
+
+
+        // =================================================
+        // REINICIA NÚMERO E IMAGEM
+        // =================================================
+
+        velocidadeAnswerImageArea.hidden =
+            true;
+
+
+        velocidadeAnswerImage.removeAttribute(
+            "src"
+        );
+
+
+        velocidadeAnswerImage.alt =
+            "";
+
+
+        velocidadeNumber.hidden =
+            false;
+
+
+        // =================================================
+        // TEMPO ESCOLHIDO
+        // =================================================
+
+        velocidadeTrainingTime.textContent =
+            `${velocidadeTempoAtual}s`;
+
+
+        // =================================================
+        // NÚMERO SORTEADO
+        // =================================================
+
+        velocidadeNumber.textContent =
+            String(
+                numeroInicial
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        // =================================================
+        // PROGRESSO
+        // =================================================
+
+        velocidadeProgress.textContent =
+            `01 / ${String(
+                velocidadeFila.length
+            ).padStart(
+                2,
+                "0"
+            )}`;
+
+
+        // =================================================
+        // INICIA O CRONÔMETRO
+        // =================================================
+
+        if (
+            velocidadeIntervaloAtual
+        ) {
+
+            clearInterval(
+                velocidadeIntervaloAtual
+            );
+
+            velocidadeIntervaloAtual =
+                null;
+
+        }
+
+
+        velocidadeTempoRestante =
+            velocidadeTempoAtual;
+
+
+        velocidadeTimer.textContent =
+            velocidadeTempoRestante;
+
+
+        velocidadeIntervaloAtual =
+            setInterval(
+                () => {
+
+                    velocidadeTempoRestante--;
+
+
+                    velocidadeTimer.textContent =
+                        velocidadeTempoRestante;
+
+
+                    // =========================================
+                    // TEMPO ESGOTADO
+                    // =========================================
+
+                    if (
+                        velocidadeTempoRestante <= 0
+                    ) {
+
+                        clearInterval(
+                            velocidadeIntervaloAtual
+                        );
+
+
+                        velocidadeIntervaloAtual =
+                            null;
+
+
+                        velocidadeTempoRestante =
+                            0;
+
+
+                        velocidadeTimer.textContent =
+                            "0";
+
+
+                        // =====================================
+                        // MOSTRA O AVISO DE TEMPO ESGOTADO
+                        // =====================================
+
+                        velocidadeTimeoutMessage.hidden =
+                            false;
+
+
+                        // =====================================
+                        // IDENTIFICA O NÚMERO ATUAL
+                        // =====================================
+
+                        const numeroAtual =
+                            velocidadeFila[
+                                velocidadeIndiceAtual
+                            ];
+
+
+                        // =====================================
+                        // REGISTRA COMO ERRO
+                        // =====================================
+
+                        velocidadeErros.push(
+                            numeroAtual
+                        );
+
+
+                        // =====================================
+                        // LOCALIZA A ASSOCIAÇÃO
+                        // =====================================
+
+                        const memoriaAtual =
+                            bancoMemoria.find(
+                                memoria =>
+                                    Number(
+                                        memoria.numero
+                                    ) ===
+                                    Number(
+                                        numeroAtual
+                                    )
+                            );
+
+
+                        // =====================================
+                        // REVELA A RESPOSTA
+                        // =====================================
+
+                        if (
+                            memoriaAtual
+                        ) {
+
+                            velocidadeAnswerWord.textContent =
+                                memoriaAtual.palavra.toUpperCase();
+
+
+                            // =================================
+                            // MOSTRA A IMAGEM NO LUGAR
+                            // DO NÚMERO
+                            // =================================
+
+                            if (
+                                memoriaAtual.imagem
+                            ) {
+
+                                velocidadeAnswerImage.src =
+                                    memoriaAtual.imagem;
+
+
+                                velocidadeAnswerImage.alt =
+                                    `Associação ${memoriaAtual.palavra}`;
+
+
+                                velocidadeNumber.hidden =
+                                    true;
+
+
+                                velocidadeAnswerImageArea.hidden =
+                                    false;
+
+                            } else {
+
+                                velocidadeAnswerImage.removeAttribute(
+                                    "src"
+                                );
+
+
+                                velocidadeAnswerImage.alt =
+                                    "";
+
+
+                                velocidadeAnswerImageArea.hidden =
+                                    true;
+
+
+                                velocidadeNumber.hidden =
+                                    false;
+
+                            }
+
+
+                            velocidadeAnswer.hidden =
+                                false;
+
+                        }
+
+
+                        // =====================================
+                        // ESCONDE OS CONTROLES DE RESPOSTA
+                        // =====================================
+
+                        btnRevelarVelocidade.hidden =
+                            true;
+
+
+                        velocidadeEvaluation.hidden =
+                            true;
+
+
+                        // =====================================
+                        // AGUARDA A VISUALIZAÇÃO DA RESPOSTA
+                        // E SEGUE AUTOMATICAMENTE
+                        // =====================================
+
+                        velocidadeTimeoutAvancoAtual =
+                            setTimeout(
+                                () => {
+
+                                    velocidadeTimeoutAvancoAtual =
+                                        null;
+
+
+                                    proximaRodadaVelocidade();
+
+                                },
+                                1800
+                            );
+
+                    }
+
+                },
+                1000
+            );
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    // =====================================================
+    // REVELAR RESPOSTA — VELOCIDADE
+    // =====================================================
+
+    function revelarRespostaVelocidade() {
+
+        // =================================================
+        // PARA O CRONÔMETRO
+        // =================================================
+
+        if (
+            velocidadeIntervaloAtual
+        ) {
+
+            clearInterval(
+                velocidadeIntervaloAtual
+            );
+
+
+            velocidadeIntervaloAtual =
+                null;
+
+        }
+
+
+        // =================================================
+        // DESCOBRE O NÚMERO ATUAL
+        // =================================================
+
+        const numeroAtual =
+            velocidadeFila[
+            velocidadeIndiceAtual
+            ];
+
+
+        // =================================================
+        // PROCURA A ASSOCIAÇÃO NO BANCO OFICIAL
+        // =================================================
+
+        const memoriaAtual =
+            bancoMemoria.find(
+                memoria =>
+                    Number(
+                        memoria.numero
+                    ) ===
+                    Number(
+                        numeroAtual
+                    )
+            );
+
+
+        if (
+            !memoriaAtual
+        ) {
+
+            console.error(
+                "Associação não encontrada para o número:",
+                numeroAtual
+            );
+
+
+            return;
+
+        }
+
+
+        // =================================================
+        // MOSTRA A PALAVRA CORRETA
+        // =================================================
+
+        velocidadeAnswerWord.textContent =
+            memoriaAtual.palavra.toUpperCase();
+
+
+        // =================================================
+        // MOSTRA A IMAGEM NO LUGAR DO NÚMERO
+        // =================================================
+
+        if (
+            memoriaAtual.imagem
+        ) {
+
+            velocidadeAnswerImage.src =
+                memoriaAtual.imagem;
+
+
+            velocidadeAnswerImage.alt =
+                `Associação ${memoriaAtual.palavra}`;
+
+
+            velocidadeNumber.hidden =
+                true;
+
+
+            velocidadeAnswerImageArea.hidden =
+                false;
+
+        } else {
+
+            velocidadeAnswerImage.removeAttribute(
+                "src"
+            );
+
+
+            velocidadeAnswerImage.alt =
+                "";
+
+
+            velocidadeAnswerImageArea.hidden =
+                true;
+
+
+            velocidadeNumber.hidden =
+                false;
+
+        }
+
+
+        velocidadeAnswer.hidden =
+            false;
+
+
+        // =================================================
+        // ESCONDE O BOTÃO DE REVELAR
+        // =================================================
+
+        btnRevelarVelocidade.hidden =
+            true;
+
+
+        // =================================================
+        // MOSTRA A AVALIAÇÃO
+        // =================================================
+
+        velocidadeEvaluation.hidden =
+            false;
+
+    }
+
+
+    // =====================================================
+    // PRÓXIMA RODADA — VELOCIDADE
+    // =====================================================
+
+    function proximaRodadaVelocidade() {
+
+        // =================================================
+        // AVANÇA NA FILA
+        // =================================================
+
+        velocidadeIndiceAtual++;
+
+
+        // =================================================
+        // VERIFICA SE A RODADA TERMINOU
+        // =================================================
+
+        if (
+            velocidadeIndiceAtual >=
+            velocidadeFila.length
+        ) {
+
+            // =============================================
+            // GARANTE QUE O CRONÔMETRO ESTEJA ENCERRADO
+            // =============================================
+
+            if (
+                velocidadeIntervaloAtual
+            ) {
+
+                clearInterval(
+                    velocidadeIntervaloAtual
+                );
+
+
+                velocidadeIntervaloAtual =
+                    null;
+
+            }
+
+
+            // =============================================
+            // ESCONDE OS CONTROLES DA RODADA
+            // =============================================
+
+            velocidadeAnswer.hidden =
+                true;
+
+
+            velocidadeEvaluation.hidden =
+                true;
+
+
+            btnRevelarVelocidade.hidden =
+                true;
+
+
+            velocidadeTimeoutMessage.hidden =
+                true;
+
+
+            velocidadeAnswerImageArea.hidden =
+                true;
+
+
+            velocidadeNumber.hidden =
+                false;
+
+
+            // =============================================
+            // CALCULA O APROVEITAMENTO
+            // =============================================
+
+            const totalQuestoes =
+                velocidadeFila.length;
+
+
+            const totalAcertos =
+                velocidadeAcertos.length;
+
+
+            const totalErros =
+                velocidadeErros.length;
+
+
+            const percentualAcertos =
+                totalQuestoes > 0
+                    ? Math.round(
+                        (
+                            totalAcertos /
+                            totalQuestoes
+                        ) * 100
+                    )
+                    : 0;
+
+
+            // =============================================
+            // ATUALIZA O RESULTADO
+            // =============================================
+
+            velocidadeResultPercent.textContent =
+                `${percentualAcertos}%`;
+
+
+            velocidadeResultAcertos.textContent =
+                totalAcertos;
+
+
+            velocidadeResultErros.textContent =
+                totalErros;
+
+
+            // =============================================
+            // LIMPA A LISTA DE REFORÇO
+            // =============================================
+
+            velocidadeResultErrors.innerHTML =
+                "";
+
+
+            // =============================================
+            // MONTA A LISTA DOS NÚMEROS QUE PRECISAM
+            // SER REFORÇADOS
+            // =============================================
+
+            velocidadeErros.forEach(
+                numero => {
+
+                    const memoria =
+                        bancoMemoria.find(
+                            item =>
+                                Number(
+                                    item.numero
+                                ) ===
+                                Number(
+                                    numero
+                                )
+                        );
+
+
+                    if (
+                        !memoria
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const itemErro =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    itemErro.className =
+                        "velocidade-result-error";
+
+
+                    const numeroErro =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    numeroErro.className =
+                        "velocidade-result-error-number";
+
+
+                    numeroErro.textContent =
+                        String(
+                            numero
+                        ).padStart(
+                            2,
+                            "0"
+                        );
+
+
+                    const palavraErro =
+                        document.createElement(
+                            "strong"
+                        );
+
+
+                    palavraErro.className =
+                        "velocidade-result-error-word";
+
+
+                    palavraErro.textContent =
+                        memoria.palavra.toUpperCase();
+
+
+                    itemErro.appendChild(
+                        numeroErro
+                    );
+
+
+                    itemErro.appendChild(
+                        palavraErro
+                    );
+
+
+                    velocidadeResultErrors.appendChild(
+                        itemErro
+                    );
+
+                }
+            );
+
+
+            // =============================================
+            // CASO NÃO TENHA NENHUM ERRO
+            // =============================================
+
+            if (
+                velocidadeErros.length === 0
+            ) {
+
+                const mensagemPerfeita =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                mensagemPerfeita.className =
+                    "velocidade-result-error";
+
+
+                const textoPerfeito =
+                    document.createElement(
+                        "strong"
+                    );
+
+
+                textoPerfeito.className =
+                    "velocidade-result-error-word";
+
+
+                textoPerfeito.textContent =
+                    "Nenhuma associação para reforçar nesta rodada.";
+
+
+                mensagemPerfeita.appendChild(
+                    textoPerfeito
+                );
+
+
+                velocidadeResultErrors.appendChild(
+                    mensagemPerfeita
+                );
+
+            }
+
+
+            // =============================================
+            // TROCA O TREINO PELA TELA DE RESULTADO
+            // =============================================
+
+            velocidadeTrainingArea.hidden =
+                true;
+
+
+            velocidadeResult.hidden =
+                false;
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+
+            // =============================================
+            // REGISTRA O RESULTADO DA SESSÃO
+            // =============================================
+
+            console.log(
+                "Treino de Velocidade concluído."
+            );
+
+
+            console.log(
+                "Acertos:",
+                velocidadeAcertos
+            );
+
+
+            console.log(
+                "Erros:",
+                velocidadeErros
+            );
+
+
+            console.log(
+                "Total de acertos:",
+                totalAcertos
+            );
+
+
+            console.log(
+                "Total de erros:",
+                totalErros
+            );
+
+
+            console.log(
+                "Aproveitamento:",
+                `${percentualAcertos}%`
+            );
+
+
+            return;
+
+        }
+
+
+        // =================================================
+        // PEGA O PRÓXIMO NÚMERO
+        // =================================================
+
+        const proximoNumero =
+            velocidadeFila[
+                velocidadeIndiceAtual
+            ];
+
+
+        // =================================================
+        // REINICIA O ESTADO VISUAL DA RODADA
+        // =================================================
+
+        velocidadeAnswer.hidden =
+            true;
+
+
+        velocidadeEvaluation.hidden =
+            true;
+
+
+        btnRevelarVelocidade.hidden =
+            false;
+
+
+        velocidadeTimeoutMessage.hidden =
+            true;
+
+
+        velocidadeAnswerImageArea.hidden =
+            true;
+
+
+        velocidadeAnswerImage.removeAttribute(
+            "src"
+        );
+
+
+        velocidadeAnswerImage.alt =
+            "";
+
+
+        velocidadeNumber.hidden =
+            false;
+
+
+        // =================================================
+        // MOSTRA O PRÓXIMO NÚMERO
+        // =================================================
+
+        velocidadeNumber.textContent =
+            String(
+                proximoNumero
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        // =================================================
+        // ATUALIZA O PROGRESSO
+        // =================================================
+
+        velocidadeProgress.textContent =
+            `${String(
+                velocidadeIndiceAtual + 1
+            ).padStart(
+                2,
+                "0"
+            )} / ${String(
+                velocidadeFila.length
+            ).padStart(
+                2,
+                "0"
+            )}`;
+
+
+        // =================================================
+        // REINICIA O CRONÔMETRO
+        // =================================================
+
+        if (
+            velocidadeIntervaloAtual
+        ) {
+
+            clearInterval(
+                velocidadeIntervaloAtual
+            );
+
+
+            velocidadeIntervaloAtual =
+                null;
+
+        }
+
+
+        velocidadeTempoRestante =
+            velocidadeTempoAtual;
+
+
+        velocidadeTimer.textContent =
+            velocidadeTempoRestante;
+
+
+        velocidadeIntervaloAtual =
+            setInterval(
+                () => {
+
+                    velocidadeTempoRestante--;
+
+
+                    velocidadeTimer.textContent =
+                        velocidadeTempoRestante;
+
+
+                    // =========================================
+                    // TEMPO ESGOTADO
+                    // =========================================
+
+                    if (
+                        velocidadeTempoRestante <= 0
+                    ) {
+
+                        clearInterval(
+                            velocidadeIntervaloAtual
+                        );
+
+
+                        velocidadeIntervaloAtual =
+                            null;
+
+
+                        velocidadeTempoRestante =
+                            0;
+
+
+                        velocidadeTimer.textContent =
+                            "0";
+
+
+                        // =====================================
+                        // MOSTRA O AVISO DE TEMPO ESGOTADO
+                        // =====================================
+
+                        velocidadeTimeoutMessage.hidden =
+                            false;
+
+
+                        // =====================================
+                        // IDENTIFICA O NÚMERO ATUAL
+                        // =====================================
+
+                        const numeroAtual =
+                            velocidadeFila[
+                                velocidadeIndiceAtual
+                            ];
+
+
+                        // =====================================
+                        // REGISTRA COMO ERRO
+                        // =====================================
+
+                        velocidadeErros.push(
+                            numeroAtual
+                        );
+
+
+                        // =====================================
+                        // LOCALIZA A ASSOCIAÇÃO
+                        // =====================================
+
+                        const memoriaAtual =
+                            bancoMemoria.find(
+                                memoria =>
+                                    Number(
+                                        memoria.numero
+                                    ) ===
+                                    Number(
+                                        numeroAtual
+                                    )
+                            );
+
+
+                        // =====================================
+                        // REVELA A RESPOSTA
+                        // =====================================
+
+                        if (
+                            memoriaAtual
+                        ) {
+
+                            velocidadeAnswerWord.textContent =
+                                memoriaAtual.palavra.toUpperCase();
+
+
+                            // =================================
+                            // MOSTRA A IMAGEM NO LUGAR
+                            // DO NÚMERO
+                            // =================================
+
+                            if (
+                                memoriaAtual.imagem
+                            ) {
+
+                                velocidadeAnswerImage.src =
+                                    memoriaAtual.imagem;
+
+
+                                velocidadeAnswerImage.alt =
+                                    `Associação ${memoriaAtual.palavra}`;
+
+
+                                velocidadeNumber.hidden =
+                                    true;
+
+
+                                velocidadeAnswerImageArea.hidden =
+                                    false;
+
+                            } else {
+
+                                velocidadeAnswerImage.removeAttribute(
+                                    "src"
+                                );
+
+
+                                velocidadeAnswerImage.alt =
+                                    "";
+
+
+                                velocidadeAnswerImageArea.hidden =
+                                    true;
+
+
+                                velocidadeNumber.hidden =
+                                    false;
+
+                            }
+
+
+                            velocidadeAnswer.hidden =
+                                false;
+
+                        }
+
+
+                        // =====================================
+                        // ESCONDE OS CONTROLES DE RESPOSTA
+                        // =====================================
+
+                        btnRevelarVelocidade.hidden =
+                            true;
+
+
+                        velocidadeEvaluation.hidden =
+                            true;
+
+
+                        // =====================================
+                        // AGUARDA A VISUALIZAÇÃO DA RESPOSTA
+                        // E SEGUE AUTOMATICAMENTE
+                        // =====================================
+
+                        velocidadeTimeoutAvancoAtual =
+                            setTimeout(
+                                () => {
+
+                                    velocidadeTimeoutAvancoAtual =
+                                        null;
+
+
+                                    proximaRodadaVelocidade();
+
+                                },
+                                1800
+                            );
+
+                    }
+
+                },
+                1000
+            );
+
+    }
+
+
     // =====================================================
     // ESTADO DO TREINO — FIXAR
     // =====================================================
@@ -2735,6 +4064,419 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    if (btnVelocidadeMemoria) {
+
+        btnVelocidadeMemoria.addEventListener(
+            "click",
+            abrirVelocidadeMemoria
+        );
+
+    }
+
+
+    if (btnVoltarVelocidade) {
+
+        btnVoltarVelocidade.addEventListener(
+            "click",
+            () => {
+
+                // =============================================
+                // SE ESTIVER NA TELA DE RESULTADO
+                // VOLTA PARA A CONFIGURAÇÃO DA VELOCIDADE
+                // =============================================
+
+                if (
+                    !velocidadeResult.hidden
+                ) {
+
+                    velocidadeResult.hidden =
+                        true;
+
+                    velocidadeTrainingArea.hidden =
+                        true;
+
+                    velocidadeConfig.hidden =
+                        false;
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+
+                    return;
+
+                }
+
+
+                // =============================================
+                // SE ESTIVER DENTRO DO TREINO
+                // VOLTA PARA A CONFIGURAÇÃO DA VELOCIDADE
+                // =============================================
+
+                if (
+                    !velocidadeTrainingArea.hidden
+                ) {
+
+                    if (
+                        velocidadeIntervaloAtual
+                    ) {
+
+                        clearInterval(
+                            velocidadeIntervaloAtual
+                        );
+
+
+                        velocidadeIntervaloAtual =
+                            null;
+
+                    }
+
+
+                    // =========================================
+                    // CANCELA O AVANÇO AUTOMÁTICO PENDENTE
+                    // =========================================
+
+                    if (
+                        velocidadeTimeoutAvancoAtual
+                    ) {
+
+                        clearTimeout(
+                            velocidadeTimeoutAvancoAtual
+                        );
+
+
+                        velocidadeTimeoutAvancoAtual =
+                            null;
+
+                    }
+
+
+                    velocidadeTrainingArea.hidden =
+                        true;
+
+                    velocidadeResult.hidden =
+                        true;
+
+                    velocidadeConfig.hidden =
+                        false;
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+
+                    return;
+
+                }
+
+
+                // =============================================
+                // SE JÁ ESTIVER NA CONFIGURAÇÃO
+                // VOLTA PARA A CENTRAL DA MEMÓRIA NUMÉRICA
+                // =============================================
+
+                abrirMemoriaNumerica();
+
+            }
+        );
+
+    }
+    
+    if (btnIniciarVelocidade) {
+
+        btnIniciarVelocidade.addEventListener(
+            "click",
+            iniciarTreinoVelocidade
+        );
+
+    }
+
+
+    if (btnRevelarVelocidade) {
+
+        btnRevelarVelocidade.addEventListener(
+            "click",
+            revelarRespostaVelocidade
+        );
+
+    }
+
+
+    if (btnLembreiVelocidade) {
+
+        btnLembreiVelocidade.addEventListener(
+            "click",
+            () => {
+
+                // =============================================
+                // REGISTRA O NÚMERO COMO ACERTO
+                // =============================================
+
+                const numeroAtual =
+                    velocidadeFila[
+                    velocidadeIndiceAtual
+                    ];
+
+
+                velocidadeAcertos.push(
+                    numeroAtual
+                );
+
+
+                // =============================================
+                // AVANÇA PARA A PRÓXIMA RODADA
+                // =============================================
+
+                proximaRodadaVelocidade();
+
+            }
+        );
+
+    }
+
+
+    if (btnNaoLembreiVelocidade) {
+
+        btnNaoLembreiVelocidade.addEventListener(
+            "click",
+            () => {
+
+                // =============================================
+                // REGISTRA O NÚMERO COMO ERRO
+                // =============================================
+
+                const numeroAtual =
+                    velocidadeFila[
+                    velocidadeIndiceAtual
+                    ];
+
+
+                velocidadeErros.push(
+                    numeroAtual
+                );
+
+
+                // =============================================
+                // AVANÇA PARA A PRÓXIMA RODADA
+                // =============================================
+
+                proximaRodadaVelocidade();
+
+            }
+        );
+
+    }
+
+    // =====================================================
+    // TREINAR NOVAMENTE — VELOCIDADE
+    // =====================================================
+
+    if (btnRepetirVelocidade) {
+
+        btnRepetirVelocidade.addEventListener(
+            "click",
+            () => {
+
+                // =============================================
+                // ESCONDE O RESULTADO
+                // =============================================
+
+                velocidadeResult.hidden =
+                    true;
+
+
+                // =============================================
+                // PREPARA NOVAMENTE OS CONTROLES DO TREINO
+                // =============================================
+
+                velocidadeAnswer.hidden =
+                    true;
+
+
+                velocidadeEvaluation.hidden =
+                    true;
+
+
+                btnRevelarVelocidade.hidden =
+                    false;
+
+
+                // =============================================
+                // INICIA UMA NOVA RODADA
+                // MANTENDO FAIXA E TEMPO SELECIONADOS
+                // =============================================
+
+                iniciarTreinoVelocidade();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR À CENTRAL — VELOCIDADE
+    // =====================================================
+
+    if (btnCentralVelocidade) {
+
+        btnCentralVelocidade.addEventListener(
+            "click",
+            () => {
+
+                // =============================================
+                // ESCONDE O RESULTADO
+                // =============================================
+
+                velocidadeResult.hidden =
+                    true;
+
+
+                // =============================================
+                // ESCONDE A TELA DE VELOCIDADE
+                // =============================================
+
+                telaVelocidadeMemoria.hidden =
+                    true;
+
+
+                // =============================================
+                // ABRE A CENTRAL DA MEMÓRIA NUMÉRICA
+                // =============================================
+
+                abrirMemoriaNumerica();
+
+            }
+        );
+
+    }
+
+    // =====================================================
+    // SELEÇÃO — FAIXA DA VELOCIDADE
+    // =====================================================
+
+    let velocidadeInicioAtual =
+        1;
+
+    let velocidadeFimAtual =
+        10;
+
+    // =====================================================
+    // ESTADO DA RODADA — VELOCIDADE
+    // =====================================================
+
+    let velocidadeFila =
+        [];
+
+    let velocidadeIndiceAtual =
+        0;
+
+    let velocidadeIntervaloAtual =
+        null;
+
+    let velocidadeTimeoutAvancoAtual =
+        null;
+
+    let velocidadeTempoRestante =
+        0;
+
+    let velocidadeAcertos =
+        [];
+
+    let velocidadeErros =
+        [];
+
+
+    velocidadeRangeOptions.forEach(
+        option => {
+
+            option.addEventListener(
+                "click",
+                () => {
+
+                    velocidadeRangeOptions.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "is-active"
+                            );
+
+                        }
+                    );
+
+
+                    option.classList.add(
+                        "is-active"
+                    );
+
+
+                    velocidadeInicioAtual =
+                        Number(
+                            option.dataset.velocidadeInicio
+                        );
+
+
+                    velocidadeFimAtual =
+                        Number(
+                            option.dataset.velocidadeFim
+                        );
+
+                }
+            );
+
+        }
+    );
+
+
+    // =====================================================
+    // SELEÇÃO — TEMPO DA VELOCIDADE
+    // =====================================================
+
+    let velocidadeTempoAtual =
+        10;
+
+
+    velocidadeTimeOptions.forEach(
+        option => {
+
+            option.addEventListener(
+                "click",
+                () => {
+
+                    velocidadeTimeOptions.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "is-active"
+                            );
+
+                        }
+                    );
+
+
+                    option.classList.add(
+                        "is-active"
+                    );
+
+
+                    velocidadeTempoAtual =
+                        Number(
+                            option.dataset.velocidadeTempo
+                        );
+
+                }
+            );
+
+        }
+    );
+
+
+
     // =====================================================
     // EVENTOS — APRENDER
     // =====================================================
@@ -2777,7 +4519,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     // =====================================================
     // ESCOLHER FAIXA — 01–10, 11–20 ETC.
