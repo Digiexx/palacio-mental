@@ -913,47 +913,154 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     // =====================================================
-    // ABRIR MEMÓRIA NUMÉRICA
+    // GERENCIADOR CENTRAL — MAPA DE TELAS
     // =====================================================
 
-    function abrirMemoriaNumerica(
-        registrarHistorico = true
+    const telasApp = {
+
+        home: {
+            elemento: homePalacio,
+            pai: null
+        },
+
+        memoriaNumerica: {
+            elemento: telaMemoriaNumerica,
+            pai: "home"
+        },
+
+        aprender: {
+            elemento: telaAprenderMemoria,
+            pai: "memoriaNumerica"
+        },
+
+        tabelaMental: {
+            elemento: telaTabelaMental,
+            pai: "memoriaNumerica"
+        },
+
+        fixar: {
+            elemento: telaFixarMemoria,
+            pai: "memoriaNumerica"
+        },
+
+        desafiar: {
+            elemento: telaDesafiarMemoria,
+            pai: "memoriaNumerica"
+        },
+
+        velocidade: {
+            elemento: telaVelocidadeMemoria,
+            pai: "memoriaNumerica"
+        },
+
+        treinoRapido: {
+            elemento: telaTreinoRapido,
+            pai: "memoriaNumerica"
+        }
+
+    };
+
+
+    // =====================================================
+    // GERENCIADOR CENTRAL — EXIBIR TELA
+    // =====================================================
+
+    function exibirTelaApp(
+        nomeTela
     ) {
 
-        homePalacio.hidden =
-            true;
+        const telaDestino =
+            telasApp[nomeTela];
 
-        telaAprenderMemoria.hidden =
-            true;
 
-        telaTabelaMental.hidden =
-            true;
+        if (
+            !telaDestino ||
+            !telaDestino.elemento
+        ) {
 
-        telaFixarMemoria.hidden =
-            true;
+            console.error(
+                "Tela não encontrada:",
+                nomeTela
+            );
 
-        telaDesafiarMemoria.hidden =
-            true;
+            return;
 
-        telaVelocidadeMemoria.hidden =
-            true;
-
-        telaTreinoRapido.hidden =
-            true;
-
-        telaMemoriaNumerica.hidden =
-            false;
+        }
 
 
         // =================================================
-        // REGISTRA A CENTRAL NO HISTÓRICO DO APP
+        // ESCONDE TODAS AS TELAS CADASTRADAS
+        // =================================================
+
+        Object.values(
+            telasApp
+        ).forEach(
+            tela => {
+
+                if (
+                    tela.elemento
+                ) {
+
+                    tela.elemento.hidden =
+                        true;
+
+                }
+
+            }
+        );
+
+
+        // =================================================
+        // EXIBE SOMENTE A TELA SOLICITADA
+        // =================================================
+
+        telaDestino.elemento.hidden =
+            false;
+
+    }
+
+
+    // =====================================================
+    // GERENCIADOR CENTRAL — NAVEGAR
+    // =====================================================
+
+    function navegarParaTela(
+        nomeTela,
+        registrarHistorico = true
+    ) {
+
+        if (
+            !telasApp[nomeTela]
+        ) {
+
+            console.error(
+                "Tela não cadastrada:",
+                nomeTela
+            );
+
+            return;
+
+        }
+
+
+        // =================================================
+        // EXIBE A TELA
+        // =================================================
+
+        exibirTelaApp(
+            nomeTela
+        );
+
+
+        // =================================================
+        // REGISTRA A TELA NO HISTÓRICO
         // =================================================
 
         if (registrarHistorico) {
 
             history.pushState(
                 {
-                    tela: "memoriaNumerica"
+                    tela: nomeTela
                 },
                 "",
                 window.location.href
@@ -970,30 +1077,39 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =====================================================
+    // ABRIR MEMÓRIA NUMÉRICA
+    // =====================================================
+
+    function abrirMemoriaNumerica(
+        registrarHistorico = true
+    ) {
+
+        navegarParaTela(
+            "memoriaNumerica",
+            registrarHistorico
+        );
+
+    }
+
+
 
     // =====================================================
     // ABRIR FIXAR
     // =====================================================
 
-    function abrirFixarMemoria() {
+    function abrirFixarMemoria(
+        registrarHistorico = true
+    ) {
 
-        telaMemoriaNumerica.hidden =
-            true;
+        // =================================================
+        // NAVEGA PARA FIXAR
+        // =================================================
 
-        telaTabelaMental.hidden =
-            true;
-
-        telaAprenderMemoria.hidden =
-            true;
-
-        telaDesafiarMemoria.hidden =
-            true;
-
-        telaVelocidadeMemoria.hidden =
-            true;
-
-        telaFixarMemoria.hidden =
-            false;
+        navegarParaTela(
+            "fixar",
+            registrarHistorico
+        );
 
 
         // =================================================
@@ -1022,48 +1138,33 @@ document.addEventListener("DOMContentLoaded", () => {
             fixarInicioAtual
         );
 
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
     }
 
     // =====================================================
     // ABRIR DESAFIAR
     // =====================================================
 
-    function abrirDesafiarMemoria() {
+    function abrirDesafiarMemoria(
+        registrarHistorico = true
+    ) {
 
-        telaMemoriaNumerica.hidden =
-            true;
+        // =================================================
+        // NAVEGA PARA DESAFIAR
+        // =================================================
 
-        telaTabelaMental.hidden =
-            true;
+        navegarParaTela(
+            "desafiar",
+            registrarHistorico
+        );
 
-        telaAprenderMemoria.hidden =
-            true;
 
-        telaFixarMemoria.hidden =
-            true;
-
-        telaVelocidadeMemoria.hidden =
-            true;
-
-        telaDesafiarMemoria.hidden =
-            false;
-
+        // =================================================
+        // CARREGA A PRIMEIRA MEMÓRIA DA FAIXA ATUAL
+        // =================================================
 
         carregarMemoriaDesafiar(
             desafiarInicioAtual
         );
-
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
 
     }
 
@@ -1279,26 +1380,14 @@ document.addEventListener("DOMContentLoaded", () => {
         registrarHistorico = true
     ) {
 
-        telaMemoriaNumerica.hidden =
-            true;
+        // =================================================
+        // NAVEGA PARA O TREINO RÁPIDO
+        // =================================================
 
-        telaTabelaMental.hidden =
-            true;
-
-        telaAprenderMemoria.hidden =
-            true;
-
-        telaFixarMemoria.hidden =
-            true;
-
-        telaDesafiarMemoria.hidden =
-            true;
-
-        telaVelocidadeMemoria.hidden =
-            true;
-
-        telaTreinoRapido.hidden =
-            false;
+        navegarParaTela(
+            "treinoRapido",
+            registrarHistorico
+        );
 
 
         // =================================================
@@ -1320,29 +1409,6 @@ document.addEventListener("DOMContentLoaded", () => {
         btnRevelarTreinoRapido.hidden =
             false;
 
-
-        // =================================================
-        // REGISTRA O TREINO RÁPIDO NO HISTÓRICO DO APP
-        // =================================================
-
-        if (registrarHistorico) {
-
-            history.pushState(
-                {
-                    tela: "treinoRapido"
-                },
-                "",
-                window.location.href
-            );
-
-        }
-
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
     }
 
 
@@ -1350,25 +1416,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // ABRIR VELOCIDADE
     // =====================================================
 
-    function abrirVelocidadeMemoria() {
+    function abrirVelocidadeMemoria(
+        registrarHistorico = true
+    ) {
 
-        telaMemoriaNumerica.hidden =
-            true;
+        // =================================================
+        // NAVEGA PARA VELOCIDADE
+        // =================================================
 
-        telaTabelaMental.hidden =
-            true;
-
-        telaAprenderMemoria.hidden =
-            true;
-
-        telaFixarMemoria.hidden =
-            true;
-
-        telaDesafiarMemoria.hidden =
-            true;
-
-        telaVelocidadeMemoria.hidden =
-            false;
+        navegarParaTela(
+            "velocidade",
+            registrarHistorico
+        );
 
 
         // =================================================
@@ -1384,13 +1443,10 @@ document.addEventListener("DOMContentLoaded", () => {
         velocidadeConfig.hidden =
             false;
 
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
     }
+
+
+
     // =====================================================
     // INICIAR TREINO — VELOCIDADE
     // =====================================================
@@ -3592,29 +3648,28 @@ document.addEventListener("DOMContentLoaded", () => {
     // ABRIR TABELA MENTAL
     // =====================================================
 
-    function abrirTabelaMental() {
+    function abrirTabelaMental(
+        registrarHistorico = true
+    ) {
 
-        telaMemoriaNumerica.hidden =
-            true;
+        // =================================================
+        // NAVEGA PARA A TABELA MENTAL
+        // =================================================
 
-        telaAprenderMemoria.hidden =
-            true;
+        navegarParaTela(
+            "tabelaMental",
+            registrarHistorico
+        );
 
-        telaTabelaMental.hidden =
-            false;
 
+        // =================================================
+        // CARREGA INICIALMENTE A FAIXA 01–10
+        // =================================================
 
-        // Carrega inicialmente a faixa 01–10
         gerarTabelaMental(
             1,
             10
         );
-
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
 
     }
 
@@ -3863,25 +3918,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // ABRIR TELA APRENDER
     // =====================================================
 
-    function abrirAprendizado() {
+    function abrirAprendizado(
+        registrarHistorico = true
+    ) {
 
-        telaMemoriaNumerica.hidden =
-            true;
+        // =================================================
+        // NAVEGA PARA APRENDER
+        // =================================================
 
-        telaTabelaMental.hidden =
-            true;
-
-        telaFixarMemoria.hidden =
-            true;
-
-        telaDesafiarMemoria.hidden =
-            true;
-
-        telaVelocidadeMemoria.hidden =
-            true;
-
-        telaAprenderMemoria.hidden =
-            false;
+        navegarParaTela(
+            "aprender",
+            registrarHistorico
+        );
 
 
         // Oculta a tela introdutória "Como funciona"
@@ -3902,12 +3950,6 @@ document.addEventListener("DOMContentLoaded", () => {
         mostrarMemoria(
             indiceMemoriaAtual
         );
-
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
 
     }
 
@@ -4528,7 +4570,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnVoltarHome.addEventListener(
             "click",
-            voltarParaHome
+            () => {
+
+                history.back();
+
+            }
         );
 
     }
@@ -4543,38 +4589,60 @@ document.addEventListener("DOMContentLoaded", () => {
         () => {
 
             // =============================================
-            // TREINO RÁPIDO → CENTRAL
+            // DESCOBRE QUAL TELA ESTÁ ABERTA
             // =============================================
 
-            if (
-                !telaTreinoRapido.hidden
-            ) {
+            const entradaTelaAtual =
+                Object.entries(
+                    telasApp
+                ).find(
+                    ([nomeTela, dadosTela]) => {
 
-                telaTreinoRapido.hidden =
-                    true;
+                        return (
+                            dadosTela.elemento &&
+                            !dadosTela.elemento.hidden
+                        );
 
-                abrirMemoriaNumerica(
-                    false
+                    }
                 );
 
+
+            if (!entradaTelaAtual) {
+
                 return;
 
             }
 
 
+            const [
+                nomeTelaAtual,
+                dadosTelaAtual
+            ] =
+                entradaTelaAtual;
+
+
             // =============================================
-            // CENTRAL DA MEMÓRIA NUMÉRICA → HOME
+            // HOME NÃO POSSUI TELA PAI
             // =============================================
 
             if (
-                !telaMemoriaNumerica.hidden
+                nomeTelaAtual === "home" ||
+                !dadosTelaAtual.pai
             ) {
-
-                voltarParaHome();
 
                 return;
 
             }
+
+
+            // =============================================
+            // VOLTA AUTOMATICAMENTE PARA A TELA PAI
+            // =============================================
+
+            navegarParaTela(
+                dadosTelaAtual.pai,
+                false
+            );
 
         }
     );
@@ -4759,10 +4827,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
-                telaTreinoRapido.hidden =
-                    true;
-
-                abrirMemoriaNumerica();
+                history.back();
 
             }
         );
@@ -4882,10 +4947,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // =============================================
                 // SE JÁ ESTIVER NA CONFIGURAÇÃO
-                // VOLTA PARA A CENTRAL DA MEMÓRIA NUMÉRICA
+                // VOLTA PELO HISTÓRICO PARA A CENTRAL
                 // =============================================
 
-                abrirMemoriaNumerica();
+                history.back();
 
             }
         );
@@ -5070,6 +5135,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let velocidadeFimAtual =
         10;
 
+
+
+
     // =====================================================
     // ESTADO DA RODADA — TREINO RÁPIDO
     // =====================================================
@@ -5206,7 +5274,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnVoltarMemoria.addEventListener(
             "click",
-            voltarParaMemoria
+            () => {
+
+                history.back();
+
+            }
         );
 
     }
@@ -5216,7 +5288,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnVoltarCentralMemoria.addEventListener(
             "click",
-            voltarParaMemoria
+            () => {
+
+                history.back();
+
+            }
         );
 
     }
@@ -5291,7 +5367,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnVoltarTabelaMental.addEventListener(
             "click",
-            voltarDaTabelaMental
+            () => {
+
+                history.back();
+
+            }
         );
 
     }
@@ -5422,7 +5502,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnVoltarFixar.addEventListener(
             "click",
-            voltarDoFixar
+            () => {
+
+                history.back();
+
+            }
         );
 
     }
@@ -6124,7 +6208,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnVoltarDesafiar.addEventListener(
             "click",
-            voltarDoDesafiar
+            () => {
+
+                history.back();
+
+            }
         );
 
     }
