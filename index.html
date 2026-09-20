@@ -1648,6 +1648,240 @@
 
 
             <!-- =================================================
+                 TELA — TREINO RÁPIDO
+            ================================================== -->
+
+            <section class="app-screen screen-treino-rapido" id="telaTreinoRapido" hidden>
+
+                <div class="treino-rapido-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="treino-rapido-header">
+
+                        <button class="back-button" id="btnVoltarTreinoRapido" type="button"
+                            aria-label="Voltar para a Central da Memória Numérica">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Treino Rápido
+                            </h2>
+
+                            <p>
+                                Uma sessão curta para ativar
+                                suas associações e fortalecer a memória.
+                            </p>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         CONTEÚDO INICIAL
+                    ================================================== -->
+
+                    <div class="treino-rapido-intro" id="treinoRapidoIntro">
+
+                        <span class="module-kicker">
+                            SESSÃO RÁPIDA
+                        </span>
+
+                        <h3>
+                            Vamos aquecer a memória.
+                        </h3>
+
+                        <p>
+                            Complete 10 desafios mistos
+                            e descubra como estão suas associações.
+                        </p>
+
+
+                        <div class="treino-rapido-info">
+
+                            <div>
+
+                                <strong>
+                                    10
+                                </strong>
+
+                                <span>
+                                    desafios
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Misto
+                                </strong>
+
+                                <span>
+                                    tipo de treino
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="primary-button treino-rapido-start-button" id="btnIniciarTreinoRapido"
+                            type="button">
+
+                            <span>
+                                Começar treino
+                            </span>
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m9 18 6-6-6-6" />
+                            </svg>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ÁREA DO TREINO
+                    ================================================== -->
+
+                    <div class="treino-rapido-training" id="treinoRapidoTraining" hidden>
+
+
+                        <!-- =================================================
+                             PROGRESSO
+                        ================================================== -->
+
+                        <div class="treino-rapido-training-top">
+
+                            <span class="treino-rapido-progress" id="treinoRapidoProgress">
+                                01 / 10
+                            </span>
+
+                            <span class="treino-rapido-mode" id="treinoRapidoMode">
+                                NÚMERO → ASSOCIAÇÃO
+                            </span>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             PERGUNTA
+                        ================================================== -->
+
+                        <div class="treino-rapido-question">
+
+                            <span class="module-kicker" id="treinoRapidoQuestionLabel">
+                                QUAL É A ASSOCIAÇÃO?
+                            </span>
+
+
+                            <strong class="treino-rapido-number" id="treinoRapidoNumber">
+                                01
+                            </strong>
+
+
+                            <div class="treino-rapido-image-area" id="treinoRapidoImageArea" hidden>
+
+                                <img class="treino-rapido-image" id="treinoRapidoImage" src="" alt="">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             RESPOSTA
+                        ================================================== -->
+
+                        <div class="treino-rapido-answer" id="treinoRapidoAnswer" hidden>
+
+                            <span id="treinoRapidoAnswerLabel">
+                                ASSOCIAÇÃO
+                            </span>
+
+                            <strong id="treinoRapidoAnswerValue">
+                                TEIA
+                            </strong>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             MOSTRAR RESPOSTA
+                        ================================================== -->
+
+                        <button class="primary-button treino-rapido-reveal-button" id="btnRevelarTreinoRapido"
+                            type="button">
+
+                            <span>
+                                Mostrar resposta
+                            </span>
+
+                        </button>
+
+
+                        <!-- =================================================
+                             AVALIAÇÃO
+                        ================================================== -->
+
+                        <div class="treino-rapido-evaluation" id="treinoRapidoEvaluation" hidden>
+
+                            <span class="module-kicker">
+                                VOCÊ LEMBROU?
+                            </span>
+
+
+                            <div class="treino-rapido-evaluation-actions">
+
+                                <button class="secondary-button" id="btnNaoLembreiTreinoRapido" type="button">
+
+                                    <span>
+                                        Não lembrei
+                                    </span>
+
+                                </button>
+
+
+                                <button class="primary-button" id="btnLembreiTreinoRapido" type="button">
+
+                                    <span>
+                                        Lembrei
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
                  TELA — VELOCIDADE MEMÓRIA NUMÉRICA
             ================================================== -->
 
@@ -1690,7 +1924,6 @@
                         </div>
 
                     </header>
-
 
                     <!-- =================================================
                          CONTEÚDO INICIAL

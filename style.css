@@ -13105,6 +13105,1053 @@ body [hidden][hidden] {
         center;
 }
 
+/* =========================================================
+   TREINO RÁPIDO — MEMÓRIA NUMÉRICA
+========================================================= */
+
+.screen-treino-rapido {
+
+    min-height:
+        100vh;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(143, 70, 255, 0.2),
+            transparent 34%),
+        radial-gradient(circle at 85% 38%,
+            rgba(88, 64, 255, 0.08),
+            transparent 28%),
+        linear-gradient(180deg,
+            #12091f 0%,
+            #08070d 100%);
+}
+
+
+.treino-rapido-container {
+
+    width:
+        100%;
+
+    max-width:
+        520px;
+
+    margin:
+        0 auto;
+
+    padding:
+        26px 20px 110px;
+}
+
+
+/* =========================================================
+   CABEÇALHO — TREINO RÁPIDO
+========================================================= */
+
+.treino-rapido-header {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        14px;
+
+    margin-bottom:
+        24px;
+}
+
+
+.treino-rapido-header > div {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+}
+
+
+.treino-rapido-header .back-button {
+
+    flex:
+        0 0 auto;
+
+    margin-top:
+        0;
+}
+
+
+.treino-rapido-header .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+
+    color:
+        #a96dff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.8px;
+}
+
+
+.treino-rapido-header h2 {
+
+    margin:
+        0 0 7px;
+
+    font-size:
+        clamp(28px, 6vw, 36px);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -1.1px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 24px rgba(153, 83, 255, 0.17);
+}
+
+
+.treino-rapido-header p {
+
+    max-width:
+        360px;
+
+    margin:
+        0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.56);
+}
+
+
+/* =========================================================
+   INTRODUÇÃO — TREINO RÁPIDO
+========================================================= */
+
+.treino-rapido-intro {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        22px;
+
+    border:
+        1px solid rgba(164, 99, 255, 0.18);
+
+    border-radius:
+        22px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(42, 20, 70, 0.82),
+            rgba(16, 10, 27, 0.9));
+
+    box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+
+.treino-rapido-intro::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        190px;
+
+    height:
+        190px;
+
+    top:
+        -100px;
+
+    right:
+        -65px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(154, 77, 255, 0.24),
+            transparent 70%);
+
+    pointer-events:
+        none;
+}
+
+
+.treino-rapido-intro .module-kicker {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.6px;
+
+    color:
+        #b981ff;
+}
+
+
+.treino-rapido-intro h3 {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    margin:
+        0 0 8px;
+
+    font-size:
+        24px;
+
+    line-height:
+        1.08;
+
+    letter-spacing:
+        -0.6px;
+
+    color:
+        #ffffff;
+}
+
+
+.treino-rapido-intro > p {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    max-width:
+        390px;
+
+    margin:
+        0;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DA SESSÃO
+========================================================= */
+
+.treino-rapido-info {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        10px;
+
+    margin-top:
+        20px;
+}
+
+
+.treino-rapido-info > div {
+
+    min-height:
+        74px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    padding:
+        13px 15px;
+
+    border:
+        1px solid rgba(169, 105, 255, 0.16);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+
+.treino-rapido-info strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        4px;
+
+    font-size:
+        21px;
+
+    line-height:
+        1;
+
+    color:
+        #ffffff;
+}
+
+
+.treino-rapido-info span {
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+}
+
+
+.treino-rapido-start-button {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    margin-top:
+        18px;
+
+    border-radius:
+        16px;
+}
+
+
+.treino-rapido-start-button svg {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    margin-left:
+        7px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+/* =========================================================
+   ÁREA DO TREINO
+========================================================= */
+
+.treino-rapido-training {
+
+    width:
+        100%;
+}
+
+
+.treino-rapido-training-top {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        14px;
+
+    padding:
+        11px 13px;
+
+    border:
+        1px solid rgba(159, 94, 255, 0.2);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+}
+
+
+.treino-rapido-progress {
+
+    padding:
+        6px 9px;
+
+    border:
+        1px solid rgba(171, 107, 255, 0.18);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(139, 71, 255, 0.1);
+
+    font-size:
+        10px;
+
+    font-weight:
+        850;
+
+    color:
+        #d2adff;
+}
+
+
+.treino-rapido-mode {
+
+    justify-self:
+        end;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.4px;
+
+    text-align:
+        right;
+
+    color:
+        #ba83ff;
+}
+
+
+/* =========================================================
+   CARD DO DESAFIO
+========================================================= */
+
+.treino-rapido-question {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        315px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        15px;
+
+    padding:
+        30px 20px;
+
+    border:
+        1px solid rgba(170, 101, 255, 0.24);
+
+    border-radius:
+        28px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(40, 18, 66, 0.94),
+            rgba(12, 9, 20, 0.97));
+
+    box-shadow:
+        0 25px 64px rgba(0, 0, 0, 0.38),
+        0 0 34px rgba(116, 52, 213, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+    text-align:
+        center;
+}
+
+
+.treino-rapido-question::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        250px;
+
+    height:
+        250px;
+
+    top:
+        50%;
+
+    left:
+        50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(151, 78, 255, 0.22),
+            transparent 68%);
+
+    filter:
+        blur(4px);
+
+    pointer-events:
+        none;
+}
+
+
+.treino-rapido-question .module-kicker {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        block;
+
+    margin-bottom:
+        26px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        2px;
+
+    color:
+        rgba(210, 177, 255, 0.72);
+}
+
+
+.treino-rapido-number {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        block;
+
+    font-size:
+        clamp(96px, 25vw, 138px);
+
+    line-height:
+        0.82;
+
+    letter-spacing:
+        -7px;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 12px rgba(168, 90, 255, 0.55),
+        0 0 35px rgba(132, 61, 255, 0.38),
+        0 0 72px rgba(117, 47, 224, 0.14);
+}
+
+
+/* =========================================================
+   IMAGEM DO DESAFIO
+========================================================= */
+
+.treino-rapido-image-area {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
+
+    width:
+        100%;
+
+    max-width:
+        320px;
+
+    height:
+        230px;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(8, 5, 15, 0.22);
+}
+
+
+.treino-rapido-image-area[hidden] {
+
+    display:
+        none;
+}
+
+
+.treino-rapido-image {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+    object-position:
+        center;
+}
+
+
+/* =========================================================
+   RESPOSTA
+========================================================= */
+
+.treino-rapido-answer {
+
+    margin-bottom:
+        13px;
+
+    padding:
+        17px;
+
+    border:
+        1px solid rgba(171, 103, 255, 0.2);
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(119, 52, 219, 0.14),
+            rgba(255, 255, 255, 0.025));
+
+    text-align:
+        center;
+}
+
+
+.treino-rapido-answer span {
+
+    display:
+        block;
+
+    margin-bottom:
+        5px;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.treino-rapido-answer strong {
+
+    display:
+        block;
+
+    font-size:
+        26px;
+
+    line-height:
+        1.1;
+
+    color:
+        #ffffff;
+
+    text-shadow:
+        0 0 20px rgba(164, 88, 255, 0.3);
+}
+
+
+/* =========================================================
+   BOTÕES DO TREINO
+========================================================= */
+
+.treino-rapido-reveal-button {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    border-radius:
+        16px;
+}
+
+
+.treino-rapido-evaluation {
+
+    margin-top:
+        15px;
+
+    padding:
+        17px;
+
+    border:
+        1px solid rgba(166, 100, 255, 0.15);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.treino-rapido-evaluation > .module-kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    text-align:
+        center;
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        #b981ff;
+}
+
+
+.treino-rapido-evaluation-actions {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        9px;
+
+    width:
+        100%;
+}
+
+
+.treino-rapido-evaluation-actions button {
+
+    width:
+        100%;
+
+    height:
+        54px;
+
+    min-height:
+        54px;
+
+    margin:
+        0;
+
+    padding:
+        0 12px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    box-sizing:
+        border-box;
+
+    border-radius:
+        14px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   BOTÃO NÃO LEMBREI — TREINO RÁPIDO
+========================================================= */
+
+#btnNaoLembreiTreinoRapido {
+
+    border:
+        1px solid rgba(255, 82, 126, 0.28);
+
+    background:
+        linear-gradient(135deg,
+            rgba(105, 24, 52, 0.28),
+            rgba(46, 15, 34, 0.34));
+
+    color:
+        #ff8eaa;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025),
+        0 0 18px rgba(255, 62, 113, 0.035);
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+#btnNaoLembreiTreinoRapido:active {
+
+    transform:
+        scale(0.97);
+
+    border-color:
+        rgba(255, 92, 134, 0.45);
+
+    background:
+        linear-gradient(135deg,
+            rgba(124, 27, 59, 0.36),
+            rgba(57, 17, 39, 0.42));
+}
+
+
+/* =========================================================
+   GARANTIA DO ATRIBUTO HIDDEN
+========================================================= */
+
+.treino-rapido-intro[hidden],
+.treino-rapido-training[hidden],
+.treino-rapido-answer[hidden],
+.treino-rapido-evaluation[hidden] {
+
+    display:
+        none;
+}
+
+
+/* =========================================================
+   MOBILE — TREINO RÁPIDO
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .treino-rapido-container {
+
+        padding:
+            18px 14px 105px;
+    }
+
+
+    .treino-rapido-header {
+
+        gap:
+            11px;
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .treino-rapido-header h2 {
+
+        font-size:
+            27px;
+    }
+
+
+    .treino-rapido-intro {
+
+        padding:
+            19px 17px;
+
+        border-radius:
+            20px;
+    }
+
+
+    .treino-rapido-question {
+
+        min-height:
+            300px;
+
+        padding:
+            26px 16px;
+
+        border-radius:
+            24px;
+    }
+
+
+    .treino-rapido-image-area {
+
+        height:
+            215px;
+    }
+
+}
+
 
 /* =====================================================
    NÃO LEMBREI — VELOCIDADE

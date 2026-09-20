@@ -153,6 +153,120 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnMemoriaTreinoRapido =
+        document.getElementById(
+            "btnMemoriaTreinoRapido"
+        );
+
+
+    const telaTreinoRapido =
+        document.getElementById(
+            "telaTreinoRapido"
+        );
+
+
+    const btnVoltarTreinoRapido =
+        document.getElementById(
+            "btnVoltarTreinoRapido"
+        );
+
+
+    const treinoRapidoIntro =
+        document.getElementById(
+            "treinoRapidoIntro"
+        );
+
+
+    const btnIniciarTreinoRapido =
+        document.getElementById(
+            "btnIniciarTreinoRapido"
+        );
+
+
+    const treinoRapidoTraining =
+        document.getElementById(
+            "treinoRapidoTraining"
+        );
+
+
+    const treinoRapidoProgress =
+        document.getElementById(
+            "treinoRapidoProgress"
+        );
+
+
+    const treinoRapidoMode =
+        document.getElementById(
+            "treinoRapidoMode"
+        );
+
+
+    const treinoRapidoQuestionLabel =
+        document.getElementById(
+            "treinoRapidoQuestionLabel"
+        );
+
+
+    const treinoRapidoNumber =
+        document.getElementById(
+            "treinoRapidoNumber"
+        );
+
+
+    const treinoRapidoImageArea =
+        document.getElementById(
+            "treinoRapidoImageArea"
+        );
+
+
+    const treinoRapidoImage =
+        document.getElementById(
+            "treinoRapidoImage"
+        );
+
+
+    const treinoRapidoAnswer =
+        document.getElementById(
+            "treinoRapidoAnswer"
+        );
+
+
+    const treinoRapidoAnswerLabel =
+        document.getElementById(
+            "treinoRapidoAnswerLabel"
+        );
+
+
+    const treinoRapidoAnswerValue =
+        document.getElementById(
+            "treinoRapidoAnswerValue"
+        );
+
+
+    const btnRevelarTreinoRapido =
+        document.getElementById(
+            "btnRevelarTreinoRapido"
+        );
+
+
+    const treinoRapidoEvaluation =
+        document.getElementById(
+            "treinoRapidoEvaluation"
+        );
+
+
+    const btnNaoLembreiTreinoRapido =
+        document.getElementById(
+            "btnNaoLembreiTreinoRapido"
+        );
+
+
+    const btnLembreiTreinoRapido =
+        document.getElementById(
+            "btnLembreiTreinoRapido"
+        );
+
+
     const btnIniciarAprendizado =
         document.getElementById(
             "btnIniciarAprendizado"
@@ -294,9 +408,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnLembreiVelocidade =
         document.getElementById(
             "btnLembreiVelocidade"
-        );
-
-    // =====================================================
+        );        
+        
+        
+        // =====================================================
     // RESULTADO — VELOCIDADE
     // =====================================================
 
@@ -924,6 +1039,266 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    // =====================================================
+    // EMBARALHAR ITENS — TREINO RÁPIDO
+    // =====================================================
+
+    function embaralharTreinoRapido(
+        itens
+    ) {
+
+        const lista =
+            [...itens];
+
+
+        for (
+            let i = lista.length - 1;
+            i > 0;
+            i--
+        ) {
+
+            const j =
+                Math.floor(
+                    Math.random() *
+                    (i + 1)
+                );
+
+
+            [
+                lista[i],
+                lista[j]
+            ] =
+                [
+                    lista[j],
+                    lista[i]
+                ];
+
+        }
+
+
+        return lista;
+
+    }
+
+
+    // =====================================================
+    // INICIAR TREINO RÁPIDO
+    // =====================================================
+
+    function iniciarTreinoRapido() {
+
+        treinoRapidoFila =
+            embaralharTreinoRapido(
+                bancoMemoria
+            ).slice(
+                0,
+                Math.min(
+                    10,
+                    bancoMemoria.length
+                )
+            );
+
+
+        treinoRapidoIndiceAtual =
+            0;
+
+        treinoRapidoAcertos =
+            [];
+
+        treinoRapidoErros =
+            [];
+
+
+        treinoRapidoIntro.hidden =
+            true;
+
+        treinoRapidoTraining.hidden =
+            false;
+
+
+        carregarDesafioTreinoRapido();
+
+    }
+
+
+    // =====================================================
+    // CARREGAR DESAFIO — TREINO RÁPIDO
+    // =====================================================
+
+    function carregarDesafioTreinoRapido() {
+
+        const memoria =
+            treinoRapidoFila[
+                treinoRapidoIndiceAtual
+            ];
+
+
+        if (!memoria) {
+
+            return;
+
+        }
+
+
+        const totalDesafios =
+            treinoRapidoFila.length;
+
+
+        treinoRapidoProgress.textContent =
+            `${String(
+                treinoRapidoIndiceAtual + 1
+            ).padStart(
+                2,
+                "0"
+            )} / ${String(
+                totalDesafios
+            ).padStart(
+                2,
+                "0"
+            )}`;
+
+
+        treinoRapidoAnswer.hidden =
+            true;
+
+        treinoRapidoEvaluation.hidden =
+            true;
+
+        btnRevelarTreinoRapido.hidden =
+            false;
+
+
+        const modoImagem =
+            Math.random() < 0.5;
+
+
+        if (modoImagem) {
+
+            treinoRapidoMode.textContent =
+                "IMAGEM → NÚMERO";
+
+            treinoRapidoQuestionLabel.textContent =
+                "QUAL É O NÚMERO?";
+
+
+            treinoRapidoNumber.hidden =
+                true;
+
+            treinoRapidoImageArea.hidden =
+                false;
+
+
+            treinoRapidoImage.src =
+                memoria.imagem;
+
+            treinoRapidoImage.alt =
+                `Associação ${memoria.palavra}`;
+
+
+            treinoRapidoAnswerLabel.textContent =
+                "NÚMERO";
+
+            treinoRapidoAnswerValue.textContent =
+                String(
+                    memoria.numero
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+        } else {
+
+            treinoRapidoMode.textContent =
+                "NÚMERO → ASSOCIAÇÃO";
+
+            treinoRapidoQuestionLabel.textContent =
+                "QUAL É A ASSOCIAÇÃO?";
+
+
+            treinoRapidoImageArea.hidden =
+                true;
+
+            treinoRapidoNumber.hidden =
+                false;
+
+
+            treinoRapidoNumber.textContent =
+                String(
+                    memoria.numero
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            treinoRapidoAnswerLabel.textContent =
+                "ASSOCIAÇÃO";
+
+            treinoRapidoAnswerValue.textContent =
+                memoria.palavra;
+
+        }
+
+    }
+
+
+    // =====================================================
+    // ABRIR TREINO RÁPIDO
+    // =====================================================
+
+    function abrirTreinoRapido() {
+
+        telaMemoriaNumerica.hidden =
+            true;
+
+        telaTabelaMental.hidden =
+            true;
+
+        telaAprenderMemoria.hidden =
+            true;
+
+        telaFixarMemoria.hidden =
+            true;
+
+        telaDesafiarMemoria.hidden =
+            true;
+
+        telaVelocidadeMemoria.hidden =
+            true;
+
+        telaTreinoRapido.hidden =
+            false;
+
+
+        // =================================================
+        // RESTAURA O ESTADO INICIAL DO TREINO RÁPIDO
+        // =================================================
+
+        treinoRapidoIntro.hidden =
+            false;
+
+        treinoRapidoTraining.hidden =
+            true;
+
+        treinoRapidoAnswer.hidden =
+            true;
+
+        treinoRapidoEvaluation.hidden =
+            true;
+
+        btnRevelarTreinoRapido.hidden =
+            false;
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
     // =====================================================
     // ABRIR VELOCIDADE
     // =====================================================
@@ -969,7 +1344,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
     // =====================================================
     // INICIAR TREINO — VELOCIDADE
     // =====================================================
@@ -4123,6 +4497,186 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =====================================================
+    // ABRIR TREINO RÁPIDO
+    // =====================================================
+
+    if (btnMemoriaTreinoRapido) {
+
+        btnMemoriaTreinoRapido.addEventListener(
+            "click",
+            abrirTreinoRapido
+        );
+
+    }
+
+
+    // =====================================================
+    // INICIAR TREINO RÁPIDO
+    // =====================================================
+
+    if (btnIniciarTreinoRapido) {
+
+        btnIniciarTreinoRapido.addEventListener(
+            "click",
+            iniciarTreinoRapido
+        );
+
+    }
+
+
+    // =====================================================
+    // MOSTRAR RESPOSTA — TREINO RÁPIDO
+    // =====================================================
+
+    if (btnRevelarTreinoRapido) {
+
+        btnRevelarTreinoRapido.addEventListener(
+            "click",
+            () => {
+
+                treinoRapidoAnswer.hidden =
+                    false;
+
+                treinoRapidoEvaluation.hidden =
+                    false;
+
+                btnRevelarTreinoRapido.hidden =
+                    true;
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REGISTRAR RESPOSTA — TREINO RÁPIDO
+    // =====================================================
+
+    function registrarRespostaTreinoRapido(
+        lembrou
+    ) {
+
+        const memoriaAtual =
+            treinoRapidoFila[
+                treinoRapidoIndiceAtual
+            ];
+
+
+        if (!memoriaAtual) {
+
+            return;
+
+        }
+
+
+        if (lembrou) {
+
+            treinoRapidoAcertos.push(
+                memoriaAtual
+            );
+
+        } else {
+
+            treinoRapidoErros.push(
+                memoriaAtual
+            );
+
+        }
+
+
+        // =================================================
+        // AVANÇA PARA O PRÓXIMO DESAFIO
+        // =================================================
+
+        treinoRapidoIndiceAtual++;
+
+
+        // =================================================
+        // VERIFICA SE A SESSÃO TERMINOU
+        // =================================================
+
+        if (
+            treinoRapidoIndiceAtual >=
+            treinoRapidoFila.length
+        ) {
+
+            treinoRapidoTraining.hidden =
+                true;
+
+
+            return;
+
+        }
+
+
+        carregarDesafioTreinoRapido();
+
+    }
+
+
+    // =====================================================
+    // NÃO LEMBREI — TREINO RÁPIDO
+    // =====================================================
+
+    if (btnNaoLembreiTreinoRapido) {
+
+        btnNaoLembreiTreinoRapido.addEventListener(
+            "click",
+            () => {
+
+                registrarRespostaTreinoRapido(
+                    false
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // LEMBREI — TREINO RÁPIDO
+    // =====================================================
+
+    if (btnLembreiTreinoRapido) {
+
+        btnLembreiTreinoRapido.addEventListener(
+            "click",
+            () => {
+
+                registrarRespostaTreinoRapido(
+                    true
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR DO TREINO RÁPIDO PARA A CENTRAL
+    // =====================================================
+
+    if (btnVoltarTreinoRapido) {
+
+        btnVoltarTreinoRapido.addEventListener(
+            "click",
+            () => {
+
+                telaTreinoRapido.hidden =
+                    true;
+
+                abrirMemoriaNumerica();
+
+            }
+        );
+
+    }
+
+
     if (btnVelocidadeMemoria) {
 
         btnVelocidadeMemoria.addEventListener(
@@ -4297,7 +4851,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     if (btnNaoLembreiVelocidade) {
 
         btnNaoLembreiVelocidade.addEventListener(
@@ -4423,6 +4976,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let velocidadeFimAtual =
         10;
+
+    // =====================================================
+    // ESTADO DA RODADA — TREINO RÁPIDO
+    // =====================================================
+
+    let treinoRapidoFila =
+        [];
+
+    let treinoRapidoIndiceAtual =
+        0;
+
+    let treinoRapidoAcertos =
+        [];
+
+    let treinoRapidoErros =
+        [];
+
 
     // =====================================================
     // ESTADO DA RODADA — VELOCIDADE
