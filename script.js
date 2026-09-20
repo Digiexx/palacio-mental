@@ -846,6 +846,9 @@ document.addEventListener("DOMContentLoaded", () => {
         telaDesafiarMemoria.hidden =
             true;
 
+        telaVelocidadeMemoria.hidden =
+            true;
+
         telaFixarMemoria.hidden =
             false;
 
@@ -902,6 +905,9 @@ document.addEventListener("DOMContentLoaded", () => {
         telaFixarMemoria.hidden =
             true;
 
+        telaVelocidadeMemoria.hidden =
+            true;
+
         telaDesafiarMemoria.hidden =
             false;
 
@@ -917,7 +923,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
 
     // =====================================================
     // ABRIR VELOCIDADE
@@ -944,13 +949,26 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
 
+        // =================================================
+        // RESTAURA A TELA INICIAL DA VELOCIDADE
+        // =================================================
+
+        velocidadeResult.hidden =
+            true;
+
+        velocidadeTrainingArea.hidden =
+            true;
+
+        velocidadeConfig.hidden =
+            false;
+
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
 
     }
-
 
     // =====================================================
     // INICIAR TREINO — VELOCIDADE
@@ -1030,7 +1048,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const numeroInicial =
             velocidadeFila[
-                velocidadeIndiceAtual
+            velocidadeIndiceAtual
             ];
 
 
@@ -1196,7 +1214,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         const numeroAtual =
                             velocidadeFila[
-                                velocidadeIndiceAtual
+                            velocidadeIndiceAtual
                             ];
 
 
@@ -1796,7 +1814,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const proximoNumero =
             velocidadeFila[
-                velocidadeIndiceAtual
+            velocidadeIndiceAtual
             ];
 
 
@@ -1945,7 +1963,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         const numeroAtual =
                             velocidadeFila[
-                                velocidadeIndiceAtual
+                            velocidadeIndiceAtual
                             ];
 
 
@@ -3432,6 +3450,15 @@ document.addEventListener("DOMContentLoaded", () => {
         telaTabelaMental.hidden =
             true;
 
+        telaFixarMemoria.hidden =
+            true;
+
+        telaDesafiarMemoria.hidden =
+            true;
+
+        telaVelocidadeMemoria.hidden =
+            true;
+
         telaAprenderMemoria.hidden =
             false;
 
@@ -3464,7 +3491,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =====================================================
+    //=================================
     // VOLTAR PARA MEMÓRIA NUMÉRICA
     // =====================================================
 
@@ -4015,9 +4042,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function voltarParaHome() {
 
+        // =================================================
+        // ESCONDE A CENTRAL DA MEMÓRIA NUMÉRICA
+        // =================================================
+
         telaMemoriaNumerica.hidden =
             true;
 
+
+        // =================================================
+        // GARANTE QUE TODAS AS TELAS INTERNAS ESTEJAM FECHADAS
+        // =================================================
+
+        telaAprenderMemoria.hidden =
+            true;
+
+
+        telaTabelaMental.hidden =
+            true;
+
+
+        telaFixarMemoria.hidden =
+            true;
+
+
+        telaDesafiarMemoria.hidden =
+            true;
+
+
+        telaVelocidadeMemoria.hidden =
+            true;
+
+
+        // =================================================
+        // EXIBE SOMENTE A HOME
+        // =================================================
 
         homePalacio.hidden =
             false;
@@ -4029,7 +4088,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
 
     // =====================================================
     // EVENTOS — MEMÓRIA NUMÉRICA
@@ -4186,7 +4244,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-    
+
     if (btnIniciarVelocidade) {
 
         btnIniciarVelocidade.addEventListener(
@@ -5385,7 +5443,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
     // =====================================================
     // EVENTOS — DESAFIAR
     // =====================================================
@@ -5497,7 +5554,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
-
 
     // =====================================================
     // FINALIZAR DESAFIO

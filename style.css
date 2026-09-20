@@ -8500,24 +8500,22 @@ body [hidden][hidden] {
 
 
 /* =========================================================
-   MOBILE — FIXAR MEMÓRIA NUMÉRICA
+   FIXAR — MEMÓRIA NUMÉRICA
 ========================================================= */
 
-@media (max-width: 620px) {
+.screen-fixar {
 
-    .screen-fixar {
+    min-height:
+        100vh;
 
-        min-height:
-            100vh;
-
-        background:
-            radial-gradient(circle at top,
-                rgba(118, 60, 255, 0.16),
-                transparent 34%),
-            linear-gradient(180deg,
-                #12091f 0%,
-                #08070d 100%);
-    }
+    background:
+        radial-gradient(circle at top,
+            rgba(118, 60, 255, 0.16),
+            transparent 34%),
+        linear-gradient(180deg,
+            #12091f 0%,
+            #08070d 100%);
+}
 
 
     .fixar-container {
@@ -9986,8 +9984,6 @@ body [hidden][hidden] {
         transform:
             scale(0.98);
     }
-
-}
 
 
 /* =========================================================
