@@ -14084,9 +14084,537 @@ body [hidden][hidden] {
 .treino-rapido-intro[hidden],
 .treino-rapido-training[hidden],
 .treino-rapido-answer[hidden],
-.treino-rapido-evaluation[hidden] {
+.treino-rapido-evaluation[hidden],
+.treino-rapido-result[hidden],
+.treino-rapido-weak-empty[hidden] {
 
     display:
+        none;
+}
+
+
+/* =========================================================
+   RESULTADO — TREINO RÁPIDO
+========================================================= */
+
+.treino-rapido-result {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        22px;
+
+    padding:
+        28px;
+
+    border:
+        1px solid rgba(167, 139, 250, 0.16);
+
+    border-radius:
+        26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(27, 20, 49, 0.96),
+            rgba(13, 11, 27, 0.98)
+        );
+
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   CABEÇALHO DO RESULTADO
+========================================================= */
+
+.treino-rapido-result-header {
+
+    text-align:
+        center;
+}
+
+
+.treino-rapido-result-header h3 {
+
+    margin:
+        8px 0 8px;
+
+    font-size:
+        28px;
+
+    line-height:
+        1.1;
+}
+
+
+.treino-rapido-result-header p {
+
+    margin:
+        0;
+
+    opacity:
+        0.72;
+
+    line-height:
+        1.55;
+}
+
+
+/* =========================================================
+   PERCENTUAL
+========================================================= */
+
+.treino-rapido-score {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        175px;
+
+    padding:
+        22px;
+
+    border:
+        1px solid rgba(167, 139, 250, 0.18);
+
+    border-radius:
+        24px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(139, 92, 246, 0.18),
+            rgba(139, 92, 246, 0.03) 65%,
+            transparent 100%
+        );
+}
+
+
+.treino-rapido-score strong {
+
+    font-size:
+        clamp(52px, 11vw, 76px);
+
+    font-weight:
+        800;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -3px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #c4b5fd,
+            #a78bfa
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+}
+
+
+.treino-rapido-score span {
+
+    margin-top:
+        8px;
+
+    font-size:
+        13px;
+
+    opacity:
+        0.68;
+}
+
+
+/* =========================================================
+   ACERTOS E ERROS
+========================================================= */
+
+.treino-rapido-result-stats {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        12px;
+}
+
+
+.treino-rapido-result-stat {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        105px;
+
+    padding:
+        16px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius:
+        19px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+}
+
+
+.treino-rapido-result-stat strong {
+
+    font-size:
+        30px;
+
+    line-height:
+        1;
+
+    color:
+        #ffffff;
+}
+
+
+.treino-rapido-result-stat span {
+
+    margin-top:
+        7px;
+
+    font-size:
+        12px;
+
+    opacity:
+        0.68;
+}
+
+
+/* =========================================================
+   NÚMEROS PARA REFORÇAR
+========================================================= */
+
+.treino-rapido-weak {
+
+    padding:
+        20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+.treino-rapido-weak-list {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        10px;
+
+    margin-top:
+        15px;
+}
+
+
+/* =========================================================
+   ITEM — NÚMERO + ASSOCIAÇÃO
+========================================================= */
+
+.treino-rapido-weak-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    min-height:
+        58px;
+
+    padding:
+        10px 14px;
+
+    border:
+        1px solid rgba(244, 114, 182, 0.16);
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244, 63, 94, 0.07),
+            rgba(139, 92, 246, 0.045)
+        );
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.treino-rapido-weak-item strong {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border:
+        1px solid rgba(244, 114, 182, 0.22);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(244, 63, 94, 0.09);
+
+    font-size:
+        17px;
+
+    font-weight:
+        800;
+
+    color:
+        #f9a8d4;
+}
+
+
+/* =========================================================
+   PALAVRA / ASSOCIAÇÃO
+========================================================= */
+
+.treino-rapido-weak-item span {
+
+    min-width:
+        0;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.02em;
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    overflow-wrap:
+        anywhere;
+}
+
+
+/* =========================================================
+   NENHUM NÚMERO PARA REFORÇAR
+========================================================= */
+
+.treino-rapido-weak-empty {
+
+    margin:
+        14px 0 0;
+
+    padding:
+        14px 16px;
+
+    border:
+        1px solid rgba(167, 139, 250, 0.12);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(139, 92, 246, 0.05);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
+
+    text-align:
+        center;
+
+    opacity:
+        0.8;
+}
+
+
+/* =========================================================
+   MOBILE — NÚMEROS PARA REFORÇAR
+========================================================= */
+
+@media (max-width: 620px) {
+
+    .treino-rapido-weak {
+
+        padding:
+            17px;
+    }
+
+
+    .treino-rapido-weak-list {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .treino-rapido-weak-item {
+
+        min-height:
+            56px;
+
+        padding:
+            9px 12px;
+    }
+
+}
+
+
+/* =========================================================
+   AÇÕES DO RESULTADO
+========================================================= */
+
+.treino-rapido-result-actions {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+}
+
+
+/* =========================================================
+   BOTÕES DO RESULTADO
+========================================================= */
+
+.treino-rapido-result-actions button {
+
+    width:
+        100%;
+
+    min-height:
+        54px;
+
+    border-radius:
+        15px;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   TREINAR NOVAMENTE
+========================================================= */
+
+#btnReiniciarTreinoRapido {
+
+    border:
+        1px solid rgba(167, 139, 250, 0.35);
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9b4dff
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 10px 28px rgba(124, 58, 237, 0.20);
+}
+
+
+/* =========================================================
+   VOLTAR À CENTRAL
+========================================================= */
+
+#btnFinalizarTreinoRapido {
+
+    border:
+        1px solid rgba(167, 139, 250, 0.20);
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+    box-shadow:
         none;
 }
 

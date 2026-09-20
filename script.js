@@ -267,6 +267,58 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    // =====================================================
+    // RESULTADO — TREINO RÁPIDO
+    // =====================================================
+
+    const treinoRapidoResult =
+        document.getElementById(
+            "treinoRapidoResult"
+        );
+
+
+    const treinoRapidoPercentual =
+        document.getElementById(
+            "treinoRapidoPercentual"
+        );
+
+
+    const treinoRapidoTotalAcertos =
+        document.getElementById(
+            "treinoRapidoTotalAcertos"
+        );
+
+
+    const treinoRapidoTotalErros =
+        document.getElementById(
+            "treinoRapidoTotalErros"
+        );
+
+
+    const treinoRapidoWeakList =
+        document.getElementById(
+            "treinoRapidoWeakList"
+        );
+
+
+    const treinoRapidoWeakEmpty =
+        document.getElementById(
+            "treinoRapidoWeakEmpty"
+        );
+
+
+    const btnReiniciarTreinoRapido =
+        document.getElementById(
+            "btnReiniciarTreinoRapido"
+        );
+
+
+    const btnFinalizarTreinoRapido =
+        document.getElementById(
+            "btnFinalizarTreinoRapido"
+        );
+
+
     const btnIniciarAprendizado =
         document.getElementById(
             "btnIniciarAprendizado"
@@ -1398,6 +1450,9 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
         treinoRapidoTraining.hidden =
+            true;
+
+        treinoRapidoResult.hidden =
             true;
 
         treinoRapidoAnswer.hidden =
@@ -4687,6 +4742,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // TREINAR NOVAMENTE — TREINO RÁPIDO
+    // =====================================================
+
+    if (btnReiniciarTreinoRapido) {
+
+        btnReiniciarTreinoRapido.addEventListener(
+            "click",
+            () => {
+
+                treinoRapidoResult.hidden =
+                    true;
+
+
+                iniciarTreinoRapido();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR À CENTRAL — TREINO RÁPIDO
+    // =====================================================
+
+    if (btnFinalizarTreinoRapido) {
+
+        btnFinalizarTreinoRapido.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
     // MOSTRAR RESPOSTA — TREINO RÁPIDO
     // =====================================================
 
@@ -4707,6 +4802,156 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
         );
+
+    }
+
+
+    // =====================================================
+    // MOSTRAR RESULTADO — TREINO RÁPIDO
+    // =====================================================
+
+    function mostrarResultadoTreinoRapido() {
+
+        const totalDesafios =
+            treinoRapidoFila.length;
+
+
+        const totalAcertos =
+            treinoRapidoAcertos.length;
+
+
+        const totalErros =
+            treinoRapidoErros.length;
+
+
+        const percentual =
+            totalDesafios > 0
+                ? Math.round(
+                    (
+                        totalAcertos /
+                        totalDesafios
+                    ) * 100
+                )
+                : 0;
+
+
+        // =================================================
+        // ATUALIZA OS NÚMEROS DO RESULTADO
+        // =================================================
+
+        treinoRapidoPercentual.textContent =
+            `${percentual}%`;
+
+
+        treinoRapidoTotalAcertos.textContent =
+            totalAcertos;
+
+
+        treinoRapidoTotalErros.textContent =
+            totalErros;
+
+
+        // =================================================
+        // LIMPA A LISTA DE NÚMEROS PARA REFORÇAR
+        // =================================================
+
+        treinoRapidoWeakList.innerHTML =
+            "";
+
+
+        // =================================================
+        // EXIBE OS NÚMEROS QUE O USUÁRIO NÃO LEMBROU
+        // =================================================
+
+        if (
+            treinoRapidoErros.length > 0
+        ) {
+
+            treinoRapidoWeakEmpty.hidden =
+                true;
+
+
+            treinoRapidoErros.forEach(
+                memoria => {
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    item.className =
+                        "treino-rapido-weak-item";
+
+
+                    const numero =
+                        document.createElement(
+                            "strong"
+                        );
+
+
+                    numero.textContent =
+                        String(
+                            memoria.numero
+                        ).padStart(
+                            2,
+                            "0"
+                        );
+
+
+                    const palavra =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    palavra.textContent =
+                        memoria.palavra;
+
+
+                    item.appendChild(
+                        numero
+                    );
+
+
+                    item.appendChild(
+                        palavra
+                    );
+
+
+                    treinoRapidoWeakList.appendChild(
+                        item
+                    );
+
+                }
+            );
+
+        } else {
+
+            treinoRapidoWeakEmpty.hidden =
+                false;
+
+        }
+
+
+        // =================================================
+        // EXIBE O RESULTADO
+        // =================================================
+
+        treinoRapidoTraining.hidden =
+            true;
+
+        treinoRapidoIntro.hidden =
+            true;
+
+        treinoRapidoResult.hidden =
+            false;
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
     }
 
@@ -4763,8 +5008,7 @@ document.addEventListener("DOMContentLoaded", () => {
             treinoRapidoFila.length
         ) {
 
-            treinoRapidoTraining.hidden =
-                true;
+            mostrarResultadoTreinoRapido();
 
 
             return;
