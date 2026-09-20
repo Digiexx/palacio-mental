@@ -1275,7 +1275,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ABRIR TREINO RÁPIDO
     // =====================================================
 
-    function abrirTreinoRapido() {
+    function abrirTreinoRapido(
+        registrarHistorico = true
+    ) {
 
         telaMemoriaNumerica.hidden =
             true;
@@ -1317,6 +1319,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btnRevelarTreinoRapido.hidden =
             false;
+
+
+        // =================================================
+        // REGISTRA O TREINO RÁPIDO NO HISTÓRICO DO APP
+        // =================================================
+
+        if (registrarHistorico) {
+
+            history.pushState(
+                {
+                    tela: "treinoRapido"
+                },
+                "",
+                window.location.href
+            );
+
+        }
 
 
         window.scrollTo({
@@ -4522,6 +4541,26 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener(
         "popstate",
         () => {
+
+            // =============================================
+            // TREINO RÁPIDO → CENTRAL
+            // =============================================
+
+            if (
+                !telaTreinoRapido.hidden
+            ) {
+
+                telaTreinoRapido.hidden =
+                    true;
+
+                abrirMemoriaNumerica(
+                    false
+                );
+
+                return;
+
+            }
+
 
             // =============================================
             // CENTRAL DA MEMÓRIA NUMÉRICA → HOME
