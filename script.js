@@ -916,7 +916,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ABRIR MEMÓRIA NUMÉRICA
     // =====================================================
 
-    function abrirMemoriaNumerica() {
+    function abrirMemoriaNumerica(
+        registrarHistorico = true
+    ) {
 
         homePalacio.hidden =
             true;
@@ -933,8 +935,31 @@ document.addEventListener("DOMContentLoaded", () => {
         telaDesafiarMemoria.hidden =
             true;
 
+        telaVelocidadeMemoria.hidden =
+            true;
+
+        telaTreinoRapido.hidden =
+            true;
+
         telaMemoriaNumerica.hidden =
             false;
+
+
+        // =================================================
+        // REGISTRA A CENTRAL NO HISTÓRICO DO APP
+        // =================================================
+
+        if (registrarHistorico) {
+
+            history.pushState(
+                {
+                    tela: "memoriaNumerica"
+                },
+                "",
+                window.location.href
+            );
+
+        }
 
 
         window.scrollTo({
@@ -943,6 +968,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+
+
+
     // =====================================================
     // ABRIR FIXAR
     // =====================================================
@@ -4485,6 +4513,32 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     }
+
+
+    // =====================================================
+    // VOLTAR DO ANDROID / NAVEGADOR
+    // =====================================================
+
+    window.addEventListener(
+        "popstate",
+        () => {
+
+            // =============================================
+            // CENTRAL DA MEMÓRIA NUMÉRICA → HOME
+            // =============================================
+
+            if (
+                !telaMemoriaNumerica.hidden
+            ) {
+
+                voltarParaHome();
+
+                return;
+
+            }
+
+        }
+    );
 
 
     if (btnIniciarAprendizado) {
