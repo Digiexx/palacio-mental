@@ -6559,7 +6559,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =====================================================
-    // FINALIZAR DESAFIO
+    // NOVO DESAFIO — RESULTADO DO DESAFIAR
+    //
+    // Fecha o resultado,
+    // limpa os dados da rodada atual
+    // e retorna ao estado inicial do próprio Desafiar.
     // =====================================================
 
     if (btnFinalizarDesafio) {
@@ -6569,7 +6573,7 @@ document.addEventListener("DOMContentLoaded", () => {
             () => {
 
                 // =========================================
-                // PREPARA O DESAFIAR PARA UMA NOVA ABERTURA
+                // LIMPA OS RESULTADOS DA RODADA
                 // =========================================
 
                 desafiarAcertosRodada =
@@ -6584,19 +6588,31 @@ document.addEventListener("DOMContentLoaded", () => {
                     desafiarInicioAtual;
 
 
+                // =========================================
+                // ESCONDE O RESULTADO
+                // =========================================
+
                 desafiarResult.hidden =
                     true;
 
+
+                // =========================================
+                // RETORNA AO ESTADO INICIAL DO DESAFIAR
+                // =========================================
 
                 desafiarTrainingArea.hidden =
                     false;
 
 
-                // =========================================
-                // VOLTA PARA A CENTRAL
-                // =========================================
+                carregarMemoriaDesafiar(
+                    desafiarInicioAtual
+                );
 
-                voltarDoDesafiar();
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
             }
         );
