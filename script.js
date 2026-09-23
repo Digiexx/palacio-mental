@@ -6329,11 +6329,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // VOLTAR À CENTRAL — RESULTADO DO FIXAR
+    // NOVO FIXAR — RESULTADO DO FIXAR
     //
     // Fecha o resultado,
     // limpa os dados da rodada atual
-    // e retorna para a Central da Memória Numérica.
+    // e prepara uma nova rodada dentro do próprio Fixar.
     // =====================================================
 
     if (btnFinalizarFixar) {
@@ -6400,7 +6400,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =========================================
-                // PREPARA O TREINO PARA A PRÓXIMA ENTRADA
+                // PREPARA UMA NOVA RODADA
                 // =========================================
 
                 fixarTrainingArea.hidden =
@@ -6424,10 +6424,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =========================================
-                // RETORNA PARA A CENTRAL
+                // CARREGA NOVAMENTE A FAIXA ATUAL
                 // =========================================
 
-                voltarDoFixar();
+                carregarMemoriaFixar(
+                    fixarInicioAtual
+                );
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
 
             }
         );
