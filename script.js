@@ -147,6 +147,34 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    // =====================================================
+    // REVISÃO INTELIGENTE
+    // =====================================================
+
+    const btnRevisao =
+        document.getElementById(
+            "btnRevisao"
+        );
+
+
+    const telaRevisao =
+        document.getElementById(
+            "telaRevisao"
+        );
+
+
+    const btnVoltarRevisao =
+        document.getElementById(
+            "btnVoltarRevisao"
+        );
+
+
+    const revisoesPendentes =
+        document.getElementById(
+            "revisoesPendentes"
+        );
+
+
     const btnVoltarHome =
         document.getElementById(
             "btnVoltarHome"
@@ -965,6 +993,732 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     // =====================================================
+    // MOTOR DE DOMÍNIO — MEMÓRIA NUMÉRICA
+    //
+    // Mantém o progresso de cada associação separado
+    // do banco oficial de memórias.
+    // =====================================================
+
+    const CHAVE_DOMINIO_MEMORIA =
+        "palacioMentalDominioMemoria";
+
+
+    let dominioMemoria =
+        carregarDominioMemoria();
+
+
+    // =====================================================
+    // CRIAR REGISTRO PADRÃO
+    // =====================================================
+
+    function criarRegistroDominio() {
+
+        return {
+            pontos: 0,
+            acertos: 0,
+            erros: 0
+        };
+
+    }
+
+
+    // =====================================================
+    // CARREGAR DOMÍNIO SALVO
+    // =====================================================
+
+    function carregarDominioMemoria() {
+
+        try {
+
+            const dadosSalvos =
+                localStorage.getItem(
+                    CHAVE_DOMINIO_MEMORIA
+                );
+
+
+            if (!dadosSalvos) {
+
+                return {};
+
+            }
+
+
+            const dadosConvertidos =
+                JSON.parse(
+                    dadosSalvos
+                );
+
+
+            if (
+                !dadosConvertidos ||
+                typeof dadosConvertidos !== "object" ||
+                Array.isArray(dadosConvertidos)
+            ) {
+
+                return {};
+
+            }
+
+
+            return dadosConvertidos;
+
+        } catch (erro) {
+
+            console.error(
+                "Erro ao carregar domínio da memória:",
+                erro
+            );
+
+            return {};
+
+        }
+
+    }
+
+
+    // =====================================================
+    // SALVAR DOMÍNIO
+    // =====================================================
+
+    function salvarDominioMemoria() {
+
+        try {
+
+            localStorage.setItem(
+                CHAVE_DOMINIO_MEMORIA,
+                JSON.stringify(
+                    dominioMemoria
+                )
+            );
+
+        } catch (erro) {
+
+            console.error(
+                "Erro ao salvar domínio da memória:",
+                erro
+            );
+
+        }
+
+    }
+
+
+    // =====================================================
+    // OBTER DOMÍNIO DE UM NÚMERO
+    // =====================================================
+
+    function obterDominioNumero(
+        numero
+    ) {
+
+        const chave =
+            String(
+                numero
+            );
+
+
+        if (
+            !dominioMemoria[chave]
+        ) {
+
+            dominioMemoria[chave] =
+                criarRegistroDominio();
+
+        }
+
+
+        return dominioMemoria[chave];
+
+    }
+
+
+    // =====================================================
+    // CLASSIFICAR NÍVEL DE DOMÍNIO
+    // =====================================================
+
+    function obterNivelDominio(
+        pontos
+    ) {
+
+        const pontuacao =
+            Math.max(
+                0,
+                Math.min(
+                    100,
+                    Number(pontos) || 0
+                )
+            );
+
+
+        if (
+            pontuacao >= 80
+        ) {
+
+            return "dominado";
+
+        }
+
+
+        if (
+            pontuacao >= 60
+        ) {
+
+            return "forte";
+
+        }
+
+
+        if (
+            pontuacao >= 40
+        ) {
+
+            return "fixando";
+
+        }
+
+
+        if (
+            pontuacao >= 20
+        ) {
+
+            return "aprendendo";
+
+        }
+
+
+        return "novo";
+
+    }
+
+
+    // =====================================================
+    // PESOS DAS ATIVIDADES — DOMÍNIO
+    // =====================================================
+
+    const pesosDominio = {
+
+        fixar: {
+            acerto: 3,
+            erro: -2
+        },
+
+        treinoRapido: {
+            acerto: 4,
+            erro: -3
+        },
+
+        desafiar: {
+            acerto: 6,
+            erro: -4
+        },
+
+        velocidade: {
+            acerto: 7,
+            erro: -5
+        }
+
+    };
+
+
+    // =====================================================
+    // REGISTRAR RESULTADO NO DOMÍNIO
+    // =====================================================
+
+    function registrarResultadoDominio(
+        numero,
+        atividade,
+        acertou
+    ) {
+
+        const pesoAtividade =
+            pesosDominio[
+                atividade
+            ];
+
+
+        if (!pesoAtividade) {
+
+            console.warn(
+                "Atividade sem peso de domínio:",
+                atividade
+            );
+
+            return null;
+
+        }
+
+
+        const registro =
+            obterDominioNumero(
+                numero
+            );
+
+
+        const variacao =
+            acertou
+                ? pesoAtividade.acerto
+                : pesoAtividade.erro;
+
+
+        registro.pontos =
+            Math.max(
+                0,
+                Math.min(
+                    100,
+                    registro.pontos +
+                    variacao
+                )
+            );
+
+
+        if (acertou) {
+
+            registro.acertos++;
+
+        } else {
+
+            registro.erros++;
+
+        }
+
+
+        salvarDominioMemoria();
+
+
+        return {
+            numero: numero,
+            pontos: registro.pontos,
+            acertos: registro.acertos,
+            erros: registro.erros,
+            nivel: obterNivelDominio(
+                registro.pontos
+            )
+        };
+
+    }
+
+
+    // =====================================================
+    // ATUALIZAR MAPA DE DOMÍNIO — CENTRAL
+    // =====================================================
+
+    function atualizarMapaDominio() {
+
+        const memoriaCentralDominados =
+            document.getElementById(
+                "memoriaCentralDominados"
+            );
+
+        const memoriaCentralPercentual =
+            document.getElementById(
+                "memoriaCentralPercentual"
+            );
+
+        const memoriaCentralBarra =
+            document.getElementById(
+                "memoriaCentralBarra"
+            );
+
+        const faixasDominio =
+            document.querySelectorAll(
+                ".memory-range-card[data-dominio-inicio]"
+            );
+
+
+        // =============================================
+        // TOTAL GERAL DE NÚMEROS DOMINADOS
+        // =============================================
+
+        let totalDominados =
+            0;
+
+
+        bancoMemoria.forEach(
+            memoria => {
+
+                const registro =
+                    obterDominioNumero(
+                        memoria.numero
+                    );
+
+
+                if (
+                    registro.pontos >= 80
+                ) {
+
+                    totalDominados++;
+
+                }
+
+            }
+        );
+
+
+        const totalMemorias =
+            bancoMemoria.length;
+
+
+        const percentual =
+            totalMemorias > 0
+                ? Math.round(
+                    (
+                        totalDominados /
+                        totalMemorias
+                    ) * 100
+                )
+                : 0;
+
+
+        // =============================================
+        // PAINEL SUPERIOR
+        // =============================================
+
+        if (
+            memoriaCentralDominados
+        ) {
+
+            memoriaCentralDominados.textContent =
+                totalDominados;
+
+        }
+
+
+        if (
+            memoriaCentralPercentual
+        ) {
+
+            memoriaCentralPercentual.textContent =
+                `${percentual}%`;
+
+        }
+
+
+        if (
+            memoriaCentralBarra
+        ) {
+
+            memoriaCentralBarra.style.width =
+                `${percentual}%`;
+
+        }
+
+
+        // =============================================
+        // MAPA DAS FAIXAS
+        // =============================================
+
+        faixasDominio.forEach(
+            faixa => {
+
+                const inicio =
+                    Number(
+                        faixa.dataset.dominioInicio
+                    );
+
+                const fim =
+                    Number(
+                        faixa.dataset.dominioFim
+                    );
+
+
+                const memoriasDaFaixa =
+                    bancoMemoria.filter(
+                        memoria =>
+                            memoria.numero >= inicio &&
+                            memoria.numero <= fim
+                    );
+
+
+                const dominadosNaFaixa =
+                    memoriasDaFaixa.filter(
+                        memoria => {
+
+                            const registro =
+                                obterDominioNumero(
+                                    memoria.numero
+                                );
+
+
+                            return (
+                                registro.pontos >= 80
+                            );
+
+                        }
+                    ).length;
+
+
+                // =========================================
+                // CALCULA O PROGRESSO MÉDIO DA FAIXA
+                // =========================================
+
+                const totalPontosFaixa =
+                    memoriasDaFaixa.reduce(
+                        (
+                            total,
+                            memoria
+                        ) => {
+
+                            const registro =
+                                obterDominioNumero(
+                                    memoria.numero
+                                );
+
+
+                            return (
+                                total +
+                                registro.pontos
+                            );
+
+                        },
+                        0
+                    );
+
+
+                const percentualFaixa =
+                    memoriasDaFaixa.length > 0
+                        ? Math.round(
+                            totalPontosFaixa /
+                            memoriasDaFaixa.length
+                        )
+                        : 0;
+
+
+                // =========================================
+                // ATUALIZA QUANTIDADE DOMINADA
+                // =========================================
+
+                const indicador =
+                    faixa.querySelector(
+                        ".memory-range-domain"
+                    );
+
+
+                if (
+                    indicador
+                ) {
+
+                    indicador.textContent =
+                        `${dominadosNaFaixa}/${memoriasDaFaixa.length}`;
+
+                }
+
+
+                // =========================================
+                // ATUALIZA BARRA DE PROGRESSO
+                // =========================================
+
+                const barraProgresso =
+                    faixa.querySelector(
+                        ".memory-range-progress-fill"
+                    );
+
+
+                if (
+                    barraProgresso
+                ) {
+
+                    barraProgresso.style.width =
+                        `${percentualFaixa}%`;
+
+                }
+
+
+                // =========================================
+                // ATUALIZA PERCENTUAL DA FAIXA
+                // =========================================
+
+                const valorProgresso =
+                    faixa.querySelector(
+                        ".memory-range-progress-value"
+                    );
+
+
+                if (
+                    valorProgresso
+                ) {
+
+                    valorProgresso.textContent =
+                        `${percentualFaixa}%`;
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — IDENTIFICAR PENDÊNCIAS
+    //
+    // Analisa somente memórias que já possuem histórico
+    // real de treinamento.
+    //
+    // Uma memória nunca treinada não entra na revisão.
+    // =====================================================
+
+    function obterMemoriasParaRevisao() {
+
+        const memoriasParaRevisao =
+            bancoMemoria
+                .map(
+                    memoria => {
+
+                        const registro =
+                            obterDominioNumero(
+                                memoria.numero
+                            );
+
+
+                        const totalTentativas =
+                            registro.acertos +
+                            registro.erros;
+
+
+                        // =================================
+                        // IGNORA MEMÓRIAS NUNCA TREINADAS
+                        // =================================
+
+                        if (
+                            totalTentativas === 0
+                        ) {
+
+                            return null;
+
+                        }
+
+
+                        // =================================
+                        // MEMÓRIA AINDA PRECISA DE REVISÃO
+                        //
+                        // Por enquanto:
+                        // abaixo de 80 pontos = pendente
+                        // =================================
+
+                        if (
+                            registro.pontos >= 80
+                        ) {
+
+                            return null;
+
+                        }
+
+
+                        return {
+
+                            numero:
+                                memoria.numero,
+
+                            palavra:
+                                memoria.palavra,
+
+                            imagem:
+                                memoria.imagem,
+
+                            pontos:
+                                registro.pontos,
+
+                            acertos:
+                                registro.acertos,
+
+                            erros:
+                                registro.erros,
+
+                            totalTentativas:
+                                totalTentativas,
+
+                            nivel:
+                                obterNivelDominio(
+                                    registro.pontos
+                                )
+
+                        };
+
+                    }
+                )
+                .filter(
+                    memoria =>
+                        memoria !== null
+                );
+
+
+        // =============================================
+        // PRIORIZAÇÃO
+        //
+        // 1º mais erros
+        // 2º menor domínio
+        // 3º menor número
+        // =============================================
+
+        memoriasParaRevisao.sort(
+            (
+                memoriaA,
+                memoriaB
+            ) => {
+
+                if (
+                    memoriaB.erros !==
+                    memoriaA.erros
+                ) {
+
+                    return (
+                        memoriaB.erros -
+                        memoriaA.erros
+                    );
+
+                }
+
+
+                if (
+                    memoriaA.pontos !==
+                    memoriaB.pontos
+                ) {
+
+                    return (
+                        memoriaA.pontos -
+                        memoriaB.pontos
+                    );
+
+                }
+
+
+                return (
+                    memoriaA.numero -
+                    memoriaB.numero
+                );
+
+            }
+        );
+
+
+        return memoriasParaRevisao;
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — ATUALIZAR CONTADOR DA HOME
+    // =====================================================
+
+    function atualizarContadorRevisao() {
+
+        const memoriasParaRevisao =
+            obterMemoriasParaRevisao();
+
+
+        if (
+            revisoesPendentes
+        ) {
+
+            revisoesPendentes.textContent =
+                memoriasParaRevisao.length;
+
+        }
+
+    }
+
+
+    // =====================================================
     // GERENCIADOR CENTRAL — MAPA DE TELAS
     // =====================================================
 
@@ -973,6 +1727,11 @@ document.addEventListener("DOMContentLoaded", () => {
         home: {
             elemento: homePalacio,
             pai: null
+        },
+
+        revisao: {
+            elemento: telaRevisao,
+            pai: "home"
         },
 
         memoriaNumerica: {
@@ -1068,6 +1827,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
         telaDestino.elemento.hidden =
             false;
+
+
+        // =============================================
+        // ATUALIZA O DOMÍNIO AO EXIBIR A CENTRAL
+        // =============================================
+
+        if (
+            nomeTela ===
+            "memoriaNumerica"
+        ) {
+
+            atualizarMapaDominio();
+
+        }
+
+
+        // =============================================
+        // ATUALIZA A REVISÃO AO EXIBIR A HOME
+        // =============================================
+
+        if (
+            nomeTela ===
+            "home"
+        ) {
+
+            atualizarContadorRevisao();
+
+        }
 
     }
 
@@ -1756,6 +2543,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         velocidadeErros.push(
                             numeroAtual
+                        );
+
+
+                        // =====================================
+                        // REGISTRA O TEMPO ESGOTADO
+                        // NO MOTOR DE DOMÍNIO
+                        //
+                        // TEMPO ESGOTADO:
+                        // -5 pontos
+                        // =====================================
+
+                        registrarResultadoDominio(
+                            numeroAtual,
+                            "velocidade",
+                            false
                         );
 
 
@@ -3169,6 +3971,23 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
         }
+
+
+        // =================================================
+        // REGISTRA O RESULTADO NO MOTOR DE DOMÍNIO
+        //
+        // ACERTO:
+        // +6 pontos
+        //
+        // ERRO:
+        // -4 pontos
+        // =================================================
+
+        registrarResultadoDominio(
+            desafiarNumeroAtual,
+            "desafiar",
+            acertou
+        );
 
 
         // =================================================
@@ -4621,6 +5440,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =====================================================
+    // ABRIR REVISÃO INTELIGENTE
+    // =====================================================
+
+    if (btnRevisao) {
+
+        btnRevisao.addEventListener(
+            "click",
+            () => {
+
+                navegarParaTela(
+                    "revisao"
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR — REVISÃO INTELIGENTE
+    // =====================================================
+
+    if (btnVoltarRevisao) {
+
+        btnVoltarRevisao.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
     if (btnVoltarHome) {
 
         btnVoltarHome.addEventListener(
@@ -4993,6 +5850,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =================================================
+        // REGISTRA O RESULTADO NO MOTOR DE DOMÍNIO
+        //
+        // LEMBREI:
+        // +4 pontos
+        //
+        // NÃO LEMBREI:
+        // -3 pontos
+        // =================================================
+
+        registrarResultadoDominio(
+            memoriaAtual.numero,
+            "treinoRapido",
+            lembrou
+        );
+
+
+        // =================================================
         // AVANÇA PARA O PRÓXIMO DESAFIO
         // =================================================
 
@@ -5243,6 +6117,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =============================================
+                // REGISTRA O ACERTO NO MOTOR DE DOMÍNIO
+                //
+                // ACERTO:
+                // +7 pontos
+                // =============================================
+
+                registrarResultadoDominio(
+                    numeroAtual,
+                    "velocidade",
+                    true
+                );
+
+
+                // =============================================
                 // AVANÇA PARA A PRÓXIMA RODADA
                 // =============================================
 
@@ -5271,6 +6159,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 velocidadeErros.push(
                     numeroAtual
+                );
+
+
+                // =============================================
+                // REGISTRA O ERRO NO MOTOR DE DOMÍNIO
+                //
+                // ERRO:
+                // -5 pontos
+                // =============================================
+
+                registrarResultadoDominio(
+                    numeroAtual,
+                    "velocidade",
+                    false
                 );
 
 
@@ -6019,6 +6921,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =========================================
+                // REGISTRA O ACERTO NO MOTOR DE DOMÍNIO
+                // =========================================
+
+                registrarResultadoDominio(
+                    fixarNumeroAtual,
+                    "fixar",
+                    true
+                );
+
+
+                // =========================================
                 // MODO REVISÃO
                 //
                 // Avança somente dentro da fila
@@ -6149,6 +7062,17 @@ document.addEventListener("DOMContentLoaded", () => {
                             numero !==
                             fixarNumeroAtual
                     );
+
+
+                // =========================================
+                // REGISTRA O ERRO NO MOTOR DE DOMÍNIO
+                // =========================================
+
+                registrarResultadoDominio(
+                    fixarNumeroAtual,
+                    "fixar",
+                    false
+                );
 
 
                 // =========================================

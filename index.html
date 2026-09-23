@@ -109,6 +109,98 @@
 
 
             <!-- =================================================
+                 TELA — REVISÃO INTELIGENTE
+            ================================================== -->
+
+            <section class="app-screen screen-revisao" id="telaRevisao" hidden>
+
+                <!-- =================================================
+                     CABEÇALHO
+                ================================================== -->
+
+                <div class="memory-central-header">
+
+                    <button class="back-button" id="btnVoltarRevisao" type="button"
+                        aria-label="Voltar para a tela anterior">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m15 18-6-6 6-6" />
+                        </svg>
+
+                    </button>
+
+
+                    <div>
+
+                        <span class="section-label">
+                            TREINO ADAPTATIVO
+                        </span>
+
+                        <h2>
+                            Revisão Inteligente
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RESUMO DA REVISÃO
+                ================================================== -->
+
+                <section class="memory-dashboard">
+
+                    <div class="memory-dashboard-top">
+
+                        <div>
+
+                            <span class="memory-dashboard-label">
+                                PARA REVISAR
+                            </span>
+
+                            <strong>
+                                <span id="revisaoTotalPendentes">
+                                    0
+                                </span>
+
+                                <small>
+                                    memórias
+                                </small>
+                            </strong>
+
+                        </div>
+
+
+                        <div class="memory-dashboard-percent">
+
+                            <span id="revisaoPercentual">
+                                0%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="memory-dashboard-track">
+
+                        <div class="memory-dashboard-fill" id="revisaoBarra"></div>
+
+                    </div>
+
+
+                    <p>
+                        O Palácio identifica automaticamente as
+                        associações que mais precisam de reforço.
+                    </p>
+
+                </section>
+
+            </section>
+
+
+            <!-- =================================================
                  TELA — MEMÓRIA NUMÉRICA
             ================================================== -->
 
@@ -435,54 +527,276 @@
 
                     <div class="memory-range-grid">
 
-                        <div class="memory-range-card">
-                            <span>01–10</span>
-                            <strong>0/10</strong>
+                        <div class="memory-range-card" data-dominio-inicio="1" data-dominio-fim="10">
+
+                            <div class="memory-range-card-top">
+
+                                <span>
+                                    01–10
+                                </span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+
+                                    <div class="memory-range-progress-fill"></div>
+
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>11–20</span>
-                            <strong>0/10</strong>
+                        <div class="memory-range-card" data-dominio-inicio="11" data-dominio-fim="20">
+
+                            <div class="memory-range-card-top">
+
+                                <span>11–20</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>21–30</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="21" data-dominio-fim="30">
+
+                            <div class="memory-range-card-top">
+
+                                <span>21–30</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>31–40</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="31" data-dominio-fim="40">
+
+                            <div class="memory-range-card-top">
+
+                                <span>31–40</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>41–50</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="41" data-dominio-fim="50">
+
+                            <div class="memory-range-card-top">
+
+                                <span>41–50</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>51–60</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="51" data-dominio-fim="60">
+
+                            <div class="memory-range-card-top">
+
+                                <span>51–60</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>61–70</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="61" data-dominio-fim="70">
+
+                            <div class="memory-range-card-top">
+
+                                <span>61–70</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>71–80</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="71" data-dominio-fim="80">
+
+                            <div class="memory-range-card-top">
+
+                                <span>71–80</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>81–90</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="81" data-dominio-fim="90">
+
+                            <div class="memory-range-card-top">
+
+                                <span>81–90</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
-                        <div class="memory-range-card">
-                            <span>91–100</span>
-                            <strong>0/10</strong>
+
+                        <div class="memory-range-card" data-dominio-inicio="91" data-dominio-fim="100">
+
+                            <div class="memory-range-card-top">
+
+                                <span>91–100</span>
+
+                                <strong class="memory-range-domain">
+                                    0/10
+                                </strong>
+
+                            </div>
+
+                            <div class="memory-range-progress">
+
+                                <div class="memory-range-progress-track">
+                                    <div class="memory-range-progress-fill"></div>
+                                </div>
+
+                                <small class="memory-range-progress-value">
+                                    0%
+                                </small>
+
+                            </div>
+
                         </div>
 
                     </div>

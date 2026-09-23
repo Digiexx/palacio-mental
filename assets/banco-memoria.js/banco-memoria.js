@@ -253,9 +253,9 @@ const bancoMemoria = [
     {
         numero: 27,
         codigo: "NF",
-        palavra: "Nifo",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/27-nifo.webp",
+        palavra: "Nifex",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/27-nifex.webp",
         dominado: false
     },
 
@@ -701,9 +701,9 @@ const bancoMemoria = [
     {
         numero: 74,
         codigo: "FC",
-        palavra: "Foca",
-        categoria: "animal",
-        imagem: "assets/imagens/memoria-numerica/numeros/74-foca.webp",
+        palavra: "Faca",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/74-faca.webp",
         dominado: false
     },
 
@@ -823,9 +823,9 @@ const bancoMemoria = [
     {
         numero: 87,
         codigo: "GF",
-        palavra: "Gefe",
-        categoria: "conceito",
-        imagem: "assets/imagens/memoria-numerica/numeros/87-gefe.webp",
+        palavra: "Gefinho",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/87-gefinho.webp",
         dominado: false
     },
 
@@ -900,9 +900,9 @@ const bancoMemoria = [
     {
         numero: 95,
         codigo: "PL",
-        palavra: "Paula",
+        palavra: "Pulo",
         categoria: "personagem",
-        imagem: "assets/imagens/memoria-numerica/numeros/95-paula.webp",
+        imagem: "assets/imagens/memoria-numerica/numeros/95-pulo.webp",
         dominado: false
     },
 

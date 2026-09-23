@@ -1427,6 +1427,28 @@ body [hidden][hidden] {
 
     padding-bottom:
         115px;
+
+}
+
+
+/* =========================================================
+   TELA — REVISÃO INTELIGENTE
+========================================================= */
+
+.screen-revisao {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding-top:
+        24px;
+
+    padding-bottom:
+        115px;
+
 }
 
 
@@ -1445,6 +1467,7 @@ body [hidden][hidden] {
 
     margin-bottom:
         25px;
+
 }
 
 
@@ -1491,6 +1514,7 @@ body [hidden][hidden] {
         transform var(--transition),
         border-color var(--transition),
         background var(--transition);
+
 }
 
 
@@ -1504,6 +1528,7 @@ body [hidden][hidden] {
 
     background:
         rgba(124, 58, 237, 0.15);
+
 }
 
 
@@ -1529,6 +1554,7 @@ body [hidden][hidden] {
 
     stroke-linejoin:
         round;
+
 }
 
 
@@ -1553,6 +1579,7 @@ body [hidden][hidden] {
 
     letter-spacing:
         2px;
+
 }
 
 
@@ -1574,6 +1601,7 @@ body [hidden][hidden] {
 
     color:
         #ffffff;
+
 }
 
 
@@ -2274,17 +2302,14 @@ body [hidden][hidden] {
     flex-direction:
         column;
 
-    align-items:
-        center;
-
     justify-content:
         center;
 
     gap:
-        5px;
+        7px;
 
     padding:
-        8px 3px;
+        8px 6px;
 
     border:
         1px solid rgba(147, 105, 196, 0.13);
@@ -2299,7 +2324,30 @@ body [hidden][hidden] {
 }
 
 
-.memory-range-card span {
+/* =========================================================
+   TOPO DO CARD — FAIXA + DOMINADOS
+========================================================= */
+
+.memory-range-card-top {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        4px;
+}
+
+
+.memory-range-card-top span {
 
     color:
         rgba(235, 226, 247, 0.82);
@@ -2312,7 +2360,7 @@ body [hidden][hidden] {
 }
 
 
-.memory-range-card strong {
+.memory-range-card-top strong {
 
     color:
         #a96dff;
@@ -2322,6 +2370,91 @@ body [hidden][hidden] {
 
     font-weight:
         800;
+}
+
+
+/* =========================================================
+   PROGRESSO DA FAIXA
+========================================================= */
+
+.memory-range-progress {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+}
+
+
+.memory-range-progress-track {
+
+    min-width:
+        0;
+
+    height:
+        3px;
+
+    flex:
+        1;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.memory-range-progress-fill {
+
+    width:
+        0%;
+
+    height:
+        100%;
+
+    border-radius:
+        inherit;
+
+    background:
+        linear-gradient(90deg,
+            #7c3aed,
+            #a96dff);
+
+    box-shadow:
+        0 0 8px rgba(169, 109, 255, 0.35);
+
+    transition:
+        width 0.35s ease;
+}
+
+
+.memory-range-progress-value {
+
+    min-width:
+        22px;
+
+    color:
+        rgba(235, 226, 247, 0.55);
+
+    font-size:
+        7px;
+
+    font-weight:
+        700;
+
+    text-align:
+        right;
 }
 
 
@@ -2373,7 +2506,7 @@ body [hidden][hidden] {
     .screen-memoria {
 
         padding-bottom:
-            105px;
+            180px;
     }
 
 
