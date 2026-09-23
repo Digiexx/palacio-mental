@@ -175,6 +175,133 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const revisaoTotalPendentes =
+        document.getElementById(
+            "revisaoTotalPendentes"
+        );
+
+
+    const revisaoPercentual =
+        document.getElementById(
+            "revisaoPercentual"
+        );
+
+
+    const revisaoBarra =
+        document.getElementById(
+            "revisaoBarra"
+        );
+
+
+        // =============================================
+        // NÚMERO
+        // =============================================
+
+
+    // =====================================================
+    // ATIVIDADE — REVISÃO INTELIGENTE
+    // =====================================================
+
+    const revisaoTraining =
+        document.getElementById(
+            "revisaoTraining"
+        );
+
+
+    const revisaoTrainingProgress =
+        document.getElementById(
+            "revisaoTrainingProgress"
+        );
+
+
+    const revisaoTrainingNumber =
+        document.getElementById(
+            "revisaoTrainingNumber"
+        );
+
+
+    const revisaoTrainingAnswer =
+        document.getElementById(
+            "revisaoTrainingAnswer"
+        );
+
+
+    const revisaoTrainingAnswerValue =
+        document.getElementById(
+            "revisaoTrainingAnswerValue"
+        );
+
+
+    const btnRevelarRevisao =
+        document.getElementById(
+            "btnRevelarRevisao"
+        );
+
+
+    const revisaoTrainingEvaluation =
+        document.getElementById(
+            "revisaoTrainingEvaluation"
+        );
+
+
+    const btnNaoLembreiRevisao =
+        document.getElementById(
+            "btnNaoLembreiRevisao"
+        );
+
+
+    const btnLembreiRevisao =
+        document.getElementById(
+            "btnLembreiRevisao"
+        );
+
+
+    // =====================================================
+    // RESULTADO — REVISÃO INTELIGENTE
+    // =====================================================
+
+    const revisaoResult =
+        document.getElementById(
+            "revisaoResult"
+        );
+
+
+    const revisaoResultAcertos =
+        document.getElementById(
+            "revisaoResultAcertos"
+        );
+
+
+    const revisaoResultErros =
+        document.getElementById(
+            "revisaoResultErros"
+        );
+
+
+    const revisaoResultWeak =
+        document.getElementById(
+            "revisaoResultWeak"
+        );
+
+
+    const revisaoResultWeakList =
+        document.getElementById(
+            "revisaoResultWeakList"
+        );
+
+
+    const revisaoResultSuccess =
+        document.getElementById(
+            "revisaoResultSuccess"
+        );
+
+
+    const btnNovaRevisao =
+        document.getElementById(
+            "btnNovaRevisao"
+        );
+
+
     const btnVoltarHome =
         document.getElementById(
             "btnVoltarHome"
@@ -1697,6 +1824,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // REVISÃO INTELIGENTE — PREPARAR SESSÃO
+    //
+    // Cria uma nova sessão usando as memórias
+    // selecionadas pelo motor de revisão.
+    // =====================================================
+
+    function iniciarRevisaoInteligente() {
+
+        revisaoFila =
+            obterMemoriasParaRevisao();
+
+
+        revisaoIndiceAtual =
+            0;
+
+
+        revisaoAcertos =
+            [];
+
+
+        revisaoErros =
+            [];
+
+
+        // =============================================
+        // NENHUMA MEMÓRIA PENDENTE
+        // =============================================
+
+        if (
+            revisaoFila.length === 0
+        ) {
+
+            return false;
+
+        }
+
+
+        return true;
+
+    }
+
+
+    // =====================================================
     // REVISÃO INTELIGENTE — ATUALIZAR CONTADOR DA HOME
     // =====================================================
 
@@ -1717,6 +1887,232 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — LEMBREI
+    // =====================================================
+
+    if (btnLembreiRevisao) {
+
+        btnLembreiRevisao.addEventListener(
+            "click",
+            () => {
+
+                registrarRespostaRevisao(
+                    true
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — NOVA REVISÃO
+    // =====================================================
+
+    if (btnNovaRevisao) {
+
+        btnNovaRevisao.addEventListener(
+            "click",
+            () => {
+
+                const revisaoDisponivel =
+                    iniciarRevisaoInteligente();
+
+
+                // =========================================
+                // ESCONDE O RESULTADO ANTERIOR
+                // =========================================
+
+                revisaoResult.hidden =
+                    true;
+
+
+                // =========================================
+                // EXISTEM MEMÓRIAS PARA REVISAR
+                // =========================================
+
+                if (
+                    revisaoDisponivel
+                ) {
+
+                    carregarMemoriaRevisao();
+
+
+                    revisaoTraining.hidden =
+                        false;
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // NÃO EXISTEM MAIS PENDÊNCIAS
+                // =========================================
+
+                revisaoTraining.hidden =
+                    true;
+
+
+                if (
+                    revisaoTotalPendentes
+                ) {
+
+                    revisaoTotalPendentes.textContent =
+                        "0";
+
+                }
+
+
+                if (
+                    revisaoPercentual
+                ) {
+
+                    revisaoPercentual.textContent =
+                        "0%";
+
+                }
+
+
+                if (
+                    revisaoBarra
+                ) {
+
+                    revisaoBarra.style.width =
+                        "0%";
+
+                }
+
+            }
+        );
+
+    }
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — CARREGAR MEMÓRIA ATUAL
+    // =====================================================
+
+    function carregarMemoriaRevisao() {
+
+        const memoriaAtual =
+            revisaoFila[
+                revisaoIndiceAtual
+            ];
+
+
+        if (
+            !memoriaAtual
+        ) {
+
+            return false;
+
+        }
+
+
+        // =============================================
+        // PROGRESSO DA SESSÃO
+        // =============================================
+
+        revisaoTrainingProgress.textContent =
+            `${revisaoIndiceAtual + 1} / ${revisaoFila.length}`;
+
+
+        // =============================================
+        // PAINEL SUPERIOR
+        // =============================================
+
+        const revisaoConcluidas =
+            revisaoIndiceAtual;
+
+
+        const percentualRevisao =
+            Math.round(
+                (
+                    revisaoConcluidas /
+                    revisaoFila.length
+                ) *
+                100
+            );
+
+
+        if (
+            revisaoTotalPendentes
+        ) {
+
+            revisaoTotalPendentes.textContent =
+                revisaoFila.length;
+
+        }
+
+
+        if (
+            revisaoPercentual
+        ) {
+
+            revisaoPercentual.textContent =
+                `${percentualRevisao}%`;
+
+        }
+
+
+        if (
+            revisaoBarra
+        ) {
+
+            revisaoBarra.style.width =
+                `${percentualRevisao}%`;
+
+        }
+
+
+        // =============================================
+        // NÚMERO
+        // =============================================
+
+        revisaoTrainingNumber.textContent =
+            String(
+                memoriaAtual.numero
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        // =============================================
+        // RESPOSTA
+        // =============================================
+
+        revisaoTrainingAnswerValue.textContent =
+            memoriaAtual.palavra;
+
+
+        // =============================================
+        // ESTADO INICIAL DO CARD
+        // =============================================
+
+        revisaoTrainingAnswer.hidden =
+            true;
+
+        revisaoTrainingEvaluation.hidden =
+            true;
+
+        btnRevelarRevisao.hidden =
+            false;
+
+
+        return true;
+
+    }
 
     // =====================================================
     // GERENCIADOR CENTRAL — MAPA DE TELAS
@@ -5454,6 +5850,38 @@ document.addEventListener("DOMContentLoaded", () => {
                     "revisao"
                 );
 
+
+                const revisaoDisponivel =
+                    iniciarRevisaoInteligente();
+
+
+                // =========================================
+                // EXISTEM MEMÓRIAS PARA REVISAR
+                // =========================================
+
+                if (
+                    revisaoDisponivel
+                ) {
+
+                    carregarMemoriaRevisao();
+
+                    revisaoTraining.hidden =
+                        false;
+
+                }
+
+
+                // =========================================
+                // NENHUMA MEMÓRIA PARA REVISAR
+                // =========================================
+
+                else {
+
+                    revisaoTraining.hidden =
+                        true;
+
+                }
+
             }
         );
 
@@ -5471,6 +5899,73 @@ document.addEventListener("DOMContentLoaded", () => {
             () => {
 
                 history.back();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — REVELAR RESPOSTA
+    // =====================================================
+
+    if (btnRevelarRevisao) {
+
+        btnRevelarRevisao.addEventListener(
+            "click",
+            () => {
+
+                revisaoTrainingAnswer.hidden =
+                    false;
+
+
+                revisaoTrainingEvaluation.hidden =
+                    false;
+
+
+                btnRevelarRevisao.hidden =
+                    true;
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — NÃO LEMBREI
+    // =====================================================
+
+    if (btnNaoLembreiRevisao) {
+
+        btnNaoLembreiRevisao.addEventListener(
+            "click",
+            () => {
+
+                registrarRespostaRevisao(
+                    false
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — LEMBREI
+    // =====================================================
+
+    if (btnLembreiRevisao) {
+
+        btnLembreiRevisao.addEventListener(
+            "click",
+            () => {
+
+                registrarRespostaRevisao(
+                    true
+                );
 
             }
         );
@@ -6298,6 +6793,23 @@ document.addEventListener("DOMContentLoaded", () => {
         [];
 
     let treinoRapidoErros =
+        [];
+
+
+    // =====================================================
+    // ESTADO DA SESSÃO — REVISÃO INTELIGENTE
+    // =====================================================
+
+    let revisaoFila =
+        [];
+
+    let revisaoIndiceAtual =
+        0;
+
+    let revisaoAcertos =
+        [];
+
+    let revisaoErros =
         [];
 
 
@@ -7843,6 +8355,253 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — REGISTRAR RESPOSTA
+    // =====================================================
+
+    function registrarRespostaRevisao(
+        lembrou
+    ) {
+
+        const memoriaAtual =
+            revisaoFila[
+                revisaoIndiceAtual
+            ];
+
+
+        if (
+            !memoriaAtual
+        ) {
+
+            return;
+
+        }
+
+
+        // =============================================
+        // REGISTRA O RESULTADO DA SESSÃO
+        // =============================================
+
+        if (
+            lembrou
+        ) {
+
+            revisaoAcertos.push(
+                memoriaAtual.numero
+            );
+
+        }
+
+        else {
+
+            revisaoErros.push(
+                memoriaAtual.numero
+            );
+
+        }
+
+
+        // =============================================
+        // AVANÇA NA FILA
+        // =============================================
+
+        revisaoIndiceAtual++;
+
+
+        // =============================================
+        // AINDA EXISTEM MEMÓRIAS
+        // =============================================
+
+        if (
+            revisaoIndiceAtual <
+            revisaoFila.length
+        ) {
+
+            carregarMemoriaRevisao();
+
+            return;
+
+        }
+
+
+        // =============================================
+        // SESSÃO CONCLUÍDA — 100%
+        // =============================================
+
+        if (
+            revisaoPercentual
+        ) {
+
+            revisaoPercentual.textContent =
+                "100%";
+
+        }
+
+
+        if (
+            revisaoBarra
+        ) {
+
+            revisaoBarra.style.width =
+                "100%";
+
+        }
+
+
+        // =============================================
+        // EXIBE O RESULTADO DA SESSÃO
+        // =============================================
+
+        mostrarResultadoRevisao();
+
+    }
+
+
+    // =====================================================
+    // REVISÃO INTELIGENTE — MOSTRAR RESULTADO
+    // =====================================================
+
+    function mostrarResultadoRevisao() {
+
+        // =============================================
+        // ACERTOS E ERROS
+        // =============================================
+
+        revisaoResultAcertos.textContent =
+            revisaoAcertos.length;
+
+
+        revisaoResultErros.textContent =
+            revisaoErros.length;
+
+
+        // =============================================
+        // LIMPA A LISTA ANTERIOR
+        // =============================================
+
+        revisaoResultWeakList.innerHTML =
+            "";
+
+
+        // =============================================
+        // EXISTEM MEMÓRIAS PARA REFORÇAR
+        // =============================================
+
+        if (
+            revisaoErros.length > 0
+        ) {
+
+            revisaoResultWeak.hidden =
+                false;
+
+            revisaoResultSuccess.hidden =
+                true;
+
+
+            revisaoErros.forEach(
+                numero => {
+
+                    const memoria =
+                        bancoMemoria.find(
+                            item =>
+                                item.numero ===
+                                numero
+                        );
+
+
+                    if (
+                        !memoria
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const item =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    item.className =
+                        "revisao-result-weak-item";
+
+
+                    const numeroElemento =
+                        document.createElement(
+                            "strong"
+                        );
+
+
+                    numeroElemento.textContent =
+                        String(
+                            memoria.numero
+                        ).padStart(
+                            2,
+                            "0"
+                        );
+
+
+                    const palavraElemento =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    palavraElemento.textContent =
+                        memoria.palavra;
+
+
+                    item.append(
+                        numeroElemento,
+                        palavraElemento
+                    );
+
+
+                    revisaoResultWeakList.appendChild(
+                        item
+                    );
+
+                }
+            );
+
+        }
+
+
+        // =============================================
+        // LEMBROU DE TODAS
+        // =============================================
+
+        else {
+
+            revisaoResultWeak.hidden =
+                true;
+
+            revisaoResultSuccess.hidden =
+                false;
+
+        }
+
+
+        // =============================================
+        // EXIBE O RESULTADO
+        // =============================================
+
+        revisaoTraining.hidden =
+            true;
+
+        revisaoResult.hidden =
+            false;
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
 
     // =====================================================
     // MOSTRAR BANNER

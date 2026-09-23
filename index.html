@@ -197,6 +197,211 @@
 
                 </section>
 
+
+                <!-- =================================================
+                     ATIVIDADE — REVISÃO INTELIGENTE
+                ================================================== -->
+
+                <section class="revisao-training" id="revisaoTraining" hidden>
+
+                    <!-- =============================================
+                         PROGRESSO DA SESSÃO
+                    ============================================== -->
+
+                    <div class="revisao-training-progress">
+
+                        <span>
+                            REVISÃO
+                        </span>
+
+                        <strong id="revisaoTrainingProgress">
+                            1 / 1
+                        </strong>
+
+                    </div>
+
+
+                    <!-- =============================================
+                         DESAFIO
+                    ============================================== -->
+
+                    <div class="revisao-training-card">
+
+                        <div class="revisao-training-question">
+
+                            <span class="revisao-training-label">
+                                QUAL É A ASSOCIAÇÃO?
+                            </span>
+
+
+                            <strong class="revisao-training-number" id="revisaoTrainingNumber">
+                                00
+                            </strong>
+
+                        </div>
+
+
+                        <!-- =========================================
+                             RESPOSTA
+                        ========================================== -->
+
+                        <div class="revisao-training-answer" id="revisaoTrainingAnswer" hidden>
+
+                            <span>
+                                ASSOCIAÇÃO
+                            </span>
+
+                            <strong id="revisaoTrainingAnswerValue">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =============================================
+                         REVELAR RESPOSTA
+                    ============================================== -->
+
+                    <button class="primary-button" id="btnRevelarRevisao" type="button">
+
+                        Revelar resposta
+
+                    </button>
+
+
+                    <!-- =============================================
+                         AVALIAÇÃO
+                    ============================================== -->
+
+                    <div class="revisao-training-evaluation" id="revisaoTrainingEvaluation" hidden>
+
+                        <button class="secondary-button" id="btnNaoLembreiRevisao" type="button">
+                            Não lembrei
+                        </button>
+
+
+                        <button class="primary-button" id="btnLembreiRevisao" type="button">
+                            Lembrei
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     RESULTADO — REVISÃO INTELIGENTE
+                ================================================== -->
+
+                <section class="revisao-result" id="revisaoResult" hidden>
+
+                    <!-- =============================================
+                         CABEÇALHO DO RESULTADO
+                    ============================================== -->
+
+                    <div class="revisao-result-header">
+
+                        <div class="revisao-result-icon">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
+
+                        </div>
+
+
+                        <span class="module-kicker">
+                            SESSÃO FINALIZADA
+                        </span>
+
+
+                        <h3>
+                            Revisão concluída
+                        </h3>
+
+
+                        <p>
+                            Você concluiu todas as memórias
+                            selecionadas para esta revisão.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =============================================
+                         RESUMO DA SESSÃO
+                    ============================================== -->
+
+                    <div class="revisao-result-stats">
+
+                        <div class="revisao-result-stat">
+
+                            <strong id="revisaoResultAcertos">
+                                0
+                            </strong>
+
+                            <span>
+                                Lembrei
+                            </span>
+
+                        </div>
+
+
+                        <div class="revisao-result-stat">
+
+                            <strong id="revisaoResultErros">
+                                0
+                            </strong>
+
+                            <span>
+                                Não lembrei
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =============================================
+                         MEMÓRIAS PARA REFORÇAR
+                    ============================================== -->
+
+                    <div class="revisao-result-weak" id="revisaoResultWeak">
+
+                        <span class="module-kicker">
+                            MEMÓRIAS PARA REFORÇAR
+                        </span>
+
+
+                        <div class="revisao-result-weak-list" id="revisaoResultWeakList">
+                        </div>
+
+                    </div>
+
+
+                    <!-- =============================================
+                         NENHUMA MEMÓRIA PARA REFORÇAR
+                    ============================================== -->
+
+                    <p class="revisao-result-success" id="revisaoResultSuccess" hidden>
+                        Excelente! Você lembrou de todas as associações desta sessão.
+                    </p>
+
+
+                    <!-- =============================================
+                         NOVA REVISÃO
+                    ============================================== -->
+
+                    <button class="primary-button" id="btnNovaRevisao" type="button">
+
+                        Nova revisão
+
+                    </button>
+
+                </section>
+
             </section>
 
 
