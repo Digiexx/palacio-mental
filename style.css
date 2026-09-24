@@ -2267,6 +2267,100 @@ body [hidden][hidden] {
         0 0 24px rgba(156, 61, 255, 0.18);
 }
 
+/* =========================================================
+   JORNADA — LINHA 01
+   APRENDIZAGEM
+========================================================= */
+
+.memory-training-learning {
+    border-color:
+        rgba(168, 85, 247, 0.38);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(168, 85, 247, 0.18),
+            transparent 58%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(57, 27, 91, 0.92),
+            rgba(20, 13, 32, 0.97)
+        );
+
+    box-shadow:
+        0 10px 26px rgba(107, 33, 168, 0.16);
+}
+
+/* =========================================================
+   JORNADA — LINHA 02
+   TREINO
+========================================================= */
+
+.memory-training-training {
+    border-color:
+        rgba(59, 130, 246, 0.34);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(59, 130, 246, 0.15),
+            transparent 58%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(25, 42, 72, 0.90),
+            rgba(14, 17, 28, 0.97)
+        );
+
+    box-shadow:
+        0 10px 26px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================================================
+   JORNADA — LINHA 03
+   EXTRAS
+========================================================= */
+
+.memory-training-extra {
+    border-color:
+        rgba(236, 72, 153, 0.34);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(236, 72, 153, 0.15),
+            transparent 58%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(72, 24, 61, 0.90),
+            rgba(27, 13, 26, 0.97)
+        );
+
+    box-shadow:
+        0 10px 26px rgba(190, 24, 93, 0.12);
+}
+
+
+.memory-training-learning .memory-training-icon {
+    color:
+        #b99cff;
+
+    border-color:
+        rgba(167, 139, 250, 0.34);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(124, 58, 237, 0.22),
+            rgba(76, 29, 149, 0.10)
+        );
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.14);
+}
+
 
 /* =========================================================
    MAPA DE DOMÍNIO
@@ -2542,6 +2636,39 @@ body [hidden][hidden] {
 
         gap:
             8px;
+    }
+
+
+    #btnTabelaMental {
+        order: 1;
+    }
+
+    #btnIniciarAprendizado {
+        order: 2;
+    }
+
+    #btnFixar {
+        order: 3;
+    }
+
+    #btnDesafiarMemoria {
+        order: 4;
+    }
+
+    #btnVelocidadeMemoria {
+        order: 5;
+    }
+
+    #btnTreinoPersonalizadoMemoria {
+        order: 6;
+    }
+
+    #btnMemoriaTreinoRapido {
+        order: 7;
+    }
+
+    #btnRevisarMemoria {
+        order: 8;
     }
 
 
