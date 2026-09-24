@@ -1334,6 +1334,11 @@ document.addEventListener("DOMContentLoaded", () => {
             erro: -3
         },
 
+        revisao: {
+            acerto: 5,
+            erro: -4
+        },
+
         desafiar: {
             acerto: 6,
             erro: -4
@@ -1423,6 +1428,9 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
     }
+
+
+
 
 
     // =====================================================
@@ -1884,26 +1892,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 memoriasParaRevisao.length;
 
         }
-
-    }
-
-
-    // =====================================================
-    // REVISÃO INTELIGENTE — LEMBREI
-    // =====================================================
-
-    if (btnLembreiRevisao) {
-
-        btnLembreiRevisao.addEventListener(
-            "click",
-            () => {
-
-                registrarRespostaRevisao(
-                    true
-                );
-
-            }
-        );
 
     }
 
@@ -8400,6 +8388,23 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
         }
+
+
+        // =============================================
+        // ATUALIZA O MOTOR DE DOMÍNIO
+        //
+        // LEMBREI:
+        // +5 pontos
+        //
+        // NÃO LEMBREI:
+        // -4 pontos
+        // =============================================
+
+        registrarResultadoDominio(
+            memoriaAtual.numero,
+            "revisao",
+            lembrou
+        );
 
 
         // =============================================
