@@ -280,9 +280,9 @@ const bancoMemoria = [
     {
         numero: 30,
         codigo: "MR",
-        palavra: "Moro ( Juiz)",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/30-moro.webp",
+        palavra: "Mário",
+        categoria: "Personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/30-mario.webp",
         dominado: false
     },
 
@@ -746,9 +746,9 @@ const bancoMemoria = [
     {
         numero: 79,
         codigo: "FP",
-        palavra: "FIPE",
-        categoria: "conceito",
-        imagem: "assets/imagens/memoria-numerica/numeros/79-fipe.webp",
+        palavra: "Fipinho",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/79-fipinho.webp",
         dominado: false
     },
 
