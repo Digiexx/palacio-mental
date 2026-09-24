@@ -1143,7 +1143,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return {
             pontos: 0,
             acertos: 0,
-            erros: 0
+            erros: 0,
+            ultimaTentativa: null,
+            ultimoResultado: null,
+            acertosConsecutivos: 0,
+            errosConsecutivos: 0
         };
 
     }
@@ -1185,6 +1189,84 @@ document.addEventListener("DOMContentLoaded", () => {
                 return {};
 
             }
+
+
+            // =============================================
+            // COMPATIBILIDADE COM REGISTROS ANTIGOS
+            //
+            // Preserva todo o progresso existente e
+            // adiciona somente os novos campos ausentes.
+            // =============================================
+
+            Object.values(
+                dadosConvertidos
+            ).forEach(
+                registro => {
+
+                    if (
+                        !registro ||
+                        typeof registro !== "object" ||
+                        Array.isArray(registro)
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        !Object.prototype.hasOwnProperty.call(
+                            registro,
+                            "ultimaTentativa"
+                        )
+                    ) {
+
+                        registro.ultimaTentativa =
+                            null;
+
+                    }
+
+
+                    if (
+                        !Object.prototype.hasOwnProperty.call(
+                            registro,
+                            "ultimoResultado"
+                        )
+                    ) {
+
+                        registro.ultimoResultado =
+                            null;
+
+                    }
+
+
+                    if (
+                        !Object.prototype.hasOwnProperty.call(
+                            registro,
+                            "acertosConsecutivos"
+                        )
+                    ) {
+
+                        registro.acertosConsecutivos =
+                            0;
+
+                    }
+
+
+                    if (
+                        !Object.prototype.hasOwnProperty.call(
+                            registro,
+                            "errosConsecutivos"
+                        )
+                    ) {
+
+                        registro.errosConsecutivos =
+                            0;
+
+                    }
+
+                }
+            );
 
 
             return dadosConvertidos;
@@ -1407,11 +1489,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
             registro.acertos++;
 
+            registro.acertosConsecutivos++;
+
+            registro.errosConsecutivos =
+                0;
+
         } else {
 
             registro.erros++;
 
+            registro.errosConsecutivos++;
+
+            registro.acertosConsecutivos =
+                0;
+
         }
+
+
+        // =============================================
+        // ÚLTIMA TENTATIVA
+        //
+        // Registra o momento exato da interação para
+        // permitir análise temporal futuramente.
+        // =============================================
+
+        registro.ultimaTentativa =
+            new Date().toISOString();
+
+
+        // =============================================
+        // ÚLTIMO RESULTADO
+        //
+        // Guarda o resultado da tentativa mais recente
+        // para análise de reincidência futuramente.
+        // =============================================
+
+        registro.ultimoResultado =
+            acertou
+                ? "acerto"
+                : "erro";
 
 
         salvarDominioMemoria();
@@ -1747,11 +1863,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         // =================================
                         // ÍNDICE DE FRAGILIDADE
                         //
-                        // Combina três sinais:
+                        // Combina quatro sinais:
                         //
                         // 1. taxa de erro
                         // 2. domínio ainda não consolidado
-                        // 3. reincidência de erros
+                        // 3. erros históricos acumulados
+                        // 4. erros consecutivos recentes
                         //
                         // Quanto maior o índice,
                         // maior a necessidade de revisão.
@@ -1767,12 +1884,129 @@ document.addEventListener("DOMContentLoaded", () => {
                             registro.pontos;
 
 
-                        const indiceFragilidade =
-                            taxaErro +
-                            fragilidadeDominio +
-                            (
+                        const pesoErrosHistoricos =
+                            Math.min(
                                 registro.erros *
-                                5
+                                5,
+                                50
+                            );
+
+
+                        const pesoErrosRecentes =
+                            Math.min(
+                                registro.errosConsecutivos *
+                                10,
+                                50
+                            );
+
+
+                        // =================================
+                        // RECUPERAÇÃO RECENTE
+                        //
+                        // Cada acerto consecutivo reduz
+                        // 3 pontos de fragilidade.
+                        //
+                        // A redução máxima é de 15 pontos
+                        // para preservar o peso do
+                        // histórico e do domínio.
+                        // =================================
+
+                        const pesoRecuperacaoRecente =
+                            Math.min(
+                                registro.acertosConsecutivos *
+                                3,
+                                15
+                            );
+
+
+                        // =================================
+                        // TEMPO DESDE A ÚLTIMA TENTATIVA
+                        //
+                        // Calcula quantos dias completos
+                        // se passaram desde o último treino.
+                        // =================================
+
+                        let diasDesdeUltimaTentativa =
+                            0;
+
+
+                        if (
+                            registro.ultimaTentativa
+                        ) {
+
+                            const ultimaTentativa =
+                                new Date(
+                                    registro.ultimaTentativa
+                                );
+
+
+                            const agora =
+                                new Date();
+
+
+                            const diferencaMilissegundos =
+                                agora.getTime() -
+                                ultimaTentativa.getTime();
+
+
+                            diasDesdeUltimaTentativa =
+                                Math.max(
+                                    0,
+                                    Math.floor(
+                                        diferencaMilissegundos /
+                                        (
+                                            1000 *
+                                            60 *
+                                            60 *
+                                            24
+                                        )
+                                    )
+                                );
+
+                        }
+
+
+                        // =================================
+                        // PESO DO TEMPO SEM TREINO
+                        //
+                        // Cada dia completo sem contato
+                        // acrescenta 3 pontos de
+                        // fragilidade.
+                        //
+                        // O peso máximo é de 21 pontos,
+                        // equivalente a 7 dias ou mais.
+                        // =================================
+
+                        const pesoTempoSemTreino =
+                            Math.min(
+                                diasDesdeUltimaTentativa *
+                                3,
+                                21
+                            );
+
+
+                        // =================================
+                        // ÍNDICE FINAL DE FRAGILIDADE
+                        //
+                        // Considera:
+                        //
+                        // + taxa de erro
+                        // + fragilidade do domínio
+                        // + erros históricos
+                        // + erros consecutivos recentes
+                        // + tempo sem treino
+                        // - recuperação recente
+                        // =================================
+
+                        const indiceFragilidade =
+                            Math.max(
+                                0,
+                                taxaErro +
+                                fragilidadeDominio +
+                                pesoErrosHistoricos +
+                                pesoErrosRecentes +
+                                pesoTempoSemTreino -
+                                pesoRecuperacaoRecente
                             );
 
 
@@ -1817,6 +2051,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             taxaAcerto:
                                 taxaAcerto,
 
+                            diasDesdeUltimaTentativa:
+                                diasDesdeUltimaTentativa,
+
+                            pesoTempoSemTreino:
+                                pesoTempoSemTreino,
+
                             indiceFragilidade:
                                 indiceFragilidade,
 
@@ -1833,8 +2073,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     memoria =>
                         memoria !== null
                 );
-
-
         // =============================================
         // PRIORIZAÇÃO ADAPTATIVA
         //
