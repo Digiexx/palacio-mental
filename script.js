@@ -9418,28 +9418,7 @@ document.addEventListener("DOMContentLoaded", () => {
         null;
 
 
-    const PWA_DISMISS_KEY =
-        "palacioMentalPwaDismissedAt";
 
-
-    const PWA_DISMISS_DAYS =
-        7;
-
-
-    // =====================================================
-    // REGISTRA QUE O USUÁRIO QUER ADIAR A INSTALAÇÃO
-    // =====================================================
-
-    function adiarInstalacao() {
-
-        localStorage.setItem(
-            PWA_DISMISS_KEY,
-            String(
-                Date.now()
-            )
-        );
-
-    }
 
 
     // =====================================================
@@ -9466,82 +9445,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // =====================================================
-    // VERIFICA SE O USUÁRIO RECUSOU RECENTEMENTE
-    // =====================================================
 
-    function instalacaoFoiAdiadaRecentemente() {
-
-        const valorSalvo =
-            localStorage.getItem(
-                PWA_DISMISS_KEY
-            );
-
-
-        if (!valorSalvo) {
-
-            return false;
-
-        }
-
-
-        const dataRecusa =
-            Number(
-                valorSalvo
-            );
-
-
-        if (
-            !Number.isFinite(
-                dataRecusa
-            )
-        ) {
-
-            localStorage.removeItem(
-                PWA_DISMISS_KEY
-            );
-
-
-            return false;
-
-        }
-
-
-        const agora =
-            Date.now();
-
-
-        const tempoDecorrido =
-            agora -
-            dataRecusa;
-
-
-        const seteDiasEmMilissegundos =
-            PWA_DISMISS_DAYS *
-            24 *
-            60 *
-            60 *
-            1000;
-
-
-        if (
-            tempoDecorrido >=
-            seteDiasEmMilissegundos
-        ) {
-
-            localStorage.removeItem(
-                PWA_DISMISS_KEY
-            );
-
-
-            return false;
-
-        }
-
-
-        return true;
-
-    }
 
 
     // =====================================================
@@ -9816,8 +9720,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (
             !appInstallBanner ||
-            appJaEstaInstalado() ||
-            instalacaoFoiAdiadaRecentemente()
+            appJaEstaInstalado()
         ) {
 
             return;
@@ -9907,11 +9810,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     "accepted"
                 ) {
 
-                    localStorage.removeItem(
-                        PWA_DISMISS_KEY
-                    );
-
-
                     esconderBannerInstalacao();
 
                 }
@@ -9921,9 +9819,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     escolha.outcome ===
                     "dismissed"
                 ) {
-
-                    adiarInstalacao();
-
 
                     esconderBannerInstalacao();
 
@@ -9942,7 +9837,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
     // BOTÃO FECHAR — BANNER
     //
-    // Esconde o convite por 7 dias.
+    // Esconde o convite somente durante a visita atual.
+    // Em uma nova visita, se o app ainda não estiver
+    // instalado, o convite poderá aparecer novamente.
     // =====================================================
 
     if (btnFecharInstallBanner) {
@@ -9950,9 +9847,6 @@ document.addEventListener("DOMContentLoaded", () => {
         btnFecharInstallBanner.addEventListener(
             "click",
             () => {
-
-                adiarInstalacao();
-
 
                 esconderBannerInstalacao();
 
@@ -9972,11 +9866,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             pwaInstallPrompt =
                 null;
-
-
-            localStorage.removeItem(
-                PWA_DISMISS_KEY
-            );
 
 
             esconderBannerInstalacao();
