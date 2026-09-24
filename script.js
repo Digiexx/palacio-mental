@@ -1177,7 +1177,34 @@ document.addEventListener("DOMContentLoaded", () => {
             ultimaTentativa: null,
             ultimoResultado: null,
             acertosConsecutivos: 0,
-            errosConsecutivos: 0
+            errosConsecutivos: 0,
+
+            atividades: {
+                fixar: {
+                    acertos: 0,
+                    erros: 0
+                },
+
+                treinoRapido: {
+                    acertos: 0,
+                    erros: 0
+                },
+
+                revisao: {
+                    acertos: 0,
+                    erros: 0
+                },
+
+                desafiar: {
+                    acertos: 0,
+                    erros: 0
+                },
+
+                velocidade: {
+                    acertos: 0,
+                    erros: 0
+                }
+            }
         };
 
     }
@@ -1295,6 +1322,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     }
 
+
+                    if (
+                        !registro.atividades ||
+                        typeof registro.atividades !== "object" ||
+                        Array.isArray(registro.atividades)
+                    ) {
+
+                        registro.atividades = {
+                            fixar: {
+                                acertos: 0,
+                                erros: 0
+                            },
+
+                            treinoRapido: {
+                                acertos: 0,
+                                erros: 0
+                            },
+
+                            revisao: {
+                                acertos: 0,
+                                erros: 0
+                            },
+
+                            desafiar: {
+                                acertos: 0,
+                                erros: 0
+                            },
+
+                            velocidade: {
+                                acertos: 0,
+                                erros: 0
+                            }
+                        };
+
+                    }
+
                 }
             );
 
@@ -1366,7 +1429,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        return dominioMemoria[chave];
+        const registro =
+            dominioMemoria[chave];
+
+
+        if (
+            !registro.atividades ||
+            typeof registro.atividades !== "object" ||
+            Array.isArray(registro.atividades)
+        ) {
+
+            registro.atividades =
+                criarRegistroDominio().atividades;
+
+        }
+
+
+        return registro;
 
     }
 
@@ -1532,6 +1611,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
             registro.acertosConsecutivos =
                 0;
+
+        }
+
+
+        // =============================================
+        // DESEMPENHO POR ATIVIDADE
+        //
+        // Registra separadamente os acertos e erros
+        // em cada modalidade de treinamento.
+        // =============================================
+
+        if (
+            registro.atividades &&
+            registro.atividades[
+                atividade
+            ]
+        ) {
+
+            if (acertou) {
+
+                registro.atividades[
+                    atividade
+                ].acertos++;
+
+            } else {
+
+                registro.atividades[
+                    atividade
+                ].erros++;
+
+            }
 
         }
 
@@ -2073,6 +2183,66 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
+        const detalheMemoriaAtividadeFixar =
+            document.getElementById(
+                "detalheMemoriaAtividadeFixar"
+            );
+
+
+        const detalheMemoriaAtividadeFixarResumo =
+            document.getElementById(
+                "detalheMemoriaAtividadeFixarResumo"
+            );
+
+
+        const detalheMemoriaAtividadeTreinoRapido =
+            document.getElementById(
+                "detalheMemoriaAtividadeTreinoRapido"
+            );
+
+
+        const detalheMemoriaAtividadeTreinoRapidoResumo =
+            document.getElementById(
+                "detalheMemoriaAtividadeTreinoRapidoResumo"
+            );
+
+
+        const detalheMemoriaAtividadeRevisao =
+            document.getElementById(
+                "detalheMemoriaAtividadeRevisao"
+            );
+
+
+        const detalheMemoriaAtividadeRevisaoResumo =
+            document.getElementById(
+                "detalheMemoriaAtividadeRevisaoResumo"
+            );
+
+
+        const detalheMemoriaAtividadeDesafiar =
+            document.getElementById(
+                "detalheMemoriaAtividadeDesafiar"
+            );
+
+
+        const detalheMemoriaAtividadeDesafiarResumo =
+            document.getElementById(
+                "detalheMemoriaAtividadeDesafiarResumo"
+            );
+
+
+        const detalheMemoriaAtividadeVelocidade =
+            document.getElementById(
+                "detalheMemoriaAtividadeVelocidade"
+            );
+
+
+        const detalheMemoriaAtividadeVelocidadeResumo =
+            document.getElementById(
+                "detalheMemoriaAtividadeVelocidadeResumo"
+            );
+
+
         if (
             detalheMemoriaNumero
         ) {
@@ -2263,6 +2433,123 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         }
+
+
+        // =============================================
+        // DESEMPENHO POR ATIVIDADE
+        //
+        // Exibe a taxa de acerto individual de cada
+        // modalidade de treinamento.
+        // =============================================
+
+        const atualizarDesempenhoAtividade =
+            (
+                elemento,
+                elementoResumo,
+                atividade
+            ) => {
+
+                if (
+                    !elemento ||
+                    !elementoResumo ||
+                    !registro.atividades ||
+                    !registro.atividades[
+                        atividade
+                    ]
+                ) {
+
+                    return;
+
+                }
+
+
+                const desempenho =
+                    registro.atividades[
+                        atividade
+                    ];
+
+
+                const totalAtividade =
+                    desempenho.acertos +
+                    desempenho.erros;
+
+
+                if (
+                    totalAtividade === 0
+                ) {
+
+                    elemento.textContent =
+                        "—";
+
+                    elementoResumo.textContent =
+                        "Sem tentativas";
+
+                    return;
+
+                }
+
+
+                const taxaAtividade =
+                    Math.round(
+                        (
+                            desempenho.acertos /
+                            totalAtividade
+                        ) *
+                        100
+                    );
+
+
+                elemento.textContent =
+                    `${taxaAtividade}%`;
+
+
+                elementoResumo.textContent =
+                    `${desempenho.acertos} ${
+                        desempenho.acertos === 1
+                            ? "acerto"
+                            : "acertos"
+                    } · ${desempenho.erros} ${
+                        desempenho.erros === 1
+                            ? "erro"
+                            : "erros"
+                    }`;
+
+            };
+
+
+        atualizarDesempenhoAtividade(
+            detalheMemoriaAtividadeFixar,
+            detalheMemoriaAtividadeFixarResumo,
+            "fixar"
+        );
+
+
+        atualizarDesempenhoAtividade(
+            detalheMemoriaAtividadeTreinoRapido,
+            detalheMemoriaAtividadeTreinoRapidoResumo,
+            "treinoRapido"
+        );
+
+
+        atualizarDesempenhoAtividade(
+            detalheMemoriaAtividadeRevisao,
+            detalheMemoriaAtividadeRevisaoResumo,
+            "revisao"
+        );
+
+
+        atualizarDesempenhoAtividade(
+            detalheMemoriaAtividadeDesafiar,
+            detalheMemoriaAtividadeDesafiarResumo,
+            "desafiar"
+        );
+
+
+        atualizarDesempenhoAtividade(
+            detalheMemoriaAtividadeVelocidade,
+            detalheMemoriaAtividadeVelocidadeResumo,
+            "velocidade"
+        );
 
 
 

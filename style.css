@@ -19149,6 +19149,81 @@ body [hidden][hidden] {
 
 
 /* =========================================================
+   DESEMPENHO POR ATIVIDADE
+========================================================= */
+
+.detalhe-memoria-atividades {
+    margin-top: 22px;
+}
+
+
+.detalhe-memoria-atividades > .section-label {
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+
+.detalhe-memoria-atividade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    min-height: 52px;
+
+    padding: 12px 14px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.detalhe-memoria-atividade:first-of-type {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.detalhe-memoria-atividade-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.detalhe-memoria-atividade-info span {
+    font-size: 0.78rem;
+
+    opacity: 0.72;
+}
+
+
+.detalhe-memoria-atividade-info small {
+    font-size: 0.68rem;
+    line-height: 1.25;
+
+    opacity: 0.42;
+}
+
+
+.detalhe-memoria-atividade strong {
+    min-width: 48px;
+
+    font-size: 0.8rem;
+    font-weight: 750;
+
+    text-align: right;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
    TELAS MAIORES
 ========================================================= */
 
