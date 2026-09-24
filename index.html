@@ -1752,6 +1752,314 @@
 
 
             <!-- =================================================
+                 TELA — HISTÓRICO DA MEMÓRIA
+            ================================================== -->
+
+            <section class="app-screen screen-historico-memoria" id="telaHistoricoMemoria" hidden>
+
+                <div class="historico-memoria-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="mental-table-header">
+
+                        <button class="back-button" id="btnVoltarHistoricoMemoria" type="button"
+                            aria-label="Voltar para a tela anterior">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Histórico da Memória
+                            </h2>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         APRESENTAÇÃO DA FAIXA
+                    ================================================== -->
+
+                    <section class="historico-memoria-intro">
+
+                        <span class="section-label">
+                            MAPA DE DOMÍNIO
+                        </span>
+
+                        <h3>
+                            Faixa
+                            <strong id="historicoMemoriaFaixa">
+                                01–10
+                            </strong>
+                        </h3>
+
+                        <p>
+                            Escolha uma memória para visualizar
+                            seu desempenho e histórico de domínio.
+                        </p>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         NÚMEROS DA FAIXA
+
+                         Preenchidos dinamicamente pelo JavaScript
+                         conforme a faixa selecionada no Mapa de Domínio.
+                    ================================================== -->
+
+                    <section class="historico-memoria-content">
+
+                        <div class="historico-memoria-grid" id="historicoMemoriaGrid">
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TELA — DETALHE DA MEMÓRIA
+            ================================================== -->
+
+            <section class="app-screen screen-detalhe-memoria" id="telaDetalheMemoria" hidden>
+
+                <div class="detalhe-memoria-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="mental-table-header">
+
+                        <button class="back-button" id="btnVoltarDetalheMemoria" type="button"
+                            aria-label="Voltar para a tela anterior">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Histórico Individual
+                            </h2>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         IDENTIFICAÇÃO DA MEMÓRIA
+                    ================================================== -->
+
+                    <section class="detalhe-memoria-hero">
+
+                        <span class="section-label">
+                            DESEMPENHO DA MEMÓRIA
+                        </span>
+
+
+                        <div class="detalhe-memoria-identidade">
+
+                            <strong class="detalhe-memoria-numero" id="detalheMemoriaNumero">
+                                01
+                            </strong>
+
+
+                            <div>
+
+                                <span class="detalhe-memoria-palavra" id="detalheMemoriaPalavra">
+                                    Teia
+                                </span>
+
+                                <small class="detalhe-memoria-nivel" id="detalheMemoriaNivel">
+                                    NOVO
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         DOMÍNIO ATUAL
+                    ================================================== -->
+
+                    <section class="detalhe-memoria-dominio">
+
+                        <div>
+
+                            <span>
+                                DOMÍNIO ATUAL
+                            </span>
+
+                            <strong id="detalheMemoriaPontos">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detalhe-memoria-progress-track">
+
+                            <div class="detalhe-memoria-progress-fill"
+                                id="detalheMemoriaBarra">
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         ESTATÍSTICAS
+                    ================================================== -->
+
+                    <section class="detalhe-memoria-estatisticas">
+
+                        <div class="detalhe-memoria-stat">
+
+                            <span>
+                                TENTATIVAS
+                            </span>
+
+                            <strong id="detalheMemoriaTentativas">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detalhe-memoria-stat">
+
+                            <span>
+                                ACERTOS
+                            </span>
+
+                            <strong id="detalheMemoriaAcertos">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detalhe-memoria-stat">
+
+                            <span>
+                                ERROS
+                            </span>
+
+                            <strong id="detalheMemoriaErros">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detalhe-memoria-stat">
+
+                            <span>
+                                TAXA DE ACERTO
+                            </span>
+
+                            <strong id="detalheMemoriaTaxaAcerto">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         ESTADO RECENTE
+                    ================================================== -->
+
+                    <section class="detalhe-memoria-recente">
+
+                        <span class="section-label">
+                            ESTADO RECENTE
+                        </span>
+
+
+                        <div class="detalhe-memoria-info">
+
+                            <span>
+                                Sequência atual
+                            </span>
+
+                            <strong id="detalheMemoriaSequencia">
+                                Sem histórico
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detalhe-memoria-info">
+
+                            <span>
+                                Último resultado
+                            </span>
+
+                            <strong id="detalheMemoriaUltimoResultado">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detalhe-memoria-info">
+
+                            <span>
+                                Última tentativa
+                            </span>
+
+                            <strong id="detalheMemoriaUltimaTentativa">
+                                Nunca treinada
+                            </strong>
+
+                        </div>
+
+                    </section>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
                  TELA — DESAFIAR MEMÓRIA NUMÉRICA
             ================================================== -->
 

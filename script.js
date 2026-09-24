@@ -676,9 +676,27 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnVoltarHistoricoMemoria =
+        document.getElementById(
+            "btnVoltarHistoricoMemoria"
+        );
+
+
+    const btnVoltarDetalheMemoria =
+        document.getElementById(
+            "btnVoltarDetalheMemoria"
+        );
+
+
     const mentalTableRangeOptions =
         document.querySelectorAll(
             ".mental-table-range-option"
+        );
+
+
+    const historicoMemoriaGrid =
+        document.getElementById(
+            "historicoMemoriaGrid"
         );
 
     // =====================================================
@@ -1021,6 +1039,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const telaTabelaMental =
         document.getElementById(
             "telaTabelaMental"
+        );
+
+
+    const telaHistoricoMemoria =
+        document.getElementById(
+            "telaHistoricoMemoria"
+        );
+
+
+    const telaDetalheMemoria =
+        document.getElementById(
+            "telaDetalheMemoria"
         );
 
 
@@ -1800,6 +1830,525 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // RENDERIZAR NÚMEROS — HISTÓRICO DA MEMÓRIA
+    // =====================================================
+
+    function renderizarHistoricoMemoriaFaixa(
+        inicio,
+        fim
+    ) {
+
+        if (
+            !historicoMemoriaGrid
+        ) {
+
+            return;
+
+        }
+
+
+        historicoMemoriaGrid.innerHTML =
+            "";
+
+
+        const memoriasDaFaixa =
+            bancoMemoria.filter(
+                memoria =>
+                    memoria.numero >= inicio &&
+                    memoria.numero <= fim
+            );
+
+
+        memoriasDaFaixa.forEach(
+            memoria => {
+
+                const registro =
+                    obterDominioNumero(
+                        memoria.numero
+                    );
+
+
+                const nivel =
+                    obterNivelDominio(
+                        registro.pontos
+                    );
+
+
+                const card =
+                    document.createElement(
+                        "button"
+                    );
+
+
+                card.type =
+                    "button";
+
+
+                card.className =
+                    "historico-memoria-item";
+
+
+                card.dataset.numero =
+                    memoria.numero;
+
+
+                const numeroFormatado =
+                    String(
+                        memoria.numero
+                    ).padStart(
+                        2,
+                        "0"
+                    );
+
+
+                card.innerHTML =
+                    `
+                        <span class="historico-memoria-item-numero">
+                            ${numeroFormatado}
+                        </span>
+
+                        <span class="historico-memoria-item-palavra">
+                            ${memoria.palavra}
+                        </span>
+
+                        <span class="historico-memoria-item-dominio">
+                            ${registro.pontos}%
+                        </span>
+
+                        <small class="historico-memoria-item-nivel">
+                            ${nivel}
+                        </small>
+                    `;
+
+
+                card.addEventListener(
+                    "click",
+                    () => {
+
+                        renderizarDetalheMemoria(
+                            memoria.numero
+                        );
+
+
+                        navegarParaTela(
+                            "detalheMemoria"
+                        );
+
+                    }
+                );
+
+
+                historicoMemoriaGrid.appendChild(
+                    card
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // RENDERIZAR DETALHE — HISTÓRICO DA MEMÓRIA
+    // =====================================================
+
+    function renderizarDetalheMemoria(
+        numero
+    ) {
+
+        const memoria =
+            bancoMemoria.find(
+                item =>
+                    item.numero === numero
+            );
+
+
+        if (
+            !memoria
+        ) {
+
+            return;
+
+        }
+
+
+        const registro =
+            obterDominioNumero(
+                numero
+            );
+
+
+        const nivel =
+            obterNivelDominio(
+                registro.pontos
+            );
+
+
+        const totalTentativas =
+            registro.acertos +
+            registro.erros;
+
+
+        const taxaAcerto =
+            totalTentativas > 0
+                ? Math.round(
+                    (
+                        registro.acertos /
+                        totalTentativas
+                    ) *
+                    100
+                )
+                : 0;
+
+
+        const detalheMemoriaNumero =
+            document.getElementById(
+                "detalheMemoriaNumero"
+            );
+
+
+        const detalheMemoriaPalavra =
+            document.getElementById(
+                "detalheMemoriaPalavra"
+            );
+
+
+        const detalheMemoriaNivel =
+            document.getElementById(
+                "detalheMemoriaNivel"
+            );
+
+
+        const detalheMemoriaPontos =
+            document.getElementById(
+                "detalheMemoriaPontos"
+            );
+
+
+        const detalheMemoriaBarra =
+            document.getElementById(
+                "detalheMemoriaBarra"
+            );
+
+
+        const detalheMemoriaTentativas =
+            document.getElementById(
+                "detalheMemoriaTentativas"
+            );
+
+
+        const detalheMemoriaAcertos =
+            document.getElementById(
+                "detalheMemoriaAcertos"
+            );
+
+
+        const detalheMemoriaErros =
+            document.getElementById(
+                "detalheMemoriaErros"
+            );
+
+
+        const detalheMemoriaTaxaAcerto =
+            document.getElementById(
+                "detalheMemoriaTaxaAcerto"
+            );
+
+
+        const detalheMemoriaSequencia =
+            document.getElementById(
+                "detalheMemoriaSequencia"
+            );
+
+
+        const detalheMemoriaUltimoResultado =
+            document.getElementById(
+                "detalheMemoriaUltimoResultado"
+            );
+
+
+        const detalheMemoriaUltimaTentativa =
+            document.getElementById(
+                "detalheMemoriaUltimaTentativa"
+            );
+
+
+        if (
+            detalheMemoriaNumero
+        ) {
+
+            detalheMemoriaNumero.textContent =
+                String(
+                    memoria.numero
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+        }
+
+
+        if (
+            detalheMemoriaPalavra
+        ) {
+
+            detalheMemoriaPalavra.textContent =
+                memoria.palavra;
+
+        }
+
+
+        if (
+            detalheMemoriaNivel
+        ) {
+
+            detalheMemoriaNivel.textContent =
+                nivel;
+
+        }
+
+
+        if (
+            detalheMemoriaPontos
+        ) {
+
+            detalheMemoriaPontos.textContent =
+                `${registro.pontos}%`;
+
+        }
+
+
+        if (
+            detalheMemoriaBarra
+        ) {
+
+            detalheMemoriaBarra.style.width =
+                `${registro.pontos}%`;
+
+        }
+
+
+        if (
+            detalheMemoriaTentativas
+        ) {
+
+            detalheMemoriaTentativas.textContent =
+                totalTentativas;
+
+        }
+
+
+        if (
+            detalheMemoriaAcertos
+        ) {
+
+            detalheMemoriaAcertos.textContent =
+                registro.acertos;
+
+        }
+
+
+        if (
+            detalheMemoriaErros
+        ) {
+
+            detalheMemoriaErros.textContent =
+                registro.erros;
+
+        }
+
+
+        if (
+            detalheMemoriaTaxaAcerto
+        ) {
+
+            detalheMemoriaTaxaAcerto.textContent =
+                `${taxaAcerto}%`;
+
+        }
+
+
+        if (
+            detalheMemoriaSequencia
+        ) {
+
+            if (
+                registro.acertosConsecutivos > 0
+            ) {
+
+                detalheMemoriaSequencia.textContent =
+                    `${registro.acertosConsecutivos} ${
+                        registro.acertosConsecutivos === 1
+                            ? "acerto"
+                            : "acertos"
+                    }`;
+
+            } else if (
+                registro.errosConsecutivos > 0
+            ) {
+
+                detalheMemoriaSequencia.textContent =
+                    `${registro.errosConsecutivos} ${
+                        registro.errosConsecutivos === 1
+                            ? "erro"
+                            : "erros"
+                    }`;
+
+            } else {
+
+                detalheMemoriaSequencia.textContent =
+                    "Sem histórico";
+
+            }
+
+        }
+
+
+        if (
+            detalheMemoriaUltimoResultado
+        ) {
+
+            if (
+                registro.ultimoResultado === "acerto"
+            ) {
+
+                detalheMemoriaUltimoResultado.textContent =
+                    "Acerto";
+
+            } else if (
+                registro.ultimoResultado === "erro"
+            ) {
+
+                detalheMemoriaUltimoResultado.textContent =
+                    "Erro";
+
+            } else {
+
+                detalheMemoriaUltimoResultado.textContent =
+                    "—";
+
+            }
+
+        }
+
+
+        if (
+            detalheMemoriaUltimaTentativa
+        ) {
+
+            if (
+                registro.ultimaTentativa
+            ) {
+
+                const dataUltimaTentativa =
+                    new Date(
+                        registro.ultimaTentativa
+                    );
+
+
+                detalheMemoriaUltimaTentativa.textContent =
+                    dataUltimaTentativa.toLocaleString(
+                        "pt-BR",
+                        {
+                            dateStyle: "short",
+                            timeStyle: "short"
+                        }
+                    );
+
+            } else {
+
+                detalheMemoriaUltimaTentativa.textContent =
+                    "Nunca treinada";
+
+            }
+
+        }
+
+
+
+
+    }
+
+
+    // =====================================================
+    // INTERAÇÃO COM AS FAIXAS — MAPA DE DOMÍNIO
+    // =====================================================
+
+    const faixasMapaDominio =
+        document.querySelectorAll(
+            ".memory-range-card[data-dominio-inicio]"
+        );
+
+
+    faixasMapaDominio.forEach(
+        faixa => {
+
+            faixa.addEventListener(
+                "click",
+                () => {
+
+                    const inicio =
+                        Number(
+                            faixa.dataset.dominioInicio
+                        );
+
+                    const fim =
+                        Number(
+                            faixa.dataset.dominioFim
+                        );
+
+
+                    const historicoMemoriaFaixa =
+                        document.getElementById(
+                            "historicoMemoriaFaixa"
+                        );
+
+
+                    if (
+                        historicoMemoriaFaixa
+                    ) {
+
+                        const inicioFormatado =
+                            String(
+                                inicio
+                            ).padStart(
+                                2,
+                                "0"
+                            );
+
+                        const fimFormatado =
+                            String(
+                                fim
+                            ).padStart(
+                                2,
+                                "0"
+                            );
+
+
+                        historicoMemoriaFaixa.textContent =
+                            `${inicioFormatado}–${fimFormatado}`;
+
+                    }
+
+
+                    renderizarHistoricoMemoriaFaixa(
+                        inicio,
+                        fim
+                    );
+
+
+                    navegarParaTela(
+                        "historicoMemoria"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    // =====================================================
     // REVISÃO INTELIGENTE — IDENTIFICAR PENDÊNCIAS
     //
     // Analisa somente memórias que já possuem histórico
@@ -2457,6 +3006,16 @@ document.addEventListener("DOMContentLoaded", () => {
         tabelaMental: {
             elemento: telaTabelaMental,
             pai: "memoriaNumerica"
+        },
+
+        historicoMemoria: {
+            elemento: telaHistoricoMemoria,
+            pai: "memoriaNumerica"
+        },
+
+        detalheMemoria: {
+            elemento: telaDetalheMemoria,
+            pai: "historicoMemoria"
         },
 
         fixar: {
@@ -7338,6 +7897,34 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnVoltarTabelaMental) {
 
         btnVoltarTabelaMental.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
+    if (btnVoltarHistoricoMemoria) {
+
+        btnVoltarHistoricoMemoria.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
+    if (btnVoltarDetalheMemoria) {
+
+        btnVoltarDetalheMemoria.addEventListener(
             "click",
             () => {
 

@@ -18506,3 +18506,530 @@ body [hidden][hidden] {
         none;
 
 }
+
+/* =========================================================
+   HISTÓRICO DA MEMÓRIA
+========================================================= */
+
+.historico-memoria-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 24px 18px 40px;
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO
+========================================================= */
+
+.historico-memoria-intro {
+    margin-top: 28px;
+    margin-bottom: 24px;
+}
+
+.historico-memoria-intro h3 {
+    margin: 8px 0 6px;
+    font-size: 1.35rem;
+    line-height: 1.15;
+}
+
+.historico-memoria-intro h3 strong {
+    color: #ffffff;
+}
+
+.historico-memoria-intro p {
+    margin: 0;
+    max-width: 340px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    opacity: 0.78;
+}
+
+
+/* =========================================================
+   GRADE DE MEMÓRIAS
+========================================================= */
+
+.historico-memoria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+
+/* =========================================================
+   CARD DA MEMÓRIA
+========================================================= */
+
+.historico-memoria-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "numero palavra"
+        "numero dominio"
+        "numero nivel";
+    column-gap: 12px;
+    row-gap: 3px;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 14px;
+
+    border: 1px solid rgba(159, 90, 253, 0.22);
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(65, 27, 103, 0.48),
+            rgba(22, 11, 37, 0.72)
+        );
+
+    color: inherit;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.historico-memoria-item:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.historico-memoria-item-numero {
+    grid-area: numero;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124, 58, 237, 0.32),
+            rgba(88, 28, 135, 0.18)
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.28);
+
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   PALAVRA
+========================================================= */
+
+.historico-memoria-item-palavra {
+    grid-area: palavra;
+
+    min-width: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DOMÍNIO
+========================================================= */
+
+.historico-memoria-item-dominio {
+    grid-area: dominio;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   NÍVEL
+========================================================= */
+
+.historico-memoria-item-nivel {
+    grid-area: nivel;
+
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+/* =========================================================
+   HISTÓRICO INDIVIDUAL DA MEMÓRIA
+========================================================= */
+
+.detalhe-memoria-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 24px 18px 48px;
+}
+
+
+/* =========================================================
+   IDENTIDADE DA MEMÓRIA
+========================================================= */
+
+.detalhe-memoria-hero {
+    position: relative;
+
+    margin-top: 28px;
+    padding: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(159, 90, 253, 0.24);
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(168, 85, 247, 0.18),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(65, 27, 103, 0.58),
+            rgba(22, 11, 37, 0.78)
+        );
+}
+
+
+.detalhe-memoria-hero::after {
+    content: "";
+
+    position: absolute;
+    top: -55px;
+    right: -45px;
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139, 92, 246, 0.12);
+
+    filter: blur(8px);
+
+    pointer-events: none;
+}
+
+
+.detalhe-memoria-identidade {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 16px;
+}
+
+
+.detalhe-memoria-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    width: 74px;
+    height: 74px;
+
+    border: 1px solid rgba(168, 85, 247, 0.38);
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(124, 58, 237, 0.42),
+            rgba(88, 28, 135, 0.22)
+        );
+
+    box-shadow:
+        0 12px 30px rgba(76, 29, 149, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+
+.detalhe-memoria-identidade > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+}
+
+
+.detalhe-memoria-palavra {
+    max-width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+
+.detalhe-memoria-nivel {
+    display: inline-flex;
+
+    margin-top: 8px;
+    padding: 5px 9px;
+
+    border: 1px solid rgba(168, 85, 247, 0.26);
+    border-radius: 999px;
+
+    background:
+        rgba(124, 58, 237, 0.12);
+
+    font-size: 0.62rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    opacity: 0.82;
+}
+
+
+/* =========================================================
+   DOMÍNIO ATUAL
+========================================================= */
+
+.detalhe-memoria-dominio {
+    margin-top: 14px;
+    padding: 18px;
+
+    border: 1px solid rgba(159, 90, 253, 0.18);
+    border-radius: 18px;
+
+    background:
+        rgba(30, 15, 48, 0.62);
+}
+
+
+.detalhe-memoria-dominio > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+}
+
+
+.detalhe-memoria-dominio > div:first-child span {
+    font-size: 0.66rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+    opacity: 0.58;
+}
+
+
+.detalhe-memoria-dominio > div:first-child strong {
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+
+.detalhe-memoria-progress-track {
+    width: 100%;
+    height: 7px;
+
+    margin-top: 13px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.detalhe-memoria-progress-fill {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #a855f7,
+            #c084fc
+        );
+
+    box-shadow:
+        0 0 14px rgba(168, 85, 247, 0.42);
+
+    transition: width 0.35s ease;
+}
+
+
+/* =========================================================
+   ESTATÍSTICAS
+========================================================= */
+
+.detalhe-memoria-estatisticas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin-top: 14px;
+}
+
+
+.detalhe-memoria-stat {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 16px;
+
+    border: 1px solid rgba(159, 90, 253, 0.16);
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(48, 23, 74, 0.56),
+            rgba(23, 12, 37, 0.72)
+        );
+}
+
+
+.detalhe-memoria-stat span {
+    order: 2;
+
+    margin-top: 5px;
+
+    font-size: 0.61rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    opacity: 0.52;
+}
+
+
+.detalhe-memoria-stat strong {
+    order: 1;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ESTADO RECENTE
+========================================================= */
+
+.detalhe-memoria-recente {
+    margin-top: 22px;
+}
+
+
+.detalhe-memoria-recente > .section-label {
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+
+.detalhe-memoria-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 18px;
+
+    min-height: 52px;
+
+    padding: 12px 14px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.detalhe-memoria-info:first-of-type {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.detalhe-memoria-info span {
+    font-size: 0.78rem;
+
+    opacity: 0.62;
+}
+
+
+.detalhe-memoria-info strong {
+    max-width: 55%;
+
+    font-size: 0.8rem;
+    font-weight: 750;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   TELAS MAIORES
+========================================================= */
+
+@media (min-width: 560px) {
+
+    .detalhe-memoria-container {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+}
