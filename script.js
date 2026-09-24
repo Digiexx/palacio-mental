@@ -1724,9 +1724,61 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                         // =================================
+                        // TAXA DE ACERTO
+                        //
+                        // Mede a estabilidade da memória
+                        // com base no histórico real.
+                        //
+                        // Exemplo:
+                        // 8 acertos + 2 erros
+                        // = 80% de acerto
+                        // =================================
+
+                        const taxaAcerto =
+                            Math.round(
+                                (
+                                    registro.acertos /
+                                    totalTentativas
+                                ) *
+                                100
+                            );
+
+
+                        // =================================
+                        // ÍNDICE DE FRAGILIDADE
+                        //
+                        // Combina três sinais:
+                        //
+                        // 1. taxa de erro
+                        // 2. domínio ainda não consolidado
+                        // 3. reincidência de erros
+                        //
+                        // Quanto maior o índice,
+                        // maior a necessidade de revisão.
+                        // =================================
+
+                        const taxaErro =
+                            100 -
+                            taxaAcerto;
+
+
+                        const fragilidadeDominio =
+                            100 -
+                            registro.pontos;
+
+
+                        const indiceFragilidade =
+                            taxaErro +
+                            fragilidadeDominio +
+                            (
+                                registro.erros *
+                                5
+                            );
+
+
+                        // =================================
                         // MEMÓRIA AINDA PRECISA DE REVISÃO
                         //
-                        // Por enquanto:
                         // abaixo de 80 pontos = pendente
                         // =================================
 
@@ -1762,6 +1814,12 @@ document.addEventListener("DOMContentLoaded", () => {
                             totalTentativas:
                                 totalTentativas,
 
+                            taxaAcerto:
+                                taxaAcerto,
+
+                            indiceFragilidade:
+                                indiceFragilidade,
+
                             nivel:
                                 obterNivelDominio(
                                     registro.pontos
@@ -1778,11 +1836,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =============================================
-        // PRIORIZAÇÃO
+        // PRIORIZAÇÃO ADAPTATIVA
         //
-        // 1º mais erros
-        // 2º menor domínio
-        // 3º menor número
+        // 1º maior índice de fragilidade
+        // 2º menor taxa de acerto
+        // 3º menor domínio
+        // 4º menor número
         // =============================================
 
         memoriasParaRevisao.sort(
@@ -1791,18 +1850,43 @@ document.addEventListener("DOMContentLoaded", () => {
                 memoriaB
             ) => {
 
+                // =====================================
+                // MAIOR ÍNDICE DE FRAGILIDADE
+                // =====================================
+
                 if (
-                    memoriaB.erros !==
-                    memoriaA.erros
+                    memoriaB.indiceFragilidade !==
+                    memoriaA.indiceFragilidade
                 ) {
 
                     return (
-                        memoriaB.erros -
-                        memoriaA.erros
+                        memoriaB.indiceFragilidade -
+                        memoriaA.indiceFragilidade
                     );
 
                 }
 
+
+                // =====================================
+                // MENOR TAXA DE ACERTO
+                // =====================================
+
+                if (
+                    memoriaA.taxaAcerto !==
+                    memoriaB.taxaAcerto
+                ) {
+
+                    return (
+                        memoriaA.taxaAcerto -
+                        memoriaB.taxaAcerto
+                    );
+
+                }
+
+
+                // =====================================
+                // MENOR DOMÍNIO
+                // =====================================
 
                 if (
                     memoriaA.pontos !==
@@ -1816,6 +1900,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 }
 
+
+                // =====================================
+                // DESEMPATE PELO NÚMERO
+                // =====================================
 
                 return (
                     memoriaA.numero -
