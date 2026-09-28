@@ -504,6 +504,12 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnPersonalizadoFixar =
+        document.getElementById(
+            "btnPersonalizadoFixar"
+        );
+
+
     const treinoPersonalizadoGrid =
         document.getElementById(
             "treinoPersonalizadoGrid"
@@ -1051,6 +1057,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnRevisarErrosFixar =
         document.getElementById(
             "btnRevisarErrosFixar"
+        );
+
+
+    const btnRepetirFixarPersonalizado =
+        document.getElementById(
+            "btnRepetirFixarPersonalizado"
+        );
+
+
+    const btnVoltarFixarPersonalizado =
+        document.getElementById(
+            "btnVoltarFixarPersonalizado"
         );
 
 
@@ -3606,6 +3624,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fixarAcertosRodada =
             [];
+
+
+        // =================================================
+        // FIXAR PERSONALIZADO
+        // =================================================
+
+        if (
+            modoFixarPersonalizado &&
+            memoriasFixarPersonalizado.length > 0
+        ) {
+
+            indiceFixarPersonalizado =
+                0;
+
+
+            carregarMemoriaFixar(
+                memoriasFixarPersonalizado[
+                    indiceFixarPersonalizado
+                ]
+            );
+
+
+            return;
+
+        }
 
 
         // =================================================
@@ -6189,6 +6232,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =================================================
+        // AÇÕES DO RESULTADO
+        // =================================================
+
+        if (
+            modoFixarPersonalizado
+        ) {
+
+            btnFinalizarFixar.hidden =
+                true;
+
+            btnRepetirFixarPersonalizado.hidden =
+                false;
+
+            btnVoltarFixarPersonalizado.hidden =
+                false;
+
+        } else {
+
+            btnFinalizarFixar.hidden =
+                false;
+
+            btnRepetirFixarPersonalizado.hidden =
+                true;
+
+            btnVoltarFixarPersonalizado.hidden =
+                true;
+
+        }
+
+
+        // =================================================
         // TOTAL DE ACERTOS
         // =================================================
 
@@ -8024,6 +8098,77 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =====================================================
+    // FIXAR — TREINO PERSONALIZADO
+    // =====================================================
+
+    if (btnPersonalizadoFixar) {
+
+        btnPersonalizadoFixar.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    memoriasSelecionadasPersonalizado.size === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                memoriasFixarPersonalizado =
+                    bancoMemoria
+                        .filter(
+                            memoria =>
+                                memoriasSelecionadasPersonalizado.has(
+                                    memoria.numero
+                                )
+                        )
+                        .map(
+                            memoria =>
+                                Number(
+                                    memoria.numero
+                                )
+                        );
+
+
+                if (
+                    memoriasFixarPersonalizado.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                modoFixarPersonalizado =
+                    true;
+
+
+                indiceFixarPersonalizado =
+                    0;
+
+
+                fixarErrosRodada =
+                    [];
+
+
+                fixarAcertosRodada =
+                    [];
+
+
+                limparRevisaoErrosFixar();
+
+
+                abrirFixarMemoria();
+
+            }
+        );
+
+    }
+
+
     if (btnSelecionarTodasPersonalizado) {
 
         btnSelecionarTodasPersonalizado.addEventListener(
@@ -9679,6 +9824,173 @@ document.addEventListener("DOMContentLoaded", () => {
                 carregarMemoriaFixar(
                     fixarInicioAtual
                 );
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // TREINAR NOVAMENTE — FIXAR PERSONALIZADO
+    // =====================================================
+
+    if (btnRepetirFixarPersonalizado) {
+
+        btnRepetirFixarPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    !modoFixarPersonalizado ||
+                    memoriasFixarPersonalizado.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // REINICIA A RODADA PERSONALIZADA
+                // =========================================
+
+                indiceFixarPersonalizado =
+                    0;
+
+
+                fixarErrosRodada =
+                    [];
+
+
+                fixarAcertosRodada =
+                    [];
+
+
+                limparRevisaoErrosFixar();
+
+
+                // =========================================
+                // ESCONDE O RESULTADO
+                // =========================================
+
+                fixarResult.hidden =
+                    true;
+
+
+                // =========================================
+                // PREPARA O TREINO
+                // =========================================
+
+                fixarTrainingArea.hidden =
+                    false;
+
+
+                fixarQuestion.hidden =
+                    false;
+
+
+                fixarAnswer.hidden =
+                    true;
+
+
+                fixarEvaluation.hidden =
+                    true;
+
+
+                btnRevelarFixar.hidden =
+                    false;
+
+
+                // =========================================
+                // CARREGA A PRIMEIRA MEMÓRIA SELECIONADA
+                // =========================================
+
+                carregarMemoriaFixar(
+                    memoriasFixarPersonalizado[
+                        indiceFixarPersonalizado
+                    ]
+                );
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR PARA PERSONALIZADO — FIXAR PERSONALIZADO
+    // =====================================================
+
+    if (btnVoltarFixarPersonalizado) {
+
+        btnVoltarFixarPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                // =========================================
+                // ENCERRA O FIXAR PERSONALIZADO
+                // =========================================
+
+                modoFixarPersonalizado =
+                    false;
+
+
+                memoriasFixarPersonalizado =
+                    [];
+
+
+                indiceFixarPersonalizado =
+                    0;
+
+
+                fixarErrosRodada =
+                    [];
+
+
+                fixarAcertosRodada =
+                    [];
+
+
+                limparRevisaoErrosFixar();
+
+
+                // =========================================
+                // LIMPA AS MEMÓRIAS SELECIONADAS
+                // =========================================
+
+                memoriasSelecionadasPersonalizado.clear();
+
+
+                // =========================================
+                // FECHA O RESULTADO DO FIXAR
+                // =========================================
+
+                fixarResult.hidden =
+                    true;
+
+
+                fixarTrainingArea.hidden =
+                    false;
+
+
+                // =========================================
+                // VOLTA PARA O TREINO PERSONALIZADO
+                // =========================================
+
+                abrirTreinoPersonalizado();
 
 
                 window.scrollTo({
