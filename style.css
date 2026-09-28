@@ -12379,6 +12379,862 @@ body [hidden][hidden] {
         rgba(255, 255, 255, 0.88);
 }
 
+/* =========================================================
+   RESULTADO — APRENDER PERSONALIZADO
+========================================================= */
+
+.learning-personalizado-result {
+
+    width:
+        calc(100% - 24px);
+
+    max-width:
+        360px;
+
+    margin:
+        clamp(110px, 20vh, 170px) auto 0;
+
+    padding:
+        28px 18px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.18);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(35, 18, 58, 0.92),
+            rgba(15, 9, 28, 0.94));
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    text-align:
+        center;
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+}
+
+
+/* =========================================================
+   ÍCONE DE CONCLUSÃO
+========================================================= */
+
+.learning-personalizado-result-icon {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    margin:
+        0 auto 18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(178, 115, 255, 0.32);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(151, 75, 255, 0.28),
+            rgba(103, 49, 190, 0.14));
+
+    box-shadow:
+        0 0 28px rgba(143, 69, 255, 0.16);
+
+}
+
+
+.learning-personalizado-result-icon svg {
+
+    width:
+        27px;
+
+    height:
+        27px;
+
+    fill:
+        none;
+
+    stroke:
+        #c89cff;
+
+    stroke-width:
+        2.2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.learning-personalizado-result h3 {
+
+    margin:
+        8px 0 6px;
+
+    font-size:
+        18px;
+
+    font-weight:
+        850;
+
+    color:
+        #ffffff;
+
+}
+
+
+.learning-personalizado-result p {
+
+    margin:
+        0 auto;
+
+    max-width:
+        260px;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+}
+
+
+.learning-personalizado-result p strong {
+
+    color:
+        #d4adff;
+
+    font-weight:
+        850;
+
+}
+
+
+/* =========================================================
+   AÇÕES
+========================================================= */
+
+.learning-personalizado-result-actions {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        9px;
+
+    margin-top:
+        24px;
+
+}
+
+
+.learning-personalizado-result-actions .primary-button {
+
+    width:
+        100%;
+
+}
+
+
+.learning-personalizado-back {
+
+    appearance:
+        none;
+
+    width:
+        100%;
+
+    min-height:
+        44px;
+
+    padding:
+        10px 14px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.2);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-family:
+        inherit;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    color:
+        rgba(255, 255, 255, 0.62);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease;
+
+}
+
+
+.learning-personalizado-back:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+/* =========================================================
+   TREINO PERSONALIZADO
+========================================================= */
+
+.treino-personalizado-container {
+
+    width:
+        100%;
+
+}
+
+
+.treino-personalizado-intro {
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.treino-personalizado-intro h3 {
+
+    margin:
+        5px 0 6px;
+
+}
+
+
+.treino-personalizado-intro p {
+
+    margin:
+        0;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.55;
+
+    color:
+        rgba(255, 255, 255, 0.48);
+
+}
+
+/* =========================================================
+   MODOS — TREINO PERSONALIZADO
+========================================================= */
+
+.treino-personalizado-modos {
+
+    width:
+        100%;
+
+    margin-bottom:
+        14px;
+
+}
+
+
+.treino-personalizado-modos-header {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.treino-personalizado-modos-header h3 {
+
+    margin:
+        5px 0 4px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        850;
+
+    color:
+        #ffffff;
+
+}
+
+
+.treino-personalizado-modos-header p {
+
+    margin:
+        0;
+
+    font-size:
+        10px;
+
+    line-height:
+        1.45;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+}
+
+
+/* =========================================================
+   GRADE DOS MODOS
+========================================================= */
+
+.treino-personalizado-modos-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        8px;
+
+}
+
+
+/* =========================================================
+   CARD DO MODO
+========================================================= */
+
+.treino-personalizado-modo {
+
+    appearance:
+        none;
+
+    min-width:
+        0;
+
+    min-height:
+        62px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        center;
+
+    gap:
+        4px;
+
+    padding:
+        10px 11px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-family:
+        inherit;
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+.treino-personalizado-modo strong {
+
+    font-size:
+        11px;
+
+    font-weight:
+        850;
+
+    color:
+        rgba(255, 255, 255, 0.88);
+
+}
+
+
+.treino-personalizado-modo span {
+
+    font-size:
+        8px;
+
+    line-height:
+        1.25;
+
+    font-weight:
+        650;
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+}
+
+
+/* =========================================================
+   MODO SELECIONADO
+========================================================= */
+
+.treino-personalizado-modo.is-active {
+
+    border-color:
+        rgba(190, 130, 255, 0.5);
+
+    background:
+        linear-gradient(135deg,
+            rgba(147, 75, 255, 0.32),
+            rgba(101, 49, 190, 0.18));
+
+    box-shadow:
+        0 0 18px rgba(143, 69, 255, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+}
+
+
+.treino-personalizado-modo.is-active strong {
+
+    color:
+        #d8b5ff;
+
+    text-shadow:
+        0 0 14px rgba(171, 94, 255, 0.32);
+
+}
+
+
+.treino-personalizado-modo.is-active span {
+
+    color:
+        rgba(230, 207, 255, 0.68);
+
+}
+
+
+.treino-personalizado-modo:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================================================
+   ÁREA DE SELEÇÃO
+========================================================= */
+
+.treino-personalizado-selecao {
+
+    width:
+        100%;
+
+    padding:
+        14px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DA SELEÇÃO
+========================================================= */
+
+.treino-personalizado-selecao-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.treino-personalizado-selecao-header > div {
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        3px;
+
+}
+
+
+.treino-personalizado-selecao-header strong {
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    color:
+        #ffffff;
+
+}
+
+
+.treino-personalizado-contador {
+
+    flex:
+        0 0 auto;
+
+    padding:
+        6px 9px;
+
+    border:
+        1px solid rgba(174, 112, 255, 0.2);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(139, 71, 255, 0.09);
+
+    font-size:
+        8px;
+
+    font-weight:
+        850;
+
+    color:
+        #c99cff;
+
+}
+
+
+/* =========================================================
+   AÇÕES DA SELEÇÃO
+========================================================= */
+
+.treino-personalizado-acoes {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.treino-personalizado-acoes button {
+
+    appearance:
+        none;
+
+    min-height:
+        38px;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        11px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-family:
+        inherit;
+
+    font-size:
+        9px;
+
+    font-weight:
+        850;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+/* =========================================================
+   SELECIONAR TODAS
+========================================================= */
+
+#btnSelecionarTodasPersonalizado {
+
+    border-color:
+        rgba(174, 112, 255, 0.48);
+
+    background:
+        linear-gradient(135deg,
+            rgba(143, 69, 255, 0.42),
+            rgba(102, 48, 190, 0.28));
+
+    color:
+        #eadcff;
+
+    box-shadow:
+        0 0 14px rgba(143, 69, 255, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+}
+
+
+/* =========================================================
+   LIMPAR
+========================================================= */
+
+#btnLimparPersonalizado {
+
+    border-color:
+        rgba(255, 92, 112, 0.34);
+
+    background:
+        linear-gradient(135deg,
+            rgba(180, 47, 67, 0.24),
+            rgba(105, 30, 47, 0.16));
+
+    color:
+        rgba(255, 174, 184, 0.92);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.035);
+
+}
+
+
+.treino-personalizado-acoes button:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================================================
+   GRADE 00–100
+========================================================= */
+
+.treino-personalizado-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap:
+        7px;
+
+}
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.treino-personalizado-numero {
+
+    appearance:
+        none;
+
+    min-width:
+        0;
+
+    min-height:
+        43px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        7px 4px;
+
+    border:
+        1px solid rgba(161, 100, 255, 0.14);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    font-family:
+        inherit;
+
+    font-size:
+        11px;
+
+    font-weight:
+        850;
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease;
+
+}
+
+
+/* =========================================================
+   NÚMERO SELECIONADO
+========================================================= */
+
+.treino-personalizado-numero.is-selected {
+
+    border-color:
+        rgba(190, 130, 255, 0.52);
+
+    background:
+        linear-gradient(135deg,
+            rgba(147, 75, 255, 0.38),
+            rgba(101, 49, 190, 0.22));
+
+    color:
+        #ead8ff;
+
+    box-shadow:
+        0 0 18px rgba(143, 69, 255, 0.17),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    text-shadow:
+        0 0 12px rgba(190, 130, 255, 0.35);
+
+}
+
+
+.treino-personalizado-numero:active {
+
+    transform:
+        scale(0.94);
+
+}
+
 
 /* =========================================================
    FAIXAS — VELOCIDADE

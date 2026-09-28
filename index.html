@@ -1357,323 +1357,6 @@
                     </header>
 
 
-                    <!-- =================================================
-                         ÁREA DO TREINO
-                    ================================================== -->
-
-                    <div id="fixarTrainingArea">
-
-
-                        <!-- =================================================
-                             TOPO DO TREINO
-                        ================================================== -->
-
-                        <div class="fixar-training-top">
-
-                            <span class="fixar-progress" id="fixarProgress">
-                                01 / 10
-                            </span>
-
-                            <span class="fixar-mode">
-                                FIXAR
-                            </span>
-
-                            <button class="fixar-range-button" id="btnFaixaFixar" type="button" aria-expanded="false"
-                                aria-controls="fixarRangeSelector">
-
-                                <span>
-                                    FAIXA
-                                </span>
-
-                                <strong id="fixarRangeAtual">
-                                    01–10
-                                </strong>
-
-                            </button>
-
-                        </div>
-
-
-                        <!-- =================================================
-                             SELETOR DE FAIXAS — FIXAR
-
-                             Começa oculto.
-                             O JavaScript abrirá ao clicar em "FAIXA".
-                        ================================================== -->
-
-                        <div class="fixar-range-selector" id="fixarRangeSelector" hidden>
-
-                            <div class="fixar-range-selector-header">
-
-                                <span class="module-kicker">
-                                    ESCOLHA A FAIXA
-                                </span>
-
-                                <strong>
-                                    Qual grupo deseja fixar?
-                                </strong>
-
-                            </div>
-
-
-                            <div class="fixar-range-selector-grid">
-
-                                <button class="fixar-range-option is-active" type="button" data-fixar-inicio="1"
-                                    data-fixar-fim="10">
-
-                                    <span>
-                                        01–10
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="11"
-                                    data-fixar-fim="20">
-
-                                    <span>
-                                        11–20
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="21"
-                                    data-fixar-fim="30">
-
-                                    <span>
-                                        21–30
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="31"
-                                    data-fixar-fim="40">
-
-                                    <span>
-                                        31–40
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="41"
-                                    data-fixar-fim="50">
-
-                                    <span>
-                                        41–50
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="51"
-                                    data-fixar-fim="60">
-
-                                    <span>
-                                        51–60
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="61"
-                                    data-fixar-fim="70">
-
-                                    <span>
-                                        61–70
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="71"
-                                    data-fixar-fim="80">
-
-                                    <span>
-                                        71–80
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="81"
-                                    data-fixar-fim="90">
-
-                                    <span>
-                                        81–90
-                                    </span>
-
-                                </button>
-
-
-                                <button class="fixar-range-option" type="button" data-fixar-inicio="91"
-                                    data-fixar-fim="100">
-
-                                    <span>
-                                        91–100
-                                    </span>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =================================================
-                             INSTRUÇÃO
-                        ================================================== -->
-
-                        <div class="fixar-instruction">
-
-                            <span class="module-kicker">
-                                RECUPERAÇÃO ATIVA
-                            </span>
-
-                            <p>
-                                Veja o número e tente visualizar
-                                a associação antes de revelar.
-                            </p>
-
-                        </div>
-
-
-                        <!-- =================================================
-                             CARD PRINCIPAL
-                        ================================================== -->
-
-                        <section class="fixar-card">
-
-
-                            <!-- =================================================
-                                 FASE 1 — SOMENTE O NÚMERO
-                            ================================================== -->
-
-                            <div class="fixar-question" id="fixarQuestion">
-
-                                <span class="fixar-question-label">
-                                    QUAL É A ASSOCIAÇÃO?
-                                </span>
-
-                                <strong class="fixar-number" id="fixarNumber">
-                                    01
-                                </strong>
-
-                                <span class="fixar-think">
-                                    Visualize a imagem em sua mente.
-                                </span>
-
-                            </div>
-
-
-                            <!-- =================================================
-                                 FASE 2 — RESPOSTA REVELADA
-
-                                 Começa oculta.
-                                 Depois o JavaScript mostrará:
-                                 código + palavra + imagem.
-                            ================================================== -->
-
-                            <div class="fixar-answer" id="fixarAnswer" hidden>
-
-                                <div class="fixar-association">
-
-                                    <span class="fixar-code" id="fixarCode">
-                                        T
-                                    </span>
-
-                                    <span class="fixar-arrow" aria-hidden="true">
-                                        →
-                                    </span>
-
-                                    <strong class="fixar-word" id="fixarWord">
-                                        TEIA
-                                    </strong>
-
-                                </div>
-
-
-                                <div class="fixar-image-area" id="fixarImageArea">
-
-                                    <img class="fixar-image" id="fixarImage" alt="">
-
-                                    <div class="fixar-image-glow" aria-hidden="true"></div>
-
-                                </div>
-
-                            </div>
-
-
-                        </section>
-
-
-                        <!-- =================================================
-                             AÇÃO — REVELAR
-                        ================================================== -->
-
-                        <button class="primary-button fixar-reveal-button" id="btnRevelarFixar" type="button">
-
-                            <span>
-                                Revelar memória
-                            </span>
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-
-                        </button>
-
-
-                        <!-- =================================================
-                             AUTOAVALIAÇÃO
-
-                             Só aparecerá depois que a memória for revelada.
-                        ================================================== -->
-
-                        <div class="fixar-evaluation" id="fixarEvaluation" hidden>
-
-                            <span class="fixar-evaluation-label">
-                                VOCÊ LEMBROU?
-                            </span>
-
-
-                            <div class="fixar-evaluation-actions">
-
-                                <button class="fixar-evaluation-button fixar-forgot" id="btnNaoLembreiFixar"
-                                    type="button">
-
-                                    <span aria-hidden="true">
-                                        ✕
-                                    </span>
-
-                                    <strong>
-                                        Não lembrei
-                                    </strong>
-
-                                </button>
-
-
-                                <button class="fixar-evaluation-button fixar-remembered" id="btnLembreiFixar"
-                                    type="button">
-
-                                    <span aria-hidden="true">
-                                        ✓
-                                    </span>
-
-                                    <strong>
-                                        Lembrei
-                                    </strong>
-
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
 
 
                     <!-- =================================================
@@ -1802,6 +1485,200 @@
 
 
                     </section>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TELA — TREINO PERSONALIZADO
+            ================================================== -->
+
+            <section class="app-screen screen-treino-personalizado" id="telaTreinoPersonalizado" hidden>
+
+                <div class="treino-personalizado-container">
+
+
+                    <!-- =================================================
+                         CABEÇALHO
+                    ================================================== -->
+
+                    <header class="mental-table-header">
+
+                        <button class="back-button" id="btnVoltarTreinoPersonalizado" type="button"
+                            aria-label="Voltar para a tela anterior">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m15 18-6-6 6-6" />
+                            </svg>
+
+                        </button>
+
+
+                        <div>
+
+                            <span class="section-label">
+                                MEMÓRIA NUMÉRICA
+                            </span>
+
+                            <h2>
+                                Treino Personalizado
+                            </h2>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- =================================================
+                         APRESENTAÇÃO
+                    ================================================== -->
+
+                    <section class="treino-personalizado-intro">
+
+                        <span class="section-label">
+                            MONTE SEU TREINO
+                        </span>
+
+                        <h3>
+                            Escolha suas memórias
+                        </h3>
+
+                        <p>
+                            Selecione exatamente os números que você deseja treinar.
+                        </p>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         MODO DE TREINO
+                    ================================================== -->
+
+                    <section class="treino-personalizado-modos">
+
+                        <div class="treino-personalizado-modos-header">
+
+                            <span class="section-label">
+                                COMO VOCÊ QUER TREINAR?
+                            </span>
+
+                            <h3>
+                                Escolha o modo
+                            </h3>
+
+                        </div>
+
+
+                        <div class="treino-personalizado-modos-grid">
+
+                            <button class="treino-personalizado-modo" id="btnPersonalizadoAprender" type="button">
+
+                                <strong>
+                                    Aprender
+                                </strong>
+
+                                <span>
+                                    Número + imagem
+                                </span>
+
+                            </button>
+
+
+                            <button class="treino-personalizado-modo" id="btnPersonalizadoFixar" type="button">
+
+                                <strong>
+                                    Fixar
+                                </strong>
+
+                                <span>
+                                    Fortaleça a associação
+                                </span>
+
+                            </button>
+
+
+                            <button class="treino-personalizado-modo" id="btnPersonalizadoDesafiar" type="button">
+
+                                <strong>
+                                    Desafiar
+                                </strong>
+
+                                <span>
+                                    Teste seu domínio
+                                </span>
+
+                            </button>
+
+
+                            <button class="treino-personalizado-modo" id="btnPersonalizadoVelocidade" type="button">
+
+                                <strong>
+                                    Velocidade
+                                </strong>
+
+                                <span>
+                                    Lembrança rápida
+                                </span>
+
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         SELEÇÃO DAS MEMÓRIAS
+                    ================================================== -->
+
+                    <section class="treino-personalizado-selecao">
+
+                        <div class="treino-personalizado-selecao-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    MEMÓRIAS
+                                </span>
+
+                                <strong>
+                                    Selecione os números
+                                </strong>
+
+                            </div>
+
+
+                            <span class="treino-personalizado-contador" id="treinoPersonalizadoContador">
+                                0 selecionadas
+                            </span>
+
+                        </div>
+
+
+                        <div class="treino-personalizado-acoes">
+
+                            <button id="btnSelecionarTodasPersonalizado" type="button">
+                                Selecionar todas
+                            </button>
+
+                            <button id="btnLimparPersonalizado" type="button">
+                                Limpar
+                            </button>
+
+                        </div>
+
+
+                        <div class="treino-personalizado-grid" id="treinoPersonalizadoGrid">
+
+                        </div>
+
+                    </section>
+
+
+
 
 
                 </div>
@@ -3856,6 +3733,68 @@
                         </button>
 
                     </div>
+
+
+                    <!-- =================================================
+                         CONCLUSÃO — APRENDER PERSONALIZADO
+                    ================================================== -->
+
+                    <div class="learning-personalizado-result" id="learningPersonalizadoResult" hidden>
+
+                        <div class="learning-personalizado-result-icon">
+
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m5 12 4 4L19 6" />
+                            </svg>
+
+                        </div>
+
+
+                        <span class="section-label">
+                            TREINO CONCLUÍDO
+                        </span>
+
+
+                        <h3>
+                            Aprendizado concluído
+                        </h3>
+
+
+                        <p>
+                            Você revisou
+                            <strong id="learningPersonalizadoTotal">
+                                0
+                            </strong>
+                            memórias neste treino.
+                        </p>
+
+
+                        <div class="learning-personalizado-result-actions">
+
+                            <button class="primary-button" id="btnRepetirAprenderPersonalizado" type="button">
+
+                                <span>
+                                    Treinar novamente
+                                </span>
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M20 11a8 8 0 1 0-2.3 5.7" />
+                                    <path d="M20 4v7h-7" />
+                                </svg>
+
+                            </button>
+
+
+                            <button class="learning-personalizado-back" id="btnFinalizarAprenderPersonalizado" type="button">
+
+                                Voltar para Personalizado
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
 
                 </div>
 

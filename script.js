@@ -486,6 +486,48 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnTreinoPersonalizadoMemoria =
+        document.getElementById(
+            "btnTreinoPersonalizadoMemoria"
+        );
+
+
+    const btnVoltarTreinoPersonalizado =
+        document.getElementById(
+            "btnVoltarTreinoPersonalizado"
+        );
+
+
+    const btnPersonalizadoAprender =
+        document.getElementById(
+            "btnPersonalizadoAprender"
+        );
+
+
+    const treinoPersonalizadoGrid =
+        document.getElementById(
+            "treinoPersonalizadoGrid"
+        );
+
+
+    const treinoPersonalizadoContador =
+        document.getElementById(
+            "treinoPersonalizadoContador"
+        );
+
+
+    const btnSelecionarTodasPersonalizado =
+        document.getElementById(
+            "btnSelecionarTodasPersonalizado"
+        );
+
+
+    const btnLimparPersonalizado =
+        document.getElementById(
+            "btnLimparPersonalizado"
+        );
+
+
     const btnVoltarDesafiar =
         document.getElementById(
             "btnVoltarDesafiar"
@@ -1048,6 +1090,12 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const telaTreinoPersonalizado =
+        document.getElementById(
+            "telaTreinoPersonalizado"
+        );
+
+
     const telaDetalheMemoria =
         document.getElementById(
             "telaDetalheMemoria"
@@ -1081,6 +1129,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const memoryLearningStage =
         document.getElementById(
             "memoryLearningStage"
+        );
+
+
+    const learningCard =
+        document.querySelector(
+            ".learning-card"
         );
 
 
@@ -1123,6 +1177,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnProximaMemoria =
         document.getElementById(
             "btnProximaMemoria"
+        );
+
+
+    const learningPersonalizadoResult =
+        document.getElementById(
+            "learningPersonalizadoResult"
+        );
+
+
+    const learningPersonalizadoTotal =
+        document.getElementById(
+            "learningPersonalizadoTotal"
+        );
+
+
+    const btnRepetirAprenderPersonalizado =
+        document.getElementById(
+            "btnRepetirAprenderPersonalizado"
+        );
+
+
+    const btnFinalizarAprenderPersonalizado =
+        document.getElementById(
+            "btnFinalizarAprenderPersonalizado"
         );
 
 
@@ -3320,6 +3398,11 @@ document.addEventListener("DOMContentLoaded", () => {
             pai: "memoriaNumerica"
         },
 
+        personalizado: {
+            elemento: telaTreinoPersonalizado,
+            pai: "memoriaNumerica"
+        },
+
         treinoRapido: {
             elemento: telaTreinoRapido,
             pai: "memoriaNumerica"
@@ -3811,6 +3894,178 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // ESTADO — TREINO PERSONALIZADO
+    // =====================================================
+
+    const memoriasSelecionadasPersonalizado =
+        new Set();
+
+
+    // =====================================================
+    // ATUALIZAR CONTADOR — TREINO PERSONALIZADO
+    // =====================================================
+
+    function atualizarContadorPersonalizado() {
+
+        if (
+            !treinoPersonalizadoContador
+        ) {
+
+            return;
+
+        }
+
+
+        const total =
+            memoriasSelecionadasPersonalizado.size;
+
+
+        treinoPersonalizadoContador.textContent =
+            total === 1
+                ? "1 selecionada"
+                : `${total} selecionadas`;
+
+    }
+
+
+    // =====================================================
+    // GERAR NÚMEROS — TREINO PERSONALIZADO
+    // =====================================================
+
+    function gerarNumerosTreinoPersonalizado() {
+
+        if (
+            !treinoPersonalizadoGrid
+        ) {
+
+            return;
+
+        }
+
+
+        treinoPersonalizadoGrid.innerHTML =
+            "";
+
+
+        for (
+            let numero = 0;
+            numero <= 100;
+            numero++
+        ) {
+
+            const botao =
+                document.createElement(
+                    "button"
+                );
+
+
+            botao.type =
+                "button";
+
+
+            botao.className =
+                "treino-personalizado-numero";
+
+
+            botao.dataset.numero =
+                String(
+                    numero
+                );
+
+
+            botao.textContent =
+                String(
+                    numero
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            if (
+                memoriasSelecionadasPersonalizado.has(
+                    numero
+                )
+            ) {
+
+                botao.classList.add(
+                    "is-selected"
+                );
+
+            }
+
+
+            botao.addEventListener(
+                "click",
+                () => {
+
+                    if (
+                        memoriasSelecionadasPersonalizado.has(
+                            numero
+                        )
+                    ) {
+
+                        memoriasSelecionadasPersonalizado.delete(
+                            numero
+                        );
+
+
+                        botao.classList.remove(
+                            "is-selected"
+                        );
+
+                    } else {
+
+                        memoriasSelecionadasPersonalizado.add(
+                            numero
+                        );
+
+
+                        botao.classList.add(
+                            "is-selected"
+                        );
+
+                    }
+
+
+                    atualizarContadorPersonalizado();
+
+                }
+            );
+
+
+            treinoPersonalizadoGrid.appendChild(
+                botao
+            );
+
+        }
+
+
+        atualizarContadorPersonalizado();
+
+    }
+
+
+    // =====================================================
+    // ABRIR TREINO PERSONALIZADO
+    // =====================================================
+
+    function abrirTreinoPersonalizado(
+        registrarHistorico = true
+    ) {
+
+        navegarParaTela(
+            "personalizado",
+            registrarHistorico
+        );
+
+
+        gerarNumerosTreinoPersonalizado();
+
+    }
+
+
+    // =====================================================
     // ABRIR VELOCIDADE
     // =====================================================
 
@@ -3842,7 +4097,6 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
     }
-
 
 
     // =====================================================
@@ -5002,6 +5256,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // ESTADO — FIXAR PERSONALIZADO
+    // =====================================================
+
+    let modoFixarPersonalizado =
+        false;
+
+
+    let memoriasFixarPersonalizado =
+        [];
+
+
+    let indiceFixarPersonalizado =
+        0;
+
+
+    // =====================================================
     // FAIXA ATUAL — FIXAR
     //
     // Inicialmente:
@@ -5186,6 +5456,21 @@ document.addEventListener("DOMContentLoaded", () => {
             fixarProgress.textContent =
                 `${String(posicaoRevisao).padStart(2, "0")} / ${String(totalRevisao).padStart(2, "0")}`;
 
+        } else if (
+            modoFixarPersonalizado
+        ) {
+
+            const posicaoPersonalizado =
+                indiceFixarPersonalizado + 1;
+
+
+            const totalPersonalizado =
+                memoriasFixarPersonalizado.length;
+
+
+            fixarProgress.textContent =
+                `${String(posicaoPersonalizado).padStart(2, "0")} / ${String(totalPersonalizado).padStart(2, "0")}`;
+
         } else {
 
             const posicaoNaFaixa =
@@ -5215,6 +5500,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             fixarRangeAtual.textContent =
                 "ERROS";
+
+        } else if (
+            modoFixarPersonalizado
+        ) {
+
+            fixarRangeAtual.textContent =
+                "PERSONALIZADO";
 
         } else {
 
@@ -6476,11 +6768,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function mostrarMemoria(indice) {
 
         const memoriasDaFaixa =
-            bancoMemoria.filter(
-                memoria =>
-                    memoria.numero >= faixaInicioAtual &&
-                    memoria.numero <= faixaFimAtual
-            );
+            modoAprenderPersonalizado
+                ? memoriasAprenderPersonalizado
+                : bancoMemoria.filter(
+                    memoria =>
+                        memoria.numero >= faixaInicioAtual &&
+                        memoria.numero <= faixaFimAtual
+                );
 
 
         const memoria =
@@ -6600,6 +6894,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let indiceMemoriaAtual =
         0;
+
+
+    // =====================================================
+    // ESTADO — APRENDER PERSONALIZADO
+    // =====================================================
+
+    let modoAprenderPersonalizado =
+        false;
+
+
+    let memoriasAprenderPersonalizado =
+        [];
 
 
     // =====================================================
@@ -6759,11 +7065,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function avancarMemoria() {
 
         const memoriasDaFaixa =
-            bancoMemoria.filter(
-                memoria =>
-                    memoria.numero >= faixaInicioAtual &&
-                    memoria.numero <= faixaFimAtual
-            );
+            modoAprenderPersonalizado
+                ? memoriasAprenderPersonalizado
+                : bancoMemoria.filter(
+                    memoria =>
+                        memoria.numero >= faixaInicioAtual &&
+                        memoria.numero <= faixaFimAtual
+                );
 
 
         const proximoIndice =
@@ -6777,7 +7085,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =====================================================
-        // AINDA EXISTE MEMÓRIA NA FAIXA ATUAL
+        // AINDA EXISTE MEMÓRIA NA LISTA ATUAL
         // =====================================================
 
         if (proximaMemoria) {
@@ -6789,6 +7097,37 @@ document.addEventListener("DOMContentLoaded", () => {
             mostrarMemoria(
                 indiceMemoriaAtual
             );
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+
+            return;
+
+        }
+
+
+        // =====================================================
+        // FINALIZAR APRENDIZADO PERSONALIZADO
+        // =====================================================
+
+        if (modoAprenderPersonalizado) {
+
+            learningCard.hidden =
+                true;
+
+
+            learningPersonalizadoResult.hidden =
+                false;
+
+
+            learningPersonalizadoTotal.textContent =
+                String(
+                    memoriasAprenderPersonalizado.length
+                );
 
 
             window.scrollTo({
@@ -7608,6 +7947,130 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    if (btnTreinoPersonalizadoMemoria) {
+
+        btnTreinoPersonalizadoMemoria.addEventListener(
+            "click",
+            abrirTreinoPersonalizado
+        );
+
+    }
+
+
+    if (btnVoltarTreinoPersonalizado) {
+
+        btnVoltarTreinoPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // APRENDER — TREINO PERSONALIZADO
+    // =====================================================
+
+    if (btnPersonalizadoAprender) {
+
+        btnPersonalizadoAprender.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    memoriasSelecionadasPersonalizado.size === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                memoriasAprenderPersonalizado =
+                    bancoMemoria.filter(
+                        memoria =>
+                            memoriasSelecionadasPersonalizado.has(
+                                memoria.numero
+                            )
+                    );
+
+
+                if (
+                    memoriasAprenderPersonalizado.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                modoAprenderPersonalizado =
+                    true;
+
+
+                indiceMemoriaAtual =
+                    0;
+
+
+                abrirAprendizado();
+
+            }
+        );
+
+    }
+
+
+    if (btnSelecionarTodasPersonalizado) {
+
+        btnSelecionarTodasPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                memoriasSelecionadasPersonalizado.clear();
+
+
+                for (
+                    let numero = 0;
+                    numero <= 100;
+                    numero++
+                ) {
+
+                    memoriasSelecionadasPersonalizado.add(
+                        numero
+                    );
+
+                }
+
+
+                gerarNumerosTreinoPersonalizado();
+
+            }
+        );
+
+    }
+
+
+    if (btnLimparPersonalizado) {
+
+        btnLimparPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                memoriasSelecionadasPersonalizado.clear();
+
+
+                gerarNumerosTreinoPersonalizado();
+
+            }
+        );
+
+    }
+
+
     if (btnVelocidadeMemoria) {
 
         btnVelocidadeMemoria.addEventListener(
@@ -8168,6 +8631,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // TREINAR NOVAMENTE — APRENDER PERSONALIZADO
+    // =====================================================
+
+    if (btnRepetirAprenderPersonalizado) {
+
+        btnRepetirAprenderPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                indiceMemoriaAtual =
+                    0;
+
+
+                learningPersonalizadoResult.hidden =
+                    true;
+
+
+                learningCard.hidden =
+                    false;
+
+
+                mostrarMemoria(
+                    indiceMemoriaAtual
+                );
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR — APRENDER PERSONALIZADO
+    // =====================================================
+
+    if (btnFinalizarAprenderPersonalizado) {
+
+        btnFinalizarAprenderPersonalizado.addEventListener(
+            "click",
+            () => {
+
+                modoAprenderPersonalizado =
+                    false;
+
+
+                memoriasAprenderPersonalizado =
+                    [];
+
+
+                memoriasSelecionadasPersonalizado.clear();
+
+
+                learningPersonalizadoResult.hidden =
+                    true;
+
+
+                learningCard.hidden =
+                    false;
+
+
+                indiceMemoriaAtual =
+                    0;
+
+
+                navegarParaTela(
+                    "personalizado"
+                );
+
+
+                gerarNumerosTreinoPersonalizado();
+
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
     // EVENTOS — TABELA MENTAL
     // =====================================================
 
@@ -8683,6 +9236,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =========================================
+                // MODO PERSONALIZADO
+                //
+                // Avança somente pelas memórias escolhidas.
+                // =========================================
+
+                if (
+                    modoFixarPersonalizado
+                ) {
+
+                    indiceFixarPersonalizado++;
+
+
+                    if (
+                        indiceFixarPersonalizado <
+                        memoriasFixarPersonalizado.length
+                    ) {
+
+                        carregarMemoriaFixar(
+                            memoriasFixarPersonalizado[
+                                indiceFixarPersonalizado
+                            ]
+                        );
+
+                    } else {
+
+                        finalizarRodadaFixar();
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                // =========================================
                 // MODO NORMAL
                 //
                 // Avança até o final da faixa escolhida.
@@ -8815,6 +9404,42 @@ document.addEventListener("DOMContentLoaded", () => {
                         // =================================
 
                         limparRevisaoErrosFixar();
+
+                        finalizarRodadaFixar();
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // MODO PERSONALIZADO
+                //
+                // Avança somente pelas memórias escolhidas.
+                // =========================================
+
+                if (
+                    modoFixarPersonalizado
+                ) {
+
+                    indiceFixarPersonalizado++;
+
+
+                    if (
+                        indiceFixarPersonalizado <
+                        memoriasFixarPersonalizado.length
+                    ) {
+
+                        carregarMemoriaFixar(
+                            memoriasFixarPersonalizado[
+                                indiceFixarPersonalizado
+                            ]
+                        );
+
+                    } else {
 
                         finalizarRodadaFixar();
 
