@@ -510,6 +510,18 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const btnPersonalizadoDesafiar =
+        document.getElementById(
+            "btnPersonalizadoDesafiar"
+        );
+
+
+    const btnPersonalizadoVelocidade =
+        document.getElementById(
+            "btnPersonalizadoVelocidade"
+        );
+
+
     const treinoPersonalizadoGrid =
         document.getElementById(
             "treinoPersonalizadoGrid"
@@ -579,6 +591,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const velocidadeConfig =
         document.getElementById(
             "velocidadeConfig"
+        );
+
+
+    const velocidadeFaixaConfig =
+        document.getElementById(
+            "velocidadeFaixaConfig"
         );
 
 
@@ -3680,7 +3698,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =================================================
-        // CARREGA A PRIMEIRA MEMÓRIA DA FAIXA ATUAL
+        // CARREGA A PRIMEIRA MEMÓRIA
+        // =================================================
+
+        if (
+            modoDesafiarPersonalizado &&
+            memoriasDesafiarPersonalizado.length > 0
+        ) {
+
+            carregarMemoriaDesafiar(
+                memoriasDesafiarPersonalizado[
+                    indiceDesafiarPersonalizado
+                ]
+            );
+
+
+            return;
+
+        }
+
+
+        // =================================================
+        // TREINO NORMAL — PRIMEIRA MEMÓRIA DA FAIXA
         // =================================================
 
         carregarMemoriaDesafiar(
@@ -4160,24 +4199,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =================================================
-        // MONTA A FILA COM OS NÚMEROS DA FAIXA
+        // MONTA A FILA
         // =================================================
 
         velocidadeFila =
             [];
 
 
-        for (
-            let numero = velocidadeInicioAtual;
-            numero <= velocidadeFimAtual;
-            numero++
+        // =================================================
+        // TREINO PERSONALIZADO
+        // =================================================
+
+        if (
+            modoVelocidadePersonalizado &&
+            memoriasVelocidadePersonalizado.length > 0
         ) {
 
-            velocidadeFila.push(
-                numero
-            );
+            velocidadeFila =
+                [
+                    ...memoriasVelocidadePersonalizado
+                ];
+
+        } else {
+
+            // =============================================
+            // TREINO NORMAL — NÚMEROS DA FAIXA
+            // =============================================
+
+            for (
+                let numero = velocidadeInicioAtual;
+                numero <= velocidadeFimAtual;
+                numero++
+            ) {
+
+                velocidadeFila.push(
+                    numero
+                );
+
+            }
 
         }
+
 
         // =================================================
         // EMBARALHA A FILA
@@ -5395,6 +5457,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // ESTADO — DESAFIAR PERSONALIZADO
+    // =====================================================
+
+    let modoDesafiarPersonalizado =
+        false;
+
+
+    let memoriasDesafiarPersonalizado =
+        [];
+
+
+    let indiceDesafiarPersonalizado =
+        0;
+
+
+    // =====================================================
     // CARREGAR MEMÓRIA — FIXAR
     // =====================================================
 
@@ -5960,6 +6038,50 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
 
     function proximoDesafio() {
+
+        // =================================================
+        // TREINO PERSONALIZADO
+        // =================================================
+
+        if (
+            modoDesafiarPersonalizado
+        ) {
+
+            if (
+                indiceDesafiarPersonalizado <
+                memoriasDesafiarPersonalizado.length - 1
+            ) {
+
+                indiceDesafiarPersonalizado++;
+
+
+                carregarMemoriaDesafiar(
+                    memoriasDesafiarPersonalizado[
+                        indiceDesafiarPersonalizado
+                    ]
+                );
+
+
+                return;
+
+            }
+
+
+            // =============================================
+            // FIM DA RODADA PERSONALIZADA
+            // =============================================
+
+            finalizarRodadaDesafiar();
+
+
+            return;
+
+        }
+
+
+        // =================================================
+        // TREINO NORMAL
+        // =================================================
 
         if (
             desafiarNumeroAtual <
@@ -8191,6 +8313,162 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // =====================================================
+    // DESAFIAR — TREINO PERSONALIZADO
+    // =====================================================
+
+    if (btnPersonalizadoDesafiar) {
+
+        btnPersonalizadoDesafiar.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    memoriasSelecionadasPersonalizado.size === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                memoriasDesafiarPersonalizado =
+                    bancoMemoria
+                        .filter(
+                            memoria =>
+                                memoriasSelecionadasPersonalizado.has(
+                                    memoria.numero
+                                )
+                        )
+                        .map(
+                            memoria =>
+                                Number(
+                                    memoria.numero
+                                )
+                        );
+
+
+                if (
+                    memoriasDesafiarPersonalizado.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                modoDesafiarPersonalizado =
+                    true;
+
+
+                indiceDesafiarPersonalizado =
+                    0;
+
+
+                desafiarAcertosRodada =
+                    [];
+
+
+                desafiarErrosRodada =
+                    [];
+
+
+                desafiarNumeroAtual =
+                    memoriasDesafiarPersonalizado[
+                        indiceDesafiarPersonalizado
+                    ];
+
+
+                abrirDesafiarMemoria();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VELOCIDADE — TREINO PERSONALIZADO
+    // =====================================================
+
+    if (btnPersonalizadoVelocidade) {
+
+        btnPersonalizadoVelocidade.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    memoriasSelecionadasPersonalizado.size === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                memoriasVelocidadePersonalizado =
+                    bancoMemoria
+                        .filter(
+                            memoria =>
+                                memoriasSelecionadasPersonalizado.has(
+                                    memoria.numero
+                                )
+                        )
+                        .map(
+                            memoria =>
+                                Number(
+                                    memoria.numero
+                                )
+                        );
+
+
+                if (
+                    memoriasVelocidadePersonalizado.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                modoVelocidadePersonalizado =
+                    true;
+
+
+                velocidadeFila =
+                    [];
+
+
+                velocidadeIndiceAtual =
+                    0;
+
+
+                velocidadeAcertos =
+                    [];
+
+
+                velocidadeErros =
+                    [];
+
+
+                if (
+                    velocidadeFaixaConfig
+                ) {
+
+                    velocidadeFaixaConfig.hidden =
+                        true;
+
+                }
+
+
+                abrirVelocidadeMemoria();
+
+            }
+        );
+
+    }
+
+
     if (btnSelecionarTodasPersonalizado) {
 
         btnSelecionarTodasPersonalizado.addEventListener(
@@ -8349,8 +8627,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =============================================
-                // SE JÁ ESTIVER NA CONFIGURAÇÃO
-                // VOLTA PELO HISTÓRICO PARA A CENTRAL
+                // SE ESTIVER NO VELOCIDADE PERSONALIZADO
+                // RESTAURA O MODO NORMAL ANTES DE VOLTAR
+                // =============================================
+
+                if (
+                    modoVelocidadePersonalizado
+                ) {
+
+                    modoVelocidadePersonalizado =
+                        false;
+
+
+                    memoriasVelocidadePersonalizado =
+                        [];
+
+
+                    velocidadeFila =
+                        [];
+
+
+                    velocidadeIndiceAtual =
+                        0;
+
+
+                    if (
+                        velocidadeFaixaConfig
+                    ) {
+
+                        velocidadeFaixaConfig.hidden =
+                            false;
+
+                    }
+
+                }
+
+
+                // =============================================
+                // VOLTA PARA A TELA IMEDIATAMENTE ANTERIOR
                 // =============================================
 
                 history.back();
@@ -8520,7 +8834,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // VOLTAR À CENTRAL — VELOCIDADE
+    // VOLTAR — RESULTADO DA VELOCIDADE
     // =====================================================
 
     if (btnCentralVelocidade) {
@@ -8538,16 +8852,78 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =============================================
-                // ESCONDE A TELA DE VELOCIDADE
+                // VELOCIDADE PERSONALIZADO
+                // =============================================
+
+                if (
+                    modoVelocidadePersonalizado
+                ) {
+
+                    modoVelocidadePersonalizado =
+                        false;
+
+
+                    memoriasVelocidadePersonalizado =
+                        [];
+
+
+                    velocidadeFila =
+                        [];
+
+
+                    velocidadeIndiceAtual =
+                        0;
+
+
+                    velocidadeAcertos =
+                        [];
+
+
+                    velocidadeErros =
+                        [];
+
+
+                    memoriasSelecionadasPersonalizado.clear();
+
+
+                    atualizarContadorPersonalizado();
+
+
+                    if (
+                        velocidadeFaixaConfig
+                    ) {
+
+                        velocidadeFaixaConfig.hidden =
+                            false;
+
+                    }
+
+
+                    telaVelocidadeMemoria.hidden =
+                        true;
+
+
+                    abrirTreinoPersonalizado();
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+
+                    return;
+
+                }
+
+
+                // =============================================
+                // VELOCIDADE NORMAL
                 // =============================================
 
                 telaVelocidadeMemoria.hidden =
                     true;
 
-
-                // =============================================
-                // ABRE A CENTRAL DA MEMÓRIA NUMÉRICA
-                // =============================================
 
                 abrirMemoriaNumerica();
 
@@ -8626,6 +9002,18 @@ document.addEventListener("DOMContentLoaded", () => {
         [];
 
     let velocidadeErros =
+        [];
+
+
+    // =====================================================
+    // ESTADO — VELOCIDADE PERSONALIZADO
+    // =====================================================
+
+    let modoVelocidadePersonalizado =
+        false;
+
+
+    let memoriasVelocidadePersonalizado =
         [];
 
 
@@ -10096,11 +10484,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =========================================
-                // VOLTA PARA O PRIMEIRO NÚMERO DA FAIXA
+                // TREINO PERSONALIZADO
                 // =========================================
 
-                desafiarNumeroAtual =
-                    desafiarInicioAtual;
+                if (
+                    modoDesafiarPersonalizado &&
+                    memoriasDesafiarPersonalizado.length > 0
+                ) {
+
+                    indiceDesafiarPersonalizado =
+                        0;
+
+
+                    desafiarNumeroAtual =
+                        memoriasDesafiarPersonalizado[
+                            indiceDesafiarPersonalizado
+                        ];
+
+                } else {
+
+                    // =====================================
+                    // TREINO NORMAL
+                    // =====================================
+
+                    desafiarNumeroAtual =
+                        desafiarInicioAtual;
+
+                }
 
 
                 // =========================================
@@ -10124,7 +10534,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // =========================================
 
                 carregarMemoriaDesafiar(
-                    desafiarInicioAtual
+                    desafiarNumeroAtual
                 );
 
 
@@ -10145,9 +10555,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
     // NOVO DESAFIO — RESULTADO DO DESAFIAR
     //
-    // Fecha o resultado,
-    // limpa os dados da rodada atual
-    // e retorna ao estado inicial do próprio Desafiar.
+    // No treino normal:
+    // reinicia o próprio Desafiar.
+    //
+    // No treino personalizado:
+    // retorna ao Personalizado e limpa a seleção.
     // =====================================================
 
     if (btnFinalizarDesafio) {
@@ -10167,6 +10579,58 @@ document.addEventListener("DOMContentLoaded", () => {
                 desafiarErrosRodada =
                     [];
 
+
+                // =========================================
+                // TREINO PERSONALIZADO
+                // =========================================
+
+                if (
+                    modoDesafiarPersonalizado
+                ) {
+
+                    modoDesafiarPersonalizado =
+                        false;
+
+
+                    memoriasDesafiarPersonalizado =
+                        [];
+
+
+                    indiceDesafiarPersonalizado =
+                        0;
+
+
+                    memoriasSelecionadasPersonalizado.clear();
+
+
+                    atualizarContadorPersonalizado();
+
+
+                    desafiarResult.hidden =
+                        true;
+
+
+                    desafiarTrainingArea.hidden =
+                        false;
+
+
+                    abrirTreinoPersonalizado();
+
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // TREINO NORMAL
+                // =========================================
 
                 desafiarNumeroAtual =
                     desafiarInicioAtual;
