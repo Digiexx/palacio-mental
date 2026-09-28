@@ -5,8 +5,17 @@
 const bancoMemoria = [
 
     // =================================================
-    // 01–10
+    // 00–10
     // =================================================
+
+    {
+        numero: 0,
+        codigo: "R",
+        palavra: "Relógio",
+        categoria: "personagem",
+        imagem: "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+        dominado: false
+    },
 
     {
         numero: 1,

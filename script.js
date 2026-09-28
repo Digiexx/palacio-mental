@@ -5318,21 +5318,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // FAIXA ATUAL — FIXAR
     //
     // Inicialmente:
-    // 01–10
+    // 00–09
     //
     // Depois poderá receber:
-    // 11–20
-    // 21–30
+    // 10–19
+    // 20–29
     // ...
-    // 91–100
+    // 90–99
+    // 100
     // =====================================================
 
     let fixarInicioAtual =
-        1;
+        0;
 
 
     let fixarFimAtual =
-        10;
+        9;
 
 
     // =====================================================
@@ -5356,28 +5357,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
 
     let desafiarNumeroAtual =
-        1;
+        0;
 
 
     // =====================================================
     // FAIXA ATUAL — DESAFIAR
     //
     // Inicialmente:
-    // 01–10
+    // 00–09
     //
     // Depois poderá receber:
-    // 11–20
-    // 21–30
+    // 10–19
+    // 20–29
     // ...
-    // 91–100
+    // 90–99
+    // 100
     // =====================================================
 
     let desafiarInicioAtual =
-        1;
+        0;
 
 
     let desafiarFimAtual =
-        10;
+        9;
 
 
     // =====================================================
@@ -5551,6 +5553,14 @@ document.addEventListener("DOMContentLoaded", () => {
             fixarRangeAtual.textContent =
                 "PERSONALIZADO";
 
+        } else if (
+            fixarInicioAtual === 100 &&
+            fixarFimAtual === 100
+        ) {
+
+            fixarRangeAtual.textContent =
+                "100";
+
         } else {
 
             fixarRangeAtual.textContent =
@@ -5671,8 +5681,20 @@ document.addEventListener("DOMContentLoaded", () => {
         // FAIXA ATUAL
         // =================================================
 
-        desafiarRangeAtual.textContent =
-            `${String(desafiarInicioAtual).padStart(2, "0")}–${String(desafiarFimAtual).padStart(2, "0")}`;
+        if (
+            desafiarInicioAtual === 100 &&
+            desafiarFimAtual === 100
+        ) {
+
+            desafiarRangeAtual.textContent =
+                "100";
+
+        } else {
+
+            desafiarRangeAtual.textContent =
+                `${String(desafiarInicioAtual).padStart(2, "0")}–${String(desafiarFimAtual).padStart(2, "0")}`;
+
+        }
 
 
         // =================================================
@@ -6459,12 +6481,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =================================================
-        // CARREGA INICIALMENTE A FAIXA 01–10
+        // CARREGA INICIALMENTE A FAIXA 00–09
         // =================================================
 
         gerarTabelaMental(
-            1,
-            10
+            0,
+            9
         );
 
     }
@@ -6987,11 +7009,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
 
     let faixaInicioAtual =
-        1;
+        0;
 
 
     let faixaFimAtual =
-        10;
+        9;
 
 
     // =====================================================
@@ -8539,10 +8561,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
 
     let velocidadeInicioAtual =
-        1;
+        0;
 
     let velocidadeFimAtual =
-        10;
+        9;
 
 
 
@@ -8744,7 +8766,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =====================================================
-    // ESCOLHER FAIXA — 01–10, 11–20 ETC.
+    // ESCOLHER FAIXA — 00–09, 10–19 ETC.
     // =====================================================
 
     learningRangeOptions.forEach(
@@ -9092,11 +9114,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // ESCOLHER FAIXA — FIXAR
     //
     // Exemplo:
-    // 01–10
-    // 11–20
-    // 21–30
+    // 00–09
+    // 10–19
+    // 20–29
     // ...
-    // 91–100
+    // 90–99
+    // 100
     // =====================================================
 
     fixarRangeOptions.forEach(
