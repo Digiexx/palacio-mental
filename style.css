@@ -2048,6 +2048,934 @@ body [hidden][hidden] {
 }
 
 /* =========================================================
+   MEMÓRIA EM AÇÃO — MISSÃO
+========================================================= */
+
+.screen-missao-memoria-acao {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding-bottom:
+        115px;
+}
+
+
+/* =========================================================
+   CONTEÚDO DA MISSÃO
+========================================================= */
+
+.memoria-acao-missao-intro {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        14px;
+
+    margin-top:
+        18px;
+}
+
+
+/* =========================================================
+   IDENTIFICAÇÃO DA ETAPA
+========================================================= */
+
+.memoria-acao-missao-etapa {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        12px;
+
+    padding:
+        0 2px;
+}
+
+
+.memoria-acao-missao-etapa span {
+
+    color:
+        #c278ff;
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.4px;
+}
+
+
+.memoria-acao-missao-etapa small {
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =========================================================
+   CARD — CENÁRIO
+========================================================= */
+
+.memoria-acao-cenario-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        18px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.18);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(48, 27, 76, 0.92),
+            rgba(18, 12, 30, 0.97));
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+
+.memoria-acao-cenario-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    top:
+        -70px;
+
+    right:
+        -45px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(151, 71, 255, 0.16);
+
+    filter:
+        blur(28px);
+
+    pointer-events:
+        none;
+}
+
+
+.memoria-acao-cenario-icon {
+
+    position:
+        relative;
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        18px;
+
+    border:
+        1px solid rgba(184, 123, 255, 0.30);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(131, 62, 225, 0.14);
+
+    box-shadow:
+        0 0 22px rgba(137, 68, 255, 0.10);
+}
+
+
+.memoria-acao-cenario-icon svg {
+
+    width:
+        23px;
+
+    height:
+        23px;
+
+    fill:
+        none;
+
+    stroke:
+        #c68cff;
+
+    stroke-width:
+        1.5;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+.memoria-acao-cenario-card .section-label {
+
+    position:
+        relative;
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+}
+
+
+.memoria-acao-cenario-card h3 {
+
+    position:
+        relative;
+
+    margin:
+        0 0 7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        22px;
+
+    line-height:
+        1.1;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -0.4px;
+}
+
+
+.memoria-acao-cenario-card p {
+
+    position:
+        relative;
+
+    max-width:
+        270px;
+
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.58);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   ORIENTAÇÃO MENTAL
+========================================================= */
+
+.memoria-acao-orientacao {
+
+    width:
+        100%;
+
+    padding:
+        16px;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.12);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(18, 13, 28, 0.72);
+}
+
+
+.memoria-acao-orientacao .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+}
+
+
+.memoria-acao-orientacao > strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.25;
+}
+
+
+.memoria-acao-orientacao > p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.60);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   REGRA DO CENÁRIO
+========================================================= */
+
+.memoria-acao-orientacao-regra {
+
+    position:
+        relative;
+
+    margin-top:
+        14px;
+
+    padding:
+        12px 12px 12px 15px;
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(132, 65, 225, 0.10);
+}
+
+
+.memoria-acao-orientacao-regra::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        10px;
+
+    bottom:
+        10px;
+
+    left:
+        0;
+
+    width:
+        3px;
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(180deg,
+            #7c3aed,
+            #c084fc);
+}
+
+
+.memoria-acao-orientacao-regra strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #d6b4ff;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+}
+
+
+.memoria-acao-orientacao-regra small {
+
+    display:
+        block;
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================================
+   BOTÃO — ENTRAR NO CENÁRIO
+========================================================= */
+
+.memoria-acao-entrar-cenario {
+
+    width:
+        100%;
+
+    min-height:
+        48px;
+
+    margin-top:
+        2px;
+}
+
+
+.memoria-acao-entrar-cenario svg {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+/* =========================================================
+   MEMÓRIA EM AÇÃO — ASSOCIAÇÃO
+========================================================= */
+
+.memoria-acao-associacao {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        14px;
+
+    margin-top:
+        18px;
+}
+
+
+/* =========================================================
+   CARD PRINCIPAL DA ASSOCIAÇÃO
+========================================================= */
+
+.memoria-acao-associacao-card {
+
+    width:
+        100%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 34px 1fr;
+
+    align-items:
+        stretch;
+
+    gap:
+        8px;
+}
+
+
+/* =========================================================
+   ÂNCORA NUMÉRICA
+========================================================= */
+
+.memoria-acao-ancora,
+.memoria-acao-informacao {
+
+    min-width:
+        0;
+
+    min-height:
+        150px;
+
+    padding:
+        16px 12px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.18);
+
+    border-radius:
+        17px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(31, 19, 49, 0.90),
+            rgba(15, 10, 25, 0.97));
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.memoria-acao-ancora {
+
+    background:
+        linear-gradient(145deg,
+            rgba(64, 31, 102, 0.94),
+            rgba(22, 13, 36, 0.98));
+}
+
+
+.memoria-acao-ancora .section-label,
+.memoria-acao-informacao .section-label {
+
+    margin-bottom:
+        10px;
+}
+
+
+/* =========================================================
+   NÚMERO DA ÂNCORA
+========================================================= */
+
+.memoria-acao-ancora-numero {
+
+    display:
+        block;
+
+    margin-bottom:
+        4px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        38px;
+
+    line-height:
+        1;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -1.5px;
+
+    text-shadow:
+        0 0 22px rgba(168, 85, 247, 0.28);
+}
+
+
+.memoria-acao-ancora-palavra {
+
+    color:
+        #c996ff;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   CONEXÃO
+========================================================= */
+
+.memoria-acao-conexao {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.memoria-acao-conexao span {
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border:
+        1px solid rgba(183, 116, 255, 0.25);
+
+    border-radius:
+        50%;
+
+    color:
+        #d4a7ff;
+
+    background:
+        rgba(125, 58, 237, 0.13);
+
+    font-size:
+        19px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 0 18px rgba(126, 58, 237, 0.10);
+}
+
+
+/* =========================================================
+   INFORMAÇÃO A MEMORIZAR
+========================================================= */
+
+.memoria-acao-informacao strong {
+
+    max-width:
+        100%;
+
+    color:
+        #ffffff;
+
+    font-size:
+        21px;
+
+    line-height:
+        1.15;
+
+    font-weight:
+        850;
+
+    overflow-wrap:
+        anywhere;
+}
+
+
+/* =========================================================
+   INSTRUÇÃO — CRIE A CENA
+========================================================= */
+
+.memoria-acao-instrucao {
+
+    width:
+        100%;
+
+    padding:
+        16px;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.12);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(18, 13, 28, 0.72);
+}
+
+
+.memoria-acao-instrucao .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+}
+
+
+.memoria-acao-instrucao > strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        7px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.25;
+}
+
+
+.memoria-acao-instrucao > p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.60);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   AJUDA — PRECISO DE UMA IDEIA
+========================================================= */
+
+.memoria-acao-ajuda {
+
+    align-self:
+        center;
+
+    padding:
+        7px 12px;
+
+    border:
+        0;
+
+    color:
+        #c997ff;
+
+    background:
+        transparent;
+
+    font-family:
+        inherit;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        underline;
+
+    text-decoration-color:
+        rgba(201, 151, 255, 0.40);
+
+    text-underline-offset:
+        3px;
+
+    cursor:
+        pointer;
+}
+
+
+/* =========================================================
+   SUGESTÃO DE ASSOCIAÇÃO
+========================================================= */
+
+.memoria-acao-sugestao {
+
+    width:
+        100%;
+
+    padding:
+        14px 15px;
+
+    border:
+        1px solid rgba(167, 95, 255, 0.20);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(111, 52, 181, 0.14),
+            rgba(24, 14, 39, 0.88));
+}
+
+
+.memoria-acao-sugestao[hidden] {
+
+    display:
+        none;
+}
+
+
+.memoria-acao-sugestao .section-label {
+
+    display:
+        block;
+
+    margin-bottom:
+        6px;
+}
+
+
+.memoria-acao-sugestao p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.5;
+}
+
+
+/* =========================================================
+   BOTÃO — CENA CRIADA
+========================================================= */
+
+.memoria-acao-cena-criada {
+
+    width:
+        100%;
+
+    min-height:
+        48px;
+
+    margin-top:
+        2px;
+}
+
+
+.memoria-acao-cena-criada svg {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+/* =========================================================
    MEMÓRIA EM AÇÃO — CONFIGURAÇÃO
 ========================================================= */
 
@@ -2496,6 +3424,424 @@ body [hidden][hidden] {
 
     line-height:
         1.35;
+}
+
+
+/* =========================================================
+   MEMÓRIA EM AÇÃO — SELETOR DE CONTEÚDO
+========================================================= */
+
+.memoria-acao-content-select {
+
+    width:
+        100%;
+}
+
+
+.memoria-acao-content-current {
+
+    width:
+        100%;
+
+    min-height:
+        70px;
+
+    padding:
+        11px 12px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        46px minmax(0, 1fr) 32px;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    border:
+        1px solid rgba(168, 85, 247, 0.62);
+
+    border-radius:
+        14px;
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(90deg,
+            rgba(109, 40, 217, 0.28),
+            rgba(49, 24, 79, 0.34));
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+}
+
+
+.memoria-acao-content-current-text {
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        3px;
+}
+
+
+.memoria-acao-content-current-text strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.2;
+}
+
+
+.memoria-acao-content-current-text small {
+
+    color:
+        rgba(255, 255, 255, 0.54);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.35;
+}
+
+
+/* =========================================================
+   SETA DO SELETOR
+========================================================= */
+
+.memoria-acao-content-arrow {
+
+    width:
+        32px;
+
+    height:
+        32px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(139, 68, 255, 0.12);
+}
+
+
+.memoria-acao-content-arrow svg {
+
+    width:
+        18px;
+
+    height:
+        18px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        2;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+
+    transition:
+        transform var(--transition);
+}
+
+
+/* =========================================================
+   MENU DE CONTEÚDOS
+========================================================= */
+
+.memoria-acao-content-menu {
+
+    margin-top:
+        8px;
+
+    padding:
+        7px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.15);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(8, 6, 14, 0.96);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+
+.memoria-acao-content-menu[hidden] {
+
+    display:
+        none;
+}
+
+
+.memoria-acao-content-menu
+.lista-ancorada-list-type[hidden] {
+
+    display:
+        none;
+}
+
+
+/* =========================================================
+   SELETOR ABERTO
+========================================================= */
+
+.memoria-acao-content-select.is-open
+.memoria-acao-content-arrow svg {
+
+    transform:
+        rotate(180deg);
+}
+
+
+/* =========================================================
+   MINHA LISTA
+========================================================= */
+
+.memoria-acao-minha-lista {
+
+    width:
+        100%;
+
+    padding:
+        14px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        12px;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.16);
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(180deg,
+            rgba(30, 19, 48, 0.86),
+            rgba(14, 11, 23, 0.96));
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.memoria-acao-minha-lista[hidden] {
+
+    display:
+        none;
+}
+
+
+.memoria-acao-minha-lista-header {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        4px;
+}
+
+
+.memoria-acao-minha-lista-header strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        14px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.25;
+}
+
+
+.memoria-acao-minha-lista-header small {
+
+    color:
+        rgba(255, 255, 255, 0.52);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.4;
+}
+
+
+/* =========================================================
+   CAMPO DE TEXTO
+========================================================= */
+
+.memoria-acao-minha-lista-input {
+
+    width:
+        100%;
+
+    min-height:
+        132px;
+
+    padding:
+        13px 14px;
+
+    resize:
+        vertical;
+
+    border:
+        1px solid rgba(148, 105, 205, 0.24);
+
+    border-radius:
+        13px;
+
+    outline:
+        none;
+
+    color:
+        #ffffff;
+
+    background:
+        rgba(7, 5, 12, 0.72);
+
+    font-family:
+        inherit;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.55;
+
+    caret-color:
+        #a855f7;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+
+.memoria-acao-minha-lista-input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.30);
+}
+
+
+.memoria-acao-minha-lista-input:focus {
+
+    border-color:
+        rgba(168, 85, 247, 0.70);
+
+    background:
+        rgba(11, 7, 19, 0.88);
+
+    box-shadow:
+        0 0 0 3px rgba(139, 68, 255, 0.10);
+}
+
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+.memoria-acao-minha-lista-info {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        12px;
+}
+
+
+.memoria-acao-minha-lista-info span {
+
+    color:
+        #c278ff;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+}
+
+
+.memoria-acao-minha-lista-info small {
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size:
+        9px;
 }
 
 
@@ -17763,7 +19109,8 @@ body [hidden][hidden] {
 
     .screen-memoria .memory-central-header,
     .screen-memoria-pratica .memory-central-header,
-    .screen-lista-ancorada .memory-central-header {
+    .screen-lista-ancorada .memory-central-header,
+    .screen-missao-memoria-acao .memory-central-header {
 
         margin-top:
             20px;
@@ -20633,4 +21980,142 @@ body [hidden][hidden] {
         margin: 0 auto;
     }
 
+}
+
+/* =====================================================
+   MEMÓRIA EM AÇÃO — PERCURSO MENTAL
+===================================================== */
+
+.memoria-acao-percurso {
+    width: 100%;
+    padding-bottom: 24px;
+}
+
+.memoria-acao-percurso[hidden] {
+    display: none;
+}
+
+.memoria-acao-percurso-card,
+.memoria-acao-percurso-instrucao,
+.memoria-acao-percurso-alerta {
+    box-sizing: border-box;
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    border-radius: 20px;
+}
+
+.memoria-acao-percurso-card {
+    margin-top: 18px;
+    padding: 26px 20px;
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        rgba(139, 92, 246, 0.16),
+        rgba(139, 92, 246, 0.04)
+    );
+}
+
+.memoria-acao-percurso-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border: 1px solid rgba(168, 85, 247, 0.28);
+    border-radius: 20px;
+    color: #c4b5fd;
+    background: rgba(139, 92, 246, 0.14);
+}
+
+.memoria-acao-percurso-icon svg {
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.memoria-acao-percurso .section-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #c4b5fd;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+.memoria-acao-percurso-card h3 {
+    margin: 0 0 12px;
+    color: #f5f3ff;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.memoria-acao-percurso-card p,
+.memoria-acao-percurso-instrucao p,
+.memoria-acao-percurso-alerta p {
+    margin: 0;
+    color: #c9c3d9;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.memoria-acao-percurso-instrucao {
+    margin-top: 16px;
+    padding: 22px 20px;
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.memoria-acao-percurso-instrucao > strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #f5f3ff;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.memoria-acao-percurso-passos {
+    display: grid;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.memoria-acao-percurso-passos > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.memoria-acao-percurso-passos > div > strong {
+    display: flex;
+    flex: 0 0 32px;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    border-radius: 10px;
+    color: #ddd6fe;
+    background: rgba(139, 92, 246, 0.18);
+    font-size: 13px;
+}
+
+.memoria-acao-percurso-passos > div > span {
+    min-width: 0;
+    color: #e2ddef;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.memoria-acao-percurso-alerta {
+    margin-top: 16px;
+    padding: 18px 20px;
+    background: rgba(139, 92, 246, 0.09);
+}
+
+.memoria-acao-percurso .memoria-acao-iniciar-teste {
+    width: 100%;
+    margin-top: 20px;
 }

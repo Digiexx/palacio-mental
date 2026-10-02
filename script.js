@@ -192,6 +192,108 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // NAVEGAÇÃO — MISSÃO MEMÓRIA EM AÇÃO
+    // =====================================================
+
+    const telaMissaoMemoriaAcao =
+        document.getElementById(
+            "telaMissaoMemoriaAcao"
+        );
+
+
+    const btnVoltarMissaoMemoriaAcao =
+        document.getElementById(
+            "btnVoltarMissaoMemoriaAcao"
+        );
+
+
+    const btnEntrarCenarioMemoriaAcao =
+        document.getElementById(
+            "btnEntrarCenarioMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — ETAPAS DA MISSÃO
+    // =====================================================
+
+    const etapaCenarioMemoriaAcao =
+        document.getElementById(
+            "etapaCenarioMemoriaAcao"
+        );
+
+
+    const etapaAssociacaoMemoriaAcao =
+        document.getElementById(
+            "etapaAssociacaoMemoriaAcao"
+        );
+
+
+    const progressoAssociacaoMemoriaAcao =
+        document.getElementById(
+            "progressoAssociacaoMemoriaAcao"
+        );
+
+
+    const numeroAncoraMemoriaAcao =
+        document.getElementById(
+            "numeroAncoraMemoriaAcao"
+        );
+
+
+    const palavraAncoraMemoriaAcao =
+        document.getElementById(
+            "palavraAncoraMemoriaAcao"
+        );
+
+
+    const itemMemoriaAcao =
+        document.getElementById(
+            "itemMemoriaAcao"
+        );
+
+
+    const btnAjudaAssociacaoMemoriaAcao =
+        document.getElementById(
+            "btnAjudaAssociacaoMemoriaAcao"
+        );
+
+
+    const sugestaoAssociacaoMemoriaAcao =
+        document.getElementById(
+            "sugestaoAssociacaoMemoriaAcao"
+        );
+
+
+    const textoSugestaoAssociacaoMemoriaAcao =
+        document.getElementById(
+            "textoSugestaoAssociacaoMemoriaAcao"
+        );
+
+
+    const btnCenaCriadaMemoriaAcao =
+        document.getElementById(
+            "btnCenaCriadaMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — PERCURSO MENTAL
+    // =====================================================
+
+    const etapaPercursoMemoriaAcao =
+        document.getElementById(
+            "etapaPercursoMemoriaAcao"
+        );
+
+
+    const btnIniciarTesteMemoriaAcao =
+        document.getElementById(
+            "btnIniciarTesteMemoriaAcao"
+        );
+
+
+    // =====================================================
     // MEMÓRIA EM AÇÃO — QUANTIDADE
     // =====================================================
 
@@ -226,6 +328,108 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCodigosAleatorios =
         document.getElementById(
             "btnCodigosAleatorios"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — INICIAR MISSÃO
+    // =====================================================
+
+    const btnComecarListaAncorada =
+        document.getElementById(
+            "btnComecarListaAncorada"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — SELETOR DE CONTEÚDO
+    // =====================================================
+
+    const btnAbrirConteudoMemoriaAcao =
+        document.getElementById(
+            "btnAbrirConteudoMemoriaAcao"
+        );
+
+
+    const memoriaAcaoContentMenu =
+        document.getElementById(
+            "memoriaAcaoContentMenu"
+        );
+
+
+    const memoriaAcaoConteudoNome =
+        document.getElementById(
+            "memoriaAcaoConteudoNome"
+        );
+
+
+    const memoriaAcaoConteudoDescricao =
+        document.getElementById(
+            "memoriaAcaoConteudoDescricao"
+        );
+
+
+    const memoriaAcaoConteudoIcone =
+        document.getElementById(
+            "memoriaAcaoConteudoIcone"
+        );
+
+
+    const memoriaAcaoMinhaLista =
+        document.getElementById(
+            "memoriaAcaoMinhaLista"
+        );
+
+
+    const inputMinhaListaMemoriaAcao =
+        document.getElementById(
+            "inputMinhaListaMemoriaAcao"
+        );
+
+
+    const contadorMinhaListaMemoriaAcao =
+        document.getElementById(
+            "contadorMinhaListaMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — TELA DA MISSÃO
+    // =====================================================
+
+    const telaMemoriaAcaoMissao =
+        document.getElementById(
+            "telaMemoriaAcaoMissao"
+        );
+
+
+    const btnVoltarMemoriaAcaoMissao =
+        document.getElementById(
+            "btnVoltarMemoriaAcaoMissao"
+        );
+
+
+    const memoriaAcaoMissaoTipo =
+        document.getElementById(
+            "memoriaAcaoMissaoTipo"
+        );
+
+
+    const memoriaAcaoMissaoQuantidade =
+        document.getElementById(
+            "memoriaAcaoMissaoQuantidade"
+        );
+
+
+    const memoriaAcaoAssociacoes =
+        document.getElementById(
+            "memoriaAcaoAssociacoes"
+        );
+
+
+    const btnContinuarMemoriaAcao =
+        document.getElementById(
+            "btnContinuarMemoriaAcao"
         );
 
 
@@ -3489,6 +3693,11 @@ document.addEventListener("DOMContentLoaded", () => {
         listaAncorada: {
             elemento: telaListaAncorada,
             pai: "memoriaPratica"
+        },
+
+        missaoMemoriaAcao: {
+            elemento: telaMissaoMemoriaAcao,
+            pai: "listaAncorada"
         },
 
         aprender: {
@@ -7742,6 +7951,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 atualizarQuantidadeListaAncorada();
 
+            }
+        );
+
+    }
+
+
+    if (btnAumentarListaAncorada) {
+
+        btnAumentarListaAncorada.addEventListener(
+            "click",
+            () => {
+
+                if (quantidadeItensListaAncorada >= 20) {
+
+                    return;
+
+                }
+
+
+                quantidadeItensListaAncorada++;
+
+
+                atualizarQuantidadeListaAncorada();
+
+            }
+        );
+
+    }
+
+
+    atualizarQuantidadeListaAncorada();
+
 
     // =====================================================
     // MEMÓRIA EM AÇÃO — TIPO DE CÓDIGO
@@ -7817,29 +8058,289 @@ document.addEventListener("DOMContentLoaded", () => {
         "sequencial"
     );
 
-            }
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — ABRIR / FECHAR CONTEÚDO
+    // =====================================================
+
+    function alternarMenuConteudoMemoriaAcao() {
+
+        if (
+            !btnAbrirConteudoMemoriaAcao ||
+            !memoriaAcaoContentMenu
+        ) {
+
+            return;
+
+        }
+
+
+        const menuAberto =
+            !memoriaAcaoContentMenu.hidden;
+
+
+        memoriaAcaoContentMenu.hidden =
+            menuAberto;
+
+
+        btnAbrirConteudoMemoriaAcao.setAttribute(
+            "aria-expanded",
+            String(
+                !menuAberto
+            )
+        );
+
+
+        const seletor =
+            btnAbrirConteudoMemoriaAcao.closest(
+                ".memoria-acao-content-select"
+            );
+
+
+        if (seletor) {
+
+            seletor.classList.toggle(
+                "is-open",
+                !menuAberto
+            );
+
+        }
+
+    }
+
+
+    if (btnAbrirConteudoMemoriaAcao) {
+
+        btnAbrirConteudoMemoriaAcao.addEventListener(
+            "click",
+            alternarMenuConteudoMemoriaAcao
         );
 
     }
 
 
-    if (btnAumentarListaAncorada) {
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — SELETOR DE CONTEÚDO
+    // =====================================================
 
-        btnAumentarListaAncorada.addEventListener(
+    let tipoConteudoMemoriaAcao =
+        "compras";
+
+
+    const dadosConteudoMemoriaAcao = {
+
+        compras: {
+            nome: "Compras",
+            descricao: "Produtos do cotidiano"
+        },
+
+        tarefas: {
+            nome: "Tarefas",
+            descricao: "Afazeres e compromissos"
+        },
+
+        ingredientes: {
+            nome: "Ingredientes",
+            descricao: "Itens de receitas"
+        },
+
+        palavras: {
+            nome: "Palavras",
+            descricao: "Vocabulário e conceitos"
+        },
+
+        objetos: {
+            nome: "Objetos",
+            descricao: "Associação livre"
+        },
+
+        personalizada: {
+            nome: "Minha Lista",
+            descricao: "Digite o que quiser memorizar"
+        }
+
+    };
+
+
+    function fecharMenuConteudoMemoriaAcao() {
+
+        if (
+            !btnAbrirConteudoMemoriaAcao ||
+            !memoriaAcaoContentMenu
+        ) {
+
+            return;
+
+        }
+
+
+        memoriaAcaoContentMenu.hidden =
+            true;
+
+
+        btnAbrirConteudoMemoriaAcao.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        const seletor =
+            btnAbrirConteudoMemoriaAcao.closest(
+                ".memoria-acao-content-select"
+            );
+
+
+        if (seletor) {
+
+            seletor.classList.remove(
+                "is-open"
+            );
+
+        }
+
+    }
+
+
+    function atualizarConteudoMemoriaAcao() {
+
+        const dados =
+            dadosConteudoMemoriaAcao[
+                tipoConteudoMemoriaAcao
+            ];
+
+
+        if (!dados) {
+
+            return;
+
+        }
+
+
+        if (memoriaAcaoConteudoNome) {
+
+            memoriaAcaoConteudoNome.textContent =
+                dados.nome;
+
+        }
+
+
+        if (memoriaAcaoConteudoDescricao) {
+
+            memoriaAcaoConteudoDescricao.textContent =
+                dados.descricao;
+
+        }
+
+
+        if (memoriaAcaoContentMenu) {
+
+            const opcoes =
+                memoriaAcaoContentMenu.querySelectorAll(
+                    "[data-conteudo]"
+                );
+
+
+            opcoes.forEach(
+                opcao => {
+
+                    opcao.hidden =
+                        opcao.dataset.conteudo ===
+                        tipoConteudoMemoriaAcao;
+
+                }
+            );
+
+        }
+
+
+        if (memoriaAcaoMinhaLista) {
+
+            memoriaAcaoMinhaLista.hidden =
+                tipoConteudoMemoriaAcao !==
+                "personalizada";
+
+        }
+
+    }
+
+
+    function selecionarConteudoMemoriaAcao(
+        tipo
+    ) {
+
+        if (
+            !dadosConteudoMemoriaAcao[
+                tipo
+            ]
+        ) {
+
+            return;
+
+        }
+
+
+        const opcaoSelecionada =
+            memoriaAcaoContentMenu
+                ? memoriaAcaoContentMenu.querySelector(
+                    `[data-conteudo="${tipo}"]`
+                )
+                : null;
+
+
+        tipoConteudoMemoriaAcao =
+            tipo;
+
+
+        if (
+            memoriaAcaoConteudoIcone &&
+            opcaoSelecionada
+        ) {
+
+            const icone =
+                opcaoSelecionada.querySelector(
+                    ".lista-ancorada-list-icon svg"
+                );
+
+
+            if (icone) {
+
+                memoriaAcaoConteudoIcone.innerHTML =
+                    icone.outerHTML;
+
+            }
+
+        }
+
+
+        atualizarConteudoMemoriaAcao();
+
+        fecharMenuConteudoMemoriaAcao();
+
+    }
+
+
+    if (memoriaAcaoContentMenu) {
+
+        memoriaAcaoContentMenu.addEventListener(
             "click",
-            () => {
+            evento => {
 
-                if (quantidadeItensListaAncorada >= 20) {
+                const opcao =
+                    evento.target.closest(
+                        "[data-conteudo]"
+                    );
+
+
+                if (!opcao) {
 
                     return;
 
                 }
 
 
-                quantidadeItensListaAncorada++;
-
-
-                atualizarQuantidadeListaAncorada();
+                selecionarConteudoMemoriaAcao(
+                    opcao.dataset.conteudo
+                );
 
             }
         );
@@ -7847,7 +8348,749 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    atualizarQuantidadeListaAncorada();
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — MINHA LISTA
+    // =====================================================
+
+    function obterItensMinhaListaMemoriaAcao() {
+
+        const campoMinhaLista =
+            document.getElementById(
+                "inputMinhaListaMemoriaAcao"
+            );
+
+
+        if (!campoMinhaLista) {
+
+            return [];
+
+        }
+
+
+        return campoMinhaLista.value
+            .split("\n")
+            .map(
+                item =>
+                    item.trim()
+            )
+            .filter(
+                item =>
+                    item.length > 0
+            )
+            .slice(
+                0,
+                20
+            );
+
+    }
+
+
+    function atualizarContadorMinhaListaMemoriaAcao() {
+
+        const contadorMinhaLista =
+            document.getElementById(
+                "contadorMinhaListaMemoriaAcao"
+            );
+
+
+        if (!contadorMinhaLista) {
+
+            return;
+
+        }
+
+
+        const quantidadeItens =
+            obterItensMinhaListaMemoriaAcao()
+                .length;
+
+
+        contadorMinhaLista.textContent =
+            quantidadeItens === 1
+                ? "1 item"
+                : `${quantidadeItens} itens`;
+
+    }
+
+
+    const campoMinhaListaMemoriaAcao =
+        document.getElementById(
+            "inputMinhaListaMemoriaAcao"
+        );
+
+
+    if (campoMinhaListaMemoriaAcao) {
+
+        campoMinhaListaMemoriaAcao.addEventListener(
+            "input",
+            atualizarContadorMinhaListaMemoriaAcao
+        );
+
+    }
+
+
+    atualizarContadorMinhaListaMemoriaAcao();
+
+    atualizarConteudoMemoriaAcao();
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — GERADOR DE MISSÃO
+    // =====================================================
+
+    let missaoListaAncoradaAtual =
+        [];
+
+
+    function embaralharListaAncorada(
+        lista
+    ) {
+
+        const copia =
+            [...lista];
+
+
+        for (
+            let indice = copia.length - 1;
+            indice > 0;
+            indice--
+        ) {
+
+            const indiceAleatorio =
+                Math.floor(
+                    Math.random() *
+                    (indice + 1)
+                );
+
+
+            [
+                copia[indice],
+                copia[indiceAleatorio]
+            ] = [
+                copia[indiceAleatorio],
+                copia[indice]
+            ];
+
+        }
+
+
+        return copia;
+
+    }
+
+
+    function gerarCodigosListaAncorada(
+        quantidade,
+        tipo
+    ) {
+
+        // =============================================
+        // SEQUENCIAL
+        // =============================================
+
+        if (tipo === "sequencial") {
+
+            return Array.from(
+                {
+                    length:
+                        quantidade
+                },
+                (
+                    _,
+                    indice
+                ) => indice + 1
+            );
+
+        }
+
+
+        // =============================================
+        // ALEATÓRIO — 00 A 100 SEM REPETIÇÃO
+        // =============================================
+
+        const codigosDisponiveis =
+            Array.from(
+                {
+                    length:
+                        101
+                },
+                (
+                    _,
+                    indice
+                ) => indice
+            );
+
+
+        return embaralharListaAncorada(
+            codigosDisponiveis
+        ).slice(
+            0,
+            quantidade
+        );
+
+    }
+
+
+    function gerarMissaoListaAncorada() {
+
+        if (
+            typeof bancoMemoriaPratica ===
+            "undefined"
+        ) {
+
+            console.error(
+                "Banco Memória na Prática não encontrado."
+            );
+
+            return [];
+
+        }
+
+
+        let itens =
+            [];
+
+
+        // =============================================
+        // MINHA LISTA
+        // =============================================
+
+        if (
+            tipoConteudoMemoriaAcao ===
+            "personalizada"
+        ) {
+
+            const itensPersonalizados =
+                obterItensMinhaListaMemoriaAcao();
+
+
+            if (
+                itensPersonalizados.length === 0
+            ) {
+
+                console.warn(
+                    "Nenhum item foi informado em Minha Lista."
+                );
+
+                return [];
+
+            }
+
+
+            itens =
+                itensPersonalizados.map(
+                    (
+                        nome,
+                        indice
+                    ) => {
+
+                        return {
+
+                            id:
+                                `personalizada-${String(
+                                    indice + 1
+                                ).padStart(
+                                    3,
+                                    "0"
+                                )}`,
+
+                            nome:
+                                nome,
+
+                            imagem:
+                                null
+
+                        };
+
+                    }
+                );
+
+        }
+
+
+        // =============================================
+        // CATEGORIAS DO BANCO
+        // =============================================
+
+        else {
+
+            const categoriaSelecionada =
+                bancoMemoriaPratica[
+                    tipoConteudoMemoriaAcao
+                ];
+
+
+            if (
+                !Array.isArray(
+                    categoriaSelecionada
+                )
+            ) {
+
+                console.error(
+                    "Categoria da Memória em Ação não encontrada:",
+                    tipoConteudoMemoriaAcao
+                );
+
+                return [];
+
+            }
+
+
+            itens =
+                embaralharListaAncorada(
+                    categoriaSelecionada
+                ).slice(
+                    0,
+                    quantidadeItensListaAncorada
+                );
+
+        }
+
+
+        // =============================================
+        // GERA AS ÂNCORAS NUMÉRICAS
+        // =============================================
+
+        const codigos =
+            gerarCodigosListaAncorada(
+                itens.length,
+                tipoCodigoListaAncorada
+            );
+
+
+        // =============================================
+        // MONTA A MISSÃO
+        // =============================================
+
+        missaoListaAncoradaAtual =
+            itens.map(
+                (
+                    item,
+                    indice
+                ) => {
+
+                    return {
+
+                        codigo:
+                            codigos[indice],
+
+                        produto:
+                            item
+
+                    };
+
+                }
+            );
+
+
+        return missaoListaAncoradaAtual;
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — ASSOCIAÇÃO ATUAL
+    // =====================================================
+
+    let indiceAssociacaoMemoriaAcao =
+        0;
+
+
+    function mostrarAssociacaoAtualMemoriaAcao() {
+
+        if (
+            !Array.isArray(
+                missaoListaAncoradaAtual
+            ) ||
+            missaoListaAncoradaAtual.length === 0
+        ) {
+
+            return;
+
+        }
+
+
+        const associacaoAtual =
+            missaoListaAncoradaAtual[
+                indiceAssociacaoMemoriaAcao
+            ];
+
+
+        if (!associacaoAtual) {
+
+            return;
+
+        }
+
+
+        // =============================================
+        // LOCALIZA A ÂNCORA NO BANCO NUMÉRICO
+        // =============================================
+
+        const memoriaNumerica =
+            bancoMemoria.find(
+                memoria =>
+                    memoria.numero ===
+                    associacaoAtual.codigo
+            );
+
+
+        if (!memoriaNumerica) {
+
+            console.error(
+                "Âncora numérica não encontrada:",
+                associacaoAtual.codigo
+            );
+
+            return;
+
+        }
+
+
+        // =============================================
+        // PROGRESSO
+        // =============================================
+
+        if (progressoAssociacaoMemoriaAcao) {
+
+            progressoAssociacaoMemoriaAcao.textContent =
+                `ASSOCIAÇÃO ${
+                    indiceAssociacaoMemoriaAcao + 1
+                } DE ${
+                    missaoListaAncoradaAtual.length
+                }`;
+
+        }
+
+
+        // =============================================
+        // NÚMERO
+        // =============================================
+
+        if (numeroAncoraMemoriaAcao) {
+
+            numeroAncoraMemoriaAcao.textContent =
+                String(
+                    associacaoAtual.codigo
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+        }
+
+
+        // =============================================
+        // PALAVRA-ÂNCORA
+        // =============================================
+
+        if (palavraAncoraMemoriaAcao) {
+
+            palavraAncoraMemoriaAcao.textContent =
+                memoriaNumerica.palavra;
+
+        }
+
+
+        // =============================================
+        // ITEM A MEMORIZAR
+        // =============================================
+
+        if (itemMemoriaAcao) {
+
+            itemMemoriaAcao.textContent =
+                associacaoAtual.produto.nome;
+
+        }
+
+
+        // =============================================
+        // SUGESTÃO DA ASSOCIAÇÃO
+        // =============================================
+
+        if (textoSugestaoAssociacaoMemoriaAcao) {
+
+            const ancora =
+                memoriaNumerica.palavra;
+
+            const item =
+                associacaoAtual.produto.nome;
+
+
+            let cenaSugerida =
+                `Dentro do cenário, imagine uma versão gigante de "${item}" caindo sobre "${ancora}". O impacto faz tudo saltar até o teto! "${ancora}" fica grudado nessa informação, coberto de tinta verde brilhante. Veja os dois girando juntos e ouça o estrondo a cada batida no chão.`;
+
+
+            if (
+                ancora.toLowerCase() ===
+                "teia"
+            ) {
+
+                cenaSugerida =
+                    `Dentro do cenário, imagine uma aranha gigante empurrando "${item}" bem na sua frente. Ela gira ao redor e enrola "${item}" em uma teia cor-de-rosa, apertando tanto que deixa marcas profundas. A teia estica como um elástico e lança "${item}" até o teto, mas continua presa! Ouça o estalo e veja o enorme embrulho rosa balançando sobre você.`;
+
+            }
+
+
+            textoSugestaoAssociacaoMemoriaAcao.textContent =
+                cenaSugerida;
+
+        }
+
+
+        // =============================================
+        // NOVA ASSOCIAÇÃO COMEÇA SEM A SUGESTÃO
+        // =============================================
+
+        if (sugestaoAssociacaoMemoriaAcao) {
+
+            sugestaoAssociacaoMemoriaAcao.hidden =
+                true;
+
+        }
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — COMEÇAR MISSÃO
+    // =====================================================
+
+    if (btnComecarListaAncorada) {
+
+        btnComecarListaAncorada.addEventListener(
+            "click",
+            () => {
+
+                const missaoGerada =
+                    gerarMissaoListaAncorada();
+
+
+                // =========================================
+                // MISSÃO INVÁLIDA OU VAZIA
+                // =========================================
+
+                if (
+                    !Array.isArray(
+                        missaoGerada
+                    ) ||
+                    missaoGerada.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // REINICIA A MISSÃO
+                // =========================================
+
+                indiceAssociacaoMemoriaAcao =
+                    0;
+
+
+                if (etapaCenarioMemoriaAcao) {
+
+                    etapaCenarioMemoriaAcao.hidden =
+                        false;
+
+                }
+
+
+                if (etapaAssociacaoMemoriaAcao) {
+
+                    etapaAssociacaoMemoriaAcao.hidden =
+                        true;
+
+                }
+
+
+                if (sugestaoAssociacaoMemoriaAcao) {
+
+                    sugestaoAssociacaoMemoriaAcao.hidden =
+                        true;
+
+                }
+
+
+                // =========================================
+                // MISSÃO GERADA
+                // =========================================
+
+                console.log(
+                    "Missão Memória em Ação:",
+                    missaoGerada
+                );
+
+
+                navegarParaTela(
+                    "missaoMemoriaAcao"
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — ENTRAR NO CENÁRIO
+    // =====================================================
+
+    if (btnEntrarCenarioMemoriaAcao) {
+
+        btnEntrarCenarioMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                indiceAssociacaoMemoriaAcao =
+                    0;
+
+
+                mostrarAssociacaoAtualMemoriaAcao();
+
+
+                if (sugestaoAssociacaoMemoriaAcao) {
+
+                    sugestaoAssociacaoMemoriaAcao.hidden =
+                        true;
+
+                }
+
+
+                if (etapaCenarioMemoriaAcao) {
+
+                    etapaCenarioMemoriaAcao.hidden =
+                        true;
+
+                }
+
+
+                if (etapaAssociacaoMemoriaAcao) {
+
+                    etapaAssociacaoMemoriaAcao.hidden =
+                        false;
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — AJUDA DA ASSOCIAÇÃO
+    // =====================================================
+
+    if (btnAjudaAssociacaoMemoriaAcao) {
+
+        btnAjudaAssociacaoMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                if (!sugestaoAssociacaoMemoriaAcao) {
+
+                    return;
+
+                }
+
+
+                sugestaoAssociacaoMemoriaAcao.hidden =
+                    !sugestaoAssociacaoMemoriaAcao.hidden;
+
+
+                btnAjudaAssociacaoMemoriaAcao.textContent =
+                    sugestaoAssociacaoMemoriaAcao.hidden
+                        ? "Preciso de uma ideia"
+                        : "Ocultar ideia";
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — CENA CRIADA
+    // =====================================================
+
+    if (btnCenaCriadaMemoriaAcao) {
+
+        btnCenaCriadaMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    !Array.isArray(
+                        missaoListaAncoradaAtual
+                    ) ||
+                    missaoListaAncoradaAtual.length === 0
+                ) {
+
+                    return;
+
+                }
+
+
+                const ultimoIndice =
+                    missaoListaAncoradaAtual.length - 1;
+
+
+                // =========================================
+                // AINDA EXISTE OUTRA ASSOCIAÇÃO
+                // =========================================
+
+                if (
+                    indiceAssociacaoMemoriaAcao <
+                    ultimoIndice
+                ) {
+
+                    indiceAssociacaoMemoriaAcao++;
+
+
+                    mostrarAssociacaoAtualMemoriaAcao();
+
+
+                    if (btnAjudaAssociacaoMemoriaAcao) {
+
+                        btnAjudaAssociacaoMemoriaAcao.textContent =
+                            "Preciso de uma ideia";
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                // =========================================
+                // ÚLTIMA ASSOCIAÇÃO CONCLUÍDA
+                // =========================================
+
+                const etapaAssociacaoAtual =
+                    document.getElementById(
+                        "etapaAssociacaoMemoriaAcao"
+                    );
+
+
+                if (
+                    etapaAssociacaoAtual &&
+                    etapaPercursoMemoriaAcao
+                ) {
+
+                    etapaAssociacaoAtual.hidden = true;
+
+                    etapaPercursoMemoriaAcao.hidden = false;
+
+                }
+
+            }
+        );
+
+    }
 
 
     // =====================================================
