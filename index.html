@@ -406,6 +406,498 @@
 
 
             <!-- =================================================
+                 TELA — MEMÓRIA NA PRÁTICA
+            ================================================== -->
+
+            <section class="app-screen screen-memoria-pratica" id="telaMemoriaPratica" hidden>
+
+
+                <!-- =================================================
+                     CABEÇALHO
+                ================================================== -->
+
+                <div class="memory-central-header">
+
+                    <button class="back-button" id="btnVoltarMemoriaPratica" type="button"
+                        aria-label="Voltar para a Home">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="m15 18-6-6 6-6" />
+
+                        </svg>
+
+                    </button>
+
+
+                    <div>
+
+                        <span class="section-label">
+                            TREINAMENTO APLICADO
+                        </span>
+
+                        <h2>
+                            Memória na Prática
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     INTRODUÇÃO
+                ================================================== -->
+
+                <section class="memory-dashboard">
+
+                    <div class="memory-dashboard-top">
+
+                        <div>
+
+                            <span class="memory-dashboard-label">
+                                TRANSFORME MEMÓRIA EM HABILIDADE
+                            </span>
+
+                            <strong>
+                                Pratique
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Use suas imagens mentais para memorizar informações,
+                        criar associações e aplicar seus códigos em situações reais.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================================
+                     TREINAMENTOS
+                ================================================== -->
+
+                <section class="memory-training-section">
+
+                    <div class="memory-central-title">
+
+                        <span class="section-label">
+                            MEMÓRIA NA PRÁTICA
+                        </span>
+
+                        <h3>
+                            Escolha seu treinamento
+                        </h3>
+
+                    </div>
+
+
+                    <div class="memory-training-grid">
+
+
+                        <!-- LISTA ANCORADA -->
+
+                        <button class="memory-training-card memory-training-featured"
+                            id="btnListaAncorada" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M8 6h13" />
+
+                                    <path d="M8 12h13" />
+
+                                    <path d="M8 18h13" />
+
+                                    <path d="M3 6h.01" />
+
+                                    <path d="M3 12h.01" />
+
+                                    <path d="M3 18h.01" />
+
+                                </svg>
+
+                            </div>
+
+
+                            <span>
+                                Memória em
+                                <strong>Ação</strong>
+                            </span>
+
+
+                            <small>
+                                Associe códigos a informações reais
+                            </small>
+
+                        </button>
+
+
+                        <!-- CENÁRIO MENTAL -->
+
+                        <button class="memory-training-card" id="btnCenarioMental" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <rect x="3" y="4" width="18" height="16" rx="2" />
+
+                                    <path d="m3 16 5-5 4 4 3-3 6 6" />
+
+                                    <circle cx="16.5" cy="8.5" r="1.5" />
+
+                                </svg>
+
+                            </div>
+
+
+                            <span>
+                                Cenário
+                                <strong>Mental</strong>
+                            </span>
+
+
+                            <small>
+                                Memorize dentro de uma cena
+                            </small>
+
+                        </button>
+
+
+                        <!-- DESCUBRA O CÓDIGO -->
+
+                        <button class="memory-training-card" id="btnDescubraCodigo" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <circle cx="12" cy="12" r="9" />
+
+                                    <path d="M9.5 9a2.7 2.7 0 1 1 4.6 1.9c-1.2 1-2.1 1.5-2.1 3.1" />
+
+                                    <path d="M12 17h.01" />
+
+                                </svg>
+
+                            </div>
+
+
+                            <span>
+                                Descubra o
+                                <strong>Código</strong>
+                            </span>
+
+
+                            <small>
+                                Objeto ↔ número
+                            </small>
+
+                        </button>
+
+
+                        <!-- NÚMEROS NA VIDA REAL -->
+
+                        <button class="memory-training-card" id="btnNumerosVidaReal" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <rect x="3" y="5" width="18" height="14" rx="2" />
+
+                                    <path d="M7 9h3" />
+
+                                    <path d="M14 9h3" />
+
+                                    <path d="M7 15h3" />
+
+                                    <path d="M14 15h3" />
+
+                                </svg>
+
+                            </div>
+
+
+                            <span>
+                                Números na
+                                <strong>Vida Real</strong>
+                            </span>
+
+
+                            <small>
+                                Datas, códigos e sequências
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <!-- =================================================
+                 TELA — LISTA ANCORADA
+            ================================================== -->
+
+            <section class="app-screen screen-lista-ancorada" id="telaListaAncorada" hidden>
+
+
+                <!-- =================================================
+                     CABEÇALHO
+                ================================================== -->
+
+                <div class="memory-central-header">
+
+                    <button class="back-button" id="btnVoltarListaAncorada" type="button"
+                        aria-label="Voltar para Memória na Prática">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="m15 18-6-6 6-6" />
+
+                        </svg>
+
+                    </button>
+
+
+                    <div>
+
+                        <span class="section-label">
+                            MEMÓRIA NA PRÁTICA
+                        </span>
+
+                        <h2>
+                            Memória em Ação
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     INTRODUÇÃO
+                ================================================== -->
+
+                <section class="memory-dashboard">
+
+                    <div class="memory-dashboard-top">
+
+                        <div>
+
+                            <span class="memory-dashboard-label">
+                                SUA MISSÃO
+                            </span>
+
+                            <strong>
+                                Memorize uma lista
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Use suas imagens numéricas como âncoras para guardar
+                        novas informações e recuperá-las depois.
+                    </p>
+
+                </section>
+
+
+                <!-- =================================================
+                     CONFIGURAÇÃO DA MISSÃO
+                ================================================== -->
+
+                <section class="lista-ancorada-config">
+
+
+                    <!-- QUANTIDADE -->
+
+                    <div class="lista-ancorada-config-card">
+
+                        <div class="lista-ancorada-config-text">
+
+                            <span class="section-label">
+                                QUANTIDADE
+                            </span>
+
+                            <strong>
+                                Quantos itens?
+                            </strong>
+
+                            <small>
+                                Escolha o tamanho da sua lista.
+                            </small>
+
+                        </div>
+
+
+                        <div class="lista-ancorada-counter">
+
+                            <button id="btnDiminuirListaAncorada" type="button"
+                                aria-label="Diminuir quantidade">
+                                −
+                            </button>
+
+                            <strong id="quantidadeListaAncorada">
+                                5
+                            </strong>
+
+                            <button id="btnAumentarListaAncorada" type="button"
+                                aria-label="Aumentar quantidade">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CÓDIGOS -->
+
+                    <div class="lista-ancorada-config-card">
+
+                        <div class="lista-ancorada-config-text">
+
+                            <span class="section-label">
+                                CÓDIGOS
+                            </span>
+
+                            <strong>
+                                Como usar suas âncoras?
+                            </strong>
+
+                            <small>
+                                Escolha como os números serão utilizados.
+                            </small>
+
+                        </div>
+
+
+                        <div class="lista-ancorada-options">
+
+                            <button class="lista-ancorada-option is-selected"
+                                id="btnCodigosSequenciais" type="button">
+
+                                <strong>
+                                    Sequenciais
+                                </strong>
+
+                                <small>
+                                    01, 02, 03...
+                                </small>
+
+                            </button>
+
+
+                            <button class="lista-ancorada-option"
+                                id="btnCodigosAleatorios" type="button">
+
+                                <strong>
+                                    Aleatórios
+                                </strong>
+
+                                <small>
+                                    15, 36, 87...
+                                </small>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TIPO DE LISTA -->
+
+                    <div class="lista-ancorada-config-card">
+
+                        <div class="lista-ancorada-config-text">
+
+                            <span class="section-label">
+                                CONTEÚDO
+                            </span>
+
+                            <strong>
+                                O que vamos memorizar?
+                            </strong>
+
+                            <small>
+                                Começaremos com uma situação simples do dia a dia.
+                            </small>
+
+                        </div>
+
+
+                        <button class="lista-ancorada-list-type is-selected"
+                            id="btnListaCompras" type="button">
+
+                            <span class="lista-ancorada-list-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M6 8h12l-1 12H7L6 8Z" />
+
+                                    <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+
+                                </svg>
+
+                            </span>
+
+
+                            <span>
+
+                                <strong>
+                                    Lista de Compras
+                                </strong>
+
+                                <small>
+                                    Produtos e itens do cotidiano
+                                </small>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- INICIAR -->
+
+                    <button class="primary-button lista-ancorada-start"
+                        id="btnComecarListaAncorada" type="button">
+
+                        <span>
+                            Começar missão
+                        </span>
+
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path d="m9 18 6-6-6-6" />
+
+                        </svg>
+
+                    </button>
+
+
+                </section>
+
+            </section>
+
+
+            <!-- =================================================
                  TELA — MEMÓRIA NUMÉRICA
             ================================================== -->
 
@@ -4387,6 +4879,44 @@
                                     0
                                 </span>
                                 / 100
+                            </small>
+
+                        </button>
+
+
+                        <!-- MEMÓRIA NA PRÁTICA -->
+
+                        <button class="home-path-card" id="btnMemoriaPratica" type="button">
+
+                            <div class="home-path-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M12 3v18" />
+
+                                    <path d="M3 12h18" />
+
+                                    <path d="M5.5 5.5 18.5 18.5" />
+
+                                    <path d="M18.5 5.5 5.5 18.5" />
+
+                                    <circle cx="12" cy="12" r="3" />
+
+                                </svg>
+
+                            </div>
+
+
+                            <strong>
+                                MEMÓRIA NA
+                                <span>
+                                    PRÁTICA
+                                </span>
+                            </strong>
+
+
+                            <small>
+                                Aplicações reais
                             </small>
 
                         </button>

@@ -148,6 +148,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // NAVEGAÇÃO — MEMÓRIA NA PRÁTICA
+    // =====================================================
+
+    const btnMemoriaPratica =
+        document.getElementById(
+            "btnMemoriaPratica"
+        );
+
+
+    const telaMemoriaPratica =
+        document.getElementById(
+            "telaMemoriaPratica"
+        );
+
+
+    const btnVoltarMemoriaPratica =
+        document.getElementById(
+            "btnVoltarMemoriaPratica"
+        );
+
+
+    // =====================================================
+    // NAVEGAÇÃO — LISTA ANCORADA
+    // =====================================================
+
+    const btnListaAncorada =
+        document.getElementById(
+            "btnListaAncorada"
+        );
+
+
+    const telaListaAncorada =
+        document.getElementById(
+            "telaListaAncorada"
+        );
+
+
+    const btnVoltarListaAncorada =
+        document.getElementById(
+            "btnVoltarListaAncorada"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — QUANTIDADE
+    // =====================================================
+
+    const btnDiminuirListaAncorada =
+        document.getElementById(
+            "btnDiminuirListaAncorada"
+        );
+
+
+    const btnAumentarListaAncorada =
+        document.getElementById(
+            "btnAumentarListaAncorada"
+        );
+
+
+    const quantidadeListaAncorada =
+        document.getElementById(
+            "quantidadeListaAncorada"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — TIPO DE CÓDIGO
+    // =====================================================
+
+    const btnCodigosSequenciais =
+        document.getElementById(
+            "btnCodigosSequenciais"
+        );
+
+
+    const btnCodigosAleatorios =
+        document.getElementById(
+            "btnCodigosAleatorios"
+        );
+
+
+    // =====================================================
     // REVISÃO INTELIGENTE
     // =====================================================
 
@@ -3397,6 +3479,16 @@ document.addEventListener("DOMContentLoaded", () => {
         memoriaNumerica: {
             elemento: telaMemoriaNumerica,
             pai: "home"
+        },
+
+        memoriaPratica: {
+            elemento: telaMemoriaPratica,
+            pai: "home"
+        },
+
+        listaAncorada: {
+            elemento: telaListaAncorada,
+            pai: "memoriaPratica"
         },
 
         aprender: {
@@ -7554,6 +7646,211 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // EVENTOS — MEMÓRIA NA PRÁTICA
+    // =====================================================
+
+    if (btnMemoriaPratica) {
+
+        btnMemoriaPratica.addEventListener(
+            "click",
+            () => {
+
+                navegarParaTela(
+                    "memoriaPratica"
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // ABRIR — LISTA ANCORADA
+    // =====================================================
+
+    if (btnListaAncorada) {
+
+        btnListaAncorada.addEventListener(
+            "click",
+            () => {
+
+                navegarParaTela(
+                    "listaAncorada"
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — QUANTIDADE
+    // =====================================================
+
+    let quantidadeItensListaAncorada =
+        5;
+
+
+    function atualizarQuantidadeListaAncorada() {
+
+        if (!quantidadeListaAncorada) {
+
+            return;
+
+        }
+
+
+        quantidadeListaAncorada.textContent =
+            quantidadeItensListaAncorada;
+
+
+        if (btnDiminuirListaAncorada) {
+
+            btnDiminuirListaAncorada.disabled =
+                quantidadeItensListaAncorada <= 3;
+
+        }
+
+
+        if (btnAumentarListaAncorada) {
+
+            btnAumentarListaAncorada.disabled =
+                quantidadeItensListaAncorada >= 20;
+
+        }
+
+    }
+
+
+    if (btnDiminuirListaAncorada) {
+
+        btnDiminuirListaAncorada.addEventListener(
+            "click",
+            () => {
+
+                if (quantidadeItensListaAncorada <= 3) {
+
+                    return;
+
+                }
+
+
+                quantidadeItensListaAncorada--;
+
+
+                atualizarQuantidadeListaAncorada();
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — TIPO DE CÓDIGO
+    // =====================================================
+
+    let tipoCodigoListaAncorada =
+        "sequencial";
+
+
+    function selecionarTipoCodigoListaAncorada(
+        tipo
+    ) {
+
+        tipoCodigoListaAncorada =
+            tipo;
+
+
+        if (btnCodigosSequenciais) {
+
+            btnCodigosSequenciais.classList.toggle(
+                "is-selected",
+                tipo === "sequencial"
+            );
+
+        }
+
+
+        if (btnCodigosAleatorios) {
+
+            btnCodigosAleatorios.classList.toggle(
+                "is-selected",
+                tipo === "aleatorio"
+            );
+
+        }
+
+    }
+
+
+    if (btnCodigosSequenciais) {
+
+        btnCodigosSequenciais.addEventListener(
+            "click",
+            () => {
+
+                selecionarTipoCodigoListaAncorada(
+                    "sequencial"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (btnCodigosAleatorios) {
+
+        btnCodigosAleatorios.addEventListener(
+            "click",
+            () => {
+
+                selecionarTipoCodigoListaAncorada(
+                    "aleatorio"
+                );
+
+            }
+        );
+
+    }
+
+
+    selecionarTipoCodigoListaAncorada(
+        "sequencial"
+    );
+
+            }
+        );
+
+    }
+
+
+    if (btnAumentarListaAncorada) {
+
+        btnAumentarListaAncorada.addEventListener(
+            "click",
+            () => {
+
+                if (quantidadeItensListaAncorada >= 20) {
+
+                    return;
+
+                }
+
+
+                quantidadeItensListaAncorada++;
+
+
+                atualizarQuantidadeListaAncorada();
+
+            }
+        );
+
+    }
+
+
+    atualizarQuantidadeListaAncorada();
+
+
+    // =====================================================
     // ABRIR REVISÃO INTELIGENTE
     // =====================================================
 
@@ -7693,6 +7990,42 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnVoltarHome) {
 
         btnVoltarHome.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR — MEMÓRIA NA PRÁTICA
+    // =====================================================
+
+    if (btnVoltarMemoriaPratica) {
+
+        btnVoltarMemoriaPratica.addEventListener(
+            "click",
+            () => {
+
+                history.back();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // VOLTAR — MEMÓRIA EM AÇÃO
+    // =====================================================
+
+    if (btnVoltarListaAncorada) {
+
+        btnVoltarListaAncorada.addEventListener(
             "click",
             () => {
 
