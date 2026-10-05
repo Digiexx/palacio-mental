@@ -616,6 +616,233 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // MEMÓRIA EM AÇÃO — HISTÓRICO DAS MISSÕES
+    // =====================================================
+
+    const tentativasRegistradasMemoriaAcao =
+        new WeakSet();
+
+    const CHAVE_HISTORICO_MEMORIA_ACAO =
+        "palacioMentalHistoricoMemoriaAcao";
+
+
+    let historicoMissoesMemoriaAcao =
+        carregarHistoricoMemoriaAcao();
+
+
+    function atualizarHistoricoMemoriaAcao() {
+
+        const lista =
+            document.getElementById(
+                "listaHistoricoMemoriaAcao"
+            );
+
+        const mensagemVazia =
+            document.getElementById(
+                "historicoVazioMemoriaAcao"
+            );
+
+
+        if (!lista || !mensagemVazia) {
+
+            return;
+
+        }
+
+
+        const registros =
+            historicoMissoesMemoriaAcao
+                .filter(
+                    registro =>
+                        registro &&
+                        typeof registro === "object" &&
+                        !Array.isArray(registro)
+                )
+                .slice(-5)
+                .reverse();
+
+
+        mensagemVazia.hidden =
+            registros.length > 0;
+
+
+        const fragmento =
+            document.createDocumentFragment();
+
+
+        registros.forEach(
+            registro => {
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "memoria-acao-historico-item";
+
+
+                const topo =
+                    document.createElement("div");
+
+                topo.className =
+                    "memoria-acao-historico-topo";
+
+
+                const data =
+                    document.createElement("span");
+
+                data.className =
+                    "memoria-acao-historico-data";
+
+
+                const dataMissao =
+                    new Date(registro.data);
+
+                data.textContent =
+                    Number.isNaN(dataMissao.getTime())
+                        ? "Data indisponível"
+                        : dataMissao.toLocaleString(
+                            "pt-BR",
+                            {
+                                day: "2-digit",
+                                month: "2-digit",
+                                year: "numeric",
+                                hour: "2-digit",
+                                minute: "2-digit"
+                            }
+                        );
+
+
+                const percentual =
+                    document.createElement("strong");
+
+                percentual.className =
+                    "memoria-acao-historico-percentual";
+
+                percentual.textContent =
+                    `${registro.percentual}%`;
+
+                percentual.setAttribute(
+                    "aria-label",
+                    `${registro.percentual}% de recuperação`
+                );
+
+
+                const resumo =
+                    document.createElement("p");
+
+                resumo.textContent =
+                    `${registro.acertos} de ${registro.total} itens recuperados`;
+
+
+                const detalhes =
+                    document.createElement("p");
+
+                detalhes.textContent =
+                    `Respostas incorretas: ${registro.erros} • Não lembrados: ${registro.naoLembrados}`;
+
+
+                topo.append(
+                    data,
+                    percentual
+                );
+
+                card.append(
+                    topo,
+                    resumo,
+                    detalhes
+                );
+
+                fragmento.append(card);
+
+            }
+        );
+
+
+        lista.replaceChildren(
+            fragmento
+        );
+
+    }
+
+
+    atualizarHistoricoMemoriaAcao();
+
+
+    function carregarHistoricoMemoriaAcao() {
+
+        try {
+
+            const dadosSalvos =
+                localStorage.getItem(
+                    CHAVE_HISTORICO_MEMORIA_ACAO
+                );
+
+
+            if (!dadosSalvos) {
+
+                return [];
+
+            }
+
+
+            const dadosConvertidos =
+                JSON.parse(
+                    dadosSalvos
+                );
+
+
+            if (!Array.isArray(dadosConvertidos)) {
+
+                return [];
+
+            }
+
+
+            return dadosConvertidos;
+
+        } catch (erro) {
+
+            console.error(
+                "Erro ao carregar histórico de Memória em Ação:",
+                erro
+            );
+
+            return [];
+
+        }
+
+    }
+
+
+    function salvarHistoricoMemoriaAcao() {
+
+        try {
+
+            localStorage.setItem(
+                CHAVE_HISTORICO_MEMORIA_ACAO,
+                JSON.stringify(
+                    historicoMissoesMemoriaAcao
+                )
+            );
+
+
+            return true;
+
+        } catch (erro) {
+
+            console.error(
+                "Erro ao salvar histórico de Memória em Ação:",
+                erro
+            );
+
+            return false;
+
+        }
+
+    }
+
+
+    // =====================================================
     // MEMÓRIA EM AÇÃO — MOSTRAR RESULTADO
     // =====================================================
 
@@ -837,6 +1064,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
         etapaResultadoMemoriaAcao.hidden =
             false;
+
+
+        // =============================================
+        // REGISTRA CADA TENTATIVA SOMENTE UMA VEZ
+        // =============================================
+
+        if (
+            !tentativasRegistradasMemoriaAcao.has(
+                respostasMissaoMemoriaAcao
+            )
+        ) {
+
+            const registroHistorico = {
+
+                data:
+                    new Date().toISOString(),
+
+                total:
+                    total,
+
+                acertos:
+                    acertos,
+
+                erros:
+                    erros,
+
+                naoLembrados:
+                    naoLembrados,
+
+                percentual:
+                    percentual,
+
+                respostas:
+                    respostasMissaoMemoriaAcao.map(
+                        resposta => ({
+                            codigo: resposta.codigo,
+                            item: resposta.item,
+                            resposta: resposta.resposta,
+                            naoLembrou: resposta.naoLembrou,
+                            acertou: resposta.acertou
+                        })
+                    )
+
+            };
+
+
+            historicoMissoesMemoriaAcao.push(
+                registroHistorico
+            );
+
+
+            if (salvarHistoricoMemoriaAcao()) {
+
+                tentativasRegistradasMemoriaAcao.add(
+                    respostasMissaoMemoriaAcao
+                );
+
+
+                atualizarHistoricoMemoriaAcao();
+
+            } else {
+
+                historicoMissoesMemoriaAcao.pop();
+
+            }
+
+        }
 
 
         return true;
