@@ -207,6 +207,20 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    if (btnVoltarMissaoMemoriaAcao) {
+
+        btnVoltarMissaoMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                window.history.back();
+
+            }
+        );
+
+    }
+
+
     const btnEntrarCenarioMemoriaAcao =
         document.getElementById(
             "btnEntrarCenarioMemoriaAcao"
@@ -291,6 +305,718 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById(
             "btnIniciarTesteMemoriaAcao"
         );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — RECUPERAÇÃO
+    // =====================================================
+
+    const etapaRecuperacaoMemoriaAcao =
+        document.getElementById(
+            "etapaRecuperacaoMemoriaAcao"
+        );
+
+
+    const progressoRecuperacaoMemoriaAcao =
+        document.getElementById(
+            "progressoRecuperacaoMemoriaAcao"
+        );
+
+
+    const numeroAncoraRecuperacaoMemoriaAcao =
+        document.getElementById(
+            "numeroAncoraRecuperacaoMemoriaAcao"
+        );
+
+
+    const palavraAncoraRecuperacaoMemoriaAcao =
+        document.getElementById(
+            "palavraAncoraRecuperacaoMemoriaAcao"
+        );
+
+
+    const formRecuperacaoMemoriaAcao =
+        document.getElementById(
+            "formRecuperacaoMemoriaAcao"
+        );
+
+
+    const respostaRecuperacaoMemoriaAcao =
+        document.getElementById(
+            "respostaRecuperacaoMemoriaAcao"
+        );
+
+
+    const btnConfirmarRespostaMemoriaAcao =
+        document.getElementById(
+            "btnConfirmarRespostaMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — ELEMENTOS DO RESULTADO
+    // =====================================================
+
+    const etapaResultadoMemoriaAcao =
+        document.getElementById(
+            "etapaResultadoMemoriaAcao"
+        );
+
+
+    const percentualResultadoMemoriaAcao =
+        document.getElementById(
+            "percentualResultadoMemoriaAcao"
+        );
+
+
+    const mensagemResultadoMemoriaAcao =
+        document.getElementById(
+            "mensagemResultadoMemoriaAcao"
+        );
+
+
+    const totalResultadoMemoriaAcao =
+        document.getElementById(
+            "totalResultadoMemoriaAcao"
+        );
+
+
+    const acertosResultadoMemoriaAcao =
+        document.getElementById(
+            "acertosResultadoMemoriaAcao"
+        );
+
+
+    const errosResultadoMemoriaAcao =
+        document.getElementById(
+            "errosResultadoMemoriaAcao"
+        );
+
+
+    const naoLembradosResultadoMemoriaAcao =
+        document.getElementById(
+            "naoLembradosResultadoMemoriaAcao"
+        );
+
+
+    const listaResultadoMemoriaAcao =
+        document.getElementById(
+            "listaResultadoMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — REPETIR A MESMA MISSÃO
+    // =====================================================
+
+    const btnRepetirMissaoMemoriaAcao =
+        document.getElementById(
+            "btnRepetirMissaoMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — VOLTAR À CONFIGURAÇÃO
+    // =====================================================
+
+    const btnVoltarMemoriaAcao =
+        document.getElementById(
+            "btnVoltarMemoriaAcao"
+        );
+
+
+    if (btnVoltarMemoriaAcao) {
+
+        btnVoltarMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                navegarParaTela(
+                    "listaAncorada"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (btnRepetirMissaoMemoriaAcao) {
+
+        btnRepetirMissaoMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                const etapaAssociacaoAtual =
+                    document.getElementById(
+                        "etapaAssociacaoMemoriaAcao"
+                    );
+
+
+                if (
+                    !Array.isArray(
+                        missaoListaAncoradaAtual
+                    ) ||
+                    missaoListaAncoradaAtual.length === 0 ||
+                    !etapaAssociacaoAtual ||
+                    !etapaResultadoMemoriaAcao ||
+                    etapaResultadoMemoriaAcao.hidden ||
+                    !etapaPercursoMemoriaAcao ||
+                    !etapaRecuperacaoMemoriaAcao
+                ) {
+
+                    return;
+
+                }
+
+
+                indiceAssociacaoMemoriaAcao =
+                    0;
+
+
+                indiceRecuperacaoMemoriaAcao =
+                    0;
+
+
+                respostasMissaoMemoriaAcao =
+                    [];
+
+
+                mostrarAssociacaoAtualMemoriaAcao();
+
+
+                if (btnAjudaAssociacaoMemoriaAcao) {
+
+                    btnAjudaAssociacaoMemoriaAcao.textContent =
+                        "Preciso de uma ideia";
+
+                }
+
+
+                if (respostaRecuperacaoMemoriaAcao) {
+
+                    respostaRecuperacaoMemoriaAcao.value =
+                        "";
+
+                }
+
+
+                etapaResultadoMemoriaAcao.hidden =
+                    true;
+
+
+                etapaPercursoMemoriaAcao.hidden =
+                    true;
+
+
+                etapaRecuperacaoMemoriaAcao.hidden =
+                    true;
+
+
+                etapaAssociacaoAtual.hidden =
+                    false;
+
+
+                etapaAssociacaoAtual.scrollIntoView({
+
+                    behavior:
+                        "auto",
+
+                    block:
+                        "start"
+
+                });
+
+            }
+        );
+
+    }
+
+
+    const btnNaoLembroMemoriaAcao =
+        document.getElementById(
+            "btnNaoLembroMemoriaAcao"
+        );
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — NÃO LEMBRO
+    // =====================================================
+
+    if (btnNaoLembroMemoriaAcao) {
+
+        btnNaoLembroMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    !etapaRecuperacaoMemoriaAcao ||
+                    etapaRecuperacaoMemoriaAcao.hidden ||
+                    !Array.isArray(
+                        missaoListaAncoradaAtual
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const associacaoAtual =
+                    missaoListaAncoradaAtual[
+                        indiceRecuperacaoMemoriaAcao
+                    ];
+
+
+                if (!associacaoAtual) {
+
+                    return;
+
+                }
+
+
+                respostasMissaoMemoriaAcao.push({
+
+                    codigo:
+                        associacaoAtual.codigo,
+
+                    item:
+                        associacaoAtual.produto.nome,
+
+                    resposta:
+                        "",
+
+                    naoLembrou:
+                        true,
+
+                    acertou:
+                        false
+
+                });
+
+
+                indiceRecuperacaoMemoriaAcao++;
+
+
+                if (
+                    indiceRecuperacaoMemoriaAcao <
+                    missaoListaAncoradaAtual.length
+                ) {
+
+                    mostrarRecuperacaoAtualMemoriaAcao();
+
+                    return;
+
+                }
+
+
+                progressoRecuperacaoMemoriaAcao.textContent =
+                    "RECUPERAÇÃO CONCLUÍDA";
+
+
+                respostaRecuperacaoMemoriaAcao.value =
+                    "";
+
+
+                mostrarResultadoMemoriaAcao();
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — ESTADO DA RECUPERAÇÃO
+    // =====================================================
+
+    let indiceRecuperacaoMemoriaAcao = 0;
+
+    let respostasMissaoMemoriaAcao = [];
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — MOSTRAR RESULTADO
+    // =====================================================
+
+    function mostrarResultadoMemoriaAcao() {
+
+        if (
+            !etapaResultadoMemoriaAcao ||
+            !etapaRecuperacaoMemoriaAcao ||
+            !percentualResultadoMemoriaAcao ||
+            !mensagemResultadoMemoriaAcao ||
+            !totalResultadoMemoriaAcao ||
+            !acertosResultadoMemoriaAcao ||
+            !errosResultadoMemoriaAcao ||
+            !naoLembradosResultadoMemoriaAcao ||
+            !listaResultadoMemoriaAcao ||
+            missaoListaAncoradaAtual.length === 0 ||
+            respostasMissaoMemoriaAcao.length !==
+                missaoListaAncoradaAtual.length
+        ) {
+
+            return false;
+
+        }
+
+
+        const total =
+            respostasMissaoMemoriaAcao.length;
+
+
+        const naoLembrados =
+            respostasMissaoMemoriaAcao.filter(
+                registro =>
+                    registro.naoLembrou === true
+            ).length;
+
+
+        const acertos =
+            respostasMissaoMemoriaAcao.filter(
+                registro =>
+                    registro.naoLembrou !== true &&
+                    registro.acertou === true
+            ).length;
+
+
+        const erros =
+            total - acertos - naoLembrados;
+
+
+        const percentual =
+            Math.round(
+                (acertos / total) * 100
+            );
+
+
+        totalResultadoMemoriaAcao.textContent =
+            total;
+
+        acertosResultadoMemoriaAcao.textContent =
+            acertos;
+
+        errosResultadoMemoriaAcao.textContent =
+            erros;
+
+        naoLembradosResultadoMemoriaAcao.textContent =
+            naoLembrados;
+
+        percentualResultadoMemoriaAcao.textContent =
+            `${percentual}%`;
+
+
+        mensagemResultadoMemoriaAcao.textContent =
+            acertos === total
+                ? "Você recuperou todos os itens! Observe quais detalhes das suas cenas ajudaram a lembrar."
+                : `Você recuperou ${acertos} de ${total} itens. Confira abaixo quais cenas precisam de uma interação mais marcante.`;
+
+
+        const fragmento =
+            document.createDocumentFragment();
+
+
+        respostasMissaoMemoriaAcao.forEach(
+            registro => {
+
+                const memoriaNumerica =
+                    bancoMemoria.find(
+                        memoria =>
+                            memoria.numero ===
+                            registro.codigo
+                    );
+
+
+                const codigoFormatado =
+                    String(
+                        registro.codigo
+                    ).padStart(
+                        2,
+                        "0"
+                    );
+
+
+                const card =
+                    document.createElement("div");
+
+                card.className =
+                    "memoria-acao-resultado-item";
+
+
+                const topo =
+                    document.createElement("div");
+
+                topo.className =
+                    "memoria-acao-resultado-item-topo";
+
+
+                const ancora =
+                    document.createElement("span");
+
+                ancora.className =
+                    "memoria-acao-resultado-item-ancora";
+
+                ancora.textContent =
+                    `${codigoFormatado} — ${
+                        memoriaNumerica
+                            ? memoriaNumerica.palavra
+                            : "Âncora"
+                    }`;
+
+
+                const status =
+                    document.createElement("span");
+
+                status.className =
+                    "memoria-acao-resultado-item-status";
+
+
+                if (registro.naoLembrou === true) {
+
+                    card.dataset.status =
+                        "nao-lembrou";
+
+                    status.textContent =
+                        "Não lembrado";
+
+                } else if (registro.acertou === true) {
+
+                    card.dataset.status =
+                        "acerto";
+
+                    status.textContent =
+                        "Acerto";
+
+                } else {
+
+                    card.dataset.status =
+                        "erro";
+
+                    status.textContent =
+                        "Resposta incorreta";
+
+                }
+
+
+                const resposta =
+                    document.createElement("p");
+
+                const rotuloResposta =
+                    document.createElement("strong");
+
+                rotuloResposta.textContent =
+                    "Sua resposta: ";
+
+                resposta.append(
+                    rotuloResposta,
+                    registro.naoLembrou === true
+                        ? "Não lembro agora"
+                        : registro.resposta
+                );
+
+
+                const item =
+                    document.createElement("p");
+
+                const rotuloItem =
+                    document.createElement("strong");
+
+                rotuloItem.textContent =
+                    "Item da missão: ";
+
+                item.append(
+                    rotuloItem,
+                    registro.item
+                );
+
+
+                topo.append(
+                    ancora,
+                    status
+                );
+
+                card.append(
+                    topo,
+                    resposta,
+                    item
+                );
+
+                fragmento.append(card);
+
+            }
+        );
+
+
+        listaResultadoMemoriaAcao.replaceChildren(
+            fragmento
+        );
+
+
+        etapaRecuperacaoMemoriaAcao.hidden =
+            true;
+
+        etapaResultadoMemoriaAcao.hidden =
+            false;
+
+
+        return true;
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — NORMALIZAR RESPOSTA
+    // =====================================================
+
+    function normalizarRespostaMemoriaAcao(texto) {
+
+        return String(
+            texto ?? ""
+        )
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, " ");
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — MOSTRAR RECUPERAÇÃO ATUAL
+    // =====================================================
+
+    function mostrarRecuperacaoAtualMemoriaAcao() {
+
+        if (
+            !Array.isArray(
+                missaoListaAncoradaAtual
+            ) ||
+            !progressoRecuperacaoMemoriaAcao ||
+            !numeroAncoraRecuperacaoMemoriaAcao ||
+            !palavraAncoraRecuperacaoMemoriaAcao ||
+            !respostaRecuperacaoMemoriaAcao
+        ) {
+
+            return false;
+
+        }
+
+
+        const associacaoAtual =
+            missaoListaAncoradaAtual[
+                indiceRecuperacaoMemoriaAcao
+            ];
+
+
+        if (!associacaoAtual) {
+
+            return false;
+
+        }
+
+
+        const memoriaNumerica =
+            bancoMemoria.find(
+                memoria =>
+                    memoria.numero ===
+                    associacaoAtual.codigo
+            );
+
+
+        if (!memoriaNumerica) {
+
+            return false;
+
+        }
+
+
+        progressoRecuperacaoMemoriaAcao.textContent =
+            `RECUPERAÇÃO ${
+                indiceRecuperacaoMemoriaAcao + 1
+            } DE ${
+                missaoListaAncoradaAtual.length
+            }`;
+
+
+        numeroAncoraRecuperacaoMemoriaAcao.textContent =
+            String(
+                associacaoAtual.codigo
+            ).padStart(
+                2,
+                "0"
+            );
+
+
+        palavraAncoraRecuperacaoMemoriaAcao.textContent =
+            memoriaNumerica.palavra;
+
+
+        respostaRecuperacaoMemoriaAcao.value =
+            "";
+
+
+        return true;
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — INICIAR RECUPERAÇÃO
+    // =====================================================
+
+    if (btnIniciarTesteMemoriaAcao) {
+
+        btnIniciarTesteMemoriaAcao.addEventListener(
+            "click",
+            () => {
+
+                if (
+                    !Array.isArray(
+                        missaoListaAncoradaAtual
+                    ) ||
+                    missaoListaAncoradaAtual.length === 0 ||
+                    !etapaPercursoMemoriaAcao ||
+                    !etapaRecuperacaoMemoriaAcao ||
+                    !progressoRecuperacaoMemoriaAcao ||
+                    !numeroAncoraRecuperacaoMemoriaAcao ||
+                    !palavraAncoraRecuperacaoMemoriaAcao ||
+                    !respostaRecuperacaoMemoriaAcao
+                ) {
+
+                    return;
+
+                }
+
+
+                indiceRecuperacaoMemoriaAcao =
+                    0;
+
+
+                respostasMissaoMemoriaAcao =
+                    [];
+
+
+                if (
+                    !mostrarRecuperacaoAtualMemoriaAcao()
+                ) {
+
+                    return;
+
+                }
+
+
+                etapaPercursoMemoriaAcao.hidden =
+                    true;
+
+
+                etapaRecuperacaoMemoriaAcao.hidden =
+                    false;
+
+            }
+        );
+
+    }
 
 
     // =====================================================
@@ -3432,6 +4158,117 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         return true;
+
+    }
+
+
+    // =====================================================
+    // MEMÓRIA EM AÇÃO — CONFIRMAR RESPOSTA
+    // =====================================================
+
+    if (formRecuperacaoMemoriaAcao) {
+
+        formRecuperacaoMemoriaAcao.addEventListener(
+            "submit",
+            evento => {
+
+                evento.preventDefault();
+
+
+                if (
+                    !etapaRecuperacaoMemoriaAcao ||
+                    etapaRecuperacaoMemoriaAcao.hidden ||
+                    !respostaRecuperacaoMemoriaAcao ||
+                    !Array.isArray(
+                        missaoListaAncoradaAtual
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                const associacaoAtual =
+                    missaoListaAncoradaAtual[
+                        indiceRecuperacaoMemoriaAcao
+                    ];
+
+
+                if (!associacaoAtual) {
+
+                    return;
+
+                }
+
+
+                const respostaDigitada =
+                    respostaRecuperacaoMemoriaAcao.value.trim();
+
+
+                if (!respostaDigitada) {
+
+                    respostaRecuperacaoMemoriaAcao.focus();
+
+                    return;
+
+                }
+
+
+                const acertou =
+                    normalizarRespostaMemoriaAcao(
+                        respostaDigitada
+                    ) ===
+                    normalizarRespostaMemoriaAcao(
+                        associacaoAtual.produto.nome
+                    );
+
+
+                respostasMissaoMemoriaAcao.push({
+
+                    codigo:
+                        associacaoAtual.codigo,
+
+                    item:
+                        associacaoAtual.produto.nome,
+
+                    resposta:
+                        respostaDigitada,
+
+                    naoLembrou:
+                        false,
+
+                    acertou:
+                        acertou
+
+                });
+
+
+                indiceRecuperacaoMemoriaAcao++;
+
+
+                if (
+                    indiceRecuperacaoMemoriaAcao <
+                    missaoListaAncoradaAtual.length
+                ) {
+
+                    mostrarRecuperacaoAtualMemoriaAcao();
+
+                    respostaRecuperacaoMemoriaAcao.focus();
+
+                    return;
+
+                }
+
+
+                progressoRecuperacaoMemoriaAcao.textContent =
+                    "RECUPERAÇÃO CONCLUÍDA";
+
+
+                mostrarResultadoMemoriaAcao();
+
+            }
+        );
 
     }
 
@@ -8922,6 +9759,59 @@ document.addEventListener("DOMContentLoaded", () => {
                     "Missão Memória em Ação:",
                     missaoGerada
                 );
+
+
+                // =========================================
+                // REINICIA AS ETAPAS DA NOVA MISSÃO
+                // =========================================
+
+                indiceAssociacaoMemoriaAcao = 0;
+                indiceRecuperacaoMemoriaAcao = 0;
+                respostasMissaoMemoriaAcao = [];
+
+
+                [
+                    "etapaAssociacaoMemoriaAcao",
+                    "etapaPercursoMemoriaAcao",
+                    "etapaRecuperacaoMemoriaAcao",
+                    "etapaResultadoMemoriaAcao"
+                ].forEach(
+                    id => {
+
+                        const etapa =
+                            document.getElementById(id);
+
+                        if (etapa) {
+
+                            etapa.hidden = true;
+
+                        }
+
+                    }
+                );
+
+
+                if (respostaRecuperacaoMemoriaAcao) {
+
+                    respostaRecuperacaoMemoriaAcao.value =
+                        "";
+
+                }
+
+
+                if (listaResultadoMemoriaAcao) {
+
+                    listaResultadoMemoriaAcao.replaceChildren();
+
+                }
+
+
+                if (sugestaoAssociacaoMemoriaAcao) {
+
+                    sugestaoAssociacaoMemoriaAcao.hidden =
+                        true;
+
+                }
 
 
                 navegarParaTela(

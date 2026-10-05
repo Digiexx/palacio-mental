@@ -1130,6 +1130,253 @@
                 </section>
 
 
+                <!-- =================================================
+                     RECUPERAÇÃO DA MISSÃO
+                ================================================== -->
+
+                <section class="memoria-acao-recuperacao"
+                    id="etapaRecuperacaoMemoriaAcao" hidden>
+
+
+                    <div class="memoria-acao-missao-etapa">
+
+                        <span>
+                            ETAPA 4
+                        </span>
+
+                        <small id="progressoRecuperacaoMemoriaAcao">
+                            RECUPERAÇÃO
+                        </small>
+
+                    </div>
+
+
+                    <div class="memoria-acao-recuperacao-card">
+
+                        <span class="section-label">
+                            SUA ÂNCORA
+                        </span>
+
+
+                        <strong class="memoria-acao-ancora-numero"
+                            id="numeroAncoraRecuperacaoMemoriaAcao">
+                        </strong>
+
+
+                        <span class="memoria-acao-ancora-palavra"
+                            id="palavraAncoraRecuperacaoMemoriaAcao">
+                        </span>
+
+                    </div>
+
+
+                    <form class="memoria-acao-recuperacao-form"
+                        id="formRecuperacaoMemoriaAcao">
+
+
+                        <label for="respostaRecuperacaoMemoriaAcao">
+
+                            Qual item você associou a esta âncora?
+
+                        </label>
+
+
+                        <p id="orientacaoRecuperacaoMemoriaAcao">
+
+                            Volte à cena que você criou no cenário
+                            e tente recuperar o item sem consultar a lista.
+
+                        </p>
+
+
+                        <input
+                            id="respostaRecuperacaoMemoriaAcao"
+                            name="respostaMemoriaAcao"
+                            type="text"
+                            placeholder="Digite o item que você lembrou"
+                            aria-describedby="orientacaoRecuperacaoMemoriaAcao"
+                            autocomplete="off"
+                            spellcheck="false"
+                            required>
+
+
+                        <button class="primary-button"
+                            id="btnConfirmarRespostaMemoriaAcao"
+                            type="submit">
+
+                            <span>
+                                Confirmar resposta
+                            </span>
+
+                        </button>
+
+
+                        <button class="memoria-acao-ajuda"
+                            id="btnNaoLembroMemoriaAcao"
+                            type="button">
+
+                            Não lembro agora
+
+                        </button>
+
+                    </form>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     RESULTADO DA MISSÃO
+                ================================================== -->
+
+                <section class="memoria-acao-resultado"
+                    id="etapaResultadoMemoriaAcao" hidden>
+
+
+                    <div class="memoria-acao-missao-etapa">
+
+                        <span>
+                            MISSÃO CONCLUÍDA
+                        </span>
+
+                        <small>
+                            SEU RESULTADO
+                        </small>
+
+                    </div>
+
+
+                    <div class="memoria-acao-resultado-card">
+
+                        <span class="section-label">
+                            ITENS RECUPERADOS
+                        </span>
+
+
+                        <strong class="memoria-acao-resultado-percentual"
+                            id="percentualResultadoMemoriaAcao">
+                            0%
+                        </strong>
+
+
+                        <h3>
+                            Você percorreu suas cenas
+                        </h3>
+
+
+                        <p id="mensagemResultadoMemoriaAcao">
+                            Confira suas respostas e descubra
+                            quais associações precisam de reforço.
+                        </p>
+
+                    </div>
+
+
+                    <dl class="memoria-acao-resultado-resumo">
+
+                        <div>
+
+                            <dt>
+                                Total de itens
+                            </dt>
+
+                            <dd id="totalResultadoMemoriaAcao">
+                                0
+                            </dd>
+
+                        </div>
+
+
+                        <div>
+
+                            <dt>
+                                Acertos
+                            </dt>
+
+                            <dd id="acertosResultadoMemoriaAcao">
+                                0
+                            </dd>
+
+                        </div>
+
+
+                        <div>
+
+                            <dt>
+                                Respostas incorretas
+                            </dt>
+
+                            <dd id="errosResultadoMemoriaAcao">
+                                0
+                            </dd>
+
+                        </div>
+
+
+                        <div>
+
+                            <dt>
+                                Não lembrados
+                            </dt>
+
+                            <dd id="naoLembradosResultadoMemoriaAcao">
+                                0
+                            </dd>
+
+                        </div>
+
+                    </dl>
+
+
+                    <div class="memoria-acao-resultado-revisao">
+
+                        <span class="section-label">
+                            REVISÃO DA MISSÃO
+                        </span>
+
+
+                        <h3>
+                            Compare suas respostas
+                        </h3>
+
+
+                        <p>
+                            Nos itens que você não recuperou,
+                            procure tornar a interação com
+                            a âncora mais clara e marcante.
+                        </p>
+
+
+                        <div class="memoria-acao-resultado-lista"
+                            id="listaResultadoMemoriaAcao">
+                        </div>
+
+
+                        <button class="primary-button memoria-acao-repetir-missao"
+                            id="btnRepetirMissaoMemoriaAcao"
+                            type="button">
+
+                            <span>
+                                Repetir a mesma missão
+                            </span>
+
+                        </button>
+
+
+                        <button class="memoria-acao-ajuda memoria-acao-voltar-configuracao"
+                            id="btnVoltarMemoriaAcao"
+                            type="button">
+
+                            Voltar para Memória em Ação
+
+                        </button>
+
+                    </div>
+
+
+                </section>
+
+
 
 
             </section>
