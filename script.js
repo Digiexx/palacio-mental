@@ -10036,6 +10036,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+                // O usuário escolhe mentalmente seu cenário e percurso.
+
+
                 navegarParaTela(
                     "missaoMemoriaAcao"
                 );
