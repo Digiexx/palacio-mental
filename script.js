@@ -267,22 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    const btnAjudaAssociacaoMemoriaAcao =
-        document.getElementById(
-            "btnAjudaAssociacaoMemoriaAcao"
-        );
 
-
-    const sugestaoAssociacaoMemoriaAcao =
-        document.getElementById(
-            "sugestaoAssociacaoMemoriaAcao"
-        );
-
-
-    const textoSugestaoAssociacaoMemoriaAcao =
-        document.getElementById(
-            "textoSugestaoAssociacaoMemoriaAcao"
-        );
 
 
     const btnCenaCriadaMemoriaAcao =
@@ -485,12 +470,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 mostrarAssociacaoAtualMemoriaAcao();
 
 
-                if (btnAjudaAssociacaoMemoriaAcao) {
 
-                    btnAjudaAssociacaoMemoriaAcao.textContent =
-                        "Preciso de uma ideia";
-
-                }
 
 
                 if (respostaRecuperacaoMemoriaAcao) {
@@ -9640,53 +9620,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-
-        // =============================================
-        // SUGESTÃO DA ASSOCIAÇÃO
-        // =============================================
-
-        if (textoSugestaoAssociacaoMemoriaAcao) {
-
-            const ancora =
-                memoriaNumerica.palavra;
-
-            const item =
-                associacaoAtual.produto.nome;
-
-
-            let cenaSugerida =
-                `Dentro do cenário, imagine uma versão gigante de "${item}" caindo sobre "${ancora}". O impacto faz tudo saltar até o teto! "${ancora}" fica grudado nessa informação, coberto de tinta verde brilhante. Veja os dois girando juntos e ouça o estrondo a cada batida no chão.`;
-
-
-            if (
-                ancora.toLowerCase() ===
-                "teia"
-            ) {
-
-                cenaSugerida =
-                    `Dentro do cenário, imagine uma aranha gigante empurrando "${item}" bem na sua frente. Ela gira ao redor e enrola "${item}" em uma teia cor-de-rosa, apertando tanto que deixa marcas profundas. A teia estica como um elástico e lança "${item}" até o teto, mas continua presa! Ouça o estalo e veja o enorme embrulho rosa balançando sobre você.`;
-
-            }
-
-
-            textoSugestaoAssociacaoMemoriaAcao.textContent =
-                cenaSugerida;
-
-        }
-
-
-        // =============================================
-        // NOVA ASSOCIAÇÃO COMEÇA SEM A SUGESTÃO
-        // =============================================
-
-        if (sugestaoAssociacaoMemoriaAcao) {
-
-            sugestaoAssociacaoMemoriaAcao.hidden =
-                true;
-
-        }
-
     }
+
+
+
+
 
 
     // =====================================================
@@ -9743,12 +9681,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                if (sugestaoAssociacaoMemoriaAcao) {
 
-                    sugestaoAssociacaoMemoriaAcao.hidden =
-                        true;
-
-                }
 
 
                 // =========================================
@@ -9806,12 +9739,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                if (sugestaoAssociacaoMemoriaAcao) {
 
-                    sugestaoAssociacaoMemoriaAcao.hidden =
-                        true;
-
-                }
 
 
                 navegarParaTela(
@@ -9824,7 +9752,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =====================================================
+        // =====================================================
     // MEMÓRIA EM AÇÃO — ENTRAR NO CENÁRIO
     // =====================================================
 
@@ -9839,14 +9767,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 mostrarAssociacaoAtualMemoriaAcao();
-
-
-                if (sugestaoAssociacaoMemoriaAcao) {
-
-                    sugestaoAssociacaoMemoriaAcao.hidden =
-                        true;
-
-                }
 
 
                 if (etapaCenarioMemoriaAcao) {
@@ -9869,37 +9789,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-
-    // =====================================================
-    // MEMÓRIA EM AÇÃO — AJUDA DA ASSOCIAÇÃO
-    // =====================================================
-
-    if (btnAjudaAssociacaoMemoriaAcao) {
-
-        btnAjudaAssociacaoMemoriaAcao.addEventListener(
-            "click",
-            () => {
-
-                if (!sugestaoAssociacaoMemoriaAcao) {
-
-                    return;
-
-                }
-
-
-                sugestaoAssociacaoMemoriaAcao.hidden =
-                    !sugestaoAssociacaoMemoriaAcao.hidden;
-
-
-                btnAjudaAssociacaoMemoriaAcao.textContent =
-                    sugestaoAssociacaoMemoriaAcao.hidden
-                        ? "Preciso de uma ideia"
-                        : "Ocultar ideia";
-
-            }
-        );
-
-    }
 
 
     // =====================================================
@@ -9943,19 +9832,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     mostrarAssociacaoAtualMemoriaAcao();
 
 
-                    if (btnAjudaAssociacaoMemoriaAcao) {
-
-                        btnAjudaAssociacaoMemoriaAcao.textContent =
-                            "Preciso de uma ideia";
-
-                    }
-
-
                     return;
 
                 }
-
-
                 // =========================================
                 // ÚLTIMA ASSOCIAÇÃO CONCLUÍDA
                 // =========================================
