@@ -10350,7 +10350,158 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-                // O usuário escolhe mentalmente seu cenário e percurso.
+                // =========================================
+                // CENÁRIO VISUAL DA MISSÃO
+                // =========================================
+
+                const cenarioVisual =
+                    document.getElementById(
+                        "cenarioVisualMemoriaAcao"
+                    );
+
+                const imagemCenario =
+                    document.getElementById(
+                        "imagemCenarioMemoriaAcao"
+                    );
+
+
+                if (cenarioVisual && imagemCenario) {
+
+                    cenarioVisual.hidden = true;
+
+                    imagemCenario.onload = null;
+                    imagemCenario.onerror = null;
+
+                    imagemCenario.removeAttribute("src");
+
+
+                    // =========================================
+                    // CONFIGURAÇÃO DOS CENÁRIOS
+                    // =========================================
+
+                    const cenariosPorTipo = {
+
+                        compras: {
+                            pasta: "compras",
+                            prefixo: "supermercado",
+                            quantidade: 10,
+                            descricao:
+                                "Supermercado para imaginar as cenas da missão"
+                        },
+
+                        tarefas: {
+                            pasta: "tarefas",
+                            prefixo: "tarefas",
+                            quantidade: 10,
+                            descricao:
+                                "Cenário para imaginar as tarefas da missão"
+                        },
+
+                        ingredientes: {
+                            pasta: "ingredientes",
+                            prefixo: "ingredientes",
+                            quantidade: 10,
+                            descricao:
+                                "Cenário para imaginar os ingredientes da missão"
+                        },
+
+                        palavras: {
+                            pasta: "palavras",
+                            prefixo: "palavras",
+                            quantidade: 10,
+                            descricao:
+                                "Cenário para imaginar as palavras da missão"
+                        },
+
+                        objetos: {
+                            pasta: "objetos",
+                            prefixo: "objetos",
+                            quantidade: 10,
+                            descricao:
+                                "Cenário para imaginar os objetos da missão"
+                        },
+
+                        personalizada: {
+                            pasta: "personalizada",
+                            prefixo: "personalizada",
+                            quantidade: 10,
+                            descricao:
+                                "Cenário para imaginar as cenas da missão personalizada"
+                        }
+
+                    };
+
+
+                    const configuracaoCenario =
+                        cenariosPorTipo[tipoConteudoMemoriaAcao];
+
+
+                    if (configuracaoCenario) {
+
+                        // =========================================
+                        // GERAR OS CAMINHOS DAS IMAGENS
+                        // =========================================
+
+                        const imagensDisponiveis =
+                            Array.from(
+                                {
+                                    length:
+                                        configuracaoCenario.quantidade
+                                },
+                                (_, indice) => {
+
+                                    const numero =
+                                        String(indice + 1)
+                                            .padStart(2, "0");
+
+                                    return (
+                                        "assets/imagens/cenarios/" +
+                                        configuracaoCenario.pasta +
+                                        "/" +
+                                        configuracaoCenario.prefixo +
+                                        "-" +
+                                        numero +
+                                        ".webp"
+                                    );
+
+                                }
+                            );
+
+
+                        // =========================================
+                        // SORTEAR UMA IMAGEM
+                        // =========================================
+
+                        const indiceSorteado =
+                            Math.floor(
+                                Math.random() *
+                                imagensDisponiveis.length
+                            );
+
+
+                        imagemCenario.onload = () => {
+
+                            cenarioVisual.hidden = false;
+
+                        };
+
+
+                        imagemCenario.onerror = () => {
+
+                            cenarioVisual.hidden = true;
+
+                        };
+
+
+                        imagemCenario.alt =
+                            configuracaoCenario.descricao;
+
+                        imagemCenario.src =
+                            imagensDisponiveis[indiceSorteado];
+
+                    }
+
+                }
 
 
                 navegarParaTela(
@@ -10457,15 +10608,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 if (
-                    etapaAssociacaoAtual &&
-                    etapaPercursoMemoriaAcao
+                    !etapaAssociacaoAtual ||
+                    !etapaRecuperacaoMemoriaAcao
                 ) {
 
-                    etapaAssociacaoAtual.hidden = true;
-
-                    etapaPercursoMemoriaAcao.hidden = false;
+                    return;
 
                 }
+
+
+                indiceRecuperacaoMemoriaAcao = 0;
+
+                respostasMissaoMemoriaAcao = [];
+
+
+                if (
+                    !mostrarRecuperacaoAtualMemoriaAcao()
+                ) {
+
+                    return;
+
+                }
+
+
+                etapaAssociacaoAtual.hidden = true;
+
+
+                if (etapaPercursoMemoriaAcao) {
+
+                    etapaPercursoMemoriaAcao.hidden = true;
+
+                }
+
+
+                etapaRecuperacaoMemoriaAcao.hidden = false;
 
             }
         );

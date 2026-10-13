@@ -23404,3 +23404,46 @@ body [hidden][hidden] {
     outline: 2px solid var(--purple-3);
     outline-offset: 3px;
 }
+
+
+/* =========================================================
+   MEMÓRIA EM AÇÃO — CENÁRIO VISUAL
+========================================================= */
+
+.memoria-acao-cenario-visual {
+
+    margin: 0 0 24px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--purple-3);
+    border-radius: 20px;
+
+    background: var(--surface);
+}
+
+
+.memoria-acao-cenario-visual[hidden] {
+
+    display: none;
+}
+
+
+.memoria-acao-cenario-visual img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+.memoria-acao-cenario-visual figcaption {
+
+    padding: 16px 18px;
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
