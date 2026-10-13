@@ -13,6 +13,205 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // TEMAS — ELEMENTOS E PREFERÊNCIA
+    // =====================================================
+
+    const CHAVE_TEMA_APP =
+        "palacioMentalTema";
+
+
+    const temasPermitidos =
+        ["magico", "medieval", "futurista"];
+
+
+    const botaoConfiguracoesTema =
+        document.getElementById("btnConfig");
+
+
+    const dialogTemasApp =
+        document.getElementById("dialogTemasApp");
+
+
+    const btnFecharTemasApp =
+        document.getElementById("btnFecharTemasApp");
+
+
+    const selectTemaApp =
+        document.getElementById("selectTemaApp");
+
+
+    let rolagemAntesPainelTema = "";
+
+
+    // =====================================================
+    // APLICAR TEMA
+    // =====================================================
+
+    function aplicarTemaApp(tema, salvar = false) {
+
+        const temaValido =
+            temasPermitidos.includes(tema)
+                ? tema
+                : "magico";
+
+
+        document.documentElement.dataset.tema =
+            temaValido;
+
+
+        if (selectTemaApp) {
+
+            selectTemaApp.value =
+                temaValido;
+
+        }
+
+
+        if (salvar) {
+
+            try {
+
+                localStorage.setItem(
+                    CHAVE_TEMA_APP,
+                    temaValido
+                );
+
+            } catch (erro) {
+
+                console.warn(
+                    "Não foi possível salvar o tema:",
+                    erro
+                );
+
+            }
+
+        }
+
+    }
+
+
+    // =====================================================
+    // RESTAURAR ESCOLHA
+    // =====================================================
+
+    let temaInicialApp = "magico";
+
+
+    try {
+
+        temaInicialApp =
+            localStorage.getItem(CHAVE_TEMA_APP) ||
+            "magico";
+
+    } catch (erro) {
+
+        console.warn(
+            "Não foi possível carregar o tema:",
+            erro
+        );
+
+    }
+
+
+    aplicarTemaApp(temaInicialApp);
+
+
+    // =====================================================
+    // ABRIR PAINEL
+    // =====================================================
+
+    if (botaoConfiguracoesTema && dialogTemasApp) {
+
+        botaoConfiguracoesTema.addEventListener(
+            "click",
+            () => {
+
+                if (dialogTemasApp.open) {
+
+                    return;
+
+                }
+
+
+                rolagemAntesPainelTema =
+                    document.body.style.overflow;
+
+
+                dialogTemasApp.showModal();
+
+                document.body.style.overflow =
+                    "hidden";
+
+
+                if (selectTemaApp) {
+
+                    selectTemaApp.focus();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // FECHAR PAINEL
+    // =====================================================
+
+    if (btnFecharTemasApp && dialogTemasApp) {
+
+        btnFecharTemasApp.addEventListener(
+            "click",
+            () => {
+
+                dialogTemasApp.close();
+
+            }
+        );
+
+    }
+
+
+    // Também restaura a rolagem ao fechar com Escape.
+
+    if (dialogTemasApp) {
+
+        dialogTemasApp.addEventListener(
+            "close",
+            () => {
+
+                document.body.style.overflow =
+                    rolagemAntesPainelTema;
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
+    // TROCAR E SALVAR TEMA
+    // =====================================================
+
+    if (selectTemaApp) {
+
+        selectTemaApp.addEventListener(
+            "change",
+            () => {
+
+                aplicarTemaApp(
+                    selectTemaApp.value,
+                    true
+                );
+
+            }
+        );
+
+    }
+
+
+    // =====================================================
     // ANIMAÇÃO INICIAL DA HOME
     // =====================================================
 
@@ -477,6 +676,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     respostaRecuperacaoMemoriaAcao.value =
                         "";
+
+                }
+
+
+                if (etapaCenarioMemoriaAcao) {
+
+                    etapaCenarioMemoriaAcao.hidden =
+                        true;
 
                 }
 
@@ -9364,11 +9571,37 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
+        const listaPersonalizada =
+            tipoConteudoMemoriaAcao ===
+            "personalizada";
+
+
         if (memoriaAcaoMinhaLista) {
 
             memoriaAcaoMinhaLista.hidden =
-                tipoConteudoMemoriaAcao !==
-                "personalizada";
+                !listaPersonalizada;
+
+        }
+
+
+        const contadorQuantidade =
+            document.getElementById(
+                "quantidadeListaAncorada"
+            );
+
+
+        const cardQuantidade =
+            contadorQuantidade
+                ? contadorQuantidade.closest(
+                    ".lista-ancorada-config-card"
+                )
+                : null;
+
+
+        if (cardQuantidade) {
+
+            cardQuantidade.hidden =
+                listaPersonalizada;
 
         }
 
@@ -9511,15 +9744,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        const quantidadeItens =
-            obterItensMinhaListaMemoriaAcao()
+        const campoMinhaLista =
+            document.getElementById(
+                "inputMinhaListaMemoriaAcao"
+            );
+
+
+        if (!campoMinhaLista) {
+
+            return;
+
+        }
+
+
+        const quantidadeInformada =
+            campoMinhaLista.value
+                .split("\n")
+                .map(
+                    item =>
+                        item.trim()
+                )
+                .filter(
+                    item =>
+                        item.length > 0
+                )
                 .length;
 
 
+        if (quantidadeInformada > 20) {
+
+            contadorMinhaLista.textContent =
+                `${quantidadeInformada} itens informados — somente os primeiros 20 entrarão na missão.`;
+
+            return;
+
+        }
+
+
         contadorMinhaLista.textContent =
-            quantidadeItens === 1
+            quantidadeInformada === 1
                 ? "1 item"
-                : `${quantidadeItens} itens`;
+                : `${quantidadeInformada} itens`;
 
     }
 
@@ -9930,6 +10195,55 @@ document.addEventListener("DOMContentLoaded", () => {
         btnComecarListaAncorada.addEventListener(
             "click",
             () => {
+
+                if (
+                    tipoConteudoMemoriaAcao ===
+                    "personalizada"
+                ) {
+
+                    const campoMinhaLista =
+                        document.getElementById(
+                            "inputMinhaListaMemoriaAcao"
+                        );
+
+
+                    if (!campoMinhaLista) {
+
+                        return;
+
+                    }
+
+
+                    campoMinhaLista.setCustomValidity("");
+
+
+                    if (
+                        obterItensMinhaListaMemoriaAcao()
+                            .length === 0
+                    ) {
+
+                        campoMinhaLista.setCustomValidity(
+                            "Digite pelo menos um item para começar a missão."
+                        );
+
+
+                        campoMinhaLista.oninput = () => {
+
+                            campoMinhaLista.setCustomValidity("");
+
+                        };
+
+
+                        campoMinhaLista.focus();
+
+                        campoMinhaLista.reportValidity();
+
+                        return;
+
+                    }
+
+                }
+
 
                 const missaoGerada =
                     gerarMissaoListaAncorada();
@@ -13779,14 +14093,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =====================================================
-    // MOSTRAR BANNER
+    // INSTALAÇÃO — ESTADO DO CONVITE
+    // =====================================================
+
+    let conviteInstalacaoDispensado = false;
+
+    let focoAntesInstalacao = null;
+
+    let overflowAntesInstalacao = "";
+
+    const elementosBloqueadosInstalacao = new Map();
+
+
+    // =====================================================
+    // MOSTRAR CONVITE
     // =====================================================
 
     function mostrarBannerInstalacao() {
 
         if (
             !appInstallBanner ||
-            appJaEstaInstalado()
+            appJaEstaInstalado() ||
+            conviteInstalacaoDispensado ||
+            !appInstallBanner.hidden
         ) {
 
             return;
@@ -13794,105 +14123,221 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        appInstallBanner.hidden =
-            false;
+        focoAntesInstalacao =
+            document.activeElement;
+
+        overflowAntesInstalacao =
+            document.body.style.overflow;
+
+
+        appInstallBanner.hidden = false;
+
+        document.body.style.overflow = "hidden";
+
+
+        // Bloqueia a interação com o conteúdo atrás do cartão.
+        // Preserva o estado anterior de cada elemento.
+
+        let elementoAtual = appInstallBanner;
+
+        while (
+            elementoAtual.parentElement &&
+            elementoAtual !== document.body
+        ) {
+
+            Array.from(
+                elementoAtual.parentElement.children
+            ).forEach(
+                elemento => {
+
+                    if (
+                        elemento === elementoAtual ||
+                        !(elemento instanceof HTMLElement)
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    elementosBloqueadosInstalacao.set(
+                        elemento,
+                        elemento.inert
+                    );
+
+                    elemento.inert = true;
+
+                }
+            );
+
+
+            elementoAtual =
+                elementoAtual.parentElement;
+
+        }
+
+
+        if (btnInstalarApp) {
+
+            btnInstalarApp.focus({
+                preventScroll: true
+            });
+
+        }
 
     }
 
 
     // =====================================================
-    // ESCONDER BANNER
+    // ESCONDER CONVITE
     // =====================================================
 
     function esconderBannerInstalacao() {
 
-        if (!appInstallBanner) {
+        if (
+            !appInstallBanner ||
+            appInstallBanner.hidden
+        ) {
 
             return;
 
         }
 
 
-        appInstallBanner.hidden =
-            true;
+        appInstallBanner.hidden = true;
+
+        document.body.style.overflow =
+            overflowAntesInstalacao;
+
+
+        elementosBloqueadosInstalacao.forEach(
+            (estadoAnterior, elemento) => {
+
+                elemento.inert = estadoAnterior;
+
+            }
+        );
+
+        elementosBloqueadosInstalacao.clear();
+
+
+        if (
+            focoAntesInstalacao instanceof HTMLElement &&
+            focoAntesInstalacao.isConnected
+        ) {
+
+            focoAntesInstalacao.focus({
+                preventScroll: true
+            });
+
+        }
+
+
+        focoAntesInstalacao = null;
 
     }
 
 
     // =====================================================
-    // CHROME / EDGE / ANDROID
-    //
-    // O navegador informa quando o PWA pode ser instalado.
-    // Guardamos o evento para utilizar quando o usuário
-    // tocar no botão Instalar do nosso banner.
+    // CONTINUAR NO NAVEGADOR
     // =====================================================
 
-    window.addEventListener(
-        "beforeinstallprompt",
-        event => {
+    function continuarNoNavegador() {
 
-            event.preventDefault();
+        conviteInstalacaoDispensado = true;
 
+        esconderBannerInstalacao();
 
-            pwaInstallPrompt =
-                event;
+    }
 
 
-            mostrarBannerInstalacao();
+    if (btnFecharInstallBanner) {
 
-        }
-    );
-
-
-    // =====================================================
-    // BOTÃO INSTALAR — BANNER
-    //
-    // Abre DIRETAMENTE a confirmação oficial do navegador.
-    // Não existe mais modal intermediário.
-    // =====================================================
-
-    if (btnInstalarApp) {
-
-        btnInstalarApp.addEventListener(
+        btnFecharInstallBanner.addEventListener(
             "click",
-            async () => {
+            continuarNoNavegador
+        );
 
-                if (!pwaInstallPrompt) {
+    }
+
+
+    // =====================================================
+    // TECLADO — ESCAPE E FOCO DENTRO DO CARTÃO
+    // =====================================================
+
+    if (appInstallBanner) {
+
+        appInstallBanner.addEventListener(
+            "keydown",
+            event => {
+
+                if (appInstallBanner.hidden) {
 
                     return;
 
                 }
 
 
-                pwaInstallPrompt.prompt();
+                if (event.key === "Escape") {
 
+                    event.preventDefault();
 
-                const escolha =
-                    await pwaInstallPrompt.userChoice;
+                    continuarNoNavegador();
 
-
-                if (
-                    escolha.outcome ===
-                    "accepted"
-                ) {
-
-                    esconderBannerInstalacao();
+                    return;
 
                 }
 
 
-                if (
-                    escolha.outcome ===
-                    "dismissed"
-                ) {
+                if (event.key !== "Tab") {
 
-                    esconderBannerInstalacao();
+                    return;
 
                 }
 
 
-                pwaInstallPrompt =
-                    null;
+                const botoes =
+                    Array.from(
+                        appInstallBanner.querySelectorAll(
+                            "button:not(:disabled)"
+                        )
+                    );
+
+
+                if (botoes.length === 0) {
+
+                    event.preventDefault();
+
+                    return;
+
+                }
+
+
+                const primeiro = botoes[0];
+
+                const ultimo =
+                    botoes[botoes.length - 1];
+
+
+                if (
+                    event.shiftKey &&
+                    document.activeElement === primeiro
+                ) {
+
+                    event.preventDefault();
+
+                    ultimo.focus();
+
+                } else if (
+                    !event.shiftKey &&
+                    document.activeElement === ultimo
+                ) {
+
+                    event.preventDefault();
+
+                    primeiro.focus();
+
+                }
 
             }
         );
@@ -13901,20 +14346,78 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // BOTÃO FECHAR — BANNER
-    //
-    // Esconde o convite somente durante a visita atual.
-    // Em uma nova visita, se o app ainda não estiver
-    // instalado, o convite poderá aparecer novamente.
+    // NAVEGADOR — INSTALAÇÃO DISPONÍVEL
     // =====================================================
 
-    if (btnFecharInstallBanner) {
+    window.addEventListener(
+        "beforeinstallprompt",
+        event => {
 
-        btnFecharInstallBanner.addEventListener(
+            event.preventDefault();
+
+            pwaInstallPrompt = event;
+
+            mostrarBannerInstalacao();
+
+        }
+    );
+
+
+    // =====================================================
+    // INSTALAR — CONFIRMAÇÃO OFICIAL DO NAVEGADOR
+    // =====================================================
+
+    if (btnInstalarApp) {
+
+        btnInstalarApp.addEventListener(
             "click",
-            () => {
+            async () => {
 
-                esconderBannerInstalacao();
+                if (
+                    !pwaInstallPrompt ||
+                    btnInstalarApp.disabled
+                ) {
+
+                    return;
+
+                }
+
+
+                const eventoInstalacao =
+                    pwaInstallPrompt;
+
+                pwaInstallPrompt = null;
+
+                btnInstalarApp.disabled = true;
+
+
+                try {
+
+                    await eventoInstalacao.prompt();
+
+                    await eventoInstalacao.userChoice;
+
+
+                    // A escolha encerra este convite.
+                    // A confirmação efetiva vem de appinstalled.
+
+                    continuarNoNavegador();
+
+                } catch (erro) {
+
+                    console.error(
+                        "Não foi possível abrir a instalação:",
+                        erro
+                    );
+
+
+                    continuarNoNavegador();
+
+                } finally {
+
+                    btnInstalarApp.disabled = false;
+
+                }
 
             }
         );
@@ -13930,9 +14433,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "appinstalled",
         () => {
 
-            pwaInstallPrompt =
-                null;
+            pwaInstallPrompt = null;
 
+            conviteInstalacaoDispensado = true;
 
             esconderBannerInstalacao();
 
@@ -13946,18 +14449,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
-    // GARANTIA EXTRA
-    //
-    // Se estiver sendo executado como aplicativo,
-    // o banner nunca deve aparecer.
+    // APP JÁ INSTALADO
     // =====================================================
 
     if (appJaEstaInstalado()) {
-
-        localStorage.removeItem(
-            PWA_DISMISS_KEY
-        );
-
 
         esconderBannerInstalacao();
 

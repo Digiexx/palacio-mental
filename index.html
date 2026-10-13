@@ -33,42 +33,143 @@
 
 
         <!-- =====================================================
-             BANNER DE INSTALAÇÃO DO APP
+             APRESENTAÇÃO — INSTALAR APLICATIVO
         ====================================================== -->
 
-        <div class="app-install-banner" id="appInstallBanner" hidden>
+        <div class="app-install-overlay"
+            id="appInstallBanner"
+            hidden>
 
-            <div class="app-install-banner-icon" aria-hidden="true">
+            <section class="app-install-card"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="tituloInstalacaoApp"
+                aria-describedby="descricaoInstalacaoApp">
 
-                <img src="assets/icons/icon-192.png" alt="">
-
-            </div>
-
-
-            <div class="app-install-banner-content">
-
-                <strong>
-                    Instale o Palácio Mental
-                </strong>
-
-                <span>
-                    Tenha acesso rápido aos seus treinos direto no celular.
+                <span class="app-install-label">
+                    PALÁCIO MENTAL
                 </span>
 
+
+                <h2 id="tituloInstalacaoApp">
+                    Seu palácio, sempre com você.
+                </h2>
+
+
+                <p class="app-install-description"
+                    id="descricaoInstalacaoApp">
+
+                    Instale o aplicativo para acessar seus
+                    treinos direto da tela inicial.
+
+                </p>
+
+
+                <div class="app-install-art"
+                    aria-hidden="true">
+
+                    <img
+                        src="assets/imagens/home/palacio-instalacao.png"
+                        alt="">
+
+                </div>
+
+
+                <div class="app-install-actions">
+
+                    <button class="app-install-primary"
+                        id="btnInstalarApp"
+                        type="button">
+
+                        <span>
+                            Instalar aplicativo
+                        </span>
+
+                    </button>
+
+
+                    <button class="app-install-secondary"
+                        id="btnFecharInstallBanner"
+                        type="button">
+
+                        Continuar no navegador
+
+                    </button>
+
+                </div>
+
+
+                <p class="app-install-note">
+                    Você pode instalar depois em Ajustes.
+                </p>
+
+            </section>
+
+        </div>
+
+
+        <!-- =====================================================
+             AJUSTES — TEMA DO APLICATIVO
+        ====================================================== -->
+
+        <dialog class="app-theme-dialog"
+            id="dialogTemasApp"
+            aria-labelledby="tituloTemasApp">
+
+            <div class="app-theme-header">
+
+                <h2 id="tituloTemasApp">
+                    Tema do aplicativo
+                </h2>
+
+                <button class="app-theme-close"
+                    id="btnFecharTemasApp"
+                    type="button"
+                    aria-label="Fechar temas">
+
+                    ×
+
+                </button>
+
             </div>
 
 
-            <button class="app-install-banner-button" id="btnInstalarApp" type="button">
-                Instalar
-            </button>
+            <p class="app-theme-description">
+                Escolha a aparência do seu Palácio Mental.
+            </p>
 
 
-            <button class="app-install-banner-close" id="btnFecharInstallBanner" type="button"
-                aria-label="Fechar aviso de instalação">
-                ×
-            </button>
+            <label class="app-theme-label"
+                for="selectTemaApp">
 
-        </div>
+                Aparência
+
+            </label>
+
+
+            <select class="app-theme-select"
+                id="selectTemaApp">
+
+                <option value="magico">
+                    Mágico — preto e roxo
+                </option>
+
+                <option value="medieval">
+                    Medieval — escuro e bronze
+                </option>
+
+                <option value="futurista">
+                    Futurista — azul e ciano
+                </option>
+
+            </select>
+
+
+            <p class="app-theme-note">
+                Sua escolha será salva neste navegador.
+            </p>
+
+        </dialog>
 
 
         <!-- =====================================================
@@ -1808,17 +1909,21 @@
                         <textarea class="memoria-acao-minha-lista-input"
                             id="inputMinhaListaMemoriaAcao"
                             rows="6"
-                            placeholder="Exemplo:&#10;Ligar para Paulo&#10;Levar documento&#10;Comprar cabo HDMI&#10;Buscar encomenda"></textarea>
+                            aria-describedby="orientacaoMinhaListaMemoriaAcao"
+                            placeholder="Digite um item por linha.&#10;Exemplo:&#10;Ligar para Paulo&#10;Levar documento&#10;Comprar cabo HDMI&#10;Buscar encomenda"></textarea>
 
 
                         <div class="memoria-acao-minha-lista-info">
 
-                            <span id="contadorMinhaListaMemoriaAcao">
+                            <span id="contadorMinhaListaMemoriaAcao"
+                                role="status">
                                 0 itens
                             </span>
 
-                            <small>
-                                Máximo de 20 itens
+                            <small id="orientacaoMinhaListaMemoriaAcao">
+                                Cada linha preenchida vira um item.
+                                Sua lista define o tamanho da missão,
+                                até 20 itens.
                             </small>
 
                         </div>
