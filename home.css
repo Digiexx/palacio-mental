@@ -1,0 +1,279 @@
+/* Home — carrossel em perspectiva. Escopo isolado das telas de treino. */
+:root { --home-accent: #b8a0e4; --home-deep: #6b43a6; --nav-height: 76px; }
+:root[data-tema="medieval"] { --home-accent: #e8c58b; --home-deep: #946326; }
+:root[data-tema="futurista"] { --home-accent: #8de7ff; --home-deep: #1467b8; }
+body.home-aberta { background: #090a0c; }
+.home-aberta .app-shell { padding-bottom: 0; }
+.home-aberta .main-content { max-width: 640px; padding: 0; }
+.home-aberta .app-header { position: absolute; z-index: 10; top: max(22px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); max-width: 640px; padding: 0 24px; justify-content: flex-end; pointer-events: none; }
+.home-aberta #btnConfig { pointer-events: auto; width: 44px; height: 44px; background: #17171c80; border: 1px solid #ffffff2b; border-radius: 13px; backdrop-filter: blur(12px); }
+.home-palacio.home-v2 { display: flex; align-items: stretch; min-height: max(760px, 100svh); padding: 26px 24px 112px; gap: 0; overflow: hidden; background: #0b0b0f; }
+.home-palacio.home-v2[hidden] { display: none; }
+.home-palacio.home-v2::before, .home-palacio.home-v2::after { content: none; }
+.home-portrait { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.home-v2 .home-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg,#08090c22 0%,transparent 42%,#090a0c70 68%,#090a0cf2 95%),linear-gradient(90deg,#08090c30,transparent 65%); pointer-events: none; }
+.home-brand {
+  position: relative;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: #faf8fc;
+}
+.home-brand svg { width: 38px; height: 38px; fill: none; stroke: var(--home-accent); stroke-width: 1.3; }
+.home-brand span { font-family: Georgia,serif; font-size: 14px; letter-spacing: .18em; line-height: 1.3; }
+.home-intro { margin-top: 46px; width: 58%; }
+.home-eyebrow { display: block; font-size: 9px; letter-spacing: .24em; color: #ded9e4; margin-bottom: 14px; }
+.home-v2 h1 { font-family: Georgia,"Times New Roman",serif; font-size: clamp(32px,8.6vw,49px); font-weight: 500; line-height: 1.04; letter-spacing: -.045em; color: #fff; text-shadow: 0 2px 22px #000a; }
+.home-v2 h1::after { content: ""; display: block; width: 35px; height: 2px; background: var(--home-accent); margin-top: 20px; }
+.home-carousel-section { margin-top: auto; padding-top: 135px; }
+.home-carousel-label { font-size: 9px; letter-spacing: .2em; color: #eee8f4; margin: 0 0 12px; text-align: center; }
+.home-coverflow { position: relative; height: 224px; margin: 0 -24px; perspective: 900px; touch-action: pan-y; user-select: none; }
+.home-coverflow .home-path-card { position: absolute; top: 4px; left: 50%; margin-left: -100px; width: 200px; height: 202px; padding: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 0; overflow: hidden; border: 1px solid #ffffff33; border-radius: 20px; background: #14131edb; color: #fff; box-shadow: 0 15px 35px #0007; transform: translateX(var(--card-x)) rotateY(var(--card-rotate)) scale(var(--card-scale)); z-index: var(--card-z); opacity: var(--card-opacity); transition: transform .35s ease,opacity .35s ease,border-color .2s ease; cursor: pointer; }
+.home-coverflow .home-path-card.is-current { border-color: var(--home-accent); box-shadow: 0 12px 32px #0008,0 0 20px #b8a0e421; }
+.home-card-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .5; pointer-events: none; }
+.home-coverflow .home-path-card::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg,#14121c05 0%,#100e19a0 46%,#0b0a12f5 100%); }
+.home-coverflow .home-path-icon { position: relative; z-index: 2; width: 35px; height: 35px; margin: auto auto 8px; border: 1px solid #b8a0e46b; border-radius: 10px; color: var(--home-accent); display: grid; place-items: center; background: #19152580; }
+.home-coverflow .home-path-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+.home-coverflow .home-path-card strong { position: relative; z-index: 2; font-family: Georgia,serif; font-size: 22px; font-weight: 500; line-height: 1.05; letter-spacing: -.02em; padding: 0 12px; }
+.home-coverflow .home-path-card strong span { display: block; }
+.home-coverflow .home-path-card small { position: relative; z-index: 2; font-size: 10px; color: #c9c3d3; padding: 9px 8px 14px; }
+.home-carousel-dots { display: flex; justify-content: center; gap: 7px; margin-top: 0; }
+.home-carousel-dots button { position: relative; width: 28px; height: 28px; border: none; background: transparent; cursor: pointer; }
+.home-carousel-dots button::after { content: ""; display: block; width: 5px; height: 5px; border-radius: 50%; background: #ffffff50; margin: auto; }
+.home-carousel-dots button[aria-pressed="true"]::after { background: var(--home-accent); box-shadow: 0 0 8px #b8a0e450; }
+.home-v2 .home-palacio-progress { width: 100%; max-width: none; margin: 13px 0 0; padding: 12px 15px; border: 1px solid #ffffff1f; border-radius: 13px; background: #18171e70; backdrop-filter: blur(12px); }
+.home-v2 .home-palacio-progress-info { display: flex; align-items: center; justify-content: space-between; margin-bottom: 7px; }
+.home-v2 .home-palacio-progress-info span { font-size: 11px; letter-spacing: .025em; color: #cdc7d7; }
+.home-v2 .home-palacio-progress-info strong { font-size: 12px; color: var(--home-accent); }
+.home-v2 .progress-track { height: 3px; background: #ffffff13; border-radius: 4px; overflow: hidden; }
+.home-v2 .progress-fill { height: 100%; width: 0; background: linear-gradient(90deg,var(--home-deep),var(--home-accent)); }
+.bottom-nav.home-nav { position: fixed; left: 50%; bottom: 0; transform: translateX(-50%); width: auto; max-width: none; padding: 10px 25px calc(10px + env(safe-area-inset-bottom)); display: block; border: 0; background: transparent; box-shadow: none; backdrop-filter: none; z-index: 30; }
+.home-nav .nav-item { min-width: 56px; height: 66px; padding: 0; gap: 5px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: none; border: 0; border-radius: 0; color: #e9e4ef; cursor: pointer; }
+.home-nav .nav-item svg { width: 44px; height: 44px; padding: 11px; border: 1px solid var(--home-accent); border-radius: 50%; background: #13101dde; fill: none; stroke: #fff; stroke-width: 1.7; box-shadow: 0 0 18px #b8a0e438; }
+.home-nav .nav-item span { font-size: 9px; }
+.home-nav .nav-item:not(.active) svg { box-shadow: 0 0 10px #b8a0e425; }
+.home-path-card:focus-visible,.home-carousel-dots button:focus-visible,.home-nav button:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 4px; }
+.home-status { margin: 8px 0 0; min-height: 18px; text-align: center; color: #d4cddd; font-size: 11px; }
+@media(min-width:641px) { .home-v2 h1 { font-size: 52px; } .home-aberta .main-content { box-shadow: 0 0 90px #0008; } .home-palacio.home-v2 { min-height: 900px; } }
+@media(max-width:375px) { .home-palacio.home-v2 { padding-left: 20px; padding-right: 20px; min-height: max(720px,100svh); } .home-coverflow { margin-left: -20px; margin-right: -20px; } .home-coverflow .home-path-card { width: 180px; height: 190px; margin-left: -90px; } .home-intro { margin-top: 42px; } .home-carousel-section { padding-top: 118px; } }
+@media(prefers-reduced-motion:reduce) { .home-coverflow .home-path-card,.home-v2 .progress-fill { transition: none; } html { scroll-behavior: auto; } }
+
+.home-sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+/* Refinamento: foto mais visível e Início no canto direito. */
+.home-v2 .home-shade {
+  background:
+    linear-gradient(180deg, #08090c18 0%, transparent 42%, #090a0c20 68%, #090a0c66 100%),
+    linear-gradient(90deg, #08090c24, transparent 65%);
+}
+.bottom-nav.home-nav {
+  left: auto;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  transform: none;
+  padding: 0;
+}
+.home-nav .nav-item { min-width: 48px; height: 48px; }
+.home-nav .nav-item span { display: none; }
+.home-nav .nav-item svg { box-shadow: 0 0 12px #b8a0e425; }
+@media (min-width: 641px) {
+  .bottom-nav.home-nav { right: max(18px, calc((100vw - 640px) / 2 + 18px)); }
+}
+
+/* Configurações no canto; troca suave dos fundos. */
+.home-aberta .app-header {
+  position: absolute;
+  top: max(30px, env(safe-area-inset-top));
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 640px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 max(12px, env(safe-area-inset-right)) 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.home-portrait-transition { opacity: 0; transition: opacity 400ms ease; pointer-events: none; }
+.home-portrait-transition.is-visible { opacity: 1; }
+
+/* Traço inferior revela a casa por toque ou gesto. */
+.bottom-nav.home-nav {
+  left: max(8px, env(safe-area-inset-left));
+  right: auto;
+  bottom: max(4px, env(safe-area-inset-bottom));
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  transform: none;
+  display: block;
+}
+
+/* Área luminosa fixa no canto. */
+.bottom-nav.home-nav .home-nav-handle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 56px;
+}
+
+/* A casa aparece acima, sem deslocar a luz. */
+.bottom-nav.home-nav .nav-item {
+  position: absolute;
+  left: 4px;
+  bottom: 66px;
+  margin: 0;
+}
+
+.bottom-nav.home-nav.is-open .nav-item {
+  animation: palacio-casa-subindo 280ms ease-out both;
+}
+
+@keyframes palacio-casa-subindo {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (min-width: 641px) {
+  .bottom-nav.home-nav {
+    left: max(8px, calc((100vw - 640px) / 2 + 8px));
+    right: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottom-nav.home-nav.is-open .nav-item {
+    animation: none;
+  }
+}
+.home-nav .nav-item[hidden] { display: none !important; }
+.home-nav-handle { display: grid; place-items: center; width: 56px; height: 44px; padding: 0; border: 0; background: transparent; border-radius: 12px; cursor: pointer; touch-action: none; }
+.bottom-nav.home-nav .home-nav-handle span {
+  position: absolute;
+
+  /*
+   * POSIÇÃO HORIZONTAL
+   * Mais negativo: move o brilho para a esquerda, saindo da tela.
+   * Menos negativo: move para a direita, entrando na tela.
+   */
+  left: -45px;
+
+  /*
+   * POSIÇÃO VERTICAL
+   * Mais negativo: desce o brilho, saindo da tela.
+   * Menos negativo: sobe o brilho, entrando na tela.
+   */
+  bottom: -48px;
+
+  /*
+   * TAMANHO DO BRILHO
+   * Aumente os dois valores para ampliar a luz.
+   * Mantenha iguais para preservar o formato circular.
+   */
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+
+  /* A luz não bloqueia os cliques. Mantenha assim. */
+  pointer-events: none;
+
+  /*
+   * COR E DISTRIBUIÇÃO DA LUZ
+   * Os três primeiros números de rgba definem a cor.
+   * O último define a intensidade: 0 = transparente; 1 = forte.
+   *
+   * As porcentagens definem até onde cada cor se espalha,
+   * partindo do centro em direção às bordas.
+   */
+  background: radial-gradient(
+    circle,
+    rgba(190, 130, 255, 1) 0%,
+    rgba(165, 95, 245, .8) 20%,
+    rgba(135, 65, 220, .35) 42%,
+    rgba(135, 65, 220, 0) 72%
+  );
+
+  box-shadow: none;
+
+  /*
+   * SUAVIDADE
+   * Menor: luz mais definida.
+   * Maior: luz mais difusa e espalhada.
+   * Experimente entre 6px e 18px.
+   */
+  filter: blur(10px);
+
+  /*
+   * OPACIDADE BASE
+   * Durante a animação, os valores dos keyframes prevalecem.
+   * Alterar apenas esta linha não muda a força do pulso.
+   */
+  opacity: .8;
+
+  /*
+   * VELOCIDADE DO PULSO
+   * 1.5s = mais rápido.
+   * 2.6s = velocidade atual.
+   * 4s = mais lento.
+   * infinite mantém a repetição contínua.
+   */
+  animation: palacio-halo-canto 2.6s ease-in-out infinite;
+}@keyframes palacio-halo-canto {
+  0%, 100% {
+    opacity: .35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.bottom-nav.home-nav.is-open .home-nav-handle span {
+  animation: none;
+  opacity: .35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottom-nav.home-nav .home-nav-handle span {
+    animation: none;
+    opacity: .8;
+  }
+}
+.bottom-nav.home-nav button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-nav.home-nav .home-nav-handle,
+.bottom-nav.home-nav .home-nav-handle:hover,
+.bottom-nav.home-nav .home-nav-handle:active,
+.bottom-nav.home-nav .home-nav-handle:focus,
+.bottom-nav.home-nav .home-nav-handle:focus-visible {
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Pelo teclado, o foco aparece na própria luz. */
+.bottom-nav.home-nav .home-nav-handle:focus-visible span {
+  filter: blur(10px) brightness(1.3);
+}
+.home-nav .nav-item { touch-action: none; }
+.home-nav.is-open .nav-item { animation: home-button-reveal 180ms ease-out; }
+@keyframes home-button-reveal { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+@media(prefers-reduced-motion:reduce) { .home-portrait-transition { transition: none; } .home-nav.is-open .nav-item { animation: none; } }

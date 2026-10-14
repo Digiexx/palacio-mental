@@ -115,6 +115,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
     aplicarTemaApp(temaInicialApp);
 
+    // =====================================================
+    // TEMAS — BOTÕES DE ESCOLHA
+    // =====================================================
+
+    if (selectTemaApp && dialogTemasApp) {
+
+        const grupoTemas = document.createElement("div");
+        grupoTemas.className = "temas-opcoes";
+        grupoTemas.setAttribute("role", "group");
+        grupoTemas.setAttribute("aria-label", "Tema do aplicativo");
+
+        const botoesTemas = [];
+
+        function atualizarBotoesTemas() {
+
+            botoesTemas.forEach(botao => {
+
+                botao.setAttribute(
+                    "aria-pressed",
+                    String(botao.dataset.tema === selectTemaApp.value)
+                );
+
+            });
+
+        }
+
+        [
+            ["magico", "Mágico"],
+            ["medieval", "Medieval"],
+            ["futurista", "Futurista"]
+        ].forEach(([valor, nome]) => {
+
+            const botao = document.createElement("button");
+            botao.type = "button";
+            botao.className = "tema-opcao";
+            botao.dataset.tema = valor;
+            botao.textContent = nome;
+
+            botao.addEventListener("click", () => {
+
+                selectTemaApp.value = valor;
+                selectTemaApp.dispatchEvent(
+                    new Event("change", { bubbles: true })
+                );
+                atualizarBotoesTemas();
+
+            });
+
+            botoesTemas.push(botao);
+            grupoTemas.append(botao);
+
+        });
+
+        selectTemaApp.after(grupoTemas);
+        selectTemaApp.style.display = "none";
+
+        selectTemaApp.addEventListener(
+            "change",
+            atualizarBotoesTemas
+        );
+
+        dialogTemasApp.addEventListener("toggle", () => {
+
+            if (dialogTemasApp.open) atualizarBotoesTemas();
+
+        });
+
+        atualizarBotoesTemas();
+
+    }
+
 
     // =====================================================
     // ABRIR PAINEL
@@ -143,9 +214,22 @@ document.addEventListener("DOMContentLoaded", () => {
                     "hidden";
 
 
-                if (selectTemaApp) {
+                const temaSelecionado =
+                    dialogTemasApp.querySelector(
+                        '.tema-opcao[data-tema][aria-pressed="true"]'
+                    );
 
-                    selectTemaApp.focus();
+                if (temaSelecionado) {
+
+                    temaSelecionado.focus({
+                        preventScroll: true
+                    });
+
+                } else {
+
+                    btnFecharTemasApp?.focus({
+                        preventScroll: true
+                    });
 
                 }
 
@@ -5487,10 +5571,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    
+
 
     // =====================================================
     // GERENCIADOR CENTRAL — NAVEGAR
     // =====================================================
+
+
+
+    // =====================================================
+    // BOTÃO INÍCIO GLOBAL — RETORNAR À HOME
+    // =====================================================
+
+    const botaoInicioGlobal =
+        document.getElementById("btnInicioGlobal");
+
+    if (botaoInicioGlobal) {
+
+        botaoInicioGlobal.addEventListener(
+            "click",
+            () => {
+
+                navegarParaTela("home");
+
+            }
+        );
+
+    }
+
 
     function navegarParaTela(
         nomeTela,

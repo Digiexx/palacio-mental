@@ -1,0 +1,309 @@
+/* PALÁCIO MENTAL — APARÊNCIA EM VIDRO FUMÊ */
+#dialogTemasApp {
+  color-scheme: dark;
+  box-sizing: border-box;
+  width: min(440px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 28px;
+  overflow-y: auto;
+  color: #f5f3f7;
+  border: 1px solid rgba(0, 0, 0, .85);
+  border-top-color: rgba(255, 255, 255, .08);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, .13) 0%,
+      rgba(255, 255, 255, .025) 35%,
+      rgba(0, 0, 0, .12) 70%,
+      rgba(255, 255, 255, .06) 100%
+    ),
+    rgba(17, 18, 22, .58);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .25),
+    inset 1px 0 0 rgba(255, 255, 255, .08),
+    inset 0 -1px 0 rgba(255, 255, 255, .06),
+    0 24px 70px rgba(0, 0, 0, .55);
+
+  -webkit-backdrop-filter: blur(28px) saturate(.65);
+  backdrop-filter: blur(28px) saturate(.65);
+}
+
+#dialogTemasApp::backdrop {
+  background: rgba(0,0,0,.62);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+#dialogTemasApp .app-theme-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+#dialogTemasApp h2 {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 7vw, 36px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+
+#dialogTemasApp .app-theme-close {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff15, #ffffff04);
+  box-shadow: inset 0 1px 0 #ffffff15;
+  color: #f5f3f7;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#dialogTemasApp .app-theme-description {
+  margin: 12px 0 26px;
+  color: #b9b7c2;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#dialogTemasApp .app-theme-label {
+  display: block;
+  margin: 24px 0 12px;
+  color: #bfbcc8;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#dialogTemasApp .app-theme-select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #ffffff26;
+  border-radius: 12px;
+  background: #101115c9;
+  color: #f5f3f7;
+  font: inherit;
+}
+
+/* Botões de escolha: serão conectados na etapa de HTML. */
+#dialogTemasApp .temas-opcoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#dialogTemasApp .tema-opcao {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 10px 6px;
+  border: 1px solid #ffffff26;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff09, #00000021);
+  box-shadow: inset 0 1px 0 #ffffff08;
+  color: #e5e3e9;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.3;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color .18s ease, background .18s ease;
+}
+
+#dialogTemasApp .tema-opcao[aria-pressed="true"] {
+  border-color: #b8a0e4;
+  background: linear-gradient(145deg, #b8a0e412, #09090d80);
+  color: #fff;
+}
+
+#dialogTemasApp .tema-opcao[aria-pressed="true"]::before {
+  content: "";
+  flex: 0 0 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b8a0e4;
+  box-shadow: 0 0 7px #b8a0e438;
+}
+
+#dialogTemasApp .app-theme-note {
+  margin: 26px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff14;
+  color: #92909d;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+#dialogTemasApp button:focus-visible,
+#dialogTemasApp select:focus-visible {
+  outline: 2px solid #b8a0e4;
+  outline-offset: 3px;
+}
+
+@media (max-width: 360px) {
+  #dialogTemasApp { padding: 20px; }
+  #dialogTemasApp .temas-opcoes { gap: 6px; }
+  #dialogTemasApp .tema-opcao { font-size: 11px; }
+}
+
+/* CONTROLE DO BRILHO — VIDRO ESCURO */
+#dialogTemasApp .tema-brilho-linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid #ffffff14;
+}
+
+#dialogTemasApp .tema-brilho-texto {
+  min-width: 0;
+}
+
+#dialogTemasApp .tema-brilho-texto strong {
+  display: block;
+  color: #efedf3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#dialogTemasApp .tema-brilho-texto small {
+  display: block;
+  margin-top: 5px;
+  color: #aaa7b4;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+#dialogTemasApp .tema-interruptor {
+  position: relative;
+  flex: 0 0 76px;
+  width: 76px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #ffffff24;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #050507, #17171c);
+  box-shadow: inset 0 2px 6px #000b, 0 1px 0 #ffffff0d;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#dialogTemasApp .tema-interruptor::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ffffff30;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    #62626980,
+    #232329e6 60%,
+    #121216
+  );
+  box-shadow: inset 0 1px 1px #ffffff35, 0 2px 5px #0009;
+  transition: transform .22s ease;
+}
+
+#dialogTemasApp .tema-interruptor::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #55525e;
+  transition: background .22s ease, box-shadow .22s ease;
+}
+
+/* Ligado: botão à direita e contorno iluminado. */
+#dialogTemasApp .tema-interruptor[aria-checked="true"] {
+  border-color: rgba(184, 160, 228, .65);
+  box-shadow:
+    inset 0 2px 6px #000b,
+    0 0 10px rgba(184, 160, 228, .18);
+}
+
+#dialogTemasApp .tema-interruptor[aria-checked="true"]::before {
+  transform: translateX(32px);
+  border-color: rgba(184, 160, 228, .7);
+  box-shadow:
+    inset 0 1px 1px #ffffff35,
+    0 0 8px rgba(184, 160, 228, .22);
+}
+
+#dialogTemasApp .tema-interruptor[aria-checked="true"]::after {
+  right: auto;
+  left: 13px;
+  opacity: 1;
+  background: #b8a0e4;
+  box-shadow: 0 0 9px #b8a0e460;
+}
+
+/* Desligado: botão à esquerda, sem ponto luminoso. */
+#dialogTemasApp .tema-interruptor[aria-checked="false"]::before {
+  transform: translateX(0);
+}
+
+#dialogTemasApp .tema-interruptor[aria-checked="false"]::after {
+  opacity: 0;
+  box-shadow: none;
+}
+
+/* Desligado: acesso indicado por um traço sem brilho. */
+html[data-brilho-inicio="desligado"] .home-nav-handle span {
+  animation: none;
+  opacity: 0;
+}
+
+html[data-brilho-inicio="desligado"] .home-nav-handle::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 18px;
+  width: 20px;
+  height: 2px;
+  border-radius: 4px;
+  background: #aaa5b5;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #dialogTemasApp .tema-interruptor::before,
+  #dialogTemasApp .tema-interruptor::after {
+    transition: none;
+  }
+}
