@@ -757,7 +757,7 @@
                      CABEÇALHO
                 ================================================== -->
 
-                <div class="memory-central-header">
+                <div class="memoria-acao-topo">
 
                     <button class="back-button"
                         id="btnVoltarMissaoMemoriaAcao"
@@ -771,19 +771,6 @@
                         </svg>
 
                     </button>
-
-
-                    <div>
-
-                        <span class="section-label">
-                            MEMÓRIA EM AÇÃO
-                        </span>
-
-                        <h2>
-                            Sua Missão
-                        </h2>
-
-                    </div>
 
                 </div>
 
@@ -849,15 +836,17 @@
                     id="etapaAssociacaoMemoriaAcao" hidden>
 
 
-                    <div class="memoria-acao-missao-etapa">
-
-                        <span>
-                            ETAPA 2
-                        </span>
+                    <div class="memoria-acao-missao-etapa memoria-acao-progresso">
 
                         <small id="progressoAssociacaoMemoriaAcao">
                             ASSOCIAÇÃO 1 DE 5
                         </small>
+
+
+                        <div class="memoria-acao-progresso-pontos"
+                            id="pontosProgressoAssociacaoMemoriaAcao"
+                            aria-hidden="true">
+                        </div>
 
                     </div>
 
@@ -924,24 +913,7 @@
                     </div>
 
 
-                    <div class="memoria-acao-instrucao">
-
-                        <span class="section-label">
-                            CRIE A CENA
-                        </span>
-
-
-                        <strong>
-                            Faça os dois interagirem
-                        </strong>
-
-
-                        <p>
-                            Imagine sua âncora e o item interagindo
-                            de forma exagerada dentro do cenário.
-                        </p>
-
-                    </div>
+                    <!-- Orientação removida para simplificar a associação. -->
 
 
 
@@ -1187,27 +1159,12 @@
                         id="formRecuperacaoMemoriaAcao">
 
 
-                        <label for="respostaRecuperacaoMemoriaAcao">
-
-                            Qual item você associou a esta âncora?
-
-                        </label>
-
-
-                        <p id="orientacaoRecuperacaoMemoriaAcao">
-
-                            Volte à cena que você criou no cenário
-                            e tente recuperar o item sem consultar a lista.
-
-                        </p>
-
-
                         <input
                             id="respostaRecuperacaoMemoriaAcao"
                             name="respostaMemoriaAcao"
                             type="text"
                             placeholder="Digite o item que você lembrou"
-                            aria-describedby="orientacaoRecuperacaoMemoriaAcao"
+                            aria-label="Item associado à âncora"
                             autocomplete="off"
                             spellcheck="false"
                             required>
@@ -1941,7 +1898,8 @@
                 ================================================== -->
 
                 <section class="memoria-acao-historico"
-                    aria-labelledby="tituloHistoricoMemoriaAcao">
+                    aria-labelledby="tituloHistoricoMemoriaAcao"
+                    hidden>
 
                     <span class="section-label">
                         SUA TRAJETÓRIA

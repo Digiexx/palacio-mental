@@ -5123,6 +5123,38 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
 
+        // =================================================
+        // CABEÇALHO E BOTÃO DE TEMA — SOMENTE NA HOME
+        // =================================================
+
+        const cabecalhoApp =
+            document.querySelector(
+                ".app-header"
+            );
+
+
+        if (cabecalhoApp) {
+
+            cabecalhoApp.hidden =
+                nomeTela !== "home";
+
+        }
+
+
+        const botaoTemaApp =
+            document.getElementById(
+                "btnConfig"
+            );
+
+
+        if (botaoTemaApp) {
+
+            botaoTemaApp.hidden =
+                nomeTela !== "home";
+
+        }
+
+
         // =============================================
         // ATUALIZA O DOMÍNIO AO EXIBIR A CENTRAL
         // =============================================
@@ -10140,6 +10172,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // =============================================
+        // PONTOS DE PROGRESSO
+        // =============================================
+
+        const pontosProgresso =
+            document.getElementById(
+                "pontosProgressoAssociacaoMemoriaAcao"
+            );
+
+
+        if (pontosProgresso) {
+
+            const fragmentoPontos =
+                document.createDocumentFragment();
+
+
+            missaoListaAncoradaAtual.forEach(
+                (_, indice) => {
+
+                    const ponto =
+                        document.createElement(
+                            "span"
+                        );
+
+
+                    ponto.classList.add(
+                        "memoria-acao-progresso-ponto"
+                    );
+
+
+                    if (
+                        indice <
+                        indiceAssociacaoMemoriaAcao
+                    ) {
+
+                        ponto.classList.add(
+                            "concluido"
+                        );
+
+                    }
+
+
+                    if (
+                        indice ===
+                        indiceAssociacaoMemoriaAcao
+                    ) {
+
+                        ponto.classList.add(
+                            "atual"
+                        );
+
+                    }
+
+
+                    fragmentoPontos.appendChild(
+                        ponto
+                    );
+
+                }
+            );
+
+
+            pontosProgresso.replaceChildren(
+                fragmentoPontos
+            );
+
+        }
+
+
+        // =============================================
         // NÚMERO
         // =============================================
 
@@ -10500,6 +10601,38 @@ document.addEventListener("DOMContentLoaded", () => {
                             imagensDisponiveis[indiceSorteado];
 
                     }
+
+                }
+
+
+                // =========================================
+                // UNIR CENÁRIO E ASSOCIAÇÃO
+                // =========================================
+
+                if (etapaCenarioMemoriaAcao) {
+
+                    etapaCenarioMemoriaAcao.hidden =
+                        true;
+
+                }
+
+
+                if (etapaAssociacaoMemoriaAcao) {
+
+                    if (cenarioVisual) {
+
+                        etapaAssociacaoMemoriaAcao.prepend(
+                            cenarioVisual
+                        );
+
+                    }
+
+
+                    mostrarAssociacaoAtualMemoriaAcao();
+
+
+                    etapaAssociacaoMemoriaAcao.hidden =
+                        false;
 
                 }
 

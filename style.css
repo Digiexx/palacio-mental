@@ -2679,66 +2679,63 @@ body [hidden][hidden] {
 
 
 /* =========================================================
-   ÂNCORA NUMÉRICA
+   CARTÕES — ÂNCORA E INFORMAÇÃO
 ========================================================= */
 
 .memoria-acao-ancora,
 .memoria-acao-informacao {
 
-    min-width:
-        0;
+    box-sizing: border-box;
 
-    min-height:
-        150px;
+    min-width: 0;
+    min-height: 180px;
 
-    padding:
-        16px 12px;
+    padding: 24px 12px;
 
-    display:
-        flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    flex-direction:
-        column;
+    text-align: center;
 
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-
-    border:
-        1px solid rgba(var(--tema-acento-rgb), 0.18);
-
-    border-radius:
-        17px;
+    border: 1px solid rgba(var(--tema-acento-rgb), 0.28);
+    border-radius: 24px;
 
     background:
-        linear-gradient(180deg,
-            rgba(var(--tema-superficie-alta-rgb), 0.90),
-            rgba(var(--tema-superficie-rgb), 0.97));
+        linear-gradient(
+            145deg,
+            rgba(var(--tema-superficie-alta-rgb), 0.96),
+            rgba(var(--tema-superficie-rgb), 0.98)
+        );
 
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
 }
 
 
 .memoria-acao-ancora {
 
     background:
-        linear-gradient(145deg,
-            rgba(var(--tema-acento-forte-rgb), 0.94),
-            rgba(var(--tema-superficie-rgb), 0.98));
+        linear-gradient(
+            145deg,
+            rgba(var(--tema-acento-forte-rgb), 0.98),
+            rgba(var(--tema-acento-rgb), 0.48) 55%,
+            rgba(var(--tema-superficie-rgb), 0.98)
+        );
 }
 
 
 .memoria-acao-ancora .section-label,
 .memoria-acao-informacao .section-label {
 
-    margin-bottom:
-        10px;
+    margin: 0 0 16px;
+
+    color: rgb(var(--tema-acento-claro-rgb));
+
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
 }
 
 
@@ -2748,45 +2745,33 @@ body [hidden][hidden] {
 
 .memoria-acao-ancora-numero {
 
-    display:
-        block;
+    display: block;
 
-    margin-bottom:
-        4px;
+    margin: 0 0 8px;
 
-    color:
-        #ffffff;
+    color: #ffffff;
 
-    font-size:
-        38px;
-
-    line-height:
-        1;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        -1.5px;
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -1.5px;
 
     text-shadow:
-        0 0 22px rgba(var(--tema-acento-rgb), 0.28);
+        0 0 22px rgba(var(--tema-acento-rgb), 0.22);
 }
 
 
 .memoria-acao-ancora-palavra {
 
-    color:
-        rgb(var(--tema-acento-claro-rgb));
+    max-width: 100%;
 
-    font-size:
-        15px;
+    color: rgb(var(--tema-acento-claro-rgb));
 
-    line-height:
-        1.2;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 800;
 
-    font-weight:
-        800;
+    overflow-wrap: anywhere;
 }
 
 
@@ -2796,51 +2781,35 @@ body [hidden][hidden] {
 
 .memoria-acao-conexao {
 
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .memoria-acao-conexao span {
 
-    width:
-        30px;
+    box-sizing: border-box;
 
-    height:
-        30px;
+    width: 32px;
+    height: 32px;
 
-    display:
-        grid;
+    display: grid;
+    place-items: center;
 
-    place-items:
-        center;
+    border: 1px solid rgba(var(--tema-acento-claro-rgb), 0.32);
+    border-radius: 50%;
 
-    border:
-        1px solid rgba(var(--tema-acento-claro-rgb), 0.25);
+    color: rgb(var(--tema-acento-claro-rgb));
 
-    border-radius:
-        50%;
+    background: rgba(var(--tema-acento-rgb), 0.08);
 
-    color:
-        rgb(var(--tema-acento-claro-rgb));
-
-    background:
-        rgba(var(--tema-acento-rgb), 0.13);
-
-    font-size:
-        19px;
-
-    font-weight:
-        700;
+    font-size: 23px;
+    line-height: 1;
+    font-weight: 500;
 
     box-shadow:
-        0 0 18px rgba(var(--tema-acento-rgb), 0.10);
+        0 0 16px rgba(var(--tema-acento-rgb), 0.08);
 }
 
 
@@ -2850,23 +2819,15 @@ body [hidden][hidden] {
 
 .memoria-acao-informacao strong {
 
-    max-width:
-        100%;
+    max-width: 100%;
 
-    color:
-        #ffffff;
+    color: #ffffff;
 
-    font-size:
-        21px;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 800;
 
-    line-height:
-        1.15;
-
-    font-weight:
-        850;
-
-    overflow-wrap:
-        anywhere;
+    overflow-wrap: anywhere;
 }
 
 
@@ -22738,14 +22699,28 @@ body [hidden][hidden] {
    MEMÓRIA EM AÇÃO — RECUPERAÇÃO
 ===================================================== */
 
-#telaMissaoMemoriaAcao .memory-central-header {
-    margin-top: 20px;
+#telaMissaoMemoriaAcao:has(
+    #etapaRecuperacaoMemoriaAcao:not([hidden])
+) {
+
+    /* AJUSTE AQUI PARA DESCER TODO O CONTEÚDO */
+    --folga-topo-recuperacao:30px;
+
+    margin-top: 0;
+    padding-top: var(--folga-topo-recuperacao);
+}
+
+#telaMissaoMemoriaAcao:has(
+    #etapaRecuperacaoMemoriaAcao:not([hidden])
+) .memoria-acao-topo {
+
+    display: none;
 }
 
 .memoria-acao-recuperacao {
     width: 100%;
     box-sizing: border-box;
-    margin-top: 24px;
+    margin-top: 0;
     padding-bottom: 32px;
 }
 
@@ -22753,105 +22728,238 @@ body [hidden][hidden] {
     display: none;
 }
 
+/* =====================================================
+   TODAS AS TELAS — OCULTAR SETAS DE VOLTAR
+===================================================== */
+
+/* =====================================================
+   TODAS AS TELAS — FOLGA NO TOPO E SETAS OCULTAS
+===================================================== */
+
+:root {
+
+    /* ALTERE SOMENTE ESTE VALOR PARA AJUSTAR A FOLGA */
+    --folga-topo-telas: 30px;
+
+}
+
+.main-content .app-screen {
+
+    margin-top: 0 !important;
+    padding-top: var(--folga-topo-telas) !important;
+
+}
+
+.app-screen .back-button {
+
+    display: none !important;
+
+}
+
+.app-screen .memoria-acao-topo {
+
+    display: none !important;
+
+}
+
+/* =====================================================
+   MEMÓRIA EM AÇÃO — PONTOS DE PROGRESSO
+===================================================== */
+
+.memoria-acao-missao-etapa.memoria-acao-progresso {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.memoria-acao-progresso #progressoAssociacaoMemoriaAcao {
+
+    margin: 0;
+
+    color: var(--text-soft);
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+}
+
+.memoria-acao-progresso-pontos {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    max-width: 100%;
+    margin-left: auto;
+
+}
+
+.memoria-acao-progresso-ponto {
+
+    display: block;
+    flex: 0 0 9px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: rgba(var(--tema-acento-claro-rgb), 0.20);
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+.memoria-acao-progresso-ponto.concluido {
+
+    background: rgba(var(--tema-acento-rgb), 0.55);
+
+}
+
+.memoria-acao-progresso-ponto.atual {
+
+    background: rgb(var(--tema-acento-rgb));
+
+    box-shadow:
+        0 0 0 3px rgba(var(--tema-acento-rgb), 0.12),
+        0 0 12px rgba(var(--tema-acento-rgb), 0.25);
+
+}
+
 .memoria-acao-recuperacao-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
+    min-height: 180px;
+    box-sizing: border-box;
     margin-top: 20px;
-    padding: 26px 20px;
-    border: 1px solid rgba(var(--tema-acento-rgb), 0.22);
-    border-radius: 20px;
+    padding: 30px 20px;
+    border: 1px solid rgba(var(--tema-acento-rgb), 0.28);
+    border-radius: 24px;
     text-align: center;
-    background: linear-gradient(
-        145deg,
-        rgba(var(--tema-acento-rgb), 0.16),
-        rgba(var(--tema-acento-rgb), 0.04)
-    );
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(var(--tema-acento-rgb), 0.18),
+            transparent 75%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(var(--tema-acento-rgb), 0.10),
+            rgba(var(--tema-acento-rgb), 0.03)
+        );
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .memoria-acao-recuperacao-card .section-label {
     margin: 0;
     color: rgb(var(--tema-acento-claro-rgb));
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
+}
+
+.memoria-acao-recuperacao-card .memoria-acao-ancora-numero {
+    margin: 0;
+    font-size: clamp(44px, 12vw, 60px);
+    line-height: 1;
+    font-weight: 800;
+}
+
+.memoria-acao-recuperacao-card .memoria-acao-ancora-palavra {
+    margin: 0;
+    color: rgb(var(--tema-acento-claro-rgb));
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+    overflow-wrap: anywhere;
 }
 
 .memoria-acao-recuperacao-form {
     display: grid;
-    gap: 14px;
-    margin-top: 22px;
-}
-
-.memoria-acao-recuperacao-form label {
-    color: rgb(var(--tema-acento-claro-rgb));
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.45;
-}
-
-.memoria-acao-recuperacao-form p {
-    margin: 0;
-    color: rgb(var(--tema-acento-claro-rgb));
-    font-size: 14px;
-    line-height: 1.65;
+    gap: 16px;
+    margin-top: 24px;
 }
 
 #respostaRecuperacaoMemoriaAcao {
     display: block;
     width: 100%;
     min-width: 0;
-    min-height: 56px;
+    min-height: 60px;
     box-sizing: border-box;
-    padding: 16px;
-    border: 1px solid rgba(var(--tema-acento-rgb), 0.35);
-    border-radius: 14px;
-    color: rgb(var(--tema-acento-claro-rgb));
-    background: rgba(var(--tema-acento-rgb), 0.08);
+    padding: 18px;
+    border: 1px solid rgba(var(--tema-acento-rgb), 0.28);
+    border-radius: 18px;
+    color: var(--text);
+    background: rgba(var(--tema-acento-rgb), 0.05);
     font-family: inherit;
     font-size: 16px;
     line-height: 1.5;
     transition:
         border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
 #respostaRecuperacaoMemoriaAcao::placeholder {
-    color: rgb(var(--tema-acento-rgb));
+    color: var(--text-soft);
     opacity: 1;
 }
 
 #respostaRecuperacaoMemoriaAcao:focus {
     outline: none;
     border-color: rgb(var(--tema-acento-claro-rgb));
-    box-shadow: 0 0 0 3px rgba(var(--tema-acento-claro-rgb), 0.18);
+    background: rgba(var(--tema-acento-rgb), 0.09);
+    box-shadow: 0 0 0 3px rgba(var(--tema-acento-claro-rgb), 0.14);
 }
 
 .memoria-acao-recuperacao-form .primary-button {
     width: 100%;
-    margin-top: 4px;
+    min-height: 54px;
+    margin-top: 0;
+    border-radius: 18px;
+    font-size: 16px;
 }
 
 #btnNaoLembroMemoriaAcao {
-    justify-self: center;
-    min-height: 44px;
-    padding: 10px 16px;
-    color: rgb(var(--tema-acento-claro-rgb));
+    justify-self: stretch;
+    width: 100%;
+    min-height: 48px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 1px solid rgba(var(--tema-acento-rgb), 0.18);
+    border-radius: 16px;
+    color: var(--text-soft);
+    background: transparent;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-@media (max-width: 620px) {
+#btnNaoLembroMemoriaAcao:hover {
+    color: var(--text);
+    background: rgba(var(--tema-acento-rgb), 0.06);
+}
 
-    #telaMissaoMemoriaAcao .memory-central-header {
-        margin-top: 28px;
-    }
-
-    .memoria-acao-recuperacao {
-        margin-top: 28px;
-    }
-
+#btnNaoLembroMemoriaAcao:focus-visible {
+    outline: 2px solid rgb(var(--tema-acento-claro-rgb));
+    outline-offset: 3px;
 }
 
 /* =====================================================
@@ -23414,12 +23522,12 @@ body [hidden][hidden] {
 
     margin: 0 0 24px;
 
-    overflow: hidden;
+    overflow: visible;
 
-    border: 1px solid var(--purple-3);
-    border-radius: 20px;
+    border: none;
+    border-radius: 0;
 
-    background: var(--surface);
+    background: transparent;
 }
 
 
@@ -23433,17 +23541,102 @@ body [hidden][hidden] {
 
     display: block;
 
+    box-sizing: border-box;
+
     width: 100%;
     height: auto;
+
+    border: 1px solid var(--purple-3);
+    border-radius: 22px;
 }
 
 
 .memoria-acao-cenario-visual figcaption {
 
-    padding: 16px 18px;
+    padding: 14px 4px 0;
 
     color: var(--text-soft);
 
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
+}
+
+
+/* =========================================================
+   SETA SOBRE O CENÁRIO — DURANTE A ASSOCIAÇÃO
+========================================================= */
+
+#telaMissaoMemoriaAcao:has(
+    #etapaAssociacaoMemoriaAcao:not([hidden])
+    #cenarioVisualMemoriaAcao:not([hidden])
+) {
+
+    /* AJUSTE AQUI PARA DESCER TODO O CONTEÚDO */
+    --folga-topo-missao: 20px;
+
+    position: relative;
+
+    margin-top: var(--folga-topo-missao);
+}
+
+
+#telaMissaoMemoriaAcao:has(
+    #etapaAssociacaoMemoriaAcao:not([hidden])
+    #cenarioVisualMemoriaAcao:not([hidden])
+) .memoria-acao-topo {
+
+    display: none;
+}
+
+
+#telaMissaoMemoriaAcao:has(
+    #etapaAssociacaoMemoriaAcao:not([hidden])
+    #cenarioVisualMemoriaAcao:not([hidden])
+) .memoria-acao-topo {
+
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    z-index: 5;
+
+    margin: 0;
+}
+
+
+#telaMissaoMemoriaAcao:has(
+    #etapaAssociacaoMemoriaAcao:not([hidden])
+    #cenarioVisualMemoriaAcao:not([hidden])
+) #etapaAssociacaoMemoriaAcao {
+
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+#telaMissaoMemoriaAcao .memoria-acao-topo .back-button {
+
+    display: grid;
+    place-items: center;
+
+    box-sizing: border-box;
+
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid var(--purple-3);
+    border-radius: 14px;
+
+    background: rgba(18, 16, 26, 0.82);
+
+    color: var(--text);
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
