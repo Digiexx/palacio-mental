@@ -1195,7 +1195,7 @@
                 </section>
 
 
-                <!-- =================================================
+                                <!-- =================================================
                      RESULTADO DA MISSÃO
                 ================================================== -->
 
@@ -1203,52 +1203,106 @@
                     id="etapaResultadoMemoriaAcao" hidden>
 
 
-                    <div class="memoria-acao-missao-etapa">
+                    <!-- CABEÇALHO -->
 
-                        <span>
-                            MISSÃO CONCLUÍDA
-                        </span>
+                    <div class="memoria-acao-resultado-cabecalho">
 
-                        <small>
-                            SEU RESULTADO
-                        </small>
+                        <div class="memoria-acao-resultado-icone"
+                            aria-hidden="true">
 
-                    </div>
+                            <svg viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
 
+                                <path d="M12 18V5a3 3 0 0 0-5.8-1A4 4 0 0 0 3 10a4 4 0 0 0 1 7 4 4 0 0 0 8 1Z" />
+                                <path d="M12 5a3 3 0 0 1 5.8-1A4 4 0 0 1 21 10" />
+                                <path d="M7 8a3 3 0 0 0 5 2" />
+                                <path d="M5 14a3 3 0 0 1 3-1" />
+                                <circle cx="18" cy="17" r="5" />
+                                <path d="m15.8 17 1.5 1.5 3-3" />
 
-                    <div class="memoria-acao-resultado-card">
+                            </svg>
 
-                        <span class="section-label">
-                            ITENS RECUPERADOS
-                        </span>
-
-
-                        <strong class="memoria-acao-resultado-percentual"
-                            id="percentualResultadoMemoriaAcao">
-                            0%
-                        </strong>
+                        </div>
 
 
                         <h3>
-                            Você percorreu suas cenas
+                            Resultado da missão
                         </h3>
 
 
-                        <p id="mensagemResultadoMemoriaAcao">
-                            Confira suas respostas e descubra
-                            quais associações precisam de reforço.
+                        <p>
+                            Missão concluída
                         </p>
 
                     </div>
 
 
+                    <!-- PERCENTUAL E RESUMO -->
+
+                    <div class="memoria-acao-resultado-card">
+
+                        <div class="memoria-acao-resultado-circulo"
+                            id="circuloResultadoMemoriaAcao"
+                            style="--percentual-resultado: 0%;">
+
+                            <strong class="memoria-acao-resultado-percentual"
+                                id="percentualResultadoMemoriaAcao">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="memoria-acao-resultado-descricao">
+
+                            <span class="section-label">
+                                ITENS RECUPERADOS
+                            </span>
+
+
+                            <p id="mensagemResultadoMemoriaAcao">
+                                Confira suas respostas e descubra
+                                quais associações precisam de reforço.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INDICADORES -->
+
                     <dl class="memoria-acao-resultado-resumo">
 
-                        <div>
+                        <div class="memoria-acao-estatistica memoria-acao-estatistica-total">
+
+                            <span class="memoria-acao-estatistica-icone"
+                                aria-hidden="true">
+
+                                <svg viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round">
+
+                                    <path d="M9 6h12M9 12h12M9 18h12" />
+                                    <circle cx="4" cy="6" r="1" />
+                                    <circle cx="4" cy="12" r="1" />
+                                    <circle cx="4" cy="18" r="1" />
+
+                                </svg>
+
+                            </span>
+
 
                             <dt>
                                 Total de itens
                             </dt>
+
 
                             <dd id="totalResultadoMemoriaAcao">
                                 0
@@ -1257,11 +1311,29 @@
                         </div>
 
 
-                        <div>
+                        <div class="memoria-acao-estatistica memoria-acao-estatistica-acertos">
+
+                            <span class="memoria-acao-estatistica-icone"
+                                aria-hidden="true">
+
+                                <svg viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round">
+
+                                    <path d="m5 12 4 4L19 6" />
+
+                                </svg>
+
+                            </span>
+
 
                             <dt>
                                 Acertos
                             </dt>
+
 
                             <dd id="acertosResultadoMemoriaAcao">
                                 0
@@ -1270,11 +1342,28 @@
                         </div>
 
 
-                        <div>
+                        <div class="memoria-acao-estatistica memoria-acao-estatistica-erros">
+
+                            <span class="memoria-acao-estatistica-icone"
+                                aria-hidden="true">
+
+                                <svg viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round">
+
+                                    <path d="m6 6 12 12M18 6 6 18" />
+
+                                </svg>
+
+                            </span>
+
 
                             <dt>
                                 Respostas incorretas
                             </dt>
+
 
                             <dd id="errosResultadoMemoriaAcao">
                                 0
@@ -1283,11 +1372,29 @@
                         </div>
 
 
-                        <div>
+                        <div class="memoria-acao-estatistica memoria-acao-estatistica-nao-lembrados">
+
+                            <span class="memoria-acao-estatistica-icone"
+                                aria-hidden="true">
+
+                                <svg viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                    stroke-linecap="round">
+
+                                    <path d="M9 8a3 3 0 0 1 6 0c0 2-3 2-3 5" />
+                                    <path d="M12 17h.01" />
+
+                                </svg>
+
+                            </span>
+
 
                             <dt>
                                 Não lembrados
                             </dt>
+
 
                             <dd id="naoLembradosResultadoMemoriaAcao">
                                 0
@@ -1298,23 +1405,61 @@
                     </dl>
 
 
+                    <!-- REVISÃO POR CATEGORIA -->
+
                     <div class="memoria-acao-resultado-revisao">
 
-                        <span class="section-label">
-                            REVISÃO DA MISSÃO
-                        </span>
-
-
                         <h3>
-                            Compare suas respostas
+                            Revisar respostas
                         </h3>
 
 
-                        <p>
-                            Nos itens que você não recuperou,
-                            procure tornar a interação com
-                            a âncora mais clara e marcante.
-                        </p>
+                        <div class="memoria-acao-resultado-filtros"
+                            role="group"
+                            aria-label="Filtrar respostas">
+
+                            <button class="memoria-acao-resultado-filtro"
+                                id="btnFiltroAcertosMemoriaAcao"
+                                data-filtro="acertos"
+                                type="button"
+                                aria-pressed="false">
+
+                                Acertos
+                                <span id="contagemFiltroAcertosMemoriaAcao">
+                                    0
+                                </span>
+
+                            </button>
+
+
+                            <button class="memoria-acao-resultado-filtro"
+                                id="btnFiltroErrosMemoriaAcao"
+                                data-filtro="erros"
+                                type="button"
+                                aria-pressed="false">
+
+                                Erros
+                                <span id="contagemFiltroErrosMemoriaAcao">
+                                    0
+                                </span>
+
+                            </button>
+
+
+                            <button class="memoria-acao-resultado-filtro"
+                                id="btnFiltroNaoLembradosMemoriaAcao"
+                                data-filtro="naoLembrados"
+                                type="button"
+                                aria-pressed="false">
+
+                                Não lembrei
+                                <span id="contagemFiltroNaoLembradosMemoriaAcao">
+                                    0
+                                </span>
+
+                            </button>
+
+                        </div>
 
 
                         <div class="memoria-acao-resultado-lista"
@@ -1322,12 +1467,74 @@
                         </div>
 
 
+                        <p class="memoria-acao-resultado-vazio"
+                            id="mensagemFiltroVazioMemoriaAcao"
+                            hidden>
+                            Nenhuma resposta nesta categoria.
+                        </p>
+
+
+                        <div class="memoria-acao-resultado-paginacao"
+                            id="paginacaoResultadoMemoriaAcao"
+                            hidden>
+
+                            <button id="btnPaginaAnteriorResultadoMemoriaAcao"
+                                type="button"
+                                aria-label="Página anterior">
+
+                                <svg viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true">
+
+                                    <path d="m15 18-6-6 6-6" />
+
+                                </svg>
+
+                            </button>
+
+
+                            <span id="textoPaginacaoResultadoMemoriaAcao"
+                                aria-live="polite">
+                            </span>
+
+
+                            <button id="btnProximaPaginaResultadoMemoriaAcao"
+                                type="button"
+                                aria-label="Próxima página">
+
+                                <svg viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true">
+
+                                    <path d="m9 18 6-6-6-6" />
+
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- AÇÕES -->
+
                         <button class="primary-button memoria-acao-repetir-missao"
                             id="btnRepetirMissaoMemoriaAcao"
                             type="button">
 
                             <span>
-                                Repetir a mesma missão
+                                Repetir missão
                             </span>
 
                         </button>
@@ -1337,7 +1544,7 @@
                             id="btnVoltarMemoriaAcao"
                             type="button">
 
-                            Voltar para Memória em Ação
+                            Nova missão
 
                         </button>
 

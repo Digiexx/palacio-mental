@@ -1126,144 +1126,447 @@ document.addEventListener("DOMContentLoaded", () => {
                 : `Você recuperou ${acertos} de ${total} itens. Confira abaixo quais cenas precisam de uma interação mais marcante.`;
 
 
-        const fragmento =
-            document.createDocumentFragment();
+        // =============================================
+        // CÍRCULO DO RESULTADO
+        // =============================================
+
+        const circuloResultado =
+            document.getElementById(
+                "circuloResultadoMemoriaAcao"
+            );
+
+        if (circuloResultado) {
+
+            circuloResultado.style.setProperty(
+                "--percentual-resultado",
+                `${percentual}%`
+            );
+
+        }
 
 
-        respostasMissaoMemoriaAcao.forEach(
-            registro => {
-
-                const memoriaNumerica =
-                    bancoMemoria.find(
-                        memoria =>
-                            memoria.numero ===
-                            registro.codigo
-                    );
+        mensagemResultadoMemoriaAcao.textContent =
+            `${acertos} de ${total} ${
+                total === 1
+                    ? "item recuperado"
+                    : "itens recuperados"
+            }`;
 
 
-                const codigoFormatado =
-                    String(
-                        registro.codigo
-                    ).padStart(
-                        2,
-                        "0"
-                    );
+        // =============================================
+        // RESPOSTAS SEPARADAS POR CATEGORIA
+        // =============================================
+
+        const respostasPorCategoria = {
+
+            acertos:
+                respostasMissaoMemoriaAcao.filter(
+                    registro =>
+                        registro.naoLembrou !== true &&
+                        registro.acertou === true
+                ),
+
+            erros:
+                respostasMissaoMemoriaAcao.filter(
+                    registro =>
+                        registro.naoLembrou !== true &&
+                        registro.acertou !== true
+                ),
+
+            naoLembrados:
+                respostasMissaoMemoriaAcao.filter(
+                    registro =>
+                        registro.naoLembrou === true
+                )
+
+        };
 
 
-                const card =
-                    document.createElement("div");
-
-                card.className =
-                    "memoria-acao-resultado-item";
-
-
-                const topo =
-                    document.createElement("div");
-
-                topo.className =
-                    "memoria-acao-resultado-item-topo";
-
-
-                const ancora =
-                    document.createElement("span");
-
-                ancora.className =
-                    "memoria-acao-resultado-item-ancora";
-
-                ancora.textContent =
-                    `${codigoFormatado} — ${
-                        memoriaNumerica
-                            ? memoriaNumerica.palavra
-                            : "Âncora"
-                    }`;
+        const filtrosResultado = [
+            {
+                categoria: "acertos",
+                botao: "btnFiltroAcertosMemoriaAcao",
+                contador: "contagemFiltroAcertosMemoriaAcao"
+            },
+            {
+                categoria: "erros",
+                botao: "btnFiltroErrosMemoriaAcao",
+                contador: "contagemFiltroErrosMemoriaAcao"
+            },
+            {
+                categoria: "naoLembrados",
+                botao: "btnFiltroNaoLembradosMemoriaAcao",
+                contador: "contagemFiltroNaoLembradosMemoriaAcao"
+            }
+        ];
 
 
-                const status =
-                    document.createElement("span");
+        const mensagemVazia =
+            document.getElementById(
+                "mensagemFiltroVazioMemoriaAcao"
+            );
 
-                status.className =
-                    "memoria-acao-resultado-item-status";
+        const paginacaoResultado =
+            document.getElementById(
+                "paginacaoResultadoMemoriaAcao"
+            );
+
+        const textoPaginacao =
+            document.getElementById(
+                "textoPaginacaoResultadoMemoriaAcao"
+            );
+
+        const botaoAnterior =
+            document.getElementById(
+                "btnPaginaAnteriorResultadoMemoriaAcao"
+            );
+
+        const botaoProximo =
+            document.getElementById(
+                "btnProximaPaginaResultadoMemoriaAcao"
+            );
 
 
-                if (registro.naoLembrou === true) {
+        // ALTERE ESTE VALOR PARA MUDAR OS ITENS POR PÁGINA.
+        const itensPorPagina = 3;
 
-                    card.dataset.status =
-                        "nao-lembrou";
+        let paginaAtual = 0;
 
-                    status.textContent =
-                        "Não lembrado";
+        let categoriaAtual =
+            erros > 0
+                ? "erros"
+                : naoLembrados > 0
+                    ? "naoLembrados"
+                    : "acertos";
 
-                } else if (registro.acertou === true) {
 
-                    card.dataset.status =
-                        "acerto";
+        // =============================================
+        // EXIBIR A CATEGORIA E A PÁGINA ATUAIS
+        // =============================================
 
-                    status.textContent =
-                        "Acerto";
+        function renderizarRevisaoResultado() {
 
-                } else {
+            const registros =
+                respostasPorCategoria[categoriaAtual];
 
-                    card.dataset.status =
-                        "erro";
+            const totalPaginas =
+                Math.ceil(
+                    registros.length / itensPorPagina
+                );
 
-                    status.textContent =
-                        "Resposta incorreta";
+            paginaAtual =
+                Math.max(
+                    0,
+                    Math.min(
+                        paginaAtual,
+                        totalPaginas - 1
+                    )
+                );
+
+
+            filtrosResultado.forEach(
+                filtro => {
+
+                    const botao =
+                        document.getElementById(
+                            filtro.botao
+                        );
+
+                    const contador =
+                        document.getElementById(
+                            filtro.contador
+                        );
+
+                    if (botao) {
+
+                        botao.setAttribute(
+                            "aria-pressed",
+                            String(
+                                filtro.categoria ===
+                                categoriaAtual
+                            )
+                        );
+
+                    }
+
+                    if (contador) {
+
+                        contador.textContent =
+                            respostasPorCategoria[
+                                filtro.categoria
+                            ].length;
+
+                    }
 
                 }
+            );
 
 
-                const resposta =
-                    document.createElement("p");
+            const fragmento =
+                document.createDocumentFragment();
 
-                const rotuloResposta =
-                    document.createElement("strong");
-
-                rotuloResposta.textContent =
-                    "Sua resposta: ";
-
-                resposta.append(
-                    rotuloResposta,
-                    registro.naoLembrou === true
-                        ? "Não lembro agora"
-                        : registro.resposta
-                );
+            const inicio =
+                paginaAtual * itensPorPagina;
 
 
-                const item =
-                    document.createElement("p");
+            registros.slice(
+                inicio,
+                inicio + itensPorPagina
+            ).forEach(
+                registro => {
 
-                const rotuloItem =
-                    document.createElement("strong");
+                    const memoriaNumerica =
+                        bancoMemoria.find(
+                            memoria =>
+                                memoria.numero ===
+                                registro.codigo
+                        );
 
-                rotuloItem.textContent =
-                    "Item da missão: ";
-
-                item.append(
-                    rotuloItem,
-                    registro.item
-                );
+                    const codigoFormatado =
+                        String(
+                            registro.codigo
+                        ).padStart(2, "0");
 
 
-                topo.append(
-                    ancora,
-                    status
-                );
+                    const card =
+                        document.createElement("details");
 
-                card.append(
-                    topo,
-                    resposta,
-                    item
-                );
+                    card.className =
+                        "memoria-acao-resultado-item";
 
-                fragmento.append(card);
+
+                    const topo =
+                        document.createElement("summary");
+
+                    topo.className =
+                        "memoria-acao-resultado-item-topo";
+
+
+                    const ancora =
+                        document.createElement("span");
+
+                    ancora.className =
+                        "memoria-acao-resultado-item-ancora";
+
+                    ancora.textContent =
+                        `${codigoFormatado} — ${
+                            memoriaNumerica
+                                ? memoriaNumerica.palavra
+                                : "Âncora"
+                        }`;
+
+
+                    const status =
+                        document.createElement("span");
+
+                    status.className =
+                        "memoria-acao-resultado-item-status";
+
+
+                    if (registro.naoLembrou === true) {
+
+                        card.dataset.status =
+                            "nao-lembrou";
+
+                        status.textContent =
+                            "Não lembrado";
+
+                    } else if (registro.acertou === true) {
+
+                        card.dataset.status =
+                            "acerto";
+
+                        status.textContent =
+                            "Acerto";
+
+                    } else {
+
+                        card.dataset.status =
+                            "erro";
+
+                        status.textContent =
+                            "Erro";
+
+                    }
+
+
+                    const resposta =
+                        document.createElement("p");
+
+                    resposta.append(
+                        "Sua resposta: "
+                    );
+
+                    const valorResposta =
+                        document.createElement("strong");
+
+                    valorResposta.textContent =
+                        registro.naoLembrou === true
+                            ? "Não lembro agora"
+                            : registro.resposta;
+
+                    resposta.append(
+                        valorResposta
+                    );
+
+
+                    const item =
+                        document.createElement("p");
+
+                    item.append(
+                        "Item da missão: "
+                    );
+
+                    const valorItem =
+                        document.createElement("strong");
+
+                    valorItem.textContent =
+                        registro.item;
+
+                    item.append(
+                        valorItem
+                    );
+
+
+                    topo.append(
+                        ancora,
+                        status
+                    );
+
+                    card.append(
+                        topo,
+                        resposta,
+                        item
+                    );
+
+                    fragmento.append(
+                        card
+                    );
+
+                }
+            );
+
+
+            listaResultadoMemoriaAcao.replaceChildren(
+                fragmento
+            );
+
+
+            if (mensagemVazia) {
+
+                mensagemVazia.hidden =
+                    registros.length > 0;
+
+            }
+
+            if (paginacaoResultado) {
+
+                paginacaoResultado.hidden =
+                    totalPaginas <= 1;
+
+            }
+
+            if (textoPaginacao) {
+
+                textoPaginacao.textContent =
+                    totalPaginas > 0
+                        ? `${paginaAtual + 1} de ${totalPaginas}`
+                        : "";
+
+            }
+
+            if (botaoAnterior) {
+
+                botaoAnterior.disabled =
+                    paginaAtual === 0;
+
+            }
+
+            if (botaoProximo) {
+
+                botaoProximo.disabled =
+                    totalPaginas === 0 ||
+                    paginaAtual >= totalPaginas - 1;
+
+            }
+
+        }
+
+
+        // =============================================
+        // AÇÕES DOS FILTROS E DA PAGINAÇÃO
+        // =============================================
+
+        filtrosResultado.forEach(
+            filtro => {
+
+                const botao =
+                    document.getElementById(
+                        filtro.botao
+                    );
+
+                if (botao) {
+
+                    botao.onclick = () => {
+
+                        categoriaAtual =
+                            filtro.categoria;
+
+                        paginaAtual = 0;
+
+                        renderizarRevisaoResultado();
+
+                    };
+
+                }
 
             }
         );
 
 
-        listaResultadoMemoriaAcao.replaceChildren(
-            fragmento
-        );
+        if (botaoAnterior) {
+
+            botaoAnterior.onclick = () => {
+
+                if (paginaAtual > 0) {
+
+                    paginaAtual--;
+
+                    renderizarRevisaoResultado();
+
+                }
+
+            };
+
+        }
+
+
+        if (botaoProximo) {
+
+            botaoProximo.onclick = () => {
+
+                const quantidade =
+                    respostasPorCategoria[
+                        categoriaAtual
+                    ].length;
+
+                if (
+                    (paginaAtual + 1) * itensPorPagina <
+                    quantidade
+                ) {
+
+                    paginaAtual++;
+
+                    renderizarRevisaoResultado();
+
+                }
+
+            };
+
+        }
+
+
+        renderizarRevisaoResultado();
 
 
         etapaRecuperacaoMemoriaAcao.hidden =
