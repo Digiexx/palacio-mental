@@ -21,24 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
     dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === current)));
     document.getElementById('homeCarouselStatus').textContent = `${current + 1} de ${cards.length}: ${cards[current].dataset.title}`;
   }
-  region.addEventListener('pointerdown', e => { if (e.isPrimary) start = {x:e.clientX, y:e.clientY, id:e.pointerId}; });
-  window.addEventListener('pointerup', e => {
-    if (!start || start.id !== e.pointerId) return;
+  region.addEventListener('pointerdown', e => {
+    if (e.isPrimary) start = {x:e.clientX, y:e.clientY, id:e.pointerId, direction:null};
+  });
+  window.addEventListener('pointermove', e => {
+    if (!start || start.id !== e.pointerId || start.direction) return;
     const dx = e.clientX - start.x, dy = e.clientY - start.y;
-    start = null;
-    if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) {
+    if (Math.abs(dy) >= 24 && Math.abs(dy) > 1.3 * Math.abs(dx)) {
+      start.direction = 'vertical';
+    } else if (Math.abs(dx) >= 24 && Math.abs(dx) > 1.3 * Math.abs(dy)) {
+      start.direction = 'horizontal';
       select(current + (dx < 0 ? 1 : -1));
-      suppressUntil = Date.now() + 350;
     }
   });
-  region.addEventListener('pointercancel', () => { start = null; });
+  const finishCarouselGesture = e => {
+    if (!start || start.id !== e.pointerId) return;
+    if (start.direction === 'horizontal') suppressUntil = Date.now() + 350;
+    start = null;
+  };
+  window.addEventListener('pointerup', finishCarouselGesture);
+  window.addEventListener('pointercancel', finishCarouselGesture);
   region.addEventListener('click', e => {
     const card = e.target.closest('.home-path-card');
     if (!card) return;
     const index = cards.indexOf(card);
-    if (Date.now() < suppressUntil || index !== current) {
+    const suppressClick = start?.direction === 'horizontal' || Date.now() < suppressUntil;
+    if (suppressClick || index !== current) {
       e.preventDefault(); e.stopImmediatePropagation();
-      if (Date.now() >= suppressUntil) select(index);
+      if (!suppressClick) select(index);
     }
   }, true);
   region.addEventListener('keydown', e => {

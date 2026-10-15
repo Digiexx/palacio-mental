@@ -33,6 +33,45 @@ body.home-aberta { background: #090a0c; }
 .home-coverflow { position: relative; height: 224px; margin: 0 -24px; perspective: 900px; touch-action: pan-y; user-select: none; }
 .home-coverflow .home-path-card { position: absolute; top: 4px; left: 50%; margin-left: -100px; width: 200px; height: 202px; padding: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 0; overflow: hidden; border: 1px solid #ffffff33; border-radius: 20px; background: #14131edb; color: #fff; box-shadow: 0 15px 35px #0007; transform: translateX(var(--card-x)) rotateY(var(--card-rotate)) scale(var(--card-scale)); z-index: var(--card-z); opacity: var(--card-opacity); transition: transform .35s ease,opacity .35s ease,border-color .2s ease; cursor: pointer; }
 .home-coverflow .home-path-card.is-current { border-color: var(--home-accent); box-shadow: 0 12px 32px #0008,0 0 20px #b8a0e421; }
+/* Reflexo restrito ao contorno do cartão central; não altera seu transform. */
+@property --home-border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@supports (background: conic-gradient(from 0deg, transparent, white)) and ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
+  .home-coverflow .home-path-card.is-current { overflow: visible; }
+  .home-coverflow .home-path-card.is-current .home-card-art,
+  .home-coverflow .home-path-card.is-current::before { border-radius: inherit; }
+  .home-coverflow .home-path-card.is-current::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: 3;
+    padding: 2px;
+    border-radius: inherit;
+    pointer-events: none;
+    background: conic-gradient(from var(--home-border-angle), transparent 0deg 284deg, color-mix(in srgb, var(--home-accent) 25%, transparent) 308deg, var(--home-accent) 338deg, color-mix(in srgb, var(--home-accent) 65%, white) 348deg, transparent 355deg 360deg);
+    opacity: .95;
+    filter: drop-shadow(0 0 3px var(--home-accent));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: home-border-reflection 5s linear infinite;
+  }
+}
+@keyframes home-border-reflection {
+  to { --home-border-angle: 360deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-coverflow .home-path-card.is-current::after {
+    animation: none;
+    background: var(--home-accent);
+    opacity: .25;
+    filter: none;
+  }
+}
 .home-card-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .5; pointer-events: none; }
 .home-coverflow .home-path-card::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg,#14121c05 0%,#100e19a0 46%,#0b0a12f5 100%); }
 .home-coverflow .home-path-icon { position: relative; z-index: 2; width: 35px; height: 35px; margin: auto auto 8px; border: 1px solid #b8a0e46b; border-radius: 10px; color: var(--home-accent); display: grid; place-items: center; background: #19152580; }
