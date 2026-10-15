@@ -23904,3 +23904,314 @@ details.memoria-acao-resultado-item > summary:focus-visible {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
+/* Memória Numérica — etapa 1: somente imagem do topo e domínio. */
+.app-header[hidden], #btnConfig[hidden] { display: none !important; }
+/* Corrige somente a moldura da central ativa, sem alterar outras telas. */
+body:has(#telaMemoriaNumerica:not([hidden])) { background: #000; }
+body:has(#telaMemoriaNumerica:not([hidden])) .main-content {
+    max-width: none;
+    margin-inline: 0;
+    padding-top: 0;
+    padding-inline: 0;
+}
+#telaMemoriaNumerica {
+    --numeric-gutter: 22px;
+    background: #000;
+    padding-top: 0 !important;
+    padding-inline: var(--numeric-gutter);
+}
+@media (max-width: 620px) {
+    #telaMemoriaNumerica { --numeric-gutter: 14px; }
+}
+#telaMemoriaNumerica .memory-numeric-hero {
+    position: relative;
+    height: clamp(240px, 32svh, 340px);
+    margin-inline: calc(-1 * var(--numeric-gutter));
+    margin-bottom: 12px;
+    padding-top: env(safe-area-inset-top, 0px);
+    overflow: hidden;
+}
+#telaMemoriaNumerica .memory-numeric-hero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#telaMemoriaNumerica .memory-numeric-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 55%, #000 100%);
+    pointer-events: none;
+}
+#telaMemoriaNumerica .memory-dashboard {
+    padding: 10px 14px;
+    border: 1px solid #ffffff26;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #23232b99, #111116b3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px #0003;
+}
+#telaMemoriaNumerica .memory-dashboard::before { content: none; }
+#telaMemoriaNumerica .memory-dashboard-label { color: #d4cddd; }
+#telaMemoriaNumerica .memory-dashboard-top strong { color: #fff; }
+#telaMemoriaNumerica .memory-dashboard-percent {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    color: #c4a7ff;
+}
+#telaMemoriaNumerica .memory-dashboard-track { background: #ffffff1a; }
+#telaMemoriaNumerica .memory-dashboard-fill {
+    width: 0;
+    background: linear-gradient(90deg, #8261b0, #c4a7ff);
+}
+
+/* Memória Numérica — oito acessos em vidro fumê, sem alterar as faixas. */
+#telaMemoriaNumerica .memory-training-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+#telaMemoriaNumerica .memory-training-card {
+    order: 0;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr) 8px;
+    grid-template-rows: auto auto;
+    align-content: center;
+    align-items: start;
+    gap: 6px 9px;
+    min-width: 0;
+    min-height: 100px;
+    height: auto;
+    padding: 11px 10px;
+    border: 1px solid #bdb5d238;
+    border-top-color: #ddd5ef80;
+    border-bottom-color: #bdb5d21f;
+    border-radius: 16px;
+    background:
+        radial-gradient(ellipse 78px 48px at 0% 0%, #eeeaf82e 0%, #d6d2e012 35%, transparent 75%),
+        radial-gradient(ellipse 68px 42px at 100% 100%, #e2dfed1c 0%, #d0ccdb0a 38%, transparent 78%),
+        linear-gradient(180deg, #c7c2db0c 0%, #77728704 38%, #05050780 100%), #15151b66;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 1px 0 #eee8ff21, inset 1px 0 0 #e0dbea0d, inset -1px -1px 0 #ded8eb0a, 0 3px 9px #0005;
+    text-align: left;
+    overflow: visible;
+    transform: none;
+    transition: none;
+}
+#telaMemoriaNumerica .memory-training-card:hover {
+    /* Mantém os reflexos de canto também sob o ponteiro. */
+    border-color: #bdb5d24d;
+    border-top-color: #ddd5ef99;
+    transform: none;
+}
+#telaMemoriaNumerica .memory-training-card:active { transform: none; }
+#telaMemoriaNumerica .memory-training-card:focus-visible {
+    outline: 2px solid #c4a7ff;
+    outline-offset: 3px;
+}
+#telaMemoriaNumerica .memory-training-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 28px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    color: #c4a7ff;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+#telaMemoriaNumerica .memory-training-icon::before,
+#telaMemoriaNumerica .memory-training-card::after { content: none; }
+#telaMemoriaNumerica .memory-training-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.65;
+    filter: none;
+}
+#telaMemoriaNumerica .memory-training-card > span,
+#telaMemoriaNumerica .memory-training-card > small {
+    grid-column: 2;
+    min-width: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+#telaMemoriaNumerica .memory-training-card > span {
+    grid-row: 1;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.35;
+}
+#telaMemoriaNumerica .memory-training-card > span strong {
+    display: inline;
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    font-weight: 600;
+}
+#telaMemoriaNumerica .memory-training-card > small {
+    grid-row: 2;
+    color: #bfc0cc;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+#telaMemoriaNumerica .memory-training-card::after {
+    content: "";
+    position: static;
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    width: 6px;
+    height: 6px;
+    background: none;
+    border-top: 1px solid #d5cfdf;
+    border-right: 1px solid #d5cfdf;
+    transform: rotate(45deg);
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Domínio compacto: informações em linha e contorno luminoso independente. */
+#telaMemoriaNumerica .memory-dashboard { overflow: visible; }
+#telaMemoriaNumerica .memory-dashboard-top { gap: 10px; }
+#telaMemoriaNumerica .memory-dashboard-top > div:first-child {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+}
+#telaMemoriaNumerica .memory-dashboard-label {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+#telaMemoriaNumerica .memory-dashboard-top strong { font-size: 20px; }
+#telaMemoriaNumerica .memory-dashboard-top strong small { color: #bfc0cc; }
+#telaMemoriaNumerica .memory-dashboard-percent {
+    min-width: 0;
+    height: auto;
+    flex-shrink: 0;
+}
+#telaMemoriaNumerica .memory-dashboard-percent span { font-size: 16px; color: #c4a7ff; }
+#telaMemoriaNumerica .memory-dashboard-track { height: 3px; margin: 8px 0 0; }
+@property --numeric-domain-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@supports (background: conic-gradient(from 0deg, transparent, white)) and ((mask-composite: exclude) or (-webkit-mask-composite: xor)) {
+    #telaMemoriaNumerica .memory-dashboard::after,
+    #telaMemoriaNumerica .memory-ranges::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        padding: 1px;
+        border-radius: inherit;
+        pointer-events: none;
+        background: conic-gradient(from var(--numeric-domain-angle), transparent 0deg 294deg, #c4a7ff33 320deg, #c4a7ff 345deg, #e2d5ff 350deg, transparent 356deg 360deg);
+        opacity: .65;
+        filter: drop-shadow(0 0 3px #c4a7ff80);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: numeric-domain-reflection 5s linear infinite;
+    }
+}
+@keyframes numeric-domain-reflection { to { --numeric-domain-angle: 360deg; } }
+@media (prefers-reduced-motion: reduce) {
+    #telaMemoriaNumerica .memory-dashboard::after,
+    #telaMemoriaNumerica .memory-ranges::after {
+        animation: none;
+        background: #c4a7ff;
+        opacity: .3;
+        filter: none;
+    }
+}
+
+/* Suas faixas — painel com contorno compartilhado; itens com reflexos estáticos. */
+#telaMemoriaNumerica .memory-ranges {
+    position: relative;
+    overflow: visible;
+    padding: 16px 12px;
+    border: 1px solid #bdb5d238;
+    border-top-color: #ddd5ef70;
+    border-radius: 18px;
+    background:
+        radial-gradient(ellipse 100px 58px at top left, #eeeaf81f, transparent 80%),
+        radial-gradient(ellipse 90px 50px at bottom right, #e2dfed12, transparent 80%),
+        linear-gradient(180deg, #23232b80, #0c0c10b3);
+    box-shadow: inset 0 1px 0 #eee8ff14, 0 3px 10px #0004;
+}
+#telaMemoriaNumerica .memory-ranges .memory-central-title { margin: 0 0 14px; }
+#telaMemoriaNumerica .memory-ranges h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+#telaMemoriaNumerica .memory-ranges .memory-central-title p {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #bfc0cc;
+}
+#telaMemoriaNumerica .memory-range-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+#telaMemoriaNumerica .memory-range-card {
+    min-width: 0;
+    min-height: 78px;
+    padding: 11px 10px;
+    border: 1px solid #bdb5d23d;
+    border-top-color: #ddd5ef70;
+    border-radius: 12px;
+    background:
+        radial-gradient(ellipse 50px 32px at top left, #eeeaf821, transparent 80%),
+        radial-gradient(ellipse 45px 28px at bottom right, #e2dfed12, transparent 80%),
+        linear-gradient(180deg, #24242c80, #09090db3);
+    box-shadow: inset 0 1px 0 #eee8ff14, 0 2px 6px #0003;
+    transition: none;
+}
+#telaMemoriaNumerica .memory-range-card::after { content: none; }
+#telaMemoriaNumerica .memory-range-card-top { gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+#telaMemoriaNumerica .memory-range-card-top span { font-size: 14px; line-height: 1.3; color: #eeeaf8; }
+#telaMemoriaNumerica .memory-range-card-top strong { font-size: 11px; color: #bfc0cc; }
+#telaMemoriaNumerica .memory-range-progress { gap: 6px; }
+#telaMemoriaNumerica .memory-range-progress-value { font-size: 12px; color: #d0c8df; min-width: 30px; }
+#telaMemoriaNumerica .memory-range-progress-track { height: 3px; background: #ffffff1a; }
+#telaMemoriaNumerica .memory-range-progress-fill {
+    width: 0;
+    background: #bca4e2;
+    box-shadow: none;
+    transition: none;
+}
+@media (min-width: 400px) {
+    #telaMemoriaNumerica .memory-range-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+#telaMemoriaNumerica .memory-ranges-heading-icon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    fill: none;
+    stroke: #c4a7ff;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

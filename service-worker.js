@@ -1,5 +1,5 @@
 const CACHE_NAME =
-    "palacio-mental-home-v3-aparencia";
+    "palacio-mental-numerica-v2-cartoes";
 
 
 const ARQUIVOS_CACHE = [
@@ -10,6 +10,7 @@ const ARQUIVOS_CACHE = [
     "./home.css",
     "./temas.css",
     "./home.js",
+    "./assets/imagens/memoria-numerica/central-numerica-topo.webp",
     "./assets/imagens/perfil/natan-fuentes.webp",
     "./assets/imagens/perfil/natan-fuentes-cinza.webp",
     "./assets/imagens/perfil/natan-fuentes-roxo.webp",

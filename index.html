@@ -2270,37 +2270,16 @@
      TELA — CENTRAL DA MEMÓRIA NUMÉRICA
 ================================================== -->
 
-            <section class="app-screen screen-memoria" id="telaMemoriaNumerica" hidden>
+            <section class="app-screen screen-memoria" id="telaMemoriaNumerica" aria-label="Memória Numérica" hidden>
 
                 <!-- =================================================
          CABEÇALHO
     ================================================== -->
 
-                <div class="memory-central-header">
-
-                    <button class="back-button" id="btnVoltarHome" type="button" aria-label="Voltar para a Home">
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="m15 18-6-6 6-6" />
-                        </svg>
-
-                    </button>
-
-
-                    <div>
-
-                        <span class="section-label">
-                            CENTRAL DE TREINAMENTO
-                        </span>
-
-                        <h2>
-                            Memória Numérica
-                        </h2>
-
-                    </div>
-
+                <div class="memory-numeric-hero" aria-hidden="true">
+                    <img src="assets/imagens/memoria-numerica/central-numerica-topo.webp"
+                        alt="" width="1440" height="1080" decoding="async">
                 </div>
-
 
                 <!-- =================================================
          PAINEL DE PROGRESSO
@@ -2313,14 +2292,14 @@
                         <div>
 
                             <span class="memory-dashboard-label">
-                                SEU DOMÍNIO
+                                Seu domínio
                             </span>
 
                             <strong>
                                 <span id="memoriaCentralDominados">
                                     0
                                 </span>
-                                <small>/ 100</small>
+                                <small>/ <span id="memoriaCentralTotal">0</span></small>
                             </strong>
 
                         </div>
@@ -2335,17 +2314,13 @@
                     </div>
 
 
-                    <div class="memory-dashboard-track">
+                    <div class="memory-dashboard-track" id="memoriaCentralProgresso" role="progressbar" aria-label="Associações dominadas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
 
                         <div class="memory-dashboard-fill" id="memoriaCentralBarra"></div>
 
                     </div>
 
 
-                    <p>
-                        Construa associações fortes e transforme
-                        números em imagens instantaneamente.
-                    </p>
 
                 </section>
 
@@ -2356,91 +2331,37 @@
 
                 <section class="memory-training-section">
 
-                    <div class="memory-central-title">
-
-                        <span class="section-label">
-                            TREINAMENTO
-                        </span>
-
-                        <h3>
-                            Escolha seu caminho
-                        </h3>
-
-                    </div>
-
 
                     <div class="memory-training-grid">
 
-
-                        <!-- TREINO RÁPIDO -->
-
-                        <button class="memory-training-card memory-training-extra memory-training-featured"
-                            id="btnMemoriaTreinoRapido" type="button">
-
-                            <div class="memory-training-icon">
-
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                                    <circle cx="7" cy="7" r="2.5" />
-
-                                    <rect x="14.5" y="4.5" width="5" height="5" rx="1" />
-
-                                    <path d="M4.5 19.5 7 14.5l2.5 5Z" />
-
-                                    <path d="m17 14.5 3 3-3 3-3-3Z" />
-
-                                </svg>
-
-                            </div>
-
-                            <span>
-                                Treino
-                                <strong>Rápido</strong>
-                            </span>
-
-                            <small>
-                                Começar agora
-                            </small>
-
-                        </button>
-
-
-                        <!-- TREINO PERSONALIZADO -->
-
-                        <button class="memory-training-card memory-training-training" id="btnTreinoPersonalizadoMemoria"
+                        <button class="memory-training-card memory-training-learning" id="btnTabelaMental"
                             type="button">
 
                             <div class="memory-training-icon">
 
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
 
-                                    <path d="M4 6h16" />
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
 
-                                    <circle cx="9" cy="6" r="2" />
+                                    <path d="M3 9h18" />
 
-                                    <path d="M4 12h16" />
+                                    <path d="M3 15h18" />
 
-                                    <circle cx="15" cy="12" r="2" />
+                                    <path d="M9 3v18" />
 
-                                    <path d="M4 18h16" />
-
-                                    <circle cx="11" cy="18" r="2" />
+                                    <path d="M15 3v18" />
 
                                 </svg>
 
                             </div>
 
-                            <span>
-                                <strong>Personalizado</strong>
-                            </span>
+                            <span><strong>Tabela Mental</strong></span>
 
                             <small>
-                                Escolha suas memórias
+                                Consulte 00–100
                             </small>
 
                         </button>
-
-                        <!-- APRENDER -->
 
                         <button class="memory-training-card memory-training-learning" id="btnIniciarAprendizado"
                             type="button">
@@ -2466,44 +2387,6 @@
                             </small>
 
                         </button>
-
-
-                        <!-- TABELA MENTAL -->
-
-                        <button class="memory-training-card memory-training-learning" id="btnTabelaMental"
-                            type="button">
-
-                            <div class="memory-training-icon">
-
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                                    <rect x="3" y="3" width="18" height="18" rx="2" />
-
-                                    <path d="M3 9h18" />
-
-                                    <path d="M3 15h18" />
-
-                                    <path d="M9 3v18" />
-
-                                    <path d="M15 3v18" />
-
-                                </svg>
-
-                            </div>
-
-                            <span>
-                                Tabela
-                                <strong>Mental</strong>
-                            </span>
-
-                            <small>
-                                Consulte 00–100
-                            </small>
-
-                        </button>
-
-
-                        <!-- FIXAR -->
 
                         <button class="memory-training-card memory-training-learning" id="btnFixar" type="button">
 
@@ -2532,35 +2415,6 @@
                             </small>
 
                         </button>
-
-                        <!-- REVISAR -->
-
-                        <button class="memory-training-card memory-training-extra" id="btnRevisarMemoria" type="button">
-
-                            <div class="memory-training-icon">
-
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                                    <path d="M20 11a8 8 0 1 0 2 5.3" />
-
-                                    <path d="M20 4v7h-7" />
-
-                                </svg>
-
-                            </div>
-
-                            <span>
-                                <strong>Revisar</strong>
-                            </span>
-
-                            <small>
-                                Revisão inteligente
-                            </small>
-
-                        </button>
-
-
-                        <!-- DESAFIAR -->
 
                         <button class="memory-training-card memory-training-training" id="btnDesafiarMemoria"
                             type="button">
@@ -2597,9 +2451,6 @@
 
                         </button>
 
-
-                        <!-- VELOCIDADE -->
-
                         <button class="memory-training-card memory-training-training" id="btnVelocidadeMemoria"
                             type="button">
                             <div class="memory-training-icon">
@@ -2622,6 +2473,90 @@
 
                         </button>
 
+                        <button class="memory-training-card memory-training-training" id="btnTreinoPersonalizadoMemoria"
+                            type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M4 6h16" />
+
+                                    <circle cx="9" cy="6" r="2" />
+
+                                    <path d="M4 12h16" />
+
+                                    <circle cx="15" cy="12" r="2" />
+
+                                    <path d="M4 18h16" />
+
+                                    <circle cx="11" cy="18" r="2" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Personalizado</strong>
+                            </span>
+
+                            <small>
+                                Escolha suas memórias
+                            </small>
+
+                        </button>
+
+                        <button class="memory-training-card memory-training-extra memory-training-featured"
+                            id="btnMemoriaTreinoRapido" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <circle cx="7" cy="7" r="2.5" />
+
+                                    <rect x="14.5" y="4.5" width="5" height="5" rx="1" />
+
+                                    <path d="M4.5 19.5 7 14.5l2.5 5Z" />
+
+                                    <path d="m17 14.5 3 3-3 3-3-3Z" />
+
+                                </svg>
+
+                            </div>
+
+                            <span><strong>Treino Rápido</strong></span>
+
+                            <small>
+                                Começar agora
+                            </small>
+
+                        </button>
+
+                        <button class="memory-training-card memory-training-extra" id="btnRevisarMemoria" type="button">
+
+                            <div class="memory-training-icon">
+
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                                    <path d="M20 11a8 8 0 1 0 2 5.3" />
+
+                                    <path d="M20 4v7h-7" />
+
+                                </svg>
+
+                            </div>
+
+                            <span>
+                                <strong>Revisar</strong>
+                            </span>
+
+                            <small>
+                                Revisão inteligente
+                            </small>
+
+                        </button>
+
                     </div>
 
                 </section>
@@ -2634,13 +2569,10 @@
 
                     <div class="memory-central-title">
 
-                        <span class="section-label">
-                            MAPA DE DOMÍNIO
-                        </span>
-
-                        <h3>
+                        <h3><svg class="memory-ranges-heading-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/><path d="m12 12 9-9M17 3h4v4"/></svg>
                             Suas faixas
                         </h3>
+                        <p>Seu progresso em cada intervalo</p>
 
                     </div>
 

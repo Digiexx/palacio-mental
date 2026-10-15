@@ -3741,6 +3741,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const totalMemorias =
             bancoMemoria.length;
+        const memoriaCentralTotal = document.getElementById("memoriaCentralTotal");
+        if (memoriaCentralTotal) memoriaCentralTotal.textContent = totalMemorias;
 
 
         const percentual =
@@ -3784,6 +3786,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             memoriaCentralBarra.style.width =
                 `${percentual}%`;
+            document.getElementById("memoriaCentralProgresso")?.setAttribute(
+                "aria-valuenow", String(percentual)
+            );
 
         }
 
