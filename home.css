@@ -31,7 +31,7 @@ body.home-aberta { background: #090a0c; }
 .home-carousel-section { margin-top: auto; padding-top: 135px; }
 .home-carousel-label { font-size: 9px; letter-spacing: .2em; color: #eee8f4; margin: 0 0 12px; text-align: center; }
 .home-coverflow { position: relative; height: 224px; margin: 0 -24px; perspective: 900px; touch-action: pan-y; user-select: none; }
-.home-coverflow .home-path-card { position: absolute; top: 4px; left: 50%; margin-left: -100px; width: 200px; height: 202px; padding: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 0; overflow: hidden; border: 1px solid #ffffff33; border-radius: 20px; background: #14131edb; color: #fff; box-shadow: 0 15px 35px #0007; transform: translateX(var(--card-x)) rotateY(var(--card-rotate)) scale(var(--card-scale)); z-index: var(--card-z); opacity: var(--card-opacity); transition: transform .35s ease,opacity .35s ease,border-color .2s ease; cursor: pointer; }
+.home-coverflow .home-path-card { position: absolute; top: 4px; left: 50%; margin-left: -100px; width: 200px; height: 202px; padding: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 0; overflow: hidden; border: 1px solid #ffffff33; border-radius: 20px; background: #14131edb; color: #fff; box-shadow: 0 15px 35px #0007; transform: translateX(var(--card-x)) rotateY(var(--card-rotate)) scale(var(--card-scale)); z-index: var(--card-z); opacity: var(--card-opacity); transition: transform .25s ease,opacity .35s ease,border-color .2s ease; cursor: pointer; }
 .home-coverflow .home-path-card.is-current { border-color: var(--home-accent); box-shadow: 0 12px 32px #0008,0 0 20px #b8a0e421; }
 /* Reflexo restrito ao contorno do cartão central; não altera seu transform. */
 @property --home-border-angle {
