@@ -5,8 +5,9 @@
 body.home-aberta { background: #090a0c; }
 .home-aberta .app-shell { padding-bottom: 0; }
 .home-aberta .main-content { max-width: 640px; padding: 0; }
-.home-aberta .app-header { position: absolute; z-index: 10; top: max(22px, env(safe-area-inset-top)); left: 50%; transform: translateX(-50%); max-width: 640px; padding: 0 24px; justify-content: flex-end; pointer-events: none; }
-.home-aberta #btnConfig { pointer-events: auto; width: 44px; height: 44px; background: #17171c80; border: 1px solid #ffffff2b; border-radius: 13px; backdrop-filter: blur(12px); }
+.home-aberta .app-header { position: absolute; z-index: 10; left: 50%; transform: translateX(-50%); max-width: 640px; padding: 0 24px; justify-content: flex-end; pointer-events: none; }
+.home-aberta #btnConfig { pointer-events: auto; width: 44px; height: 44px; flex: 0 0 44px; background: transparent; border: 0; border-radius: 13px; box-shadow: none; backdrop-filter: none; }
+.home-aberta #btnConfig svg { width: 32px; height: 32px; }
 .home-palacio.home-v2 { display: flex; align-items: stretch; min-height: max(760px, 100svh); padding: 26px 24px 112px; gap: 0; overflow: hidden; background: #0b0b0f; }
 .home-palacio.home-v2[hidden] { display: none; }
 .home-palacio.home-v2::before, .home-palacio.home-v2::after { content: none; }
@@ -14,10 +15,10 @@ body.home-aberta { background: #090a0c; }
 .home-v2 .home-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg,#08090c22 0%,transparent 42%,#090a0c70 68%,#090a0cf2 95%),linear-gradient(90deg,#08090c30,transparent 65%); pointer-events: none; }
 .home-brand {
   position: relative;
-  top: 12px;
+  top: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 11px;
   width: fit-content;
   color: #faf8fc;
 }
@@ -54,7 +55,7 @@ body.home-aberta { background: #090a0c; }
 .home-nav .nav-item svg { width: 44px; height: 44px; padding: 11px; border: 1px solid var(--home-accent); border-radius: 50%; background: #13101dde; fill: none; stroke: #fff; stroke-width: 1.7; box-shadow: 0 0 18px #b8a0e438; }
 .home-nav .nav-item span { font-size: 9px; }
 .home-nav .nav-item:not(.active) svg { box-shadow: 0 0 10px #b8a0e425; }
-.home-path-card:focus-visible,.home-carousel-dots button:focus-visible,.home-nav button:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 4px; }
+.home-aberta #btnConfig:focus-visible,.home-path-card:focus-visible,.home-carousel-dots button:focus-visible,.home-nav button:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 4px; }
 .home-status { margin: 8px 0 0; min-height: 18px; text-align: center; color: #d4cddd; font-size: 11px; }
 @media(min-width:641px) { .home-v2 h1 { font-size: 52px; } .home-aberta .main-content { box-shadow: 0 0 90px #0008; } .home-palacio.home-v2 { min-height: 900px; } }
 @media(max-width:375px) { .home-palacio.home-v2 { padding-left: 20px; padding-right: 20px; min-height: max(720px,100svh); } .home-coverflow { margin-left: -20px; margin-right: -20px; } .home-coverflow .home-path-card { width: 180px; height: 190px; margin-left: -90px; } .home-intro { margin-top: 42px; } .home-carousel-section { padding-top: 118px; } }
@@ -85,7 +86,7 @@ body.home-aberta { background: #090a0c; }
 /* Configurações no canto; troca suave dos fundos. */
 .home-aberta .app-header {
   position: absolute;
-  top: max(30px, env(safe-area-inset-top));
+  top: 53px;
   left: 50%;
   right: auto;
   transform: translateX(-50%);
