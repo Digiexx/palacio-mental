@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('homeCarouselStatus').textContent = `${current + 1} de ${cards.length}: ${cards[current].dataset.title}`;
   }
   region.addEventListener('pointerdown', e => {
-    if (e.isPrimary) start = {x:e.clientX, y:e.clientY, id:e.pointerId, direction:null};
+    if (e.isPrimary) {
+      suppressUntil = 0;
+      start = {x:e.clientX, y:e.clientY, id:e.pointerId, direction:null};
+    }
   });
   window.addEventListener('pointermove', e => {
     if (!start || start.id !== e.pointerId || start.direction) return;
