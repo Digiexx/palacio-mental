@@ -23,6 +23,13 @@ const bancoMemoria = [
         palavra: "Teia",
         categoria: "objeto",
         imagem: "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+        imagensVariantes: [
+            "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+            "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+            "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+            "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+            "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp"
+        ],
         dominado: false
     },
 

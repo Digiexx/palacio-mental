@@ -168,6 +168,16 @@
 
 
             <label class="app-theme-label" for="selectFundoHome">Fundo da Home</label><select class="app-theme-select" id="selectFundoHome"><option value="dourado">Luzes douradas</option><option value="cinza">Luzes cinza prateadas</option><option value="roxo">Roxo escuro</option></select>
+            <div class="appearance-controls" id="appPreferenceControls">
+                <div class="tema-brilho-linha">
+                    <div class="tema-brilho-texto">
+                        <strong id="imageNavigationLabel">Navegação das imagens</strong>
+                        <small id="imageNavigationStatus">Setas</small>
+                    </div>
+                    <button class="tema-interruptor" id="imageNavigationSwitch" type="button" role="switch"
+                        aria-checked="false" aria-labelledby="imageNavigationLabel" aria-describedby="imageNavigationStatus"></button>
+                </div>
+            </div>
 <p class="app-theme-note">
                 Sua escolha será salva neste navegador.
             </p>
@@ -5644,9 +5654,6 @@
 
 
                 <div class="learn-background">
-
-                    <img src="assets/imagens/memoria-numerica/capa-aprender.png" alt="" aria-hidden="true">
-
                     <div class="learn-background-overlay"></div>
 
                 </div>
@@ -5765,10 +5772,6 @@
                                 </svg>
                             </button>
 
-                            <span class="learning-progress" id="learningProgress">
-                                01 / 10
-                            </span>
-
                             <span class="learning-mode">
                                 APRENDER
                             </span>
@@ -5802,6 +5805,9 @@
                         ================================================== -->
 
                         <div class="learning-range-panel" id="learningRangePanel" hidden>
+
+                            <button class="learning-range-close" id="btnFecharFaixasAprender" type="button"
+                                aria-label="Fechar seleção de faixa">×</button>
 
                             <span class="learning-range-label">
                                 ESCOLHA UMA FAIXA
@@ -5902,13 +5908,11 @@
                         </div>
 
 
-                        <div class="learning-image-frame">
+                        <div class="association-gallery" id="learningGallery" aria-label="Imagens da associação">
 
                             <img src="assets/imagens/memoria-numerica/numeros/01-teia.webp"
                                 alt="Personagem Teia, associação visual do número 01" class="learning-image"
                                 id="learningImagem">
-
-                            <div class="learning-image-glow"></div>
 
                         </div>
 
@@ -5916,7 +5920,7 @@
                         <button class="primary-button learning-next-button" id="btnProximaMemoria" type="button">
 
                             <span>
-                                Próximo
+                                Entendi
                             </span>
 
                             <svg viewBox="0 0 24 24" aria-hidden="true">

@@ -111,6 +111,14 @@
   padding: 0;
   border: 0;
 }
+#dialogTemasApp .appearance-controls {
+  margin-top: 26px;
+  padding-block: 22px;
+  border-block: 1px solid #ffffff14;
+}
+#dialogTemasApp .appearance-controls .tema-brilho-linha { margin: 0; padding: 0; border: 0; }
+#dialogTemasApp .appearance-controls .tema-brilho-linha + .tema-brilho-linha { margin-top: 22px; }
+#dialogTemasApp .appearance-controls + .app-theme-note { margin-top: 0; border-top: 0; padding-top: 18px; }
 
 #dialogTemasApp .tema-opcao {
   box-sizing: border-box;

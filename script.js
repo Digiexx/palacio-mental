@@ -9,6 +9,160 @@
 // INICIALIZAÇÃO DO APLICATIVO
 // =====================================================
 
+// Visualizador reutilizável: recebe apenas imagens explicitamente cadastradas.
+// Não conhece treino, navegação, progresso ou armazenamento.
+class AssociationGallery {
+    constructor(root, primaryImage, {navigation = "arrows"} = {}) {
+        this.root = root;
+        this.navigation = navigation;
+        this.root.dataset.navigation = navigation;
+        this.primaryImage = primaryImage;
+        this.items = [];
+        this.cards = [];
+        this.current = 0;
+        this.gesture = null;
+        this.viewport = document.createElement("div");
+        this.viewport.className = "association-gallery__viewport";
+        this.viewport.tabIndex = 0;
+        this.viewport.setAttribute("role", "group");
+        this.viewport.setAttribute("aria-label", "Imagens da associação; use as setas para navegar");
+        this.indicator = document.createElement("p");
+        this.indicator.className = "association-gallery__indicator";
+        this.indicator.setAttribute("role", "status");
+        this.dots = document.createElement("div");
+        this.dots.className = "association-gallery__dots";
+        this.dots.setAttribute("role", "group");
+        this.dots.setAttribute("aria-hidden", "true");
+        this.media = document.createElement("div");
+        this.media.className = "association-gallery__media";
+        const makeArrow = (label, step, symbol) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = `association-gallery__arrow association-gallery__arrow--${step < 0 ? "previous" : "next"}`;
+            button.setAttribute("aria-label", label);
+            button.textContent = symbol;
+            button.addEventListener("click", () => {
+                if (this.navigation === "arrows" && this.items.length > 1) this.select(this.current + step);
+            });
+            return button;
+        };
+        this.previous = makeArrow("Imagem anterior", -1, "‹");
+        this.next = makeArrow("Próxima imagem", 1, "›");
+        this.media.append(this.viewport, this.previous, this.next);
+        this.root.replaceChildren(this.media, this.indicator, this.dots);
+
+        this.viewport.addEventListener("pointerdown", event => {
+            if (this.navigation !== "carousel" || this.items.length < 2) return;
+            if (!event.isPrimary || (event.pointerType === "mouse" && event.button !== 0)) return;
+            this.ignoreClick = false;
+            this.gesture = {id: event.pointerId, x: event.clientX, y: event.clientY,
+                card: this.cards.indexOf(event.target.closest(".association-gallery__card"))};
+            this.viewport.setPointerCapture(event.pointerId);
+        });
+        this.viewport.addEventListener("pointerup", event => {
+            const start = this.gesture;
+            if (!start || start.id !== event.pointerId) return;
+            this.gesture = null;
+            // O gesto é resolvido aqui; seu click de compatibilidade não seleciona outra imagem.
+            this.ignoreClick = true;
+            const dx = event.clientX - start.x;
+            const dy = event.clientY - start.y;
+            if (Math.abs(dx) >= 32 && Math.abs(dx) > Math.abs(dy) * 1.3) {
+                this.ignoreClick = true;
+                this.select(this.current + (dx < 0 ? 1 : -1));
+            } else if (Math.hypot(dx, dy) <= 12 && start.card >= 0) {
+                this.select(start.card);
+            } else {
+                this.ignoreClick = true;
+            }
+        });
+        ["pointercancel", "lostpointercapture"].forEach(type => {
+            this.viewport.addEventListener(type, () => { this.gesture = null; this.ignoreClick = true; });
+        });
+        this.viewport.addEventListener("keydown", event => {
+            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+            event.preventDefault();
+            this.select(event.key === "Home" ? 0 : event.key === "End" ? this.items.length - 1 :
+                this.current + (event.key === "ArrowRight" ? 1 : -1));
+        });
+        this.viewport.addEventListener("dragstart", event => event.preventDefault());
+        this.viewport.addEventListener("click", event => {
+            if (this.navigation !== "carousel" || this.ignoreClick) return;
+            const index = this.cards.indexOf(event.target.closest(".association-gallery__card"));
+            if (index >= 0 && index !== this.current) this.select(index);
+        });
+    }
+
+    setNavigation(navigation) {
+        this.navigation = navigation === "carousel" ? "carousel" : "arrows";
+        this.root.dataset.navigation = this.navigation;
+        const gesture = this.gesture;
+        this.gesture = null;
+        this.ignoreClick = false;
+        if (gesture && this.viewport.hasPointerCapture(gesture.id)) this.viewport.releasePointerCapture(gesture.id);
+        this.updateControls();
+        this.select(0);
+    }
+
+    setAssociation(association) {
+        // Contrato futuro: imagem principal + imagensVariantes, até cinco URLs
+        // reais cadastradas. Nenhuma URL é derivada de nomes ou diretórios.
+        const variants = Array.isArray(association.imagensVariantes) ? association.imagensVariantes : [];
+        const sources = association.imagem ? [association.imagem, ...variants] : [];
+        this.items = [...new Set(sources.filter(src => typeof src === "string" && src.trim()))].slice(0, 6);
+        this.current = 0;
+        this.gesture = null;
+        this.viewport.replaceChildren();
+        this.dots.replaceChildren();
+        this.cards = this.items.map((src, index) => {
+            const card = document.createElement("figure");
+            card.className = "association-gallery__card";
+            const img = index === 0 ? this.primaryImage : document.createElement("img");
+            img.src = src;
+            img.alt = `Associação visual do número ${String(association.numero).padStart(2, "0")} — ${association.palavra}${index ? `, variante ${index}` : ", imagem principal"}`;
+            img.hidden = false;
+            img.draggable = false;
+            img.decoding = "async";
+            card.append(img);
+            this.viewport.append(card);
+            const dot = document.createElement("span");
+            this.dots.append(dot);
+            return card;
+        });
+        this.updateControls();
+        this.select(0);
+    }
+
+    updateControls() {
+        this.root.dataset.hasVariants = String(this.items.length > 1);
+        this.viewport.tabIndex = this.items.length > 1 ? 0 : -1;
+        this.viewport.setAttribute("aria-label", this.items.length > 1 ?
+            (this.navigation === "arrows" ? "Imagens da associação; use as setas para navegar" :
+                "Imagens da associação; deslize ou use as setas para navegar") : "Imagem principal da associação");
+        this.previous.hidden = this.next.hidden = this.navigation !== "arrows" || this.items.length < 2;
+        this.dots.hidden = this.items.length < 2;
+    }
+
+    select(index) {
+        this.current = this.items.length ? ((index % this.items.length) + this.items.length) % this.items.length : 0;
+        this.cards.forEach((card, i) => {
+            const offset = (i - this.current + this.items.length) % this.items.length;
+            const distance = offset > this.items.length / 2 ? offset - this.items.length : offset;
+            card.style.setProperty("--gallery-offset", distance);
+            card.classList.toggle("is-current", distance === 0);
+            card.hidden = this.navigation === "arrows" ? distance !== 0 : Math.abs(distance) > 1;
+            card.setAttribute("aria-hidden", String(distance !== 0));
+        });
+        [...this.dots.children].forEach((dot, i) => {
+            dot.classList.toggle("is-active", i === this.current);
+            if (dot.tagName === "BUTTON") dot.setAttribute("aria-pressed", String(i === this.current));
+        });
+        this.indicator.textContent = this.items.length ?
+            `Imagem ${this.current + 1} de ${this.items.length}` :
+            "Sem imagem cadastrada";
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
 
@@ -3083,11 +3237,38 @@ document.addEventListener("DOMContentLoaded", () => {
             "learningImagem"
         );
 
-
-    const learningProgress =
-        document.getElementById(
-            "learningProgress"
-        );
+    const CHAVE_NAVEGACAO_IMAGENS = "palacioMentalNavegacaoImagens";
+    let navegacaoImagens = "arrows";
+    try {
+        if (localStorage.getItem(CHAVE_NAVEGACAO_IMAGENS) === "carousel") navegacaoImagens = "carousel";
+    } catch {}
+    const galeriaAprender = new AssociationGallery(
+        document.getElementById("learningGallery"), learningImagem, {navigation: navegacaoImagens}
+    );
+    const interruptorNavegacaoImagens = document.getElementById("imageNavigationSwitch");
+    function atualizarOpcoesNavegacaoImagens() {
+        interruptorNavegacaoImagens.setAttribute("aria-checked", String(navegacaoImagens === "carousel"));
+        document.getElementById("imageNavigationStatus").textContent =
+            navegacaoImagens === "carousel" ? "Carrossel" : "Setas";
+    }
+    function definirNavegacaoImagens(modo) {
+        navegacaoImagens = modo;
+        galeriaAprender.setNavigation(navegacaoImagens);
+        atualizarOpcoesNavegacaoImagens();
+        try { localStorage.setItem(CHAVE_NAVEGACAO_IMAGENS, navegacaoImagens); } catch {}
+    }
+    interruptorNavegacaoImagens.addEventListener("click", () => {
+        definirNavegacaoImagens(navegacaoImagens === "carousel" ? "arrows" : "carousel");
+    });
+    interruptorNavegacaoImagens.addEventListener("keydown", event => {
+        if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+        event.preventDefault();
+        definirNavegacaoImagens(event.key === "ArrowRight" ? "carousel" : "arrows");
+    });
+    atualizarOpcoesNavegacaoImagens();
+    new MutationObserver(() => {
+        if (!telaAprenderMemoria.hidden) galeriaAprender.select(0);
+    }).observe(telaAprenderMemoria, {attributes: true, attributeFilter: ["hidden"]});
 
 
     const btnProximaMemoria =
@@ -9017,6 +9198,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // ABRIR / FECHAR PAINEL DE FAIXAS
     // =====================================================
 
+    function fecharPainelFaixas() {
+        learningRangePanel.hidden = true;
+        btnAbrirFaixasAprender.setAttribute("aria-expanded", "false");
+        btnAbrirFaixasAprender.focus({preventScroll: true});
+    }
+
+    document.getElementById("btnFecharFaixasAprender").addEventListener("click", fecharPainelFaixas);
+    learningRangePanel.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            event.preventDefault();
+            fecharPainelFaixas();
+        }
+    });
+
     function alternarPainelFaixas() {
 
         if (
@@ -9031,6 +9226,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const painelEstaAberto =
             !learningRangePanel.hidden;
+
+        if (painelEstaAberto) {
+            fecharPainelFaixas();
+            return;
+        }
 
 
         learningRangePanel.hidden =
@@ -9078,16 +9278,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        learningProgress.textContent =
-            `${String(
-                indice + 1
-            ).padStart(2, "0")
-            } / ${String(
-                memoriasDaFaixa.length
-            ).padStart(2, "0")
-            }`;
-
-
         learningNumero.textContent =
             String(
                 memoria.numero
@@ -9106,33 +9296,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // IMAGEM DA MEMÓRIA
         // =================================================
 
-        if (memoria.imagem) {
-
-            learningImagem.src =
-                memoria.imagem;
-
-            learningImagem.alt =
-                `Associação visual do número ${String(
-                    memoria.numero
-                ).padStart(2, "0")
-                } — ${memoria.palavra}`;
-
-            learningImagem.hidden =
-                false;
-
-        } else {
-
-            learningImagem.removeAttribute(
-                "src"
-            );
-
-            learningImagem.alt =
-                "";
-
-            learningImagem.hidden =
-                true;
-
-        }
+        galeriaAprender.setAssociation(memoria);
 
 
         // =================================================
@@ -9159,7 +9323,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (textoBotao) {
 
                 textoBotao.textContent =
-                    "Próximo";
+                    "Entendi";
 
             }
 
@@ -9318,22 +9482,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // FECHA O PAINEL DE FAIXAS
         // =================================================
 
-        if (learningRangePanel) {
-
-            learningRangePanel.hidden =
-                true;
-
-        }
-
-
-        if (btnAbrirFaixasAprender) {
-
-            btnAbrirFaixasAprender.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        }
+        fecharPainelFaixas();
 
 
         window.scrollTo({

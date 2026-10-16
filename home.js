@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   linhaBrilho.append(textoBrilho, interruptorBrilho);
 
   if (notaAparencia) {
-    notaAparencia.before(linhaBrilho);
+    document.getElementById('appPreferenceControls').append(linhaBrilho);
     notaAparencia.textContent = 'Preferências salvas automaticamente.';
   } else {
     painelAparencia?.append(linhaBrilho);
