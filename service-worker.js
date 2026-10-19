@@ -1,5 +1,5 @@
 const CACHE_NAME =
-    "palacio-mental-tabela-v1";
+    "palacio-mental-variacoes-v1";
 
 
 const ARQUIVOS_CACHE = [
@@ -13,6 +13,7 @@ const ARQUIVOS_CACHE = [
     "./assets/imagens/memoria-numerica/central-numerica-topo.webp",
     "./assets/imagens/memoria-numerica/tabela-mental-topo.webp",
     "./assets/banco-memoria.js/banco-memoria.js",
+    "./assets/variacoes-memoria.js",
     "./assets/banco-memoria-pratica.js/banco-memoria-pratica.js",
     "./assets/imagens/perfil/natan-fuentes.webp",
     "./assets/imagens/perfil/natan-fuentes-cinza.webp",

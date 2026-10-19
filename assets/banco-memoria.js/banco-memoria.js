@@ -39,6 +39,11 @@ const bancoMemoria = [
         palavra: "Noé",
         categoria: "personagem",
         imagem: "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+        imagensVariantes: [
+            "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+            "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+            "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp"
+        ],
         dominado: false
     },
 

@@ -24660,3 +24660,65 @@ body:has(#telaTabelaMental:not([hidden])) .main-content { max-width: none; paddi
 @media (prefers-reduced-motion: reduce) {
     #telaTabelaMental .mental-table-card, #telaTabelaMental .mental-table-range-option { animation: none; transition: none; }
 }
+
+/* Detalhe da Tabela: reutiliza a navegação, preservando a moldura e a imagem. */
+#mentalDetailGallery { position: absolute; inset: 0; }
+#mentalDetailGallery .association-gallery__media,
+#mentalDetailGallery .association-gallery__viewport { width: 100%; height: 100%; perspective: none; }
+#mentalDetailGallery .association-gallery__card {
+    inset: 0; width: 100%; height: 100%; margin: 0; padding: 0;
+    border: 0; border-radius: 0; background: none; box-shadow: none;
+    transform: none; opacity: 1; animation: none; transition: none;
+}
+#mentalDetailGallery .association-gallery__card[hidden] { display: none; }
+#mentalDetailGallery .association-gallery__card img { width: 100%; height: 100%; object-fit: cover; }
+#mentalDetailGallery .association-gallery__arrow {
+    z-index: 3; width: 36px; height: 44px; border: 1px solid #ffffff50;
+    border-radius: 10px; background: #08080bd9; color: #eee;
+    box-shadow: none; font: 26px/1 sans-serif; animation: none; transition: none;
+}
+#mentalDetailGallery .association-gallery__arrow[hidden] { display: none; }
+#mentalDetailGallery .association-gallery__indicator {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0, 0, 0, 0); clip-path: inset(50%);
+    white-space: nowrap; border: 0;
+}
+#mentalDetailGallery[data-has-variants="false"] .association-gallery__indicator { display: none; }
+#mentalDetail .mental-detail-content > .association-gallery__dots {
+    position: absolute; top: 5px; left: 0; right: 0;
+    display: flex; justify-content: center; gap: 8px; padding: 0;
+}
+#mentalDetail .mental-detail-content > .association-gallery__dots[hidden] { display: none; }
+#mentalDetail .association-gallery__dots > span { width: 5px; height: 5px; background: #706c78; }
+#mentalDetail .association-gallery__dots > span.is-active { background: #cbb1ee; }
+#mentalDetailGallery :focus-visible { outline: 2px solid #eee; outline-offset: -3px; }
+
+/* Identidade neutra exclusiva do detalhe da Tabela Mental; medidas preservadas. */
+#mentalDetail .mental-detail-overlay { background: #000d; }
+#mentalDetail .mental-detail-card {
+    background:
+        radial-gradient(ellipse at top left, #ffffff0a, transparent 48%),
+        linear-gradient(155deg, #151518ed, #08080af7 65%, #0c0c0ef5);
+    border-color: #ffffff20;
+    border-top-color: #ffffff40;
+    box-shadow: inset 0 1px 0 #ffffff14, inset 1px 0 0 #ffffff05, 0 12px 28px #0006;
+}
+#mentalDetail .mental-detail-code { color: #fff; background: #ffffff08; border-color: #ffffff30; }
+#mentalDetail .mental-detail-word,
+#mentalDetail .mental-detail-number { color: #fff; }
+#mentalDetail .mental-detail-arrow { color: #999; }
+#mentalDetail .mental-detail-image-area { background: #09090b; border-color: #ffffff26; box-shadow: none; }
+#mentalDetail .mental-detail-image-glow { background: none; filter: none; }
+#mentalDetail .association-gallery__arrow { background: #08080b; color: #fff; border-color: #ffffff40; box-shadow: none; }
+#mentalDetail .mental-detail-button,
+#mentalDetail .mental-detail-button:hover {
+    background: linear-gradient(160deg, #1a1a1e, #08080b 70%, #0d0d10);
+    color: #fff;
+    border-color: #ffffff26;
+    border-top-color: #ffffff38;
+    box-shadow: inset 0 1px 0 #ffffff0d;
+    filter: none;
+}
+#mentalDetail .association-gallery__dots > span { background: #706c78; }
+#mentalDetail .association-gallery__dots > span.is-active { background: #cbb1ee; }
+#telaTabelaMental #mentalDetail button:focus-visible { outline-color: #eee; }

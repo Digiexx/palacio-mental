@@ -105,11 +105,11 @@ class AssociationGallery {
     }
 
     setAssociation(association) {
-        // Contrato futuro: imagem principal + imagensVariantes, até cinco URLs
-        // reais cadastradas. Nenhuma URL é derivada de nomes ou diretórios.
+        // Índice gerado no build + cadastros manuais existentes, sem listar pastas no navegador.
         const variants = Array.isArray(association.imagensVariantes) ? association.imagensVariantes : [];
-        const sources = association.imagem ? [association.imagem, ...variants] : [];
-        this.items = [...new Set(sources.filter(src => typeof src === "string" && src.trim()))].slice(0, 6);
+        const indexed = globalThis.PALACIO_VARIACOES?.[association.numero] || [];
+        const sources = association.imagem ? [association.imagem, ...indexed, ...variants] : [];
+        this.items = [...new Set(sources.filter(src => typeof src === "string" && src.trim()).map(src => src.trim()))];
         this.current = 0;
         this.gesture = null;
         this.viewport.replaceChildren();
@@ -3245,6 +3245,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const galeriaAprender = new AssociationGallery(
         document.getElementById("learningGallery"), learningImagem, {navigation: navegacaoImagens}
     );
+    const galeriaDetalheTabela = new AssociationGallery(
+        document.getElementById("mentalDetailGallery"),
+        document.getElementById("mentalDetailImage"),
+        {navigation: "arrows"}
+    );
+    document.querySelector("#mentalDetail .mental-detail-content").prepend(galeriaDetalheTabela.dots);
     const interruptorNavegacaoImagens = document.getElementById("imageNavigationSwitch");
     function atualizarOpcoesNavegacaoImagens() {
         interruptorNavegacaoImagens.setAttribute("aria-checked", String(navegacaoImagens === "carousel"));
@@ -9019,10 +9025,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             );
 
 
-                        const mentalDetailImage =
-                            document.getElementById(
-                                "mentalDetailImage"
-                            );
+                        const mentalDetailImage = galeriaDetalheTabela.primaryImage;
 
 
                         const mentalDetailImageArea =
@@ -9086,8 +9089,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         if (memoria.imagem) {
 
-                            mentalDetailImage.src =
-                                memoria.imagem;
+                            galeriaDetalheTabela.setAssociation(memoria);
 
 
                             mentalDetailImage.alt =
