@@ -3251,6 +3251,10 @@ document.addEventListener("DOMContentLoaded", () => {
         {navigation: "arrows"}
     );
     document.querySelector("#mentalDetail .mental-detail-content").prepend(galeriaDetalheTabela.dots);
+    const galeriaFixar = new AssociationGallery(
+        document.getElementById("fixarGallery"), fixarImage, {navigation: navegacaoImagens}
+    );
+    fixarImageArea.after(galeriaFixar.dots);
     const interruptorNavegacaoImagens = document.getElementById("imageNavigationSwitch");
     function atualizarOpcoesNavegacaoImagens() {
         interruptorNavegacaoImagens.setAttribute("aria-checked", String(navegacaoImagens === "carousel"));
@@ -3272,6 +3276,11 @@ document.addEventListener("DOMContentLoaded", () => {
         definirNavegacaoImagens(event.key === "ArrowRight" ? "carousel" : "arrows");
     });
     atualizarOpcoesNavegacaoImagens();
+    // Fixar acompanha o controle de preferência sem alterar os eventos de Aprender.
+    interruptorNavegacaoImagens.addEventListener("click", () => galeriaFixar.setNavigation(navegacaoImagens));
+    interruptorNavegacaoImagens.addEventListener("keydown", event => {
+        if (["ArrowLeft", "ArrowRight"].includes(event.key)) galeriaFixar.setNavigation(navegacaoImagens);
+    });
     new MutationObserver(() => {
         if (!telaAprenderMemoria.hidden) galeriaAprender.select(0);
     }).observe(telaAprenderMemoria, {attributes: true, attributeFilter: ["hidden"]});
@@ -7912,6 +7921,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fixarWord.textContent =
             memoria.palavra.toUpperCase();
 
+        galeriaFixar.setAssociation(memoria);
 
         if (memoria.imagem) {
 
@@ -13338,6 +13348,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
     // ABRIR / FECHAR SELETOR DE FAIXAS — FIXAR
     // =====================================================
+
+    function fecharFaixasFixar() {
+        fixarRangeSelector.hidden = true;
+        btnFaixaFixar.setAttribute("aria-expanded", "false");
+        btnFaixaFixar.focus({preventScroll: true});
+    }
+    document.getElementById("btnFecharFaixasFixar").addEventListener("click", fecharFaixasFixar);
+    fixarRangeSelector.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            event.preventDefault();
+            fecharFaixasFixar();
+        }
+    });
 
     if (
         btnFaixaFixar &&

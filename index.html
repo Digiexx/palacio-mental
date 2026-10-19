@@ -3118,6 +3118,10 @@
 
                     <header class="fixar-header">
 
+                        <div class="fixar-header-art" aria-hidden="true">
+                            <img src="assets/imagens/memoria-numerica/fixar-topo.webp" width="1536" height="1024" alt="" decoding="async">
+                        </div>
+
                         <button class="back-button" id="btnVoltarFixar" type="button"
                             aria-label="Voltar para a Central da Memória Numérica">
 
@@ -3128,20 +3132,11 @@
                         </button>
 
 
-                        <div>
-
-                            <span class="section-label">
-                                MEMÓRIA NUMÉRICA
-                            </span>
+                        <div class="fixar-header-copy">
 
                             <h2>
                                 Fixar
                             </h2>
-
-                            <p>
-                                Force sua mente a recuperar a associação
-                                antes de revelar a resposta.
-                            </p>
 
                         </div>
 
@@ -3196,15 +3191,13 @@
 
                         <div class="fixar-range-selector" id="fixarRangeSelector" hidden>
 
+                            <button class="fixar-range-close" id="btnFecharFaixasFixar" type="button" aria-label="Fechar seleção de faixa">×</button>
+
                             <div class="fixar-range-selector-header">
 
                                 <span class="module-kicker">
-                                    ESCOLHA A FAIXA
+                                    ESCOLHA UMA FAIXA
                                 </span>
-
-                                <strong>
-                                    Qual grupo deseja fixar?
-                                </strong>
 
                             </div>
 
@@ -3400,7 +3393,9 @@
 
                                 <div class="fixar-image-area" id="fixarImageArea">
 
-                                    <img class="fixar-image" id="fixarImage" alt="">
+                                    <div class="fixar-gallery" id="fixarGallery">
+                                        <img class="fixar-image" id="fixarImage" alt="">
+                                    </div>
 
                                     <div class="fixar-image-glow" aria-hidden="true"></div>
 
