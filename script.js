@@ -8889,10 +8889,46 @@ document.addEventListener("DOMContentLoaded", () => {
     // GERAR TABELA MENTAL — QUALQUER FAIXA
     // =====================================================
 
+    // Controles exclusivos da Tabela Mental; não compartilham estado com Aprender.
+    const tabelaRangeToggle = document.getElementById("btnAbrirFaixasTabela");
+    const tabelaRangePanel = document.getElementById("mentalTableRangePanel");
+    const tabelaRangeClose = document.getElementById("btnFecharFaixasTabela");
+    const tabelaRangeAtual = document.getElementById("mentalTableRangeAtual");
+
+    function fecharFaixasTabela(devolverFoco = true) {
+        tabelaRangePanel.hidden = true;
+        tabelaRangeToggle.setAttribute("aria-expanded", "false");
+        if (devolverFoco) tabelaRangeToggle.focus({ preventScroll: true });
+    }
+
+    tabelaRangeToggle.addEventListener("click", () => {
+        const abrir = tabelaRangePanel.hidden;
+        tabelaRangePanel.hidden = !abrir;
+        tabelaRangeToggle.setAttribute("aria-expanded", String(abrir));
+        if (abrir) tabelaRangePanel.querySelector('.active').focus({ preventScroll: true });
+    });
+    tabelaRangeClose.addEventListener("click", () => fecharFaixasTabela());
+    tabelaRangePanel.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            event.preventDefault();
+            fecharFaixasTabela();
+        }
+    });
+
     function gerarTabelaMental(
         inicio,
         fim
     ) {
+
+        const rotuloFaixa = inicio === fim ? String(inicio) :
+            String(inicio).padStart(2, "0") + "–" + String(fim).padStart(2, "0");
+        tabelaRangeAtual.textContent = rotuloFaixa;
+        mentalTableRangeOptions.forEach(opcao => {
+            const ativa = Number(opcao.dataset.inicio) === inicio && Number(opcao.dataset.fim) === fim;
+            opcao.classList.toggle("active", ativa);
+            opcao.setAttribute("aria-pressed", String(ativa));
+        });
+        fecharFaixasTabela(!telaTabelaMental.hidden && tabelaRangePanel.contains(document.activeElement));
 
         const mentalTableGrid =
             document.getElementById(

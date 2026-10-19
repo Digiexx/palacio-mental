@@ -2908,118 +2908,76 @@
                          CABEÇALHO
                     ================================================== -->
 
-                    <header class="mental-table-header">
-
-                        <button class="back-button" id="btnVoltarTabelaMental" type="button"
-                            aria-label="Voltar para a Central da Memória Numérica">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m15 18-6-6 6-6" />
-                            </svg>
-
-                        </button>
-
-
-                        <div>
-
-                            <span class="section-label">
-                                MEMÓRIA NUMÉRICA
-                            </span>
-
-                            <h2>
-                                Tabela Mental
-                            </h2>
-
-                        </div>
-
+                    <header class="mental-table-hero">
+                        <img class="mental-table-hero-image" src="assets/imagens/memoria-numerica/tabela-mental-topo.webp" width="1672" height="941" alt="" decoding="async">
+                        <h2>Todos os seus códigos <strong>em um só lugar</strong></h2>
                     </header>
 
+                    <section class="mental-table-ranges" aria-label="Faixas da Tabela Mental">
+                        <span class="mental-table-selector-label" id="mentalTableSelectorLabel">SELECIONE UMA FAIXA</span>
+                        <button class="mental-table-range-toggle" id="btnAbrirFaixasTabela" type="button" aria-expanded="false" aria-controls="mentalTableRangePanel" aria-describedby="mentalTableSelectorLabel">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M4 10h16M10 4v16" /></svg>
+                            <strong id="mentalTableRangeAtual">00–09</strong>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                        </button>
+                        <div class="mental-table-range-panel" id="mentalTableRangePanel" hidden>
+                            <button class="mental-table-range-close" id="btnFecharFaixasTabela" type="button" aria-label="Fechar seleção de faixa">×</button>
 
-                    <!-- =================================================
-                         APRESENTAÇÃO
-                    ================================================== -->
-
-                    <section class="mental-table-intro">
-
-                        <span class="section-label">
-                            VISÃO GERAL
-                        </span>
-
-                        <h3>
-                            Seus 101 códigos
-                            <strong>
-                                em um só lugar
-                            </strong>
-                        </h3>
-
-                        <p>
-                            Consulte rapidamente o número,
-                            o código e a associação correspondente.
-                        </p>
-
-                    </section>
+                            <span class="mental-table-range-label">
+                                ESCOLHA UMA FAIXA
+                            </span>
 
 
-                    <!-- =================================================
-                         SELETOR DE FAIXAS
-                    ================================================== -->
+                            <div class="mental-table-range-grid">
 
-                    <section class="mental-table-ranges">
+                                <button class="mental-table-range-option active" type="button" data-inicio="0"
+                                    data-fim="9">
+                                    00–09
+                                </button>
 
-                        <span class="mental-table-range-label">
-                            ESCOLHA UMA FAIXA
-                        </span>
+                                <button class="mental-table-range-option" type="button" data-inicio="10" data-fim="19">
+                                    10–19
+                                </button>
 
+                                <button class="mental-table-range-option" type="button" data-inicio="20" data-fim="29">
+                                    20–29
+                                </button>
 
-                        <div class="mental-table-range-grid">
+                                <button class="mental-table-range-option" type="button" data-inicio="30" data-fim="39">
+                                    30–39
+                                </button>
 
-                            <button class="mental-table-range-option active" type="button" data-inicio="0"
-                                data-fim="9">
-                                00–09
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="40" data-fim="49">
+                                    40–49
+                                </button>
 
-                            <button class="mental-table-range-option" type="button" data-inicio="10" data-fim="19">
-                                10–19
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="50" data-fim="59">
+                                    50–59
+                                </button>
 
-                            <button class="mental-table-range-option" type="button" data-inicio="20" data-fim="29">
-                                20–29
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="60" data-fim="69">
+                                    60–69
+                                </button>
 
-                            <button class="mental-table-range-option" type="button" data-inicio="30" data-fim="39">
-                                30–39
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="70" data-fim="79">
+                                    70–79
+                                </button>
 
-                            <button class="mental-table-range-option" type="button" data-inicio="40" data-fim="49">
-                                40–49
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="80" data-fim="89">
+                                    80–89
+                                </button>
 
-                            <button class="mental-table-range-option" type="button" data-inicio="50" data-fim="59">
-                                50–59
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="90" data-fim="99">
+                                    90–99
+                                </button>
 
-                            <button class="mental-table-range-option" type="button" data-inicio="60" data-fim="69">
-                                60–69
-                            </button>
-
-                            <button class="mental-table-range-option" type="button" data-inicio="70" data-fim="79">
-                                70–79
-                            </button>
-
-                            <button class="mental-table-range-option" type="button" data-inicio="80" data-fim="89">
-                                80–89
-                            </button>
-
-                            <button class="mental-table-range-option" type="button" data-inicio="90" data-fim="99">
-                                90–99
-                            </button>
-
-                            <button class="mental-table-range-option" type="button" data-inicio="100" data-fim="100">
-                                100
-                            </button>
+                                <button class="mental-table-range-option" type="button" data-inicio="100" data-fim="100">
+                                    100
+                                </button>
 
                         </div>
 
+                    </div>
                     </section>
 
 
@@ -3030,7 +2988,8 @@
                          conforme a faixa escolhida.
                     ================================================== -->
 
-                    <section class="mental-table-content">
+
+                    <section class="mental-table-content" aria-label="Associações da faixa selecionada">
 
                         <div class="mental-table-grid" id="mentalTableGrid">
 
