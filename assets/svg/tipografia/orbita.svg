@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title">
+  <title id="title">MN — órbita</title>
+  <ellipse cx="64" cy="64" rx="57" ry="31" transform="rotate(-28 64 64)" stroke="#8C65C5" stroke-width="1.2"/>
+  <path d="M30 86V42l17 22 17-22v44m0 0V42l34 44V42" stroke="#E0AEFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#B18AFF"><circle cx="15" cy="79" r="2.5"/><circle cx="111" cy="46" r="2.5"/><circle cx="64" cy="42" r="1.8"/></g>
+</svg>

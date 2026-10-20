@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title">
+  <title id="title">MN — duplo contorno</title>
+  <g stroke-width="1.2" stroke-linejoin="round">
+    <path d="M25 91V37l21 25 18-25v54m0 0V37l39 54V37" stroke="#8C65C5"/>
+    <path d="M30 91V51l16 19 13-16v37m10 0V52l29 39V37" stroke="#E0AEFF"/>
+  </g>
+  <path d="M25 105h78" stroke="#8C65C5" stroke-width="1"/>
+  <g fill="#B18AFF"><circle cx="25" cy="105" r="2"/><circle cx="103" cy="105" r="2"/></g>
+</svg>

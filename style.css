@@ -23997,6 +23997,89 @@ body:has(#telaMemoriaNumerica:not([hidden])) .main-content {
     transform: none;
     transition: none;
 }
+
+/* V2.6 — primeiro cartão; a lista aceita futuros acessos reais. */
+#telaMemoriaNumerica .memory-featured { margin: 0 0 20px; }
+#telaMemoriaNumerica .memory-featured-track {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--memory-featured-inset);
+    margin: 0;
+    padding: var(--memory-featured-inset);
+    list-style: none;
+}
+#telaMemoriaNumerica .memory-featured-item {
+    flex: 0 0 82%;
+    min-width: 0;
+    scroll-snap-align: start;
+}
+#telaMemoriaNumerica .memory-featured-card {
+    --featured-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 210px;
+    padding: 22px 18px;
+    border: 1.5px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #00000000 35%, #000000c9 75%, #000000f5 100%) padding-box,
+        var(--featured-art, url("assets/imagens/memoria-numerica/carrossel/tabela-mental.webp")) center / cover padding-box,
+        var(--featured-border-gradient) border-box;
+    color: #fff;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+#telaMemoriaNumerica .memory-featured-card--aprender {
+    --featured-art: url("assets/imagens/memoria-numerica/carrossel/aprender.webp");
+}
+#telaMemoriaNumerica .memory-featured-card--fixar {
+    --featured-art: url("assets/imagens/memoria-numerica/carrossel/fixar.webp");
+}
+#telaMemoriaNumerica .memory-featured-card--treinar {
+    --featured-art: url("assets/imagens/memoria-numerica/carrossel/treinar.webp");
+}
+#telaMemoriaNumerica .memory-featured-copy { display: grid; gap: 6px; }
+#telaMemoriaNumerica .memory-featured-copy strong { color: #f3edf9; font-size: 22px; font-weight: 400; line-height: 1.2; }
+#telaMemoriaNumerica .memory-featured-copy > span { color: #9e8cad; font-size: 14px; line-height: 1.4; }
+#telaMemoriaNumerica .memory-featured-chevron { color: var(--pm-purple-light); font-size: 28px; line-height: 1; }
+#telaMemoriaNumerica .memory-featured-card:focus-visible { outline: 2px solid var(--pm-purple-light); outline-offset: 2px; }
+#telaMemoriaNumerica .memory-featured-dots:not([hidden]) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 6px;
+}
+#telaMemoriaNumerica .memory-featured-dot {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+#telaMemoriaNumerica .memory-featured-dot::after { content: ""; position: absolute; inset: -7px -3px; }
+#telaMemoriaNumerica .memory-featured-dot::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #655b72;
+}
+#telaMemoriaNumerica .memory-featured-dot[aria-current="true"]::before {
+    width: 7px;
+    height: 7px;
+    background: var(--pm-purple-light);
+}
+#telaMemoriaNumerica .memory-featured-dot:focus-visible { outline: 2px solid var(--pm-purple-light); outline-offset: 3px; border-radius: 4px; }
 #telaMemoriaNumerica .memory-training-card:hover {
     /* Mantém os reflexos de canto também sob o ponteiro. */
     border-color: #bdb5d24d;
@@ -25034,4 +25117,118 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
 #telaFixarMemoria .fixar-range-close {
     top: 6px; right: 6px; border-radius: 12px;
     background: linear-gradient(145deg, #ffffff0c, #00000020), #09090d;
+}
+
+/* Versão 2.6 — etapa 01: somente cabeçalho e Seu domínio da central. */
+#telaMemoriaNumerica {
+    --memory-featured-inset: 4px;
+    --pm-purple-primary: #8650cb;
+    --pm-purple-light: #e0aeff;
+    --pm-purple-deep: #39234e;
+}
+#telaMemoriaNumerica .memory-numeric-hero {
+    height: auto;
+    margin-bottom: 10px;
+    background: #000;
+}
+#telaMemoriaNumerica .memory-numeric-hero img {
+    height: clamp(240px, 32svh, 320px);
+    object-position: center top;
+}
+#telaMemoriaNumerica .memory-numeric-hero::after {
+    top: 0;
+    bottom: auto;
+    height: clamp(240px, 32svh, 320px);
+    background: linear-gradient(to bottom, transparent 45%, #00000066 68%, #000 100%);
+}
+#telaMemoriaNumerica .memory-numeric-hero-copy {
+    position: relative;
+    z-index: 1;
+    margin-top: -68px;
+    padding: 0 var(--numeric-gutter) 4px;
+}
+#telaMemoriaNumerica .memory-numeric-hero-copy h2 {
+    margin: 0;
+    color: #fff;
+    font: 300 clamp(28px, 7.6vw, 34px)/1.08 "Bahnschrift", "Century Gothic", "Segoe UI", sans-serif;
+    letter-spacing: .3px;
+}
+#telaMemoriaNumerica .memory-numeric-title-word { display: block; }
+#telaMemoriaNumerica .memory-numeric-title-row { display: flex; align-items: center; gap: 12px; }
+#telaMemoriaNumerica .memory-numeric-title-row h2 { min-width: 0; }
+#telaMemoriaNumerica .memory-numeric-hero .memory-numeric-monogram {
+    display: block; flex: 0 0 52px; width: 52px; height: 52px; object-fit: contain;
+}
+#telaMemoriaNumerica .memory-numeric-title-second { display: block; color: var(--pm-purple-light); letter-spacing: .06em; }
+#telaMemoriaNumerica .memory-numeric-title-initial { display: inline-block; width: .88em; margin-right: .02em; }
+#telaMemoriaNumerica .memory-numeric-title-initial svg {
+    display: inline-block; width: 100%; height: .9em; vertical-align: -.025em;
+    overflow: visible; fill: currentColor;
+}
+#telaMemoriaNumerica .memory-numeric-title-initial path { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linejoin: round; }
+#telaMemoriaNumerica .memory-numeric-title-accessible {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+#telaMemoriaNumerica .memory-numeric-hero-copy p {
+    max-width: 280px;
+    margin: 10px 0 0;
+    padding-inline-start: var(--memory-featured-inset);
+    color: #a9a4b3;
+    font-size: 13px;
+    line-height: 1.5;
+}
+#telaMemoriaNumerica .memory-dashboard {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    align-items: center;
+    width: 96%;
+    margin: 0 0 12px;
+    padding: 10px 14px 6px;
+    border: 1px solid #393044;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #ffffff04, #00000020), #1b1b24;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: inset 0 1px 0 #ffffff0d;
+}
+#telaMemoriaNumerica .memory-dashboard::after { content: none; animation: none; filter: none; }
+#telaMemoriaNumerica .memory-dashboard-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #8c65c566;
+    border-radius: 50%;
+    background: #0c0a11;
+    fill: var(--pm-purple-primary);
+}
+#telaMemoriaNumerica .memory-dashboard-top { display: contents; }
+#telaMemoriaNumerica .memory-dashboard-top > div:first-child {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    min-width: 0;
+}
+#telaMemoriaNumerica .memory-dashboard-label { color: #a9a4b3; font-size: 12px; }
+#telaMemoriaNumerica .memory-dashboard-top strong { font-size: 20px; line-height: 1.2; }
+#telaMemoriaNumerica .memory-dashboard-top strong small { color: #a9a4b3; }
+#telaMemoriaNumerica .memory-dashboard-percent { grid-column: 3; grid-row: 1 / 3; }
+#telaMemoriaNumerica .memory-dashboard-percent span { color: var(--pm-purple-light); font-size: 22px; font-weight: 700; }
+#telaMemoriaNumerica .memory-dashboard-track {
+    grid-column: 2;
+    grid-row: 2;
+    height: 4px;
+    margin: 0;
+    background: #0c0a11;
+}
+#telaMemoriaNumerica .memory-dashboard-fill {
+    background: linear-gradient(90deg, #8c65c5, #b18aff);
+    box-shadow: none;
+    transition: none;
 }

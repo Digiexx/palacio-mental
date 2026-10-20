@@ -13168,6 +13168,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    document.getElementById("btnTabelaMentalDestaque")?.addEventListener(
+        "click",
+        abrirTabelaMental
+    );
+
+    document.getElementById("btnAprenderDestaque")?.addEventListener(
+        "click",
+        abrirAprendizado
+    );
+
+    document.getElementById("btnFixarDestaque")?.addEventListener(
+        "click",
+        abrirFixarMemoria
+    );
+
+    const featuredTrack = document.querySelector("#telaMemoriaNumerica .memory-featured-track");
+    document.getElementById("btnDesafiarDestaque")?.addEventListener("click", abrirDesafiarMemoria);
+    const featuredDots = document.querySelector("#telaMemoriaNumerica .memory-featured-dots");
+    if (featuredTrack && featuredDots) {
+        const cards = [...featuredTrack.querySelectorAll(".memory-featured-card")];
+        const snapPosition = card => {
+            const inset = parseFloat(getComputedStyle(featuredTrack).scrollPaddingLeft) || 0;
+            const left = card.getBoundingClientRect().left - featuredTrack.getBoundingClientRect().left
+                + featuredTrack.scrollLeft - inset;
+            return Math.max(0, Math.min(left, featuredTrack.scrollWidth - featuredTrack.clientWidth));
+        };
+        const dots = cards.map((card, index) => {
+            const dot = document.createElement("button");
+            dot.type = "button";
+            dot.className = "memory-featured-dot";
+            dot.setAttribute("aria-label", `Mostrar cartão ${index + 1} de ${cards.length}: ${card.querySelector("strong").textContent.trim()}`);
+            dot.setAttribute("aria-controls", card.id);
+            dot.setAttribute("aria-current", String(index === 0));
+            dot.addEventListener("click", () => {
+                featuredTrack.scrollTo({left: snapPosition(card), behavior: "instant"});
+                updateFeaturedDot();
+            });
+            featuredDots.append(dot);
+            return dot;
+        });
+        function updateFeaturedDot() {
+            if (!featuredTrack.clientWidth) return;
+            let active = 0;
+            cards.forEach((card, index) => {
+                if (Math.abs(snapPosition(card) - featuredTrack.scrollLeft)
+                    < Math.abs(snapPosition(cards[active]) - featuredTrack.scrollLeft)) active = index;
+            });
+            dots.forEach((dot, index) => dot.setAttribute("aria-current", String(index === active)));
+        }
+        let pendingFrame = false;
+        featuredTrack.addEventListener("scroll", () => {
+            if (pendingFrame) return;
+            pendingFrame = true;
+            requestAnimationFrame(() => { pendingFrame = false; updateFeaturedDot(); });
+        }, {passive: true});
+        featuredTrack.addEventListener("scrollend", updateFeaturedDot);
+        new ResizeObserver(updateFeaturedDot).observe(featuredTrack);
+        featuredDots.hidden = cards.length < 2;
+    }
+
     if (btnVoltarTabelaMental) {
 
         btnVoltarTabelaMental.addEventListener(

@@ -2286,22 +2286,35 @@
          CABEÇALHO
     ================================================== -->
 
-                <div class="memory-numeric-hero" aria-hidden="true">
-                    <img src="assets/imagens/memoria-numerica/central-numerica-topo.webp"
-                        alt="" width="1440" height="1080" decoding="async">
-                </div>
+                <header class="memory-numeric-hero">
+                    <img src="assets/imagens/memoria-numerica/memoria-numerica-topo.webp"
+                        alt="" width="1024" height="1536" decoding="async">
+                    <div class="memory-numeric-hero-copy">
+                        <div class="memory-numeric-title-row">
+                            <svg class="memory-numeric-monogram" viewBox="0 0 128 128" aria-hidden="true" focusable="false" width="52" height="52">
+                                <use href="assets/svg/tipografia/monograma-mn.svg#monograma-mn" />
+                            </svg>
+                        <h2><span class="memory-numeric-title-word"><span class="memory-numeric-title-accessible">Memória</span><span aria-hidden="true"><span class="memory-numeric-title-initial"><svg viewBox="0 0 28 28" aria-hidden="true" focusable="false"><path d="M4 25V4l10 12L24 4v21" /><circle cx="4" cy="4" r="1.6" /><circle cx="14" cy="16" r="1.6" /><circle cx="24" cy="4" r="1.6" /></svg></span>emória</span></span> <span class="memory-numeric-title-second">Numérica</span></h2>
+                        </div>
+                        <p>Transforme números em imagens inesquecíveis.</p>
+                    </div>
+                </header>
 
                 <!-- =================================================
          PAINEL DE PROGRESSO
     ================================================== -->
 
-                <section class="memory-dashboard">
+                <section class="memory-dashboard" aria-labelledby="memoryDomainLabel">
+
+                    <svg class="memory-dashboard-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 20v-7h3v7zM11 20V8h3v12zM17 20V3h3v17z" />
+                    </svg>
 
                     <div class="memory-dashboard-top">
 
                         <div>
 
-                            <span class="memory-dashboard-label">
+                            <span class="memory-dashboard-label" id="memoryDomainLabel">
                                 Seu domínio
                             </span>
 
@@ -2338,6 +2351,48 @@
                 <!-- =================================================
          ACESSOS PRINCIPAIS
     ================================================== -->
+
+                <section class="memory-featured" aria-label="Treinos em destaque">
+                    <ul class="memory-featured-track">
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card" id="btnTabelaMentalDestaque" type="button">
+                                <span class="memory-featured-copy">
+                                    <strong>Tabela Mental</strong>
+                                    <span>Consulte 00–100.</span>
+                                </span>
+                                <span class="memory-featured-chevron" aria-hidden="true">›</span>
+                            </button>
+                        </li>
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card memory-featured-card--aprender" id="btnAprenderDestaque" type="button">
+                                <span class="memory-featured-copy">
+                                    <strong>Aprender</strong>
+                                    <span>Número + imagem</span>
+                                </span>
+                                <span class="memory-featured-chevron" aria-hidden="true">›</span>
+                            </button>
+                        </li>
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card memory-featured-card--fixar" id="btnFixarDestaque" type="button">
+                                <span class="memory-featured-copy">
+                                    <strong>Fixar</strong>
+                                    <span>Fortaleça os fracos.</span>
+                                </span>
+                                <span class="memory-featured-chevron" aria-hidden="true">›</span>
+                            </button>
+                        </li>
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card memory-featured-card--treinar" id="btnDesafiarDestaque" type="button">
+                                <span class="memory-featured-copy">
+                                    <strong>Treinar</strong>
+                                    <span>Teste seu domínio</span>
+                                </span>
+                                <span class="memory-featured-chevron" aria-hidden="true">›</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="memory-featured-dots" role="group" aria-label="Posição no carrossel" hidden></div>
+                </section>
 
                 <section class="memory-training-section">
 
@@ -2452,7 +2507,7 @@
                             </div>
 
                             <span>
-                                <strong>Desafiar</strong>
+                                <strong>Treinar</strong>
                             </span>
 
                             <small>
@@ -2535,10 +2590,10 @@
 
                             </div>
 
-                            <span><strong>Treino Rápido</strong></span>
+                            <span><strong>Desafio</strong></span>
 
                             <small>
-                                Começar agora
+                                Testando seu domínio
                             </small>
 
                         </button>

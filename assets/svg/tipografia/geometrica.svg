@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title">
+  <title id="title">MN — geométrica</title>
+  <path d="m64 9 48 28v54l-48 28-48-28V37Z" stroke="#8C65C5" stroke-width="1.2"/>
+  <path d="M30 87V41l17 23 17-23v46m0 0V41l34 46V41" stroke="#E0AEFF" stroke-width="1.8" stroke-linejoin="miter"/>
+  <g fill="#B18AFF"><circle cx="64" cy="9" r="2"/><circle cx="16" cy="91" r="2"/><circle cx="112" cy="91" r="2"/></g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="monograma-mn" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Monograma MN — Memória Numérica</title>
+  <circle cx="64" cy="64" r="54" stroke="var(--pm-purple-primary, #8650CB)" stroke-width="1.3"/>
+  <path d="M29 85V43l17 21 17-21v42m0 0V43l31 42V43" stroke="var(--pm-purple-primary, #8650CB)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="var(--pm-purple-primary, #8650CB)"><circle cx="29" cy="43" r="2"/><circle cx="46" cy="64" r="1.8"/><circle cx="63" cy="43" r="2"/><circle cx="63" cy="85" r="2"/><circle cx="94" cy="43" r="2"/><circle cx="64" cy="10" r="2"/></g>
+</svg>
