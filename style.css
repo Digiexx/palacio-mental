@@ -24829,3 +24829,209 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
 #fixarAnswer .association-gallery__dots > span { width: 5px; height: 5px; background: #706c78; }
 #fixarAnswer .association-gallery__dots > span.is-active { background: #cbb1ee; }
 #fixarGallery :focus-visible { outline: 2px solid #eee; outline-offset: -3px; }
+
+/* Teste @arte-quadro-numeros: somente Aprender, sem alterar a galeria compartilhada. */
+#telaAprenderMemoria { --learn-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f); }
+#telaAprenderMemoria .learning-card { row-gap: 12px; }
+#telaAprenderMemoria .learning-number-area { grid-column: 1 / -1; justify-self: center; text-align: center; }
+#telaAprenderMemoria .learning-range-toggle {
+    border-color: transparent;
+    background:
+        linear-gradient(145deg, #ffffff08, #00000026) padding-box,
+        linear-gradient(#090a0d, #090a0d) padding-box,
+        var(--learn-border-gradient) border-box;
+}
+#telaAprenderMemoria .learning-range-option {
+    border-color: transparent;
+    background:
+        linear-gradient(#09090d, #09090d) padding-box,
+        linear-gradient(115deg, #242428, #444449 28%, #66666b 48%, #35353a 72%, #18181c) border-box;
+}
+#telaAprenderMemoria .learning-range-option.active {
+    border-color: transparent;
+    background: linear-gradient(145deg, #30203f, #1b1424) padding-box, var(--learn-border-gradient) border-box;
+    box-shadow: inset 0 0 0 1px #cbb9e54d;
+}
+#telaAprenderMemoria .learning-range-panel {
+    position: relative;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    z-index: 8;
+}
+#telaAprenderMemoria .learning-range-panel[hidden] { display: none; }
+#telaAprenderMemoria .learning-card:has(.learning-range-panel:not([hidden])) .learning-number-area { grid-row: 3; }
+#telaAprenderMemoria .learning-card:has(.learning-range-panel:not([hidden])) .learning-association { grid-row: 4; }
+#telaAprenderMemoria .learning-card:has(.learning-range-panel:not([hidden])) .association-gallery { grid-row: 5; }
+#telaAprenderMemoria .learning-card:has(.learning-range-panel:not([hidden])) .learning-next-button { grid-row: 6; }
+#telaAprenderMemoria .learning-number { font-size: 36px; font-weight: 700; }
+#telaAprenderMemoria .learning-association { grid-column: 1 / -1; grid-row: 3; justify-self: center; max-width: 100%; gap: 6px; }
+#telaAprenderMemoria .learning-code strong { min-width: 24px; min-height: 24px; }
+#telaAprenderMemoria .learning-word { display: flex; align-items: center; gap: 6px; }
+#telaAprenderMemoria .learning-word::before { content: "→"; color: #a9a4b3; font-size: 14px; }
+#telaAprenderMemoria .association-gallery { grid-row: 4; }
+#telaAprenderMemoria .association-gallery__card { border-radius: 16px; }
+#telaAprenderMemoria .association-gallery__arrow {
+    width: 34px;
+    height: 34px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background:
+        linear-gradient(145deg, #ffffff08, #00000026) padding-box,
+        linear-gradient(#141219, #141219) padding-box,
+        var(--learn-border-gradient) border-box;
+    color: #cbb9e5;
+    font-size: 24px;
+}
+#telaAprenderMemoria .association-gallery__arrow--previous { left: calc(8% - 17px); }
+#telaAprenderMemoria .association-gallery__arrow--next { right: calc(8% - 17px); }
+#telaAprenderMemoria .association-gallery__dots > span { background: #706c78; }
+#telaAprenderMemoria .association-gallery__dots > span.is-active { background: #b18aff; }
+#telaAprenderMemoria .association-gallery__dots button[aria-pressed="true"]::after { background: #b18aff; box-shadow: none; }
+#telaAprenderMemoria .learning-next-button {
+    grid-row: 5;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-color: transparent;
+    border-radius: 12px;
+    background:
+        linear-gradient(155deg, #17171d, #101015 65%, #121017) padding-box,
+        var(--learn-border-gradient) border-box;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: inset 0 1px 0 #ffffff0d;
+}
+#telaAprenderMemoria .learning-next-button svg { width: 16px; height: 16px; }
+#telaAprenderMemoria .learning-next-button::after { content: none; animation: none; }
+
+/* @arte-quadro-numeros: somente o quadro de associação da Tabela Mental. */
+#mentalDetail { --detail-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f); }
+#mentalDetail .mental-detail-card { padding: 20px; border-radius: 24px; }
+#mentalDetail .mental-detail-top { flex-direction: column; gap: 8px; padding: 0; margin-bottom: 12px; }
+#mentalDetail .mental-detail-number {
+    flex: 0 0 auto;
+    font: 700 36px/1 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0;
+    color: #f5efff;
+    text-shadow: 0 2px 16px #b7a0d52e;
+}
+#mentalDetail .mental-detail-association { flex-wrap: nowrap; min-width: 0; gap: 6px; }
+#mentalDetail .mental-detail-code {
+    flex: 0 0 auto; min-width: 24px; min-height: 24px; padding: 4px;
+    border-radius: 7px; font-size: 13px; font-weight: 600; letter-spacing: 0;
+    color: #e4d6f8; border-color: #cbb9e550;
+    background: linear-gradient(145deg, #cbb9e51a, #ffffff03);
+}
+#mentalDetail .mental-detail-arrow { font-size: 14px; color: #a9a4b3; }
+#mentalDetail .mental-detail-word {
+    min-width: 0; overflow-wrap: anywhere;
+    font: 650 clamp(17px, 4.6vw, 23px)/1.25 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0;
+}
+#mentalDetail .mental-detail-image-area { overflow: visible; border-radius: 16px; }
+#mentalDetailGallery .association-gallery__card { border-radius: 16px; }
+#mentalDetailGallery .association-gallery__arrow {
+    width: 34px; height: 34px; border: 1px solid transparent; border-radius: 10px;
+    background:
+        linear-gradient(145deg, #ffffff08, #00000026) padding-box,
+        linear-gradient(#141219, #141219) padding-box,
+        var(--detail-border-gradient) border-box;
+    color: #cbb9e5; font-size: 24px;
+}
+#mentalDetailGallery .association-gallery__arrow--previous { left: -17px; }
+#mentalDetailGallery .association-gallery__arrow--next { right: -17px; }
+#mentalDetail .mental-detail-content { padding: 0; margin-top: 8px; }
+#mentalDetail .mental-detail-content:has(> .association-gallery__dots[hidden]) { display: none; }
+#mentalDetail .mental-detail-content > .association-gallery__dots { position: static; min-height: 24px; }
+#mentalDetail .association-gallery__dots > span.is-active { background: #b18aff; }
+#mentalDetail .mental-detail-button,
+#mentalDetail .mental-detail-button:hover {
+    min-height: 44px; margin-top: 12px; padding: 10px 16px; border: 1px solid transparent;
+    border-radius: 12px;
+    background:
+        linear-gradient(155deg, #17171d, #101015 65%, #121017) padding-box,
+        var(--detail-border-gradient) border-box;
+    color: #fff; font: 600 16px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-shadow: inset 0 1px 0 #ffffff0d;
+}
+#mentalDetail .mental-detail-button svg { width: 16px; height: 16px; }
+
+/* Fixar: composição compacta e acabamento estático do botão de revelação. */
+#telaFixarMemoria { --fixar-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f); }
+#telaFixarMemoria .fixar-header-copy { margin-top: clamp(-36px, -7vw, -24px); }
+#telaFixarMemoria .fixar-header { padding-bottom: 6px; }
+#telaFixarMemoria .fixar-instruction { display: none; }
+#telaFixarMemoria .fixar-card { min-height: clamp(180px, 23svh, 210px); }
+#telaFixarMemoria #btnRevelarFixar {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(155deg, #17171d, #101015 65%, #121017) padding-box,
+        var(--fixar-border-gradient) border-box;
+    color: #fff;
+    box-shadow: inset 0 1px 0 #ffffff0d;
+}
+
+/* Fixar revelado: acabamento isolado, com dimensões e lógica preservadas. */
+#telaFixarMemoria .fixar-card:has(#fixarAnswer:not([hidden])) {
+    background: radial-gradient(ellipse at top left, #ffffff0a, transparent 48%), linear-gradient(155deg, #151518, #08080b 65%, #0c0c0e);
+    border-color: #ffffff26;
+}
+#telaFixarMemoria .fixar-association { justify-content: center; }
+#telaFixarMemoria .fixar-word { min-width: 0; overflow-wrap: anywhere; }
+#telaFixarMemoria .fixar-code {
+    flex: 0 0 auto;
+    border-color: transparent;
+    background: linear-gradient(155deg, #17171d, #101015 65%, #121017) padding-box, var(--fixar-border-gradient) border-box;
+}
+#telaFixarMemoria .fixar-image-area { background: #09090b; border-color: #ffffff26; box-shadow: none; }
+#fixarGallery .association-gallery__arrow {
+    border-color: transparent;
+    background: linear-gradient(155deg, #17171d, #101015 65%, #121017) padding-box, var(--fixar-border-gradient) border-box;
+}
+#telaFixarMemoria .fixar-remembered {
+    border-color: transparent;
+    background: linear-gradient(155deg, #21152f, #170f23) padding-box, var(--fixar-border-gradient) border-box;
+}
+
+/* Faixas de Fixar: acabamento aprovado em Aprender, sem compartilhar estados. */
+#telaFixarMemoria .fixar-range-button {
+    border-color: transparent;
+    background:
+        linear-gradient(145deg, #ffffff08, #00000026) padding-box,
+        linear-gradient(#090a0d, #090a0d) padding-box,
+        var(--fixar-border-gradient) border-box;
+    box-shadow: inset 0 1px 0 #ffffff0d;
+}
+#telaFixarMemoria .fixar-range-button strong { color: #e5e3e9; }
+#telaFixarMemoria .fixar-range-selector {
+    padding-top: 56px;
+    border-color: #cbb9e530;
+    border-top-color: #e6dff552;
+    border-radius: 16px;
+    background:
+        radial-gradient(ellipse at top left, #eee8ff18, transparent 65%),
+        radial-gradient(ellipse at bottom right, #cbb9e50d, transparent 65%),
+        linear-gradient(160deg, #1b1b21ed, #08080bf5);
+    box-shadow: inset 0 1px 0 #ffffff14, inset 0 -1px 0 #ffffff06, 0 5px 14px #0004;
+}
+#telaFixarMemoria .fixar-range-selector-header { margin-bottom: 9px; padding-right: 0; text-align: center; }
+#telaFixarMemoria .fixar-range-selector-header .module-kicker {
+    display: block; color: #fff; font-size: .56rem; font-weight: 800; letter-spacing: .14em;
+}
+#telaFixarMemoria .fixar-range-option {
+    border-color: transparent;
+    background:
+        linear-gradient(#09090d, #09090d) padding-box,
+        linear-gradient(115deg, #242428, #444449 28%, #66666b 48%, #35353a 72%, #18181c) border-box;
+}
+#telaFixarMemoria .fixar-range-option.is-active {
+    border-color: transparent;
+    background: linear-gradient(145deg, #30203f, #1b1424) padding-box, var(--fixar-border-gradient) border-box;
+    box-shadow: inset 0 0 0 1px #cbb9e54d;
+}
+#telaFixarMemoria .fixar-range-close {
+    top: 6px; right: 6px; border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff0c, #00000020), #09090d;
+}
