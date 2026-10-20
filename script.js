@@ -2782,12 +2782,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    const btnVoltarDetalheMemoria =
-        document.getElementById(
-            "btnVoltarDetalheMemoria"
-        );
-
-
     const mentalTableRangeOptions =
         document.querySelectorAll(
             ".mental-table-range-option"
@@ -3163,12 +3157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const telaTreinoPersonalizado =
         document.getElementById(
             "telaTreinoPersonalizado"
-        );
-
-
-    const telaDetalheMemoria =
-        document.getElementById(
-            "telaDetalheMemoria"
         );
 
 
@@ -4164,102 +4152,162 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
-        memoriasDaFaixa.forEach(
-            memoria => {
-
-                const registro =
-                    obterDominioNumero(
-                        memoria.numero
-                    );
-
-
-                const nivel =
-                    obterNivelDominio(
-                        registro.pontos
-                    );
-
-
-                const card =
-                    document.createElement(
-                        "button"
-                    );
-
-
-                card.type =
-                    "button";
-
-
-                card.className =
-                    "historico-memoria-item";
-
-
-                card.dataset.numero =
-                    memoria.numero;
-
-
-                const numeroFormatado =
-                    String(
-                        memoria.numero
-                    ).padStart(
-                        2,
-                        "0"
-                    );
-
-
-                card.innerHTML =
-                    `
-                        <span class="historico-memoria-item-numero">
-                            ${numeroFormatado}
-                        </span>
-
-                        <span class="historico-memoria-item-palavra">
-                            ${memoria.palavra}
-                        </span>
-
-                        <span class="historico-memoria-item-dominio">
-                            ${registro.pontos}%
-                        </span>
-
-                        <small class="historico-memoria-item-nivel">
-                            ${nivel}
-                        </small>
-                    `;
-
-
-                card.addEventListener(
-                    "click",
-                    () => {
-
-                        renderizarDetalheMemoria(
-                            memoria.numero
-                        );
-
-
-                        navegarParaTela(
-                            "detalheMemoria"
-                        );
-
-                    }
-                );
-
-
-                historicoMemoriaGrid.appendChild(
-                    card
-                );
-
+        const seletor = document.getElementById("historicoFaixaSelect");
+        if (!seletor.options.length) {
+            document.querySelectorAll("#telaMemoriaNumerica .memory-range-card[data-dominio-inicio]").forEach(faixa => {
+                const option = document.createElement("option");
+                option.value = faixa.dataset.dominioInicio + ":" + faixa.dataset.dominioFim;
+                option.textContent = faixa.querySelector("span").textContent.trim();
+                seletor.append(option);
+            });
+            seletor.addEventListener("change", () => {
+                const [de, ate] = seletor.value.split(":").map(Number);
+                document.getElementById("historicoMemoriaFaixa").textContent = seletor.selectedOptions[0].textContent;
+                renderizarHistoricoMemoriaFaixa(de, ate);
+            });
+        }
+        seletor.value = inicio + ":" + fim;
+        sincronizarSeletorHistorico();
+        const painel = document.getElementById("historicoPerformance");
+        if (!painel.children.length) {
+            const origem = document.getElementById("historicoPerformanceTemplate").content;
+            for (const classe of ["detalhe-memoria-hero", "detalhe-memoria-estatisticas", "detalhe-memoria-atividades", "detalhe-memoria-recente"]) {
+                const copia = origem.querySelector("." + classe).cloneNode(true);
+                [copia, ...copia.querySelectorAll("[id]")].forEach(elemento => {
+                    if (elemento.id) { elemento.dataset.detailId = elemento.id; elemento.removeAttribute("id"); }
+                });
+                painel.append(copia);
             }
-        );
+            const evolucao = document.createElement("section");
+            evolucao.className = "history-evolution";
+            const titulo = document.createElement("h3"), vazio = document.createElement("p");
+            titulo.textContent = "Evolução do domínio";
+            vazio.textContent = "Sem evolução registrada ao longo do tempo.";
+            evolucao.append(titulo, vazio);
+            painel.append(evolucao);
+            const arte = document.createElement("figure");
+            arte.className = "history-selected-art";
+            arte.setAttribute("aria-hidden", "true");
+            painel.querySelector(".detalhe-memoria-hero").append(arte);
+        }
+        const botoes = new Map();
+        const selecionar = (numero) => {
+            const memoria = memoriasDaFaixa.find(item => item.numero === numero);
+            if (!memoria) return;
+            botoes.forEach((botao, valor) => botao.setAttribute("aria-pressed", String(valor === numero)));
+            renderizarDetalheMemoria(numero, painel);
+            const arte = painel.querySelector(".history-selected-art");
+            arte.dataset.numero = String(numero);
+            arte.replaceChildren();
+            if (memoria.imagem) {
+                const imagem = document.createElement("img");
+                imagem.alt = ""; imagem.decoding = "async";
+                imagem.addEventListener("error", () => { imagem.hidden = true; });
+                imagem.src = memoria.imagem;
+                arte.append(imagem);
+            }
+            document.getElementById("historicoSelecaoTitulo").textContent = String(numero).padStart(2, "0") + " — " + memoria.palavra;
 
+        };
+        memoriasDaFaixa.forEach(memoria => {
+            const botao = document.createElement("button");
+            botao.type = "button"; botao.className = "history-number";
+            botao.dataset.numero = memoria.numero;
+            botao.textContent = String(memoria.numero).padStart(2, "0");
+            botao.setAttribute("aria-label", "Selecionar número " + botao.textContent);
+            botao.addEventListener("click", () => selecionar(memoria.numero));
+            botoes.set(memoria.numero, botao); historicoMemoriaGrid.append(botao);
+        });
+        if (memoriasDaFaixa.length) selecionar(memoriasDaFaixa[0].numero);
     }
-
 
     // =====================================================
     // RENDERIZAR DETALHE — HISTÓRICO DA MEMÓRIA
     // =====================================================
 
-    function renderizarDetalheMemoria(
-        numero
-    ) {
+    function sincronizarSeletorHistorico() {
+        const seletor = document.getElementById("historicoFaixaSelect");
+        const botao = document.getElementById("historicoFaixaButton");
+        const menu = document.getElementById("historicoFaixaMenu");
+        if (!seletor || !botao || !menu) return;
+        if (!botao.dataset.ready) {
+            botao.dataset.ready = "true";
+            const controle = botao.closest(".history-range-control");
+            const posicionar = () => {
+                const rect = botao.getBoundingClientRect();
+                const topo = window.visualViewport?.offsetTop || 0;
+                const altura = window.visualViewport?.height || window.innerHeight;
+                const abaixo = topo + altura - rect.bottom - 12;
+                const acima = rect.top - topo - 12;
+                const abrirAcima = abaixo < 160 && acima > abaixo;
+                menu.classList.toggle("is-above", abrirAcima);
+                menu.style.maxHeight = `${Math.max(44, Math.min(352, abrirAcima ? acima : abaixo))}px`;
+            };
+            const fechar = (restaurarFoco = false) => {
+                menu.hidden = true;
+                botao.setAttribute("aria-expanded", "false");
+                if (restaurarFoco) botao.focus({preventScroll: true});
+            };
+            const abrir = () => {
+                posicionar();
+                menu.hidden = false;
+                botao.setAttribute("aria-expanded", "true");
+                const atual = menu.querySelector('[aria-selected="true"]');
+                if (atual) {
+                    menu.scrollTop = atual.offsetTop - menu.clientHeight / 2 + atual.offsetHeight / 2;
+                    atual.focus({preventScroll: true});
+                }
+            };
+            [...seletor.options].forEach(option => {
+                const item = document.createElement("button");
+                item.type = "button";
+                item.className = "history-range-option";
+                item.tabIndex = -1;
+                item.setAttribute("role", "option");
+                item.dataset.value = option.value;
+                item.textContent = option.textContent;
+                item.addEventListener("click", () => {
+                    seletor.value = option.value;
+                    seletor.dispatchEvent(new Event("change", {bubbles: true}));
+                    fechar(true);
+                });
+                menu.append(item);
+            });
+            botao.addEventListener("click", () => menu.hidden ? abrir() : fechar(true));
+            controle.addEventListener("keydown", event => {
+                if (event.key === "Escape" && !menu.hidden) {
+                    event.preventDefault(); event.stopPropagation(); fechar(true); return;
+                }
+                if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+                event.preventDefault();
+                if (menu.hidden) { abrir(); return; }
+                const items = [...menu.children];
+                let indice = items.indexOf(document.activeElement);
+                if (event.key === "Home") indice = 0;
+                else if (event.key === "End") indice = items.length - 1;
+                else indice = (indice + (event.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+                const item = items[indice];
+                if (item.offsetTop < menu.scrollTop) menu.scrollTop = item.offsetTop;
+                else if (item.offsetTop + item.offsetHeight > menu.scrollTop + menu.clientHeight) menu.scrollTop = item.offsetTop + item.offsetHeight - menu.clientHeight;
+                item.focus({preventScroll: true});
+            });
+            controle.addEventListener("focusout", event => {
+                if (!controle.contains(event.relatedTarget)) fechar();
+            });
+            document.addEventListener("pointerdown", event => {
+                if (!menu.hidden && !controle.contains(event.target)) fechar();
+            });
+            window.addEventListener("resize", () => { if (!menu.hidden) posicionar(); });
+            window.addEventListener("scroll", () => { if (!menu.hidden) posicionar(); }, {passive: true});
+        }
+        const texto = seletor.selectedOptions[0]?.textContent || "";
+        botao.querySelector("span").textContent = texto;
+        botao.setAttribute("aria-label", `Selecionar faixa numérica: ${texto}`);
+        [...menu.children].forEach(item => item.setAttribute("aria-selected", String(item.dataset.value === seletor.value)));
+    }
+
+    function renderizarDetalheMemoria(numero, painel = null) {
+        const elementoDetalhe = id => painel ? painel.querySelector(`[data-detail-id="${id}"]`) : document.getElementById(id);
 
         const memoria =
             bancoMemoria.find(
@@ -4307,133 +4355,133 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         const detalheMemoriaNumero =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaNumero"
             );
 
 
         const detalheMemoriaPalavra =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaPalavra"
             );
 
 
         const detalheMemoriaNivel =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaNivel"
             );
 
 
         const detalheMemoriaPontos =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaPontos"
             );
 
 
         const detalheMemoriaBarra =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaBarra"
             );
 
 
         const detalheMemoriaTentativas =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaTentativas"
             );
 
 
         const detalheMemoriaAcertos =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAcertos"
             );
 
 
         const detalheMemoriaErros =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaErros"
             );
 
 
         const detalheMemoriaTaxaAcerto =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaTaxaAcerto"
             );
 
 
         const detalheMemoriaSequencia =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaSequencia"
             );
 
 
         const detalheMemoriaUltimoResultado =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaUltimoResultado"
             );
 
 
         const detalheMemoriaUltimaTentativa =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaUltimaTentativa"
             );
 
 
         const detalheMemoriaAtividadeFixar =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeFixar"
             );
 
 
         const detalheMemoriaAtividadeFixarResumo =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeFixarResumo"
             );
 
 
         const detalheMemoriaAtividadeTreinoRapido =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeTreinoRapido"
             );
 
 
         const detalheMemoriaAtividadeTreinoRapidoResumo =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeTreinoRapidoResumo"
             );
 
 
         const detalheMemoriaAtividadeRevisao =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeRevisao"
             );
 
 
         const detalheMemoriaAtividadeRevisaoResumo =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeRevisaoResumo"
             );
 
 
         const detalheMemoriaAtividadeDesafiar =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeDesafiar"
             );
 
 
         const detalheMemoriaAtividadeDesafiarResumo =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeDesafiarResumo"
             );
 
 
         const detalheMemoriaAtividadeVelocidade =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeVelocidade"
             );
 
 
         const detalheMemoriaAtividadeVelocidadeResumo =
-            document.getElementById(
+            elementoDetalhe(
                 "detalheMemoriaAtividadeVelocidadeResumo"
             );
 
@@ -4476,6 +4524,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (
             detalheMemoriaPontos
         ) {
+            const indicador = elementoDetalhe("historyDomain");
+            if (indicador) {
+                indicador.setAttribute("aria-valuenow", String(registro.pontos));
+            }
 
             detalheMemoriaPontos.textContent =
                 `${registro.pontos}%`;
@@ -4533,41 +4585,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        if (
-            detalheMemoriaSequencia
-        ) {
-
-            if (
-                registro.acertosConsecutivos > 0
-            ) {
-
-                detalheMemoriaSequencia.textContent =
-                    `${registro.acertosConsecutivos} ${
-                        registro.acertosConsecutivos === 1
-                            ? "acerto"
-                            : "acertos"
-                    }`;
-
-            } else if (
-                registro.errosConsecutivos > 0
-            ) {
-
-                detalheMemoriaSequencia.textContent =
-                    `${registro.errosConsecutivos} ${
-                        registro.errosConsecutivos === 1
-                            ? "erro"
-                            : "erros"
-                    }`;
-
-            } else {
-
-                detalheMemoriaSequencia.textContent =
-                    "Sem histórico";
-
-            }
-
+        if (detalheMemoriaSequencia) {
+            detalheMemoriaSequencia.textContent = String(registro.acertosConsecutivos);
         }
-
 
         if (
             detalheMemoriaUltimoResultado
@@ -4652,6 +4672,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         atividade
                     ]
                 ) {
+                    if (painel && elemento && elementoResumo) {
+                        elemento.textContent = "—";
+                        elementoResumo.textContent = "Sem tentativas";
+                        const barra = elemento.closest(".detalhe-memoria-atividade").querySelector(".individual-activity-track");
+                        if (barra) barra.hidden = true;
+                    }
 
                     return;
 
@@ -4667,6 +4693,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const totalAtividade =
                     desempenho.acertos +
                     desempenho.erros;
+                const barraAtividade = elemento.closest(".detalhe-memoria-atividade").querySelector(".individual-activity-track");
+                if (barraAtividade) barraAtividade.hidden = totalAtividade === 0;
 
 
                 if (
@@ -4696,6 +4724,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 elemento.textContent =
                     `${taxaAtividade}%`;
+                if (barraAtividade) {
+                    barraAtividade.setAttribute("aria-label", `Taxa de acerto: ${elemento.closest(".detalhe-memoria-atividade").querySelector(".detalhe-memoria-atividade-info span").textContent.trim()}`);
+                    barraAtividade.setAttribute("aria-valuenow", String(taxaAtividade));
+                    barraAtividade.querySelector("span").style.width = `${taxaAtividade}%`;
+                }
 
 
                 elementoResumo.textContent =
@@ -4745,6 +4778,18 @@ document.addEventListener("DOMContentLoaded", () => {
             detalheMemoriaAtividadeVelocidadeResumo,
             "velocidade"
         );
+        if (painel) {
+            const linhas = [...painel.querySelectorAll(".detalhe-memoria-atividade")];
+            linhas.forEach(linha => { linha.hidden = linha.querySelector(".individual-activity-track").hidden; });
+            let vazio = painel.querySelector(".history-activities-empty");
+            if (!vazio) {
+                vazio = document.createElement("p");
+                vazio.className = "history-activities-empty";
+                vazio.textContent = "Nenhuma tentativa registrada por atividade.";
+                painel.querySelector(".detalhe-memoria-atividades").append(vazio);
+            }
+            vazio.hidden = linhas.some(linha => !linha.hidden);
+        }
 
 
 
@@ -4762,8 +4807,35 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const rangesPanel = document.querySelector("#telaMemoriaNumerica .memory-ranges");
+    const rangesToggle = document.getElementById("btnTodasFaixas");
+    if (rangesPanel && rangesToggle) {
+        const setExpanded = (expanded, restoreFocus = false) => {
+            rangesPanel.classList.toggle("is-expanded", expanded);
+            rangesToggle.setAttribute("aria-expanded", String(expanded));
+            rangesToggle.textContent = expanded ? "×" : "Ver todas";
+            rangesToggle.setAttribute("aria-label", expanded ? "Fechar todas as faixas" : "Ver todas as faixas");
+            if (restoreFocus) rangesToggle.focus({preventScroll: true});
+        };
+        rangesToggle.addEventListener("click", () => setExpanded(rangesToggle.getAttribute("aria-expanded") !== "true"));
+        rangesPanel.addEventListener("keydown", event => {
+            if (event.key === "Escape" && rangesPanel.classList.contains("is-expanded")) {
+                event.preventDefault(); setExpanded(false, true);
+            }
+        });
+    }
+
     faixasMapaDominio.forEach(
         faixa => {
+            faixa.setAttribute("role", "button");
+            faixa.tabIndex = 0;
+            faixa.classList.toggle("is-selected", faixa === faixasMapaDominio[0]);
+            faixa.addEventListener("keydown", event => {
+                if (event.key === "Enter" || event.key === " ") { event.preventDefault(); faixa.click(); }
+            });
+            faixa.addEventListener("click", () => {
+                faixasMapaDominio.forEach(item => item.classList.toggle("is-selected", item === faixa));
+            });
 
             faixa.addEventListener(
                 "click",
@@ -5619,11 +5691,6 @@ document.addEventListener("DOMContentLoaded", () => {
         historicoMemoria: {
             elemento: telaHistoricoMemoria,
             pai: "memoriaNumerica"
-        },
-
-        detalheMemoria: {
-            elemento: telaDetalheMemoria,
-            pai: "historicoMemoria"
         },
 
         fixar: {
@@ -7954,6 +8021,65 @@ document.addEventListener("DOMContentLoaded", () => {
     // CARREGAR MEMÓRIA — DESAFIAR
     // =====================================================
 
+    let tipoExercicioTreinar = "palavra";
+    let imagemTreinarDisponivel = false;
+    const opcoesExercicioTreinar = document.querySelectorAll("[data-treinar-tipo]");
+
+    function apresentarExercicioTreinar(memoria) {
+        const porImagem = tipoExercicioTreinar === "numero";
+        const arte = document.getElementById("treinarImagem");
+        const aviso = document.getElementById("treinarImagemStatus");
+        const pergunta = document.getElementById("treinarPergunta");
+        const campo = desafiarResposta;
+        opcoesExercicioTreinar.forEach(botao => {
+            botao.setAttribute("aria-pressed", String(botao.dataset.treinarTipo === tipoExercicioTreinar));
+            botao.disabled = false;
+        });
+        pergunta.textContent = porImagem ? "QUAL É O NÚMERO?" : "QUAL É A PALAVRA?";
+        desafiarNumber.hidden = porImagem;
+        // Do not expose the answer in the image exercise's hidden text or alt.
+        desafiarNumber.textContent = porImagem ? "" : String(memoria.numero).padStart(2, "0");
+        arte.hidden = !porImagem;
+        arte.replaceChildren();
+        aviso.hidden = true;
+        imagemTreinarDisponivel = false;
+        campo.inputMode = porImagem ? "numeric" : "text";
+        campo.placeholder = porImagem ? "Digite o número" : "Digite sua resposta";
+        if (porImagem) campo.maxLength = 3;
+        else campo.removeAttribute("maxlength");
+        btnVerificarDesafio.disabled = porImagem;
+        if (!porImagem) return;
+        const indisponivel = () => {
+            if (!arte.isConnected) return;
+            aviso.textContent = "Imagem indisponível. Escolha Número → Palavra para continuar esta questão.";
+            aviso.hidden = false;
+            imagemTreinarDisponivel = false;
+            btnVerificarDesafio.disabled = true;
+        };
+        if (!memoria.imagem) { indisponivel(); return; }
+        const imagem = document.createElement("img");
+        imagem.alt = "Imagem da associação: informe o número correspondente";
+        imagem.decoding = "async";
+        imagem.addEventListener("load", () => {
+            if (!arte.contains(imagem)) return;
+            imagemTreinarDisponivel = true;
+            btnVerificarDesafio.disabled = false;
+            aviso.hidden = true;
+        }, {once:true});
+        imagem.addEventListener("error", () => {
+            if (!arte.contains(imagem)) return;
+            imagem.remove(); indisponivel();
+        }, {once:true});
+        arte.append(imagem);
+        imagem.src = memoria.imagem;
+    }
+
+    opcoesExercicioTreinar.forEach(botao => botao.addEventListener("click", () => {
+        if (desafiarResposta.readOnly || botao.dataset.treinarTipo === tipoExercicioTreinar) return;
+        tipoExercicioTreinar = botao.dataset.treinarTipo;
+        carregarMemoriaDesafiar(desafiarNumeroAtual);
+    }));
+
     function carregarMemoriaDesafiar(
         numero
     ) {
@@ -8071,6 +8197,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btnProximoDesafio.hidden =
             true;
 
+        desafiarFeedback.removeAttribute("data-resultado");
+        apresentarExercicioTreinar(memoria);
     }
 
 
@@ -8079,6 +8207,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
 
     function verificarRespostaDesafiar() {
+        if (desafiarResposta.readOnly || btnVerificarDesafio.disabled) return;
 
         const memoria =
             bancoMemoria.find(
@@ -8179,9 +8308,21 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
 
-        const acertou =
-            respostaNormalizada ===
-            palavraCorretaNormalizada;
+        const porImagem = tipoExercicioTreinar === "numero";
+        if (porImagem && !imagemTreinarDisponivel) return;
+        if (porImagem && !/^\d{1,3}$/.test(respostaDigitada)) {
+            desafiarFeedback.hidden = false;
+            desafiarFeedbackStatus.textContent = "DIGITE UM NÚMERO";
+            desafiarFeedbackResposta.textContent = "Use apenas algarismos de 0 a 100.";
+            desafiarResposta.focus();
+            return;
+        }
+        const acertou = porImagem
+            ? Number(respostaDigitada) === Number(memoria.numero)
+            : respostaNormalizada === palavraCorretaNormalizada;
+        const respostaCorreta = porImagem
+            ? String(memoria.numero).padStart(2, "0")
+            : memoria.palavra.toUpperCase();
 
 
         // =================================================
@@ -8254,28 +8395,19 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
 
-        if (
-            acertou
-        ) {
-
-            desafiarFeedbackStatus.textContent =
-                "CORRETO";
-
-
-            desafiarFeedbackResposta.textContent =
-                memoria.palavra.toUpperCase();
-
-        } else {
-
-            desafiarFeedbackStatus.textContent =
-                "INCORRETO";
-
-
-            desafiarFeedbackResposta.textContent =
-                `Resposta correta: ${memoria.palavra.toUpperCase()}`;
-
+        desafiarFeedback.dataset.resultado = acertou ? "acerto" : "erro";
+        desafiarFeedbackStatus.textContent = acertou ? "CORRETO" : "INCORRETO";
+        desafiarFeedbackResposta.replaceChildren();
+        if (!acertou) {
+            const rotulo = document.createElement("span");
+            rotulo.className = "treinar-feedback-label";
+            rotulo.textContent = "Resposta correta: ";
+            desafiarFeedbackResposta.append(rotulo);
         }
-
+        const valorResposta = document.createElement("strong");
+        valorResposta.className = "treinar-feedback-value";
+        valorResposta.textContent = respostaCorreta;
+        desafiarFeedbackResposta.append(valorResposta);
 
         // =================================================
         // BLOQUEIA NOVA EDIÇÃO DEPOIS DA VERIFICAÇÃO
@@ -8283,6 +8415,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         desafiarResposta.readOnly =
             true;
+        opcoesExercicioTreinar.forEach(botao => { botao.disabled = true; });
 
 
         // =================================================
@@ -13256,18 +13389,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    if (btnVoltarDetalheMemoria) {
 
-        btnVoltarDetalheMemoria.addEventListener(
-            "click",
-            () => {
-
-                history.back();
-
-            }
-        );
-
-    }
 
 
     // =====================================================
@@ -14623,6 +14745,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
     // ABRIR / FECHAR SELETOR DE FAIXAS — DESAFIAR
     // =====================================================
+
+    function fecharFaixasTreinar() {
+        desafiarRangeSelector.hidden = true;
+        btnFaixaDesafiar.setAttribute("aria-expanded", "false");
+        btnFaixaDesafiar.focus({preventScroll:true});
+    }
+    document.getElementById("btnFecharFaixasTreinar").addEventListener("click", fecharFaixasTreinar);
+    desafiarRangeSelector.addEventListener("keydown", event => {
+        if (event.key === "Escape") { event.preventDefault(); fecharFaixasTreinar(); }
+    });
 
     if (
         btnFaixaDesafiar &&

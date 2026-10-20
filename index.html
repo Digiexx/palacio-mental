@@ -2397,9 +2397,9 @@
                 <section class="memory-training-section">
 
 
-                    <div class="memory-training-grid">
+                    <div class="memory-training-grid memory-shortcuts">
 
-                        <button class="memory-training-card memory-training-learning" id="btnTabelaMental"
+                        <button class="memory-training-card memory-training-learning" id="btnTabelaMental" hidden
                             type="button">
 
                             <div class="memory-training-icon">
@@ -2428,7 +2428,7 @@
 
                         </button>
 
-                        <button class="memory-training-card memory-training-learning" id="btnIniciarAprendizado"
+                        <button class="memory-training-card memory-training-learning" id="btnIniciarAprendizado" hidden
                             type="button">
 
                             <div class="memory-training-icon">
@@ -2453,7 +2453,7 @@
 
                         </button>
 
-                        <button class="memory-training-card memory-training-learning" id="btnFixar" type="button">
+                        <button class="memory-training-card memory-training-learning" id="btnFixar" hidden type="button">
 
                             <div class="memory-training-icon">
 
@@ -2481,7 +2481,7 @@
 
                         </button>
 
-                        <button class="memory-training-card memory-training-training" id="btnDesafiarMemoria"
+                        <button class="memory-training-card memory-training-training" id="btnDesafiarMemoria" hidden
                             type="button">
 
                             <div class="memory-training-icon">
@@ -2532,10 +2532,6 @@
                                 <strong>Velocidade</strong>
                             </span>
 
-                            <small>
-                                Responda mais rápido
-                            </small>
-
                         </button>
 
                         <button class="memory-training-card memory-training-training" id="btnTreinoPersonalizadoMemoria"
@@ -2565,10 +2561,6 @@
                                 <strong>Personalizado</strong>
                             </span>
 
-                            <small>
-                                Escolha suas memórias
-                            </small>
-
                         </button>
 
                         <button class="memory-training-card memory-training-extra memory-training-featured"
@@ -2592,10 +2584,6 @@
 
                             <span><strong>Desafio</strong></span>
 
-                            <small>
-                                Testando seu domínio
-                            </small>
-
                         </button>
 
                         <button class="memory-training-card memory-training-extra" id="btnRevisarMemoria" type="button">
@@ -2616,10 +2604,6 @@
                                 <strong>Revisar</strong>
                             </span>
 
-                            <small>
-                                Revisão inteligente
-                            </small>
-
                         </button>
 
                     </div>
@@ -2638,11 +2622,12 @@
                             Suas faixas
                         </h3>
                         <p>Seu progresso em cada intervalo</p>
+                        <button class="memory-ranges-toggle" id="btnTodasFaixas" type="button" aria-label="Ver todas as faixas" aria-expanded="false" aria-controls="painelTodasFaixas">Ver todas</button>
 
                     </div>
 
 
-                    <div class="memory-range-grid">
+                    <div class="memory-range-grid" id="painelTodasFaixas" role="group" aria-label="Faixas e progresso">
 
                         <div class="memory-range-card" data-dominio-inicio="0" data-dominio-fim="9">
 
@@ -3461,7 +3446,7 @@
                              AÇÃO — REVELAR
                         ================================================== -->
 
-                        <button class="primary-button fixar-reveal-button" id="btnRevelarFixar" type="button">
+                        <button class="primary-button fixar-reveal-button memory-glass-action" id="btnRevelarFixar" type="button">
 
                             <span>
                                 Revelar memória
@@ -3887,30 +3872,18 @@
                          CABEÇALHO
                     ================================================== -->
 
-                    <header class="mental-table-header">
-
-                        <button class="back-button" id="btnVoltarHistoricoMemoria" type="button"
-                            aria-label="Voltar para a tela anterior">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m15 18-6-6 6-6" />
+                    <header class="historico-hero">
+                        <button class="back-button" id="btnVoltarHistoricoMemoria" type="button" aria-label="Voltar para a tela anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg></button>
+                        <h2 aria-label="Histórico da Memória">
+                            <svg class="historico-title-monogram" viewBox="0 0 128 128" width="38" height="38" fill="none" aria-hidden="true" focusable="false">
+                                <defs><linearGradient id="historico-title-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#8F65F1"/><stop offset="50%" stop-color="#BC72F3"/><stop offset="100%" stop-color="#EC69D7"/></linearGradient></defs>
+                                <circle cx="64" cy="64" r="54" stroke="url(#historico-title-gradient)" stroke-width="1.8"/>
+  <path d="M29 85V43l17 21 17-21v42m0 0V43l31 42V43" stroke="url(#historico-title-gradient)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="url(#historico-title-gradient)"><circle cx="29" cy="43" r="2"/><circle cx="46" cy="64" r="1.8"/><circle cx="63" cy="43" r="2"/><circle cx="63" cy="85" r="2"/><circle cx="94" cy="43" r="2"/><circle cx="64" cy="10" r="2"/></g>
                             </svg>
-
-                        </button>
-
-
-                        <div>
-
-                            <span class="section-label">
-                                MEMÓRIA NUMÉRICA
-                            </span>
-
-                            <h2>
-                                Histórico da Memória
-                            </h2>
-
-                        </div>
-
+                            <span class="historico-title-prefix">Histórico da</span>
+                            <span class="historico-title-memory">MEMÓRIA</span>
+                        </h2>
                     </header>
 
 
@@ -3918,11 +3891,7 @@
                          APRESENTAÇÃO DA FAIXA
                     ================================================== -->
 
-                    <section class="historico-memoria-intro">
-
-                        <span class="section-label">
-                            MAPA DE DOMÍNIO
-                        </span>
+                    <section class="historico-memoria-intro" hidden>
 
                         <h3>
                             Faixa
@@ -3946,13 +3915,23 @@
                          conforme a faixa selecionada no Mapa de Domínio.
                     ================================================== -->
 
-                    <section class="historico-memoria-content">
+                    <div class="history-range-control">
+                        <select id="historicoFaixaSelect" hidden aria-label="Selecionar faixa numérica"></select>
+                        <button id="historicoFaixaButton" class="history-range-button" type="button" aria-label="Selecionar faixa numérica: 00–09" aria-haspopup="listbox" aria-expanded="false" aria-controls="historicoFaixaMenu">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16M12 4v16"/></svg>
+                            <span>00–09</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+                        </button>
+                        <div id="historicoFaixaMenu" class="history-range-menu" role="listbox" aria-label="Faixas numéricas" hidden></div>
+                    </div>
+<section class="historico-memoria-content">
 
                         <div class="historico-memoria-grid" id="historicoMemoriaGrid">
 
                         </div>
 
-                    </section>
+                    </section>                    <section class="history-performance" id="historicoPerformance" aria-label="Desempenho da memória selecionada"></section>
+<div hidden><h3 id="historicoSelecaoTitulo"></h3><p id="historicoSelecaoNivel"></p><dl id="historicoSelecaoDados"></dl></div>
 
 
                 </div>
@@ -3964,223 +3943,66 @@
                  TELA — DETALHE DA MEMÓRIA
             ================================================== -->
 
-            <section class="app-screen screen-detalhe-memoria" id="telaDetalheMemoria" hidden>
+            <template id="historicoPerformanceTemplate">
+<section class="detalhe-memoria-hero" aria-label="Memória selecionada e domínio">
+<div class="detalhe-memoria-identidade"><strong class="detalhe-memoria-numero" data-detail-id="detalheMemoriaNumero">01</strong><div><span class="detalhe-memoria-palavra" data-detail-id="detalheMemoriaPalavra">Teia</span><small class="detalhe-memoria-nivel" data-detail-id="detalheMemoriaNivel">NOVO</small></div></div>
+<div class="history-domain-row" data-detail-id="historyDomain" role="progressbar" aria-label="Domínio atual" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="history-domain-track"><div class="history-domain-fill" data-detail-id="detalheMemoriaBarra"></div></div><strong data-detail-id="detalheMemoriaPontos">0%</strong></div>
+</section>
+<section class="detalhe-memoria-estatisticas">
 
-                <div class="detalhe-memoria-container">
-
-
-                    <!-- =================================================
-                         CABEÇALHO
-                    ================================================== -->
-
-                    <header class="mental-table-header">
-
-                        <button class="back-button" id="btnVoltarDetalheMemoria" type="button"
-                            aria-label="Voltar para a tela anterior">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m15 18-6-6 6-6" />
-                            </svg>
-
-                        </button>
-
-
-                        <div>
-
-                            <span class="section-label">
-                                MEMÓRIA NUMÉRICA
-                            </span>
-
-                            <h2>
-                                Histórico Individual
-                            </h2>
-
-                        </div>
-
-                    </header>
-
-
-                    <!-- =================================================
-                         IDENTIFICAÇÃO DA MEMÓRIA
-                    ================================================== -->
-
-                    <section class="detalhe-memoria-hero">
-
-                        <span class="section-label">
-                            DESEMPENHO DA MEMÓRIA
-                        </span>
-
-
-                        <div class="detalhe-memoria-identidade">
-
-                            <strong class="detalhe-memoria-numero" id="detalheMemoriaNumero">
-                                01
-                            </strong>
-
-
-                            <div>
-
-                                <span class="detalhe-memoria-palavra" id="detalheMemoriaPalavra">
-                                    Teia
-                                </span>
-
-                                <small class="detalhe-memoria-nivel" id="detalheMemoriaNivel">
-                                    NOVO
-                                </small>
-
-                            </div>
-
-                        </div>
-
-                    </section>
-
-
-                    <!-- =================================================
-                         DOMÍNIO ATUAL
-                    ================================================== -->
-
-                    <section class="detalhe-memoria-dominio">
-
-                        <div>
-
-                            <span>
-                                DOMÍNIO ATUAL
-                            </span>
-
-                            <strong id="detalheMemoriaPontos">
-                                0%
-                            </strong>
-
-                        </div>
-
-
-                        <div class="detalhe-memoria-progress-track">
-
-                            <div class="detalhe-memoria-progress-fill" id="detalheMemoriaBarra">
-                            </div>
-
-                        </div>
-
-                    </section>
-
-
-                    <!-- =================================================
-                         ESTATÍSTICAS
-                    ================================================== -->
-
-                    <section class="detalhe-memoria-estatisticas">
-
-                        <div class="detalhe-memoria-stat">
+                        <div class="detalhe-memoria-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z M8 8h8 M8 12h8 M8 16h4" /></svg>
 
                             <span>
                                 TENTATIVAS
                             </span>
 
-                            <strong id="detalheMemoriaTentativas">
+                            <strong data-detail-id="detalheMemoriaTentativas">
                                 0
                             </strong>
 
-                        </div>
+                        <small>Respostas registradas</small></div>
 
 
-                        <div class="detalhe-memoria-stat">
+                        <div class="detalhe-memoria-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6" /></svg>
 
                             <span>
                                 ACERTOS
                             </span>
 
-                            <strong id="detalheMemoriaAcertos">
+                            <strong data-detail-id="detalheMemoriaAcertos">
                                 0
                             </strong>
 
-                        </div>
+                        <small>Respostas corretas</small></div>
 
 
-                        <div class="detalhe-memoria-stat">
+                        <div class="detalhe-memoria-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12 M18 6 6 18" /></svg>
 
                             <span>
                                 ERROS
                             </span>
 
-                            <strong id="detalheMemoriaErros">
+                            <strong data-detail-id="detalheMemoriaErros">
                                 0
                             </strong>
 
-                        </div>
+                        <small>Respostas incorretas</small></div>
 
 
-                        <div class="detalhe-memoria-stat">
+                        <div class="detalhe-memoria-stat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V5 M5 19h15 M9 15l4-5 4 2 3-6" /></svg>
 
                             <span>
                                 TAXA DE ACERTO
                             </span>
 
-                            <strong id="detalheMemoriaTaxaAcerto">
+                            <strong data-detail-id="detalheMemoriaTaxaAcerto">
                                 0%
                             </strong>
 
-                        </div>
+                        <small>Sobre as tentativas</small></div>
 
                     </section>
-
-
-                    <!-- =================================================
-                         ESTADO RECENTE
-                    ================================================== -->
-
-                    <section class="detalhe-memoria-recente">
-
-                        <span class="section-label">
-                            ESTADO RECENTE
-                        </span>
-
-
-                        <div class="detalhe-memoria-info">
-
-                            <span>
-                                Sequência atual
-                            </span>
-
-                            <strong id="detalheMemoriaSequencia">
-                                Sem histórico
-                            </strong>
-
-                        </div>
-
-
-                        <div class="detalhe-memoria-info">
-
-                            <span>
-                                Último resultado
-                            </span>
-
-                            <strong id="detalheMemoriaUltimoResultado">
-                                —
-                            </strong>
-
-                        </div>
-
-
-                        <div class="detalhe-memoria-info">
-
-                            <span>
-                                Última tentativa
-                            </span>
-
-                            <strong id="detalheMemoriaUltimaTentativa">
-                                Nunca treinada
-                            </strong>
-
-                        </div>
-
-                    </section>
-
-
-                    <!-- =================================================
-                         DESEMPENHO POR ATIVIDADE
-                    ================================================== -->
-
-                    <section class="detalhe-memoria-atividades">
+<section class="detalhe-memoria-atividades">
 
                         <span class="section-label">
                             DESEMPENHO POR ATIVIDADE
@@ -4195,15 +4017,15 @@
                                     Fixar
                                 </span>
 
-                                <small id="detalheMemoriaAtividadeFixarResumo">
+                                <small data-detail-id="detalheMemoriaAtividadeFixarResumo">
                                     Sem tentativas
                                 </small>
 
                             </div>
 
-                            <strong id="detalheMemoriaAtividadeFixar">
+                            <strong data-detail-id="detalheMemoriaAtividadeFixar">
                                 —
-                            </strong>
+                            </strong><div class="individual-activity-track" role="progressbar" aria-label="Taxa de acerto da atividade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>
 
                         </div>
 
@@ -4216,15 +4038,15 @@
                                     Treino Rápido
                                 </span>
 
-                                <small id="detalheMemoriaAtividadeTreinoRapidoResumo">
+                                <small data-detail-id="detalheMemoriaAtividadeTreinoRapidoResumo">
                                     Sem tentativas
                                 </small>
 
                             </div>
 
-                            <strong id="detalheMemoriaAtividadeTreinoRapido">
+                            <strong data-detail-id="detalheMemoriaAtividadeTreinoRapido">
                                 —
-                            </strong>
+                            </strong><div class="individual-activity-track" role="progressbar" aria-label="Taxa de acerto da atividade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>
 
                         </div>
 
@@ -4237,15 +4059,15 @@
                                     Revisão
                                 </span>
 
-                                <small id="detalheMemoriaAtividadeRevisaoResumo">
+                                <small data-detail-id="detalheMemoriaAtividadeRevisaoResumo">
                                     Sem tentativas
                                 </small>
 
                             </div>
 
-                            <strong id="detalheMemoriaAtividadeRevisao">
+                            <strong data-detail-id="detalheMemoriaAtividadeRevisao">
                                 —
-                            </strong>
+                            </strong><div class="individual-activity-track" role="progressbar" aria-label="Taxa de acerto da atividade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>
 
                         </div>
 
@@ -4258,15 +4080,15 @@
                                     Desafiar
                                 </span>
 
-                                <small id="detalheMemoriaAtividadeDesafiarResumo">
+                                <small data-detail-id="detalheMemoriaAtividadeDesafiarResumo">
                                     Sem tentativas
                                 </small>
 
                             </div>
 
-                            <strong id="detalheMemoriaAtividadeDesafiar">
+                            <strong data-detail-id="detalheMemoriaAtividadeDesafiar">
                                 —
-                            </strong>
+                            </strong><div class="individual-activity-track" role="progressbar" aria-label="Taxa de acerto da atividade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>
 
                         </div>
 
@@ -4279,31 +4101,41 @@
                                     Velocidade
                                 </span>
 
-                                <small id="detalheMemoriaAtividadeVelocidadeResumo">
+                                <small data-detail-id="detalheMemoriaAtividadeVelocidadeResumo">
                                     Sem tentativas
                                 </small>
 
                             </div>
 
-                            <strong id="detalheMemoriaAtividadeVelocidade">
+                            <strong data-detail-id="detalheMemoriaAtividadeVelocidade">
                                 —
-                            </strong>
+                            </strong><div class="individual-activity-track" role="progressbar" aria-label="Taxa de acerto da atividade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden><span></span></div>
 
                         </div>
 
                     </section>
+<section class="detalhe-memoria-recente">
+    <h3 class="history-recent-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4" /></svg>Estado recente</h3>
+    <div class="history-recent-grid">
+        <div class="history-recent-card">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17l5-5 4 3 5-10" /></svg>Sequência atual</span>
+            <strong data-detail-id="detalheMemoriaSequencia">0</strong>
+            <small>acertos seguidos</small>
+        </div>
+        <div class="history-recent-card">
+            <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4L19 6" /></svg>Último resultado</span>
+            <strong data-detail-id="detalheMemoriaUltimoResultado">—</strong>
+            <small>Última resposta</small>
+        </div>
+    </div>
+    <div class="history-recent-attempt">
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7v5l3 2 M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0" /></svg>Última tentativa</span>
+        <strong data-detail-id="detalheMemoriaUltimaTentativa">Nunca treinada</strong>
+    </div>
+</section>
+</template>
 
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 TELA — DESAFIAR MEMÓRIA NUMÉRICA
-            ================================================== -->
-
-            <section class="app-screen screen-desafiar" id="telaDesafiarMemoria" hidden>
+<section class="app-screen screen-desafiar" id="telaDesafiarMemoria" hidden>
 
                 <div class="desafiar-container">
 
@@ -4313,35 +4145,9 @@
                     ================================================== -->
 
                     <header class="desafiar-header">
-
-                        <button class="back-button" id="btnVoltarDesafiar" type="button"
-                            aria-label="Voltar para a Central da Memória Numérica">
-
-                            <svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="m15 18-6-6 6-6" />
-                            </svg>
-
-                        </button>
-
-
-                        <div>
-
-                            <span class="section-label">
-                                MEMÓRIA NUMÉRICA
-                            </span>
-
-                            <h2>
-                                Desafiar
-                            </h2>
-
-                            <p>
-                                Coloque sua memória à prova
-                                e descubra o quanto você realmente domina.
-                            </p>
-
-                        </div>
-
-                    </header>
+    <div class="treinar-header-art"><img src="assets/imagens/memoria-numerica/treinar-topo.webp" alt="" decoding="async"></div>
+    <div class="treinar-header-copy"><h2>Treinar</h2></div>
+</header>
 
 
                     <!-- =================================================
@@ -4362,10 +4168,10 @@
                             </span>
 
                             <span class="desafiar-mode">
-                                DESAFIAR
+                                TREINAR
                             </span>
 
-                            <button class="desafiar-range-button" id="btnFaixaDesafiar" type="button"
+                            <button class="desafiar-range-button fixar-range-button" id="btnFaixaDesafiar" type="button"
                                 aria-expanded="false" aria-controls="desafiarRangeSelector">
 
                                 <span>
@@ -4385,24 +4191,15 @@
                              SELETOR DE FAIXAS
                         ================================================== -->
 
-                        <div class="desafiar-range-selector" id="desafiarRangeSelector" hidden>
+                        <div class="desafiar-range-selector fixar-range-selector" id="desafiarRangeSelector" hidden>
 
-                            <div class="desafiar-range-selector-header">
-
-                                <span class="module-kicker">
-                                    ESCOLHA A FAIXA
-                                </span>
-
-                                <strong>
-                                    Qual grupo deseja desafiar?
-                                </strong>
-
-                            </div>
+                            <button class="fixar-range-close" id="btnFecharFaixasTreinar" type="button" aria-label="Fechar seleção de faixas">×</button>
+                            <div class="desafiar-range-selector-header fixar-range-selector-header"><span class="module-kicker">ESCOLHA UMA FAIXA</span></div>
 
 
-                            <div class="desafiar-range-selector-grid">
+                            <div class="desafiar-range-selector-grid fixar-range-selector-grid">
 
-                                <button class="desafiar-range-option is-active" type="button" data-desafiar-inicio="0"
+                                <button class="desafiar-range-option fixar-range-option is-active" type="button" data-desafiar-inicio="0"
                                     data-desafiar-fim="9">
 
                                     <span>
@@ -4412,7 +4209,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="10"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="10"
                                     data-desafiar-fim="19">
 
                                     <span>
@@ -4422,7 +4219,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="20"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="20"
                                     data-desafiar-fim="29">
 
                                     <span>
@@ -4432,7 +4229,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="30"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="30"
                                     data-desafiar-fim="39">
 
                                     <span>
@@ -4442,7 +4239,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="40"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="40"
                                     data-desafiar-fim="49">
 
                                     <span>
@@ -4452,7 +4249,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="50"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="50"
                                     data-desafiar-fim="59">
 
                                     <span>
@@ -4462,7 +4259,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="60"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="60"
                                     data-desafiar-fim="69">
 
                                     <span>
@@ -4472,7 +4269,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="70"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="70"
                                     data-desafiar-fim="79">
 
                                     <span>
@@ -4482,7 +4279,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="80"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="80"
                                     data-desafiar-fim="89">
 
                                     <span>
@@ -4492,7 +4289,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="90"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="90"
                                     data-desafiar-fim="99">
 
                                     <span>
@@ -4502,7 +4299,7 @@
                                 </button>
 
 
-                                <button class="desafiar-range-option" type="button" data-desafiar-inicio="100"
+                                <button class="desafiar-range-option fixar-range-option" type="button" data-desafiar-inicio="100"
                                     data-desafiar-fim="100">
 
                                     <span>
@@ -4520,18 +4317,24 @@
                              INSTRUÇÃO
                         ================================================== -->
 
-                        <div class="desafiar-instruction">
-
-                            <span class="module-kicker">
-                                NÚMERO → PALAVRA
-                            </span>
-
-                            <p>
-                                Veja o número e digite a palavra
-                                correspondente à associação.
-                            </p>
-
-                        </div>
+                        <div class="treinar-exercise-selector" role="group" aria-label="Tipo de exercício">
+    <svg class="treinar-mode-surface" viewBox="0 0 320 60" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+            <linearGradient id="treinar-mode-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#39234e"/><stop offset="1" stop-color="#21152f"/></linearGradient>
+            <linearGradient id="treinar-mode-border"><stop stop-color="#8650cb"/><stop offset=".5" stop-color="#e0aeff"/><stop offset="1" stop-color="#6834a0"/></linearGradient>
+        </defs>
+        <path class="treinar-mode-left" d="M22 1H184C152 14 183 42 151 59H22A21 21 0 0 1 1 38V22A21 21 0 0 1 22 1Z"/>
+        <path class="treinar-mode-right" d="M22 1H184C152 14 183 42 151 59H22A21 21 0 0 1 1 38V22A21 21 0 0 1 22 1Z" transform="translate(320 0) scale(-1 1)"/>
+    </svg>
+    <button type="button" data-treinar-tipo="palavra" aria-pressed="true">
+        <span class="treinar-mode-title"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4-2 16M17 4l-2 16M4 9h16M3 15h16"/></svg><span>NÚMERO → PALAVRA</span></span>
+        <small>DIGITE A PALAVRA</small>
+    </button>
+    <button type="button" data-treinar-tipo="numero" aria-pressed="false">
+        <span class="treinar-mode-title"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="8" cy="9" r="1.5"/><path d="m4 17 5-5 3 3 4-5 5 7"/></svg><span>IMAGEM → NÚMERO</span></span>
+        <small>OBSERVE A IMAGEM</small>
+    </button>
+</div>
 
 
                         <!-- =================================================
@@ -4539,30 +4342,27 @@
                         ================================================== -->
 
                         <section class="desafiar-card">
+    <span class="desafiar-question-label" id="treinarPergunta">QUAL É A PALAVRA?</span>
+    <strong class="desafiar-number" id="desafiarNumber">00</strong>
+    <figure class="treinar-association-art" id="treinarImagem" hidden></figure>
+    <p class="treinar-image-status" id="treinarImagemStatus" role="status" hidden></p>
 
-                            <span class="desafiar-question-label">
-                                QUAL É A PALAVRA?
-                            </span>
-
-
-                            <strong class="desafiar-number" id="desafiarNumber">
-                                01
-                            </strong>
 
 
                             <div class="desafiar-input-area">
 
-                                <input class="desafiar-input" id="desafiarResposta" type="text"
+                                <input class="desafiar-input" id="desafiarResposta" type="text" aria-labelledby="treinarPergunta"
                                     placeholder="Digite sua resposta" autocomplete="off">
 
                             </div>
 
 
-                            <div class="desafiar-feedback" id="desafiarFeedback" hidden>
+                            <div class="desafiar-feedback" id="desafiarFeedback" role="status" hidden>
+<svg class="treinar-feedback-icon" viewBox="0 0 24 24" aria-hidden="true"><path class="treinar-feedback-error" d="m6 6 12 12M18 6 6 18"/><path class="treinar-feedback-success" d="m5 12 4 4L19 6"/></svg>
 
                                 <span id="desafiarFeedbackStatus"></span>
 
-                                <strong id="desafiarFeedbackResposta"></strong>
+                                <div id="desafiarFeedbackResposta"></div>
 
                             </div>
 
@@ -4573,7 +4373,7 @@
                              AÇÃO — VERIFICAR
                         ================================================== -->
 
-                        <button class="primary-button desafiar-check-button" id="btnVerificarDesafio" type="button">
+                        <button class="primary-button desafiar-check-button memory-glass-action" id="btnVerificarDesafio" type="button">
 
                             <span>
                                 Verificar resposta
@@ -4590,7 +4390,7 @@
                              AÇÃO — PRÓXIMO
                         ================================================== -->
 
-                        <button class="primary-button desafiar-next-button" id="btnProximoDesafio" type="button" hidden>
+                        <button class="primary-button desafiar-next-button memory-glass-action" id="btnProximoDesafio" type="button" hidden>
 
                             <span>
                                 Próximo desafio

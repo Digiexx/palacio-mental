@@ -22133,11 +22133,7 @@ body [hidden][hidden] {
    HISTÓRICO INDIVIDUAL DA MEMÓRIA
 ========================================================= */
 
-.detalhe-memoria-container {
-    width: 100%;
-    min-height: 100%;
-    padding: 24px 18px 48px;
-}
+
 
 
 /* =========================================================
@@ -22281,41 +22277,16 @@ body [hidden][hidden] {
    DOMÍNIO ATUAL
 ========================================================= */
 
-.detalhe-memoria-dominio {
-    margin-top: 14px;
-    padding: 18px;
-
-    border: 1px solid rgba(var(--tema-acento-rgb), 0.18);
-    border-radius: 18px;
-
-    background:
-        rgba(var(--tema-superficie-alta-rgb), 0.62);
-}
 
 
-.detalhe-memoria-dominio > div:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 16px;
-}
 
 
-.detalhe-memoria-dominio > div:first-child span {
-    font-size: 0.66rem;
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-
-    opacity: 0.58;
-}
 
 
-.detalhe-memoria-dominio > div:first-child strong {
-    font-size: 1.15rem;
-    font-weight: 900;
-}
+
+
+
+
 
 
 .detalhe-memoria-progress-track {
@@ -22545,14 +22516,7 @@ body [hidden][hidden] {
    TELAS MAIORES
 ========================================================= */
 
-@media (min-width: 560px) {
 
-    .detalhe-memoria-container {
-        max-width: 520px;
-        margin: 0 auto;
-    }
-
-}
 
 /* =====================================================
    MEMÓRIA EM AÇÃO — PERCURSO MENTAL
@@ -23998,6 +23962,32 @@ body:has(#telaMemoriaNumerica:not([hidden])) .main-content {
     transition: none;
 }
 
+/* V2.7 — atalhos complementares; IDs dos acessos antigos preservados. */
+#telaMemoriaNumerica .memory-shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+#telaMemoriaNumerica .memory-shortcuts .memory-training-card[hidden] { display: none; }
+#telaMemoriaNumerica .memory-shortcuts .memory-training-card:not([hidden]) {
+    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 10px;
+    min-height: 64px;
+    padding: 14px 12px;
+    border: 1px solid #3d3549;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #1b1b24, #101015);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    animation: none;
+    transition: none;
+}
+#telaMemoriaNumerica .memory-shortcuts .memory-training-card::before,
+#telaMemoriaNumerica .memory-shortcuts .memory-training-card::after { content: none; }
+#telaMemoriaNumerica .memory-shortcuts .memory-training-icon { grid-row: 1; width: 24px; height: 24px; }
+#telaMemoriaNumerica .memory-shortcuts .memory-training-icon svg { width: 24px; height: 24px; }
+#telaMemoriaNumerica .memory-shortcuts .memory-training-card > span { grid-row: 1; padding: 0; }
+#telaMemoriaNumerica .memory-shortcuts .memory-training-card > span strong { font-size: 14px; font-weight: 400; color: #f3edf9; }
+
 /* V2.6 — primeiro cartão; a lista aceita futuros acessos reais. */
 #telaMemoriaNumerica .memory-featured { margin: 0 0 20px; }
 #telaMemoriaNumerica .memory-featured-track {
@@ -24295,6 +24285,215 @@ body:has(#telaMemoriaNumerica:not([hidden])) .main-content {
     stroke-linecap: round;
     stroke-linejoin: round;
 }
+
+/* V2.7 — Desempenho compartilhado do Histórico da Memória. */
+#telaHistoricoMemoria .history-performance { background: #000; color: #f3edf9; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-hero,
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat,
+#telaHistoricoMemoria .history-performance .detalhe-memoria-recente,
+#telaHistoricoMemoria .history-performance .detalhe-memoria-atividades {
+    border: 1px solid #3d3549; border-radius: 18px;
+    background: linear-gradient(145deg, #1b1b24, #101015); box-shadow: none; backdrop-filter: none;
+}
+#telaHistoricoMemoria .history-performance .detalhe-memoria-hero { display: grid; grid-template-columns: minmax(0, 1fr) 88px; gap: 12px; padding: 18px 14px; margin: 0; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-identidade { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin: 0; min-width: 0; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-numero { display: block; width: auto; height: auto; border: 0; border-radius: 0; background: none; box-shadow: none; color: #e0aeff; font-size: 40px; font-weight: 400; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-palavra { white-space: normal; overflow-wrap: anywhere; font-size: 19px; font-weight: 400; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-nivel { color: #bfa8d4; border-color: #655b72; background: #101015; font-weight: 400; font-size: 10px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-estatisticas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat { display: grid; gap: 8px; padding: 14px 12px; min-width: 0; text-align: left; }
+#telaHistoricoMemoria .history-performance svg { fill: none; stroke: #b18aff; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat svg { width: 22px; height: 22px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat > span { font-size: 11px; font-weight: 400; letter-spacing: .03em; color: #bfa8d4; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat strong { font-size: 28px; line-height: 1.1; font-weight: 400; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat small { color: #9e8cad; font-size: 10px; line-height: 1.4; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat svg { grid-row: 1; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat > span { grid-row: 2; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat > strong { grid-row: 3; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat > small { grid-row: 4; }
+#telaHistoricoMemoria .history-performance :is(h2, strong, span, small) { text-shadow: none; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-recente, #telaHistoricoMemoria .history-performance .detalhe-memoria-atividades { padding: 16px; margin-top: 14px; }
+#telaHistoricoMemoria .history-performance .section-label { color: #e0aeff; font-size: 11px; font-weight: 400; letter-spacing: .04em; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-info { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; padding: 12px 0; border-bottom: 1px solid #3d3549; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-info:last-child { border-bottom: 0; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-info > span { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-info svg { width: 16px; height: 16px; flex: 0 0 16px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-info strong { font-size: 12px; font-weight: 400; text-align: right; overflow-wrap: anywhere; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-atividade { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 14px 0; border-bottom: 1px solid #3d3549; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-atividade:last-child { border-bottom: 0; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-atividade-info span { font-weight: 400; font-size: 13px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-atividade-info small { font-size: 11px; color: #9e8cad; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-atividade strong { font-size: 15px; font-weight: 400; color: #e0aeff; }
+#telaHistoricoMemoria .history-performance .individual-activity-track { grid-column: 1 / -1; height: 4px; background: #39234e; border-radius: 4px; overflow: hidden; }
+#telaHistoricoMemoria .history-performance .individual-activity-track > span { display: block; height: 100%; background: linear-gradient(90deg, #8650cb, #e0aeff); }
+#telaHistoricoMemoria .history-performance [hidden] { display: none !important; }
+#telaHistoricoMemoria .history-performance button:focus-visible { outline: 2px solid #e0aeff; outline-offset: 3px; }
+
+/* V2.7 — Histórico: cabeçalho isolado e progresso médio real da faixa. */
+#telaHistoricoMemoria { background: #000; }
+body:has(#telaHistoricoMemoria:not([hidden])) .main-content { max-width: none; padding-inline: 0; }
+#telaHistoricoMemoria .historico-memoria-container {
+    --historico-content-inset: 40px;
+    display: grid;
+    grid-template-columns: minmax(var(--historico-content-inset), 1fr) minmax(0, calc(1180px - 2 * var(--historico-content-inset))) minmax(var(--historico-content-inset), 1fr);
+    padding-top: 0; padding-inline: 0;
+}
+#telaHistoricoMemoria .historico-memoria-container > * { grid-column: 2; min-width: 0; }
+@media (max-width: 620px) {
+    #telaHistoricoMemoria .historico-memoria-container { --historico-content-inset: 32px; }
+}
+#telaHistoricoMemoria .historico-hero {
+    grid-column: 1 / -1;
+    position: relative;
+    height: calc(clamp(210px, 55vw, 250px) - 30px + env(safe-area-inset-top, 0px));
+    background: linear-gradient(to bottom, #0000 45%, #0009 72%, #000 100%),
+        url("assets/imagens/memoria-numerica/historico-topo.webp") center top / 100% auto no-repeat, #000;
+}
+#telaHistoricoMemoria .historico-hero .back-button {
+    display: none !important;
+}
+#telaHistoricoMemoria .historico-hero h2 {
+    position: absolute; bottom: 26px; left: 0; width: 100%; margin: 0; padding: 0 4px 12px;
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    text-align: center; font-weight: 400; line-height: 1.2; color: #f3edf9;
+}
+#telaHistoricoMemoria .historico-title-monogram {
+    display: block; width: 38px; height: 38px; flex: 0 0 38px;
+}
+#telaHistoricoMemoria .historico-title-prefix { font-size: 16px; font-weight: 400; color: #f3edf9; }
+#telaHistoricoMemoria .historico-title-memory {
+    font-size: 23px;
+    background: linear-gradient(90deg, #8F65F1 0%, #BC72F3 50%, #EC69D7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-indent: .15em;
+}
+#telaHistoricoMemoria .historico-hero h2::after { content: ""; position: absolute; bottom: 0; left: calc(50% - 16px); width: 32px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #8F65F1 0%, #BC72F3 50%, #EC69D7 100%); }
+#telaHistoricoMemoria .historico-memoria-intro[hidden] { display: none; }
+#telaHistoricoMemoria .historico-memoria-content { margin-top: 12px; }
+
+/* V2.7 — Histórico: mapa circular. */
+#telaHistoricoMemoria #historicoMemoriaGrid {
+    position: relative; display: block; width: 100%; max-width: 360px; aspect-ratio: 1;
+    margin: 0 auto 24px; border: 1px solid #39234e; border-radius: 50%;
+    background: radial-gradient(circle, #39234e33, #101015 65%);
+}
+#telaHistoricoMemoria .historico-orbit-number {
+    position: absolute; left: var(--orbit-x); top: var(--orbit-y); transform: translate(-50%, -50%);
+    width: 44px; height: 44px; padding: 0; border: 1px solid #8650cb; border-radius: 50%;
+    background: linear-gradient(145deg, #39234e, #101015); color: #f3edf9; font: inherit; cursor: pointer;
+}
+#telaHistoricoMemoria .historico-orbit-center {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+    width: 118px; height: 118px; padding: 10px; text-align: center;
+    border: 1px solid #b18aff; border-radius: 50%; background: #101015; color: #f3edf9;
+}
+#telaHistoricoMemoria .historico-orbit-center strong { font-size: 30px; font-weight: 400; line-height: 1; }
+#telaHistoricoMemoria .historico-orbit-center span { font-size: 13px; overflow-wrap: anywhere; }
+#telaHistoricoMemoria .historico-orbit-center small { font-size: 11px; color: #e0aeff; }
+#telaHistoricoMemoria .historico-selection { padding: 18px; border: 1px solid #655b72; border-radius: 18px; background: #101015; }
+#telaHistoricoMemoria .historico-selection h3 { color: #f3edf9; font-weight: 400; font-size: 18px; }
+#telaHistoricoMemoria .historico-selection p { margin-top: 8px; font-size: 12px; color: #bfa8d4; }
+#telaHistoricoMemoria .historico-selection dl { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin: 16px 0; font-size: 13px; }
+#telaHistoricoMemoria .historico-selection dd { margin: 0; color: #e0aeff; }
+#telaHistoricoMemoria button:focus-visible, #telaHistoricoMemoria .historico-orbit-center:focus-visible { outline: 2px solid #e0aeff; outline-offset: 3px; }
+
+/* V2.7 — mapa de domínio circular; os elementos atualizados pelo JS são preservados. */
+#telaMemoriaNumerica .memory-ranges {
+    --ranges-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f);
+    border: 1px solid transparent;
+    background: linear-gradient(145deg, #1b1b24, #09090d) padding-box,
+        linear-gradient(#0008, #0008) border-box, var(--ranges-border-gradient) border-box;
+    box-shadow: none;
+}
+#telaMemoriaNumerica .memory-ranges::after { content: none; animation: none; filter: none; }
+#telaMemoriaNumerica .memory-range-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 8px;
+    padding: 8px;
+}
+#telaMemoriaNumerica .memory-range-card {
+    position: relative;
+    isolation: isolate;
+    flex: 0 0 52px;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    scroll-snap-align: start;
+    animation: none;
+    cursor: pointer;
+}
+#telaMemoriaNumerica .memory-range-card-top {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin: 0 0 10px;
+    border: 1px solid #655b72;
+    border-radius: 50%;
+    background: linear-gradient(165deg, #ffffff0d, #ffffff00 45%), linear-gradient(145deg, #22212c, #101015);
+}
+#telaMemoriaNumerica .memory-range-card.is-selected .memory-range-card-top,
+#telaMemoriaNumerica .memory-range-card:hover .memory-range-card-top {
+    border-color: #b18aff;
+    box-shadow: 0 0 8px #b18aff26, inset 0 0 10px #b18aff0d;
+}
+#telaMemoriaNumerica .memory-range-card-top span { width: auto; text-align: center; font-size: 11px; font-weight: 400; white-space: nowrap; }
+#telaMemoriaNumerica .memory-range-card:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 26px;
+    left: 26px;
+    width: 62px;
+    height: 1px;
+    background: #8c65c566;
+    pointer-events: none;
+}
+#telaMemoriaNumerica .memory-range-card-top strong {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+#telaMemoriaNumerica .memory-range-progress { display: flex; justify-content: center; }
+#telaMemoriaNumerica .memory-range-progress-track { display: none; }
+#telaMemoriaNumerica .memory-range-progress-value { min-width: 0; color: #bfa8d4; text-align: center; }
+#telaMemoriaNumerica .memory-range-card.is-selected .memory-range-card-top::after {
+    content: ""; position: absolute; bottom: 5px; width: 10px; height: 2px; border-radius: 2px; background: #b18aff;
+}
+#telaMemoriaNumerica .memory-ranges .memory-central-title { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 8px; align-items: center; }
+#telaMemoriaNumerica .memory-ranges h3 { grid-column: 1; font-size: 17px; }
+#telaMemoriaNumerica .memory-ranges .memory-central-title p { grid-column: 1; padding-left: 30px; }
+#telaMemoriaNumerica .memory-ranges-heading-icon { color: #b18aff; stroke: currentColor; }
+#telaMemoriaNumerica .memory-ranges-toggle {
+    grid-column: 2; grid-row: 1 / 3; width: 72px; height: 36px; padding: 6px 10px;
+    border: 1px solid transparent; border-radius: 20px; color: #e0aeff; font-family: inherit; font-size: 12px; font-weight: 400; line-height: 1.3;
+    background: linear-gradient(#101015, #101015) padding-box, var(--ranges-border-gradient) border-box; cursor: pointer;
+}
+#telaMemoriaNumerica .memory-ranges-toggle[aria-expanded="true"] { font-size: 22px; line-height: 1; }
+#telaMemoriaNumerica .memory-ranges.is-expanded .memory-range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(52px, 1fr)); gap: 16px 10px; overflow: visible; }
+#telaMemoriaNumerica .memory-ranges.is-expanded .memory-range-card { width: 52px; justify-self: center; }
+#telaMemoriaNumerica .memory-ranges.is-expanded .memory-range-card::before { content: none; }
+#telaMemoriaNumerica .memory-range-card:focus-visible { outline: 2px solid #e0aeff; outline-offset: 3px; border-radius: 8px; }
+#telaMemoriaNumerica .memory-ranges button:focus-visible { outline: 2px solid #e0aeff; outline-offset: 3px; }
 
 /* Aprender — apresentação isolada; dados e ações de treino permanecem existentes. */
 body:has(#telaAprenderMemoria:not([hidden])) { background: #09090d; }
@@ -24859,29 +25058,29 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
 }
 
 /* Seletor de Fixar: acabamento compacto da Tabela, com estado e eventos próprios. */
-#telaFixarMemoria .fixar-range-selector {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector {
     position: relative; margin: 0 0 12px; padding: 20px 12px 14px;
     border: 1px solid #cbb9e540; border-radius: 14px;
     background: radial-gradient(ellipse at top left, #eee8ff0d, transparent 65%), linear-gradient(160deg, #17171f, #08080b);
     box-shadow: inset 0 1px 0 #ffffff08; animation: none;
 }
-#telaFixarMemoria .fixar-range-selector-header { margin: 0 0 22px; padding-right: 40px; }
-#telaFixarMemoria .fixar-range-selector-header .module-kicker { margin: 0; color: #eee8f7; font-size: 11px; letter-spacing: 1px; }
-#telaFixarMemoria .fixar-range-selector-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-#telaFixarMemoria .fixar-range-option {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector-header { margin: 0 0 22px; padding-right: 40px; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector-header .module-kicker { margin: 0; color: #eee8f7; font-size: 11px; letter-spacing: 1px; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-option {
     min-width: 0; min-height: 44px; padding: 7px 2px; border: 1px solid #ffffff26; border-radius: 9px;
     color: #fff; background: #09090d; font-family: inherit; font-size: 11px; font-weight: 650; line-height: 1.2;
     box-shadow: inset 0 1px 0 #ffffff08; transform: none; transition: none;
 }
-#telaFixarMemoria .fixar-range-option.is-active { color: #fff; border-color: #c3a5f1; background: linear-gradient(145deg, #7132bd, #432072); box-shadow: inset 0 1px 0 #ffffff26; }
-#telaFixarMemoria .fixar-range-close {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-option.is-active { color: #fff; border-color: #c3a5f1; background: linear-gradient(145deg, #7132bd, #432072); box-shadow: inset 0 1px 0 #ffffff26; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-close {
     position: absolute; top: 5px; right: 5px; display: grid; place-items: center;
     width: 44px; height: 44px; padding: 0; border: 1px solid #ffffff26; border-radius: 11px;
     background: #09090d; color: #eee8f7; font: 24px/1 sans-serif; cursor: pointer;
 }
-#telaFixarMemoria .fixar-range-selector button { -webkit-tap-highlight-color: transparent; }
-#telaFixarMemoria .fixar-range-selector button:focus-visible { outline: 2px solid #d5baff; outline-offset: 2px; }
-@media (min-width: 400px) { #telaFixarMemoria .fixar-range-option { font-size: 12px; } }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector button { -webkit-tap-highlight-color: transparent; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector button:focus-visible { outline: 2px solid #d5baff; outline-offset: 2px; }
+@media (min-width: 400px) { :is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-option { font-size: 12px; } }
 
 /* Galeria de Fixar: moldura existente, navegação compartilhada e estilos isolados. */
 #fixarGallery { position: absolute; inset: 0; z-index: 2; }
@@ -25042,16 +25241,19 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
 #mentalDetail .mental-detail-button svg { width: 16px; height: 16px; }
 
 /* Fixar: composição compacta e acabamento estático do botão de revelação. */
-#telaFixarMemoria { --fixar-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f); }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) { --fixar-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f); }
 #telaFixarMemoria .fixar-header-copy { margin-top: clamp(-36px, -7vw, -24px); }
 #telaFixarMemoria .fixar-header { padding-bottom: 6px; }
 #telaFixarMemoria .fixar-instruction { display: none; }
 #telaFixarMemoria .fixar-card { min-height: clamp(180px, 23svh, 210px); }
-#telaFixarMemoria #btnRevelarFixar {
+#telaFixarMemoria .memory-glass-action,
+#telaDesafiarMemoria .memory-glass-action {
+    --memory-action-border: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f);
+    width:100%; min-height:52px; margin-top:12px; border-radius:15px;
     border: 1px solid transparent;
     background:
         linear-gradient(155deg, #17171d, #101015 65%, #121017) padding-box,
-        var(--fixar-border-gradient) border-box;
+        var(--memory-action-border) border-box;
     color: #fff;
     box-shadow: inset 0 1px 0 #ffffff0d;
 }
@@ -25079,7 +25281,7 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
 }
 
 /* Faixas de Fixar: acabamento aprovado em Aprender, sem compartilhar estados. */
-#telaFixarMemoria .fixar-range-button {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-button {
     border-color: transparent;
     background:
         linear-gradient(145deg, #ffffff08, #00000026) padding-box,
@@ -25087,8 +25289,8 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
         var(--fixar-border-gradient) border-box;
     box-shadow: inset 0 1px 0 #ffffff0d;
 }
-#telaFixarMemoria .fixar-range-button strong { color: #e5e3e9; }
-#telaFixarMemoria .fixar-range-selector {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-button strong { color: #e5e3e9; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector {
     padding-top: 56px;
     border-color: #cbb9e530;
     border-top-color: #e6dff552;
@@ -25099,22 +25301,22 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
         linear-gradient(160deg, #1b1b21ed, #08080bf5);
     box-shadow: inset 0 1px 0 #ffffff14, inset 0 -1px 0 #ffffff06, 0 5px 14px #0004;
 }
-#telaFixarMemoria .fixar-range-selector-header { margin-bottom: 9px; padding-right: 0; text-align: center; }
-#telaFixarMemoria .fixar-range-selector-header .module-kicker {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector-header { margin-bottom: 9px; padding-right: 0; text-align: center; }
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-selector-header .module-kicker {
     display: block; color: #fff; font-size: .56rem; font-weight: 800; letter-spacing: .14em;
 }
-#telaFixarMemoria .fixar-range-option {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-option {
     border-color: transparent;
     background:
         linear-gradient(#09090d, #09090d) padding-box,
         linear-gradient(115deg, #242428, #444449 28%, #66666b 48%, #35353a 72%, #18181c) border-box;
 }
-#telaFixarMemoria .fixar-range-option.is-active {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-option.is-active {
     border-color: transparent;
     background: linear-gradient(145deg, #30203f, #1b1424) padding-box, var(--fixar-border-gradient) border-box;
     box-shadow: inset 0 0 0 1px #cbb9e54d;
 }
-#telaFixarMemoria .fixar-range-close {
+:is(#telaFixarMemoria, #telaDesafiarMemoria) .fixar-range-close {
     top: 6px; right: 6px; border-radius: 12px;
     background: linear-gradient(145deg, #ffffff0c, #00000020), #09090d;
 }
@@ -25232,3 +25434,152 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
     box-shadow: none;
     transition: none;
 }
+
+/* Histórico da Memória — faixa, seleção e painel integrado. */
+#telaHistoricoMemoria .history-sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+#telaHistoricoMemoria .history-range-control { position:relative; z-index:4; display:flex; justify-content:center; margin:10px 0 14px; }
+#telaHistoricoMemoria .history-range-button {
+    --history-range-border: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f);
+    display:grid; grid-template-columns:18px minmax(0,1fr) 16px; align-items:center; gap:12px;
+    width:160px; max-width:100%; min-height:40px; padding:8px 14px;
+    border:1px solid transparent; border-radius:20px;
+    background:linear-gradient(145deg,#1b1b24,#101015) padding-box,var(--history-range-border) border-box;
+    color:#e0aeff; font:inherit; font-size:13px; cursor:pointer;
+}
+#telaHistoricoMemoria .history-range-button svg { width:100%; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+#telaHistoricoMemoria .history-range-menu {
+    position:absolute; top:calc(100% + 8px); left:50%; transform:translateX(-50%);
+    z-index:5; width:240px; max-width:100%; max-height:min(352px,50svh); overflow-y:auto; overscroll-behavior:contain;
+    padding:6px; border:1px solid #8650cb; border-radius:16px; background:#101015; box-shadow:0 6px 18px #0005;
+}
+#telaHistoricoMemoria .history-range-menu[hidden] { display:none; }
+#telaHistoricoMemoria .history-range-menu.is-above { top:auto; bottom:calc(100% + 8px); }
+#telaHistoricoMemoria .history-range-option {
+    display:flex; align-items:center; justify-content:space-between; width:100%; min-height:42px;
+    padding:10px 12px; border:0; border-radius:10px; background:transparent; color:#bfa8d4; text-align:left; font:inherit; font-size:13px; cursor:pointer;
+}
+#telaHistoricoMemoria .history-range-option::after { content:""; width:16px; color:#e0aeff; }
+#telaHistoricoMemoria .history-range-option[aria-selected="true"] { background:#39234e; color:#e0aeff; }
+#telaHistoricoMemoria .history-range-option[aria-selected="true"]::after { content:"✓"; }
+#telaHistoricoMemoria .history-range-option:focus-visible { outline:1px solid #b18aff; outline-offset:-2px; }
+#telaHistoricoMemoria #historicoFaixaSelect { min-height:36px; padding:6px 28px 6px 14px; border:1px solid #8650cb; border-radius:20px; background:#101015; color:#e0aeff; font:inherit; font-size:13px; }
+#telaHistoricoMemoria .historico-memoria-content { margin-top:0; }
+#telaHistoricoMemoria #historicoMemoriaGrid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; max-width:none; aspect-ratio:auto; margin:0 0 14px; border:0; border-radius:0; background:none; }
+#telaHistoricoMemoria .history-number { min-width:0; min-height:44px; border:1px solid #655b72; border-radius:10px; background:linear-gradient(145deg,#22212c,#101015); color:#f3edf9; font:inherit; font-size:14px; cursor:pointer; }
+#telaHistoricoMemoria .history-number[aria-pressed="true"] { border-color:#b18aff; box-shadow:0 0 6px #b18aff26; background:#39234e; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-hero { position:relative; isolation:isolate; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 0; align-content:center; min-height:158px; padding:14px 12px; overflow:hidden; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-identidade { position:relative; z-index:1; grid-column:1; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-numero { font-size:38px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-numero,
+#telaFixarMemoria .fixar-number {
+    font-weight:700;
+    background:linear-gradient(90deg,#8F65F1 0%,#BC72F3 50%,#EC69D7 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+#telaHistoricoMemoria .history-performance .detalhe-memoria-palavra { font-size:18px; font-weight:500; color:#fff; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-nivel { margin-top:6px; padding:0; border:0; border-radius:0; background:none; color:#bfa8d4; font-size:10px; }
+#telaHistoricoMemoria .history-domain-row { position:relative; z-index:1; grid-column:1; display:flex; align-items:center; gap:6px; min-width:0; }
+#telaHistoricoMemoria .history-domain-track { flex:1; min-width:0; height:6px; overflow:hidden; border-radius:4px; background:#25212c; }
+#telaHistoricoMemoria .history-domain-fill { width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,#8650cb,#b18aff); }
+#telaHistoricoMemoria .history-domain-row strong { min-width:30px; color:#e0aeff; font-size:12px; font-weight:400; text-align:right; }
+#telaHistoricoMemoria .history-selected-art {
+    position:absolute; z-index:0; top:0; right:0; bottom:0; width:50%; margin:0;
+    border:0; border-radius:0; overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 20%);
+    mask-image:linear-gradient(90deg,transparent,#000 20%);
+}
+/* Ajustes opcionais por número: definir --history-image-position no seletor
+   .history-selected-art[data-numero="..."]; o padrão permanece centralizado. */
+#telaHistoricoMemoria .history-selected-art img { display:block; width:100%; height:100%; object-fit:cover; object-position:var(--history-image-position, center); border:0; border-radius:0; box-shadow:none; }
+#telaHistoricoMemoria .history-selected-art::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#101015,#10101566 22%,#10101500 60%); pointer-events:none; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat { padding:10px; gap:6px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat strong { font-size:23px; }
+#telaHistoricoMemoria .history-performance .detalhe-memoria-stat small { display:none; }
+#telaHistoricoMemoria .history-evolution { border:1px solid #3d3549; border-radius:16px; background:#101015; padding:16px; margin:14px 0; }
+#telaHistoricoMemoria .history-evolution h3 { font-size:14px; font-weight:400; color:#e0aeff; }
+#telaHistoricoMemoria .history-evolution p { margin-top:12px; font-size:12px; color:#9e8cad; line-height:1.5; }
+#telaHistoricoMemoria .history-activities-empty { margin-top:12px; font-size:12px; color:#9e8cad; line-height:1.5; }
+@media(min-width:400px) { #telaHistoricoMemoria .history-performance .detalhe-memoria-estatisticas { grid-template-columns:repeat(4,minmax(0,1fr)); } #telaHistoricoMemoria .history-performance .detalhe-memoria-stat > span { font-size:9px; } }
+
+/* Hist?rico: estado recente compacto; dados e indicadores preservados. */
+#telaHistoricoMemoria .history-recent-heading { display:flex; align-items:center; gap:8px; margin:0 0 12px; color:#e0aeff; font-size:14px; font-weight:400; }
+#telaHistoricoMemoria .detalhe-memoria-recente svg { width:16px; height:16px; flex:0 0 16px; fill:none; stroke:#b18aff; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+#telaHistoricoMemoria .history-recent-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+#telaHistoricoMemoria .history-recent-card { min-width:0; display:grid; gap:8px; padding:12px 10px; border:1px solid #3d3549; border-radius:12px; background:linear-gradient(145deg,#1b1b24,#101015); }
+#telaHistoricoMemoria .history-recent-card > span, #telaHistoricoMemoria .history-recent-attempt > span { display:flex; align-items:center; gap:6px; color:#bfa8d4; font-size:11px; line-height:1.4; }
+#telaHistoricoMemoria .history-recent-card strong { color:#e0aeff; font-size:22px; font-weight:400; line-height:1.2; overflow-wrap:anywhere; }
+#telaHistoricoMemoria .history-recent-card small { color:#9e8cad; font-size:10px; }
+#telaHistoricoMemoria .history-recent-attempt { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-top:12px; padding-top:12px; border-top:1px solid #3d3549; }
+#telaHistoricoMemoria .history-recent-attempt strong { color:#e0aeff; font-size:11px; font-weight:400; line-height:1.5; }
+
+/* Fixar: preserve dimensions and remove the former number halo. */
+#telaFixarMemoria .fixar-number {
+    text-shadow:none;
+    /* Expand the text clipping box while preserving its occupied layout space. */
+    line-height:1.05;
+    margin-block:-.075em;
+}
+
+/* Treinar: two exercise presentations, one existing correction and progress flow. */
+body:has(#telaDesafiarMemoria:not([hidden])) { background:#000; }
+body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
+#telaDesafiarMemoria { background:#000; padding-top:0 !important; }
+#telaDesafiarMemoria .desafiar-container { padding-top:0; }
+#telaDesafiarMemoria .desafiar-header { display:block; position:relative; width:100vw; max-width:760px; margin-inline:calc(50% - min(50vw,380px)); padding:0 0 6px; background:#000; text-align:center; }
+#telaDesafiarMemoria .treinar-header-art { position:relative; }
+#telaDesafiarMemoria .treinar-header-art img { display:block; width:100%; height:auto; object-fit:contain; }
+#telaDesafiarMemoria .treinar-header-art::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom,transparent 55%,#00000026 70%,#00000099 85%,#000 100%); }
+#telaDesafiarMemoria .treinar-header-copy { position:relative; margin:clamp(-36px,-7vw,-24px) auto 0; padding:0 22px 8px; }
+#telaDesafiarMemoria .desafiar-header h2 { margin:0; color:#fff; font-size:clamp(30px,8vw,38px); line-height:1.1; }
+#telaDesafiarMemoria .treinar-header-copy::after { content:""; position:absolute; bottom:0; left:calc(50% - 22px); width:44px; height:3px; border-radius:3px; background:#b899ed; }
+#telaDesafiarMemoria .desafiar-training-top { margin-bottom:12px; }
+#telaDesafiarMemoria .treinar-exercise-selector {
+    position:relative; isolation:isolate; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0;
+    height:60px; margin:0 0 12px; border:1px solid #4e3c65; border-radius:23px;
+    background:linear-gradient(155deg,#1b1b24,#0c0a11); box-shadow:inset 0 1px 0 #ffffff0d;
+}
+#telaDesafiarMemoria .treinar-mode-surface { position:absolute; inset:0; z-index:-1; width:100%; height:100%; pointer-events:none; overflow:visible; }
+#telaDesafiarMemoria .treinar-mode-surface path { fill:url(#treinar-mode-fill); stroke:url(#treinar-mode-border); stroke-width:1; vector-effect:non-scaling-stroke; transition:opacity 200ms ease; }
+#telaDesafiarMemoria .treinar-mode-left { opacity:1; }
+#telaDesafiarMemoria .treinar-mode-right { opacity:0; }
+#telaDesafiarMemoria .treinar-exercise-selector:has([data-treinar-tipo="numero"][aria-pressed="true"]) .treinar-mode-left { opacity:0; }
+#telaDesafiarMemoria .treinar-exercise-selector:has([data-treinar-tipo="numero"][aria-pressed="true"]) .treinar-mode-right { opacity:1; }
+#telaDesafiarMemoria .treinar-exercise-selector button {
+    position:relative; min-width:0; min-height:44px; padding:9px 6px 12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px;
+    border:0; border-radius:22px; background:transparent; color:#9e8cad; font:inherit; cursor:pointer;
+}
+#telaDesafiarMemoria .treinar-mode-title { display:flex; align-items:center; justify-content:center; gap:4px; white-space:nowrap; font-size:9px; font-weight:500; letter-spacing:.015em; }
+#telaDesafiarMemoria .treinar-mode-title svg { width:13px; height:13px; flex:0 0 13px; fill:none; stroke:currentColor; stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; }
+#telaDesafiarMemoria .treinar-exercise-selector small { color:inherit; font-size:7px; font-weight:400; letter-spacing:.06em; }
+#telaDesafiarMemoria .treinar-exercise-selector button[aria-pressed="true"] { color:#f3edf9; }
+#telaDesafiarMemoria .treinar-exercise-selector button::after { content:""; position:absolute; bottom:5px; left:calc(50% - 9px); width:18px; height:2px; border-radius:2px; background:#e0aeff; opacity:0; transition:opacity 200ms ease; }
+#telaDesafiarMemoria .treinar-exercise-selector button[aria-pressed="true"]::after { opacity:.85; }
+#telaDesafiarMemoria .treinar-exercise-selector button:focus-visible { outline:2px solid #e0aeff; outline-offset:3px; }
+#telaDesafiarMemoria .treinar-exercise-selector button:disabled { cursor:default; }
+@media(min-width:400px) { #telaDesafiarMemoria .treinar-mode-title { font-size:11px; } #telaDesafiarMemoria .treinar-exercise-selector small { font-size:8px; } }
+@media(prefers-reduced-motion:reduce) { #telaDesafiarMemoria .treinar-mode-surface path, #telaDesafiarMemoria .treinar-exercise-selector button::after { transition:none; } }
+#telaDesafiarMemoria .desafiar-card { min-height:260px; padding:20px 18px; border-color:#3d3549; background:linear-gradient(155deg,#22212b,#101015); box-shadow:inset 0 1px 0 #ffffff0d; }
+#telaDesafiarMemoria .desafiar-card::before, #telaDesafiarMemoria .desafiar-card::after { content:none; }
+#telaDesafiarMemoria .desafiar-question-label { margin-bottom:12px; }
+#telaDesafiarMemoria .desafiar-number { line-height:1.05; font-weight:700; background:linear-gradient(90deg,#8F65F1 0%,#BC72F3 50%,#EC69D7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:none; }
+#telaDesafiarMemoria .treinar-association-art { width:100%; height:clamp(180px,24svh,210px); margin:0; }
+#telaDesafiarMemoria .treinar-association-art img { display:block; width:100%; height:100%; object-fit:contain; border-radius:10px; }
+#telaDesafiarMemoria .treinar-image-status { color:#bfa8d4; font-size:12px; line-height:1.5; margin:8px 0; }
+#telaDesafiarMemoria [hidden] { display:none !important; }
+#telaDesafiarMemoria .desafiar-input-area { width:100%; margin-top:14px; }
+#telaDesafiarMemoria .desafiar-input { font-size:16px; }
+#telaDesafiarMemoria #btnVerificarDesafio:disabled { opacity:.55; cursor:default; transform:none; }
+@media(max-height:700px) { #telaDesafiarMemoria .treinar-header-art img { max-height:168px; } }
+
+/* Treinar: compact feedback with real answer supplied by the existing checker. */
+#telaDesafiarMemoria .desafiar-feedback { width:100%; min-width:0; display:grid; grid-template-columns:22px minmax(0,1fr); gap:6px 10px; margin:14px 0 0; padding:12px; border:1px solid #3d3549; border-radius:14px; background:linear-gradient(155deg,#1b1b24,#101015); box-shadow:none; text-align:left; }
+#telaDesafiarMemoria .treinar-feedback-icon { grid-column:1; grid-row:1/3; width:22px; height:22px; align-self:center; fill:none; stroke:#e0aeff; stroke-width:1.5; stroke-linecap:round; }
+#telaDesafiarMemoria .treinar-feedback-error, #telaDesafiarMemoria .treinar-feedback-success { display:none; }
+#telaDesafiarMemoria [data-resultado="erro"] .treinar-feedback-icon { color:#df9fc8; stroke:currentColor; }
+#telaDesafiarMemoria [data-resultado="erro"] .treinar-feedback-error, #telaDesafiarMemoria [data-resultado="acerto"] .treinar-feedback-success { display:block; }
+#telaDesafiarMemoria .desafiar-feedback:not([data-resultado]) .treinar-feedback-icon { display:none; }
+#telaDesafiarMemoria #desafiarFeedbackStatus { grid-column:2; font-size:9px; font-weight:500; letter-spacing:.12em; color:#e0aeff; }
+#telaDesafiarMemoria [data-resultado="erro"] #desafiarFeedbackStatus { color:#df9fc8; }
+#telaDesafiarMemoria #desafiarFeedbackResposta { grid-column:2; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 7px; color:#bfa8d4; font-size:12px; line-height:1.4; }
+#telaDesafiarMemoria #desafiarFeedbackResposta .treinar-feedback-label { font-size:11px; font-weight:400; color:#bfa8d4; letter-spacing:0; }
+#telaDesafiarMemoria #desafiarFeedbackResposta .treinar-feedback-value { min-width:0; max-width:100%; overflow-wrap:anywhere; font-size:19px; font-weight:600; line-height:1.2; background:linear-gradient(90deg,#8F65F1 0%,#BC72F3 50%,#EC69D7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
