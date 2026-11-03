@@ -4,6 +4,10 @@ Etapa 01, 03/11/2026. Código isolado, sem integração ao aplicativo, login,
 Supabase, publicação ou alteração da versão do app. Decisões de referência:
 [Projeto e Protótipos](https://app.notion.com/p/404ff76ffb0381caba07dcedfaec9d4e).
 
+Atualização local da Etapa 02: a Biblioteca passou a carregar esta camada no
+aplicativo. As descrições de isolamento acima e na seção Limites de entrega
+documentam a entrega original da Etapa 01. Login e sincronização continuam ausentes.
+
 ## Carregamento e API
 
 Carregar, nessa ordem, `assets/palacio-biblico/modelo.js`, `db.js` e
@@ -38,7 +42,7 @@ código da mesma origem. O isolamento remoto dependerá de Auth/RLS futuros.
 
 | Store | Campos de domínio |
 | --- | --- |
-| livros | nome, codigo |
+| livros | nome, codigo, favorito opcional (booleano) |
 | cenarios | livroId, nome, imagem opcional |
 | regioes | cenarioId, nome, posicao |
 | objetos | cenarioId, regiaoId opcional, nome, posicao, imagem opcional |
@@ -147,3 +151,46 @@ locais nesse ambiente offline emulado, não o PWA instalado nem modo avião fís
 Erros de abertura/permissão foram simulados; conexão fechada e rollback por DataError
 foram exercitados no IndexedDB real. Quota esgotada, upgrade de um schema anterior,
 abertura bloqueada, aparelho real e regressão funcional completa permanecem pendentes.
+
+## Integração da Biblioteca — Etapa 02
+
+O catálogo visual oficial em `assets/palacio-biblico/catalogo.js` contém João/JHN
+e Filipenses/PHP, com categoria e imagem separadas dos dados pessoais. Abrir a
+Biblioteca faz apenas consultas, sem cadastrar livros, versículos ou operações.
+Não existem percentuais, metas de domínio ou estados de conclusão inventados.
+
+`definirFavorito(codigo, nome, booleano)` localiza o livro do proprietário pelo
+código normalizado dentro de uma transação com a fila. Reutiliza o UUID existente,
+inclusive de registros da Etapa 01 sem campo favorito; ausência significa false.
+Cria o livro somente no primeiro favorito. Repetir o mesmo estado não gera revisão
+nem operação; desfavoritar um livro inexistente também não grava nada. Duplicatas
+preexistentes geram erro explícito, sem apagar, fundir ou mover associações.
+Cadastro genérico de livro também rejeita código duplicado; código existente
+fica protegido em edições. Não houve mudança de versão do schema ou limpeza.
+
+Biblioteca e Livro integram `telasApp`, com pais Home e Biblioteca respectivamente.
+O controlador `popstate` existente foi preservado. O livro mostra uma tela
+provisória, sem cenário interativo ou cadastro automático. CSS é restrito às novas
+telas. Os recursos essenciais entraram no precache, mantendo o nome técnico atual
+do cache e o número da versão do aplicativo.
+
+As três imagens são assets isolados gerados com imagegen e convertidos realmente
+de PNG para WebP por canvas do Chrome, 1200 × 800 px, qualidade 0,85. Prompts:
+cabeçalho com arco antigo, oliveira, lago e montanhas da Galileia ao pôr do sol;
+João com barco de pesca no lago da Galileia ao entardecer; Filipenses com rua e
+colunas antigas de Filipos e montanhas da Macedônia ao entardecer. Todos pedem
+composição cinematográfica histórica, cores naturais discretas, sem pessoas,
+textos, interface, moldura de celular ou colagem. Não são cenários interativos
+definitivos. Originais gerados foram preservados fora do repositório.
+
+Validação local: suíte de dados ampliada para 13 grupos, zero falhas no Chrome,
+incluindo favoritos idempotentes, concorrência, compatibilidade com livros antigos
+e recarga. Interface verificada em 360/430 px sem overflow horizontal; pesquisa
+ignora caixa/acentos; favoritos persistem após recarga; retorno nativo Livro →
+Biblioteca → Home e Início global funcionaram nos fluxos exercitados. Falha de
+abertura de armazenamento simulada mostrou erro e Tentar novamente recuperou a lista.
+Com rede desativada pelo protocolo do Chrome, recarga via SW manteve Biblioteca,
+imagens e favorito. Isso não substitui teste físico no PWA instalado nem atualização
+de uma instalação antiga. Abertura dos módulos Numérica, Aprender, Memória na Prática,
+Lista Ancorada, Revisão e Aparência foi verificada sem erros JS não tratados nesse
+percurso. Não representa regressão completa de todos os treinos.

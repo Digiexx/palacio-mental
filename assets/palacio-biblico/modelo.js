@@ -3,7 +3,7 @@
     'use strict';
     const PB = globalThis.PalacioBiblico = {};
     const campos = {
-        livros: ['nome', 'codigo'],
+        livros: ['nome', 'codigo', 'favorito'],
         cenarios: ['livroId', 'nome', 'imagem'],
         regioes: ['cenarioId', 'nome', 'posicao'],
         objetos: ['cenarioId', 'regiaoId', 'nome', 'posicao', 'imagem'],
@@ -28,7 +28,7 @@
         exigir(Object.hasOwn(campos, tipo), 'Tipo desconhecido');
         exigir(texto(r.id) && texto(r.proprietarioLocalId), 'Identidade obrigatória');
         for (const k of campos[tipo]) {
-            if (['imagem', 'regiaoId', 'fim', 'texto', 'fonte', 'flashcardId'].includes(k)) continue;
+            if (['imagem', 'regiaoId', 'fim', 'texto', 'fonte', 'flashcardId', 'favorito'].includes(k)) continue;
             if (k === 'posicao') posicao(r[k]);
             else if (['capitulo', 'inicio'].includes(k)) exigir(Number.isInteger(r[k]) && r[k] > 0, 'Referência inválida');
             else exigir(texto(r[k]), `Campo obrigatório: ${k}`);
@@ -36,6 +36,7 @@
         for (const k of ['imagem', 'regiaoId', 'texto', 'fonte', 'flashcardId']) {
             if (r[k] !== undefined && r[k] !== null) exigir(texto(r[k]), `Campo inválido: ${k}`);
         }
+        if (tipo === 'livros' && r.favorito !== undefined) exigir(typeof r.favorito === 'boolean', 'Favorito deve ser booleano');
         if (tipo === 'versiculos') {
             exigir(r.fim === undefined || (Number.isInteger(r.fim) && r.fim >= r.inicio), 'Intervalo inválido');
             exigir(!r.texto || texto(r.fonte), 'Texto exige fonte informada e autorizada pelo usuário');

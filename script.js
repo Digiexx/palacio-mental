@@ -5648,6 +5648,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const telasApp = {
 
+        bibliotecaBiblica: {
+            elemento: document.getElementById("telaBibliotecaBiblica"),
+            pai: "home"
+        },
+        livroBiblico: {
+            elemento: document.getElementById("telaLivroBiblico"),
+            pai: "bibliotecaBiblica"
+        },
+
         home: {
             elemento: homePalacio,
             pai: null
@@ -5725,6 +5734,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // GERENCIADOR CENTRAL — EXIBIR TELA
     // =====================================================
 
+    const bibliotecaBiblica = globalThis.PalacioBiblico?.iniciarBiblioteca({navegar: navegarParaTela});
+    document.getElementById("btnPalacioBiblico")?.addEventListener("click", () => navegarParaTela("bibliotecaBiblica"));
+
     function exibirTelaApp(
         nomeTela
     ) {
@@ -5776,6 +5788,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         telaDestino.elemento.hidden =
             false;
+
+        if (nomeTela === "bibliotecaBiblica") bibliotecaBiblica?.abrir();
 
 
         // =================================================

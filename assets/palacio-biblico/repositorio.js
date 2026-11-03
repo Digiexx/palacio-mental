@@ -24,6 +24,10 @@
         }
         async function verificarReferencias(t, tipo, r, anterior) {
             const ref = (tipoRef, id) => ler(t, tipoRef, id);
+            if (tipo === 'livros') {
+                const livros = await req(t.objectStore('livros').index('proprietario').getAll(dono));
+                exigir(!livros.some(l => l.id !== r.id && l.codigo.trim().toUpperCase() === r.codigo.trim().toUpperCase()), 'Código de livro já cadastrado');
+            }
             if (['cenarios', 'versiculos'].includes(tipo)) await ref('livros', r.livroId);
             if (tipo === 'regioes') await ref('cenarios', r.cenarioId);
             if (tipo === 'objetos') {
@@ -46,6 +50,7 @@
             if (!anterior) return;
             // Estrutura referencial imutável: evita invalidar descendentes já salvos.
             const protegidos = {
+                livros: ['codigo'],
                 cenarios: ['livroId', 'imagem'], regioes: ['cenarioId', 'posicao'],
                 versiculos: ['livroId', 'capitulo', 'inicio', 'fim', 'traducao'],
                 associacoes: ['versiculoId'], vinculos: ['objetoId', 'versiculoId', 'associacaoId'],
@@ -59,6 +64,13 @@
                 }
             }
         }
+        async function persistir(t, tipo, r, acao) {
+            await req(t.objectStore(tipo).put(r));
+            await req(t.objectStore('operacoes').add({id: PB.novoId(), proprietarioLocalId: dono,
+                entidade: tipo, registroId: r.id, revisao: r.revisao, acao,
+                criadoEm: r.atualizadoEm, estado: 'somente-local', dados: structuredClone(r)}));
+            return r;
+        }
         async function gravar(tipo, id, dados) {
             const entrada = PB.dadosPermitidos(tipo, dados);
             return tx(db, [...PB.tipos, 'operacoes'], 'readwrite', async t => {
@@ -69,11 +81,7 @@
                 if (tipo === 'versiculos' && r.fim === undefined) r.fim = r.inicio;
                 PB.validar(tipo, r);
                 await verificarReferencias(t, tipo, r, anterior);
-                await req(t.objectStore(tipo).put(r));
-                await req(t.objectStore('operacoes').add({id: PB.novoId(), proprietarioLocalId: dono,
-                    entidade: tipo, registroId: r.id, revisao: r.revisao, acao: anterior ? 'editar' : 'criar',
-                    criadoEm: agora, estado: 'somente-local', dados: structuredClone(r)}));
-                return r;
+                return persistir(t, tipo, r, anterior ? 'editar' : 'criar');
             });
         }
         return Object.freeze({
@@ -84,6 +92,27 @@
                 return gravar(tipo, id, dados);
             },
             vincular: dados => gravar('vinculos', null, dados),
+            // Consulta pelo código dentro da mesma transação que escreve: segura entre abas.
+            definirFavorito(codigo, nome, favorito) {
+                exigir(typeof codigo === 'string' && codigo.trim() && typeof nome === 'string' && nome.trim(), 'Livro inválido');
+                exigir(typeof favorito === 'boolean', 'Favorito deve ser booleano');
+                const canonico = codigo.trim().toUpperCase();
+                return tx(db, ['livros', 'operacoes'], 'readwrite', async t => {
+                    const livros = await req(t.objectStore('livros').index('proprietario').getAll(dono));
+                    const encontrados = livros.filter(l => l.codigo.trim().toUpperCase() === canonico);
+                    exigir(encontrados.length <= 1, 'Há livros duplicados neste acervo; nenhuma alteração foi feita');
+                    const anterior = encontrados[0];
+                    if (anterior && Boolean(anterior.favorito) === favorito) return anterior;
+                    // Remover favorito inexistente é uma operação sem efeito, não um cadastro.
+                    if (!anterior && !favorito) return null;
+                    const agora = new Date().toISOString();
+                    const r = {...anterior, id: anterior?.id || PB.novoId(), proprietarioLocalId: dono,
+                        nome: anterior?.nome || nome.trim(), codigo: anterior?.codigo || canonico, favorito,
+                        criadoEm: anterior?.criadoEm || agora, atualizadoEm: agora, revisao: (anterior?.revisao || 0) + 1};
+                    PB.validar('livros', r);
+                    return persistir(t, 'livros', r, anterior ? 'editar' : 'criar');
+                });
+            },
             obter(tipo, id) { tipoValido(tipo); return tx(db, [tipo], 'readonly', t => ler(t, tipo, id)); },
             listar(tipo) { tipoValido(tipo); return tx(db, [tipo], 'readonly', t => req(t.objectStore(tipo).index('proprietario').getAll(dono))); },
             operacoesPendentes: () => tx(db, ['operacoes'], 'readonly', t => req(t.objectStore('operacoes').index('proprietario').getAll(dono))),

@@ -123,6 +123,22 @@
         } finally { persistente.fechar(); }
     });
     await teste('localStorage preservado', async () => assert(JSON.stringify(snapshot()) === antes, 'localStorage alterado'));
+    await teste('favoritos compatíveis com livros antigos, idempotentes e sem duplicação', async () => {
+        const n = (await r.operacoesPendentes()).length;
+        const salvo = await r.definirFavorito('JHN', 'João', true);
+        assert(salvo.id === livro.id && salvo.favorito === true, 'Livro existente não preservado');
+        await r.definirFavorito('jhn', 'João', true);
+        assert((await r.operacoesPendentes()).length === n + 1, 'Favorito repetido duplicou operação');
+        const outra = await PB.criarRepositorio({nome});
+        try {
+            await Promise.all([r.definirFavorito('GEN', 'Gênesis', true), outra.definirFavorito('GEN', 'Gênesis', true)]);
+            assert((await r.listar('livros')).filter(l => l.codigo === 'GEN').length === 1, 'Livro concorrente duplicado');
+            await rejeita(() => r.criar('livros', {nome: 'João duplicado', codigo: 'JHN'}));
+            await rejeita(() => r.editar('livros', livro.id, {favorito: 'sim'}));
+            await r.definirFavorito('JHN', 'João', false);
+            assert(!(await r.obter('livros', livro.id)).favorito, 'Favorito não removido');
+        } finally { outra.fechar(); }
+    });
     r?.fechar();
     // Remove exclusivamente o banco descartável criado por esta execução.
     await PB.requisicao(indexedDB.deleteDatabase(nome));

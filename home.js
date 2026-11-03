@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cards[current].focus({preventScroll:true});
   });
   dots.forEach((dot, i) => dot.addEventListener('click', () => select(i)));
-  ['btnPalacioBiblico','btnDominio'].forEach(id => document.getElementById(id)?.addEventListener('click', () => {
+  ['btnDominio'].forEach(id => document.getElementById(id)?.addEventListener('click', () => {
     status.textContent = 'Este módulo ainda está em desenvolvimento.';
   }));
   const home = document.querySelector('.home-palacio');

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="temas.css">
+    <link rel="stylesheet" href="assets/palacio-biblico/biblioteca.css">
 
 </head>
 
@@ -5843,7 +5844,7 @@
 
                                     <path d="M10 8h4" />
 
-                                </svg></span><strong>Palácio<span>bíblico</span></strong><small>Em desenvolvimento</small></button>
+                                </svg></span><strong>Palácio<span>bíblico</span></strong><small>Biblioteca bíblica</small></button>
 <button class="home-path-card" id="btnDominio" type="button" data-title="Modo domínio"><img class="home-card-art" src="assets/imagens/personagens/mago-memoria.png" alt="" loading="lazy"><span class="home-path-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
 
                                     <path d="M12 2.5 19 5v5.5c0 4.8-2.7 8.6-7 11-4.3-2.4-7-6.2-7-11V5l7-2.5Z" />
@@ -5862,6 +5863,55 @@
 <p class="home-status" id="homeStatus" role="status"></p>
 </section>
 
+            <section class="app-screen pb-tela" id="telaBibliotecaBiblica" aria-labelledby="tituloBibliotecaBiblica" hidden>
+                <header class="pb-hero">
+                    <img class="pb-hero-imagem" src="assets/imagens/palacio-biblico/biblioteca-topo.webp" alt="" width="1200" height="800">
+                    <div class="pb-hero-texto">
+                        <span class="pb-selo">PALÁCIO BÍBLICO</span>
+                        <h1 id="tituloBibliotecaBiblica">Biblioteca Bíblica</h1>
+                        <p>Memorize versículos com cenários e associações visuais.</p>
+                    </div>
+                </header>
+                <div class="pb-conteudo">
+                    <label class="pb-busca" for="buscaBibliotecaBiblica">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+                        <span class="pb-sr">Buscar livro da Bíblia</span>
+                        <input id="buscaBibliotecaBiblica" type="search" placeholder="Buscar livro da Bíblia…" autocomplete="off">
+                    </label>
+                    <div class="pb-filtros" role="group" aria-label="Filtrar livros">
+                        <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                        <button type="button" disabled title="Disponível em uma próxima etapa">Em treino</button>
+                        <button type="button" disabled title="Disponível em uma próxima etapa">Concluídos</button>
+                        <button type="button" data-filtro="favoritos" aria-pressed="false">Favoritos</button>
+                    </div>
+                    <p class="pb-nota">Em treino e Concluídos estarão disponíveis em uma próxima etapa.</p>
+                    <p class="pb-status" id="statusBibliotecaBiblica" role="status"></p>
+                    <p class="pb-erro" id="erroBibliotecaBiblica" role="alert" hidden></p>
+                    <button class="pb-tentar" id="tentarBibliotecaBiblica" type="button" hidden>Tentar novamente</button>
+                    <h2 class="pb-grupo">Novo Testamento</h2>
+                    <ul class="pb-lista" id="livrosBibliotecaBiblica"></ul>
+                    <p class="pb-vazio" id="vazioBibliotecaBiblica" role="status" hidden>Nenhum livro encontrado para esta busca e filtro.</p>
+                    <p class="pb-rodape">Seu acervo começa com uma associação.</p>
+                </div>
+            </section>
+            <section class="app-screen pb-tela" id="telaLivroBiblico" aria-labelledby="tituloLivroBiblico" hidden>
+                <header class="pb-hero pb-hero-livro">
+                    <img class="pb-hero-imagem" id="imagemLivroBiblico" alt="" width="1200" height="800">
+                    <div class="pb-hero-texto">
+                        <span class="pb-selo" id="categoriaLivroBiblico"></span>
+                        <h1 id="tituloLivroBiblico"></h1>
+                        <p id="descricaoLivroBiblico"></p>
+                    </div>
+                </header>
+                <div class="pb-conteudo">
+                    <div class="pb-desenvolvimento">
+                        <span class="pb-selo">PRÓXIMA ETAPA</span>
+                        <h2>Seu cenário está em desenvolvimento</h2>
+                        <p>Em breve, este espaço receberá o cenário interativo, os objetos e suas associações pessoais.</p>
+                        <p class="pb-nota">Nenhum cenário ou versículo foi cadastrado automaticamente.</p>
+                    </div>
+                </div>
+            </section>
         </main>
 
 
@@ -5893,6 +5943,11 @@
     ====================================================== -->
 
     <script src="assets/variacoes-memoria.js"></script>
+    <script src="assets/palacio-biblico/modelo.js"></script>
+    <script src="assets/palacio-biblico/db.js"></script>
+    <script src="assets/palacio-biblico/repositorio.js"></script>
+    <script src="assets/palacio-biblico/catalogo.js"></script>
+    <script src="assets/palacio-biblico/biblioteca.js"></script>
     <script src="script.js"></script>
     <script src="home.js"></script>
 
