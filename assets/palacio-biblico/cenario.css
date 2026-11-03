@@ -30,3 +30,37 @@
 @media (prefers-reduced-motion: reduce) {
     #telaCenarioJoao .cj-camada { transition: none !important; }
 }
+
+/* Editor temporário: imagem e moldura compartilham a mesma transformação. */
+#telaCenarioJoao .ce-superficie { position: absolute; inset: 0; z-index: 3; }
+#telaCenarioJoao .ce-superficie.ce-aguarda-toque { cursor: crosshair; touch-action: manipulation; }
+#telaCenarioJoao .ce-moldura { position: absolute; border: calc(1.5px / var(--ce-escala,1)) solid #be9bdf; background: #ac7fcd20; box-sizing: border-box; cursor: move; touch-action: none; }
+#telaCenarioJoao .ce-moldura.ce-preparada { cursor: default; }
+#telaCenarioJoao .ce-alca { position: absolute; width: calc(44px / var(--ce-escala,1)); height: calc(44px / var(--ce-escala,1)); display: none; place-items: center; touch-action: none; }
+#telaCenarioJoao .ce-selecionada .ce-alca { display: grid; }
+#telaCenarioJoao .ce-alca::after { content: ''; width: calc(12px / var(--ce-escala,1)); height: calc(12px / var(--ce-escala,1)); background: #d3b5e8; border: 1px solid #31213f; border-radius: 3px; }
+#telaCenarioJoao .ce-no { left: 0; top: 0; transform: translate(-50%,-50%); cursor: nwse-resize; }
+#telaCenarioJoao .ce-ne { right: 0; top: 0; transform: translate(50%,-50%); cursor: nesw-resize; }
+#telaCenarioJoao .ce-so { left: 0; bottom: 0; transform: translate(-50%,50%); cursor: nesw-resize; }
+#telaCenarioJoao .ce-se { right: 0; bottom: 0; transform: translate(50%,50%); cursor: nwse-resize; }
+#telaCenarioJoao .ce-preparada .ce-alca { display: none; }
+#telaCenarioJoao .ce-comandos { margin-top: 16px; padding: 16px; border: 1px solid #51415f; border-radius: 16px; background: linear-gradient(135deg,#b997ce08,transparent),#121116; }
+#telaCenarioJoao .ce-selo { color: #c6adD8; font: 600 10px/1.6 Arial,sans-serif; letter-spacing: .07em; }
+#telaCenarioJoao .ce-mensagem, #telaCenarioJoao .ce-conflito { margin: 10px 0 14px; color: #d1c8da; font: 400 12px/1.6 Arial,sans-serif; }
+#telaCenarioJoao .ce-conflito { padding-left: 10px; border-left: 2px solid #c2a1d8; }
+#telaCenarioJoao .ce-formulario { margin-top: 18px; }
+#telaCenarioJoao .ce-formulario h2 { margin: 0 0 16px; color: #eee7f5; font: 600 18px/1.3 Arial,sans-serif; }
+#telaCenarioJoao .ce-formulario label { display: block; min-width: 0; color: #c9bfd2; font: 400 12px/1.5 Arial,sans-serif; }
+#telaCenarioJoao .ce-formulario input { display: block; box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; margin: 6px 0 0; padding: 10px; border: 1px solid #55455f; border-radius: 10px; background: #0d0c11; color: #f4edf9; font: 400 16px/1.4 Arial,sans-serif; }
+#telaCenarioJoao .ce-formulario input:focus-visible { outline: 2px solid #bea1d2; outline-offset: 2px; }
+#telaCenarioJoao .ce-formulario input:disabled { color: #bfb3ca; opacity: .85; }
+#telaCenarioJoao .ce-formulario fieldset { min-width: 0; margin: 16px 0; padding: 0; border: 0; }
+#telaCenarioJoao .ce-formulario legend { padding: 0; margin-bottom: 8px; color: #bcb0c6; font-size: 12px; }
+#telaCenarioJoao .ce-medidas { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; }
+#telaCenarioJoao #ceCancelar { margin-top: 12px; }
+#telaCenarioJoao #ceNome { font-weight: 600; }
+#telaCenarioJoao .ce-ajuste { margin: 16px 0; border-block: 1px solid #39313f; }
+#telaCenarioJoao .ce-ajuste summary { min-height: 44px; padding: 12px 0; box-sizing: border-box; cursor: pointer; color: #c6b3d6; font: 500 13px/1.5 Arial,sans-serif; }
+#telaCenarioJoao .ce-ajuste summary:focus-visible { outline: 2px solid #bea1d2; outline-offset: 2px; }
+#telaCenarioJoao #ceConfirmar { background: #33223f; border-color: #9273aa; color: #fff; }
+#telaCenarioJoao #ceDescartar { background: transparent; color: #bfb5c8; border-color: #39313f; }

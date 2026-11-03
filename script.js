@@ -5897,6 +5897,13 @@ document.addEventListener("DOMContentLoaded", () => {
         registrarHistorico = true
     ) {
 
+        // Proteção do rascunho pelo controlador central, inclusive no popstate existente.
+        if (nomeTela !== "cenarioJoao" && !document.getElementById("telaCenarioJoao").hidden && !cenarioJoao.permitirSaida()) {
+            // O Voltar já consumiu a entrada: mantém o cenário como ponto atual.
+            if (!registrarHistorico) history.pushState({tela: "cenarioJoao"}, "", window.location.href);
+            return;
+        }
+
         if (
             !telasApp[nomeTela]
         ) {

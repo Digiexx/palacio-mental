@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Editor temporário — testes isolados</title>
+    <link rel="stylesheet" href="../assets/palacio-biblico/cenario.css">
+    <style>body{background:#090a0e;color:#eee;font:14px Arial;margin:16px} [hidden]{display:none!important} pre{white-space:pre-wrap} #telaCenarioJoao{max-width:430px} #cjVisor{height:260px!important} #cjCamada{width:360px;height:203px}</style>
+</head>
+<body>
+    <h1>Editor temporário — Etapa 04.2</h1>
+    <p>Fixture isolada: não carrega o aplicativo nem a camada IndexedDB.</p>
+    <pre id="resultado">Executando…</pre>
+    <section id="telaCenarioJoao">
+        <div id="cjVisor" class="cj-visor"><div id="cjCamada" class="cj-camada"></div></div>
+        <button id="ceEditar" type="button">Editar cenário</button>
+        <div id="ceComandos" hidden>
+            <p id="ceMensagem" role="status"></p>
+            <button id="ceAdicionar" type="button">Adicionar objeto</button>
+            <button id="ceCentro" type="button" hidden>Criar área ao centro</button>
+            <form id="ceFormulario" hidden>
+                <label>Nome<input id="ceNome" required maxlength="100"></label>
+                <details id="ceAjustePreciso"><summary>Ajuste preciso</summary>
+                <label>Horizontal<input id="ce-x" type="number" min="0" max="100" step="0.1"></label>
+                <label>Vertical<input id="ce-y" type="number" min="0" max="100" step="0.1"></label>
+                <label>Largura<input id="ce-largura" type="number" min="2" max="100" step="0.1"></label>
+                <label>Altura<input id="ce-altura" type="number" min="2" max="100" step="0.1"></label>
+                </details>
+                <p id="ceConflito" hidden>Conflito</p>
+                <button id="ceConfirmar" type="submit">Confirmar área</button>
+                <button id="ceRevisar" type="button" hidden>Ajustar</button>
+                <button id="ceDescartar" type="button">Descartar</button>
+            </form>
+            <button id="ceCancelar" type="button">Cancelar</button>
+        </div>
+    </section>
+    <script>globalThis.PalacioBiblico = {};</script>
+    <script src="../assets/palacio-biblico/cenarios/joao.js"></script>
+    <script src="../assets/palacio-biblico/editor-cenario.js"></script>
+    <script src="palacio-biblico-editor.js"></script>
+</body>
+</html>

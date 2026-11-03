@@ -361,3 +361,82 @@ navegador/sistema, concorrência manual em duas abas e regressão completa dos
 treinos. Concorrência automatizada foi exercitada em duas conexões distintas
 na mesma página. A Etapa 04.2 poderá construir a interface de edição sobre essas
 APIs, mediante autorização própria.
+
+## Editor visual temporário — Etapa 04.2 local
+
+`editor-cenario.js` mantém um único rascunho na memória da página, com nome,
+retângulo normalizado e estado de confirmação. Não chama o repositório, não
+abre IndexedDB, não gera UUID e não usa localStorage. Confirmar área significa
+somente preparar a área na sessão atual; não equivale a persistir um objeto.
+Salvar/restaurar objetos pessoais continua reservado à Etapa 04.3.
+
+Editar cenário → Adicionar objeto permite tocar na imagem ou usar Criar área ao
+centro pelo teclado. A moldura pode ser movida e redimensionada pelos quatro
+cantos. Posição e dimensões também têm campos numéricos em porcentagem. Valores
+são limitados à imagem, com dimensão mínima normalizada de 0,02; toques fora da
+imagem não criam área. As alças mantêm 44 CSS px mesmo com zoom. Em áreas muito
+pequenas, os controles numéricos oferecem ajuste sem depender das alças.
+
+Imagem e moldura compartilham a camada transformada original. Durante o gesto,
+os controles de câmera ficam bloqueados. Na edição, seleção dos objetos oficiais
+e animação de câmera ficam suspensas; Casa, Jardim e Porto/Barco continuam
+disponíveis entre gestos. Sobreposição com objetos oficiais gera aviso e não
+modifica nenhum deles. Apenas os objetos oficiais são considerados no aviso;
+objetos pessoais ainda não são restaurados pela interface nesta etapa.
+
+O usuário pode confirmar, revisar ou descartar. Sair da edição ou navegar com
+rascunho solicita confirmação, inclusive para área já preparada, pois continua
+temporária. A proteção usa o controlador central de navegação e seu popstate
+existente. Ao recusar Voltar, a entrada do cenário é reposta no histórico.
+Não há controlador independente de histórico. Recarga/fechamento também usa
+beforeunload; a exibição desse aviso depende das regras do navegador e não
+garante recuperação após encerramento do sistema. IDs técnicos deixaram de ser
+exibidos no painel dos objetos oficiais.
+
+Validação no Chrome local: 11 grupos isolados do editor, 12 de geometria,
+19 de persistência e 13 de dados aprovados. As duas suítes de dados também
+confirmaram recuperação após novo carregamento. No aplicativo, toques, arraste,
+redimensionamento, alinhamento de zoom, alças, nome, confirmação e proteção
+nativa de Voltar/Início foram verificados em 360 × 800 e 430 × 932 CSS px.
+Tab/ArrowUp nos controles, movimento reduzido e ausência de overflow horizontal
+foram conferidos. Instrumentação bloqueando escritas e geração de UUID, mais
+comparação integral das stores antes/depois, confirmou ausência de gravações no
+fluxo de edição; manifesto e localStorage permaneceram idênticos.
+
+O novo script foi acrescentado ao precache sem mudar versão ou nome do cache.
+Com SW ativo e rede desativada no Chrome, recarga carregou imagem e editor.
+Capturas e resultados da interação ficam em `artifacts/palacio-biblico-etapa042/`.
+O convite de instalação do perfil novo bloqueou inicialmente os toques; após
+dispensá-lo pelo botão existente, a execução completa passou. Não foi necessário
+alterar o fluxo de instalação.
+
+Pendências: validação visual pelo usuário, celular físico, leitor de tela,
+atualização de PWA antigo, encerramento abrupto e medição de fluidez/bateria.
+Risco de desempenho estimado baixo: uma moldura, estilos estáticos, sem timer
+ou animação contínua; não houve benchmark em aparelho. Esta etapa permanece
+local, sem commit ou publicação. A Etapa 04.3 exige nova autorização.
+
+Refinamento de encerramento da Etapa 04.2: contorno fino, roxo e contínuo,
+inclusive após preparar a área; alças visíveis somente quando a moldura estiver
+selecionada para ajuste. Tocar fora desmarca; tocar na moldura ou focar os campos
+seleciona novamente. O nome permanece em destaque. As coordenadas ficam em
+`details/summary` nativo, inicialmente recolhido, com título Ajuste preciso.
+As ações do rascunho são Confirmar área, Ajustar e Descartar, sem duplicar
+Cancelar no formulário. Confirmações de descarte e saída permanecem intactas.
+O fechamento autoriza somente commit local; publicação e integração de
+persistência continuam pendentes. A suíte do editor passa a ter 12 grupos.
+
+Diagnóstico da falha de foco no fechamento: a mesma suíte falhava em aba de
+segundo plano e passava em aba ativa, sem mudança no editor. No Chrome testado,
+`focus()` alterava `activeElement` no segundo plano sem emitir `focusin`. A suíte
+agora aguarda foco real na janela antes de executar os testes, mostrando
+`aguardando-foco` até a ativação. Não simula o evento nem considera o teste
+aprovado enquanto a aba estiver inativa. A implementação do editor foi mantida.
+
+Validação do fechamento: os 12 grupos do editor, 12 de cenário, 19 de objetos
+e 13 de dados passaram (56 grupos, zero falhas), incluindo recarga das suítes
+de persistência. Em 360 × 800 e 430 × 932 CSS px, gestos, zoom, teclado,
+abertura de Ajuste preciso por Enter, confirmação e Voltar/Início passaram.
+As verificações instrumentadas registraram zero escritas durante a edição e
+nenhuma mudança no banco, manifesto ou localStorage. Capturas atualizadas:
+`artifacts/palacio-biblico-etapa042-fechamento-validado/`, fora do commit.

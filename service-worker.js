@@ -18,6 +18,7 @@ const ARQUIVOS_CACHE = [
     "./assets/palacio-biblico/biblioteca.css",
     "./assets/palacio-biblico/cenarios/joao.js",
     "./assets/palacio-biblico/cenario.js",
+    "./assets/palacio-biblico/editor-cenario.js",
     "./assets/palacio-biblico/cenario.css",
     "./assets/imagens/palacio-biblico/joao/cenario-01.webp",
     "./assets/imagens/palacio-biblico/biblioteca-topo.webp",

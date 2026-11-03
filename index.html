@@ -5934,19 +5934,51 @@
                     <div class="cj-toolbar">
                         <button type="button" id="cjExplorar" aria-pressed="false" aria-controls="cjCamada" disabled>Explorar regiões</button>
                         <button type="button" id="cjPanorama" aria-controls="cjVisor" disabled>Panorama completo</button>
+                        <button type="button" id="ceEditar" aria-pressed="false" aria-controls="ceComandos" disabled>Editar cenário</button>
                     </div>
                     <p class="cj-status" id="cjStatus" role="status">Carregando cenário…</p>
                     <p class="cj-erro" id="cjErro" role="alert" hidden>Não foi possível carregar a imagem do cenário. Verifique a conexão ou tente novamente.</p>
                     <button class="pb-tentar" id="cjTentar" type="button" hidden>Tentar novamente</button>
                     <span class="cj-rotulo" id="cjRotuloRegioes">Selecionar região</span>
                     <div class="cj-lista" id="cjRegioes" role="group" aria-labelledby="cjRotuloRegioes"></div>
+                    <section id="ceComandos" class="ce-comandos" aria-label="Editar cenário" hidden>
+                        <span class="ce-selo">EDIÇÃO ATIVA · RASCUNHO TEMPORÁRIO</span>
+                        <p id="ceMensagem" class="ce-mensagem" role="status">Nada será gravado nesta etapa.</p>
+                        <div class="cj-toolbar">
+                            <button type="button" id="ceAdicionar">Adicionar objeto</button>
+                            <button type="button" id="ceCentro" hidden>Criar área ao centro</button>
+                        </div>
+                        <form id="ceFormulario" class="ce-formulario" hidden>
+                            <h2>Cadastrar objeto</h2>
+                            <label for="ceNome">Nome do objeto</label>
+                            <input id="ceNome" type="text" required maxlength="100" autocomplete="off" placeholder="Como você chama este objeto?">
+                            <details id="ceAjustePreciso" class="ce-ajuste">
+                                <summary>Ajuste preciso</summary>
+                            <fieldset>
+                                <legend>Posição e tamanho (% da imagem)</legend>
+                                <div class="ce-medidas">
+                                    <label>Horizontal<input id="ce-x" type="number" min="0" max="100" step="0.1" inputmode="decimal"></label>
+                                    <label>Vertical<input id="ce-y" type="number" min="0" max="100" step="0.1" inputmode="decimal"></label>
+                                    <label>Largura<input id="ce-largura" type="number" min="2" max="100" step="0.1" inputmode="decimal"></label>
+                                    <label>Altura<input id="ce-altura" type="number" min="2" max="100" step="0.1" inputmode="decimal"></label>
+                                </div>
+                            </fieldset>
+                            </details>
+                            <p id="ceConflito" class="ce-conflito" role="status" hidden>Esta área se sobrepõe a um objeto oficial. Revise a moldura; nenhum objeto existente será movido.</p>
+                            <div class="cj-toolbar">
+                                <button id="ceConfirmar" type="submit">Confirmar área</button>
+                                <button id="ceRevisar" type="button" hidden>Ajustar</button>
+                                <button id="ceDescartar" type="button">Descartar</button>
+                            </div>
+                        </form>
+                        <button id="ceCancelar" class="cj-fechar" type="button">Cancelar</button>
+                    </section>
                     <div id="cjObjetosGrupo" hidden>
                         <span class="cj-rotulo">Objetos da região</span>
                         <div class="cj-lista" id="cjObjetos" role="group" aria-label="Selecionar objeto" hidden></div>
                     </div>
                     <section class="cj-painel" id="cjPainel" aria-labelledby="cjNomeObjeto" tabindex="-1" hidden>
                         <h2 id="cjNomeObjeto"></h2>
-                        <p>Identificação do objeto: <code id="cjIdObjeto"></code></p>
                         <p>Este painel identifica o ponto no cenário. Cadastro de associações e consulta de vínculos estarão disponíveis em uma próxima etapa.</p>
                         <button class="cj-fechar" id="cjFecharObjeto" type="button">Fechar detalhes</button>
                     </section>
@@ -5989,6 +6021,7 @@
     <script src="assets/palacio-biblico/catalogo.js"></script>
     <script src="assets/palacio-biblico/biblioteca.js"></script>
     <script src="assets/palacio-biblico/cenarios/joao.js"></script>
+    <script src="assets/palacio-biblico/editor-cenario.js"></script>
     <script src="assets/palacio-biblico/cenario.js"></script>
     <script src="script.js"></script>
     <script src="home.js"></script>
