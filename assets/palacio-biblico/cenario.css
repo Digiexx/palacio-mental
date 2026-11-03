@@ -1,0 +1,32 @@
+/* Cenário de João: regras restritas à nova tela e ao seu acesso no livro. */
+#acessoCenarioJoao { margin-top: 12px; }
+#acessoCenarioJoao .cj-entrar { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 50px; margin-top: 18px; padding: 14px 18px; border: 1px solid #79628f; border-radius: 14px; background: #33223f; color: #f7f3fb; font: 500 15px/1.4 Arial,sans-serif; text-decoration: none; box-shadow: none; }
+#acessoCenarioJoao .cj-entrar:focus-visible { outline: 2px solid #cfb8e5; outline-offset: 4px; }
+.main-content #telaCenarioJoao { --folga-topo-telas: 0px; padding: 0 0 calc(110px + env(safe-area-inset-bottom)); background: #090a0e; }
+#telaCenarioJoao .cj-cabecalho { padding: 23px 20px 16px; }
+#telaCenarioJoao h1 { margin: 6px 0 5px; font: 600 26px/1.2 Arial,sans-serif; letter-spacing: -.02em; }
+#telaCenarioJoao .cj-cabecalho p { margin: 0; color: #b7afc1; font-size: 13px; line-height: 1.5; }
+#telaCenarioJoao .cj-visor { position: relative; isolation: isolate; width: 100%; height: clamp(290px,54svh,510px); overflow: hidden; background: #0e0f13; border-block: 1px solid #25232d; }
+#telaCenarioJoao .cj-camada { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+#telaCenarioJoao .cj-imagem { display: block; width: 100%; height: 100%; max-width: none; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+#telaCenarioJoao .cj-area { position: absolute; display: block; min-width: 0; min-height: 0; margin: 0; padding: 0; border: 1px solid transparent; border-radius: 3px; background: transparent; color: #fff; box-shadow: none; }
+#telaCenarioJoao .cj-area span { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: max-content; max-width: none; white-space: nowrap; padding: 3px 6px; border: 1px solid #b39ac955; border-radius: 7px; background: #151019e8; color: #f5effb; font: 500 9px/1.3 Arial,sans-serif; opacity: 0; pointer-events: none; }
+#telaCenarioJoao[data-revelado='true'] .cj-area span, #telaCenarioJoao .cj-area:focus-visible span { opacity: 1; }
+#telaCenarioJoao .cj-area[aria-pressed='true'] { border-color: #c9a8e3; background: #bd9ed015; }
+#telaCenarioJoao .cj-comandos { padding: 17px 20px 0; }
+#telaCenarioJoao .cj-toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+#telaCenarioJoao .cj-toolbar button, #telaCenarioJoao .cj-lista button, #telaCenarioJoao .cj-fechar { min-height: 44px; padding: 10px 13px; border: 1px solid #39313f; border-radius: 12px; background: #17151d; color: #e4ddec; font-size: 13px; line-height: 1.4; box-shadow: none; }
+#telaCenarioJoao button[aria-pressed='true']:not(.cj-area) { border-color: #9273aa; background: #342442; color: #fff; }
+#telaCenarioJoao button:disabled { opacity: .5; cursor: default; }
+#telaCenarioJoao .cj-status { margin: 13px 0; min-height: 2.8em; color: #bfb6ca; font-size: 12px; line-height: 1.5; }
+#telaCenarioJoao .cj-rotulo { display: block; margin: 16px 0 9px; color: #c0b7ca; font-size: 12px; line-height: 1.5; }
+#telaCenarioJoao .cj-lista { display: flex; flex-wrap: wrap; gap: 7px; }
+#telaCenarioJoao .cj-painel { margin-top: 19px; padding: 19px; border: 1px solid #44364e; border-radius: 17px; background: linear-gradient(125deg,#ffffff06,transparent),#131217; }
+#telaCenarioJoao .cj-painel h2 { margin: 0 0 10px; color: #f3edf8; font: 600 21px/1.3 Arial,sans-serif; }
+#telaCenarioJoao .cj-painel p { margin: 10px 0; color: #bdb5c7; font-size: 12px; line-height: 1.65; }
+#telaCenarioJoao .cj-painel code { color: #d3bddf; font-size: 11px; overflow-wrap: anywhere; }
+#telaCenarioJoao .cj-painel:focus { outline: 2px solid #a88cbe; outline-offset: 3px; }
+#telaCenarioJoao .cj-erro { color: #ecc1c9; font-size: 13px; line-height: 1.6; }
+@media (prefers-reduced-motion: reduce) {
+    #telaCenarioJoao .cj-camada { transition: none !important; }
+}

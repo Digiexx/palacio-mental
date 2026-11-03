@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="temas.css">
     <link rel="stylesheet" href="assets/palacio-biblico/biblioteca.css">
+    <link rel="stylesheet" href="assets/palacio-biblico/cenario.css">
 
 </head>
 
@@ -5904,12 +5905,51 @@
                     </div>
                 </header>
                 <div class="pb-conteudo">
-                    <div class="pb-desenvolvimento">
+                    <div class="pb-desenvolvimento" id="acessoCenarioJoao" hidden>
+                        <span class="pb-selo">MUNDO DE JOÃO</span>
+                        <h2>Explore seu cenário</h2>
+                        <p>Conheça a casa, o jardim e o porto. Aproxime-se dos detalhes e descubra os primeiros objetos.</p>
+                        <button class="cj-entrar" id="btnExplorarCenarioJoao" type="button">Explorar cenário</button>
+                    </div>
+                    <div class="pb-desenvolvimento" id="provisorioLivroBiblico">
                         <span class="pb-selo">PRÓXIMA ETAPA</span>
                         <h2>Seu cenário está em desenvolvimento</h2>
                         <p>Em breve, este espaço receberá o cenário interativo, os objetos e suas associações pessoais.</p>
                         <p class="pb-nota">Nenhum cenário ou versículo foi cadastrado automaticamente.</p>
                     </div>
+                </div>
+            </section>
+            <section class="app-screen pb-tela" id="telaCenarioJoao" aria-labelledby="cjTitulo" hidden>
+                <header class="cj-cabecalho">
+                    <span class="pb-selo">PALÁCIO BÍBLICO</span>
+                    <h1 id="cjTitulo">João</h1>
+                    <p>Cenário interativo · Casa, Jardim e Porto</p>
+                </header>
+                <div class="cj-visor" id="cjVisor">
+                    <div class="cj-camada" id="cjCamada" hidden>
+                        <img class="cj-imagem" id="cjImagem" width="1672" height="941" draggable="false" alt="Panorama: casa de pedra à esquerda, jardim com poço e oliveira ao centro e porto com barco à direita.">
+                    </div>
+                </div>
+                <div class="cj-comandos">
+                    <div class="cj-toolbar">
+                        <button type="button" id="cjExplorar" aria-pressed="false" aria-controls="cjCamada" disabled>Explorar regiões</button>
+                        <button type="button" id="cjPanorama" aria-controls="cjVisor" disabled>Panorama completo</button>
+                    </div>
+                    <p class="cj-status" id="cjStatus" role="status">Carregando cenário…</p>
+                    <p class="cj-erro" id="cjErro" role="alert" hidden>Não foi possível carregar a imagem do cenário. Verifique a conexão ou tente novamente.</p>
+                    <button class="pb-tentar" id="cjTentar" type="button" hidden>Tentar novamente</button>
+                    <span class="cj-rotulo" id="cjRotuloRegioes">Selecionar região</span>
+                    <div class="cj-lista" id="cjRegioes" role="group" aria-labelledby="cjRotuloRegioes"></div>
+                    <div id="cjObjetosGrupo" hidden>
+                        <span class="cj-rotulo">Objetos da região</span>
+                        <div class="cj-lista" id="cjObjetos" role="group" aria-label="Selecionar objeto" hidden></div>
+                    </div>
+                    <section class="cj-painel" id="cjPainel" aria-labelledby="cjNomeObjeto" tabindex="-1" hidden>
+                        <h2 id="cjNomeObjeto"></h2>
+                        <p>Identificação do objeto: <code id="cjIdObjeto"></code></p>
+                        <p>Este painel identifica o ponto no cenário. Cadastro de associações e consulta de vínculos estarão disponíveis em uma próxima etapa.</p>
+                        <button class="cj-fechar" id="cjFecharObjeto" type="button">Fechar detalhes</button>
+                    </section>
                 </div>
             </section>
         </main>
@@ -5948,6 +5988,8 @@
     <script src="assets/palacio-biblico/repositorio.js"></script>
     <script src="assets/palacio-biblico/catalogo.js"></script>
     <script src="assets/palacio-biblico/biblioteca.js"></script>
+    <script src="assets/palacio-biblico/cenarios/joao.js"></script>
+    <script src="assets/palacio-biblico/cenario.js"></script>
     <script src="script.js"></script>
     <script src="home.js"></script>
 

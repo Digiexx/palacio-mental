@@ -5656,6 +5656,10 @@ document.addEventListener("DOMContentLoaded", () => {
             elemento: document.getElementById("telaLivroBiblico"),
             pai: "bibliotecaBiblica"
         },
+        cenarioJoao: {
+            elemento: document.getElementById("telaCenarioJoao"),
+            pai: "livroBiblico"
+        },
 
         home: {
             elemento: homePalacio,
@@ -5735,6 +5739,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // =====================================================
 
     const bibliotecaBiblica = globalThis.PalacioBiblico?.iniciarBiblioteca({navegar: navegarParaTela});
+    const cenarioJoao = globalThis.PalacioBiblico?.iniciarCenarioJoao();
+    document.getElementById("btnExplorarCenarioJoao")?.addEventListener("click", () => {
+        if (document.getElementById("telaLivroBiblico").dataset.livro === "JHN") navegarParaTela("cenarioJoao");
+    });
     document.getElementById("btnPalacioBiblico")?.addEventListener("click", () => navegarParaTela("bibliotecaBiblica"));
 
     function exibirTelaApp(
@@ -5790,6 +5798,7 @@ document.addEventListener("DOMContentLoaded", () => {
             false;
 
         if (nomeTela === "bibliotecaBiblica") bibliotecaBiblica?.abrir();
+        if (nomeTela === "cenarioJoao") cenarioJoao?.abrir(); else cenarioJoao?.suspender();
 
 
         // =================================================

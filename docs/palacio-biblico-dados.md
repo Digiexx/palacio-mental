@@ -194,3 +194,64 @@ imagens e favorito. Isso não substitui teste físico no PWA instalado nem atual
 de uma instalação antiga. Abertura dos módulos Numérica, Aprender, Memória na Prática,
 Lista Ancorada, Revisão e Aparência foi verificada sem erros JS não tratados nesse
 percurso. Não representa regressão completa de todos os treinos.
+
+## Cenário de João — Etapa 03 local
+
+Imagem revisada escolhida pelo usuário: `assets/imagens/palacio-biblico/joao/cenario-01.webp`,
+WebP VP8, 1672 × 941 px, 660262 bytes. SHA-256:
+`3307BDB139B3B5549285F8D3FD0C2097BCE0624BFD72D0350641D2F975EFDCAC`.
+O arquivo `rascunho-teste.webp` (371952 bytes) permanece preservado e não é usado
+pelo aplicativo. A imagem revisada não foi convertida, substituída ou alterada.
+
+O manifesto `assets/palacio-biblico/cenarios/joao.js` separa retângulos de
+enquadramento da câmera e áreas efetivas de toque. Origem no canto superior
+esquerdo da imagem integral; medidas normalizadas em 0–1. As áreas das regiões
+formam três faixas adjacentes, sem sobreposição. Os enquadramentos podem conter
+elementos vizinhos para preservar contexto. IDs são oficiais e imutáveis, não
+UUIDs pessoais. Não há mapeamento automático para registros do IndexedDB.
+
+| Região | Enquadramento x/y/largura/altura | Centro | Zoom | Toque x/y/largura/altura |
+| --- | --- | --- | --- | --- |
+| Casa | 0 / 0.10 / 0.43 / 0.80 | 0.215 / 0.50 | 2× | 0 / 0 / 0.30 / 1 |
+| Jardim | 0.29 / 0.03 / 0.42 / 0.72 | 0.50 / 0.39 | 2.2× | 0.30 / 0 / 0.40 / 1 |
+| Porto/Barco | 0.70 / 0.06 / 0.30 / 0.84 | 0.85 / 0.48 | 2.5× | 0.70 / 0 / 0.30 / 1 |
+
+Prefixo de ID de região: `joao-cenario-01-regiao-`, sufixos `casa`, `jardim`, `porto`.
+Prefixo de objeto: `joao-cenario-01-objeto-`. Retângulos dos quatro objetos:
+
+| Objeto / sufixo | Região | Toque x/y/largura/altura |
+| --- | --- | --- |
+| Porta da casa / porta | Casa | 0.105 / 0.285 / 0.11 / 0.32 |
+| Oliveira / oliveira | Jardim | 0.468 / 0.11 / 0.20 / 0.36 |
+| Poço / poco | Jardim | 0.302 / 0.32 / 0.143 / 0.365 |
+| Barco / barco | Porto | 0.82 / 0.07 / 0.18 / 0.47 |
+
+Somente regiões são clicáveis no panorama. Ao aproximar, somente objetos da região
+ficam ativos; os alvos de região são ocultados. Marcadores começam invisíveis e
+podem ser revelados. Há alternativas por botões nomeados fora da imagem. A mesma
+camada CSS contém imagem e alvos; escala e deslocamentos afetam tudo junto. O
+panorama usa ajuste proporcional integral, sem `cover`; faixas escuras são
+esperadas no visor vertical. A câmera é limitada às bordas, com máximo de 3×,
+e recalculada ao redimensionar. Movimento reduzido desativa a transição.
+
+Biblioteca → João → Cenário usa o mapa `telasApp` e o `popstate` existente.
+Zoom/seleção não criam entradas no histórico; Voltar do dispositivo retorna ao
+livro e Panorama completo restaura a câmera. Filipenses mantém a tela provisória.
+Entrar na casa, explorar outro jardim e entrar no barco são apenas reservas de
+expansão no manifesto; nenhuma dessas entradas foi implementada.
+
+O controlador do cenário não abre nem escreve IndexedDB/localStorage, não cria
+operações pendentes e não apresenta estados Livre/Vinculado. O painel identifica
+somente nome e ID do objeto. Cadastro, vínculos, versículos, flashcards e futuros
+cenários conectados dependem de nova autorização. O schema permanece intacto.
+
+Testes isolados: `tests/palacio-biblico-cenario.html` verifica 12 grupos de
+geometria sem abrir banco. No Chrome local, os 12 grupos passaram. A interação
+foi verificada em 360/430 px: aproximações, alinhamento, restauração e quatro
+objetos; toques emulados, Enter nativo, retorno de foco e movimento reduzido.
+Snapshots de todas as stores antes/depois de explorar foram idênticos. Voltar,
+Início, favorito e Filipenses foram conferidos. Com SW ativo e rede desativada
+no Chrome, recarga manteve favorito e cenário, inclusive seleção do barco.
+Falha simulada de decodificação exibiu erro e nova tentativa recuperou a imagem.
+Ainda faltam aparelho físico, leitor de tela, atualização de PWA antigo, medição
+de fluidez/bateria e regressão completa dos treinos. Não houve commit/publicação.

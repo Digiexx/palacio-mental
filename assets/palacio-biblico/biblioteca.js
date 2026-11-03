@@ -22,6 +22,8 @@
             document.getElementById('categoriaLivroBiblico').textContent = livro.categoria;
             document.getElementById('descricaoLivroBiblico').textContent = livro.descricao;
             document.getElementById('telaLivroBiblico').dataset.livro = codigo;
+            document.getElementById('acessoCenarioJoao').hidden = codigo !== 'JHN';
+            document.getElementById('provisorioLivroBiblico').hidden = codigo === 'JHN';
             navegar('livroBiblico');
         }
         function renderizar() {
