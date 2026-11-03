@@ -84,8 +84,144 @@
                 return persistir(t, tipo, r, anterior ? 'editar' : 'criar');
             });
         }
+        // API de persistência; não é chamada pelo cenário nem inicializa contexto na leitura.
+        const textoValido = v => typeof v === 'string' && v.trim().length > 0;
+        const canonico = v => v.trim().normalize('NFC').toUpperCase();
+        const nomeComparavel = v => v.trim().normalize('NFC').toLocaleLowerCase('pt-BR');
+        const chave = (tipo, valor) => JSON.stringify(['palacio-biblico', tipo, dono, valor]);
+        const posicaoIgual = (a, b) => a && b && ['x', 'y', 'largura', 'altura'].every(k => a[k] === b[k]);
+        function normalizarPosicao(p) {
+            PB.validar('objetos', {id: 'validacao', proprietarioLocalId: dono, cenarioId: 'validacao', nome: 'Validação', posicao: p});
+            return {x: p.x, y: p.y, largura: p.largura, altura: p.altura};
+        }
+        function prepararCadastro(dados) {
+            exigir(dados && Object.getPrototypeOf(dados) === Object.prototype, 'Cadastro inválido');
+            const permitidos = ['livro', 'cenarioOficial', 'regiaoOficialId', 'nome', 'posicao', 'operacaoId'];
+            exigir(Object.keys(dados).every(k => permitidos.includes(k)), 'Campo de cadastro desconhecido');
+            const d = structuredClone(dados), c = d.cenarioOficial;
+            exigir(textoValido(d.operacaoId) && textoValido(d.nome), 'Operação e nome obrigatórios');
+            exigir(d.livro && textoValido(d.livro.codigo) && textoValido(d.livro.nome), 'Livro inválido');
+            exigir(c && textoValido(c.id) && textoValido(c.imagem) && Number.isInteger(c.largura) && c.largura > 0 && Number.isInteger(c.altura) && c.altura > 0, 'Cenário oficial inválido');
+            exigir(Array.isArray(c.regioes) && c.regioes.length > 0 && Array.isArray(c.objetos), 'Manifesto incompleto');
+            const regioes = c.regioes.map(r => {
+                exigir(textoValido(r.id) && textoValido(r.nome), 'Região oficial inválida');
+                return {id: r.id, nome: r.nome, posicao: normalizarPosicao(r.toque)};
+            });
+            exigir(new Set(regioes.map(r => r.id)).size === regioes.length, 'Regiões oficiais duplicadas');
+            const objetos = c.objetos.map(o => {
+                exigir(textoValido(o.id) && regioes.some(r => r.id === o.regiaoId), 'Objeto oficial inválido');
+                return {id: o.id, regiaoId: o.regiaoId, posicao: normalizarPosicao(o.toque)};
+            });
+            exigir(new Set([c.id, ...regioes.map(r => r.id), ...objetos.map(o => o.id)]).size === 1 + regioes.length + objetos.length, 'IDs oficiais duplicados');
+            const regiao = regioes.find(r => r.id === d.regiaoOficialId);
+            exigir(regiao, 'Região inexistente no cenário oficial');
+            const geometria = JSON.stringify({id: c.id, imagem: c.imagem, largura: c.largura, altura: c.altura,
+                regioes: [...regioes].sort((a, b) => a.id.localeCompare(b.id)).map(r => ({id: r.id, posicao: r.posicao})),
+                objetos: [...objetos].sort((a, b) => a.id.localeCompare(b.id))});
+            const pedido = {cenarioOficialId: c.id, geometria, codigoLivro: canonico(d.livro.codigo),
+                regiaoOficialId: regiao.id, nome: d.nome.trim().normalize('NFC'), posicao: normalizarPosicao(d.posicao)};
+            return {pedido, assinatura: JSON.stringify(pedido), operacaoId: d.operacaoId, regiao,
+                nomeLivro: d.livro.nome.trim(), imagem: c.imagem};
+        }
+        async function validarContexto(t, mapa) {
+            exigir(mapa.proprietarioLocalId === dono && mapa.tipo === 'contexto-cenario' && Array.isArray(mapa.regioes), 'Mapeamento de cenário inválido ou de outro proprietário');
+            const livro = await ler(t, 'livros', mapa.livroId);
+            const cenario = await ler(t, 'cenarios', mapa.cenarioId);
+            exigir(canonico(livro.codigo) === mapa.codigoLivro && cenario.livroId === livro.id && cenario.imagem === mapa.imagem, 'Contexto pessoal inconsistente');
+            const ids = new Set(), pessoais = new Set();
+            for (const item of mapa.regioes) {
+                exigir(!ids.has(item.oficialId) && !pessoais.has(item.pessoalId), 'Mapeamento de região duplicado');
+                ids.add(item.oficialId); pessoais.add(item.pessoalId);
+                const r = await ler(t, 'regioes', item.pessoalId);
+                exigir(r.cenarioId === cenario.id && posicaoIgual(r.posicao, item.posicao), 'Região pessoal inconsistente');
+            }
+        }
+        async function cadastrarObjetoPessoal(dados) {
+            const d = prepararCadastro(dados), p = d.pedido;
+            return tx(db, [...PB.tipos, 'metadados', 'operacoes'], 'readwrite', async t => {
+                const meta = t.objectStore('metadados');
+                const contextoId = chave('contexto-cenario', p.cenarioOficialId);
+                const reciboId = chave('cadastro-objeto', d.operacaoId);
+                const recibo = await req(meta.get(reciboId));
+                let mapa = await req(meta.get(contextoId));
+                if (recibo) {
+                    exigir(recibo.proprietarioLocalId === dono && recibo.tipo === 'cadastro-objeto' && recibo.assinatura === d.assinatura && recibo.contextoId === contextoId, 'Identificador de operação reutilizado com dados diferentes');
+                    exigir(mapa, 'Operação aponta para contexto inexistente');
+                    await validarContexto(t, mapa);
+                    exigir(mapa.cenarioOficialId === p.cenarioOficialId && mapa.codigoLivro === p.codigoLivro && mapa.geometria === p.geometria, 'Contexto diverge da operação original');
+                    const salvo = await ler(t, 'objetos', recibo.objetoId);
+                    exigir(salvo.cenarioId === mapa.cenarioId, 'Operação aponta para objeto de outro cenário');
+                    return salvo;
+                }
+                const agora = new Date().toISOString();
+                const criar = async (tipo, entrada) => {
+                    const r = {...entrada, id: PB.novoId(), proprietarioLocalId: dono, criadoEm: agora, atualizadoEm: agora, revisao: 1};
+                    PB.validar(tipo, r);
+                    await verificarReferencias(t, tipo, r, null);
+                    return persistir(t, tipo, r, 'criar');
+                };
+                if (mapa) {
+                    await validarContexto(t, mapa);
+                    exigir(mapa.cenarioOficialId === p.cenarioOficialId && mapa.codigoLivro === p.codigoLivro && mapa.geometria === p.geometria, 'Geometria ou livro do contexto diverge; migração explícita necessária');
+                } else {
+                    const livros = await req(t.objectStore('livros').index('proprietario').getAll(dono));
+                    const candidatosLivro = livros.filter(l => canonico(l.codigo) === p.codigoLivro);
+                    exigir(candidatosLivro.length <= 1, 'Livros duplicados: contexto não pode ser escolhido automaticamente');
+                    const livro = candidatosLivro[0] || await criar('livros', {nome: d.nomeLivro, codigo: p.codigoLivro});
+                    const cenarios = await req(t.objectStore('cenarios').index('proprietario').getAll(dono));
+                    const candidatos = cenarios.filter(c => c.livroId === livro.id && c.imagem === d.imagem);
+                    exigir(candidatos.length <= 1, 'Cenários duplicados: mapeamento ambíguo');
+                    if (!candidatos.length) exigir(!cenarios.some(c => c.livroId === livro.id && nomeComparavel(c.nome) === nomeComparavel(`Cenário de ${d.nomeLivro}`)), 'Cenário existente sem imagem correspondente; confirmação de mapeamento necessária');
+                    const cenario = candidatos[0] || await criar('cenarios', {livroId: livro.id, nome: `Cenário de ${d.nomeLivro}`, imagem: d.imagem});
+                    const mapas = await req(meta.getAll());
+                    exigir(!mapas.some(m => m.tipo === 'contexto-cenario' && m.proprietarioLocalId === dono && m.cenarioId === cenario.id && m.cenarioOficialId !== p.cenarioOficialId), 'Cenário pessoal já mapeado para outro cenário oficial');
+                    mapa = {id: contextoId, tipo: 'contexto-cenario', proprietarioLocalId: dono,
+                        cenarioOficialId: p.cenarioOficialId, geometria: p.geometria, codigoLivro: p.codigoLivro,
+                        livroId: livro.id, cenarioId: cenario.id, imagem: d.imagem, regioes: [], criadoEm: agora};
+                }
+                let vinculoRegiao = mapa.regioes.find(r => r.oficialId === d.regiao.id);
+                if (!vinculoRegiao) {
+                    const regioes = await req(t.objectStore('regioes').index('proprietario').getAll(dono));
+                    const candidatos = regioes.filter(r => r.cenarioId === mapa.cenarioId &&
+                        (nomeComparavel(r.nome) === nomeComparavel(d.regiao.nome) || posicaoIgual(r.posicao, d.regiao.posicao)));
+                    exigir(candidatos.length <= 1, 'Regiões duplicadas: mapeamento ambíguo');
+                    const existente = candidatos[0];
+                    if (existente) exigir(nomeComparavel(existente.nome) === nomeComparavel(d.regiao.nome) && posicaoIgual(existente.posicao, d.regiao.posicao), 'Região existente diverge da geometria oficial; confirmação de mapeamento necessária');
+                    const regiao = existente || await criar('regioes', {cenarioId: mapa.cenarioId, nome: d.regiao.nome, posicao: d.regiao.posicao});
+                    exigir(!mapa.regioes.some(r => r.pessoalId === regiao.id), 'Região pessoal já mapeada');
+                    vinculoRegiao = {oficialId: d.regiao.id, pessoalId: regiao.id, posicao: d.regiao.posicao};
+                    mapa.regioes.push(vinculoRegiao);
+                }
+                const objetos = await req(t.objectStore('objetos').index('proprietario').getAll(dono));
+                const repetidos = objetos.filter(o => o.cenarioId === mapa.cenarioId && o.regiaoId === vinculoRegiao.pessoalId &&
+                    nomeComparavel(o.nome) === nomeComparavel(p.nome) && posicaoIgual(o.posicao, p.posicao));
+                exigir(repetidos.length <= 1, 'Objetos duplicados: cadastro ambíguo');
+                const objeto = repetidos[0] || await criar('objetos', {cenarioId: mapa.cenarioId, regiaoId: vinculoRegiao.pessoalId, nome: p.nome, posicao: p.posicao});
+                await req(meta.put(mapa));
+                await req(meta.add({id: reciboId, tipo: 'cadastro-objeto', proprietarioLocalId: dono,
+                    contextoId, objetoId: objeto.id, assinatura: d.assinatura, criadoEm: agora}));
+                return objeto;
+            });
+        }
+        function consultarObjetosPessoais(cenarioOficialId) {
+            exigir(textoValido(cenarioOficialId), 'Identificador de cenário obrigatório');
+            return tx(db, ['metadados', 'livros', 'cenarios', 'regioes', 'objetos'], 'readonly', async t => {
+                const mapa = await req(t.objectStore('metadados').get(chave('contexto-cenario', cenarioOficialId)));
+                if (!mapa) return [];
+                exigir(mapa.cenarioOficialId === cenarioOficialId, 'Mapeamento oficial inconsistente');
+                await validarContexto(t, mapa);
+                const objetos = (await req(t.objectStore('objetos').index('proprietario').getAll(dono))).filter(o => o.cenarioId === mapa.cenarioId);
+                for (const o of objetos) {
+                    PB.validar('objetos', o);
+                    if (o.regiaoId) exigir((await ler(t, 'regioes', o.regiaoId)).cenarioId === mapa.cenarioId, 'Objeto aponta para região de outro cenário');
+                }
+                return objetos;
+            });
+        }
         return Object.freeze({
             proprietarioLocalId: dono,
+            cadastrarObjetoPessoal,
+            consultarObjetosPessoais,
             criar: (tipo, dados) => gravar(tipo, null, dados),
             editar(tipo, id, dados) {
                 exigir(typeof id === 'string' && id.trim().length > 0, 'Identificador de edição obrigatório');

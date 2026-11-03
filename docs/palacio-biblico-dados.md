@@ -255,3 +255,109 @@ no Chrome, recarga manteve favorito e cenário, inclusive seleção do barco.
 Falha simulada de decodificação exibiu erro e nova tentativa recuperou a imagem.
 Ainda faltam aparelho físico, leitor de tela, atualização de PWA antigo, medição
 de fluidez/bateria e regressão completa dos treinos. Não houve commit/publicação.
+
+## Persistência de objetos pessoais — Etapa 04.1
+
+A Etapa 03 foi preservada no commit local
+`02d8b44e69a5ea6f5e8fa79f0d94021c673fdad8`, após nova validação. Os resultados
+da seção anterior são o registro histórico da implementação original.
+
+Esta etapa acrescenta somente APIs no repositório e testes isolados. Não conecta
+cadastro à interface, não cadastra os quatro objetos oficiais no banco e não
+modifica seus identificadores, posições ou manifesto. O schema continua em 1,
+sem migração, novas stores ou alteração dos índices de unicidade de vínculos.
+
+### Cadastro e consulta
+
+`repositorio.cadastrarObjetoPessoal(dados)` recebe:
+
+- `livro`: `{codigo, nome}`, por exemplo o livro João do catálogo existente;
+- `cenarioOficial`: manifesto completo de João, incluindo imagem, dimensões,
+  regiões e objetos oficiais;
+- `regiaoOficialId`: identificador estável da região oficial;
+- `nome`: nome informado pela pessoa;
+- `posicao`: `{x, y, largura, altura}` normalizados sobre a imagem original;
+- `operacaoId`: token estável, gerado uma vez por intenção de cadastro e
+  reutilizado em todas as tentativas dessa mesma operação.
+
+Retorna o objeto pessoal persistido, com UUID e proprietário local. Não recebe
+versículo nem cria vínculo. Coordenadas devem ser finitas, entre 0 e 1, com
+dimensões positivas e retângulo integralmente dentro da imagem. A região é
+validada no manifesto; a área do objeto não precisa ficar contida na faixa de
+toque da região, pois elementos visuais podem ultrapassá-la.
+
+`repositorio.consultarObjetosPessoais(cenarioOficialId)` retorna os objetos do
+cenário pessoal mapeado. Sem mapeamento, retorna `[]`. A consulta é somente de
+leitura: não cria contexto, objetos ou operações. A abertura do repositório
+continua usando a identidade local já prevista na Etapa 01; a interface do
+cenário permanece sem chamar essas APIs.
+
+### Mapeamento e reaproveitamento
+
+São utilizados registros auxiliares na store `metadados`, separados da identidade
+local. As chaves são arrays serializados em JSON com namespace, tipo,
+proprietário e identificador oficial ou token da operação, evitando colisões.
+
+O registro `contexto-cenario` guarda o ID oficial, livro e cenário pessoais,
+correspondências entre IDs oficiais e UUIDs de regiões, imagem e assinatura da
+geometria oficial. A região pessoal usa a área `toque` do manifesto, não o
+enquadramento da câmera. Regiões são materializadas somente quando recebem seu
+primeiro objeto. Os quatro objetos oficiais permanecem exclusivamente estáticos.
+
+O livro é reutilizado pelo código canônico. O cenário é reutilizado quando livro
+e caminho da imagem coincidem. Uma região existente é reutilizada quando nome
+normalizado e retângulo coincidem. Favorito, nome e demais dados existentes não
+são sobrescritos. Candidatos múltiplos, nome de cenário conhecido com outra imagem,
+região parcialmente correspondente ou geometria oficial alterada interrompem a
+operação, sem tentar corrigir ou duplicar silenciosamente os dados. Esses casos
+exigem futura decisão explícita de mapeamento/migração.
+
+### Atomicidade e idempotência
+
+Contexto, região, objeto, mapeamento, comprovante da operação e fila são gravados
+na mesma transação IndexedDB `readwrite`. A promessa somente conclui quando a
+transação confirma. Falha em qualquer gravação aborta todas as alterações.
+Transações com as mesmas stores são serializadas também entre conexões/abas.
+
+Cada entidade pessoal nova gera exatamente uma operação pendente com seu
+snapshot. Mapeamentos e comprovantes são infraestrutura local e não geram
+operações remotas nesta etapa. Uma sincronização/backup futuro deverá definir
+explicitamente como transportar ou reconstruir esses metadados; não há Supabase
+nem envio de operações implementado.
+
+Repetir o token com a mesma assinatura retorna o mesmo objeto sem novas
+gravações; repetir com dados diferentes é rejeitado. Mesmo com tokens diferentes,
+cadastros com cenário, região, nome normalizado e retângulo idênticos reutilizam
+o objeto e não duplicam a fila. Cada novo token mantém seu comprovante local.
+Objetos com dados distintos são intenções distintas; deduplicação aproximada e
+controle visual de sobreposição pertencem à interface futura. Comprovantes não
+são removidos automaticamente. A API genérica anterior continua disponível;
+a futura interface deve usar a nova operação transacional para esse fluxo.
+
+As proteções existentes de um versículo por objeto, unicidade inversa do
+versículo e imutabilidade da posição de objetos vinculados permanecem intactas.
+
+### Validação local
+
+`tests/palacio-biblico-objetos.html` executa 19 grupos no IndexedDB real do Chrome:
+cadastro sem versículo; consulta sem efeitos; reuso de contexto e favorito;
+idempotência; duas conexões concorrentes; rollback na fila e no comprovante;
+geometria inválida e borda válida; ambiguidade e mudança do manifesto; proteção
+de proprietário e referências; vínculos; reabertura e recarga real; preservação
+do manifesto e do localStorage. Usa somente bancos com prefixo de teste.
+
+Os 19 grupos passaram, inclusive após recarga real e com rede desativada pelo
+protocolo do Chrome, executando novamente a suíte previamente carregada. Isso
+valida a persistência sem rede, não a instalação/atualização offline da PWA.
+Os 13 grupos da suíte de dados anterior e os 12 de geometria também passaram.
+Verificação de sintaxe pelo motor do Chrome passou para os sete scripts
+inspecionados. Nenhuma dependência foi instalada.
+O fluxo Biblioteca → João → Cenário, Voltar ao livro e Início foi repetido após
+a alteração. Comparação de todas as stores antes/depois de abrir o cenário foi
+idêntica, confirmando ausência de cadastro automático nesse percurso.
+
+Pendências: aparelho físico, quota real/disco cheio, encerramento abrupto do
+navegador/sistema, concorrência manual em duas abas e regressão completa dos
+treinos. Concorrência automatizada foi exercitada em duas conexões distintas
+na mesma página. A Etapa 04.2 poderá construir a interface de edição sobre essas
+APIs, mediante autorização própria.
