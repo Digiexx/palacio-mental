@@ -68,9 +68,9 @@ const bancoMemoria = [
     {
         numero: 5,
         codigo: "L",
-        palavra: "Lua",
-        categoria: "objeto",
-        imagem: "assets/imagens/memoria-numerica/numeros/05-lua.webp",
+        palavra: "Leão",
+        categoria: "animal",
+        imagem: "assets/imagens/memoria-numerica/numeros/05-leao.webp",
         dominado: false
     },
 
