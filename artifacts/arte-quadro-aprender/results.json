@@ -1,0 +1,163 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "samples": [
+        {
+          "number": "02",
+          "word": "NOÉ",
+          "overflow": false,
+          "numberTop": 221.234375,
+          "imageTop": 270.234375,
+          "buttonTop": 602.78125,
+          "imageBottom": 590.78125,
+          "primary": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+          "loaded": true,
+          "dots": 4,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "afterNext": "Imagem 2 de 4",
+          "afterPrevious": "Imagem 1 de 4"
+        },
+        {
+          "number": "76",
+          "word": "HOMEM FASE",
+          "overflow": false,
+          "numberTop": 233.234375,
+          "imageTop": 282.234375,
+          "buttonTop": 590.78125,
+          "imageBottom": 578.78125,
+          "primary": "assets/imagens/memoria-numerica/numeros/76-fase.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        },
+        {
+          "number": "79",
+          "word": "FIPINHO",
+          "overflow": false,
+          "numberTop": 233.234375,
+          "imageTop": 282.234375,
+          "buttonTop": 590.78125,
+          "imageBottom": 578.78125,
+          "primary": "assets/imagens/memoria-numerica/numeros/79-fipinho.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        },
+        {
+          "number": "87",
+          "word": "GEFINHO",
+          "overflow": false,
+          "numberTop": 233.234375,
+          "imageTop": 282.234375,
+          "buttonTop": 590.78125,
+          "imageBottom": 578.78125,
+          "primary": "assets/imagens/memoria-numerica/numeros/87-gefinho.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        },
+        {
+          "number": "100",
+          "word": "TORRE",
+          "overflow": false,
+          "numberTop": 233.234375,
+          "imageTop": 282.234375,
+          "buttonTop": 590.78125,
+          "imageBottom": 578.78125,
+          "primary": "assets/imagens/memoria-numerica/numeros/100-torre.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        }
+      ],
+      "rangeOpen": true,
+      "rangeNumber": "10"
+    },
+    {
+      "width": 430,
+      "samples": [
+        {
+          "number": "02",
+          "word": "NOÉ",
+          "overflow": false,
+          "numberTop": 191.828125,
+          "imageTop": 240.828125,
+          "buttonTop": 632.1875,
+          "imageBottom": 620.1875,
+          "primary": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+          "loaded": true,
+          "dots": 4,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "afterNext": "Imagem 2 de 4",
+          "afterPrevious": "Imagem 1 de 4"
+        },
+        {
+          "number": "76",
+          "word": "HOMEM FASE",
+          "overflow": false,
+          "numberTop": 203.828125,
+          "imageTop": 252.828125,
+          "buttonTop": 620.1875,
+          "imageBottom": 608.1875,
+          "primary": "assets/imagens/memoria-numerica/numeros/76-fase.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        },
+        {
+          "number": "79",
+          "word": "FIPINHO",
+          "overflow": false,
+          "numberTop": 203.828125,
+          "imageTop": 252.828125,
+          "buttonTop": 620.1875,
+          "imageBottom": 608.1875,
+          "primary": "assets/imagens/memoria-numerica/numeros/79-fipinho.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        },
+        {
+          "number": "87",
+          "word": "GEFINHO",
+          "overflow": false,
+          "numberTop": 203.828125,
+          "imageTop": 252.828125,
+          "buttonTop": 620.1875,
+          "imageBottom": 608.1875,
+          "primary": "assets/imagens/memoria-numerica/numeros/87-gefinho.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        },
+        {
+          "number": "100",
+          "word": "TORRE",
+          "overflow": false,
+          "numberTop": 203.828125,
+          "imageTop": 252.828125,
+          "buttonTop": 620.1875,
+          "imageBottom": 608.1875,
+          "primary": "assets/imagens/memoria-numerica/numeros/100-torre.webp",
+          "loaded": true,
+          "dots": 1,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)"
+        }
+      ],
+      "rangeOpen": true,
+      "rangeNumber": "10"
+    }
+  ],
+  "errors": []
+}

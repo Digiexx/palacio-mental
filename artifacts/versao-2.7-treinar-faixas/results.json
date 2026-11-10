@@ -1,0 +1,221 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "fixar": {
+        "panel": [
+          "56px 12px 14px",
+          "radial-gradient(at 0% 0%, rgba(238, 232, 255, 0.094), rgba(0, 0, 0, 0) 65%), radial-gradient(at 100% 100%, rgba(203, 185, 229, 0.05), rgba(0, 0, 0, 0) 65%), linear-gradient(160deg, rgba(27, 27, 33, 0.93), rgba(8, 8, 11, 0.96))",
+          "",
+          "16px",
+          "0px 0px 12px"
+        ],
+        "grid": [
+          "50px 50px 50px 50px 50px",
+          "6px"
+        ],
+        "button": [
+          "44px",
+          "7px 2px",
+          "1px solid rgba(0, 0, 0, 0)",
+          "9px",
+          "650 11px / 13.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "linear-gradient(rgb(9, 9, 13), rgb(9, 9, 13)), linear-gradient(115deg, rgb(36, 36, 40), rgb(68, 68, 73) 28%, rgb(102, 102, 107) 48%, rgb(53, 53, 58) 72%, rgb(24, 24, 28))"
+        ],
+        "active": "linear-gradient(145deg, rgb(48, 32, 63), rgb(27, 20, 36)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))"
+      },
+      "treinar": {
+        "panel": [
+          "16px",
+          "linear-gradient(rgba(37, 40, 48, 0.97), rgba(23, 25, 29, 0.99))",
+          "1px solid rgba(157, 92, 255, 0.21)",
+          "19px",
+          "-6px 0px 17px"
+        ],
+        "grid": [
+          "129px 129px",
+          "8px"
+        ],
+        "button": [
+          "43px",
+          "8px 10px",
+          "1px solid rgba(157, 92, 255, 0.14)",
+          "12px",
+          "800 11px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "none"
+        ],
+        "active": "linear-gradient(135deg, rgba(157, 92, 255, 0.3), rgba(157, 92, 255, 0.18))"
+      },
+      "checks": {},
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixar": {
+        "panel": [
+          "56px 12px 14px",
+          "radial-gradient(at 0% 0%, rgba(238, 232, 255, 0.094), rgba(0, 0, 0, 0) 65%), radial-gradient(at 100% 100%, rgba(203, 185, 229, 0.05), rgba(0, 0, 0, 0) 65%), linear-gradient(160deg, rgba(27, 27, 33, 0.93), rgba(8, 8, 11, 0.96))",
+          "",
+          "16px",
+          "0px 0px 12px"
+        ],
+        "grid": [
+          "50px 50px 50px 50px 50px",
+          "6px"
+        ],
+        "button": [
+          "44px",
+          "7px 2px",
+          "1px solid rgba(0, 0, 0, 0)",
+          "9px",
+          "650 11px / 13.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "linear-gradient(rgb(9, 9, 13), rgb(9, 9, 13)), linear-gradient(115deg, rgb(36, 36, 40), rgb(68, 68, 73) 28%, rgb(102, 102, 107) 48%, rgb(53, 53, 58) 72%, rgb(24, 24, 28))"
+        ],
+        "active": "linear-gradient(145deg, rgb(48, 32, 63), rgb(27, 20, 36)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))"
+      },
+      "treinar": {
+        "panel": [
+          "56px 12px 14px",
+          "radial-gradient(at 0% 0%, rgba(238, 232, 255, 0.094), rgba(0, 0, 0, 0) 65%), radial-gradient(at 100% 100%, rgba(203, 185, 229, 0.05), rgba(0, 0, 0, 0) 65%), linear-gradient(160deg, rgba(27, 27, 33, 0.93), rgba(8, 8, 11, 0.96))",
+          "",
+          "16px",
+          "0px 0px 12px"
+        ],
+        "grid": [
+          "50px 50px 50px 50px 50px",
+          "6px"
+        ],
+        "button": [
+          "44px",
+          "7px 2px",
+          "1px solid rgba(0, 0, 0, 0)",
+          "9px",
+          "650 11px / 13.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "linear-gradient(rgb(9, 9, 13), rgb(9, 9, 13)), linear-gradient(115deg, rgb(36, 36, 40), rgb(68, 68, 73) 28%, rgb(102, 102, 107) 48%, rgb(53, 53, 58) 72%, rgb(24, 24, 28))"
+        ],
+        "active": "linear-gradient(145deg, rgb(48, 32, 63), rgb(27, 20, 36)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))"
+      },
+      "checks": {
+        "styles": true,
+        "columns": true,
+        "geometry": true,
+        "close": true,
+        "ranges": true,
+        "persistence": true,
+        "escape": true
+      },
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixar": {
+        "panel": [
+          "56px 12px 14px",
+          "radial-gradient(at 0% 0%, rgba(238, 232, 255, 0.094), rgba(0, 0, 0, 0) 65%), radial-gradient(at 100% 100%, rgba(203, 185, 229, 0.05), rgba(0, 0, 0, 0) 65%), linear-gradient(160deg, rgba(27, 27, 33, 0.93), rgba(8, 8, 11, 0.96))",
+          "",
+          "16px",
+          "0px 0px 12px"
+        ],
+        "grid": [
+          "64px 64px 64px 64px 64px",
+          "6px"
+        ],
+        "button": [
+          "44px",
+          "7px 2px",
+          "1px solid rgba(0, 0, 0, 0)",
+          "9px",
+          "650 12px / 14.4px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "linear-gradient(rgb(9, 9, 13), rgb(9, 9, 13)), linear-gradient(115deg, rgb(36, 36, 40), rgb(68, 68, 73) 28%, rgb(102, 102, 107) 48%, rgb(53, 53, 58) 72%, rgb(24, 24, 28))"
+        ],
+        "active": "linear-gradient(145deg, rgb(48, 32, 63), rgb(27, 20, 36)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))"
+      },
+      "treinar": {
+        "panel": [
+          "16px",
+          "linear-gradient(rgba(37, 40, 48, 0.97), rgba(23, 25, 29, 0.99))",
+          "1px solid rgba(157, 92, 255, 0.21)",
+          "19px",
+          "-6px 0px 17px"
+        ],
+        "grid": [
+          "164px 164px",
+          "8px"
+        ],
+        "button": [
+          "43px",
+          "8px 10px",
+          "1px solid rgba(157, 92, 255, 0.14)",
+          "12px",
+          "800 11px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "none"
+        ],
+        "active": "linear-gradient(135deg, rgba(157, 92, 255, 0.3), rgba(157, 92, 255, 0.18))"
+      },
+      "checks": {},
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixar": {
+        "panel": [
+          "56px 12px 14px",
+          "radial-gradient(at 0% 0%, rgba(238, 232, 255, 0.094), rgba(0, 0, 0, 0) 65%), radial-gradient(at 100% 100%, rgba(203, 185, 229, 0.05), rgba(0, 0, 0, 0) 65%), linear-gradient(160deg, rgba(27, 27, 33, 0.93), rgba(8, 8, 11, 0.96))",
+          "",
+          "16px",
+          "0px 0px 12px"
+        ],
+        "grid": [
+          "64px 64px 64px 64px 64px",
+          "6px"
+        ],
+        "button": [
+          "44px",
+          "7px 2px",
+          "1px solid rgba(0, 0, 0, 0)",
+          "9px",
+          "650 12px / 14.4px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "linear-gradient(rgb(9, 9, 13), rgb(9, 9, 13)), linear-gradient(115deg, rgb(36, 36, 40), rgb(68, 68, 73) 28%, rgb(102, 102, 107) 48%, rgb(53, 53, 58) 72%, rgb(24, 24, 28))"
+        ],
+        "active": "linear-gradient(145deg, rgb(48, 32, 63), rgb(27, 20, 36)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))"
+      },
+      "treinar": {
+        "panel": [
+          "56px 12px 14px",
+          "radial-gradient(at 0% 0%, rgba(238, 232, 255, 0.094), rgba(0, 0, 0, 0) 65%), radial-gradient(at 100% 100%, rgba(203, 185, 229, 0.05), rgba(0, 0, 0, 0) 65%), linear-gradient(160deg, rgba(27, 27, 33, 0.93), rgba(8, 8, 11, 0.96))",
+          "",
+          "16px",
+          "0px 0px 12px"
+        ],
+        "grid": [
+          "64px 64px 64px 64px 64px",
+          "6px"
+        ],
+        "button": [
+          "44px",
+          "7px 2px",
+          "1px solid rgba(0, 0, 0, 0)",
+          "9px",
+          "650 12px / 14.4px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "linear-gradient(rgb(9, 9, 13), rgb(9, 9, 13)), linear-gradient(115deg, rgb(36, 36, 40), rgb(68, 68, 73) 28%, rgb(102, 102, 107) 48%, rgb(53, 53, 58) 72%, rgb(24, 24, 28))"
+        ],
+        "active": "linear-gradient(145deg, rgb(48, 32, 63), rgb(27, 20, 36)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))"
+      },
+      "checks": {
+        "styles": true,
+        "columns": true,
+        "geometry": true,
+        "close": true,
+        "ranges": true,
+        "persistence": true,
+        "escape": true
+      },
+      "pass": true
+    }
+  ],
+  "errors": []
+}

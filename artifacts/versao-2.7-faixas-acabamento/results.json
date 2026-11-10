@@ -1,0 +1,825 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "fixture": "empty",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflow": false,
+      "gap": "10px",
+      "ranges": [
+        {
+          "label": "00–09",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "10–19",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "20–29",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "30–39",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "40–49",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "50–59",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "60–69",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "70–79",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "80–89",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "90–99",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "100",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0.0078125,
+          "line": "rgba(0, 0, 0, 0)",
+          "animation": "none"
+        }
+      ],
+      "pass": true,
+      "scroll": {
+        "left": 382,
+        "visible": true,
+        "overflow": false
+      }
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "fixture": "partial",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflow": false,
+      "gap": "10px",
+      "ranges": [
+        {
+          "label": "00–09",
+          "percent": "26%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "10–19",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "20–29",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "30–39",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "40–49",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "50–59",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "60–69",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "70–79",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "80–89",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "90–99",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "100",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0.0078125,
+          "line": "rgba(0, 0, 0, 0)",
+          "animation": "none"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "fixture": "full",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "overflow": false,
+      "gap": "10px",
+      "ranges": [
+        {
+          "label": "00–09",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "10–19",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "20–29",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "30–39",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "40–49",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "50–59",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "60–69",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "70–79",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "80–89",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "90–99",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "100",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0.0078125,
+          "line": "rgba(0, 0, 0, 0)",
+          "animation": "none"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "fixture": "empty",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "overflow": false,
+      "gap": "10px",
+      "ranges": [
+        {
+          "label": "00–09",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "10–19",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "20–29",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "30–39",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "40–49",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "50–59",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "60–69",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "70–79",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "80–89",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "90–99",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "100",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0.0078125,
+          "line": "rgba(0, 0, 0, 0)",
+          "animation": "none"
+        }
+      ],
+      "pass": true,
+      "scroll": {
+        "left": 312,
+        "visible": true,
+        "overflow": false
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "fixture": "partial",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "overflow": false,
+      "gap": "10px",
+      "ranges": [
+        {
+          "label": "00–09",
+          "percent": "26%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "10–19",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "20–29",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "30–39",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "40–49",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "50–59",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "60–69",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "70–79",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "80–89",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "90–99",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "100",
+          "percent": "0%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0.0078125,
+          "line": "rgba(0, 0, 0, 0)",
+          "animation": "none"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "fixture": "full",
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "overflow": false,
+      "gap": "10px",
+      "ranges": [
+        {
+          "label": "00–09",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "10–19",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "20–29",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "30–39",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "40–49",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "50–59",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "60–69",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "70–79",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "80–89",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "90–99",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0,
+          "line": "rgba(140, 101, 197, 0.4)",
+          "animation": "none"
+        },
+        {
+          "label": "100",
+          "percent": "100%",
+          "diameter": [
+            52,
+            52
+          ],
+          "centerDelta": 0.0078125,
+          "line": "rgba(0, 0, 0, 0)",
+          "animation": "none"
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "errors": []
+}

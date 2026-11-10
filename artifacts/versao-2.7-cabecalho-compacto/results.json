@@ -1,0 +1,329 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "rects": [
+        {
+          "top": 30,
+          "left": 0,
+          "width": 360,
+          "height": 210,
+          "bottom": 240
+        },
+        {
+          "top": 111.21875,
+          "left": 0,
+          "width": 360,
+          "height": 102.78125,
+          "bottom": 214
+        },
+        {
+          "top": 111.21875,
+          "left": 161,
+          "width": 38,
+          "height": 38,
+          "bottom": 149.21875
+        },
+        {
+          "top": 250,
+          "left": 32,
+          "width": 296,
+          "height": 40,
+          "bottom": 290
+        },
+        {
+          "top": 304,
+          "left": 32,
+          "width": 296,
+          "height": 96,
+          "bottom": 400
+        },
+        {
+          "top": 414,
+          "left": 32,
+          "width": 296,
+          "height": 158,
+          "bottom": 572
+        },
+        {
+          "top": 586,
+          "left": 32,
+          "width": 296,
+          "height": 212.59375,
+          "bottom": 798.59375
+        },
+        {
+          "top": 1197.59375,
+          "left": 32,
+          "width": 296,
+          "height": 204.890625,
+          "bottom": 1402.484375
+        },
+        {
+          "top": 1416.484375,
+          "left": 32,
+          "width": 296,
+          "height": 83,
+          "bottom": 1499.484375
+        }
+      ],
+      "overflow": false,
+      "indicator": true,
+      "scrollHeight": 1708,
+      "storage": "{\"0\":{\"pontos\":74,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"acerto\",\"acertosConsecutivos\":3,\"errosConsecutivos\":0,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}},\"1\":{\"pontos\":24,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"erro\",\"acertosConsecutivos\":0,\"errosConsecutivos\":2,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}}}"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "rects": [
+        {
+          "top": 30,
+          "left": 0,
+          "width": 360,
+          "height": 180,
+          "bottom": 210
+        },
+        {
+          "top": 81.21875,
+          "left": 0,
+          "width": 360,
+          "height": 102.78125,
+          "bottom": 184
+        },
+        {
+          "top": 81.21875,
+          "left": 161,
+          "width": 38,
+          "height": 38,
+          "bottom": 119.21875
+        },
+        {
+          "top": 220,
+          "left": 32,
+          "width": 296,
+          "height": 40,
+          "bottom": 260
+        },
+        {
+          "top": 274,
+          "left": 32,
+          "width": 296,
+          "height": 96,
+          "bottom": 370
+        },
+        {
+          "top": 384,
+          "left": 32,
+          "width": 296,
+          "height": 158,
+          "bottom": 542
+        },
+        {
+          "top": 556,
+          "left": 32,
+          "width": 296,
+          "height": 212.59375,
+          "bottom": 768.59375
+        },
+        {
+          "top": 1167.59375,
+          "left": 32,
+          "width": 296,
+          "height": 204.890625,
+          "bottom": 1372.484375
+        },
+        {
+          "top": 1386.484375,
+          "left": 32,
+          "width": 296,
+          "height": 83,
+          "bottom": 1469.484375
+        }
+      ],
+      "overflow": false,
+      "indicator": false,
+      "scrollHeight": 1678,
+      "storage": "{\"0\":{\"pontos\":74,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"acerto\",\"acertosConsecutivos\":3,\"errosConsecutivos\":0,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}},\"1\":{\"pontos\":24,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"erro\",\"acertosConsecutivos\":0,\"errosConsecutivos\":2,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}}}",
+      "shifts": [
+        0,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "pass": true,
+      "range": "20",
+      "unchanged": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "rects": [
+        {
+          "top": 30,
+          "left": 0,
+          "width": 430,
+          "height": 236.5,
+          "bottom": 266.5
+        },
+        {
+          "top": 137.71875,
+          "left": 0,
+          "width": 430,
+          "height": 102.78125,
+          "bottom": 240.5
+        },
+        {
+          "top": 137.71875,
+          "left": 196,
+          "width": 38,
+          "height": 38,
+          "bottom": 175.71875
+        },
+        {
+          "top": 276.5,
+          "left": 32,
+          "width": 366,
+          "height": 40,
+          "bottom": 316.5
+        },
+        {
+          "top": 330.5,
+          "left": 32,
+          "width": 366,
+          "height": 96,
+          "bottom": 426.5
+        },
+        {
+          "top": 440.5,
+          "left": 32,
+          "width": 366,
+          "height": 158,
+          "bottom": 598.5
+        },
+        {
+          "top": 612.5,
+          "left": 32,
+          "width": 366,
+          "height": 110.296875,
+          "bottom": 722.796875
+        },
+        {
+          "top": 1121.796875,
+          "left": 32,
+          "width": 366,
+          "height": 204.890625,
+          "bottom": 1326.6875
+        },
+        {
+          "top": 1340.6875,
+          "left": 32,
+          "width": 366,
+          "height": 83,
+          "bottom": 1423.6875
+        }
+      ],
+      "overflow": false,
+      "indicator": true,
+      "scrollHeight": 1633,
+      "storage": "{\"0\":{\"pontos\":74,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"acerto\",\"acertosConsecutivos\":3,\"errosConsecutivos\":0,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}},\"1\":{\"pontos\":24,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"erro\",\"acertosConsecutivos\":0,\"errosConsecutivos\":2,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}}}"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "rects": [
+        {
+          "top": 30,
+          "left": 0,
+          "width": 430,
+          "height": 206.5,
+          "bottom": 236.5
+        },
+        {
+          "top": 107.71875,
+          "left": 0,
+          "width": 430,
+          "height": 102.78125,
+          "bottom": 210.5
+        },
+        {
+          "top": 107.71875,
+          "left": 196,
+          "width": 38,
+          "height": 38,
+          "bottom": 145.71875
+        },
+        {
+          "top": 246.5,
+          "left": 32,
+          "width": 366,
+          "height": 40,
+          "bottom": 286.5
+        },
+        {
+          "top": 300.5,
+          "left": 32,
+          "width": 366,
+          "height": 96,
+          "bottom": 396.5
+        },
+        {
+          "top": 410.5,
+          "left": 32,
+          "width": 366,
+          "height": 158,
+          "bottom": 568.5
+        },
+        {
+          "top": 582.5,
+          "left": 32,
+          "width": 366,
+          "height": 110.296875,
+          "bottom": 692.796875
+        },
+        {
+          "top": 1091.796875,
+          "left": 32,
+          "width": 366,
+          "height": 204.890625,
+          "bottom": 1296.6875
+        },
+        {
+          "top": 1310.6875,
+          "left": 32,
+          "width": 366,
+          "height": 83,
+          "bottom": 1393.6875
+        }
+      ],
+      "overflow": false,
+      "indicator": false,
+      "scrollHeight": 1603,
+      "storage": "{\"0\":{\"pontos\":74,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"acerto\",\"acertosConsecutivos\":3,\"errosConsecutivos\":0,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}},\"1\":{\"pontos\":24,\"acertos\":8,\"erros\":2,\"ultimaTentativa\":\"2026-10-19T12:00:00Z\",\"ultimoResultado\":\"erro\",\"acertosConsecutivos\":0,\"errosConsecutivos\":2,\"atividades\":{\"fixar\":{\"acertos\":3,\"erros\":1},\"treinoRapido\":{\"acertos\":2,\"erros\":0},\"revisao\":{\"acertos\":0,\"erros\":0},\"desafiar\":{\"acertos\":1,\"erros\":1},\"velocidade\":{\"acertos\":2,\"erros\":0}}}}",
+      "shifts": [
+        0,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30,
+        30
+      ],
+      "pass": true,
+      "range": "20",
+      "unchanged": true
+    }
+  ],
+  "errors": []
+}

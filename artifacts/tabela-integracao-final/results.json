@@ -1,0 +1,73 @@
+{
+  "results": [
+    {
+      "mode": "before",
+      "width": 360,
+      "visual": {
+        "image": [
+          1672,
+          941
+        ],
+        "mask": "linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.333) 90%, rgba(0, 0, 0, 0) 100%)",
+        "title": "Todos os seus códigos em um só lugar",
+        "overflow": false,
+        "cards": 10
+      }
+    },
+    {
+      "mode": "before",
+      "width": 430,
+      "visual": {
+        "image": [
+          1672,
+          941
+        ],
+        "mask": "linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.333) 90%, rgba(0, 0, 0, 0) 100%)",
+        "title": "Todos os seus códigos em um só lugar",
+        "overflow": false,
+        "cards": 10
+      }
+    },
+    {
+      "mode": "after",
+      "width": 360,
+      "visual": {
+        "image": [
+          1672,
+          941
+        ],
+        "mask": "linear-gradient(rgb(0, 0, 0) 45%, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0.8) 68%, rgba(0, 0, 0, 0.467) 80%, rgba(0, 0, 0, 0.133) 91%, rgba(0, 0, 0, 0) 98%)",
+        "title": "Todos os seus códigos em um só lugar",
+        "overflow": false,
+        "cards": 10
+      },
+      "interaction": {
+        "range": "30–39",
+        "number": "30",
+        "detail": true
+      },
+      "closed": true
+    },
+    {
+      "mode": "after",
+      "width": 430,
+      "visual": {
+        "image": [
+          1672,
+          941
+        ],
+        "mask": "linear-gradient(rgb(0, 0, 0) 45%, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0.8) 68%, rgba(0, 0, 0, 0.467) 80%, rgba(0, 0, 0, 0.133) 91%, rgba(0, 0, 0, 0) 98%)",
+        "title": "Todos os seus códigos em um só lugar",
+        "overflow": false,
+        "cards": 10
+      },
+      "interaction": {
+        "range": "30–39",
+        "number": "30",
+        "detail": true
+      },
+      "closed": true
+    }
+  ],
+  "errors": []
+}

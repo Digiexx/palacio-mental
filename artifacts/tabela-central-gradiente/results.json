@@ -1,0 +1,1773 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 37,
+            "right": 78.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 57.7109375
+          },
+          "association": {
+            "top": 205,
+            "bottom": 229,
+            "left": 90.421875,
+            "right": 174.875,
+            "width": 84.453125,
+            "height": 24,
+            "cx": 132.6484375
+          },
+          "image": {
+            "top": 247,
+            "bottom": 533,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 373,
+            "bottom": 407,
+            "left": 21,
+            "right": 55,
+            "width": 34,
+            "height": 34,
+            "cx": 38
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 6",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 37,
+            "right": 78.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 57.7109375
+          },
+          "association": {
+            "top": 205,
+            "bottom": 229,
+            "left": 90.421875,
+            "right": 175.796875,
+            "width": 85.375,
+            "height": 24,
+            "cx": 133.109375
+          },
+          "image": {
+            "top": 247,
+            "bottom": 533,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 373,
+            "bottom": 407,
+            "left": 21,
+            "right": 55,
+            "width": 34,
+            "height": 34,
+            "cx": 38
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 3",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 3",
+          "idle500ms": {
+            "LayoutCount": 0,
+            "RecalcStyleCount": 0
+          },
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 215,
+            "bottom": 251,
+            "left": 37,
+            "right": 78.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 57.7109375
+          },
+          "association": {
+            "top": 221,
+            "bottom": 245,
+            "left": 90.421875,
+            "right": 173.96875,
+            "width": 83.546875,
+            "height": 24,
+            "cx": 132.1953125
+          },
+          "image": {
+            "top": 263,
+            "bottom": 549,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 561,
+            "bottom": 605,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "76",
+          "word": "HOMEM FASE",
+          "numberRect": {
+            "top": 215,
+            "bottom": 251,
+            "left": 37,
+            "right": 78.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 57.7109375
+          },
+          "association": {
+            "top": 221,
+            "bottom": 245,
+            "left": 90.421875,
+            "right": 249.171875,
+            "width": 158.75,
+            "height": 24,
+            "cx": 169.796875
+          },
+          "image": {
+            "top": 263,
+            "bottom": 549,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 561,
+            "bottom": 605,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 183,
+            "bottom": 219,
+            "left": 159.28125,
+            "right": 200.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 179.9921875
+          },
+          "association": {
+            "top": 227,
+            "bottom": 251,
+            "left": 137.765625,
+            "right": 222.21875,
+            "width": 84.453125,
+            "height": 24,
+            "cx": 179.9921875
+          },
+          "image": {
+            "top": 263,
+            "bottom": 549,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 593,
+            "bottom": 637,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 389,
+            "bottom": 423,
+            "left": 21,
+            "right": 55,
+            "width": 34,
+            "height": 34,
+            "cx": 38
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 6",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 183,
+            "bottom": 219,
+            "left": 159.28125,
+            "right": 200.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 179.9921875
+          },
+          "association": {
+            "top": 227,
+            "bottom": 251,
+            "left": 137.3125,
+            "right": 222.6875,
+            "width": 85.375,
+            "height": 24,
+            "cx": 180
+          },
+          "image": {
+            "top": 263,
+            "bottom": 549,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 593,
+            "bottom": 637,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 389,
+            "bottom": 423,
+            "left": 21,
+            "right": 55,
+            "width": 34,
+            "height": 34,
+            "cx": 38
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 3",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 3",
+          "idle500ms": {
+            "LayoutCount": 0,
+            "RecalcStyleCount": 0
+          },
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 159.28125,
+            "right": 200.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 179.9921875
+          },
+          "association": {
+            "top": 243,
+            "bottom": 267,
+            "left": 138.21875,
+            "right": 221.765625,
+            "width": 83.546875,
+            "height": 24,
+            "cx": 179.9921875
+          },
+          "image": {
+            "top": 279,
+            "bottom": 565,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        },
+        {
+          "number": "76",
+          "word": "HOMEM FASE",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 159.28125,
+            "right": 200.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 179.9921875
+          },
+          "association": {
+            "top": 243,
+            "bottom": 267,
+            "left": 100.625,
+            "right": 259.375,
+            "width": 158.75,
+            "height": 24,
+            "cx": 180
+          },
+          "image": {
+            "top": 279,
+            "bottom": 565,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 286,
+            "cx": 180
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "width": 286,
+            "height": 44,
+            "cx": 180
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 168,
+            "bottom": 204,
+            "left": 41,
+            "right": 82.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 61.7109375
+          },
+          "association": {
+            "top": 173.640625,
+            "bottom": 198.359375,
+            "left": 94.421875,
+            "right": 184.8125,
+            "width": 90.390625,
+            "height": 24.71875,
+            "cx": 139.6171875
+          },
+          "image": {
+            "top": 216,
+            "bottom": 564,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 608,
+            "bottom": 652,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 373,
+            "bottom": 407,
+            "left": 25,
+            "right": 59,
+            "width": 34,
+            "height": 34,
+            "cx": 42
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 6",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 168,
+            "bottom": 204,
+            "left": 41,
+            "right": 82.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 61.7109375
+          },
+          "association": {
+            "top": 173.640625,
+            "bottom": 198.359375,
+            "left": 94.421875,
+            "right": 185.890625,
+            "width": 91.46875,
+            "height": 24.71875,
+            "cx": 140.15625
+          },
+          "image": {
+            "top": 216,
+            "bottom": 564,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 608,
+            "bottom": 652,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 373,
+            "bottom": 407,
+            "left": 25,
+            "right": 59,
+            "width": 34,
+            "height": 34,
+            "cx": 42
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 3",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 3",
+          "idle500ms": {
+            "LayoutCount": 0,
+            "RecalcStyleCount": 0
+          },
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 184,
+            "bottom": 220,
+            "left": 41,
+            "right": 82.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 61.7109375
+          },
+          "association": {
+            "top": 189.640625,
+            "bottom": 214.359375,
+            "left": 94.421875,
+            "right": 183.78125,
+            "width": 89.359375,
+            "height": 24.71875,
+            "cx": 139.1015625
+          },
+          "image": {
+            "top": 232,
+            "bottom": 580,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 592,
+            "bottom": 636,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "76",
+          "word": "HOMEM FASE",
+          "numberRect": {
+            "top": 184,
+            "bottom": 220,
+            "left": 41,
+            "right": 82.421875,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 61.7109375
+          },
+          "association": {
+            "top": 189.640625,
+            "bottom": 214.359375,
+            "left": 94.421875,
+            "right": 271.25,
+            "width": 176.828125,
+            "height": 24.71875,
+            "cx": 182.8359375
+          },
+          "image": {
+            "top": 232,
+            "bottom": 580,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 592,
+            "bottom": 636,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+            "clip": "border-box, border-box",
+            "origin": "padding-box, padding-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 151.640625,
+            "bottom": 187.640625,
+            "left": 194.28125,
+            "right": 235.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 214.9921875
+          },
+          "association": {
+            "top": 195.640625,
+            "bottom": 220.359375,
+            "left": 169.796875,
+            "right": 260.1875,
+            "width": 90.390625,
+            "height": 24.71875,
+            "cx": 214.9921875
+          },
+          "image": {
+            "top": 232.359375,
+            "bottom": 580.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 624.359375,
+            "bottom": 668.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 389.359375,
+            "bottom": 423.359375,
+            "left": 25,
+            "right": 59,
+            "width": 34,
+            "height": 34,
+            "cx": 42
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 6",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 151.640625,
+            "bottom": 187.640625,
+            "left": 194.28125,
+            "right": 235.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 214.9921875
+          },
+          "association": {
+            "top": 195.640625,
+            "bottom": 220.359375,
+            "left": 169.265625,
+            "right": 260.734375,
+            "width": 91.46875,
+            "height": 24.71875,
+            "cx": 215
+          },
+          "image": {
+            "top": 232.359375,
+            "bottom": 580.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 624.359375,
+            "bottom": 668.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 389.359375,
+            "bottom": 423.359375,
+            "left": 25,
+            "right": 59,
+            "width": 34,
+            "height": 34,
+            "cx": 42
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": false,
+          "rangeCount": 0,
+          "overflow": false,
+          "next": {
+            "status": "Imagem 2 de 3",
+            "active": 1
+          },
+          "previous": "Imagem 1 de 3",
+          "idle500ms": {
+            "LayoutCount": 0,
+            "RecalcStyleCount": 0
+          },
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 167.640625,
+            "bottom": 203.640625,
+            "left": 194.28125,
+            "right": 235.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 214.9921875
+          },
+          "association": {
+            "top": 211.640625,
+            "bottom": 236.359375,
+            "left": 170.3125,
+            "right": 259.671875,
+            "width": 89.359375,
+            "height": 24.71875,
+            "cx": 214.9921875
+          },
+          "image": {
+            "top": 248.359375,
+            "bottom": 596.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 608.359375,
+            "bottom": 652.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        },
+        {
+          "number": "76",
+          "word": "HOMEM FASE",
+          "numberRect": {
+            "top": 167.640625,
+            "bottom": 203.640625,
+            "left": 194.28125,
+            "right": 235.703125,
+            "width": 41.421875,
+            "height": 36,
+            "cx": 214.9921875
+          },
+          "association": {
+            "top": 211.640625,
+            "bottom": 236.359375,
+            "left": 126.578125,
+            "right": 303.40625,
+            "width": 176.828125,
+            "height": 24.71875,
+            "cx": 214.9921875
+          },
+          "image": {
+            "top": 248.359375,
+            "bottom": 596.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 348,
+            "cx": 215
+          },
+          "button": {
+            "top": 608.359375,
+            "bottom": 652.359375,
+            "left": 41,
+            "right": 389,
+            "width": 348,
+            "height": 44,
+            "cx": 215
+          },
+          "buttonStyle": {
+            "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, border-box",
+            "origin": "padding-box, border-box",
+            "border": "1px",
+            "radius": "12px",
+            "color": "rgb(255, 255, 255)",
+            "font": "600 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrow": {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0,
+            "width": 0,
+            "height": 0,
+            "cx": 0
+          },
+          "arrowStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "arrowRightStyle": {
+            "background": "linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), linear-gradient(rgb(20, 18, 25), rgb(20, 18, 25)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+            "clip": "padding-box, padding-box, border-box",
+            "origin": "padding-box, padding-box, border-box",
+            "border": "1px",
+            "radius": "10px",
+            "color": "rgb(203, 185, 229)",
+            "font": "24px / 24px sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "imageStyle": {
+            "background": "none",
+            "clip": "border-box",
+            "origin": "padding-box",
+            "border": "0px",
+            "radius": "0px",
+            "color": "rgb(255, 255, 255)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "animation": "none",
+            "filter": "none",
+            "backdrop": "none"
+          },
+          "loaded": true,
+          "controlsHidden": true,
+          "rangeCount": 0,
+          "overflow": false,
+          "closed": true,
+          "pass": true,
+          "identicalGradient": true,
+          "buttonPreserved": true,
+          "imagePreserved": true,
+          "arrowPreserved": true,
+          "centered": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

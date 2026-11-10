@@ -1,0 +1,375 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "sample": {
+        "vars": [
+          "",
+          "",
+          ""
+        ],
+        "word": "rgb(177, 138, 255)",
+        "icon": "rgb(177, 138, 255)",
+        "percentage": "rgb(177, 138, 255)",
+        "geometry": [
+          {
+            "top": 194.390625,
+            "left": 14,
+            "width": 332,
+            "height": 61.96875
+          },
+          {
+            "top": 199.375,
+            "left": 14,
+            "width": 52,
+            "height": 52
+          },
+          {
+            "top": 194.390625,
+            "left": 78,
+            "width": 135.4375,
+            "height": 61.96875
+          },
+          {
+            "top": 266.359375,
+            "left": 14,
+            "width": 280,
+            "height": 19.5
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 328.75,
+            "left": 29,
+            "width": 40,
+            "height": 40
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 897.21875,
+            "left": 14,
+            "width": 332,
+            "height": 613.1875
+          }
+        ],
+        "contours": {
+          "fixar": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "table": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "ranges": {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.22) rgba(189, 181, 210, 0.22)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeCard": {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.24) rgba(189, 181, 210, 0.24)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeAnimation": "numeric-domain-reflection"
+        },
+        "monogram": "IMG",
+        "svgLoaded": true,
+        "overflow": false,
+        "accessibleHeading": "Memória Numérica"
+      }
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "sample": {
+        "vars": [
+          "#8650cb",
+          "#e0aeff",
+          "#39234e"
+        ],
+        "word": "rgb(224, 174, 255)",
+        "icon": "rgb(134, 80, 203)",
+        "percentage": "rgb(224, 174, 255)",
+        "geometry": [
+          {
+            "top": 194.390625,
+            "left": 14,
+            "width": 332,
+            "height": 61.96875
+          },
+          {
+            "top": 199.375,
+            "left": 14,
+            "width": 52,
+            "height": 52
+          },
+          {
+            "top": 194.390625,
+            "left": 78,
+            "width": 135.4375,
+            "height": 61.96875
+          },
+          {
+            "top": 266.359375,
+            "left": 14,
+            "width": 280,
+            "height": 19.5
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 328.75,
+            "left": 29,
+            "width": 40,
+            "height": 40
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 897.21875,
+            "left": 14,
+            "width": 332,
+            "height": 613.1875
+          }
+        ],
+        "contours": {
+          "fixar": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "table": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "ranges": {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.22) rgba(189, 181, 210, 0.22)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeCard": {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.24) rgba(189, 181, 210, 0.24)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeAnimation": "numeric-domain-reflection"
+        },
+        "monogram": "svg",
+        "svgLoaded": true,
+        "overflow": false,
+        "layoutPreserved": true,
+        "contoursPreserved": true,
+        "pass": true,
+        "accessibleHeading": "Memória Numérica"
+      }
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "sample": {
+        "vars": [
+          "",
+          "",
+          ""
+        ],
+        "word": "rgb(177, 138, 255)",
+        "icon": "rgb(177, 138, 255)",
+        "percentage": "rgb(177, 138, 255)",
+        "geometry": [
+          {
+            "top": 194.390625,
+            "left": 14,
+            "width": 402,
+            "height": 72.1875
+          },
+          {
+            "top": 204.484375,
+            "left": 14,
+            "width": 52,
+            "height": 52
+          },
+          {
+            "top": 194.390625,
+            "left": 78,
+            "width": 158.078125,
+            "height": 72.1875
+          },
+          {
+            "top": 276.578125,
+            "left": 14,
+            "width": 280,
+            "height": 19.5
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 338.96875,
+            "left": 29,
+            "width": 40,
+            "height": 40
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 899.875,
+            "left": 14,
+            "width": 402,
+            "height": 437.1875
+          }
+        ],
+        "contours": {
+          "fixar": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "table": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "ranges": {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.22) rgba(189, 181, 210, 0.22)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeCard": {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.24) rgba(189, 181, 210, 0.24)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeAnimation": "numeric-domain-reflection"
+        },
+        "monogram": "IMG",
+        "svgLoaded": true,
+        "overflow": false,
+        "accessibleHeading": "Memória Numérica"
+      }
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "sample": {
+        "vars": [
+          "#8650cb",
+          "#e0aeff",
+          "#39234e"
+        ],
+        "word": "rgb(224, 174, 255)",
+        "icon": "rgb(134, 80, 203)",
+        "percentage": "rgb(224, 174, 255)",
+        "geometry": [
+          {
+            "top": 194.390625,
+            "left": 14,
+            "width": 402,
+            "height": 72.1875
+          },
+          {
+            "top": 204.484375,
+            "left": 14,
+            "width": 52,
+            "height": 52
+          },
+          {
+            "top": 194.390625,
+            "left": 78,
+            "width": 158.078125,
+            "height": 72.1875
+          },
+          {
+            "top": 276.578125,
+            "left": 14,
+            "width": 280,
+            "height": 19.5
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 338.96875,
+            "left": 29,
+            "width": 40,
+            "height": 40
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "left": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "top": 899.875,
+            "left": 14,
+            "width": 402,
+            "height": 437.1875
+          }
+        ],
+        "contours": {
+          "fixar": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "table": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+          "ranges": {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.22) rgba(189, 181, 210, 0.22)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeCard": {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "border": "rgba(221, 213, 239, 0.44) rgba(189, 181, 210, 0.24) rgba(189, 181, 210, 0.24)",
+            "color": "rgb(248, 247, 252)",
+            "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+          },
+          "rangeAnimation": "numeric-domain-reflection"
+        },
+        "monogram": "svg",
+        "svgLoaded": true,
+        "overflow": false,
+        "layoutPreserved": true,
+        "contoursPreserved": true,
+        "pass": true,
+        "accessibleHeading": "Memória Numérica"
+      }
+    }
+  ],
+  "errors": []
+}

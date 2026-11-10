@@ -1,0 +1,105 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "images": [
+        {
+          "number": 0,
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "ratio": 0.39727618243243246,
+          "overflow": false
+        },
+        {
+          "number": 1,
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "ratio": 0.39727618243243246,
+          "overflow": false
+        },
+        {
+          "number": 2,
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "ratio": 0.39727618243243246,
+          "overflow": false
+        },
+        {
+          "number": 76,
+          "loaded": true,
+          "natural": [
+            1001,
+            1001
+          ],
+          "fit": "contain",
+          "ratio": 0.39727618243243246,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "images": [
+        {
+          "number": 0,
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "ratio": 0.397797131147541,
+          "overflow": false
+        },
+        {
+          "number": 1,
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "ratio": 0.397797131147541,
+          "overflow": false
+        },
+        {
+          "number": 2,
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "ratio": 0.397797131147541,
+          "overflow": false
+        },
+        {
+          "number": 76,
+          "loaded": true,
+          "natural": [
+            1001,
+            1001
+          ],
+          "fit": "contain",
+          "ratio": 0.397797131147541,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,423 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "cases": [
+        {
+          "n": 0,
+          "sequence": "3 acertos",
+          "result": "Acerto",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "history-evolution",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente"
+          ],
+          "cards": [],
+          "date": {
+            "left": 185,
+            "right": 254.296875,
+            "top": 543.59375,
+            "bottom": 575.59375,
+            "width": 69.296875,
+            "height": 32
+          },
+          "overflow": false
+        },
+        {
+          "n": 1,
+          "sequence": "2 erros",
+          "result": "Erro",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "history-evolution",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente"
+          ],
+          "cards": [],
+          "date": {
+            "left": 185,
+            "right": 254.296875,
+            "top": 543.59375,
+            "bottom": 575.59375,
+            "width": 69.296875,
+            "height": 32
+          },
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "sequence": "Sem histórico",
+          "result": "—",
+          "attempt": "Nunca treinada",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "history-evolution",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente"
+          ],
+          "cards": [],
+          "date": {
+            "left": 185,
+            "right": 254.296875,
+            "top": 543.59375,
+            "bottom": 575.59375,
+            "width": 69.296875,
+            "height": 32
+          },
+          "overflow": false
+        }
+      ],
+      "range": "20",
+      "unchanged": true,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "cases": [
+        {
+          "n": 0,
+          "sequence": "3",
+          "result": "Acerto",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente",
+            "history-evolution"
+          ],
+          "cards": [
+            {
+              "left": 49,
+              "right": 175,
+              "top": 345.59375,
+              "bottom": 443.984375,
+              "width": 126,
+              "height": 98.390625
+            },
+            {
+              "left": 185,
+              "right": 311,
+              "top": 345.59375,
+              "bottom": 443.984375,
+              "width": 126,
+              "height": 98.390625
+            }
+          ],
+          "date": {
+            "left": 223.484375,
+            "right": 311,
+            "top": 468.984375,
+            "bottom": 485.484375,
+            "width": 87.515625,
+            "height": 16.5
+          },
+          "overflow": false
+        },
+        {
+          "n": 1,
+          "sequence": "0",
+          "result": "Erro",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente",
+            "history-evolution"
+          ],
+          "cards": [
+            {
+              "left": 49,
+              "right": 175,
+              "top": 345.59375,
+              "bottom": 443.984375,
+              "width": 126,
+              "height": 98.390625
+            },
+            {
+              "left": 185,
+              "right": 311,
+              "top": 345.59375,
+              "bottom": 443.984375,
+              "width": 126,
+              "height": 98.390625
+            }
+          ],
+          "date": {
+            "left": 223.484375,
+            "right": 311,
+            "top": 468.984375,
+            "bottom": 485.484375,
+            "width": 87.515625,
+            "height": 16.5
+          },
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "sequence": "0",
+          "result": "—",
+          "attempt": "Nunca treinada",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente",
+            "history-evolution"
+          ],
+          "cards": [
+            {
+              "left": 49,
+              "right": 175,
+              "top": 345.59375,
+              "bottom": 443.984375,
+              "width": 126,
+              "height": 98.390625
+            },
+            {
+              "left": 185,
+              "right": 311,
+              "top": 345.59375,
+              "bottom": 443.984375,
+              "width": 126,
+              "height": 98.390625
+            }
+          ],
+          "date": {
+            "left": 236.765625,
+            "right": 311,
+            "top": 468.984375,
+            "bottom": 485.484375,
+            "width": 74.234375,
+            "height": 16.5
+          },
+          "overflow": false
+        }
+      ],
+      "range": "20",
+      "unchanged": true,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "cases": [
+        {
+          "n": 0,
+          "sequence": "3 acertos",
+          "result": "Acerto",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "history-evolution",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente"
+          ],
+          "cards": [],
+          "date": {
+            "left": 220,
+            "right": 308.546875,
+            "top": 675.796875,
+            "bottom": 707.796875,
+            "width": 88.546875,
+            "height": 32
+          },
+          "overflow": false
+        },
+        {
+          "n": 1,
+          "sequence": "2 erros",
+          "result": "Erro",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "history-evolution",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente"
+          ],
+          "cards": [],
+          "date": {
+            "left": 220,
+            "right": 308.546875,
+            "top": 675.796875,
+            "bottom": 707.796875,
+            "width": 88.546875,
+            "height": 32
+          },
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "sequence": "Sem histórico",
+          "result": "—",
+          "attempt": "Nunca treinada",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "history-evolution",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente"
+          ],
+          "cards": [],
+          "date": {
+            "left": 220,
+            "right": 308.546875,
+            "top": 685.796875,
+            "bottom": 701.796875,
+            "width": 88.546875,
+            "height": 16
+          },
+          "overflow": false
+        }
+      ],
+      "range": "20",
+      "unchanged": true,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "cases": [
+        {
+          "n": 0,
+          "sequence": "3",
+          "result": "Acerto",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente",
+            "history-evolution"
+          ],
+          "cards": [
+            {
+              "left": 49,
+              "right": 210,
+              "top": 468.796875,
+              "bottom": 567.1875,
+              "width": 161,
+              "height": 98.390625
+            },
+            {
+              "left": 220,
+              "right": 381,
+              "top": 468.796875,
+              "bottom": 567.1875,
+              "width": 161,
+              "height": 98.390625
+            }
+          ],
+          "date": {
+            "left": 293.484375,
+            "right": 381,
+            "top": 592.1875,
+            "bottom": 608.6875,
+            "width": 87.515625,
+            "height": 16.5
+          },
+          "overflow": false
+        },
+        {
+          "n": 1,
+          "sequence": "0",
+          "result": "Erro",
+          "attempt": "19/10/2026, 09:00",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente",
+            "history-evolution"
+          ],
+          "cards": [
+            {
+              "left": 49,
+              "right": 210,
+              "top": 468.796875,
+              "bottom": 567.1875,
+              "width": 161,
+              "height": 98.390625
+            },
+            {
+              "left": 220,
+              "right": 381,
+              "top": 468.796875,
+              "bottom": 567.1875,
+              "width": 161,
+              "height": 98.390625
+            }
+          ],
+          "date": {
+            "left": 293.484375,
+            "right": 381,
+            "top": 592.1875,
+            "bottom": 608.6875,
+            "width": 87.515625,
+            "height": 16.5
+          },
+          "overflow": false
+        },
+        {
+          "n": 3,
+          "sequence": "0",
+          "result": "—",
+          "attempt": "Nunca treinada",
+          "order": [
+            "detalhe-memoria-hero",
+            "detalhe-memoria-estatisticas",
+            "detalhe-memoria-atividades",
+            "detalhe-memoria-recente",
+            "history-evolution"
+          ],
+          "cards": [
+            {
+              "left": 49,
+              "right": 210,
+              "top": 468.796875,
+              "bottom": 567.1875,
+              "width": 161,
+              "height": 98.390625
+            },
+            {
+              "left": 220,
+              "right": 381,
+              "top": 468.796875,
+              "bottom": 567.1875,
+              "width": 161,
+              "height": 98.390625
+            }
+          ],
+          "date": {
+            "left": 306.765625,
+            "right": 381,
+            "top": 592.1875,
+            "bottom": 608.6875,
+            "width": 74.234375,
+            "height": 16.5
+          },
+          "overflow": false
+        }
+      ],
+      "range": "20",
+      "unchanged": true,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

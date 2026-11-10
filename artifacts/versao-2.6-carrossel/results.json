@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "visible": true,
+      "overflow": false,
+      "cards": 1,
+      "originalModes": 8,
+      "order": true,
+      "snap": "x mandatory",
+      "animation": "none",
+      "domain": "0%",
+      "route": true,
+      "returned": true,
+      "verticalScroll": true
+    },
+    {
+      "width": 430,
+      "visible": true,
+      "overflow": false,
+      "cards": 1,
+      "originalModes": 8,
+      "order": true,
+      "snap": "x mandatory",
+      "animation": "none",
+      "domain": "0%",
+      "route": true,
+      "returned": true,
+      "verticalScroll": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,135 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "state": {
+        "rect": {
+          "top": 602.78125,
+          "left": 39.71875,
+          "width": 280.546875,
+          "height": 44
+        },
+        "radius": "12px",
+        "border": "1px",
+        "color": "rgb(255, 255, 255)",
+        "background": "linear-gradient(155deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+        "animation": "none",
+        "afterContent": "none",
+        "afterAnimation": "none",
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(255, 255, 255, 0.05) 0px 1px 0px 0px inset",
+        "overflow": false
+      },
+      "idle600ms": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 0,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0,
+        "TaskDuration": 0.003255000000000008
+      },
+      "next": "03",
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "state": {
+        "rect": {
+          "top": 602.78125,
+          "left": 39.71875,
+          "width": 280.546875,
+          "height": 44
+        },
+        "radius": "12px",
+        "border": "1px",
+        "color": "rgb(255, 255, 255)",
+        "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "animation": "none",
+        "afterContent": "none",
+        "afterAnimation": "none",
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(255, 255, 255, 0.05) 0px 1px 0px 0px inset",
+        "overflow": false
+      },
+      "idle600ms": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 0,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0,
+        "TaskDuration": 0.009053999999999951
+      },
+      "next": "03",
+      "pass": true,
+      "dimensionsPreserved": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "state": {
+        "rect": {
+          "top": 632.1875,
+          "left": 45.3125,
+          "width": 339.359375,
+          "height": 44
+        },
+        "radius": "12px",
+        "border": "1px",
+        "color": "rgb(255, 255, 255)",
+        "background": "linear-gradient(155deg, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.15)), none",
+        "animation": "none",
+        "afterContent": "none",
+        "afterAnimation": "none",
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(255, 255, 255, 0.05) 0px 1px 0px 0px inset",
+        "overflow": false
+      },
+      "idle600ms": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 1,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.00004499999999999643,
+        "TaskDuration": 0.0016289999999999916
+      },
+      "next": "03",
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "state": {
+        "rect": {
+          "top": 632.1875,
+          "left": 45.3125,
+          "width": 339.359375,
+          "height": 44
+        },
+        "radius": "12px",
+        "border": "1px",
+        "color": "rgb(255, 255, 255)",
+        "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "animation": "none",
+        "afterContent": "none",
+        "afterAnimation": "none",
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(255, 255, 255, 0.05) 0px 1px 0px 0px inset",
+        "overflow": false
+      },
+      "idle600ms": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 1,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.00011499999999999705,
+        "TaskDuration": 0.002483000000000013
+      },
+      "next": "03",
+      "pass": true,
+      "dimensionsPreserved": true
+    }
+  ],
+  "errors": []
+}

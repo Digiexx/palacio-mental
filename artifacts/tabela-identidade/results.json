@@ -1,0 +1,553 @@
+{
+  "results": [
+    {
+      "mode": "before",
+      "width": 360,
+      "layout": {
+        ".mental-detail-card": {
+          "x": 16,
+          "y": 219.15625,
+          "w": 328,
+          "h": 493.6875,
+          "padding": "15px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "24px"
+        },
+        ".mental-detail-image-area": {
+          "x": 32,
+          "y": 281.15625,
+          "w": 296,
+          "h": 296,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "18px"
+        },
+        ".mental-detail-code": {
+          "x": 34,
+          "y": 237.15625,
+          "w": 39,
+          "h": 30,
+          "padding": "6px 10px",
+          "font": "900 12px / 12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "10px"
+        },
+        ".mental-detail-word": {
+          "x": 106.53125,
+          "y": 239.5625,
+          "w": 49,
+          "h": 25.1875,
+          "padding": "0px",
+          "font": "900 24px / 25.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-number": {
+          "x": 154.4375,
+          "y": 591.15625,
+          "w": 51.125,
+          "h": 43.6875,
+          "padding": "0px",
+          "font": "900 46px / 43.7px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-button": {
+          "x": 32,
+          "y": 648.84375,
+          "w": 296,
+          "h": 48,
+          "padding": "12px 18px",
+          "font": "800 14px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "15px"
+        },
+        ".mental-detail-content": {
+          "x": 32,
+          "y": 577.15625,
+          "w": 296,
+          "h": 58.6875,
+          "padding": "14px 2px 1px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        }
+      },
+      "paint": {
+        ".mental-detail-card": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(155deg, rgba(37, 40, 48, 0.99), rgba(9, 10, 12, 0.99)) repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(157, 92, 255, 0.3)",
+          "shadow": "rgba(0, 0, 0, 0.55) 0px 30px 80px 0px, rgba(157, 92, 255, 0.12) 0px 0px 55px 0px"
+        },
+        ".mental-detail-image-area": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgba(37, 40, 48, 0.72), rgba(23, 25, 29, 0.95)) repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(157, 92, 255, 0.2)",
+          "shadow": "rgba(157, 92, 255, 0.06) 0px 0px 35px 0px inset"
+        },
+        ".mental-detail-code": {
+          "color": "rgb(196, 167, 255)",
+          "background": "rgba(157, 92, 255, 0.11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(157, 92, 255, 0.3)",
+          "shadow": "none"
+        },
+        ".mental-detail-word": {
+          "color": "rgb(196, 167, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(196, 167, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-number": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-button": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(157, 92, 255), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(196, 167, 255, 0.3)",
+          "shadow": "rgba(157, 92, 255, 0.22) 0px 12px 30px 0px"
+        },
+        ".mental-detail-content": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        }
+      }
+    },
+    {
+      "mode": "before",
+      "width": 430,
+      "layout": {
+        ".mental-detail-card": {
+          "x": 20,
+          "y": 188.15625,
+          "w": 390,
+          "h": 555.6875,
+          "padding": "15px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "24px"
+        },
+        ".mental-detail-image-area": {
+          "x": 36,
+          "y": 250.15625,
+          "w": 358,
+          "h": 358,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "18px"
+        },
+        ".mental-detail-code": {
+          "x": 38,
+          "y": 206.15625,
+          "w": 39,
+          "h": 30,
+          "padding": "6px 10px",
+          "font": "900 12px / 12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "10px"
+        },
+        ".mental-detail-word": {
+          "x": 110.53125,
+          "y": 208.5625,
+          "w": 49,
+          "h": 25.1875,
+          "padding": "0px",
+          "font": "900 24px / 25.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-number": {
+          "x": 189.4375,
+          "y": 622.15625,
+          "w": 51.125,
+          "h": 43.6875,
+          "padding": "0px",
+          "font": "900 46px / 43.7px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-button": {
+          "x": 36,
+          "y": 679.84375,
+          "w": 358,
+          "h": 48,
+          "padding": "12px 18px",
+          "font": "800 14px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "15px"
+        },
+        ".mental-detail-content": {
+          "x": 36,
+          "y": 608.15625,
+          "w": 358,
+          "h": 58.6875,
+          "padding": "14px 2px 1px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        }
+      },
+      "paint": {
+        ".mental-detail-card": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(155deg, rgba(37, 40, 48, 0.99), rgba(9, 10, 12, 0.99)) repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(157, 92, 255, 0.3)",
+          "shadow": "rgba(0, 0, 0, 0.55) 0px 30px 80px 0px, rgba(157, 92, 255, 0.12) 0px 0px 55px 0px"
+        },
+        ".mental-detail-image-area": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgba(37, 40, 48, 0.72), rgba(23, 25, 29, 0.95)) repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(157, 92, 255, 0.2)",
+          "shadow": "rgba(157, 92, 255, 0.06) 0px 0px 35px 0px inset"
+        },
+        ".mental-detail-code": {
+          "color": "rgb(196, 167, 255)",
+          "background": "rgba(157, 92, 255, 0.11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(157, 92, 255, 0.3)",
+          "shadow": "none"
+        },
+        ".mental-detail-word": {
+          "color": "rgb(196, 167, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(196, 167, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-number": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-button": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(157, 92, 255), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(196, 167, 255, 0.3)",
+          "shadow": "rgba(157, 92, 255, 0.22) 0px 12px 30px 0px"
+        },
+        ".mental-detail-content": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        }
+      }
+    },
+    {
+      "mode": "after",
+      "width": 360,
+      "layout": {
+        ".mental-detail-card": {
+          "x": 16,
+          "y": 219.15625,
+          "w": 328,
+          "h": 493.6875,
+          "padding": "15px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "24px"
+        },
+        ".mental-detail-image-area": {
+          "x": 32,
+          "y": 281.15625,
+          "w": 296,
+          "h": 296,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "18px"
+        },
+        ".mental-detail-code": {
+          "x": 34,
+          "y": 237.15625,
+          "w": 39,
+          "h": 30,
+          "padding": "6px 10px",
+          "font": "900 12px / 12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "10px"
+        },
+        ".mental-detail-word": {
+          "x": 106.53125,
+          "y": 239.5625,
+          "w": 49,
+          "h": 25.1875,
+          "padding": "0px",
+          "font": "900 24px / 25.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-number": {
+          "x": 154.4375,
+          "y": 591.15625,
+          "w": 51.125,
+          "h": 43.6875,
+          "padding": "0px",
+          "font": "900 46px / 43.7px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-button": {
+          "x": 32,
+          "y": 648.84375,
+          "w": 296,
+          "h": 48,
+          "padding": "12px 18px",
+          "font": "800 14px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "15px"
+        },
+        ".mental-detail-content": {
+          "x": 32,
+          "y": 577.15625,
+          "w": 296,
+          "h": 58.6875,
+          "padding": "14px 2px 1px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        }
+      },
+      "paint": {
+        ".mental-detail-card": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(9, 9, 11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.15)",
+          "shadow": "none"
+        },
+        ".mental-detail-image-area": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(9, 9, 11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.15)",
+          "shadow": "none"
+        },
+        ".mental-detail-code": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(255, 255, 255, 0.03) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.19)",
+          "shadow": "none"
+        },
+        ".mental-detail-word": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-number": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-button": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(8, 8, 11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.19)",
+          "shadow": "none"
+        },
+        ".mental-detail-content": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        }
+      },
+      "geometryUnchanged": true,
+      "tests": [
+        {
+          "number": "00",
+          "images": 1,
+          "dotsHidden": true,
+          "arrows": [
+            false,
+            false
+          ],
+          "status": "Imagem 1 de 1"
+        },
+        {
+          "number": "01",
+          "images": 6,
+          "dotsHidden": false,
+          "arrows": [
+            true,
+            true
+          ],
+          "status": "Imagem 2 de 6"
+        },
+        {
+          "number": "02",
+          "images": 4,
+          "dotsHidden": false,
+          "arrows": [
+            true,
+            true
+          ],
+          "status": "Imagem 2 de 4"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "mode": "after",
+      "width": 430,
+      "layout": {
+        ".mental-detail-card": {
+          "x": 20,
+          "y": 188.15625,
+          "w": 390,
+          "h": 555.6875,
+          "padding": "15px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "24px"
+        },
+        ".mental-detail-image-area": {
+          "x": 36,
+          "y": 250.15625,
+          "w": 358,
+          "h": 358,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "18px"
+        },
+        ".mental-detail-code": {
+          "x": 38,
+          "y": 206.15625,
+          "w": 39,
+          "h": 30,
+          "padding": "6px 10px",
+          "font": "900 12px / 12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "10px"
+        },
+        ".mental-detail-word": {
+          "x": 110.53125,
+          "y": 208.5625,
+          "w": 49,
+          "h": 25.1875,
+          "padding": "0px",
+          "font": "900 24px / 25.2px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-number": {
+          "x": 189.4375,
+          "y": 622.15625,
+          "w": 51.125,
+          "h": 43.6875,
+          "padding": "0px",
+          "font": "900 46px / 43.7px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        ".mental-detail-button": {
+          "x": 36,
+          "y": 679.84375,
+          "w": 358,
+          "h": 48,
+          "padding": "12px 18px",
+          "font": "800 14px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "1px",
+          "borderRadius": "15px"
+        },
+        ".mental-detail-content": {
+          "x": 36,
+          "y": 608.15625,
+          "w": 358,
+          "h": 58.6875,
+          "padding": "14px 2px 1px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        }
+      },
+      "paint": {
+        ".mental-detail-card": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(9, 9, 11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.15)",
+          "shadow": "none"
+        },
+        ".mental-detail-image-area": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(9, 9, 11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.15)",
+          "shadow": "none"
+        },
+        ".mental-detail-code": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(255, 255, 255, 0.03) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.19)",
+          "shadow": "none"
+        },
+        ".mental-detail-word": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-number": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        },
+        ".mental-detail-button": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(8, 8, 11) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgba(255, 255, 255, 0.19)",
+          "shadow": "none"
+        },
+        ".mental-detail-content": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "borderColor": "rgb(255, 255, 255)",
+          "shadow": "none"
+        }
+      },
+      "geometryUnchanged": true,
+      "tests": [
+        {
+          "number": "00",
+          "images": 1,
+          "dotsHidden": true,
+          "arrows": [
+            false,
+            false
+          ],
+          "status": "Imagem 1 de 1"
+        },
+        {
+          "number": "01",
+          "images": 6,
+          "dotsHidden": false,
+          "arrows": [
+            true,
+            true
+          ],
+          "status": "Imagem 2 de 6"
+        },
+        {
+          "number": "02",
+          "images": 4,
+          "dotsHidden": false,
+          "arrows": [
+            true,
+            true
+          ],
+          "status": "Imagem 2 de 4"
+        }
+      ],
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

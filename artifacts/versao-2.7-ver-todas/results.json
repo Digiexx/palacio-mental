@@ -1,0 +1,523 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "before": {
+        "text": "Ver todas",
+        "label": "Ver todas as faixas",
+        "expanded": "false",
+        "rect": {
+          "left": 261,
+          "top": 834.15625,
+          "width": 72,
+          "height": 36
+        },
+        "layout": "flex",
+        "focus": "",
+        "overflow": false,
+        "extra": false,
+        "ranges": [
+          "26%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%"
+        ]
+      },
+      "cycles": [
+        {
+          "text": "×",
+          "label": "Fechar todas as faixas",
+          "expanded": "true",
+          "rect": {
+            "left": 261,
+            "top": 834.15625,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "grid",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "Ver todas",
+          "label": "Ver todas as faixas",
+          "expanded": "false",
+          "rect": {
+            "left": 261,
+            "top": 834.15625,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "flex",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "×",
+          "label": "Fechar todas as faixas",
+          "expanded": "true",
+          "rect": {
+            "left": 261,
+            "top": 834.15625,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "grid",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "Ver todas",
+          "label": "Ver todas as faixas",
+          "expanded": "false",
+          "rect": {
+            "left": 261,
+            "top": 834.15625,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "flex",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "×",
+          "label": "Fechar todas as faixas",
+          "expanded": "true",
+          "rect": {
+            "left": 261,
+            "top": 834.15625,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "grid",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "Ver todas",
+          "label": "Ver todas as faixas",
+          "expanded": "false",
+          "rect": {
+            "left": 261,
+            "top": 834.15625,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "flex",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        }
+      ],
+      "keyboard": {
+        "text": "×",
+        "label": "Fechar todas as faixas",
+        "expanded": "true",
+        "rect": {
+          "left": 261,
+          "top": 834.15625,
+          "width": 72,
+          "height": 36
+        },
+        "layout": "grid",
+        "focus": "btnTodasFaixas",
+        "overflow": false,
+        "extra": false,
+        "ranges": [
+          "26%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%"
+        ]
+      },
+      "escape": {
+        "text": "Ver todas",
+        "label": "Ver todas as faixas",
+        "expanded": "false",
+        "rect": {
+          "left": 261,
+          "top": 834.15625,
+          "width": 72,
+          "height": 36
+        },
+        "layout": "flex",
+        "focus": "btnTodasFaixas",
+        "overflow": false,
+        "extra": false,
+        "ranges": [
+          "26%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "before": {
+        "text": "Ver todas",
+        "label": "Ver todas as faixas",
+        "expanded": "false",
+        "rect": {
+          "left": 331,
+          "top": 886.609375,
+          "width": 72,
+          "height": 36
+        },
+        "layout": "flex",
+        "focus": "",
+        "overflow": false,
+        "extra": false,
+        "ranges": [
+          "26%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%"
+        ]
+      },
+      "cycles": [
+        {
+          "text": "×",
+          "label": "Fechar todas as faixas",
+          "expanded": "true",
+          "rect": {
+            "left": 331,
+            "top": 886.609375,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "grid",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "Ver todas",
+          "label": "Ver todas as faixas",
+          "expanded": "false",
+          "rect": {
+            "left": 331,
+            "top": 886.609375,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "flex",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "×",
+          "label": "Fechar todas as faixas",
+          "expanded": "true",
+          "rect": {
+            "left": 331,
+            "top": 886.609375,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "grid",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "Ver todas",
+          "label": "Ver todas as faixas",
+          "expanded": "false",
+          "rect": {
+            "left": 331,
+            "top": 886.609375,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "flex",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "×",
+          "label": "Fechar todas as faixas",
+          "expanded": "true",
+          "rect": {
+            "left": 331,
+            "top": 886.609375,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "grid",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        },
+        {
+          "text": "Ver todas",
+          "label": "Ver todas as faixas",
+          "expanded": "false",
+          "rect": {
+            "left": 331,
+            "top": 886.609375,
+            "width": 72,
+            "height": 36
+          },
+          "layout": "flex",
+          "focus": "",
+          "overflow": false,
+          "extra": false,
+          "ranges": [
+            "26%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%",
+            "0%"
+          ]
+        }
+      ],
+      "keyboard": {
+        "text": "×",
+        "label": "Fechar todas as faixas",
+        "expanded": "true",
+        "rect": {
+          "left": 331,
+          "top": 886.609375,
+          "width": 72,
+          "height": 36
+        },
+        "layout": "grid",
+        "focus": "btnTodasFaixas",
+        "overflow": false,
+        "extra": false,
+        "ranges": [
+          "26%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%"
+        ]
+      },
+      "escape": {
+        "text": "Ver todas",
+        "label": "Ver todas as faixas",
+        "expanded": "false",
+        "rect": {
+          "left": 331,
+          "top": 886.609375,
+          "width": 72,
+          "height": 36
+        },
+        "layout": "flex",
+        "focus": "btnTodasFaixas",
+        "overflow": false,
+        "extra": false,
+        "ranges": [
+          "26%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%",
+          "0%"
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "errors": []
+}

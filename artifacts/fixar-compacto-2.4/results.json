@@ -1,0 +1,278 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 500,
+      "initial": {
+        "scroll": true,
+        "docHeight": 601,
+        "overflow": false,
+        "buttonBottom": 577,
+        "buttonVisible": false,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 446,
+          "bottom": 500
+        },
+        {
+          "top": 446,
+          "bottom": 500
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "initial": {
+        "scroll": false,
+        "docHeight": 640,
+        "overflow": false,
+        "buttonBottom": 580.59375,
+        "buttonVisible": true,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 585.59375,
+          "bottom": 639.59375
+        },
+        {
+          "top": 585.59375,
+          "bottom": 639.59375
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "initial": {
+        "scroll": false,
+        "docHeight": 740,
+        "overflow": false,
+        "buttonBottom": 669.390625,
+        "buttonVisible": true,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 686,
+          "bottom": 740
+        },
+        {
+          "top": 686,
+          "bottom": 740
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "initial": {
+        "scroll": false,
+        "docHeight": 800,
+        "overflow": false,
+        "buttonBottom": 685,
+        "buttonVisible": true,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 746,
+          "bottom": 800
+        },
+        {
+          "top": 746,
+          "bottom": 800
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    },
+    {
+      "width": 430,
+      "height": 740,
+      "initial": {
+        "scroll": false,
+        "docHeight": 740,
+        "overflow": false,
+        "buttonBottom": 713.859375,
+        "buttonVisible": true,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 685.5,
+          "bottom": 739.5
+        },
+        {
+          "top": 685.5,
+          "bottom": 739.5
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    },
+    {
+      "width": 430,
+      "height": 820,
+      "initial": {
+        "scroll": false,
+        "docHeight": 820,
+        "overflow": false,
+        "buttonBottom": 723.875,
+        "buttonVisible": true,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 765.6875,
+          "bottom": 819.6875
+        },
+        {
+          "top": 765.6875,
+          "bottom": 819.6875
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "initial": {
+        "scroll": false,
+        "docHeight": 932,
+        "overflow": false,
+        "buttonBottom": 754.125,
+        "buttonVisible": true,
+        "background": "rgb(46, 27, 69)",
+        "descriptionRemoved": true,
+        "imageLoaded": true
+      },
+      "revealed": {
+        "answer": true,
+        "buttons": [
+          {
+            "id": "btnNaoLembreiFixar",
+            "visible": true
+          },
+          {
+            "id": "btnLembreiFixar",
+            "visible": true
+          }
+        ]
+      },
+      "buttonRects": [
+        {
+          "top": 875.40625,
+          "bottom": 929.40625
+        },
+        {
+          "top": 875.40625,
+          "bottom": 929.40625
+        }
+      ],
+      "accessible": true,
+      "next": "01"
+    }
+  ],
+  "errors": []
+}

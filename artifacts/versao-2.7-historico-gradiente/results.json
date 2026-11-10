@@ -1,0 +1,375 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "header": {
+        "left": 0,
+        "top": 30,
+        "right": 360,
+        "bottom": 240,
+        "width": 360,
+        "height": 210
+      },
+      "title": {
+        "left": 0,
+        "top": 125.21875,
+        "right": 360,
+        "bottom": 228,
+        "width": 360,
+        "height": 102.78125
+      },
+      "parts": [
+        {
+          "rect": {
+            "left": 161,
+            "top": 125.21875,
+            "right": 199,
+            "bottom": 163.21875,
+            "width": 38,
+            "height": 38
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 137.515625,
+            "top": 166.21875,
+            "right": 222.484375,
+            "bottom": 185.40625,
+            "width": 84.96875,
+            "height": 19.1875
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 116.296875,
+            "top": 188.40625,
+            "right": 243.703125,
+            "bottom": 216,
+            "width": 127.40625,
+            "height": 27.59375
+          },
+          "weight": "300",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)"
+        }
+      ],
+      "overlap": false,
+      "centered": true,
+      "overflow": false,
+      "meter": {
+        "rect": {
+          "left": 272,
+          "top": 118,
+          "right": 324,
+          "bottom": 170,
+          "width": 52,
+          "height": 52
+        },
+        "value": "7%"
+      },
+      "grid": {
+        "left": 32,
+        "top": 300,
+        "right": 328,
+        "bottom": 396,
+        "width": 296,
+        "height": 96
+      },
+      "selection": "\n00Relógioforte\n74%Domínio\n\n\n\n                        \n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas\n\n\n                        \n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas\n\n\n                        \n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas\n\n\n                        \n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas\n\n                    Evolução do domínioSem evolução registrada ao longo do tempo.\n\n                        \n                            DESEMPENHO POR ATIVIDADE\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Revisão\n                                \n\n                                Sem tentativas\n\n                            \n\n                            —\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n                    Nenhuma tentativa registrada por atividade.\n\n                        \n                            ESTADO RECENTE\n                        \n\n\n                        \n\n                            \n                                Sequência atual\n                            \n\n                            3 acertos\n\n                        \n\n\n                        \n\n                            \n                                Último resultado\n                            \n\n                            Acerto\n\n                        \n\n\n                        \n\n                            \n                                Última tentativa\n                            \n\n                            19/10/2026, 09:00\n\n                        \n\n                    ",
+      "monogram": {
+        "left": 161,
+        "top": 125.21875,
+        "right": 199,
+        "bottom": 163.21875,
+        "width": 38,
+        "height": 38
+      },
+      "paint": ""
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "header": {
+        "left": 0,
+        "top": 30,
+        "right": 360,
+        "bottom": 240,
+        "width": 360,
+        "height": 210
+      },
+      "title": {
+        "left": 0,
+        "top": 111.21875,
+        "right": 360,
+        "bottom": 214,
+        "width": 360,
+        "height": 102.78125
+      },
+      "parts": [
+        {
+          "rect": {
+            "left": 161,
+            "top": 111.21875,
+            "right": 199,
+            "bottom": 149.21875,
+            "width": 38,
+            "height": 38
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 137.515625,
+            "top": 152.21875,
+            "right": 222.484375,
+            "bottom": 171.40625,
+            "width": 84.96875,
+            "height": 19.1875
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 112.0625,
+            "top": 174.40625,
+            "right": 247.9375,
+            "bottom": 202,
+            "width": 135.875,
+            "height": 27.59375
+          },
+          "weight": "600",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)"
+        }
+      ],
+      "overlap": false,
+      "centered": true,
+      "overflow": false,
+      "meter": {
+        "rect": {
+          "left": 272,
+          "top": 118,
+          "right": 324,
+          "bottom": 170,
+          "width": 52,
+          "height": 52
+        },
+        "value": "7%"
+      },
+      "grid": {
+        "left": 32,
+        "top": 300,
+        "right": 328,
+        "bottom": 396,
+        "width": 296,
+        "height": 96
+      },
+      "selection": "\n00Relógioforte\n74%Domínio\n\n\n\n                        \n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas\n\n\n                        \n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas\n\n\n                        \n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas\n\n\n                        \n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas\n\n                    Evolução do domínioSem evolução registrada ao longo do tempo.\n\n                        \n                            DESEMPENHO POR ATIVIDADE\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Revisão\n                                \n\n                                Sem tentativas\n\n                            \n\n                            —\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n                    Nenhuma tentativa registrada por atividade.\n\n                        \n                            ESTADO RECENTE\n                        \n\n\n                        \n\n                            \n                                Sequência atual\n                            \n\n                            3 acertos\n\n                        \n\n\n                        \n\n                            \n                                Último resultado\n                            \n\n                            Acerto\n\n                        \n\n\n                        \n\n                            \n                                Última tentativa\n                            \n\n                            19/10/2026, 09:00\n\n                        \n\n                    ",
+      "monogram": {
+        "left": 161,
+        "top": 111.21875,
+        "right": 199,
+        "bottom": 149.21875,
+        "width": 38,
+        "height": 38
+      },
+      "paint": "",
+      "delta": -14,
+      "preserved": true,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "header": {
+        "left": 0,
+        "top": 30,
+        "right": 430,
+        "bottom": 266.5,
+        "width": 430,
+        "height": 236.5
+      },
+      "title": {
+        "left": 0,
+        "top": 151.71875,
+        "right": 430,
+        "bottom": 254.5,
+        "width": 430,
+        "height": 102.78125
+      },
+      "parts": [
+        {
+          "rect": {
+            "left": 196,
+            "top": 151.71875,
+            "right": 234,
+            "bottom": 189.71875,
+            "width": 38,
+            "height": 38
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 172.515625,
+            "top": 192.71875,
+            "right": 257.484375,
+            "bottom": 211.90625,
+            "width": 84.96875,
+            "height": 19.1875
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 151.296875,
+            "top": 214.90625,
+            "right": 278.703125,
+            "bottom": 242.5,
+            "width": 127.40625,
+            "height": 27.59375
+          },
+          "weight": "300",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)"
+        }
+      ],
+      "overlap": false,
+      "centered": true,
+      "overflow": false,
+      "meter": {
+        "rect": {
+          "left": 342,
+          "top": 144.5,
+          "right": 394,
+          "bottom": 196.5,
+          "width": 52,
+          "height": 52
+        },
+        "value": "7%"
+      },
+      "grid": {
+        "left": 32,
+        "top": 326.5,
+        "right": 398,
+        "bottom": 422.5,
+        "width": 366,
+        "height": 96
+      },
+      "selection": "\n00Relógioforte\n74%Domínio\n\n\n\n                        \n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas\n\n\n                        \n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas\n\n\n                        \n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas\n\n\n                        \n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas\n\n                    Evolução do domínioSem evolução registrada ao longo do tempo.\n\n                        \n                            DESEMPENHO POR ATIVIDADE\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Revisão\n                                \n\n                                Sem tentativas\n\n                            \n\n                            —\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n                    Nenhuma tentativa registrada por atividade.\n\n                        \n                            ESTADO RECENTE\n                        \n\n\n                        \n\n                            \n                                Sequência atual\n                            \n\n                            3 acertos\n\n                        \n\n\n                        \n\n                            \n                                Último resultado\n                            \n\n                            Acerto\n\n                        \n\n\n                        \n\n                            \n                                Última tentativa\n                            \n\n                            19/10/2026, 09:00\n\n                        \n\n                    ",
+      "monogram": {
+        "left": 196,
+        "top": 151.71875,
+        "right": 234,
+        "bottom": 189.71875,
+        "width": 38,
+        "height": 38
+      },
+      "paint": ""
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "header": {
+        "left": 0,
+        "top": 30,
+        "right": 430,
+        "bottom": 266.5,
+        "width": 430,
+        "height": 236.5
+      },
+      "title": {
+        "left": 0,
+        "top": 137.71875,
+        "right": 430,
+        "bottom": 240.5,
+        "width": 430,
+        "height": 102.78125
+      },
+      "parts": [
+        {
+          "rect": {
+            "left": 196,
+            "top": 137.71875,
+            "right": 234,
+            "bottom": 175.71875,
+            "width": 38,
+            "height": 38
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 172.515625,
+            "top": 178.71875,
+            "right": 257.484375,
+            "bottom": 197.90625,
+            "width": 84.96875,
+            "height": 19.1875
+          },
+          "weight": "400",
+          "background": "none"
+        },
+        {
+          "rect": {
+            "left": 147.0625,
+            "top": 200.90625,
+            "right": 282.9375,
+            "bottom": 228.5,
+            "width": 135.875,
+            "height": 27.59375
+          },
+          "weight": "600",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)"
+        }
+      ],
+      "overlap": false,
+      "centered": true,
+      "overflow": false,
+      "meter": {
+        "rect": {
+          "left": 342,
+          "top": 144.5,
+          "right": 394,
+          "bottom": 196.5,
+          "width": 52,
+          "height": 52
+        },
+        "value": "7%"
+      },
+      "grid": {
+        "left": 32,
+        "top": 326.5,
+        "right": 398,
+        "bottom": 422.5,
+        "width": 366,
+        "height": 96
+      },
+      "selection": "\n00Relógioforte\n74%Domínio\n\n\n\n                        \n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas\n\n\n                        \n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas\n\n\n                        \n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas\n\n\n                        \n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas\n\n                    Evolução do domínioSem evolução registrada ao longo do tempo.\n\n                        \n                            DESEMPENHO POR ATIVIDADE\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Revisão\n                                \n\n                                Sem tentativas\n\n                            \n\n                            —\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%\n\n                        \n\n\n                        \n\n                            \n\n                                \n                                    Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%\n\n                        \n\n                    Nenhuma tentativa registrada por atividade.\n\n                        \n                            ESTADO RECENTE\n                        \n\n\n                        \n\n                            \n                                Sequência atual\n                            \n\n                            3 acertos\n\n                        \n\n\n                        \n\n                            \n                                Último resultado\n                            \n\n                            Acerto\n\n                        \n\n\n                        \n\n                            \n                                Última tentativa\n                            \n\n                            19/10/2026, 09:00\n\n                        \n\n                    ",
+      "monogram": {
+        "left": 196,
+        "top": 137.71875,
+        "right": 234,
+        "bottom": 175.71875,
+        "width": 38,
+        "height": 38
+      },
+      "paint": "",
+      "delta": -14,
+      "preserved": true,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

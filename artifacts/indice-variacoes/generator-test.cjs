@@ -1,0 +1,22 @@
+const fs = require('node:fs'), path = require('node:path'), os = require('node:os'), assert = require('node:assert/strict');
+const root = process.cwd();
+const {gerarIndice} = require(path.join(root, 'scripts/gerar-indice-variacoes.cjs'));
+const actual = gerarIndice(root);
+assert.deepEqual(Object.values(actual).map(a => a.length), [5, 3, 2]);
+const vm = require('node:vm');
+const context = {};
+vm.runInNewContext(fs.readFileSync(path.join(root, 'assets/variacoes-memoria.js'), 'utf8'), context);
+assert.equal(JSON.stringify(actual), JSON.stringify(context.PALACIO_VARIACOES));
+// Simulação em pasta temporária isolada: os arquivos pessoais permanecem intactos.
+const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'palacio-index-test-'));
+const folder = path.join(temp, 'assets/imagens/memoria-numerica/variacoes/03');
+fs.mkdirSync(folder, {recursive: true});
+const source = path.join(root, actual[3][0]);
+for (const n of ['10', '02']) fs.copyFileSync(source, path.join(folder, `03-mae-variacao-${n}.webp`));
+assert.equal(gerarIndice(temp)[3].length, 2);
+fs.copyFileSync(source, path.join(folder, '03-mae-variacao-03.webp'));
+assert.deepEqual(gerarIndice(temp)[3].map(p => path.basename(p)), ['03-mae-variacao-02.webp', '03-mae-variacao-03.webp', '03-mae-variacao-10.webp']);
+assert.deepEqual(gerarIndice(temp), gerarIndice(temp));
+fs.writeFileSync(path.join(folder, '03-invalida.webp'), 'not webp');
+assert.throws(() => gerarIndice(temp), /não é WebP/);
+console.log('Aprovados: índice real, manifesto consistente, adição isolada, ordem numérica, determinismo e rejeição de WebP inválido.');

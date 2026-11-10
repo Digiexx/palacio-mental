@@ -1,0 +1,613 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "fixture": "empty",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "novo",
+        "detalheMemoriaPontos": "0%",
+        "detalheMemoriaTentativas": "0",
+        "detalheMemoriaAcertos": "0",
+        "detalheMemoriaErros": "0",
+        "detalheMemoriaTaxaAcerto": "0%",
+        "detalheMemoriaSequencia": "Sem histórico",
+        "detalheMemoriaUltimoResultado": "—",
+        "detalheMemoriaUltimaTentativa": "Nunca treinada",
+        "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeFixar": "—",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeTreinoRapido": "—",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeDesafiar": "—",
+        "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeVelocidade": "—"
+      },
+      "bar": "0%",
+      "activities": [],
+      "overflow": false,
+      "columns": "143px 143px"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "fixture": "trained",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "forte",
+        "detalheMemoriaPontos": "74%",
+        "detalheMemoriaTentativas": "10",
+        "detalheMemoriaAcertos": "8",
+        "detalheMemoriaErros": "2",
+        "detalheMemoriaTaxaAcerto": "80%",
+        "detalheMemoriaSequencia": "3 acertos",
+        "detalheMemoriaUltimoResultado": "Acerto",
+        "detalheMemoriaUltimaTentativa": "19/10/2026, 09:00",
+        "detalheMemoriaAtividadeFixarResumo": "3 acertos · 1 erro",
+        "detalheMemoriaAtividadeFixar": "75%",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeTreinoRapido": "100%",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "1 acerto · 1 erro",
+        "detalheMemoriaAtividadeDesafiar": "50%",
+        "detalheMemoriaAtividadeVelocidadeResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeVelocidade": "100%"
+      },
+      "bar": "74%",
+      "activities": [],
+      "overflow": false,
+      "columns": "143px 143px"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "fixture": "empty",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "novo",
+        "detalheMemoriaPontos": "0%",
+        "detalheMemoriaTentativas": "0",
+        "detalheMemoriaAcertos": "0",
+        "detalheMemoriaErros": "0",
+        "detalheMemoriaTaxaAcerto": "0%",
+        "detalheMemoriaSequencia": "Sem histórico",
+        "detalheMemoriaUltimoResultado": "—",
+        "detalheMemoriaUltimaTentativa": "Nunca treinada",
+        "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeFixar": "—",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeTreinoRapido": "—",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeDesafiar": "—",
+        "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeVelocidade": "—"
+      },
+      "bar": "0%",
+      "meter": "0",
+      "activities": [
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        }
+      ],
+      "overflow": false,
+      "columns": "145px 145px",
+      "sameValues": true,
+      "pass": true,
+      "back": true,
+      "untrained": {
+        "values": {
+          "detalheMemoriaNumero": "01",
+          "detalheMemoriaPalavra": "Teia",
+          "detalheMemoriaNivel": "novo",
+          "detalheMemoriaPontos": "0%",
+          "detalheMemoriaTentativas": "0",
+          "detalheMemoriaAcertos": "0",
+          "detalheMemoriaErros": "0",
+          "detalheMemoriaTaxaAcerto": "0%",
+          "detalheMemoriaSequencia": "Sem histórico",
+          "detalheMemoriaUltimoResultado": "—",
+          "detalheMemoriaUltimaTentativa": "Nunca treinada",
+          "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeFixar": "—",
+          "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeTreinoRapido": "—",
+          "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeRevisao": "—",
+          "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeDesafiar": "—",
+          "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeVelocidade": "—"
+        },
+        "bar": "0%",
+        "meter": "0",
+        "activities": [
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          }
+        ],
+        "overflow": false,
+        "columns": "145px 145px"
+      }
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "fixture": "trained",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "forte",
+        "detalheMemoriaPontos": "74%",
+        "detalheMemoriaTentativas": "10",
+        "detalheMemoriaAcertos": "8",
+        "detalheMemoriaErros": "2",
+        "detalheMemoriaTaxaAcerto": "80%",
+        "detalheMemoriaSequencia": "3 acertos",
+        "detalheMemoriaUltimoResultado": "Acerto",
+        "detalheMemoriaUltimaTentativa": "19/10/2026, 09:00",
+        "detalheMemoriaAtividadeFixarResumo": "3 acertos · 1 erro",
+        "detalheMemoriaAtividadeFixar": "75%",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeTreinoRapido": "100%",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "1 acerto · 1 erro",
+        "detalheMemoriaAtividadeDesafiar": "50%",
+        "detalheMemoriaAtividadeVelocidadeResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeVelocidade": "100%"
+      },
+      "bar": "74%",
+      "meter": "74",
+      "activities": [
+        {
+          "hidden": false,
+          "aria": "75",
+          "width": "75%"
+        },
+        {
+          "hidden": false,
+          "aria": "100",
+          "width": "100%"
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": false,
+          "aria": "50",
+          "width": "50%"
+        },
+        {
+          "hidden": false,
+          "aria": "100",
+          "width": "100%"
+        }
+      ],
+      "overflow": false,
+      "columns": "145px 145px",
+      "sameValues": true,
+      "pass": true,
+      "back": true,
+      "untrained": {
+        "values": {
+          "detalheMemoriaNumero": "01",
+          "detalheMemoriaPalavra": "Teia",
+          "detalheMemoriaNivel": "novo",
+          "detalheMemoriaPontos": "0%",
+          "detalheMemoriaTentativas": "0",
+          "detalheMemoriaAcertos": "0",
+          "detalheMemoriaErros": "0",
+          "detalheMemoriaTaxaAcerto": "0%",
+          "detalheMemoriaSequencia": "Sem histórico",
+          "detalheMemoriaUltimoResultado": "—",
+          "detalheMemoriaUltimaTentativa": "Nunca treinada",
+          "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeFixar": "—",
+          "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeTreinoRapido": "—",
+          "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeRevisao": "—",
+          "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeDesafiar": "—",
+          "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeVelocidade": "—"
+        },
+        "bar": "0%",
+        "meter": "0",
+        "activities": [
+          {
+            "hidden": true,
+            "aria": "75",
+            "width": "75%"
+          },
+          {
+            "hidden": true,
+            "aria": "100",
+            "width": "100%"
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "50",
+            "width": "50%"
+          },
+          {
+            "hidden": true,
+            "aria": "100",
+            "width": "100%"
+          }
+        ],
+        "overflow": false,
+        "columns": "145px 145px"
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "fixture": "empty",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "novo",
+        "detalheMemoriaPontos": "0%",
+        "detalheMemoriaTentativas": "0",
+        "detalheMemoriaAcertos": "0",
+        "detalheMemoriaErros": "0",
+        "detalheMemoriaTaxaAcerto": "0%",
+        "detalheMemoriaSequencia": "Sem histórico",
+        "detalheMemoriaUltimoResultado": "—",
+        "detalheMemoriaUltimaTentativa": "Nunca treinada",
+        "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeFixar": "—",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeTreinoRapido": "—",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeDesafiar": "—",
+        "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeVelocidade": "—"
+      },
+      "bar": "0%",
+      "activities": [],
+      "overflow": false,
+      "columns": "178px 178px"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "fixture": "trained",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "forte",
+        "detalheMemoriaPontos": "74%",
+        "detalheMemoriaTentativas": "10",
+        "detalheMemoriaAcertos": "8",
+        "detalheMemoriaErros": "2",
+        "detalheMemoriaTaxaAcerto": "80%",
+        "detalheMemoriaSequencia": "3 acertos",
+        "detalheMemoriaUltimoResultado": "Acerto",
+        "detalheMemoriaUltimaTentativa": "19/10/2026, 09:00",
+        "detalheMemoriaAtividadeFixarResumo": "3 acertos · 1 erro",
+        "detalheMemoriaAtividadeFixar": "75%",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeTreinoRapido": "100%",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "1 acerto · 1 erro",
+        "detalheMemoriaAtividadeDesafiar": "50%",
+        "detalheMemoriaAtividadeVelocidadeResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeVelocidade": "100%"
+      },
+      "bar": "74%",
+      "activities": [],
+      "overflow": false,
+      "columns": "178px 178px"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "fixture": "empty",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "novo",
+        "detalheMemoriaPontos": "0%",
+        "detalheMemoriaTentativas": "0",
+        "detalheMemoriaAcertos": "0",
+        "detalheMemoriaErros": "0",
+        "detalheMemoriaTaxaAcerto": "0%",
+        "detalheMemoriaSequencia": "Sem histórico",
+        "detalheMemoriaUltimoResultado": "—",
+        "detalheMemoriaUltimaTentativa": "Nunca treinada",
+        "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeFixar": "—",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeTreinoRapido": "—",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeDesafiar": "—",
+        "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeVelocidade": "—"
+      },
+      "bar": "0%",
+      "meter": "0",
+      "activities": [
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        }
+      ],
+      "overflow": false,
+      "columns": "180px 180px",
+      "sameValues": true,
+      "pass": true,
+      "back": true,
+      "untrained": {
+        "values": {
+          "detalheMemoriaNumero": "01",
+          "detalheMemoriaPalavra": "Teia",
+          "detalheMemoriaNivel": "novo",
+          "detalheMemoriaPontos": "0%",
+          "detalheMemoriaTentativas": "0",
+          "detalheMemoriaAcertos": "0",
+          "detalheMemoriaErros": "0",
+          "detalheMemoriaTaxaAcerto": "0%",
+          "detalheMemoriaSequencia": "Sem histórico",
+          "detalheMemoriaUltimoResultado": "—",
+          "detalheMemoriaUltimaTentativa": "Nunca treinada",
+          "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeFixar": "—",
+          "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeTreinoRapido": "—",
+          "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeRevisao": "—",
+          "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeDesafiar": "—",
+          "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeVelocidade": "—"
+        },
+        "bar": "0%",
+        "meter": "0",
+        "activities": [
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          }
+        ],
+        "overflow": false,
+        "columns": "180px 180px"
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "fixture": "trained",
+      "values": {
+        "detalheMemoriaNumero": "00",
+        "detalheMemoriaPalavra": "Relógio",
+        "detalheMemoriaNivel": "forte",
+        "detalheMemoriaPontos": "74%",
+        "detalheMemoriaTentativas": "10",
+        "detalheMemoriaAcertos": "8",
+        "detalheMemoriaErros": "2",
+        "detalheMemoriaTaxaAcerto": "80%",
+        "detalheMemoriaSequencia": "3 acertos",
+        "detalheMemoriaUltimoResultado": "Acerto",
+        "detalheMemoriaUltimaTentativa": "19/10/2026, 09:00",
+        "detalheMemoriaAtividadeFixarResumo": "3 acertos · 1 erro",
+        "detalheMemoriaAtividadeFixar": "75%",
+        "detalheMemoriaAtividadeTreinoRapidoResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeTreinoRapido": "100%",
+        "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+        "detalheMemoriaAtividadeRevisao": "—",
+        "detalheMemoriaAtividadeDesafiarResumo": "1 acerto · 1 erro",
+        "detalheMemoriaAtividadeDesafiar": "50%",
+        "detalheMemoriaAtividadeVelocidadeResumo": "2 acertos · 0 erros",
+        "detalheMemoriaAtividadeVelocidade": "100%"
+      },
+      "bar": "74%",
+      "meter": "74",
+      "activities": [
+        {
+          "hidden": false,
+          "aria": "75",
+          "width": "75%"
+        },
+        {
+          "hidden": false,
+          "aria": "100",
+          "width": "100%"
+        },
+        {
+          "hidden": true,
+          "aria": "0",
+          "width": ""
+        },
+        {
+          "hidden": false,
+          "aria": "50",
+          "width": "50%"
+        },
+        {
+          "hidden": false,
+          "aria": "100",
+          "width": "100%"
+        }
+      ],
+      "overflow": false,
+      "columns": "180px 180px",
+      "sameValues": true,
+      "pass": true,
+      "back": true,
+      "untrained": {
+        "values": {
+          "detalheMemoriaNumero": "01",
+          "detalheMemoriaPalavra": "Teia",
+          "detalheMemoriaNivel": "novo",
+          "detalheMemoriaPontos": "0%",
+          "detalheMemoriaTentativas": "0",
+          "detalheMemoriaAcertos": "0",
+          "detalheMemoriaErros": "0",
+          "detalheMemoriaTaxaAcerto": "0%",
+          "detalheMemoriaSequencia": "Sem histórico",
+          "detalheMemoriaUltimoResultado": "—",
+          "detalheMemoriaUltimaTentativa": "Nunca treinada",
+          "detalheMemoriaAtividadeFixarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeFixar": "—",
+          "detalheMemoriaAtividadeTreinoRapidoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeTreinoRapido": "—",
+          "detalheMemoriaAtividadeRevisaoResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeRevisao": "—",
+          "detalheMemoriaAtividadeDesafiarResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeDesafiar": "—",
+          "detalheMemoriaAtividadeVelocidadeResumo": "Sem tentativas",
+          "detalheMemoriaAtividadeVelocidade": "—"
+        },
+        "bar": "0%",
+        "meter": "0",
+        "activities": [
+          {
+            "hidden": true,
+            "aria": "75",
+            "width": "75%"
+          },
+          {
+            "hidden": true,
+            "aria": "100",
+            "width": "100%"
+          },
+          {
+            "hidden": true,
+            "aria": "0",
+            "width": ""
+          },
+          {
+            "hidden": true,
+            "aria": "50",
+            "width": "50%"
+          },
+          {
+            "hidden": true,
+            "aria": "100",
+            "width": "100%"
+          }
+        ],
+        "overflow": false,
+        "columns": "180px 180px"
+      }
+    }
+  ],
+  "errors": []
+}

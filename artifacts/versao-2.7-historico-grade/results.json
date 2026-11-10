@@ -1,0 +1,2139 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "individual": {
+        "visible": true,
+        "values": [
+          {
+            "id": "detalheMemoriaNumero",
+            "text": "00"
+          },
+          {
+            "id": "detalheMemoriaPalavra",
+            "text": "Relógio"
+          },
+          {
+            "id": "detalheMemoriaNivel",
+            "text": "forte"
+          },
+          {
+            "id": "detalheMemoriaPontos",
+            "text": "74%"
+          },
+          {
+            "id": "detalheMemoriaTentativas",
+            "text": "10"
+          },
+          {
+            "id": "detalheMemoriaAcertos",
+            "text": "8"
+          },
+          {
+            "id": "detalheMemoriaErros",
+            "text": "2"
+          },
+          {
+            "id": "detalheMemoriaTaxaAcerto",
+            "text": "80%"
+          },
+          {
+            "id": "detalheMemoriaSequencia",
+            "text": "3 acertos"
+          },
+          {
+            "id": "detalheMemoriaUltimoResultado",
+            "text": "Acerto"
+          },
+          {
+            "id": "detalheMemoriaUltimaTentativa",
+            "text": "19/10/2026, 09:00"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixarResumo",
+            "text": "3 acertos · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixar",
+            "text": "75%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapido",
+            "text": "100%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisaoResumo",
+            "text": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisao",
+            "text": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiarResumo",
+            "text": "1 acerto · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiar",
+            "text": "50%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidadeResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidade",
+            "text": "100%"
+          }
+        ],
+        "hero": {
+          "width": 300,
+          "height": 140.890625
+        }
+      },
+      "returned": true,
+      "back": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "initial": {
+        "number": "00",
+        "word": "Relógio",
+        "domain": "74%",
+        "attempts": "10",
+        "hits": "8",
+        "errors": "2",
+        "rate": "80%",
+        "meter": "74",
+        "activities": [
+          "Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%",
+          "Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%",
+          "Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%",
+          "Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%"
+        ],
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "hidden": false
+        },
+        "imageCount": 1,
+        "overflow": false,
+        "selected": "0"
+      },
+      "images": [
+        {
+          "number": "01",
+          "word": "Teia",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+            "loaded": true,
+            "natural": [
+              1000,
+              1000
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "1"
+        },
+        {
+          "number": "02",
+          "word": "Noé",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+            "loaded": true,
+            "natural": [
+              1000,
+              1000
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "2"
+        },
+        {
+          "number": "03",
+          "word": "Mãe",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+            "loaded": true,
+            "natural": [
+              1000,
+              1000
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "3"
+        },
+        {
+          "number": "76",
+          "word": "Homem FASE",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/76-fase.webp",
+            "loaded": false,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "76"
+        }
+      ],
+      "all": [
+        {
+          "range": "00–09",
+          "num": "0",
+          "selected": "00",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "1",
+          "selected": "01",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "2",
+          "selected": "02",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "3",
+          "selected": "03",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "4",
+          "selected": "04",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "5",
+          "selected": "05",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "6",
+          "selected": "06",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "7",
+          "selected": "07",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "8",
+          "selected": "08",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "9",
+          "selected": "09",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "10",
+          "selected": "10",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "11",
+          "selected": "11",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "12",
+          "selected": "12",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "13",
+          "selected": "13",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "14",
+          "selected": "14",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "15",
+          "selected": "15",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "16",
+          "selected": "16",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "17",
+          "selected": "17",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "18",
+          "selected": "18",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "19",
+          "selected": "19",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "20",
+          "selected": "20",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "21",
+          "selected": "21",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "22",
+          "selected": "22",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "23",
+          "selected": "23",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "24",
+          "selected": "24",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "25",
+          "selected": "25",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "26",
+          "selected": "26",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "27",
+          "selected": "27",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "28",
+          "selected": "28",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "29",
+          "selected": "29",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "30",
+          "selected": "30",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "31",
+          "selected": "31",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "32",
+          "selected": "32",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "33",
+          "selected": "33",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "34",
+          "selected": "34",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "35",
+          "selected": "35",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "36",
+          "selected": "36",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "37",
+          "selected": "37",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "38",
+          "selected": "38",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "39",
+          "selected": "39",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "40",
+          "selected": "40",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "41",
+          "selected": "41",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "42",
+          "selected": "42",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "43",
+          "selected": "43",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "44",
+          "selected": "44",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "45",
+          "selected": "45",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "46",
+          "selected": "46",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "47",
+          "selected": "47",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "48",
+          "selected": "48",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "49",
+          "selected": "49",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "50",
+          "selected": "50",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "51",
+          "selected": "51",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "52",
+          "selected": "52",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "53",
+          "selected": "53",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "54",
+          "selected": "54",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "55",
+          "selected": "55",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "56",
+          "selected": "56",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "57",
+          "selected": "57",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "58",
+          "selected": "58",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "59",
+          "selected": "59",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "60",
+          "selected": "60",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "61",
+          "selected": "61",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "62",
+          "selected": "62",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "63",
+          "selected": "63",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "64",
+          "selected": "64",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "65",
+          "selected": "65",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "66",
+          "selected": "66",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "67",
+          "selected": "67",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "68",
+          "selected": "68",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "69",
+          "selected": "69",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "70",
+          "selected": "70",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "71",
+          "selected": "71",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "72",
+          "selected": "72",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "73",
+          "selected": "73",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "74",
+          "selected": "74",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "75",
+          "selected": "75",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "76",
+          "selected": "76",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "77",
+          "selected": "77",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "78",
+          "selected": "78",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "79",
+          "selected": "79",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "80",
+          "selected": "80",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "81",
+          "selected": "81",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "82",
+          "selected": "82",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "83",
+          "selected": "83",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "84",
+          "selected": "84",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "85",
+          "selected": "85",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "86",
+          "selected": "86",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "87",
+          "selected": "87",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "88",
+          "selected": "88",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "89",
+          "selected": "89",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "90",
+          "selected": "90",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "91",
+          "selected": "91",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "92",
+          "selected": "92",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "93",
+          "selected": "93",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "94",
+          "selected": "94",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "95",
+          "selected": "95",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "96",
+          "selected": "96",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "97",
+          "selected": "97",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "98",
+          "selected": "98",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "99",
+          "selected": "99",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "100",
+          "num": "100",
+          "selected": "100",
+          "imageCount": 1,
+          "overflow": false
+        }
+      ],
+      "fallback": {
+        "number": "00",
+        "word": "Relógio",
+        "domain": "74%",
+        "attempts": "10",
+        "hits": "8",
+        "errors": "2",
+        "rate": "80%",
+        "meter": "74",
+        "activities": [
+          "Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%",
+          "Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%",
+          "Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%",
+          "Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%"
+        ],
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+          "loaded": false,
+          "natural": [
+            0,
+            0
+          ],
+          "fit": "contain",
+          "hidden": true
+        },
+        "imageCount": 1,
+        "overflow": false,
+        "selected": "0"
+      },
+      "individual": {
+        "visible": true,
+        "values": [
+          {
+            "id": "detalheMemoriaNumero",
+            "text": "00"
+          },
+          {
+            "id": "detalheMemoriaPalavra",
+            "text": "Relógio"
+          },
+          {
+            "id": "detalheMemoriaNivel",
+            "text": "forte"
+          },
+          {
+            "id": "detalheMemoriaPontos",
+            "text": "74%"
+          },
+          {
+            "id": "detalheMemoriaTentativas",
+            "text": "10"
+          },
+          {
+            "id": "detalheMemoriaAcertos",
+            "text": "8"
+          },
+          {
+            "id": "detalheMemoriaErros",
+            "text": "2"
+          },
+          {
+            "id": "detalheMemoriaTaxaAcerto",
+            "text": "80%"
+          },
+          {
+            "id": "detalheMemoriaSequencia",
+            "text": "3 acertos"
+          },
+          {
+            "id": "detalheMemoriaUltimoResultado",
+            "text": "Acerto"
+          },
+          {
+            "id": "detalheMemoriaUltimaTentativa",
+            "text": "19/10/2026, 09:00"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixarResumo",
+            "text": "3 acertos · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixar",
+            "text": "75%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapido",
+            "text": "100%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisaoResumo",
+            "text": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisao",
+            "text": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiarResumo",
+            "text": "1 acerto · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiar",
+            "text": "50%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidadeResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidade",
+            "text": "100%"
+          }
+        ],
+        "hero": {
+          "width": 300,
+          "height": 140.890625
+        }
+      },
+      "returned": true,
+      "back": true,
+      "individualPreserved": true,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "individual": {
+        "visible": true,
+        "values": [
+          {
+            "id": "detalheMemoriaNumero",
+            "text": "00"
+          },
+          {
+            "id": "detalheMemoriaPalavra",
+            "text": "Relógio"
+          },
+          {
+            "id": "detalheMemoriaNivel",
+            "text": "forte"
+          },
+          {
+            "id": "detalheMemoriaPontos",
+            "text": "74%"
+          },
+          {
+            "id": "detalheMemoriaTentativas",
+            "text": "10"
+          },
+          {
+            "id": "detalheMemoriaAcertos",
+            "text": "8"
+          },
+          {
+            "id": "detalheMemoriaErros",
+            "text": "2"
+          },
+          {
+            "id": "detalheMemoriaTaxaAcerto",
+            "text": "80%"
+          },
+          {
+            "id": "detalheMemoriaSequencia",
+            "text": "3 acertos"
+          },
+          {
+            "id": "detalheMemoriaUltimoResultado",
+            "text": "Acerto"
+          },
+          {
+            "id": "detalheMemoriaUltimaTentativa",
+            "text": "19/10/2026, 09:00"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixarResumo",
+            "text": "3 acertos · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixar",
+            "text": "75%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapido",
+            "text": "100%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisaoResumo",
+            "text": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisao",
+            "text": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiarResumo",
+            "text": "1 acerto · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiar",
+            "text": "50%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidadeResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidade",
+            "text": "100%"
+          }
+        ],
+        "hero": {
+          "width": 370,
+          "height": 140.890625
+        }
+      },
+      "returned": true,
+      "back": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "initial": {
+        "number": "00",
+        "word": "Relógio",
+        "domain": "74%",
+        "attempts": "10",
+        "hits": "8",
+        "errors": "2",
+        "rate": "80%",
+        "meter": "74",
+        "activities": [
+          "Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%",
+          "Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%",
+          "Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%",
+          "Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%"
+        ],
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+          "loaded": true,
+          "natural": [
+            1000,
+            1000
+          ],
+          "fit": "contain",
+          "hidden": false
+        },
+        "imageCount": 1,
+        "overflow": false,
+        "selected": "0"
+      },
+      "images": [
+        {
+          "number": "01",
+          "word": "Teia",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+            "loaded": true,
+            "natural": [
+              1000,
+              1000
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "1"
+        },
+        {
+          "number": "02",
+          "word": "Noé",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+            "loaded": true,
+            "natural": [
+              1000,
+              1000
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "2"
+        },
+        {
+          "number": "03",
+          "word": "Mãe",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+            "loaded": true,
+            "natural": [
+              1000,
+              1000
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "3"
+        },
+        {
+          "number": "76",
+          "word": "Homem FASE",
+          "domain": "0%",
+          "attempts": "0",
+          "hits": "0",
+          "errors": "0",
+          "rate": "0%",
+          "meter": "0",
+          "activities": [],
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/76-fase.webp",
+            "loaded": false,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "hidden": false
+          },
+          "imageCount": 1,
+          "overflow": false,
+          "selected": "76"
+        }
+      ],
+      "all": [
+        {
+          "range": "00–09",
+          "num": "0",
+          "selected": "00",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "1",
+          "selected": "01",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "2",
+          "selected": "02",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "3",
+          "selected": "03",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "4",
+          "selected": "04",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "5",
+          "selected": "05",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "6",
+          "selected": "06",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "7",
+          "selected": "07",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "8",
+          "selected": "08",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "00–09",
+          "num": "9",
+          "selected": "09",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "10",
+          "selected": "10",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "11",
+          "selected": "11",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "12",
+          "selected": "12",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "13",
+          "selected": "13",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "14",
+          "selected": "14",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "15",
+          "selected": "15",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "16",
+          "selected": "16",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "17",
+          "selected": "17",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "18",
+          "selected": "18",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "10–19",
+          "num": "19",
+          "selected": "19",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "20",
+          "selected": "20",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "21",
+          "selected": "21",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "22",
+          "selected": "22",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "23",
+          "selected": "23",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "24",
+          "selected": "24",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "25",
+          "selected": "25",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "26",
+          "selected": "26",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "27",
+          "selected": "27",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "28",
+          "selected": "28",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "20–29",
+          "num": "29",
+          "selected": "29",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "30",
+          "selected": "30",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "31",
+          "selected": "31",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "32",
+          "selected": "32",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "33",
+          "selected": "33",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "34",
+          "selected": "34",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "35",
+          "selected": "35",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "36",
+          "selected": "36",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "37",
+          "selected": "37",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "38",
+          "selected": "38",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "30–39",
+          "num": "39",
+          "selected": "39",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "40",
+          "selected": "40",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "41",
+          "selected": "41",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "42",
+          "selected": "42",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "43",
+          "selected": "43",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "44",
+          "selected": "44",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "45",
+          "selected": "45",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "46",
+          "selected": "46",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "47",
+          "selected": "47",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "48",
+          "selected": "48",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "40–49",
+          "num": "49",
+          "selected": "49",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "50",
+          "selected": "50",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "51",
+          "selected": "51",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "52",
+          "selected": "52",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "53",
+          "selected": "53",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "54",
+          "selected": "54",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "55",
+          "selected": "55",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "56",
+          "selected": "56",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "57",
+          "selected": "57",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "58",
+          "selected": "58",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "50–59",
+          "num": "59",
+          "selected": "59",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "60",
+          "selected": "60",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "61",
+          "selected": "61",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "62",
+          "selected": "62",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "63",
+          "selected": "63",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "64",
+          "selected": "64",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "65",
+          "selected": "65",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "66",
+          "selected": "66",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "67",
+          "selected": "67",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "68",
+          "selected": "68",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "60–69",
+          "num": "69",
+          "selected": "69",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "70",
+          "selected": "70",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "71",
+          "selected": "71",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "72",
+          "selected": "72",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "73",
+          "selected": "73",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "74",
+          "selected": "74",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "75",
+          "selected": "75",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "76",
+          "selected": "76",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "77",
+          "selected": "77",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "78",
+          "selected": "78",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "70–79",
+          "num": "79",
+          "selected": "79",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "80",
+          "selected": "80",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "81",
+          "selected": "81",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "82",
+          "selected": "82",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "83",
+          "selected": "83",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "84",
+          "selected": "84",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "85",
+          "selected": "85",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "86",
+          "selected": "86",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "87",
+          "selected": "87",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "88",
+          "selected": "88",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "80–89",
+          "num": "89",
+          "selected": "89",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "90",
+          "selected": "90",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "91",
+          "selected": "91",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "92",
+          "selected": "92",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "93",
+          "selected": "93",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "94",
+          "selected": "94",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "95",
+          "selected": "95",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "96",
+          "selected": "96",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "97",
+          "selected": "97",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "98",
+          "selected": "98",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "90–99",
+          "num": "99",
+          "selected": "99",
+          "imageCount": 1,
+          "overflow": false
+        },
+        {
+          "range": "100",
+          "num": "100",
+          "selected": "100",
+          "imageCount": 1,
+          "overflow": false
+        }
+      ],
+      "fallback": {
+        "number": "00",
+        "word": "Relógio",
+        "domain": "74%",
+        "attempts": "10",
+        "hits": "8",
+        "errors": "2",
+        "rate": "80%",
+        "meter": "74",
+        "activities": [
+          "Fixar\n                                \n\n                                3 acertos · 1 erro\n\n                            \n\n                            75%",
+          "Treino Rápido\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%",
+          "Desafiar\n                                \n\n                                1 acerto · 1 erro\n\n                            \n\n                            50%",
+          "Velocidade\n                                \n\n                                2 acertos · 0 erros\n\n                            \n\n                            100%"
+        ],
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+          "loaded": false,
+          "natural": [
+            0,
+            0
+          ],
+          "fit": "contain",
+          "hidden": true
+        },
+        "imageCount": 1,
+        "overflow": false,
+        "selected": "0"
+      },
+      "individual": {
+        "visible": true,
+        "values": [
+          {
+            "id": "detalheMemoriaNumero",
+            "text": "00"
+          },
+          {
+            "id": "detalheMemoriaPalavra",
+            "text": "Relógio"
+          },
+          {
+            "id": "detalheMemoriaNivel",
+            "text": "forte"
+          },
+          {
+            "id": "detalheMemoriaPontos",
+            "text": "74%"
+          },
+          {
+            "id": "detalheMemoriaTentativas",
+            "text": "10"
+          },
+          {
+            "id": "detalheMemoriaAcertos",
+            "text": "8"
+          },
+          {
+            "id": "detalheMemoriaErros",
+            "text": "2"
+          },
+          {
+            "id": "detalheMemoriaTaxaAcerto",
+            "text": "80%"
+          },
+          {
+            "id": "detalheMemoriaSequencia",
+            "text": "3 acertos"
+          },
+          {
+            "id": "detalheMemoriaUltimoResultado",
+            "text": "Acerto"
+          },
+          {
+            "id": "detalheMemoriaUltimaTentativa",
+            "text": "19/10/2026, 09:00"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixarResumo",
+            "text": "3 acertos · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixar",
+            "text": "75%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapido",
+            "text": "100%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisaoResumo",
+            "text": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisao",
+            "text": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiarResumo",
+            "text": "1 acerto · 1 erro"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiar",
+            "text": "50%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidadeResumo",
+            "text": "2 acertos · 0 erros"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidade",
+            "text": "100%"
+          }
+        ],
+        "hero": {
+          "width": 370,
+          "height": 140.890625
+        }
+      },
+      "returned": true,
+      "back": true,
+      "individualPreserved": true,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

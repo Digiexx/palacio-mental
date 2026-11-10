@@ -1,0 +1,74 @@
+[
+  {
+    "name": "circuito-digital",
+    "status": 200,
+    "bytes": 659,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "neural",
+    "status": 200,
+    "bytes": 704,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "fragmentada",
+    "status": 200,
+    "bytes": 582,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "orbita",
+    "status": 200,
+    "bytes": 534,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "geometrica",
+    "status": 200,
+    "bytes": 479,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "duplo-contorno",
+    "status": 200,
+    "bytes": 521,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "constelacao",
+    "status": 200,
+    "bytes": 803,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  },
+  {
+    "name": "monograma-mn",
+    "status": 200,
+    "bytes": 603,
+    "viewBox": "0 0 128 128",
+    "valid": true,
+    "static": true,
+    "external": false
+  }
+]

@@ -1,0 +1,1703 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "values": [
+        {
+          "id": "detalheMemoriaNumero",
+          "value": "00"
+        },
+        {
+          "id": "detalheMemoriaPalavra",
+          "value": "Relógio"
+        },
+        {
+          "id": "detalheMemoriaNivel",
+          "value": "forte"
+        },
+        {
+          "id": "detalheMemoriaPontos",
+          "value": "74%"
+        },
+        {
+          "id": "detalheMemoriaTentativas",
+          "value": "10"
+        },
+        {
+          "id": "detalheMemoriaAcertos",
+          "value": "8"
+        },
+        {
+          "id": "detalheMemoriaErros",
+          "value": "2"
+        },
+        {
+          "id": "detalheMemoriaTaxaAcerto",
+          "value": "80%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixarResumo",
+          "value": "3 acertos · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixar",
+          "value": "75%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapido",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisaoResumo",
+          "value": "Sem tentativas"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisao",
+          "value": "—"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiarResumo",
+          "value": "1 acerto · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiar",
+          "value": "50%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidadeResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidade",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaSequencia",
+          "value": "3 acertos"
+        },
+        {
+          "id": "detalheMemoriaUltimoResultado",
+          "value": "Acerto"
+        },
+        {
+          "id": "detalheMemoriaUltimaTentativa",
+          "value": "19/10/2026, 09:00"
+        }
+      ],
+      "header": {
+        "left": 0,
+        "top": 30,
+        "width": 360,
+        "height": 210
+      },
+      "grid": {
+        "left": 32,
+        "top": 304,
+        "width": 296,
+        "height": 96
+      },
+      "card": {
+        "left": 32,
+        "top": 414,
+        "width": 296,
+        "height": 214.890625
+      },
+      "overflow": false,
+      "oldScreen": true,
+      "detailsButton": true,
+      "template": false
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "values": [
+        {
+          "id": "detalheMemoriaNumero",
+          "value": "00"
+        },
+        {
+          "id": "detalheMemoriaPalavra",
+          "value": "Relógio"
+        },
+        {
+          "id": "detalheMemoriaNivel",
+          "value": "forte"
+        },
+        {
+          "id": "detalheMemoriaPontos",
+          "value": "74%"
+        },
+        {
+          "id": "detalheMemoriaTentativas",
+          "value": "10"
+        },
+        {
+          "id": "detalheMemoriaAcertos",
+          "value": "8"
+        },
+        {
+          "id": "detalheMemoriaErros",
+          "value": "2"
+        },
+        {
+          "id": "detalheMemoriaTaxaAcerto",
+          "value": "80%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixarResumo",
+          "value": "3 acertos · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixar",
+          "value": "75%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapido",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisaoResumo",
+          "value": "Sem tentativas"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisao",
+          "value": "—"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiarResumo",
+          "value": "1 acerto · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiar",
+          "value": "50%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidadeResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidade",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaSequencia",
+          "value": "3 acertos"
+        },
+        {
+          "id": "detalheMemoriaUltimoResultado",
+          "value": "Acerto"
+        },
+        {
+          "id": "detalheMemoriaUltimaTentativa",
+          "value": "19/10/2026, 09:00"
+        }
+      ],
+      "header": {
+        "left": 0,
+        "top": 30,
+        "width": 360,
+        "height": 210
+      },
+      "grid": {
+        "left": 32,
+        "top": 304,
+        "width": 296,
+        "height": 96
+      },
+      "card": {
+        "left": 32,
+        "top": 414,
+        "width": 296,
+        "height": 214.890625
+      },
+      "overflow": false,
+      "oldScreen": false,
+      "detailsButton": false,
+      "template": true,
+      "preserved": true,
+      "all": [
+        {
+          "n": "0",
+          "selected": "00",
+          "overflow": false
+        },
+        {
+          "n": "1",
+          "selected": "01",
+          "overflow": false
+        },
+        {
+          "n": "2",
+          "selected": "02",
+          "overflow": false
+        },
+        {
+          "n": "3",
+          "selected": "03",
+          "overflow": false
+        },
+        {
+          "n": "4",
+          "selected": "04",
+          "overflow": false
+        },
+        {
+          "n": "5",
+          "selected": "05",
+          "overflow": false
+        },
+        {
+          "n": "6",
+          "selected": "06",
+          "overflow": false
+        },
+        {
+          "n": "7",
+          "selected": "07",
+          "overflow": false
+        },
+        {
+          "n": "8",
+          "selected": "08",
+          "overflow": false
+        },
+        {
+          "n": "9",
+          "selected": "09",
+          "overflow": false
+        },
+        {
+          "n": "10",
+          "selected": "10",
+          "overflow": false
+        },
+        {
+          "n": "11",
+          "selected": "11",
+          "overflow": false
+        },
+        {
+          "n": "12",
+          "selected": "12",
+          "overflow": false
+        },
+        {
+          "n": "13",
+          "selected": "13",
+          "overflow": false
+        },
+        {
+          "n": "14",
+          "selected": "14",
+          "overflow": false
+        },
+        {
+          "n": "15",
+          "selected": "15",
+          "overflow": false
+        },
+        {
+          "n": "16",
+          "selected": "16",
+          "overflow": false
+        },
+        {
+          "n": "17",
+          "selected": "17",
+          "overflow": false
+        },
+        {
+          "n": "18",
+          "selected": "18",
+          "overflow": false
+        },
+        {
+          "n": "19",
+          "selected": "19",
+          "overflow": false
+        },
+        {
+          "n": "20",
+          "selected": "20",
+          "overflow": false
+        },
+        {
+          "n": "21",
+          "selected": "21",
+          "overflow": false
+        },
+        {
+          "n": "22",
+          "selected": "22",
+          "overflow": false
+        },
+        {
+          "n": "23",
+          "selected": "23",
+          "overflow": false
+        },
+        {
+          "n": "24",
+          "selected": "24",
+          "overflow": false
+        },
+        {
+          "n": "25",
+          "selected": "25",
+          "overflow": false
+        },
+        {
+          "n": "26",
+          "selected": "26",
+          "overflow": false
+        },
+        {
+          "n": "27",
+          "selected": "27",
+          "overflow": false
+        },
+        {
+          "n": "28",
+          "selected": "28",
+          "overflow": false
+        },
+        {
+          "n": "29",
+          "selected": "29",
+          "overflow": false
+        },
+        {
+          "n": "30",
+          "selected": "30",
+          "overflow": false
+        },
+        {
+          "n": "31",
+          "selected": "31",
+          "overflow": false
+        },
+        {
+          "n": "32",
+          "selected": "32",
+          "overflow": false
+        },
+        {
+          "n": "33",
+          "selected": "33",
+          "overflow": false
+        },
+        {
+          "n": "34",
+          "selected": "34",
+          "overflow": false
+        },
+        {
+          "n": "35",
+          "selected": "35",
+          "overflow": false
+        },
+        {
+          "n": "36",
+          "selected": "36",
+          "overflow": false
+        },
+        {
+          "n": "37",
+          "selected": "37",
+          "overflow": false
+        },
+        {
+          "n": "38",
+          "selected": "38",
+          "overflow": false
+        },
+        {
+          "n": "39",
+          "selected": "39",
+          "overflow": false
+        },
+        {
+          "n": "40",
+          "selected": "40",
+          "overflow": false
+        },
+        {
+          "n": "41",
+          "selected": "41",
+          "overflow": false
+        },
+        {
+          "n": "42",
+          "selected": "42",
+          "overflow": false
+        },
+        {
+          "n": "43",
+          "selected": "43",
+          "overflow": false
+        },
+        {
+          "n": "44",
+          "selected": "44",
+          "overflow": false
+        },
+        {
+          "n": "45",
+          "selected": "45",
+          "overflow": false
+        },
+        {
+          "n": "46",
+          "selected": "46",
+          "overflow": false
+        },
+        {
+          "n": "47",
+          "selected": "47",
+          "overflow": false
+        },
+        {
+          "n": "48",
+          "selected": "48",
+          "overflow": false
+        },
+        {
+          "n": "49",
+          "selected": "49",
+          "overflow": false
+        },
+        {
+          "n": "50",
+          "selected": "50",
+          "overflow": false
+        },
+        {
+          "n": "51",
+          "selected": "51",
+          "overflow": false
+        },
+        {
+          "n": "52",
+          "selected": "52",
+          "overflow": false
+        },
+        {
+          "n": "53",
+          "selected": "53",
+          "overflow": false
+        },
+        {
+          "n": "54",
+          "selected": "54",
+          "overflow": false
+        },
+        {
+          "n": "55",
+          "selected": "55",
+          "overflow": false
+        },
+        {
+          "n": "56",
+          "selected": "56",
+          "overflow": false
+        },
+        {
+          "n": "57",
+          "selected": "57",
+          "overflow": false
+        },
+        {
+          "n": "58",
+          "selected": "58",
+          "overflow": false
+        },
+        {
+          "n": "59",
+          "selected": "59",
+          "overflow": false
+        },
+        {
+          "n": "60",
+          "selected": "60",
+          "overflow": false
+        },
+        {
+          "n": "61",
+          "selected": "61",
+          "overflow": false
+        },
+        {
+          "n": "62",
+          "selected": "62",
+          "overflow": false
+        },
+        {
+          "n": "63",
+          "selected": "63",
+          "overflow": false
+        },
+        {
+          "n": "64",
+          "selected": "64",
+          "overflow": false
+        },
+        {
+          "n": "65",
+          "selected": "65",
+          "overflow": false
+        },
+        {
+          "n": "66",
+          "selected": "66",
+          "overflow": false
+        },
+        {
+          "n": "67",
+          "selected": "67",
+          "overflow": false
+        },
+        {
+          "n": "68",
+          "selected": "68",
+          "overflow": false
+        },
+        {
+          "n": "69",
+          "selected": "69",
+          "overflow": false
+        },
+        {
+          "n": "70",
+          "selected": "70",
+          "overflow": false
+        },
+        {
+          "n": "71",
+          "selected": "71",
+          "overflow": false
+        },
+        {
+          "n": "72",
+          "selected": "72",
+          "overflow": false
+        },
+        {
+          "n": "73",
+          "selected": "73",
+          "overflow": false
+        },
+        {
+          "n": "74",
+          "selected": "74",
+          "overflow": false
+        },
+        {
+          "n": "75",
+          "selected": "75",
+          "overflow": false
+        },
+        {
+          "n": "76",
+          "selected": "76",
+          "overflow": false
+        },
+        {
+          "n": "77",
+          "selected": "77",
+          "overflow": false
+        },
+        {
+          "n": "78",
+          "selected": "78",
+          "overflow": false
+        },
+        {
+          "n": "79",
+          "selected": "79",
+          "overflow": false
+        },
+        {
+          "n": "80",
+          "selected": "80",
+          "overflow": false
+        },
+        {
+          "n": "81",
+          "selected": "81",
+          "overflow": false
+        },
+        {
+          "n": "82",
+          "selected": "82",
+          "overflow": false
+        },
+        {
+          "n": "83",
+          "selected": "83",
+          "overflow": false
+        },
+        {
+          "n": "84",
+          "selected": "84",
+          "overflow": false
+        },
+        {
+          "n": "85",
+          "selected": "85",
+          "overflow": false
+        },
+        {
+          "n": "86",
+          "selected": "86",
+          "overflow": false
+        },
+        {
+          "n": "87",
+          "selected": "87",
+          "overflow": false
+        },
+        {
+          "n": "88",
+          "selected": "88",
+          "overflow": false
+        },
+        {
+          "n": "89",
+          "selected": "89",
+          "overflow": false
+        },
+        {
+          "n": "90",
+          "selected": "90",
+          "overflow": false
+        },
+        {
+          "n": "91",
+          "selected": "91",
+          "overflow": false
+        },
+        {
+          "n": "92",
+          "selected": "92",
+          "overflow": false
+        },
+        {
+          "n": "93",
+          "selected": "93",
+          "overflow": false
+        },
+        {
+          "n": "94",
+          "selected": "94",
+          "overflow": false
+        },
+        {
+          "n": "95",
+          "selected": "95",
+          "overflow": false
+        },
+        {
+          "n": "96",
+          "selected": "96",
+          "overflow": false
+        },
+        {
+          "n": "97",
+          "selected": "97",
+          "overflow": false
+        },
+        {
+          "n": "98",
+          "selected": "98",
+          "overflow": false
+        },
+        {
+          "n": "99",
+          "selected": "99",
+          "overflow": false
+        },
+        {
+          "n": "100",
+          "selected": "100",
+          "overflow": false
+        }
+      ],
+      "empty": {
+        "values": [
+          {
+            "id": "detalheMemoriaNumero",
+            "value": "01"
+          },
+          {
+            "id": "detalheMemoriaPalavra",
+            "value": "Teia"
+          },
+          {
+            "id": "detalheMemoriaNivel",
+            "value": "novo"
+          },
+          {
+            "id": "detalheMemoriaPontos",
+            "value": "0%"
+          },
+          {
+            "id": "detalheMemoriaTentativas",
+            "value": "0"
+          },
+          {
+            "id": "detalheMemoriaAcertos",
+            "value": "0"
+          },
+          {
+            "id": "detalheMemoriaErros",
+            "value": "0"
+          },
+          {
+            "id": "detalheMemoriaTaxaAcerto",
+            "value": "0%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixarResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixar",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapido",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisaoResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisao",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiarResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiar",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidadeResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidade",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaSequencia",
+            "value": "Sem histórico"
+          },
+          {
+            "id": "detalheMemoriaUltimoResultado",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaUltimaTentativa",
+            "value": "Nunca treinada"
+          }
+        ],
+        "header": {
+          "left": 0,
+          "top": 30,
+          "width": 360,
+          "height": 210
+        },
+        "grid": {
+          "left": 32,
+          "top": 304,
+          "width": 296,
+          "height": 96
+        },
+        "card": {
+          "left": 32,
+          "top": 414,
+          "width": 296,
+          "height": 214.890625
+        },
+        "overflow": false,
+        "oldScreen": false,
+        "detailsButton": false,
+        "template": true
+      },
+      "storagePreserved": true,
+      "back": true,
+      "table": true,
+      "reloadPreserved": true,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "values": [
+        {
+          "id": "detalheMemoriaNumero",
+          "value": "00"
+        },
+        {
+          "id": "detalheMemoriaPalavra",
+          "value": "Relógio"
+        },
+        {
+          "id": "detalheMemoriaNivel",
+          "value": "forte"
+        },
+        {
+          "id": "detalheMemoriaPontos",
+          "value": "74%"
+        },
+        {
+          "id": "detalheMemoriaTentativas",
+          "value": "10"
+        },
+        {
+          "id": "detalheMemoriaAcertos",
+          "value": "8"
+        },
+        {
+          "id": "detalheMemoriaErros",
+          "value": "2"
+        },
+        {
+          "id": "detalheMemoriaTaxaAcerto",
+          "value": "80%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixarResumo",
+          "value": "3 acertos · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixar",
+          "value": "75%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapido",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisaoResumo",
+          "value": "Sem tentativas"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisao",
+          "value": "—"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiarResumo",
+          "value": "1 acerto · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiar",
+          "value": "50%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidadeResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidade",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaSequencia",
+          "value": "3 acertos"
+        },
+        {
+          "id": "detalheMemoriaUltimoResultado",
+          "value": "Acerto"
+        },
+        {
+          "id": "detalheMemoriaUltimaTentativa",
+          "value": "19/10/2026, 09:00"
+        }
+      ],
+      "header": {
+        "left": 0,
+        "top": 30,
+        "width": 430,
+        "height": 236.5
+      },
+      "grid": {
+        "left": 32,
+        "top": 330.5,
+        "width": 366,
+        "height": 96
+      },
+      "card": {
+        "left": 32,
+        "top": 440.5,
+        "width": 366,
+        "height": 214.890625
+      },
+      "overflow": false,
+      "oldScreen": true,
+      "detailsButton": true,
+      "template": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "values": [
+        {
+          "id": "detalheMemoriaNumero",
+          "value": "00"
+        },
+        {
+          "id": "detalheMemoriaPalavra",
+          "value": "Relógio"
+        },
+        {
+          "id": "detalheMemoriaNivel",
+          "value": "forte"
+        },
+        {
+          "id": "detalheMemoriaPontos",
+          "value": "74%"
+        },
+        {
+          "id": "detalheMemoriaTentativas",
+          "value": "10"
+        },
+        {
+          "id": "detalheMemoriaAcertos",
+          "value": "8"
+        },
+        {
+          "id": "detalheMemoriaErros",
+          "value": "2"
+        },
+        {
+          "id": "detalheMemoriaTaxaAcerto",
+          "value": "80%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixarResumo",
+          "value": "3 acertos · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeFixar",
+          "value": "75%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeTreinoRapido",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisaoResumo",
+          "value": "Sem tentativas"
+        },
+        {
+          "id": "detalheMemoriaAtividadeRevisao",
+          "value": "—"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiarResumo",
+          "value": "1 acerto · 1 erro"
+        },
+        {
+          "id": "detalheMemoriaAtividadeDesafiar",
+          "value": "50%"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidadeResumo",
+          "value": "2 acertos · 0 erros"
+        },
+        {
+          "id": "detalheMemoriaAtividadeVelocidade",
+          "value": "100%"
+        },
+        {
+          "id": "detalheMemoriaSequencia",
+          "value": "3 acertos"
+        },
+        {
+          "id": "detalheMemoriaUltimoResultado",
+          "value": "Acerto"
+        },
+        {
+          "id": "detalheMemoriaUltimaTentativa",
+          "value": "19/10/2026, 09:00"
+        }
+      ],
+      "header": {
+        "left": 0,
+        "top": 30,
+        "width": 430,
+        "height": 236.5
+      },
+      "grid": {
+        "left": 32,
+        "top": 330.5,
+        "width": 366,
+        "height": 96
+      },
+      "card": {
+        "left": 32,
+        "top": 440.5,
+        "width": 366,
+        "height": 214.890625
+      },
+      "overflow": false,
+      "oldScreen": false,
+      "detailsButton": false,
+      "template": true,
+      "preserved": true,
+      "all": [
+        {
+          "n": "0",
+          "selected": "00",
+          "overflow": false
+        },
+        {
+          "n": "1",
+          "selected": "01",
+          "overflow": false
+        },
+        {
+          "n": "2",
+          "selected": "02",
+          "overflow": false
+        },
+        {
+          "n": "3",
+          "selected": "03",
+          "overflow": false
+        },
+        {
+          "n": "4",
+          "selected": "04",
+          "overflow": false
+        },
+        {
+          "n": "5",
+          "selected": "05",
+          "overflow": false
+        },
+        {
+          "n": "6",
+          "selected": "06",
+          "overflow": false
+        },
+        {
+          "n": "7",
+          "selected": "07",
+          "overflow": false
+        },
+        {
+          "n": "8",
+          "selected": "08",
+          "overflow": false
+        },
+        {
+          "n": "9",
+          "selected": "09",
+          "overflow": false
+        },
+        {
+          "n": "10",
+          "selected": "10",
+          "overflow": false
+        },
+        {
+          "n": "11",
+          "selected": "11",
+          "overflow": false
+        },
+        {
+          "n": "12",
+          "selected": "12",
+          "overflow": false
+        },
+        {
+          "n": "13",
+          "selected": "13",
+          "overflow": false
+        },
+        {
+          "n": "14",
+          "selected": "14",
+          "overflow": false
+        },
+        {
+          "n": "15",
+          "selected": "15",
+          "overflow": false
+        },
+        {
+          "n": "16",
+          "selected": "16",
+          "overflow": false
+        },
+        {
+          "n": "17",
+          "selected": "17",
+          "overflow": false
+        },
+        {
+          "n": "18",
+          "selected": "18",
+          "overflow": false
+        },
+        {
+          "n": "19",
+          "selected": "19",
+          "overflow": false
+        },
+        {
+          "n": "20",
+          "selected": "20",
+          "overflow": false
+        },
+        {
+          "n": "21",
+          "selected": "21",
+          "overflow": false
+        },
+        {
+          "n": "22",
+          "selected": "22",
+          "overflow": false
+        },
+        {
+          "n": "23",
+          "selected": "23",
+          "overflow": false
+        },
+        {
+          "n": "24",
+          "selected": "24",
+          "overflow": false
+        },
+        {
+          "n": "25",
+          "selected": "25",
+          "overflow": false
+        },
+        {
+          "n": "26",
+          "selected": "26",
+          "overflow": false
+        },
+        {
+          "n": "27",
+          "selected": "27",
+          "overflow": false
+        },
+        {
+          "n": "28",
+          "selected": "28",
+          "overflow": false
+        },
+        {
+          "n": "29",
+          "selected": "29",
+          "overflow": false
+        },
+        {
+          "n": "30",
+          "selected": "30",
+          "overflow": false
+        },
+        {
+          "n": "31",
+          "selected": "31",
+          "overflow": false
+        },
+        {
+          "n": "32",
+          "selected": "32",
+          "overflow": false
+        },
+        {
+          "n": "33",
+          "selected": "33",
+          "overflow": false
+        },
+        {
+          "n": "34",
+          "selected": "34",
+          "overflow": false
+        },
+        {
+          "n": "35",
+          "selected": "35",
+          "overflow": false
+        },
+        {
+          "n": "36",
+          "selected": "36",
+          "overflow": false
+        },
+        {
+          "n": "37",
+          "selected": "37",
+          "overflow": false
+        },
+        {
+          "n": "38",
+          "selected": "38",
+          "overflow": false
+        },
+        {
+          "n": "39",
+          "selected": "39",
+          "overflow": false
+        },
+        {
+          "n": "40",
+          "selected": "40",
+          "overflow": false
+        },
+        {
+          "n": "41",
+          "selected": "41",
+          "overflow": false
+        },
+        {
+          "n": "42",
+          "selected": "42",
+          "overflow": false
+        },
+        {
+          "n": "43",
+          "selected": "43",
+          "overflow": false
+        },
+        {
+          "n": "44",
+          "selected": "44",
+          "overflow": false
+        },
+        {
+          "n": "45",
+          "selected": "45",
+          "overflow": false
+        },
+        {
+          "n": "46",
+          "selected": "46",
+          "overflow": false
+        },
+        {
+          "n": "47",
+          "selected": "47",
+          "overflow": false
+        },
+        {
+          "n": "48",
+          "selected": "48",
+          "overflow": false
+        },
+        {
+          "n": "49",
+          "selected": "49",
+          "overflow": false
+        },
+        {
+          "n": "50",
+          "selected": "50",
+          "overflow": false
+        },
+        {
+          "n": "51",
+          "selected": "51",
+          "overflow": false
+        },
+        {
+          "n": "52",
+          "selected": "52",
+          "overflow": false
+        },
+        {
+          "n": "53",
+          "selected": "53",
+          "overflow": false
+        },
+        {
+          "n": "54",
+          "selected": "54",
+          "overflow": false
+        },
+        {
+          "n": "55",
+          "selected": "55",
+          "overflow": false
+        },
+        {
+          "n": "56",
+          "selected": "56",
+          "overflow": false
+        },
+        {
+          "n": "57",
+          "selected": "57",
+          "overflow": false
+        },
+        {
+          "n": "58",
+          "selected": "58",
+          "overflow": false
+        },
+        {
+          "n": "59",
+          "selected": "59",
+          "overflow": false
+        },
+        {
+          "n": "60",
+          "selected": "60",
+          "overflow": false
+        },
+        {
+          "n": "61",
+          "selected": "61",
+          "overflow": false
+        },
+        {
+          "n": "62",
+          "selected": "62",
+          "overflow": false
+        },
+        {
+          "n": "63",
+          "selected": "63",
+          "overflow": false
+        },
+        {
+          "n": "64",
+          "selected": "64",
+          "overflow": false
+        },
+        {
+          "n": "65",
+          "selected": "65",
+          "overflow": false
+        },
+        {
+          "n": "66",
+          "selected": "66",
+          "overflow": false
+        },
+        {
+          "n": "67",
+          "selected": "67",
+          "overflow": false
+        },
+        {
+          "n": "68",
+          "selected": "68",
+          "overflow": false
+        },
+        {
+          "n": "69",
+          "selected": "69",
+          "overflow": false
+        },
+        {
+          "n": "70",
+          "selected": "70",
+          "overflow": false
+        },
+        {
+          "n": "71",
+          "selected": "71",
+          "overflow": false
+        },
+        {
+          "n": "72",
+          "selected": "72",
+          "overflow": false
+        },
+        {
+          "n": "73",
+          "selected": "73",
+          "overflow": false
+        },
+        {
+          "n": "74",
+          "selected": "74",
+          "overflow": false
+        },
+        {
+          "n": "75",
+          "selected": "75",
+          "overflow": false
+        },
+        {
+          "n": "76",
+          "selected": "76",
+          "overflow": false
+        },
+        {
+          "n": "77",
+          "selected": "77",
+          "overflow": false
+        },
+        {
+          "n": "78",
+          "selected": "78",
+          "overflow": false
+        },
+        {
+          "n": "79",
+          "selected": "79",
+          "overflow": false
+        },
+        {
+          "n": "80",
+          "selected": "80",
+          "overflow": false
+        },
+        {
+          "n": "81",
+          "selected": "81",
+          "overflow": false
+        },
+        {
+          "n": "82",
+          "selected": "82",
+          "overflow": false
+        },
+        {
+          "n": "83",
+          "selected": "83",
+          "overflow": false
+        },
+        {
+          "n": "84",
+          "selected": "84",
+          "overflow": false
+        },
+        {
+          "n": "85",
+          "selected": "85",
+          "overflow": false
+        },
+        {
+          "n": "86",
+          "selected": "86",
+          "overflow": false
+        },
+        {
+          "n": "87",
+          "selected": "87",
+          "overflow": false
+        },
+        {
+          "n": "88",
+          "selected": "88",
+          "overflow": false
+        },
+        {
+          "n": "89",
+          "selected": "89",
+          "overflow": false
+        },
+        {
+          "n": "90",
+          "selected": "90",
+          "overflow": false
+        },
+        {
+          "n": "91",
+          "selected": "91",
+          "overflow": false
+        },
+        {
+          "n": "92",
+          "selected": "92",
+          "overflow": false
+        },
+        {
+          "n": "93",
+          "selected": "93",
+          "overflow": false
+        },
+        {
+          "n": "94",
+          "selected": "94",
+          "overflow": false
+        },
+        {
+          "n": "95",
+          "selected": "95",
+          "overflow": false
+        },
+        {
+          "n": "96",
+          "selected": "96",
+          "overflow": false
+        },
+        {
+          "n": "97",
+          "selected": "97",
+          "overflow": false
+        },
+        {
+          "n": "98",
+          "selected": "98",
+          "overflow": false
+        },
+        {
+          "n": "99",
+          "selected": "99",
+          "overflow": false
+        },
+        {
+          "n": "100",
+          "selected": "100",
+          "overflow": false
+        }
+      ],
+      "empty": {
+        "values": [
+          {
+            "id": "detalheMemoriaNumero",
+            "value": "01"
+          },
+          {
+            "id": "detalheMemoriaPalavra",
+            "value": "Teia"
+          },
+          {
+            "id": "detalheMemoriaNivel",
+            "value": "novo"
+          },
+          {
+            "id": "detalheMemoriaPontos",
+            "value": "0%"
+          },
+          {
+            "id": "detalheMemoriaTentativas",
+            "value": "0"
+          },
+          {
+            "id": "detalheMemoriaAcertos",
+            "value": "0"
+          },
+          {
+            "id": "detalheMemoriaErros",
+            "value": "0"
+          },
+          {
+            "id": "detalheMemoriaTaxaAcerto",
+            "value": "0%"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixarResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeFixar",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapidoResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeTreinoRapido",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisaoResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeRevisao",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiarResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeDesafiar",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidadeResumo",
+            "value": "Sem tentativas"
+          },
+          {
+            "id": "detalheMemoriaAtividadeVelocidade",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaSequencia",
+            "value": "Sem histórico"
+          },
+          {
+            "id": "detalheMemoriaUltimoResultado",
+            "value": "—"
+          },
+          {
+            "id": "detalheMemoriaUltimaTentativa",
+            "value": "Nunca treinada"
+          }
+        ],
+        "header": {
+          "left": 0,
+          "top": 30,
+          "width": 430,
+          "height": 236.5
+        },
+        "grid": {
+          "left": 32,
+          "top": 330.5,
+          "width": 366,
+          "height": 96
+        },
+        "card": {
+          "left": 32,
+          "top": 440.5,
+          "width": 366,
+          "height": 214.890625
+        },
+        "overflow": false,
+        "oldScreen": false,
+        "detailsButton": false,
+        "template": true
+      },
+      "storagePreserved": true,
+      "back": true,
+      "table": true,
+      "reloadPreserved": true,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

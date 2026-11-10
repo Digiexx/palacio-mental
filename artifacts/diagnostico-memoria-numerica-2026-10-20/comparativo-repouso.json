@@ -1,0 +1,1780 @@
+{
+  "environment": {
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Edg/155.0.4283.62",
+      "revision": "@aa3a7406ba8c53a83536df539f07124d73c899bd",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+      "jsVersion": "15.5.9.7"
+    },
+    "cpuThrottle": 4,
+    "viewportHeight": 820,
+    "deviceScaleFactor": 1,
+    "note": "Desktop headless; no real mobile GPU; rAF cadence is not presentation FPS"
+  },
+  "inventory": {
+    "effects": [
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-dashboard",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(12px)",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 8px 24px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-dashboard",
+        "pseudo": "::after",
+        "filter": "drop-shadow(rgba(196, 167, 255, 0.5) 0px 0px 3px)",
+        "backdrop": "none",
+        "shadow": "none",
+        "textShadow": "none",
+        "animation": "numeric-domain-reflection",
+        "duration": "5s",
+        "iteration": "infinite",
+        "position": "absolute"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnTabelaMental",
+        "class": "memory-training-card memory-training-learning",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnIniciarAprendizado",
+        "class": "memory-training-card memory-training-learning",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnFixar",
+        "class": "memory-training-card memory-training-learning",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnDesafiarMemoria",
+        "class": "memory-training-card memory-training-training",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnVelocidadeMemoria",
+        "class": "memory-training-card memory-training-training",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnTreinoPersonalizadoMemoria",
+        "class": "memory-training-card memory-training-training",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnMemoriaTreinoRapido",
+        "class": "memory-training-card memory-training-extra memory-training-featured",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnRevisarMemoria",
+        "class": "memory-training-card memory-training-extra",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-ranges",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-ranges",
+        "pseudo": "::after",
+        "filter": "drop-shadow(rgba(196, 167, 255, 0.5) 0px 0px 3px)",
+        "backdrop": "none",
+        "shadow": "none",
+        "textShadow": "none",
+        "animation": "numeric-domain-reflection",
+        "duration": "5s",
+        "iteration": "infinite",
+        "position": "absolute"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "",
+        "pseudo": null,
+        "filter": "blur(10px)",
+        "backdrop": "none",
+        "shadow": "none",
+        "textShadow": "none",
+        "animation": "palacio-halo-canto",
+        "duration": "2.6s",
+        "iteration": "infinite",
+        "position": "absolute"
+      }
+    ],
+    "animations": [
+      {
+        "target": "memory-dashboard",
+        "name": "numeric-domain-reflection",
+        "playState": "running"
+      },
+      {
+        "target": "memory-ranges",
+        "name": "numeric-domain-reflection",
+        "playState": "running"
+      },
+      {
+        "target": "",
+        "name": "palacio-halo-canto",
+        "playState": "running"
+      }
+    ],
+    "images": [
+      {
+        "src": "assets/imagens/memoria-numerica/central-numerica-topo.webp",
+        "naturalWidth": 345,
+        "naturalHeight": 259,
+        "displayWidth": 360,
+        "displayHeight": 262,
+        "loaded": true
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/home/palacio-instalacao.png",
+        "bytes": 2437249,
+        "duration": 94.5
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/central-numerica-topo.webp",
+        "bytes": 9578,
+        "duration": 66.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/tabela-mental-topo.webp",
+        "bytes": 143398,
+        "duration": 75.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/fixar-topo.webp",
+        "bytes": 112996,
+        "duration": 72.69999998807907
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/numeros/01-teia.webp",
+        "bytes": 69502,
+        "duration": 70.5
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/perfil/natan-fuentes.webp",
+        "bytes": 69450,
+        "duration": 65.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/numeros/05-lua.webp",
+        "bytes": 103778,
+        "duration": 58.5
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/cenarios/compras/supermercado-01.webp",
+        "bytes": 156132,
+        "duration": 75.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/home/palacio-home.webp",
+        "bytes": 2513956,
+        "duration": 86.19999998807907
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/personagens/mago-memoria.png",
+        "bytes": 2525332,
+        "duration": 87.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/icons/icon-192.png",
+        "bytes": 14256,
+        "duration": 4.300000011920929
+      }
+    ],
+    "height": 1783
+  },
+  "results": [
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "A",
+      "openHandlerMs": 102.80000001192093,
+      "elapsedMs": 3620.7000000476837,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 216,
+        "rafRate": 59.65697240786459,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 1,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.262471,
+        "TaskDuration": 1.0949400000000002,
+        "ScriptDuration": 0.025387000000000007,
+        "heapMB": 2.5186729431152344
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 219,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 217,
+          "ms": 39.040000000000006
+        },
+        "FunctionCall": {
+          "count": 367,
+          "ms": 37.67599999999997
+        },
+        "UpdateLayoutTree": {
+          "count": 217,
+          "ms": 259.677
+        },
+        "PrePaint": {
+          "count": 221,
+          "ms": 28.346999999999973
+        },
+        "Paint": {
+          "count": 651,
+          "ms": 325.034
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "B",
+      "openHandlerMs": 35,
+      "elapsedMs": 3623,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 59.89511454595639,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 218,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.328173,
+        "TaskDuration": 1.297402,
+        "ScriptDuration": 0.027851,
+        "heapMB": 3.757457733154297
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 220,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 219,
+          "ms": 37.591000000000015
+        },
+        "FunctionCall": {
+          "count": 369,
+          "ms": 35.29299999999998
+        },
+        "UpdateLayoutTree": {
+          "count": 219,
+          "ms": 339.4269999999999
+        },
+        "Layout": {
+          "count": 1,
+          "ms": 0.308
+        },
+        "PrePaint": {
+          "count": 223,
+          "ms": 41.386
+        },
+        "Paint": {
+          "count": 656,
+          "ms": 501.44200000000046
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "C",
+      "openHandlerMs": 35.5,
+      "elapsedMs": 3507.5,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 211,
+        "rafRate": 60.1568068424804,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 0,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0,
+        "TaskDuration": 0.3215999999999999,
+        "ScriptDuration": 0.026862999999999998,
+        "heapMB": 5.013637542724609
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 211,
+          "ms": 36.629999999999974
+        },
+        "FunctionCall": {
+          "count": 363,
+          "ms": 34.701999999999956
+        },
+        "PrePaint": {
+          "count": 215,
+          "ms": 10.658999999999992
+        },
+        "DrawFrame": {
+          "count": 3,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "D",
+      "openHandlerMs": 46.69999998807907,
+      "elapsedMs": 3661.300000011921,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 219,
+        "rafRate": 59.81481987252805,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 220,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.27826799999999996,
+        "TaskDuration": 1.076937,
+        "ScriptDuration": 0.029387000000000003,
+        "heapMB": 5.2017974853515625
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 220,
+          "ms": 42.672999999999995
+        },
+        "FunctionCall": {
+          "count": 371,
+          "ms": 36.43899999999999
+        },
+        "UpdateLayoutTree": {
+          "count": 220,
+          "ms": 274.41799999999995
+        },
+        "DrawFrame": {
+          "count": 220,
+          "ms": 0
+        },
+        "PrePaint": {
+          "count": 224,
+          "ms": 29.228999999999967
+        },
+        "Paint": {
+          "count": 661,
+          "ms": 350.8760000000002
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "E",
+      "openHandlerMs": 44.30000001192093,
+      "elapsedMs": 3625.5,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 218,
+        "rafRate": 60.12963729140808,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": true,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 218,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.284582,
+        "TaskDuration": 1.185058,
+        "ScriptDuration": 0.025599999999999998,
+        "heapMB": 6.125648498535156
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 218,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 218,
+          "ms": 29.331999999999997
+        },
+        "FunctionCall": {
+          "count": 368,
+          "ms": 36.08499999999996
+        },
+        "UpdateLayoutTree": {
+          "count": 218,
+          "ms": 280.16100000000006
+        },
+        "PrePaint": {
+          "count": 222,
+          "ms": 31.333999999999982
+        },
+        "Paint": {
+          "count": 654,
+          "ms": 397.38500000000016
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 1,
+      "scenario": "E",
+      "openHandlerMs": 38.10000002384186,
+      "elapsedMs": 3618.699999988079,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 59.96628623558595,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": true,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.188387,
+        "TaskDuration": 0.7592409999999999,
+        "ScriptDuration": 0.01882099999999999,
+        "heapMB": 2.4294090270996094
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 218,
+          "ms": 24.042000000000005
+        },
+        "FunctionCall": {
+          "count": 369,
+          "ms": 26.73799999999996
+        },
+        "UpdateLayoutTree": {
+          "count": 218,
+          "ms": 187.18200000000013
+        },
+        "PrePaint": {
+          "count": 222,
+          "ms": 21.78399999999999
+        },
+        "Paint": {
+          "count": 654,
+          "ms": 230.19299999999993
+        },
+        "DrawFrame": {
+          "count": 217,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 1,
+      "scenario": "D",
+      "openHandlerMs": 32.5,
+      "elapsedMs": 3603.699999988079,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 60.21588922516242,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.185684,
+        "TaskDuration": 0.832113,
+        "ScriptDuration": 0.019439000000000005,
+        "heapMB": 3.1271286010742188
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 217,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 217,
+          "ms": 25.329000000000004
+        },
+        "FunctionCall": {
+          "count": 367,
+          "ms": 23.01299999999996
+        },
+        "UpdateLayoutTree": {
+          "count": 217,
+          "ms": 182.156
+        },
+        "PrePaint": {
+          "count": 221,
+          "ms": 21.768999999999988
+        },
+        "Paint": {
+          "count": 652,
+          "ms": 301.067
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 1,
+      "scenario": "C",
+      "openHandlerMs": 18.299999952316284,
+      "elapsedMs": 3505.199999988079,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 211,
+        "rafRate": 60.196279813054204,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 1,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.011106000000000005,
+        "TaskDuration": 0.2879280000000001,
+        "ScriptDuration": 0.020153,
+        "heapMB": 2.4213829040527344
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 5,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 211,
+          "ms": 33.055
+        },
+        "FunctionCall": {
+          "count": 363,
+          "ms": 31.304999999999968
+        },
+        "UpdateLayoutTree": {
+          "count": 1,
+          "ms": 11.1
+        },
+        "PrePaint": {
+          "count": 215,
+          "ms": 9.571999999999996
+        },
+        "Paint": {
+          "count": 4,
+          "ms": 1.629
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 1,
+      "scenario": "B",
+      "openHandlerMs": 32.40000003576279,
+      "elapsedMs": 3604.100000023842,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 212,
+        "rafRate": 58.821897283260064,
+        "intervalP95": 16.90000000000009,
+        "intervalsOver25": 4,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 1,
+        "RecalcStyleCount": 214,
+        "LayoutDuration": 0.000955000000000001,
+        "RecalcStyleDuration": 0.23529299999999997,
+        "TaskDuration": 0.974419,
+        "ScriptDuration": 0.018956,
+        "heapMB": 3.1325302124023438
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 218,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 214,
+          "ms": 29.185000000000016
+        },
+        "FunctionCall": {
+          "count": 362,
+          "ms": 25.15199999999998
+        },
+        "UpdateLayoutTree": {
+          "count": 214,
+          "ms": 230.66399999999987
+        },
+        "Layout": {
+          "count": 1,
+          "ms": 0.933
+        },
+        "PrePaint": {
+          "count": 218,
+          "ms": 28.121999999999996
+        },
+        "Paint": {
+          "count": 641,
+          "ms": 312.60799999999966
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 1,
+      "scenario": "A",
+      "openHandlerMs": 37.60000002384186,
+      "elapsedMs": 3603.100000023842,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 216,
+        "rafRate": 59.94837778539888,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 216,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.21628199999999997,
+        "TaskDuration": 0.9001640000000001,
+        "ScriptDuration": 0.02354300000000001,
+        "heapMB": 2.419872283935547
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 217,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 217,
+          "ms": 31.351000000000006
+        },
+        "FunctionCall": {
+          "count": 366,
+          "ms": 28.689
+        },
+        "UpdateLayoutTree": {
+          "count": 217,
+          "ms": 217.00899999999996
+        },
+        "PrePaint": {
+          "count": 221,
+          "ms": 25.021000000000004
+        },
+        "Paint": {
+          "count": 651,
+          "ms": 281.6990000000001
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "A",
+      "openHandlerMs": 38.59999996423721,
+      "elapsedMs": 3631.699999988079,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 215,
+        "rafRate": 59.200925186746076,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 1,
+        "intervalsOver50": 1,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 215,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.24244600000000002,
+        "TaskDuration": 0.955579,
+        "ScriptDuration": 0.01800299999999999,
+        "heapMB": 3.1678237915039062
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 219,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 216,
+          "ms": 23.656999999999996
+        },
+        "FunctionCall": {
+          "count": 363,
+          "ms": 26.55299999999997
+        },
+        "UpdateLayoutTree": {
+          "count": 216,
+          "ms": 237.611
+        },
+        "PrePaint": {
+          "count": 220,
+          "ms": 23.417999999999985
+        },
+        "Paint": {
+          "count": 648,
+          "ms": 355.18900000000025
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "B",
+      "openHandlerMs": 42.5,
+      "elapsedMs": 3602.199999988079,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 216,
+        "rafRate": 59.963355727254125,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.292403,
+        "TaskDuration": 1.165324,
+        "ScriptDuration": 0.023052000000000003,
+        "heapMB": 2.011150360107422
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 219,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 218,
+          "ms": 36.13099999999999
+        },
+        "FunctionCall": {
+          "count": 368,
+          "ms": 34.83099999999997
+        },
+        "UpdateLayoutTree": {
+          "count": 218,
+          "ms": 306.909
+        },
+        "Layout": {
+          "count": 1,
+          "ms": 1.027
+        },
+        "PrePaint": {
+          "count": 222,
+          "ms": 38.789000000000016
+        },
+        "Paint": {
+          "count": 653,
+          "ms": 442.69999999999976
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "C",
+      "openHandlerMs": 39.19999998807907,
+      "elapsedMs": 3516.899999976158,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 211,
+        "rafRate": 59.99601922188018,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 0,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0,
+        "TaskDuration": 0.38078899999999993,
+        "ScriptDuration": 0.033401,
+        "heapMB": 1.9669342041015625
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 213,
+          "ms": 45.96100000000002
+        },
+        "FunctionCall": {
+          "count": 364,
+          "ms": 45.56200000000004
+        },
+        "UpdateLayoutTree": {
+          "count": 1,
+          "ms": 11.869
+        },
+        "DrawFrame": {
+          "count": 5,
+          "ms": 0
+        },
+        "PrePaint": {
+          "count": 217,
+          "ms": 14.630999999999986
+        },
+        "Paint": {
+          "count": 4,
+          "ms": 1.632
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "D",
+      "openHandlerMs": 27,
+      "elapsedMs": 3618.199999988079,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 59.97457299229311,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 218,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.28320100000000004,
+        "TaskDuration": 1.092965,
+        "ScriptDuration": 0.028183,
+        "heapMB": 1.986175537109375
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 218,
+          "ms": 35.88999999999999
+        },
+        "FunctionCall": {
+          "count": 369,
+          "ms": 33.86899999999996
+        },
+        "UpdateLayoutTree": {
+          "count": 218,
+          "ms": 280.691
+        },
+        "DrawFrame": {
+          "count": 218,
+          "ms": 0
+        },
+        "PrePaint": {
+          "count": 222,
+          "ms": 27.34
+        },
+        "Paint": {
+          "count": 655,
+          "ms": 367.1099999999998
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "E",
+      "openHandlerMs": 51,
+      "elapsedMs": 3610,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 60.11080332409973,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": true,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.39795099999999994,
+        "TaskDuration": 1.3722290000000001,
+        "ScriptDuration": 0.030945,
+        "heapMB": 2.453418731689453
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 217,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 217,
+          "ms": 48.81400000000001
+        },
+        "FunctionCall": {
+          "count": 352,
+          "ms": 45.12200000000002
+        },
+        "UpdateLayoutTree": {
+          "count": 217,
+          "ms": 391.699
+        },
+        "PrePaint": {
+          "count": 221,
+          "ms": 39.86000000000003
+        },
+        "Paint": {
+          "count": 651,
+          "ms": 472.2249999999994
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 1,
+      "scenario": "E",
+      "openHandlerMs": 29.19999998807907,
+      "elapsedMs": 3644.899999976158,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 219,
+        "rafRate": 60.083952920912104,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": true,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 219,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.378694,
+        "TaskDuration": 1.331217,
+        "ScriptDuration": 0.030295000000000002,
+        "heapMB": 3.3927650451660156
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 219,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 219,
+          "ms": 50.307000000000016
+        },
+        "FunctionCall": {
+          "count": 358,
+          "ms": 46.527999999999984
+        },
+        "UpdateLayoutTree": {
+          "count": 219,
+          "ms": 370.6380000000001
+        },
+        "PrePaint": {
+          "count": 223,
+          "ms": 35.70000000000001
+        },
+        "Paint": {
+          "count": 657,
+          "ms": 459.2410000000004
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 1,
+      "scenario": "D",
+      "openHandlerMs": 57.80000001192093,
+      "elapsedMs": 3642.900000035763,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 219,
+        "rafRate": 60.11693980011805,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 219,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.40509100000000003,
+        "TaskDuration": 1.421066,
+        "ScriptDuration": 0.035419000000000006,
+        "heapMB": 3.3873672485351562
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 219,
+          "ms": 47.48400000000003
+        },
+        "FunctionCall": {
+          "count": 353,
+          "ms": 43.70200000000001
+        },
+        "UpdateLayoutTree": {
+          "count": 219,
+          "ms": 397.0539999999998
+        },
+        "DrawFrame": {
+          "count": 219,
+          "ms": 0
+        },
+        "PrePaint": {
+          "count": 223,
+          "ms": 42.43000000000003
+        },
+        "Paint": {
+          "count": 658,
+          "ms": 499.8339999999993
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 1,
+      "scenario": "C",
+      "openHandlerMs": 42.80000001192093,
+      "elapsedMs": 3530.899999976158,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 211,
+        "rafRate": 59.75813532001041,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 1,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.011975000000000013,
+        "TaskDuration": 0.5436209999999999,
+        "ScriptDuration": 0.04848299999999999,
+        "heapMB": 4.296825408935547
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 5,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 213,
+          "ms": 69.01800000000007
+        },
+        "FunctionCall": {
+          "count": 353,
+          "ms": 63.95400000000003
+        },
+        "UpdateLayoutTree": {
+          "count": 1,
+          "ms": 11.814
+        },
+        "PrePaint": {
+          "count": 217,
+          "ms": 20.44000000000003
+        },
+        "Paint": {
+          "count": 4,
+          "ms": 1.7719999999999998
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 1,
+      "scenario": "B",
+      "openHandlerMs": 36.60000002384186,
+      "elapsedMs": 3614.399999976158,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 60.037627269099,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 1,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0.0010299999999999997,
+        "RecalcStyleDuration": 0.46989600000000004,
+        "TaskDuration": 1.6128559999999998,
+        "ScriptDuration": 0.040378,
+        "heapMB": 3.3454055786132812
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 217,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 217,
+          "ms": 60.234
+        },
+        "FunctionCall": {
+          "count": 353,
+          "ms": 54.72800000000006
+        },
+        "UpdateLayoutTree": {
+          "count": 217,
+          "ms": 462.1109999999999
+        },
+        "Layout": {
+          "count": 1,
+          "ms": 1.015
+        },
+        "PrePaint": {
+          "count": 221,
+          "ms": 53.69400000000005
+        },
+        "Paint": {
+          "count": 650,
+          "ms": 594.4529999999991
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 1,
+      "scenario": "A",
+      "openHandlerMs": 41.19999998807907,
+      "elapsedMs": 3620.7999999523163,
+      "probe": {
+        "visibility": "visible",
+        "rafFrames": 217,
+        "rafRate": 59.93150685010433,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 217,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.422557,
+        "TaskDuration": 1.5124289999999998,
+        "ScriptDuration": 0.03388,
+        "heapMB": 1.9978675842285156
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 217,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 217,
+          "ms": 56.67599999999999
+        },
+        "FunctionCall": {
+          "count": 358,
+          "ms": 52.102999999999994
+        },
+        "UpdateLayoutTree": {
+          "count": 217,
+          "ms": 415.1349999999999
+        },
+        "PrePaint": {
+          "count": 221,
+          "ms": 46.385999999999974
+        },
+        "Paint": {
+          "count": 651,
+          "ms": 525.9039999999995
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "exceptionId": 1,
+      "text": "Uncaught (in promise)",
+      "lineNumber": 0,
+      "columnNumber": 0,
+      "scriptId": "1",
+      "url": "http://127.0.0.1:8777/",
+      "exception": {
+        "type": "object",
+        "subtype": "error",
+        "className": "Error",
+        "description": "Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+        "objectId": "-1005853251824297930.37.1",
+        "preview": {
+          "type": "object",
+          "subtype": "error",
+          "description": "Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+          "overflow": false,
+          "properties": [
+            {
+              "name": "stack",
+              "type": "string",
+              "value": "Error: A listener indicated an asynchronous respon…age channel closed before a response was received"
+            },
+            {
+              "name": "message",
+              "type": "string",
+              "value": "A listener indicated an asynchronous response by r…age channel closed before a response was received"
+            }
+          ]
+        }
+      },
+      "executionContextId": 37
+    },
+    {
+      "exceptionId": 2,
+      "text": "Uncaught (in promise)",
+      "lineNumber": 0,
+      "columnNumber": 0,
+      "scriptId": "1",
+      "url": "http://127.0.0.1:8777/",
+      "exception": {
+        "type": "object",
+        "subtype": "error",
+        "className": "Error",
+        "description": "Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+        "objectId": "-1005853251824297930.57.1",
+        "preview": {
+          "type": "object",
+          "subtype": "error",
+          "description": "Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+          "overflow": false,
+          "properties": [
+            {
+              "name": "stack",
+              "type": "string",
+              "value": "Error: A listener indicated an asynchronous respon…age channel closed before a response was received"
+            },
+            {
+              "name": "message",
+              "type": "string",
+              "value": "A listener indicated an asynchronous response by r…age channel closed before a response was received"
+            }
+          ]
+        }
+      },
+      "executionContextId": 57
+    }
+  ]
+}

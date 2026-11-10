@@ -1,0 +1,387 @@
+{
+  "results": [
+    {
+      "mode": "before",
+      "width": 360,
+      "fixarMetrics": {
+        ".fixar-training-top": {
+          "width": 300,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 300,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 300,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 0,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 0,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      },
+      "tableMetrics": {
+        ".fixar-training-top": {
+          "width": 0,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 0,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 0,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 156,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 320,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      }
+    },
+    {
+      "mode": "before",
+      "width": 430,
+      "fixarMetrics": {
+        ".fixar-training-top": {
+          "width": 370,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 370,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 370,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 0,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 0,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      },
+      "tableMetrics": {
+        ".fixar-training-top": {
+          "width": 0,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 0,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 0,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 156,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 390,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      }
+    },
+    {
+      "mode": "after",
+      "width": 360,
+      "fixarMetrics": {
+        ".fixar-training-top": {
+          "width": 300,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 300,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 300,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 0,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 0,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      },
+      "controlsUnchanged": true,
+      "header": {
+        "loaded": true,
+        "natural": [
+          1536,
+          1024
+        ],
+        "rendered": [
+          360,
+          240
+        ],
+        "title": "Fixar",
+        "description": "Force  ua mente a recuperar a a ociação\n                                ante  de revelar a re po ta.",
+        "overflow": false
+      },
+      "panel": true,
+      "range": "10–19",
+      "reveal": {
+        "answer": true,
+        "evaluation": true,
+        "question": true
+      },
+      "advance": "11",
+      "tableMetrics": {
+        ".fixar-training-top": {
+          "width": 0,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 0,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 0,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 156,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 320,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      },
+      "tableUnchanged": true,
+      "tableImage": {
+        "loaded": true,
+        "mask": "linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.333) 90%, rgba(0, 0, 0, 0) 100%)",
+        "overflow": false
+      },
+      "tableControls": {
+        "range": "20–29",
+        "detail": true,
+        "number": "20"
+      },
+      "closed": true
+    },
+    {
+      "mode": "after",
+      "width": 430,
+      "fixarMetrics": {
+        ".fixar-training-top": {
+          "width": 370,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 370,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 370,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 0,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 0,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      },
+      "controlsUnchanged": true,
+      "header": {
+        "loaded": true,
+        "natural": [
+          1536,
+          1024
+        ],
+        "rendered": [
+          430,
+          287
+        ],
+        "title": "Fixar",
+        "description": "Force  ua mente a recuperar a a ociação\n                                ante  de revelar a re po ta.",
+        "overflow": false
+      },
+      "panel": true,
+      "range": "10–19",
+      "reveal": {
+        "answer": true,
+        "evaluation": true,
+        "question": true
+      },
+      "advance": "11",
+      "tableMetrics": {
+        ".fixar-training-top": {
+          "width": 0,
+          "padding": "10px 12px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(255, 255, 255, 0.035) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.18)"
+        },
+        ".fixar-card": {
+          "width": 0,
+          "padding": "28px 20px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(rgba(37, 40, 48, 0.92), rgba(9, 10, 12, 0.96)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(157, 92, 255, 0.22)"
+        },
+        "#btnRevelarFixar": {
+          "width": 0,
+          "padding": "0px 19px",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) linear-gradient(135deg, rgb(124, 58, 237), rgb(157, 92, 255)) repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        },
+        ".mental-table-range-toggle": {
+          "width": 156,
+          "padding": "10px 14px",
+          "font": "13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgb(12, 9, 18) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "1px solid rgba(184, 153, 237, 0.4)"
+        },
+        ".mental-table-grid": {
+          "width": 390,
+          "padding": "0px",
+          "font": "16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "border": "0px none rgb(255, 255, 255)"
+        }
+      },
+      "tableUnchanged": true,
+      "tableImage": {
+        "loaded": true,
+        "mask": "linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 76%, rgba(0, 0, 0, 0.333) 90%, rgba(0, 0, 0, 0) 100%)",
+        "overflow": false
+      },
+      "tableControls": {
+        "range": "20–29",
+        "detail": true,
+        "number": "20"
+      },
+      "closed": true
+    }
+  ],
+  "errors": []
+}

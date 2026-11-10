@@ -1,0 +1,1563 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "fixture": "empty",
+      "sample": {
+        "dominated": "0",
+        "total": "101",
+        "percentage": "0%",
+        "barWidth": "0%",
+        "aria": "0",
+        "overflow": false,
+        "heroLoaded": true,
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "12px 5px 10px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "scroll": {
+          "y": 963,
+          "max": 963,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 360,
+      "mode": "before",
+      "fixture": "partial",
+      "sample": {
+        "dominated": "2",
+        "total": "101",
+        "percentage": "2%",
+        "barWidth": "2%",
+        "aria": "2",
+        "overflow": false,
+        "heroLoaded": true,
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "12px 5px 10px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "scroll": {
+          "y": 963,
+          "max": 963,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 360,
+      "mode": "before",
+      "fixture": "full",
+      "sample": {
+        "dominated": "101",
+        "total": "101",
+        "percentage": "100%",
+        "barWidth": "100%",
+        "aria": "100",
+        "overflow": false,
+        "heroLoaded": true,
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "12px 5px 10px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "scroll": {
+          "y": 963,
+          "max": 963,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixture": "empty",
+      "sample": {
+        "dominated": "0",
+        "total": "101",
+        "percentage": "0%",
+        "barWidth": "0%",
+        "aria": "0",
+        "overflow": false,
+        "heroLoaded": true,
+        "title": "Memória Numérica",
+        "subtitle": "Transforme números em imagens inesquecíveis.",
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "12px 5px 10px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "outsidePreserved": true,
+        "scroll": {
+          "y": 1024,
+          "max": 1024,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixture": "partial",
+      "sample": {
+        "dominated": "2",
+        "total": "101",
+        "percentage": "2%",
+        "barWidth": "2%",
+        "aria": "2",
+        "overflow": false,
+        "heroLoaded": true,
+        "title": "Memória Numérica",
+        "subtitle": "Transforme números em imagens inesquecíveis.",
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "12px 5px 10px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "outsidePreserved": true,
+        "scroll": {
+          "y": 1024,
+          "max": 1024,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixture": "full",
+      "sample": {
+        "dominated": "101",
+        "total": "101",
+        "percentage": "100%",
+        "barWidth": "100%",
+        "aria": "100",
+        "overflow": false,
+        "heroLoaded": true,
+        "title": "Memória Numérica",
+        "subtitle": "Transforme números em imagens inesquecíveis.",
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "12px 5px 10px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "outsidePreserved": true,
+        "scroll": {
+          "y": 1024,
+          "max": 1024,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixture": "empty",
+      "sample": {
+        "dominated": "0",
+        "total": "101",
+        "percentage": "0%",
+        "barWidth": "0%",
+        "aria": "0",
+        "overflow": false,
+        "heroLoaded": true,
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "14px 7px 12px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "scroll": {
+          "y": 780,
+          "max": 780,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixture": "partial",
+      "sample": {
+        "dominated": "2",
+        "total": "101",
+        "percentage": "2%",
+        "barWidth": "2%",
+        "aria": "2",
+        "overflow": false,
+        "heroLoaded": true,
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "14px 7px 12px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "scroll": {
+          "y": 780,
+          "max": 780,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixture": "full",
+      "sample": {
+        "dominated": "101",
+        "total": "101",
+        "percentage": "100%",
+        "barWidth": "100%",
+        "aria": "100",
+        "overflow": false,
+        "heroLoaded": true,
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "14px 7px 12px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "scroll": {
+          "y": 780,
+          "max": 780,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixture": "empty",
+      "sample": {
+        "dominated": "0",
+        "total": "101",
+        "percentage": "0%",
+        "barWidth": "0%",
+        "aria": "0",
+        "overflow": false,
+        "heroLoaded": true,
+        "title": "Memória Numérica",
+        "subtitle": "Transforme números em imagens inesquecíveis.",
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "14px 7px 12px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "outsidePreserved": true,
+        "scroll": {
+          "y": 850,
+          "max": 850,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixture": "partial",
+      "sample": {
+        "dominated": "2",
+        "total": "101",
+        "percentage": "2%",
+        "barWidth": "2%",
+        "aria": "2",
+        "overflow": false,
+        "heroLoaded": true,
+        "title": "Memória Numérica",
+        "subtitle": "Transforme números em imagens inesquecíveis.",
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "14px 7px 12px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "outsidePreserved": true,
+        "scroll": {
+          "y": 850,
+          "max": 850,
+          "overflow": false
+        }
+      }
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixture": "full",
+      "sample": {
+        "dominated": "101",
+        "total": "101",
+        "percentage": "100%",
+        "barWidth": "100%",
+        "aria": "100",
+        "overflow": false,
+        "heroLoaded": true,
+        "title": "Memória Numérica",
+        "subtitle": "Transforme números em imagens inesquecíveis.",
+        "panel": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "percentRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "panelStyle": {
+          "background": "radial-gradient(circle at 90% 10%, rgba(157, 92, 255, 0.15), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 10% 90%, rgba(157, 92, 255, 0.11), rgba(0, 0, 0, 0) 35%), linear-gradient(145deg, rgba(37, 40, 48, 0.96), rgba(9, 10, 12, 0.98))",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "padding": "19px",
+          "shadow": "rgba(0, 0, 0, 0.28) 0px 18px 45px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+          "backdrop": "none",
+          "animation": "none"
+        },
+        "panelAfter": {
+          "content": "none",
+          "animation": "none"
+        },
+        "rangesAfter": "numeric-domain-reflection",
+        "shortcuts": [
+          {
+            "id": "btnListaAncorada",
+            "text": "Memória em\n                                Ação\n                            \n\n\n                            \n                                Associe códigos a informações reais"
+          },
+          {
+            "id": "btnCenarioMental",
+            "text": "Cenário\n                                Mental\n                            \n\n\n                            \n                                Memorize dentro de uma cena"
+          },
+          {
+            "id": "btnDescubraCodigo",
+            "text": "Descubra o\n                                Código\n                            \n\n\n                            \n                                Objeto ↔ número"
+          },
+          {
+            "id": "btnNumerosVidaReal",
+            "text": "Números na\n                                Vida Real\n                            \n\n\n                            \n                                Datas, códigos e sequências"
+          },
+          {
+            "id": "btnTabelaMental",
+            "text": "Tabela Mental\n\n                            \n                                Consulte 00–100"
+          },
+          {
+            "id": "btnIniciarAprendizado",
+            "text": "Aprender\n                            \n\n                            \n                                Número + imagem"
+          },
+          {
+            "id": "btnFixar",
+            "text": "Fixar\n                            \n\n                            \n                                Fortaleça os fracos"
+          },
+          {
+            "id": "btnDesafiarMemoria",
+            "text": "Desafiar\n                            \n\n                            \n                                Teste seu domínio"
+          },
+          {
+            "id": "btnVelocidadeMemoria",
+            "text": "Velocidade\n                            \n\n                            \n                                Responda mais rápido"
+          },
+          {
+            "id": "btnTreinoPersonalizadoMemoria",
+            "text": "Personalizado\n                            \n\n                            \n                                Escolha suas memórias"
+          },
+          {
+            "id": "btnMemoriaTreinoRapido",
+            "text": "Treino Rápido\n\n                            \n                                Começar agora"
+          },
+          {
+            "id": "btnRevisarMemoria",
+            "text": "Revisar\n                            \n\n                            \n                                Revisão inteligente"
+          }
+        ],
+        "outsideStyles": [
+          {
+            "background": "radial-gradient(circle at 50% 10%, rgba(157, 92, 255, 0.22), rgba(0, 0, 0, 0) 48%), linear-gradient(rgba(124, 58, 237, 0.94), rgba(23, 25, 29, 0.98))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "14px 7px 12px",
+            "shadow": "rgba(124, 58, 237, 0.2) 0px 10px 28px 0px, rgba(255, 255, 255, 0.024) 0px 1px 0px 0px inset",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(100px 58px at 0% 0%, rgba(238, 234, 248, 0.12), rgba(0, 0, 0, 0) 80%), radial-gradient(90px 50px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(35, 35, 43, 0.5), rgba(12, 12, 16, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "16px 12px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          },
+          {
+            "background": "radial-gradient(50px 32px at 0% 0%, rgba(238, 234, 248, 0.13), rgba(0, 0, 0, 0) 80%), radial-gradient(45px 28px at 100% 100%, rgba(226, 223, 237, 0.07), rgba(0, 0, 0, 0) 80%), linear-gradient(rgba(36, 36, 44, 0.5), rgba(9, 9, 13, 0.7))",
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "padding": "11px 10px",
+            "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+            "backdrop": "none",
+            "animation": "none"
+          }
+        ],
+        "rangeCount": 11,
+        "storage": "{}",
+        "writes": 0,
+        "pass": true,
+        "outsidePreserved": true,
+        "scroll": {
+          "y": 850,
+          "max": 850,
+          "overflow": false
+        }
+      }
+    }
+  ],
+  "shortViewport": {
+    "overflow": false,
+    "scrollable": true
+  },
+  "errors": []
+}

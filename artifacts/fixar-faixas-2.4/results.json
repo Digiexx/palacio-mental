@@ -1,0 +1,197 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "open": true,
+      "layout": {
+        "rows": [
+          401,
+          401,
+          401,
+          401,
+          401,
+          451,
+          451,
+          451,
+          451,
+          451,
+          501
+        ],
+        "clipped": false,
+        "horizontal": false,
+        "color": "rgb(46, 27, 69)"
+      },
+      "close": {
+        "hidden": true,
+        "expanded": "false",
+        "focus": "btnFaixaFixar"
+      },
+      "ranges": [
+        {
+          "range": "00–09",
+          "number": "00",
+          "closed": true,
+          "active": "0"
+        },
+        {
+          "range": "10–19",
+          "number": "10",
+          "closed": true,
+          "active": "10"
+        },
+        {
+          "range": "20–29",
+          "number": "20",
+          "closed": true,
+          "active": "20"
+        },
+        {
+          "range": "30–39",
+          "number": "30",
+          "closed": true,
+          "active": "30"
+        },
+        {
+          "range": "40–49",
+          "number": "40",
+          "closed": true,
+          "active": "40"
+        },
+        {
+          "range": "50–59",
+          "number": "50",
+          "closed": true,
+          "active": "50"
+        },
+        {
+          "range": "60–69",
+          "number": "60",
+          "closed": true,
+          "active": "60"
+        },
+        {
+          "range": "70–79",
+          "number": "70",
+          "closed": true,
+          "active": "70"
+        },
+        {
+          "range": "80–89",
+          "number": "80",
+          "closed": true,
+          "active": "80"
+        },
+        {
+          "range": "90–99",
+          "number": "90",
+          "closed": true,
+          "active": "90"
+        },
+        {
+          "range": "100",
+          "number": "100",
+          "closed": true,
+          "active": "100"
+        }
+      ],
+      "escape": true
+    },
+    {
+      "width": 430,
+      "open": true,
+      "layout": {
+        "rows": [
+          453,
+          453,
+          453,
+          453,
+          453,
+          503,
+          503,
+          503,
+          503,
+          503,
+          553
+        ],
+        "clipped": false,
+        "horizontal": false,
+        "color": "rgb(46, 27, 69)"
+      },
+      "close": {
+        "hidden": true,
+        "expanded": "false",
+        "focus": "btnFaixaFixar"
+      },
+      "ranges": [
+        {
+          "range": "00–09",
+          "number": "00",
+          "closed": true,
+          "active": "0"
+        },
+        {
+          "range": "10–19",
+          "number": "10",
+          "closed": true,
+          "active": "10"
+        },
+        {
+          "range": "20–29",
+          "number": "20",
+          "closed": true,
+          "active": "20"
+        },
+        {
+          "range": "30–39",
+          "number": "30",
+          "closed": true,
+          "active": "30"
+        },
+        {
+          "range": "40–49",
+          "number": "40",
+          "closed": true,
+          "active": "40"
+        },
+        {
+          "range": "50–59",
+          "number": "50",
+          "closed": true,
+          "active": "50"
+        },
+        {
+          "range": "60–69",
+          "number": "60",
+          "closed": true,
+          "active": "60"
+        },
+        {
+          "range": "70–79",
+          "number": "70",
+          "closed": true,
+          "active": "70"
+        },
+        {
+          "range": "80–89",
+          "number": "80",
+          "closed": true,
+          "active": "80"
+        },
+        {
+          "range": "90–99",
+          "number": "90",
+          "closed": true,
+          "active": "90"
+        },
+        {
+          "range": "100",
+          "number": "100",
+          "closed": true,
+          "active": "100"
+        }
+      ],
+      "escape": true
+    }
+  ],
+  "errors": []
+}

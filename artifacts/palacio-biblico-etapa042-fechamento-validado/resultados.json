@@ -1,0 +1,52 @@
+﻿[
+    {
+        "viewport":  [
+                         360,
+                         800
+                     ],
+        "status":  "passou",
+        "escritas":  0,
+        "fluxos":  [
+                       "ativação",
+                       "faixa vazia",
+                       "toque",
+                       "arraste",
+                       "resize",
+                       "zoom",
+                       "alças 44px",
+                       "nome",
+                       "teclado Tab/ArrowUp",
+                       "confirmar",
+                       "Início recusado",
+                       "Voltar recusado e aceito",
+                       "Início aceito",
+                       "sem escrita",
+                       "sem overflow"
+                   ]
+    },
+    {
+        "viewport":  [
+                         430,
+                         932
+                     ],
+        "status":  "passou",
+        "escritas":  0,
+        "fluxos":  [
+                       "ativação",
+                       "faixa vazia",
+                       "toque",
+                       "arraste",
+                       "resize",
+                       "zoom",
+                       "alças 44px",
+                       "nome",
+                       "teclado Tab/ArrowUp",
+                       "confirmar",
+                       "Início recusado",
+                       "Voltar recusado e aceito",
+                       "Início aceito",
+                       "sem escrita",
+                       "sem overflow"
+                   ]
+    }
+]

@@ -1,0 +1,925 @@
+{
+  "results": [
+    {
+      "mode": "arrows",
+      "width": 360,
+      "cases": [
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "00",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            0
+          ],
+          "previous": 0,
+          "afterEvaluation": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "arrows"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "previous": 5,
+          "afterEvaluation": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "arrows"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "previous": 3,
+          "afterEvaluation": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false
+            ],
+            "mode": "arrows"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            1,
+            2,
+            0
+          ],
+          "previous": 2,
+          "afterEvaluation": {
+            "number": "04",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false
+            ],
+            "mode": "arrows"
+          }
+        }
+      ],
+      "range": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "arrows"
+      },
+      "newRound": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "arrows"
+      },
+      "livePreference": {
+        "mode": "carousel",
+        "stored": "carousel"
+      },
+      "overflow": false,
+      "revealColor": "rgb(46, 27, 69)"
+    },
+    {
+      "mode": "arrows",
+      "width": 430,
+      "cases": [
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "00",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            0
+          ],
+          "previous": 0,
+          "afterEvaluation": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "arrows"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "previous": 5,
+          "afterEvaluation": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "arrows"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "previous": 3,
+          "afterEvaluation": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false
+            ],
+            "mode": "arrows"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              true,
+              true
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true
+            ],
+            "mode": "arrows"
+          },
+          "forward": [
+            1,
+            2,
+            0
+          ],
+          "previous": 2,
+          "afterEvaluation": {
+            "number": "04",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false
+            ],
+            "mode": "arrows"
+          }
+        }
+      ],
+      "range": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "arrows"
+      },
+      "newRound": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "arrows"
+      },
+      "livePreference": {
+        "mode": "carousel",
+        "stored": "carousel"
+      },
+      "overflow": false,
+      "revealColor": "rgb(46, 27, 69)"
+    },
+    {
+      "mode": "carousel",
+      "width": 360,
+      "cases": [
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "00",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            0
+          ],
+          "previous": 0,
+          "afterEvaluation": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "carousel"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "previous": 5,
+          "afterEvaluation": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "carousel"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "previous": 3,
+          "afterEvaluation": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false
+            ],
+            "mode": "carousel"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            1,
+            2,
+            0
+          ],
+          "previous": 2,
+          "afterEvaluation": {
+            "number": "04",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false
+            ],
+            "mode": "carousel"
+          }
+        }
+      ],
+      "range": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "carousel"
+      },
+      "newRound": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "carousel"
+      },
+      "livePreference": {
+        "mode": "arrows",
+        "stored": "arrows"
+      },
+      "overflow": false,
+      "revealColor": "rgb(46, 27, 69)"
+    },
+    {
+      "mode": "carousel",
+      "width": 430,
+      "cases": [
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "00",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            0
+          ],
+          "previous": 0,
+          "afterEvaluation": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "carousel"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "01",
+            "status": "Imagem 1 de 6",
+            "count": 6,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            0
+          ],
+          "previous": 5,
+          "afterEvaluation": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "mode": "carousel"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "02",
+            "status": "Imagem 1 de 4",
+            "count": 4,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "previous": 3,
+          "afterEvaluation": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false,
+              false,
+              false
+            ],
+            "mode": "carousel"
+          }
+        },
+        {
+          "hiddenBeforeReveal": true,
+          "initial": {
+            "number": "03",
+            "status": "Imagem 1 de 3",
+            "count": 3,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              true,
+              true,
+              true
+            ],
+            "mode": "carousel"
+          },
+          "forward": [
+            1,
+            2,
+            0
+          ],
+          "previous": 2,
+          "afterEvaluation": {
+            "number": "04",
+            "status": "Imagem 1 de 1",
+            "count": 1,
+            "arrows": [
+              false,
+              false
+            ],
+            "dotsHidden": true,
+            "current": 0,
+            "inside": true,
+            "loaded": [
+              false
+            ],
+            "mode": "carousel"
+          }
+        }
+      ],
+      "range": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "carousel"
+      },
+      "newRound": {
+        "number": "100",
+        "status": "Imagem 1 de 1",
+        "count": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "dotsHidden": true,
+        "current": 0,
+        "inside": true,
+        "loaded": [
+          false
+        ],
+        "mode": "carousel"
+      },
+      "livePreference": {
+        "mode": "arrows",
+        "stored": "arrows"
+      },
+      "overflow": false,
+      "revealColor": "rgb(46, 27, 69)"
+    }
+  ],
+  "errors": []
+}

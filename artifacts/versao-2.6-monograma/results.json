@@ -1,0 +1,71 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "text": "Memóriaemória Numérica",
+      "weight": "300",
+      "size": "28px",
+      "font": "Bahnschrift, \"Century Gothic\", \"Segoe UI\", sans-serif",
+      "localFontAvailable": true,
+      "firstColor": "rgb(255, 255, 255)",
+      "secondColor": "rgb(177, 138, 255)",
+      "letterSpacing": "1.68px",
+      "svgHidden": "true",
+      "dots": 3,
+      "twoLines": true,
+      "overflow": false,
+      "dominated": "0",
+      "subtitle": "Transforme números em imagens inesquecíveis.",
+      "headingNodes": [
+        "Suas faixas",
+        "Memória Numérica"
+      ],
+      "heading": "Memória Numérica",
+      "monogram": {
+        "loaded": true,
+        "width": 52,
+        "height": 52,
+        "aligned": true,
+        "decorative": true,
+        "used": [
+          "assets/svg/tipografia/monograma-mn.svg"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "width": 430,
+      "text": "Memóriaemória Numérica",
+      "weight": "300",
+      "size": "32.68px",
+      "font": "Bahnschrift, \"Century Gothic\", \"Segoe UI\", sans-serif",
+      "localFontAvailable": true,
+      "firstColor": "rgb(255, 255, 255)",
+      "secondColor": "rgb(177, 138, 255)",
+      "letterSpacing": "1.9608px",
+      "svgHidden": "true",
+      "dots": 3,
+      "twoLines": true,
+      "overflow": false,
+      "dominated": "0",
+      "subtitle": "Transforme números em imagens inesquecíveis.",
+      "headingNodes": [
+        "Suas faixas",
+        "Memória Numérica"
+      ],
+      "heading": "Memória Numérica",
+      "monogram": {
+        "loaded": true,
+        "width": 52,
+        "height": 52,
+        "aligned": true,
+        "decorative": true,
+        "used": [
+          "assets/svg/tipografia/monograma-mn.svg"
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "errors": []
+}

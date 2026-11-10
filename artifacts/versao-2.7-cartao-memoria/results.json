@@ -1,0 +1,1047 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "cases": [
+        {
+          "num": "00",
+          "word": "Relógio",
+          "state": "forte",
+          "percent": "74%",
+          "fill": "74%",
+          "card": {
+            "left": 32,
+            "top": 414,
+            "right": 328,
+            "bottom": 628.890625,
+            "width": 296,
+            "height": 214.890625
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 209.40625,
+              "top": 415,
+              "right": 327,
+              "bottom": 627.890625,
+              "width": 117.59375,
+              "height": 212.890625
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": true
+        },
+        {
+          "num": "01",
+          "word": "Teia",
+          "state": "dominado",
+          "percent": "100%",
+          "fill": "100%",
+          "card": {
+            "left": 32,
+            "top": 414,
+            "right": 328,
+            "bottom": 628.890625,
+            "width": 296,
+            "height": 214.890625
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 209.40625,
+              "top": 415,
+              "right": 327,
+              "bottom": 627.890625,
+              "width": 117.59375,
+              "height": 212.890625
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            10\n\n                        Respostas corretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            100%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": true
+        },
+        {
+          "num": "03",
+          "word": "Mãe",
+          "state": "novo",
+          "percent": "0%",
+          "fill": "0%",
+          "card": {
+            "left": 32,
+            "top": 414,
+            "right": 328,
+            "bottom": 628.890625,
+            "width": 296,
+            "height": 214.890625
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 209.40625,
+              "top": 415,
+              "right": 327,
+              "bottom": 627.890625,
+              "width": 117.59375,
+              "height": 212.890625
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            0\n\n                        Respostas registradas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            0\n\n                        Respostas corretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            0%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": true
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "cases": [
+        {
+          "num": "00",
+          "word": "Relógio",
+          "state": "forte",
+          "percent": "74%",
+          "fill": "74%",
+          "aria": "74",
+          "card": {
+            "left": 32,
+            "top": 414,
+            "right": 328,
+            "bottom": 572,
+            "width": 296,
+            "height": 158
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 180,
+              "top": 415,
+              "right": 327,
+              "bottom": 571,
+              "width": 147,
+              "height": 156
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": false
+        },
+        {
+          "num": "01",
+          "word": "Teia",
+          "state": "dominado",
+          "percent": "100%",
+          "fill": "100%",
+          "aria": "100",
+          "card": {
+            "left": 32,
+            "top": 414,
+            "right": 328,
+            "bottom": 572,
+            "width": 296,
+            "height": 158
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 180,
+              "top": 415,
+              "right": 327,
+              "bottom": 571,
+              "width": 147,
+              "height": 156
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            10\n\n                        Respostas corretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            100%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": false
+        },
+        {
+          "num": "03",
+          "word": "Mãe",
+          "state": "novo",
+          "percent": "0%",
+          "fill": "0%",
+          "aria": "0",
+          "card": {
+            "left": 32,
+            "top": 414,
+            "right": 328,
+            "bottom": 572,
+            "width": 296,
+            "height": 158
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 180,
+              "top": 415,
+              "right": 327,
+              "bottom": 571,
+              "width": 147,
+              "height": 156
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            0\n\n                        Respostas registradas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            0\n\n                        Respostas corretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            0%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 143,
+                "height": 101.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": false
+        }
+      ],
+      "preserved": true,
+      "pass": true,
+      "rapid": {
+        "selected": "09",
+        "images": 1
+      },
+      "other": {
+        "num": "20",
+        "word": "Nero",
+        "state": "novo",
+        "percent": "0%",
+        "fill": "0%",
+        "aria": "0",
+        "card": {
+          "left": 32,
+          "top": 414,
+          "right": 328,
+          "bottom": 572,
+          "width": 296,
+          "height": 158
+        },
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/20-nero.webp",
+          "loaded": true,
+          "hidden": false,
+          "rect": {
+            "left": 180,
+            "top": 415,
+            "right": 327,
+            "bottom": 571,
+            "width": 147,
+            "height": 156
+          },
+          "fit": "cover"
+        },
+        "stats": [
+          {
+            "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            0\n\n                        Respostas registradas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            0\n\n                        Respostas corretas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            0%\n\n                        Sobre as tentativas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          }
+        ],
+        "textInside": true,
+        "overflow": false,
+        "oldCircle": false
+      },
+      "fallback": {
+        "num": "00",
+        "word": "Relógio",
+        "state": "forte",
+        "percent": "74%",
+        "fill": "74%",
+        "aria": "74",
+        "card": {
+          "left": 32,
+          "top": 414,
+          "right": 328,
+          "bottom": 572,
+          "width": 296,
+          "height": 158
+        },
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+          "loaded": false,
+          "hidden": true,
+          "rect": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "fit": "cover"
+        },
+        "stats": [
+          {
+            "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas",
+            "rect": {
+              "width": 143,
+              "height": 101.296875
+            }
+          }
+        ],
+        "textInside": true,
+        "overflow": false,
+        "oldCircle": false
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "cases": [
+        {
+          "num": "00",
+          "word": "Relógio",
+          "state": "forte",
+          "percent": "74%",
+          "fill": "74%",
+          "card": {
+            "left": 32,
+            "top": 440.5,
+            "right": 398,
+            "bottom": 655.390625,
+            "width": 366,
+            "height": 214.890625
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 251.40625,
+              "top": 441.5,
+              "right": 397,
+              "bottom": 654.390625,
+              "width": 145.59375,
+              "height": 212.890625
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": true
+        },
+        {
+          "num": "01",
+          "word": "Teia",
+          "state": "dominado",
+          "percent": "100%",
+          "fill": "100%",
+          "card": {
+            "left": 32,
+            "top": 440.5,
+            "right": 398,
+            "bottom": 655.390625,
+            "width": 366,
+            "height": 214.890625
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 251.40625,
+              "top": 441.5,
+              "right": 397,
+              "bottom": 654.390625,
+              "width": 145.59375,
+              "height": 212.890625
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            10\n\n                        Respostas corretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            100%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": true
+        },
+        {
+          "num": "03",
+          "word": "Mãe",
+          "state": "novo",
+          "percent": "0%",
+          "fill": "0%",
+          "card": {
+            "left": 32,
+            "top": 440.5,
+            "right": 398,
+            "bottom": 655.390625,
+            "width": 366,
+            "height": 214.890625
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 251.40625,
+              "top": 441.5,
+              "right": 397,
+              "bottom": 654.390625,
+              "width": 145.59375,
+              "height": 212.890625
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            0\n\n                        Respostas registradas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            0\n\n                        Respostas corretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            0%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": true
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "cases": [
+        {
+          "num": "00",
+          "word": "Relógio",
+          "state": "forte",
+          "percent": "74%",
+          "fill": "74%",
+          "aria": "74",
+          "card": {
+            "left": 32,
+            "top": 440.5,
+            "right": 398,
+            "bottom": 598.5,
+            "width": 366,
+            "height": 158
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 215,
+              "top": 441.5,
+              "right": 397,
+              "bottom": 597.5,
+              "width": 182,
+              "height": 156
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": false
+        },
+        {
+          "num": "01",
+          "word": "Teia",
+          "state": "dominado",
+          "percent": "100%",
+          "fill": "100%",
+          "aria": "100",
+          "card": {
+            "left": 32,
+            "top": 440.5,
+            "right": 398,
+            "bottom": 598.5,
+            "width": 366,
+            "height": 158
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 215,
+              "top": 441.5,
+              "right": 397,
+              "bottom": 597.5,
+              "width": 182,
+              "height": 156
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            10\n\n                        Respostas corretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            100%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": false
+        },
+        {
+          "num": "03",
+          "word": "Mãe",
+          "state": "novo",
+          "percent": "0%",
+          "fill": "0%",
+          "aria": "0",
+          "card": {
+            "left": 32,
+            "top": 440.5,
+            "right": 398,
+            "bottom": 598.5,
+            "width": 366,
+            "height": 158
+          },
+          "image": {
+            "src": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+            "loaded": true,
+            "hidden": false,
+            "rect": {
+              "left": 215,
+              "top": 441.5,
+              "right": 397,
+              "bottom": 597.5,
+              "width": 182,
+              "height": 156
+            },
+            "fit": "cover"
+          },
+          "stats": [
+            {
+              "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            0\n\n                        Respostas registradas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            0\n\n                        Respostas corretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            },
+            {
+              "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            0%\n\n                        Sobre as tentativas",
+              "rect": {
+                "width": 84,
+                "height": 110.296875
+              }
+            }
+          ],
+          "textInside": true,
+          "overflow": false,
+          "oldCircle": false
+        }
+      ],
+      "preserved": true,
+      "pass": true,
+      "rapid": {
+        "selected": "09",
+        "images": 1
+      },
+      "other": {
+        "num": "20",
+        "word": "Nero",
+        "state": "novo",
+        "percent": "0%",
+        "fill": "0%",
+        "aria": "0",
+        "card": {
+          "left": 32,
+          "top": 440.5,
+          "right": 398,
+          "bottom": 598.5,
+          "width": 366,
+          "height": 158
+        },
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/20-nero.webp",
+          "loaded": true,
+          "hidden": false,
+          "rect": {
+            "left": 215,
+            "top": 441.5,
+            "right": 397,
+            "bottom": 597.5,
+            "width": 182,
+            "height": 156
+          },
+          "fit": "cover"
+        },
+        "stats": [
+          {
+            "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            0\n\n                        Respostas registradas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            0\n\n                        Respostas corretas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ERROS\n                            \n\n                            0\n\n                        Respostas incorretas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            0%\n\n                        Sobre as tentativas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          }
+        ],
+        "textInside": true,
+        "overflow": false,
+        "oldCircle": false
+      },
+      "fallback": {
+        "num": "00",
+        "word": "Relógio",
+        "state": "forte",
+        "percent": "74%",
+        "fill": "74%",
+        "aria": "74",
+        "card": {
+          "left": 32,
+          "top": 440.5,
+          "right": 398,
+          "bottom": 598.5,
+          "width": 366,
+          "height": 158
+        },
+        "image": {
+          "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+          "loaded": false,
+          "hidden": true,
+          "rect": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "fit": "cover"
+        },
+        "stats": [
+          {
+            "text": "\n\n                            \n                                TENTATIVAS\n                            \n\n                            10\n\n                        Respostas registradas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ACERTOS\n                            \n\n                            8\n\n                        Respostas corretas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                ERROS\n                            \n\n                            2\n\n                        Respostas incorretas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          },
+          {
+            "text": "\n\n                            \n                                TAXA DE ACERTO\n                            \n\n                            80%\n\n                        Sobre as tentativas",
+            "rect": {
+              "width": 84,
+              "height": 110.296875
+            }
+          }
+        ],
+        "textInside": true,
+        "overflow": false,
+        "oldCircle": false
+      }
+    }
+  ],
+  "errors": []
+}

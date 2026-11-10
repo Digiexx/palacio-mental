@@ -1,0 +1,161 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "cases": [
+        {
+          "text": "00",
+          "font": "100.8px",
+          "weight": "700",
+          "background": "none",
+          "clip": "border-box",
+          "fill": "rgb(255, 255, 255)",
+          "shadow": "rgba(157, 92, 255, 0.45) 0px 0px 12px, rgba(157, 92, 255, 0.32) 0px 0px 34px",
+          "rect": {
+            "width": 101.96875,
+            "height": 90.703125,
+            "left": 129.015625,
+            "right": 230.984375
+          },
+          "overflow": false
+        },
+        {
+          "text": "100",
+          "font": "100.8px",
+          "weight": "700",
+          "background": "none",
+          "clip": "border-box",
+          "fill": "rgb(255, 255, 255)",
+          "shadow": "rgba(157, 92, 255, 0.45) 0px 0px 12px, rgba(157, 92, 255, 0.32) 0px 0px 34px",
+          "rect": {
+            "width": 152.953125,
+            "height": 90.703125,
+            "left": 103.515625,
+            "right": 256.46875
+          },
+          "overflow": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "cases": [
+        {
+          "text": "00",
+          "font": "100.8px",
+          "weight": "700",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)",
+          "clip": "text",
+          "fill": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "rect": {
+            "width": 101.96875,
+            "height": 90.703125,
+            "left": 129.015625,
+            "right": 230.984375
+          },
+          "overflow": false
+        },
+        {
+          "text": "100",
+          "font": "100.8px",
+          "weight": "700",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)",
+          "clip": "text",
+          "fill": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "rect": {
+            "width": 152.953125,
+            "height": 90.703125,
+            "left": 103.515625,
+            "right": 256.46875
+          },
+          "overflow": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "cases": [
+        {
+          "text": "00",
+          "font": "120.4px",
+          "weight": "700",
+          "background": "none",
+          "clip": "border-box",
+          "fill": "rgb(255, 255, 255)",
+          "shadow": "rgba(157, 92, 255, 0.45) 0px 0px 12px, rgba(157, 92, 255, 0.32) 0px 0px 34px",
+          "rect": {
+            "width": 124.515625,
+            "height": 108.359375,
+            "left": 152.734375,
+            "right": 277.25
+          },
+          "overflow": false
+        },
+        {
+          "text": "100",
+          "font": "120.4px",
+          "weight": "700",
+          "background": "none",
+          "clip": "border-box",
+          "fill": "rgb(255, 255, 255)",
+          "shadow": "rgba(157, 92, 255, 0.45) 0px 0px 12px, rgba(157, 92, 255, 0.32) 0px 0px 34px",
+          "rect": {
+            "width": 186.765625,
+            "height": 108.359375,
+            "left": 121.609375,
+            "right": 308.375
+          },
+          "overflow": false
+        }
+      ],
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "cases": [
+        {
+          "text": "00",
+          "font": "120.4px",
+          "weight": "700",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)",
+          "clip": "text",
+          "fill": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "rect": {
+            "width": 124.515625,
+            "height": 108.359375,
+            "left": 152.734375,
+            "right": 277.25
+          },
+          "overflow": false
+        },
+        {
+          "text": "100",
+          "font": "120.4px",
+          "weight": "700",
+          "background": "linear-gradient(90deg, rgb(143, 101, 241) 0%, rgb(188, 114, 243) 50%, rgb(236, 105, 215) 100%)",
+          "clip": "text",
+          "fill": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "rect": {
+            "width": 186.765625,
+            "height": 108.359375,
+            "left": 121.609375,
+            "right": 308.375
+          },
+          "overflow": false
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "errors": []
+}

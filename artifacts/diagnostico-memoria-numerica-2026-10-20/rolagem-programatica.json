@@ -1,0 +1,1121 @@
+{
+  "environment": {
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Edg/155.0.4283.62",
+      "revision": "@aa3a7406ba8c53a83536df539f07124d73c899bd",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+      "jsVersion": "15.5.9.7"
+    },
+    "cpuThrottle": 4,
+    "viewportHeight": 820,
+    "deviceScaleFactor": 1,
+    "note": "Desktop headless; no real mobile GPU; rAF cadence is not presentation FPS"
+  },
+  "inventory": {
+    "effects": [
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-dashboard",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(12px)",
+        "shadow": "rgba(0, 0, 0, 0.2) 0px 8px 24px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-dashboard",
+        "pseudo": "::after",
+        "filter": "drop-shadow(rgba(196, 167, 255, 0.5) 0px 0px 3px)",
+        "backdrop": "none",
+        "shadow": "none",
+        "textShadow": "none",
+        "animation": "numeric-domain-reflection",
+        "duration": "5s",
+        "iteration": "infinite",
+        "position": "absolute"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnTabelaMental",
+        "class": "memory-training-card memory-training-learning",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnIniciarAprendizado",
+        "class": "memory-training-card memory-training-learning",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnFixar",
+        "class": "memory-training-card memory-training-learning",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnDesafiarMemoria",
+        "class": "memory-training-card memory-training-training",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnVelocidadeMemoria",
+        "class": "memory-training-card memory-training-training",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnTreinoPersonalizadoMemoria",
+        "class": "memory-training-card memory-training-training",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnMemoriaTreinoRapido",
+        "class": "memory-training-card memory-training-extra memory-training-featured",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "btnRevisarMemoria",
+        "class": "memory-training-card memory-training-extra",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "blur(10px)",
+        "shadow": "rgba(238, 232, 255, 0.13) 0px 1px 0px 0px inset, rgba(224, 219, 234, 0.05) 1px 0px 0px 0px inset, rgba(222, 216, 235, 0.04) -1px -1px 0px 0px inset, rgba(0, 0, 0, 0.333) 0px 3px 9px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-ranges",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.267) 0px 3px 10px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SECTION",
+        "id": "",
+        "class": "memory-ranges",
+        "pseudo": "::after",
+        "filter": "drop-shadow(rgba(196, 167, 255, 0.5) 0px 0px 3px)",
+        "backdrop": "none",
+        "shadow": "none",
+        "textShadow": "none",
+        "animation": "numeric-domain-reflection",
+        "duration": "5s",
+        "iteration": "infinite",
+        "position": "absolute"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "DIV",
+        "id": "",
+        "class": "memory-range-card",
+        "pseudo": null,
+        "filter": "none",
+        "backdrop": "none",
+        "shadow": "rgba(238, 232, 255, 0.08) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 2px 6px 0px",
+        "textShadow": "none",
+        "animation": "none",
+        "duration": "0s",
+        "iteration": "1",
+        "position": "relative"
+      },
+      {
+        "tag": "SPAN",
+        "id": "",
+        "class": "",
+        "pseudo": null,
+        "filter": "blur(10px)",
+        "backdrop": "none",
+        "shadow": "none",
+        "textShadow": "none",
+        "animation": "palacio-halo-canto",
+        "duration": "2.6s",
+        "iteration": "infinite",
+        "position": "absolute"
+      }
+    ],
+    "animations": [
+      {
+        "target": "memory-dashboard",
+        "name": "numeric-domain-reflection",
+        "playState": "running"
+      },
+      {
+        "target": "memory-ranges",
+        "name": "numeric-domain-reflection",
+        "playState": "running"
+      },
+      {
+        "target": "",
+        "name": "palacio-halo-canto",
+        "playState": "running"
+      }
+    ],
+    "images": [
+      {
+        "src": "assets/imagens/memoria-numerica/central-numerica-topo.webp",
+        "naturalWidth": 345,
+        "naturalHeight": 259,
+        "displayWidth": 360,
+        "displayHeight": 262,
+        "loaded": true
+      }
+    ],
+    "resources": [
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/home/palacio-instalacao.png",
+        "bytes": 2437249,
+        "duration": 492.5
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/central-numerica-topo.webp",
+        "bytes": 9578,
+        "duration": 107.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/tabela-mental-topo.webp",
+        "bytes": 143398,
+        "duration": 169.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/fixar-topo.webp",
+        "bytes": 112996,
+        "duration": 156.80000001192093
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/numeros/01-teia.webp",
+        "bytes": 69502,
+        "duration": 155.0999999642372
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/perfil/natan-fuentes.webp",
+        "bytes": 69450,
+        "duration": 154.89999997615814
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/memoria-numerica/numeros/05-lua.webp",
+        "bytes": 103778,
+        "duration": 63.09999996423721
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/cenarios/compras/supermercado-01.webp",
+        "bytes": 156132,
+        "duration": 65.40000003576279
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/home/palacio-home.webp",
+        "bytes": 2513956,
+        "duration": 107.10000002384186
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/imagens/personagens/mago-memoria.png",
+        "bytes": 2525332,
+        "duration": 107.59999996423721
+      },
+      {
+        "name": "http://127.0.0.1:8777/assets/icons/icon-192.png",
+        "bytes": 14256,
+        "duration": 4.400000035762787
+      }
+    ],
+    "height": 1783
+  },
+  "results": [
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "A",
+      "openHandlerMs": 116.29999995231628,
+      "elapsedMs": 3069.099999964237,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 963,
+        "rafFrames": 176,
+        "rafRate": 57.34580170149257,
+        "intervalP95": 16.90000000000009,
+        "intervalsOver25": 5,
+        "intervalsOver50": 1,
+        "longTasks": [
+          {
+            "start": 2334.800000011921,
+            "duration": 53
+          }
+        ],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 4,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 177,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.237317,
+        "TaskDuration": 0.9652700000000001,
+        "ScriptDuration": 0.12536400000000003,
+        "heapMB": 2.594921112060547
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 182,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 177,
+          "ms": 363.60500000000013
+        },
+        "FunctionCall": {
+          "count": 178,
+          "ms": 354.61999999999995
+        },
+        "UpdateLayoutTree": {
+          "count": 177,
+          "ms": 235.55700000000002
+        },
+        "PrePaint": {
+          "count": 177,
+          "ms": 31.504999999999995
+        },
+        "Paint": {
+          "count": 531,
+          "ms": 255.3250000000002
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "B",
+      "openHandlerMs": 33,
+      "elapsedMs": 3066.400000035763,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 963,
+        "rafFrames": 182,
+        "rafRate": 59.352987215587454,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 2,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 1,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 183,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.26807000000000003,
+        "TaskDuration": 0.984989,
+        "ScriptDuration": 0.110418,
+        "heapMB": 3.9721527099609375
+      },
+      "events": {
+        "PrePaint": {
+          "count": 184,
+          "ms": 41.35500000000003
+        },
+        "Paint": {
+          "count": 551,
+          "ms": 338.42900000000003
+        },
+        "FireAnimationFrame": {
+          "count": 183,
+          "ms": 350.8280000000001
+        },
+        "FunctionCall": {
+          "count": 183,
+          "ms": 342.2809999999998
+        },
+        "UpdateLayoutTree": {
+          "count": 183,
+          "ms": 263.88199999999983
+        },
+        "DrawFrame": {
+          "count": 186,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "C",
+      "openHandlerMs": 36,
+      "elapsedMs": 3070.2999999523163,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 963,
+        "rafFrames": 184,
+        "rafRate": 59.92899716733141,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 0,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0,
+        "TaskDuration": 0.35198399999999996,
+        "ScriptDuration": 0.076769,
+        "heapMB": 4.9982757568359375
+      },
+      "events": {
+        "Paint": {
+          "count": 3,
+          "ms": 3.427
+        },
+        "DrawFrame": {
+          "count": 166,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 184,
+          "ms": 89.022
+        },
+        "FunctionCall": {
+          "count": 184,
+          "ms": 79.57299999999995
+        },
+        "PrePaint": {
+          "count": 184,
+          "ms": 23.948000000000004
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "D",
+      "openHandlerMs": 26.400000035762787,
+      "elapsedMs": 3064.300000011921,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 963,
+        "rafFrames": 184,
+        "rafRate": 60.04634011006892,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 184,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.194099,
+        "TaskDuration": 0.85528,
+        "ScriptDuration": 0.07789099999999999,
+        "heapMB": 1.94232177734375
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 184,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 184,
+          "ms": 265.09400000000016
+        },
+        "FunctionCall": {
+          "count": 184,
+          "ms": 258.35200000000003
+        },
+        "UpdateLayoutTree": {
+          "count": 184,
+          "ms": 191.15799999999993
+        },
+        "PrePaint": {
+          "count": 184,
+          "ms": 34.380000000000024
+        },
+        "Paint": {
+          "count": 552,
+          "ms": 289.93100000000004
+        }
+      }
+    },
+    {
+      "width": 360,
+      "rep": 0,
+      "scenario": "E",
+      "openHandlerMs": 34,
+      "elapsedMs": 3069.699999988079,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 963,
+        "rafFrames": 184,
+        "rafRate": 59.94071081887955,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": true,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 184,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.19853200000000001,
+        "TaskDuration": 0.8338070000000001,
+        "ScriptDuration": 0.08030399999999999,
+        "heapMB": 1.9265556335449219
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 184,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 184,
+          "ms": 268.6819999999999
+        },
+        "FunctionCall": {
+          "count": 184,
+          "ms": 256.92800000000017
+        },
+        "UpdateLayoutTree": {
+          "count": 184,
+          "ms": 199.44400000000007
+        },
+        "PrePaint": {
+          "count": 184,
+          "ms": 28.808999999999997
+        },
+        "Paint": {
+          "count": 552,
+          "ms": 255.44400000000024
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "A",
+      "openHandlerMs": 40.39999997615814,
+      "elapsedMs": 3083.600000023842,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 780,
+        "rafFrames": 184,
+        "rafRate": 59.67051498202664,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 1,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 184,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.17738799999999996,
+        "TaskDuration": 0.8100410000000001,
+        "ScriptDuration": 0.06594599999999999,
+        "heapMB": 1.9916191101074219
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 185,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 184,
+          "ms": 240.97299999999993
+        },
+        "FunctionCall": {
+          "count": 184,
+          "ms": 231.04100000000003
+        },
+        "UpdateLayoutTree": {
+          "count": 184,
+          "ms": 177.564
+        },
+        "PrePaint": {
+          "count": 184,
+          "ms": 24.744999999999997
+        },
+        "Paint": {
+          "count": 552,
+          "ms": 274.52500000000003
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "B",
+      "openHandlerMs": 28.099999964237213,
+      "elapsedMs": 3057,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 780,
+        "rafFrames": 182,
+        "rafRate": 59.5354923127249,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 1,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 5,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 182,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.194337,
+        "TaskDuration": 0.8448849999999999,
+        "ScriptDuration": 0.072498,
+        "heapMB": 1.9492759704589844
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 184,
+          "ms": 261.76099999999997
+        },
+        "FunctionCall": {
+          "count": 184,
+          "ms": 252.93099999999987
+        },
+        "UpdateLayoutTree": {
+          "count": 184,
+          "ms": 190.0989999999999
+        },
+        "PrePaint": {
+          "count": 184,
+          "ms": 31.77000000000001
+        },
+        "Paint": {
+          "count": 552,
+          "ms": 283.48699999999974
+        },
+        "DrawFrame": {
+          "count": 184,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "C",
+      "openHandlerMs": 40.30000001192093,
+      "elapsedMs": 3064.399999976158,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 780,
+        "rafFrames": 183,
+        "rafRate": 59.71805247403204,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 1,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 0,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0,
+        "TaskDuration": 0.348985,
+        "ScriptDuration": 0.06065,
+        "heapMB": 3.309154510498047
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 183,
+          "ms": 77.13699999999997
+        },
+        "FunctionCall": {
+          "count": 183,
+          "ms": 64.42099999999996
+        },
+        "PrePaint": {
+          "count": 183,
+          "ms": 48.52099999999999
+        },
+        "DrawFrame": {
+          "count": 163,
+          "ms": 0
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "D",
+      "openHandlerMs": 35.30000001192093,
+      "elapsedMs": 3083.399999976158,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 780,
+        "rafFrames": 185,
+        "rafRate": 59.998702731215694,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": false,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 186,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.19581400000000002,
+        "TaskDuration": 0.8401299999999999,
+        "ScriptDuration": 0.079568,
+        "heapMB": 2.402240753173828
+      },
+      "events": {
+        "FireAnimationFrame": {
+          "count": 186,
+          "ms": 268.1549999999999
+        },
+        "FunctionCall": {
+          "count": 186,
+          "ms": 260.79299999999984
+        },
+        "DrawFrame": {
+          "count": 186,
+          "ms": 0
+        },
+        "UpdateLayoutTree": {
+          "count": 186,
+          "ms": 196.00300000000007
+        },
+        "PrePaint": {
+          "count": 186,
+          "ms": 31.564
+        },
+        "Paint": {
+          "count": 559,
+          "ms": 268.33500000000015
+        }
+      }
+    },
+    {
+      "width": 430,
+      "rep": 0,
+      "scenario": "E",
+      "openHandlerMs": 43.89999997615814,
+      "elapsedMs": 3070.199999988079,
+      "probe": {
+        "visibility": "visible",
+        "maxScroll": 780,
+        "rafFrames": 184,
+        "rafRate": 59.93094912406828,
+        "intervalP95": 16.800000000000182,
+        "intervalsOver25": 0,
+        "intervalsOver50": 0,
+        "longTasks": [],
+        "cls": 0,
+        "diag": {
+          "timerCalls": 0,
+          "rafCalls": 0,
+          "writesBlocked": 0,
+          "domMutations": 0,
+          "paused": true,
+          "probing": false,
+          "scrolling": false
+        },
+        "scrollY": 0,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "perf": {
+        "LayoutCount": 0,
+        "RecalcStyleCount": 184,
+        "LayoutDuration": 0,
+        "RecalcStyleDuration": 0.31720499999999996,
+        "TaskDuration": 1.163785,
+        "ScriptDuration": 0.106173,
+        "heapMB": 3.164398193359375
+      },
+      "events": {
+        "DrawFrame": {
+          "count": 184,
+          "ms": 0
+        },
+        "FireAnimationFrame": {
+          "count": 184,
+          "ms": 402.95899999999983
+        },
+        "FunctionCall": {
+          "count": 184,
+          "ms": 388.6859999999999
+        },
+        "UpdateLayoutTree": {
+          "count": 184,
+          "ms": 313.584
+        },
+        "PrePaint": {
+          "count": 184,
+          "ms": 47.20900000000004
+        },
+        "Paint": {
+          "count": 552,
+          "ms": 395.75400000000025
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "exceptionId": 1,
+      "text": "Uncaught (in promise)",
+      "lineNumber": 0,
+      "columnNumber": 0,
+      "scriptId": "1",
+      "url": "http://127.0.0.1:8777/",
+      "exception": {
+        "type": "object",
+        "subtype": "error",
+        "className": "Error",
+        "description": "Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+        "objectId": "-2480812737812865804.36.1",
+        "preview": {
+          "type": "object",
+          "subtype": "error",
+          "description": "Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received",
+          "overflow": false,
+          "properties": [
+            {
+              "name": "stack",
+              "type": "string",
+              "value": "Error: A listener indicated an asynchronous respon…age channel closed before a response was received"
+            },
+            {
+              "name": "message",
+              "type": "string",
+              "value": "A listener indicated an asynchronous response by r…age channel closed before a response was received"
+            }
+          ]
+        }
+      },
+      "executionContextId": 36
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "visible": true,
+      "overflow": false,
+      "cards": 1,
+      "originalModes": 8,
+      "order": true,
+      "snap": "x mandatory",
+      "animation": "none",
+      "domain": "0%",
+      "route": true,
+      "returned": true,
+      "verticalScroll": true,
+      "asset": {
+        "loaded": true,
+        "width": 1408,
+        "height": 800
+      },
+      "card": {
+        "width": 275.390625,
+        "height": 210,
+        "textInside": true,
+        "background": "linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.79) 75%, rgba(0, 0, 0, 0.96) 100%), url(\"http://127.0.0.1:8777/assets/imagens/memoria-numerica/carrossel/tabela-mental.webp\"), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "border": "rgba(0, 0, 0, 0)",
+        "borderWidth": "1px",
+        "gradient": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+        "reference": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+        "transform": "none"
+      }
+    },
+    {
+      "width": 430,
+      "visible": true,
+      "overflow": false,
+      "cards": 1,
+      "originalModes": 8,
+      "order": true,
+      "snap": "x mandatory",
+      "animation": "none",
+      "domain": "0%",
+      "route": true,
+      "returned": true,
+      "verticalScroll": true,
+      "asset": {
+        "loaded": true,
+        "width": 1408,
+        "height": 800
+      },
+      "card": {
+        "width": 334.890625,
+        "height": 210,
+        "textInside": true,
+        "background": "linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.79) 75%, rgba(0, 0, 0, 0.96) 100%), url(\"http://127.0.0.1:8777/assets/imagens/memoria-numerica/carrossel/tabela-mental.webp\"), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "border": "rgba(0, 0, 0, 0)",
+        "borderWidth": "1px",
+        "gradient": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+        "reference": "linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f)",
+        "transform": "none"
+      }
+    }
+  ],
+  "errors": []
+}

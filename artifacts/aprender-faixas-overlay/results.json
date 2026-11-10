@@ -1,0 +1,349 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "pass": true,
+      "stable": true,
+      "closed": {
+        "hidden": true,
+        "expanded": "false",
+        "panel": {
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "toggle": {
+          "top": 169.234375,
+          "left": 33,
+          "right": 151,
+          "bottom": 209.234375,
+          "width": 118,
+          "height": 40
+        },
+        "image": {
+          "top": 270.234375,
+          "left": 13,
+          "right": 347,
+          "bottom": 590.78125,
+          "width": 334,
+          "height": 320.546875
+        },
+        "button": {
+          "top": 602.78125,
+          "left": 39.71875,
+          "right": 320.265625,
+          "bottom": 646.78125,
+          "width": 280.546875,
+          "height": 44
+        },
+        "card": {
+          "top": 148.234375,
+          "left": 12,
+          "right": 348,
+          "bottom": 671.78125,
+          "width": 336,
+          "height": 523.546875
+        },
+        "overflow": false,
+        "position": "absolute",
+        "cardOverflow": "visible"
+      },
+      "open": {
+        "hidden": false,
+        "expanded": "true",
+        "panel": {
+          "top": 217.234375,
+          "left": 33,
+          "right": 327,
+          "bottom": 407.234375,
+          "width": 294,
+          "height": 190
+        },
+        "toggle": {
+          "top": 169.234375,
+          "left": 33,
+          "right": 151,
+          "bottom": 209.234375,
+          "width": 118,
+          "height": 40
+        },
+        "image": {
+          "top": 270.234375,
+          "left": 13,
+          "right": 347,
+          "bottom": 590.78125,
+          "width": 334,
+          "height": 320.546875
+        },
+        "button": {
+          "top": 602.78125,
+          "left": 39.71875,
+          "right": 320.265625,
+          "bottom": 646.78125,
+          "width": 280.546875,
+          "height": 44
+        },
+        "card": {
+          "top": 148.234375,
+          "left": 12,
+          "right": 348,
+          "bottom": 671.78125,
+          "width": 336,
+          "height": 523.546875
+        },
+        "overflow": false,
+        "position": "absolute",
+        "cardOverflow": "visible"
+      },
+      "escape": {
+        "hidden": true,
+        "focus": "btnAbrirFaixasAprender"
+      },
+      "closeButton": true,
+      "ranges": [
+        {
+          "start": 0,
+          "number": "00",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 10,
+          "number": "10",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 20,
+          "number": "20",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 30,
+          "number": "30",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 40,
+          "number": "40",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 50,
+          "number": "50",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 60,
+          "number": "60",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 70,
+          "number": "70",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 80,
+          "number": "80",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 90,
+          "number": "90",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 100,
+          "number": "100",
+          "closed": true,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "pass": true,
+      "stable": true,
+      "closed": {
+        "hidden": true,
+        "expanded": "false",
+        "panel": {
+          "top": 0,
+          "left": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "toggle": {
+          "top": 139.828125,
+          "left": 33,
+          "right": 151,
+          "bottom": 179.828125,
+          "width": 118,
+          "height": 40
+        },
+        "image": {
+          "top": 240.828125,
+          "left": 13,
+          "right": 417,
+          "bottom": 620.1875,
+          "width": 404,
+          "height": 379.359375
+        },
+        "button": {
+          "top": 632.1875,
+          "left": 45.3125,
+          "right": 384.671875,
+          "bottom": 676.1875,
+          "width": 339.359375,
+          "height": 44
+        },
+        "card": {
+          "top": 118.828125,
+          "left": 12,
+          "right": 418,
+          "bottom": 701.1875,
+          "width": 406,
+          "height": 582.359375
+        },
+        "overflow": false,
+        "position": "absolute",
+        "cardOverflow": "visible"
+      },
+      "open": {
+        "hidden": false,
+        "expanded": "true",
+        "panel": {
+          "top": 187.828125,
+          "left": 33,
+          "right": 397,
+          "bottom": 377.828125,
+          "width": 364,
+          "height": 190
+        },
+        "toggle": {
+          "top": 139.828125,
+          "left": 33,
+          "right": 151,
+          "bottom": 179.828125,
+          "width": 118,
+          "height": 40
+        },
+        "image": {
+          "top": 240.828125,
+          "left": 13,
+          "right": 417,
+          "bottom": 620.1875,
+          "width": 404,
+          "height": 379.359375
+        },
+        "button": {
+          "top": 632.1875,
+          "left": 45.3125,
+          "right": 384.671875,
+          "bottom": 676.1875,
+          "width": 339.359375,
+          "height": 44
+        },
+        "card": {
+          "top": 118.828125,
+          "left": 12,
+          "right": 418,
+          "bottom": 701.1875,
+          "width": 406,
+          "height": 582.359375
+        },
+        "overflow": false,
+        "position": "absolute",
+        "cardOverflow": "visible"
+      },
+      "escape": {
+        "hidden": true,
+        "focus": "btnAbrirFaixasAprender"
+      },
+      "closeButton": true,
+      "ranges": [
+        {
+          "start": 0,
+          "number": "00",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 10,
+          "number": "10",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 20,
+          "number": "20",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 30,
+          "number": "30",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 40,
+          "number": "40",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 50,
+          "number": "50",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 60,
+          "number": "60",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 70,
+          "number": "70",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 80,
+          "number": "80",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 90,
+          "number": "90",
+          "closed": true,
+          "overflow": false
+        },
+        {
+          "start": 100,
+          "number": "100",
+          "closed": true,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

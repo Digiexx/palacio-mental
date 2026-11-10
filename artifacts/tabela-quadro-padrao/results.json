@@ -1,0 +1,725 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 535.15625,
+            "bottom": 578.84375,
+            "left": 157.09375,
+            "right": 202.890625,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 183.5625,
+            "bottom": 208.75,
+            "left": 106.53125,
+            "right": 158.625,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 225.15625,
+            "bottom": 521.15625,
+            "left": 32,
+            "right": 328,
+            "height": 296
+          },
+          "button": {
+            "top": 592.84375,
+            "bottom": 640.84375,
+            "left": 32,
+            "right": 328,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 6",
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "02",
+          "word": "NOÉ",
+          "numberRect": {
+            "top": 535.15625,
+            "bottom": 578.84375,
+            "left": 154.4375,
+            "right": 205.5625,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 183.5625,
+            "bottom": 208.75,
+            "left": 106.53125,
+            "right": 155.53125,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 225.15625,
+            "bottom": 521.15625,
+            "left": 32,
+            "right": 328,
+            "height": 296
+          },
+          "button": {
+            "top": 592.84375,
+            "bottom": 640.84375,
+            "left": 32,
+            "right": 328,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 4",
+          "previous": "Imagem 1 de 4",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 535.15625,
+            "bottom": 578.84375,
+            "left": 154.4375,
+            "right": 205.5625,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 183.5625,
+            "bottom": 208.75,
+            "left": 106.53125,
+            "right": 159.359375,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 225.15625,
+            "bottom": 521.15625,
+            "left": 32,
+            "right": 328,
+            "height": 296
+          },
+          "button": {
+            "top": 592.84375,
+            "bottom": 640.84375,
+            "left": 32,
+            "right": 328,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 3",
+          "previous": "Imagem 1 de 3",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 535.15625,
+            "bottom": 578.84375,
+            "left": 153.9375,
+            "right": 206.046875,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 183.5625,
+            "bottom": 208.75,
+            "left": 106.53125,
+            "right": 155.921875,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 225.15625,
+            "bottom": 521.15625,
+            "left": 32,
+            "right": 328,
+            "height": 296
+          },
+          "button": {
+            "top": 592.84375,
+            "bottom": 640.84375,
+            "left": 32,
+            "right": 328,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/04-cao.webp",
+          "controlsHidden": true,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "closed": true,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 37,
+            "right": 78.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 206.375,
+            "bottom": 227.625,
+            "left": 138.515625,
+            "right": 174.875,
+            "height": 21.25
+          },
+          "image": {
+            "top": 247,
+            "bottom": 533,
+            "left": 37,
+            "right": 323,
+            "height": 286
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 6",
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "02",
+          "word": "NOÉ",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 37,
+            "right": 78.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 206.375,
+            "bottom": 227.625,
+            "left": 138.515625,
+            "right": 173.890625,
+            "height": 21.25
+          },
+          "image": {
+            "top": 247,
+            "bottom": 533,
+            "left": 37,
+            "right": 323,
+            "height": 286
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 4",
+          "previous": "Imagem 1 de 4",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 199,
+            "bottom": 235,
+            "left": 37,
+            "right": 78.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 206.375,
+            "bottom": 227.625,
+            "left": 138.515625,
+            "right": 175.796875,
+            "height": 21.25
+          },
+          "image": {
+            "top": 247,
+            "bottom": 533,
+            "left": 37,
+            "right": 323,
+            "height": 286
+          },
+          "button": {
+            "top": 577,
+            "bottom": 621,
+            "left": 37,
+            "right": 323,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 3",
+          "previous": "Imagem 1 de 3",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 215,
+            "bottom": 251,
+            "left": 37,
+            "right": 78.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 222.375,
+            "bottom": 243.625,
+            "left": 138.515625,
+            "right": 173.96875,
+            "height": 21.25
+          },
+          "image": {
+            "top": 263,
+            "bottom": 549,
+            "left": 37,
+            "right": 323,
+            "height": 286
+          },
+          "button": {
+            "top": 561,
+            "bottom": 605,
+            "left": 37,
+            "right": 323,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/04-cao.webp",
+          "controlsHidden": true,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "closed": true,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 566.15625,
+            "bottom": 609.84375,
+            "left": 192.09375,
+            "right": 237.890625,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 152.5625,
+            "bottom": 177.75,
+            "left": 110.53125,
+            "right": 162.625,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 194.15625,
+            "bottom": 552.15625,
+            "left": 36,
+            "right": 394,
+            "height": 358
+          },
+          "button": {
+            "top": 623.84375,
+            "bottom": 671.84375,
+            "left": 36,
+            "right": 394,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 6",
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "02",
+          "word": "NOÉ",
+          "numberRect": {
+            "top": 566.15625,
+            "bottom": 609.84375,
+            "left": 189.4375,
+            "right": 240.5625,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 152.5625,
+            "bottom": 177.75,
+            "left": 110.53125,
+            "right": 159.53125,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 194.15625,
+            "bottom": 552.15625,
+            "left": 36,
+            "right": 394,
+            "height": 358
+          },
+          "button": {
+            "top": 623.84375,
+            "bottom": 671.84375,
+            "left": 36,
+            "right": 394,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 4",
+          "previous": "Imagem 1 de 4",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 566.15625,
+            "bottom": 609.84375,
+            "left": 189.4375,
+            "right": 240.5625,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 152.5625,
+            "bottom": 177.75,
+            "left": 110.53125,
+            "right": 163.359375,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 194.15625,
+            "bottom": 552.15625,
+            "left": 36,
+            "right": 394,
+            "height": 358
+          },
+          "button": {
+            "top": 623.84375,
+            "bottom": 671.84375,
+            "left": 36,
+            "right": 394,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 3",
+          "previous": "Imagem 1 de 3",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 566.15625,
+            "bottom": 609.84375,
+            "left": 188.9375,
+            "right": 241.046875,
+            "height": 43.6875
+          },
+          "wordRect": {
+            "top": 152.5625,
+            "bottom": 177.75,
+            "left": 110.53125,
+            "right": 159.921875,
+            "height": 25.1875
+          },
+          "image": {
+            "top": 194.15625,
+            "bottom": 552.15625,
+            "left": 36,
+            "right": 394,
+            "height": 358
+          },
+          "button": {
+            "top": 623.84375,
+            "bottom": 671.84375,
+            "left": 36,
+            "right": 394,
+            "height": 48
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/04-cao.webp",
+          "controlsHidden": true,
+          "activeColor": "rgb(203, 177, 238)",
+          "arrowBorder": "rgba(255, 255, 255, 0.25)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "closed": true,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "samples": [
+        {
+          "number": "01",
+          "word": "TEIA",
+          "numberRect": {
+            "top": 168,
+            "bottom": 204,
+            "left": 41,
+            "right": 82.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 173.640625,
+            "bottom": 198.359375,
+            "left": 142.515625,
+            "right": 184.8125,
+            "height": 24.71875
+          },
+          "image": {
+            "top": 216,
+            "bottom": 564,
+            "left": 41,
+            "right": 389,
+            "height": 348
+          },
+          "button": {
+            "top": 608,
+            "bottom": 652,
+            "left": 41,
+            "right": 389,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 6",
+          "previous": "Imagem 1 de 6",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "02",
+          "word": "NOÉ",
+          "numberRect": {
+            "top": 168,
+            "bottom": 204,
+            "left": 41,
+            "right": 82.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 173.640625,
+            "bottom": 198.359375,
+            "left": 142.515625,
+            "right": 183.671875,
+            "height": 24.71875
+          },
+          "image": {
+            "top": 216,
+            "bottom": 564,
+            "left": 41,
+            "right": 389,
+            "height": 348
+          },
+          "button": {
+            "top": 608,
+            "bottom": 652,
+            "left": 41,
+            "right": 389,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 4",
+          "previous": "Imagem 1 de 4",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "03",
+          "word": "MÃE",
+          "numberRect": {
+            "top": 168,
+            "bottom": 204,
+            "left": 41,
+            "right": 82.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 173.640625,
+            "bottom": 198.359375,
+            "left": 142.515625,
+            "right": 185.890625,
+            "height": 24.71875
+          },
+          "image": {
+            "top": 216,
+            "bottom": 564,
+            "left": 41,
+            "right": 389,
+            "height": 348
+          },
+          "button": {
+            "top": 608,
+            "bottom": 652,
+            "left": 41,
+            "right": 389,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/03-mae.webp",
+          "controlsHidden": false,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "next": "Imagem 2 de 3",
+          "previous": "Imagem 1 de 3",
+          "closed": true,
+          "pass": true
+        },
+        {
+          "number": "04",
+          "word": "CÃO",
+          "numberRect": {
+            "top": 184,
+            "bottom": 220,
+            "left": 41,
+            "right": 82.421875,
+            "height": 36
+          },
+          "wordRect": {
+            "top": 189.640625,
+            "bottom": 214.359375,
+            "left": 142.515625,
+            "right": 183.78125,
+            "height": 24.71875
+          },
+          "image": {
+            "top": 232,
+            "bottom": 580,
+            "left": 41,
+            "right": 389,
+            "height": 348
+          },
+          "button": {
+            "top": 592,
+            "bottom": 636,
+            "left": 41,
+            "right": 389,
+            "height": 44
+          },
+          "loaded": true,
+          "primary": "assets/imagens/memoria-numerica/numeros/04-cao.webp",
+          "controlsHidden": true,
+          "activeColor": "rgb(177, 138, 255)",
+          "arrowBorder": "rgb(61, 53, 73)",
+          "rangeCount": 0,
+          "overflow": false,
+          "detailOverflow": false,
+          "closed": true,
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

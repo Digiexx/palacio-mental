@@ -1,0 +1,649 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "fixture": "empty",
+      "panel": {
+        "top": 305.859375,
+        "bottom": 391.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 85.796875
+      },
+      "card": {
+        "top": 395.65625,
+        "bottom": 605.65625,
+        "left": 14,
+        "right": 289.390625,
+        "width": 275.390625,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 256.359375,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 61.96875
+      },
+      "gap": 4,
+      "percent": "0%",
+      "dominated": "0",
+      "total": "101",
+      "bar": "0%",
+      "aria": "0",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 391.65625,
+        "bottom": 609.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 218
+      },
+      "gapCSS": "14px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "before",
+      "fixture": "partial",
+      "panel": {
+        "top": 305.859375,
+        "bottom": 391.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 85.796875
+      },
+      "card": {
+        "top": 395.65625,
+        "bottom": 605.65625,
+        "left": 14,
+        "right": 289.390625,
+        "width": 275.390625,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 256.359375,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 61.96875
+      },
+      "gap": 4,
+      "percent": "2%",
+      "dominated": "2",
+      "total": "101",
+      "bar": "2%",
+      "aria": "2",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 391.65625,
+        "bottom": 609.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 218
+      },
+      "gapCSS": "14px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "before",
+      "fixture": "full",
+      "panel": {
+        "top": 305.859375,
+        "bottom": 391.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 85.796875
+      },
+      "card": {
+        "top": 395.65625,
+        "bottom": 605.65625,
+        "left": 14,
+        "right": 289.390625,
+        "width": 275.390625,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 256.359375,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 61.96875
+      },
+      "gap": 4,
+      "percent": "100%",
+      "dominated": "101",
+      "total": "101",
+      "bar": "100%",
+      "aria": "100",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 391.65625,
+        "bottom": 609.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 218
+      },
+      "gapCSS": "14px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixture": "empty",
+      "panel": {
+        "top": 299.859375,
+        "bottom": 377.65625,
+        "left": 20.640625,
+        "right": 339.359375,
+        "width": 318.71875,
+        "height": 77.796875
+      },
+      "card": {
+        "top": 393.65625,
+        "bottom": 603.65625,
+        "left": 14,
+        "right": 279.671875,
+        "width": 265.671875,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 256.359375,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 61.96875
+      },
+      "gap": 16,
+      "percent": "0%",
+      "dominated": "0",
+      "total": "101",
+      "bar": "0%",
+      "aria": "0",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 389.65625,
+        "bottom": 607.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 218
+      },
+      "gapCSS": "12px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true,
+      "horizontal": {
+        "left": 219,
+        "max": 219
+      },
+      "aprender": true,
+      "tabela": true
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixture": "partial",
+      "panel": {
+        "top": 299.859375,
+        "bottom": 377.65625,
+        "left": 20.640625,
+        "right": 339.359375,
+        "width": 318.71875,
+        "height": 77.796875
+      },
+      "card": {
+        "top": 393.65625,
+        "bottom": 603.65625,
+        "left": 14,
+        "right": 279.671875,
+        "width": 265.671875,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 256.359375,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 61.96875
+      },
+      "gap": 16,
+      "percent": "2%",
+      "dominated": "2",
+      "total": "101",
+      "bar": "2%",
+      "aria": "2",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 389.65625,
+        "bottom": 607.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 218
+      },
+      "gapCSS": "12px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "fixture": "full",
+      "panel": {
+        "top": 299.859375,
+        "bottom": 377.65625,
+        "left": 20.640625,
+        "right": 339.359375,
+        "width": 318.71875,
+        "height": 77.796875
+      },
+      "card": {
+        "top": 393.65625,
+        "bottom": 603.65625,
+        "left": 14,
+        "right": 279.671875,
+        "width": 265.671875,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 256.359375,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 61.96875
+      },
+      "gap": 16,
+      "percent": "100%",
+      "dominated": "101",
+      "total": "101",
+      "bar": "100%",
+      "aria": "100",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 389.65625,
+        "bottom": 607.65625,
+        "left": 14,
+        "right": 346,
+        "width": 332,
+        "height": 218
+      },
+      "gapCSS": "12px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixture": "empty",
+      "panel": {
+        "top": 316.078125,
+        "bottom": 401.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 85.796875
+      },
+      "card": {
+        "top": 405.875,
+        "bottom": 615.875,
+        "left": 14,
+        "right": 348.890625,
+        "width": 334.890625,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 266.578125,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 72.1875
+      },
+      "gap": 4,
+      "percent": "0%",
+      "dominated": "0",
+      "total": "101",
+      "bar": "0%",
+      "aria": "0",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 401.875,
+        "bottom": 619.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 218
+      },
+      "gapCSS": "14px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixture": "partial",
+      "panel": {
+        "top": 316.078125,
+        "bottom": 401.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 85.796875
+      },
+      "card": {
+        "top": 405.875,
+        "bottom": 615.875,
+        "left": 14,
+        "right": 348.890625,
+        "width": 334.890625,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 266.578125,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 72.1875
+      },
+      "gap": 4,
+      "percent": "2%",
+      "dominated": "2",
+      "total": "101",
+      "bar": "2%",
+      "aria": "2",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 401.875,
+        "bottom": 619.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 218
+      },
+      "gapCSS": "14px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "fixture": "full",
+      "panel": {
+        "top": 316.078125,
+        "bottom": 401.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 85.796875
+      },
+      "card": {
+        "top": 405.875,
+        "bottom": 615.875,
+        "left": 14,
+        "right": 348.890625,
+        "width": 334.890625,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 266.578125,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 72.1875
+      },
+      "gap": 4,
+      "percent": "100%",
+      "dominated": "101",
+      "total": "101",
+      "bar": "100%",
+      "aria": "100",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 401.875,
+        "bottom": 619.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 218
+      },
+      "gapCSS": "14px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixture": "empty",
+      "panel": {
+        "top": 310.078125,
+        "bottom": 387.875,
+        "left": 22.046875,
+        "right": 407.953125,
+        "width": 385.90625,
+        "height": 77.796875
+      },
+      "card": {
+        "top": 403.875,
+        "bottom": 613.875,
+        "left": 14,
+        "right": 337.078125,
+        "width": 323.078125,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 266.578125,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 72.1875
+      },
+      "gap": 16,
+      "percent": "0%",
+      "dominated": "0",
+      "total": "101",
+      "bar": "0%",
+      "aria": "0",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 399.875,
+        "bottom": 617.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 218
+      },
+      "gapCSS": "12px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true,
+      "horizontal": {
+        "left": 264,
+        "max": 264
+      },
+      "aprender": true,
+      "tabela": true
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixture": "partial",
+      "panel": {
+        "top": 310.078125,
+        "bottom": 387.875,
+        "left": 22.046875,
+        "right": 407.953125,
+        "width": 385.90625,
+        "height": 77.796875
+      },
+      "card": {
+        "top": 403.875,
+        "bottom": 613.875,
+        "left": 14,
+        "right": 337.078125,
+        "width": 323.078125,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 266.578125,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 72.1875
+      },
+      "gap": 16,
+      "percent": "2%",
+      "dominated": "2",
+      "total": "101",
+      "bar": "2%",
+      "aria": "2",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 399.875,
+        "bottom": 617.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 218
+      },
+      "gapCSS": "12px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "fixture": "full",
+      "panel": {
+        "top": 310.078125,
+        "bottom": 387.875,
+        "left": 22.046875,
+        "right": 407.953125,
+        "width": 385.90625,
+        "height": 77.796875
+      },
+      "card": {
+        "top": 403.875,
+        "bottom": 613.875,
+        "left": 14,
+        "right": 337.078125,
+        "width": 323.078125,
+        "height": 210
+      },
+      "title": {
+        "top": 194.390625,
+        "bottom": 266.578125,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 72.1875
+      },
+      "gap": 16,
+      "percent": "100%",
+      "dominated": "101",
+      "total": "101",
+      "bar": "100%",
+      "aria": "100",
+      "percentInside": true,
+      "center": 0,
+      "track": {
+        "top": 399.875,
+        "bottom": 617.875,
+        "left": 14,
+        "right": 416,
+        "width": 402,
+        "height": 218
+      },
+      "gapCSS": "12px",
+      "overflow": false,
+      "nextPeek": true,
+      "snap": "x mandatory",
+      "originalModes": 8,
+      "pass": true
+    }
+  ],
+  "comparisons": [
+    {
+      "width": 360,
+      "topDelta": -6,
+      "heightDelta": -8,
+      "widthRatio": 0.959996234939759,
+      "titlePreserved": true,
+      "gap": 16,
+      "center": 0
+    },
+    {
+      "width": 430,
+      "topDelta": -6,
+      "heightDelta": -8,
+      "widthRatio": 0.9599657960199005,
+      "titlePreserved": true,
+      "gap": 16,
+      "center": 0
+    }
+  ],
+  "errors": []
+}

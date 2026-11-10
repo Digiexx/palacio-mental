@@ -1,0 +1,563 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "visible": [
+        {
+          "id": "btnTabelaMental",
+          "title": "Tabela Mental",
+          "descriptions": 1,
+          "style": {
+            "height": 103.78125,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnIniciarAprendizado",
+          "title": "Aprender",
+          "descriptions": 1,
+          "style": {
+            "height": 103.78125,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnFixar",
+          "title": "Fixar",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnDesafiarMemoria",
+          "title": "Treinar",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnVelocidadeMemoria",
+          "title": "Velocidade",
+          "descriptions": 1,
+          "style": {
+            "height": 103.78125,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnTreinoPersonalizadoMemoria",
+          "title": "Personalizado",
+          "descriptions": 1,
+          "style": {
+            "height": 103.78125,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnMemoriaTreinoRapido",
+          "title": "Desafio",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnRevisarMemoria",
+          "title": "Revisar",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        }
+      ],
+      "cardNames": [
+        "Tabela Mental",
+        "Aprender",
+        "Fixar",
+        "Treinar"
+      ],
+      "cards": [
+        {
+          "width": 265.671875,
+          "height": 210
+        },
+        {
+          "width": 265.671875,
+          "height": 210
+        },
+        {
+          "width": 265.671875,
+          "height": 210
+        },
+        {
+          "width": 265.671875,
+          "height": 210
+        }
+      ],
+      "panel": {
+        "left": 14,
+        "top": 299.859375,
+        "width": 318.71875,
+        "height": 73.796875
+      },
+      "hero": {
+        "left": 0,
+        "top": 0,
+        "width": 360,
+        "height": 289.859375
+      },
+      "dots": 4,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "visible": [
+        {
+          "id": "btnVelocidadeMemoria",
+          "title": "Velocidade",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnTreinoPersonalizadoMemoria",
+          "title": "Personalizado",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnMemoriaTreinoRapido",
+          "title": "Desafio",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnRevisarMemoria",
+          "title": "Revisar",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        }
+      ],
+      "cardNames": [
+        "Tabela Mental",
+        "Aprender",
+        "Fixar",
+        "Treinar"
+      ],
+      "cards": [
+        {
+          "width": 265.671875,
+          "height": 210
+        },
+        {
+          "width": 265.671875,
+          "height": 210
+        },
+        {
+          "width": 265.671875,
+          "height": 210
+        },
+        {
+          "width": 265.671875,
+          "height": 210
+        }
+      ],
+      "panel": {
+        "left": 14,
+        "top": 299.859375,
+        "width": 318.71875,
+        "height": 73.796875
+      },
+      "hero": {
+        "left": 0,
+        "top": 0,
+        "width": 360,
+        "height": 289.859375
+      },
+      "dots": 4,
+      "overflow": false,
+      "routes": [
+        {
+          "id": "btnTabelaMentalDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnAprenderDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnFixarDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnDesafiarDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnVelocidadeMemoria",
+          "opened": true
+        },
+        {
+          "id": "btnTreinoPersonalizadoMemoria",
+          "opened": true
+        },
+        {
+          "id": "btnMemoriaTreinoRapido",
+          "opened": true
+        },
+        {
+          "id": "btnRevisarMemoria",
+          "opened": false
+        }
+      ],
+      "preserved": true
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "visible": [
+        {
+          "id": "btnTabelaMental",
+          "title": "Tabela Mental",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnIniciarAprendizado",
+          "title": "Aprender",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnFixar",
+          "title": "Fixar",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnDesafiarMemoria",
+          "title": "Treinar",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnVelocidadeMemoria",
+          "title": "Velocidade",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnTreinoPersonalizadoMemoria",
+          "title": "Personalizado",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnMemoriaTreinoRapido",
+          "title": "Desafio",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnRevisarMemoria",
+          "title": "Revisar",
+          "descriptions": 1,
+          "style": {
+            "height": 100,
+            "weight": "600",
+            "bg": "radial-gradient(78px 48px at 0% 0%, rgba(238, 234, 248, 0.18) 0%, rgba(214, 210, 224, 0.07) 35%, rgba(0, 0, 0, 0) 75%), radial-gradient(68px 42px at 100% 100%, rgba(226, 223, 237, 0.11) 0%, rgba(208, 204, 219, 0.04) 38%, rgba(0, 0, 0, 0) 78%), linear-gradient(rgba(199, 194, 219, 0.047) 0%, rgba(119, 114, 135, 0.016) 38%, rgba(5, 5, 7, 0.5) 100%), none",
+            "animation": "none",
+            "after": "\"\"",
+            "before": "none"
+          }
+        }
+      ],
+      "cardNames": [
+        "Tabela Mental",
+        "Aprender",
+        "Fixar",
+        "Treinar"
+      ],
+      "cards": [
+        {
+          "width": 323.078125,
+          "height": 210
+        },
+        {
+          "width": 323.078125,
+          "height": 210
+        },
+        {
+          "width": 323.078125,
+          "height": 210
+        },
+        {
+          "width": 323.078125,
+          "height": 210
+        }
+      ],
+      "panel": {
+        "left": 14,
+        "top": 310.078125,
+        "width": 385.90625,
+        "height": 73.796875
+      },
+      "hero": {
+        "left": 0,
+        "top": 0,
+        "width": 430,
+        "height": 300.078125
+      },
+      "dots": 4,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "visible": [
+        {
+          "id": "btnVelocidadeMemoria",
+          "title": "Velocidade",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnTreinoPersonalizadoMemoria",
+          "title": "Personalizado",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnMemoriaTreinoRapido",
+          "title": "Desafio",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        },
+        {
+          "id": "btnRevisarMemoria",
+          "title": "Revisar",
+          "descriptions": 0,
+          "style": {
+            "height": 64,
+            "weight": "400",
+            "bg": "linear-gradient(145deg, rgb(27, 27, 36), rgb(16, 16, 21))",
+            "animation": "none",
+            "after": "none",
+            "before": "none"
+          }
+        }
+      ],
+      "cardNames": [
+        "Tabela Mental",
+        "Aprender",
+        "Fixar",
+        "Treinar"
+      ],
+      "cards": [
+        {
+          "width": 323.078125,
+          "height": 210
+        },
+        {
+          "width": 323.078125,
+          "height": 210
+        },
+        {
+          "width": 323.078125,
+          "height": 210
+        },
+        {
+          "width": 323.078125,
+          "height": 210
+        }
+      ],
+      "panel": {
+        "left": 14,
+        "top": 310.078125,
+        "width": 385.90625,
+        "height": 73.796875
+      },
+      "hero": {
+        "left": 0,
+        "top": 0,
+        "width": 430,
+        "height": 300.078125
+      },
+      "dots": 4,
+      "overflow": false,
+      "routes": [
+        {
+          "id": "btnTabelaMentalDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnAprenderDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnFixarDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnDesafiarDestaque",
+          "opened": true
+        },
+        {
+          "id": "btnVelocidadeMemoria",
+          "opened": true
+        },
+        {
+          "id": "btnTreinoPersonalizadoMemoria",
+          "opened": true
+        },
+        {
+          "id": "btnMemoriaTreinoRapido",
+          "opened": true
+        },
+        {
+          "id": "btnRevisarMemoria",
+          "opened": false
+        }
+      ],
+      "preserved": true
+    }
+  ],
+  "errors": []
+}

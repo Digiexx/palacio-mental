@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "visible": true,
+      "overflow": false,
+      "cards": 1,
+      "originalModes": 8,
+      "order": true,
+      "snap": "x mandatory",
+      "animation": "none",
+      "domain": "0%",
+      "route": true,
+      "returned": true,
+      "verticalScroll": true,
+      "asset": {
+        "loaded": true,
+        "width": 2048,
+        "height": 1536
+      },
+      "card": {
+        "width": 275.390625,
+        "height": 210,
+        "textInside": true,
+        "background": "linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.79) 75%, rgba(0, 0, 0, 0.96) 100%), url(\"http://127.0.0.1:8777/assets/imagens/memoria-numerica/carrossel/tabela-mental.webp\")",
+        "border": "rgb(134, 80, 203)",
+        "transform": "none"
+      }
+    },
+    {
+      "width": 430,
+      "visible": true,
+      "overflow": false,
+      "cards": 1,
+      "originalModes": 8,
+      "order": true,
+      "snap": "x mandatory",
+      "animation": "none",
+      "domain": "0%",
+      "route": true,
+      "returned": true,
+      "verticalScroll": true,
+      "asset": {
+        "loaded": true,
+        "width": 2048,
+        "height": 1536
+      },
+      "card": {
+        "width": 334.890625,
+        "height": 210,
+        "textInside": true,
+        "background": "linear-gradient(rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.79) 75%, rgba(0, 0, 0, 0.96) 100%), url(\"http://127.0.0.1:8777/assets/imagens/memoria-numerica/carrossel/tabela-mental.webp\")",
+        "border": "rgb(134, 80, 203)",
+        "transform": "none"
+      }
+    }
+  ],
+  "errors": []
+}

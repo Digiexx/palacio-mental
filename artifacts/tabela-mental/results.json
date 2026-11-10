@@ -1,0 +1,205 @@
+{
+  "results": [
+    {
+      "mode": "before",
+      "width": 360,
+      "open": {
+        "hidden": false
+      },
+      "initial": {
+        "cards": 10,
+        "overflow": false
+      },
+      "timings": [
+        2.300000011920929,
+        1.300000011920929,
+        2
+      ],
+      "ranges": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        1
+      ]
+    },
+    {
+      "mode": "before",
+      "width": 430,
+      "open": {
+        "hidden": false
+      },
+      "initial": {
+        "cards": 10,
+        "overflow": false
+      },
+      "timings": [
+        1.4000000357627869,
+        0.800000011920929,
+        0.800000011920929
+      ],
+      "ranges": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        1
+      ]
+    },
+    {
+      "mode": "after",
+      "width": 360,
+      "open": {
+        "hidden": false
+      },
+      "initial": {
+        "cards": 10,
+        "overflow": false,
+        "title": "Todos os seus códigos em um só lugar",
+        "imageLoaded": 1672
+      },
+      "timings": [
+        1.5,
+        1,
+        0.8999999761581421
+      ],
+      "ranges": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        1
+      ],
+      "keyboardFocus": "100",
+      "escape": {
+        "hidden": true,
+        "focus": "btnAbrirFaixasTabela",
+        "expanded": "false"
+      },
+      "enter": true,
+      "tab": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "mental-table-card"
+      },
+      "space": {
+        "range": "10–19",
+        "closed": true
+      },
+      "detail": {
+        "visible": true,
+        "number": "10"
+      },
+      "detailClosed": true,
+      "back": true,
+      "reopen": {
+        "range": "00–09",
+        "active": "0",
+        "cards": 10
+      },
+      "storageUnchanged": true,
+      "cardImages": 0,
+      "offlineReady": {
+        "keys": [
+          "palacio-mental-tabela-v1"
+        ],
+        "header": true,
+        "bank": true
+      },
+      "offline": {
+        "cards": 10,
+        "image": 1672
+      }
+    },
+    {
+      "mode": "after",
+      "width": 430,
+      "open": {
+        "hidden": false
+      },
+      "initial": {
+        "cards": 10,
+        "overflow": false,
+        "title": "Todos os seus códigos em um só lugar",
+        "imageLoaded": 1672
+      },
+      "timings": [
+        1.600000023841858,
+        1.199999988079071,
+        1.199999988079071
+      ],
+      "ranges": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        1
+      ],
+      "keyboardFocus": "100",
+      "escape": {
+        "hidden": true,
+        "focus": "btnAbrirFaixasTabela",
+        "expanded": "false"
+      },
+      "enter": true,
+      "tab": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "mental-table-card"
+      },
+      "space": {
+        "range": "10–19",
+        "closed": true
+      },
+      "detail": {
+        "visible": true,
+        "number": "10"
+      },
+      "detailClosed": true,
+      "back": true,
+      "reopen": {
+        "range": "00–09",
+        "active": "0",
+        "cards": 10
+      },
+      "storageUnchanged": true,
+      "cardImages": 0,
+      "offlineReady": {
+        "keys": [
+          "palacio-mental-tabela-v1"
+        ],
+        "header": true,
+        "bank": true
+      },
+      "offline": {
+        "cards": 10,
+        "image": 1672
+      }
+    }
+  ],
+  "errors": []
+}

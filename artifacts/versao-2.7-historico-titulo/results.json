@@ -1,0 +1,253 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "fixture": "empty",
+      "backVisible": true,
+      "overflow": false,
+      "title": "Histórico da Memória",
+      "monogram": null,
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 272,
+          "top": 118,
+          "right": 324,
+          "bottom": 170,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 32,
+        "top": 30,
+        "right": 328,
+        "bottom": 240,
+        "width": 296,
+        "height": 210
+      },
+      "titleRect": {
+        "left": 32,
+        "top": 190.8125,
+        "right": 328,
+        "bottom": 228,
+        "width": 296,
+        "height": 37.1875
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "fixture": "empty",
+      "backVisible": true,
+      "overflow": false,
+      "title": "Histórico da\n                            MEMÓRIA",
+      "monogram": {
+        "left": 161,
+        "top": 125.21875,
+        "right": 199,
+        "bottom": 163.21875,
+        "width": 38,
+        "height": 38
+      },
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 272,
+          "top": 118,
+          "right": 324,
+          "bottom": 170,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 32,
+        "top": 30,
+        "right": 328,
+        "bottom": 240,
+        "width": 296,
+        "height": 210
+      },
+      "titleRect": {
+        "left": 32,
+        "top": 125.21875,
+        "right": 328,
+        "bottom": 228,
+        "width": 296,
+        "height": 102.78125
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0",
+      "http": 200,
+      "asset": {
+        "loaded": true,
+        "width": 960,
+        "height": 640
+      },
+      "mapPreserved": true,
+      "monogramHTTP": 200,
+      "pass": true,
+      "individual": true,
+      "back": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "fixture": "empty",
+      "backVisible": true,
+      "overflow": false,
+      "title": "Histórico da Memória",
+      "monogram": null,
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 342,
+          "top": 144.5,
+          "right": 394,
+          "bottom": 196.5,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 32,
+        "top": 30,
+        "right": 398,
+        "bottom": 266.5,
+        "width": 366,
+        "height": 236.5
+      },
+      "titleRect": {
+        "left": 32,
+        "top": 213.609375,
+        "right": 398,
+        "bottom": 254.5,
+        "width": 366,
+        "height": 40.890625
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "fixture": "empty",
+      "backVisible": true,
+      "overflow": false,
+      "title": "Histórico da\n                            MEMÓRIA",
+      "monogram": {
+        "left": 196,
+        "top": 151.71875,
+        "right": 234,
+        "bottom": 189.71875,
+        "width": 38,
+        "height": 38
+      },
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 342,
+          "top": 144.5,
+          "right": 394,
+          "bottom": 196.5,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 32,
+        "top": 30,
+        "right": 398,
+        "bottom": 266.5,
+        "width": 366,
+        "height": 236.5
+      },
+      "titleRect": {
+        "left": 32,
+        "top": 151.71875,
+        "right": 398,
+        "bottom": 254.5,
+        "width": 366,
+        "height": 102.78125
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0",
+      "http": 200,
+      "asset": {
+        "loaded": true,
+        "width": 960,
+        "height": 640
+      },
+      "mapPreserved": true,
+      "monogramHTTP": 200,
+      "pass": true,
+      "individual": true,
+      "back": true
+    }
+  ],
+  "errors": []
+}

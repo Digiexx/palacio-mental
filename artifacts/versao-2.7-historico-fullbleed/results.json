@@ -1,0 +1,335 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "before",
+      "fixture": "empty",
+      "mapRect": {
+        "left": 32,
+        "top": 252,
+        "right": 328,
+        "bottom": 548,
+        "width": 296,
+        "height": 296
+      },
+      "panelRect": {
+        "left": 32,
+        "top": 572,
+        "right": 328,
+        "bottom": 832,
+        "width": 296,
+        "height": 260
+      },
+      "backVisible": true,
+      "overflow": false,
+      "title": "Histórico da\n                            MEMÓRIA",
+      "monogram": {
+        "left": 161,
+        "top": 125.21875,
+        "right": 199,
+        "bottom": 163.21875,
+        "width": 38,
+        "height": 38
+      },
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 272,
+          "top": 118,
+          "right": 324,
+          "bottom": 170,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 32,
+        "top": 30,
+        "right": 328,
+        "bottom": 240,
+        "width": 296,
+        "height": 210
+      },
+      "titleRect": {
+        "left": 32,
+        "top": 125.21875,
+        "right": 328,
+        "bottom": 228,
+        "width": 296,
+        "height": 102.78125
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0"
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "mode": "after",
+      "fixture": "empty",
+      "mapRect": {
+        "left": 32,
+        "top": 252,
+        "right": 328,
+        "bottom": 548,
+        "width": 296,
+        "height": 296
+      },
+      "panelRect": {
+        "left": 32,
+        "top": 572,
+        "right": 328,
+        "bottom": 832,
+        "width": 296,
+        "height": 260
+      },
+      "backVisible": false,
+      "overflow": false,
+      "title": "Histórico da\n                            MEMÓRIA",
+      "monogram": {
+        "left": 161,
+        "top": 125.21875,
+        "right": 199,
+        "bottom": 163.21875,
+        "width": 38,
+        "height": 38
+      },
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 272,
+          "top": 118,
+          "right": 324,
+          "bottom": 170,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 0,
+        "top": 30,
+        "right": 360,
+        "bottom": 240,
+        "width": 360,
+        "height": 210
+      },
+      "titleRect": {
+        "left": 0,
+        "top": 125.21875,
+        "right": 360,
+        "bottom": 228,
+        "width": 360,
+        "height": 102.78125
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0",
+      "http": 200,
+      "asset": {
+        "loaded": true,
+        "width": 1252,
+        "height": 835
+      },
+      "layoutPreserved": true,
+      "fullBleed": true,
+      "mapPreserved": true,
+      "monogramHTTP": 200,
+      "pass": true,
+      "individual": true,
+      "back": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "before",
+      "fixture": "empty",
+      "mapRect": {
+        "left": 35,
+        "top": 278.5,
+        "right": 395,
+        "bottom": 638.5,
+        "width": 360,
+        "height": 360
+      },
+      "panelRect": {
+        "left": 32,
+        "top": 662.5,
+        "right": 398,
+        "bottom": 922.5,
+        "width": 366,
+        "height": 260
+      },
+      "backVisible": true,
+      "overflow": false,
+      "title": "Histórico da\n                            MEMÓRIA",
+      "monogram": {
+        "left": 196,
+        "top": 151.71875,
+        "right": 234,
+        "bottom": 189.71875,
+        "width": 38,
+        "height": 38
+      },
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 342,
+          "top": 144.5,
+          "right": 394,
+          "bottom": 196.5,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 32,
+        "top": 30,
+        "right": 398,
+        "bottom": 266.5,
+        "width": 366,
+        "height": 236.5
+      },
+      "titleRect": {
+        "left": 32,
+        "top": 151.71875,
+        "right": 398,
+        "bottom": 254.5,
+        "width": 366,
+        "height": 102.78125
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "mode": "after",
+      "fixture": "empty",
+      "mapRect": {
+        "left": 35,
+        "top": 278.5,
+        "right": 395,
+        "bottom": 638.5,
+        "width": 360,
+        "height": 360
+      },
+      "panelRect": {
+        "left": 32,
+        "top": 662.5,
+        "right": 398,
+        "bottom": 922.5,
+        "width": 366,
+        "height": 260
+      },
+      "backVisible": false,
+      "overflow": false,
+      "title": "Histórico da\n                            MEMÓRIA",
+      "monogram": {
+        "left": 196,
+        "top": 151.71875,
+        "right": 234,
+        "bottom": 189.71875,
+        "width": 38,
+        "height": 38
+      },
+      "weight": "400",
+      "oldLabels": [],
+      "meter": {
+        "text": "0%",
+        "aria": "0",
+        "rect": {
+          "left": 342,
+          "top": 144.5,
+          "right": 394,
+          "bottom": 196.5,
+          "width": 52,
+          "height": 52
+        }
+      },
+      "header": {
+        "left": 0,
+        "top": 30,
+        "right": 430,
+        "bottom": 266.5,
+        "width": 430,
+        "height": 236.5
+      },
+      "titleRect": {
+        "left": 0,
+        "top": 151.71875,
+        "right": 430,
+        "bottom": 254.5,
+        "width": 430,
+        "height": 102.78125
+      },
+      "numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "center": "00Relógio0% de domínio",
+      "stats": "Domínio0%Tentativas0Acertos0Erros0",
+      "http": 200,
+      "asset": {
+        "loaded": true,
+        "width": 1252,
+        "height": 835
+      },
+      "layoutPreserved": true,
+      "fullBleed": true,
+      "mapPreserved": true,
+      "monogramHTTP": 200,
+      "pass": true,
+      "individual": true,
+      "back": true
+    }
+  ],
+  "errors": []
+}

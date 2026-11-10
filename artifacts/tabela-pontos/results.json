@@ -1,0 +1,1225 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "geometryUnchanged": true,
+      "single": {
+        "status": "Imagem 1 de 1",
+        "visible": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "images": [
+          {
+            "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+            "loaded": true
+          }
+        ],
+        "dots": [
+          true
+        ],
+        "dotsHidden": true,
+        "number": "00"
+      },
+      "teia": {
+        "initial": {
+          "status": "Imagem 1 de 6",
+          "visible": 1,
+          "arrows": [
+            true,
+            true
+          ],
+          "images": [
+            {
+              "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+              "loaded": true
+            }
+          ],
+          "dots": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "dotsHidden": false,
+          "number": "01"
+        },
+        "steps": [
+          {
+            "status": "Imagem 2 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 3 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 4 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 5 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 6 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 1 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          }
+        ],
+        "previous": "Imagem 6 de 6",
+        "Home": "Imagem 1 de 6",
+        "End": "Imagem 6 de 6",
+        "ArrowLeft": "Imagem 5 de 6",
+        "ArrowRight": "Imagem 6 de 6",
+        "reopen": "Imagem 1 de 6"
+      },
+      "noe": {
+        "initial": {
+          "status": "Imagem 1 de 4",
+          "visible": 1,
+          "arrows": [
+            true,
+            true
+          ],
+          "images": [
+            {
+              "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+              "loaded": true
+            }
+          ],
+          "dots": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "dotsHidden": false,
+          "number": "02"
+        },
+        "steps": [
+          {
+            "status": "Imagem 2 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          },
+          {
+            "status": "Imagem 3 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          },
+          {
+            "status": "Imagem 4 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          },
+          {
+            "status": "Imagem 1 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          }
+        ],
+        "previous": "Imagem 4 de 4",
+        "Home": "Imagem 1 de 4",
+        "End": "Imagem 4 de 4",
+        "ArrowLeft": "Imagem 3 de 4",
+        "ArrowRight": "Imagem 4 de 4",
+        "reopen": "Imagem 1 de 4"
+      },
+      "rangeSwitch": {
+        "status": "Imagem 1 de 1",
+        "visible": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "images": [
+          {
+            "src": "assets/imagens/memoria-numerica/numeros/10-touro.webp",
+            "loaded": false
+          }
+        ],
+        "dots": [
+          true
+        ],
+        "dotsHidden": true,
+        "number": "10"
+      },
+      "storageUnchanged": true,
+      "overflow": false,
+      "aprender": [
+        {
+          "number": "01",
+          "status": "Imagem 1 de 6",
+          "images": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "next": "Imagem 2 de 6"
+        },
+        {
+          "number": "02",
+          "status": "Imagem 1 de 4",
+          "images": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "next": "Imagem 2 de 4"
+        },
+        {
+          "number": "03",
+          "status": "Imagem 1 de 1",
+          "images": [
+            true
+          ],
+          "next": "Imagem 1 de 1"
+        }
+      ],
+      "offlineNoe": {
+        "status": "Imagem 1 de 4",
+        "visible": 1,
+        "arrows": [
+          true,
+          true
+        ],
+        "images": [
+          {
+            "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+            "loaded": true
+          }
+        ],
+        "dots": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "dotsHidden": false,
+        "number": "02"
+      }
+    },
+    {
+      "width": 430,
+      "geometryUnchanged": true,
+      "single": {
+        "status": "Imagem 1 de 1",
+        "visible": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "images": [
+          {
+            "src": "assets/imagens/memoria-numerica/numeros/00-relogio.webp",
+            "loaded": true
+          }
+        ],
+        "dots": [
+          true
+        ],
+        "dotsHidden": true,
+        "number": "00"
+      },
+      "teia": {
+        "initial": {
+          "status": "Imagem 1 de 6",
+          "visible": 1,
+          "arrows": [
+            true,
+            true
+          ],
+          "images": [
+            {
+              "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+              "loaded": true
+            }
+          ],
+          "dots": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "dotsHidden": false,
+          "number": "01"
+        },
+        "steps": [
+          {
+            "status": "Imagem 2 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 3 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              true,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 4 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 5 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 6 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          },
+          {
+            "status": "Imagem 1 de 6",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/01-teia.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-03.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-04.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/01/01-teia-variacao-05.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "01"
+          }
+        ],
+        "previous": "Imagem 6 de 6",
+        "Home": "Imagem 1 de 6",
+        "End": "Imagem 6 de 6",
+        "ArrowLeft": "Imagem 5 de 6",
+        "ArrowRight": "Imagem 6 de 6",
+        "reopen": "Imagem 1 de 6"
+      },
+      "noe": {
+        "initial": {
+          "status": "Imagem 1 de 4",
+          "visible": 1,
+          "arrows": [
+            true,
+            true
+          ],
+          "images": [
+            {
+              "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+              "loaded": true
+            },
+            {
+              "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+              "loaded": true
+            }
+          ],
+          "dots": [
+            true,
+            false,
+            false,
+            false
+          ],
+          "dotsHidden": false,
+          "number": "02"
+        },
+        "steps": [
+          {
+            "status": "Imagem 2 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          },
+          {
+            "status": "Imagem 3 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              true,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          },
+          {
+            "status": "Imagem 4 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          },
+          {
+            "status": "Imagem 1 de 4",
+            "visible": 1,
+            "arrows": [
+              true,
+              true
+            ],
+            "images": [
+              {
+                "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+                "loaded": true
+              },
+              {
+                "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+                "loaded": true
+              }
+            ],
+            "dots": [
+              true,
+              false,
+              false,
+              false
+            ],
+            "dotsHidden": false,
+            "number": "02"
+          }
+        ],
+        "previous": "Imagem 4 de 4",
+        "Home": "Imagem 1 de 4",
+        "End": "Imagem 4 de 4",
+        "ArrowLeft": "Imagem 3 de 4",
+        "ArrowRight": "Imagem 4 de 4",
+        "reopen": "Imagem 1 de 4"
+      },
+      "rangeSwitch": {
+        "status": "Imagem 1 de 1",
+        "visible": 1,
+        "arrows": [
+          false,
+          false
+        ],
+        "images": [
+          {
+            "src": "assets/imagens/memoria-numerica/numeros/10-touro.webp",
+            "loaded": false
+          }
+        ],
+        "dots": [
+          true
+        ],
+        "dotsHidden": true,
+        "number": "10"
+      },
+      "storageUnchanged": true,
+      "overflow": false,
+      "aprender": [
+        {
+          "number": "01",
+          "status": "Imagem 1 de 6",
+          "images": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "next": "Imagem 2 de 6"
+        },
+        {
+          "number": "02",
+          "status": "Imagem 1 de 4",
+          "images": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "next": "Imagem 2 de 4"
+        },
+        {
+          "number": "03",
+          "status": "Imagem 1 de 1",
+          "images": [
+            true
+          ],
+          "next": "Imagem 1 de 1"
+        }
+      ],
+      "offlineNoe": {
+        "status": "Imagem 1 de 4",
+        "visible": 1,
+        "arrows": [
+          true,
+          true
+        ],
+        "images": [
+          {
+            "src": "assets/imagens/memoria-numerica/numeros/02-noe.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-01.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-02.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/memoria-numerica/variacoes/02/02-noe-variacao-03.webp",
+            "loaded": true
+          }
+        ],
+        "dots": [
+          true,
+          false,
+          false,
+          false
+        ],
+        "dotsHidden": false,
+        "number": "02"
+      }
+    }
+  ],
+  "errors": []
+}

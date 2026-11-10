@@ -1,0 +1,527 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "mode": "before",
+      "pass": true,
+      "exact": false,
+      "initial": {
+        "title": {
+          "top": 214.8125,
+          "bottom": 247.8125,
+          "width": 316,
+          "height": 33
+        },
+        "bar": {
+          "top": 261.8125,
+          "bottom": 311.8125,
+          "width": 300,
+          "height": 50
+        },
+        "card": {
+          "top": 319.8125,
+          "bottom": 509.515625,
+          "width": 300,
+          "height": 189.703125
+        },
+        "button": {
+          "top": 521.515625,
+          "bottom": 573.515625,
+          "width": 300,
+          "height": 52
+        },
+        "buttonText": "Revelar memória",
+        "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "border": "1px",
+        "instruction": "none",
+        "art": "assets/imagens/memoria-numerica/fixar-topo.webp",
+        "artRect": {
+          "top": 0,
+          "bottom": 240,
+          "width": 360,
+          "height": 240
+        },
+        "fade": "linear-gradient(rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0.6) 85%, rgb(0, 0, 0) 100%)",
+        "overflow": false,
+        "docHeight": 820,
+        "number": "00"
+      },
+      "panel": {
+        "visible": true,
+        "noOverlap": true,
+        "position": "relative",
+        "overflow": false
+      },
+      "closed": true,
+      "reveal": {
+        "answer": true,
+        "evaluation": true
+      },
+      "remembered": {
+        "number": "01",
+        "question": true
+      },
+      "variants": {
+        "number": "01",
+        "loaded": true,
+        "count": 6,
+        "buttons": true,
+        "next": "Imagem 2 de 6",
+        "previous": "Imagem 1 de 6"
+      },
+      "forgotten": {
+        "number": "01",
+        "question": true,
+        "storage": 834
+      },
+      "revealedStyle": {
+        "image": {
+          "width": 258,
+          "height": 258
+        },
+        "imgFit": "cover",
+        "arrow": {
+          "width": 36,
+          "height": 44
+        },
+        "arrowStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(238, 238, 238)",
+          "font": "26px / 26px sans-serif",
+          "radius": "10px"
+        },
+        "codeStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "800 13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "11px"
+        },
+        "rememberStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "forgotStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(255, 156, 171)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "revealStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(255, 255, 255)",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "dotsHidden": false,
+        "centered": true,
+        "overflow": false
+      },
+      "noVariants": {
+        "number": "00",
+        "count": 1,
+        "arrowsHidden": true,
+        "dotsHidden": true
+      }
+    },
+    {
+      "width": 360,
+      "mode": "after",
+      "pass": true,
+      "preserved": true,
+      "exact": true,
+      "initial": {
+        "title": {
+          "top": 214.8125,
+          "bottom": 247.8125,
+          "width": 316,
+          "height": 33
+        },
+        "bar": {
+          "top": 261.8125,
+          "bottom": 311.8125,
+          "width": 300,
+          "height": 50
+        },
+        "card": {
+          "top": 319.8125,
+          "bottom": 509.515625,
+          "width": 300,
+          "height": 189.703125
+        },
+        "button": {
+          "top": 521.515625,
+          "bottom": 573.515625,
+          "width": 300,
+          "height": 52
+        },
+        "buttonText": "Revelar memória",
+        "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "border": "1px",
+        "instruction": "none",
+        "art": "assets/imagens/memoria-numerica/fixar-topo.webp",
+        "artRect": {
+          "top": 0,
+          "bottom": 240,
+          "width": 360,
+          "height": 240
+        },
+        "fade": "linear-gradient(rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0.6) 85%, rgb(0, 0, 0) 100%)",
+        "overflow": false,
+        "docHeight": 820,
+        "number": "00"
+      },
+      "panel": {
+        "visible": true,
+        "noOverlap": true,
+        "position": "relative",
+        "overflow": false
+      },
+      "closed": true,
+      "reveal": {
+        "answer": true,
+        "evaluation": true
+      },
+      "remembered": {
+        "number": "01",
+        "question": true
+      },
+      "variants": {
+        "number": "01",
+        "loaded": true,
+        "count": 6,
+        "buttons": true,
+        "next": "Imagem 2 de 6",
+        "previous": "Imagem 1 de 6"
+      },
+      "forgotten": {
+        "number": "01",
+        "question": true,
+        "storage": 836
+      },
+      "revealedStyle": {
+        "image": {
+          "width": 258,
+          "height": 258
+        },
+        "imgFit": "cover",
+        "arrow": {
+          "width": 36,
+          "height": 44
+        },
+        "arrowStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(238, 238, 238)",
+          "font": "26px / 26px sans-serif",
+          "radius": "10px"
+        },
+        "codeStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "800 13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "11px"
+        },
+        "rememberStyle": {
+          "background": "linear-gradient(155deg, rgb(33, 21, 47), rgb(23, 15, 35)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "forgotStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(255, 156, 171)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "revealStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(255, 255, 255)",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "dotsHidden": false,
+        "centered": true,
+        "overflow": false
+      },
+      "noVariants": {
+        "number": "00",
+        "count": 1,
+        "arrowsHidden": true,
+        "dotsHidden": true
+      }
+    },
+    {
+      "width": 430,
+      "mode": "before",
+      "pass": true,
+      "exact": false,
+      "initial": {
+        "title": {
+          "top": 256.5625,
+          "bottom": 294.40625,
+          "width": 386,
+          "height": 37.84375
+        },
+        "bar": {
+          "top": 308.40625,
+          "bottom": 358.40625,
+          "width": 370,
+          "height": 50
+        },
+        "card": {
+          "top": 366.40625,
+          "bottom": 573.765625,
+          "width": 370,
+          "height": 207.359375
+        },
+        "button": {
+          "top": 585.765625,
+          "bottom": 637.765625,
+          "width": 370,
+          "height": 52
+        },
+        "buttonText": "Revelar memória",
+        "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "border": "1px",
+        "instruction": "none",
+        "art": "assets/imagens/memoria-numerica/fixar-topo.webp",
+        "artRect": {
+          "top": 0,
+          "bottom": 286.65625,
+          "width": 430,
+          "height": 286.65625
+        },
+        "fade": "linear-gradient(rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0.6) 85%, rgb(0, 0, 0) 100%)",
+        "overflow": false,
+        "docHeight": 820,
+        "number": "00"
+      },
+      "panel": {
+        "visible": true,
+        "noOverlap": true,
+        "position": "relative",
+        "overflow": false
+      },
+      "closed": true,
+      "reveal": {
+        "answer": true,
+        "evaluation": true
+      },
+      "remembered": {
+        "number": "01",
+        "question": true
+      },
+      "variants": {
+        "number": "01",
+        "loaded": true,
+        "count": 6,
+        "buttons": true,
+        "next": "Imagem 2 de 6",
+        "previous": "Imagem 1 de 6"
+      },
+      "forgotten": {
+        "number": "01",
+        "question": true,
+        "storage": 836
+      },
+      "revealedStyle": {
+        "image": {
+          "width": 290,
+          "height": 290
+        },
+        "imgFit": "cover",
+        "arrow": {
+          "width": 36,
+          "height": 44
+        },
+        "arrowStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(238, 238, 238)",
+          "font": "26px / 26px sans-serif",
+          "radius": "10px"
+        },
+        "codeStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "800 13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "11px"
+        },
+        "rememberStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "forgotStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(255, 156, 171)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "revealStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(255, 255, 255)",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "dotsHidden": false,
+        "centered": true,
+        "overflow": false
+      },
+      "noVariants": {
+        "number": "00",
+        "count": 1,
+        "arrowsHidden": true,
+        "dotsHidden": true
+      }
+    },
+    {
+      "width": 430,
+      "mode": "after",
+      "pass": true,
+      "preserved": true,
+      "exact": true,
+      "initial": {
+        "title": {
+          "top": 256.5625,
+          "bottom": 294.40625,
+          "width": 386,
+          "height": 37.84375
+        },
+        "bar": {
+          "top": 308.40625,
+          "bottom": 358.40625,
+          "width": 370,
+          "height": 50
+        },
+        "card": {
+          "top": 366.40625,
+          "bottom": 573.765625,
+          "width": 370,
+          "height": 207.359375
+        },
+        "button": {
+          "top": 585.765625,
+          "bottom": 637.765625,
+          "width": 370,
+          "height": 52
+        },
+        "buttonText": "Revelar memória",
+        "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+        "border": "1px",
+        "instruction": "none",
+        "art": "assets/imagens/memoria-numerica/fixar-topo.webp",
+        "artRect": {
+          "top": 0,
+          "bottom": 286.65625,
+          "width": 430,
+          "height": 286.65625
+        },
+        "fade": "linear-gradient(rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.15) 70%, rgba(0, 0, 0, 0.6) 85%, rgb(0, 0, 0) 100%)",
+        "overflow": false,
+        "docHeight": 820,
+        "number": "00"
+      },
+      "panel": {
+        "visible": true,
+        "noOverlap": true,
+        "position": "relative",
+        "overflow": false
+      },
+      "closed": true,
+      "reveal": {
+        "answer": true,
+        "evaluation": true
+      },
+      "remembered": {
+        "number": "01",
+        "question": true
+      },
+      "variants": {
+        "number": "01",
+        "loaded": true,
+        "count": 6,
+        "buttons": true,
+        "next": "Imagem 2 de 6",
+        "previous": "Imagem 1 de 6"
+      },
+      "forgotten": {
+        "number": "01",
+        "question": true,
+        "storage": 836
+      },
+      "revealedStyle": {
+        "image": {
+          "width": 290,
+          "height": 290
+        },
+        "imgFit": "cover",
+        "arrow": {
+          "width": 36,
+          "height": 44
+        },
+        "arrowStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(238, 238, 238)",
+          "font": "26px / 26px sans-serif",
+          "radius": "10px"
+        },
+        "codeStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "800 13px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "11px"
+        },
+        "rememberStyle": {
+          "background": "linear-gradient(155deg, rgb(33, 21, 47), rgb(23, 15, 35)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(196, 167, 255)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "forgotStyle": {
+          "background": "none",
+          "border": "1px",
+          "color": "rgb(255, 156, 171)",
+          "font": "12px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "revealStyle": {
+          "background": "linear-gradient(155deg, rgb(23, 23, 29), rgb(16, 16, 21) 65%, rgb(18, 16, 23)), linear-gradient(115deg, rgb(57, 35, 78), rgb(134, 80, 203) 28%, rgb(224, 174, 255) 48%, rgb(104, 52, 160) 72%, rgb(51, 32, 63))",
+          "border": "1px",
+          "color": "rgb(255, 255, 255)",
+          "font": "750 16px Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "radius": "15px"
+        },
+        "dotsHidden": false,
+        "centered": true,
+        "overflow": false
+      },
+      "noVariants": {
+        "number": "00",
+        "count": 1,
+        "arrowsHidden": true,
+        "dotsHidden": true
+      }
+    }
+  ],
+  "errors": []
+}
