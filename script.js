@@ -5892,6 +5892,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    const modosOrigemPersonalizado = {
+        aprender: "btnPersonalizadoAprender",
+        fixar: "btnPersonalizadoFixar",
+        desafiar: "btnPersonalizadoDesafiar",
+        velocidade: "btnPersonalizadoVelocidade"
+    };
+    const paisOriginaisPersonalizado = Object.fromEntries(
+        Object.keys(modosOrigemPersonalizado).map(nome => [nome, telasApp[nome].pai])
+    );
+
     function navegarParaTela(
         nomeTela,
         registrarHistorico = true
@@ -5921,6 +5931,32 @@ document.addEventListener("DOMContentLoaded", () => {
         // =================================================
         // EXIBE A TELA
         // =================================================
+
+        if (modosOrigemPersonalizado[nomeTela] && telasApp[nomeTela].elemento.hidden) {
+            const peloPersonalizado = !telaTreinoPersonalizado.hidden;
+            telasApp[nomeTela].pai = peloPersonalizado ? "personalizado" : paisOriginaisPersonalizado[nomeTela];
+            if (peloPersonalizado) {
+                Object.entries(modosOrigemPersonalizado).forEach(([modo, id]) => {
+                    document.getElementById(id).classList.toggle("is-active", modo === nomeTela);
+                });
+            }
+        }
+        if (nomeTela === "personalizado") {
+            if (!telaAprenderMemoria.hidden) modoAprenderPersonalizado = false;
+            if (!telaFixarMemoria.hidden) modoFixarPersonalizado = false;
+            if (!telaDesafiarMemoria.hidden) modoDesafiarPersonalizado = false;
+            if (!telaVelocidadeMemoria.hidden) {
+                modoVelocidadePersonalizado = false;
+                if (velocidadeFaixaConfig) velocidadeFaixaConfig.hidden = false;
+                clearInterval(velocidadeIntervaloAtual);
+                clearTimeout(velocidadeTimeoutAvancoAtual);
+                velocidadeIntervaloAtual = null;
+                velocidadeTimeoutAvancoAtual = null;
+                limparCelebracaoVelocidade();
+            }
+            gerarNumerosTreinoPersonalizado();
+            atualizarContadorPersonalizado();
+        }
 
         exibirTelaApp(
             nomeTela
@@ -12634,6 +12670,11 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
+                if (telasApp.velocidade.pai === "personalizado") {
+                    abrirTreinoPersonalizado();
+                    return;
+                }
+
                 // =============================================
                 // SE ESTIVER NA TELA DE RESULTADO
                 // VOLTA PARA A CONFIGURAÇÃO DA VELOCIDADE
@@ -12944,6 +12985,10 @@ document.addEventListener("DOMContentLoaded", () => {
         btnCentralVelocidade.addEventListener(
             "click",
             () => {
+                if (telasApp.velocidade.pai === "personalizado") {
+                    abrirTreinoPersonalizado();
+                    return;
+                }
                 modoVelocidadePersonalizado = false;
                 memoriasVelocidadePersonalizado = [];
                 if (velocidadeFaixaConfig) velocidadeFaixaConfig.hidden = false;
@@ -13260,9 +13305,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 memoriasAprenderPersonalizado =
                     [];
-
-
-                memoriasSelecionadasPersonalizado.clear();
 
 
                 learningPersonalizadoResult.hidden =
@@ -14462,11 +14504,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 // =========================================
-                // LIMPA AS MEMÓRIAS SELECIONADAS
+                // PRESERVA AS MEMÓRIAS SELECIONADAS NO RETORNO
                 // =========================================
-
-                memoriasSelecionadasPersonalizado.clear();
-
 
                 // =========================================
                 // FECHA O RESULTADO DO FIXAR
@@ -14681,9 +14720,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     indiceDesafiarPersonalizado =
                         0;
-
-
-                    memoriasSelecionadasPersonalizado.clear();
 
 
                     atualizarContadorPersonalizado();
