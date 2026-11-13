@@ -4896,6 +4896,8 @@
 
                     <header class="velocidade-header">
 
+                        <div class="velocidade-header-art" aria-hidden="true"><img src="assets/imagens/memoria-numerica/velocidade-topo.webp" alt=""></div>
+
                         <button class="back-button" id="btnVoltarVelocidade" type="button"
                             aria-label="Voltar para a Central da Memória Numérica">
 
@@ -4906,11 +4908,7 @@
                         </button>
 
 
-                        <div>
-
-                            <span class="section-label">
-                                MEMÓRIA NUMÉRICA
-                            </span>
+                        <div class="velocidade-header-copy">
 
                             <h2>
                                 Velocidade
@@ -4929,22 +4927,6 @@
                          CONTEÚDO INICIAL
                     ================================================== -->
 
-                    <div class="velocidade-intro">
-
-                        <span class="module-kicker">
-                            TREINO DE VELOCIDADE
-                        </span>
-
-                        <h3>
-                            Pense rápido.
-                        </h3>
-
-                        <p>
-                            Escolha uma faixa, defina o tempo
-                            e teste a velocidade da sua memória.
-                        </p>
-
-                    </div>
 
 
                     <!-- =================================================
@@ -5105,7 +5087,7 @@
                              INICIAR
                         ================================================== -->
 
-                        <button class="primary-button velocidade-start-button" id="btnIniciarVelocidade" type="button">
+                        <button class="primary-button velocidade-start-button memory-glass-action" id="btnIniciarVelocidade" type="button">
 
                             <span>
                                 Iniciar treino
@@ -5126,6 +5108,11 @@
                     ================================================== -->
 
                     <div class="velocidade-training-area" id="velocidadeTrainingArea" hidden>
+
+                        <header class="velocidade-training-hero">
+                            <div class="velocidade-training-art" aria-hidden="true"><img src="assets/imagens/memoria-numerica/treino-velocidade-topo.webp" alt=""></div>
+                            <div class="velocidade-training-copy"><h2>Velocidade</h2></div>
+                        </header>
 
 
                         <!-- =================================================
@@ -5233,7 +5220,7 @@
                              REVELAR RESPOSTA
                         ================================================== -->
 
-                        <button class="primary-button velocidade-reveal-button" id="btnRevelarVelocidade" type="button">
+                        <button class="primary-button velocidade-reveal-button memory-glass-action" id="btnRevelarVelocidade" type="button">
 
                             <span>
                                 Mostrar resposta
@@ -5257,6 +5244,8 @@
 
                                 <button class="secondary-button" id="btnNaoLembreiVelocidade" type="button">
 
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+
                                     <span>
                                         Não lembrei
                                     </span>
@@ -5265,6 +5254,8 @@
 
 
                                 <button class="primary-button" id="btnLembreiVelocidade" type="button">
+
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
 
                                     <span>
                                         Lembrei
@@ -5286,39 +5277,16 @@
 
                     <div class="velocidade-result" id="velocidadeResult" hidden>
 
+                        <div class="velocidade-result-art" aria-hidden="true"><img src="assets/imagens/memoria-numerica/velocidade-resultado-topo.webp" alt=""></div>
+                        <div class="velocidade-result-title"><h2>Resultado</h2></div>
+
 
                         <!-- =================================================
                              CONCLUSÃO
                         ================================================== -->
 
                         <div class="velocidade-result-header">
-
-                            <div class="velocidade-result-icon">
-
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                                    <path d="M20 6 9 17l-5-5" />
-
-                                </svg>
-
-                            </div>
-
-
-                            <span class="module-kicker">
-                                TREINO CONCLUÍDO
-                            </span>
-
-
-                            <h3>
-                                Excelente treino!
-                            </h3>
-
-
-                            <p>
-                                Veja como sua memória respondeu
-                                nesta sessão.
-                            </p>
-
+                            <strong id="velocidadeResultPercent" aria-label="Aproveitamento"></strong>
                         </div>
 
 
@@ -5326,17 +5294,7 @@
                              APROVEITAMENTO
                         ================================================== -->
 
-                        <div class="velocidade-result-score">
-
-                            <span>
-                                APROVEITAMENTO
-                            </span>
-
-                            <strong id="velocidadeResultPercent">
-                                70%
-                            </strong>
-
-                        </div>
+                        <div class="velocidade-result-performance">
 
 
                         <!-- =================================================
@@ -5348,7 +5306,7 @@
                             <div class="velocidade-result-stat">
 
                                 <span>
-                                    ACERTOS
+                                    <span aria-hidden="true">✓</span> ACERTOS
                                 </span>
 
                                 <strong id="velocidadeResultAcertos">
@@ -5361,7 +5319,7 @@
                             <div class="velocidade-result-stat">
 
                                 <span>
-                                    ERROS
+                                    <span aria-hidden="true">×</span> ERROS
                                 </span>
 
                                 <strong id="velocidadeResultErros">
@@ -5376,13 +5334,14 @@
                         <!-- =================================================
                              PRECISA REFORÇAR
                         ================================================== -->
+                        </div>
 
                         <div class="velocidade-result-review">
 
                             <div class="velocidade-result-review-header">
 
                                 <span class="module-kicker">
-                                    PRECISA REFORÇAR
+                                    <span aria-hidden="true">↻</span> PRECISA REFORÇAR
                                 </span>
 
                                 <p>
@@ -5414,7 +5373,7 @@
                             <button class="primary-button" id="btnRepetirVelocidade" type="button">
 
                                 <span>
-                                    Treinar novamente
+                                    Refazer treino
                                 </span>
 
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -5428,7 +5387,7 @@
                             <button class="secondary-button" id="btnCentralVelocidade" type="button">
 
                                 <span>
-                                    Voltar ao Personalizado
+                                    Novo treino
                                 </span>
 
                             </button>

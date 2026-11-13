@@ -25247,7 +25247,10 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
 #telaFixarMemoria .fixar-instruction { display: none; }
 #telaFixarMemoria .fixar-card { min-height: clamp(180px, 23svh, 210px); }
 #telaFixarMemoria .memory-glass-action,
-#telaDesafiarMemoria .memory-glass-action {
+#telaDesafiarMemoria .memory-glass-action,
+#telaVelocidadeMemoria #velocidadeConfig .memory-glass-action,
+#velocidadeTrainingArea .velocidade-evaluation-actions button,
+#telaVelocidadeMemoria #velocidadeTrainingArea .memory-glass-action {
     --memory-action-border: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f);
     width:100%; min-height:52px; margin-top:12px; border-radius:15px;
     border: 1px solid transparent;
@@ -25257,6 +25260,105 @@ body:has(#telaFixarMemoria:not([hidden])) .main-content { padding-bottom: 0; }
     color: #fff;
     box-shadow: inset 0 1px 0 #ffffff0d;
 }
+
+/* Velocidade: treino isolado; medidas e gradiente efetivos de Fixar. */
+body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeResult:not([hidden])) { background:#000; }
+body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeResult:not([hidden])) .main-content { padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeResult:not([hidden])) { padding-top:0; background:#000; }
+#telaVelocidadeMemoria:has(#velocidadeResult:not([hidden])) .velocidade-container { padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeResult:not([hidden])) .velocidade-header { display:none; }
+#velocidadeResult .velocidade-result-art { position:relative; width:100vw; max-width:760px; margin-inline:calc(50% - min(50vw,380px)); }
+#velocidadeResult .velocidade-result-art img { display:block; width:100%; height:auto; object-fit:contain; }
+#velocidadeResult .velocidade-result-art::after { content:""; position:absolute; inset:0; background:linear-gradient(to bottom,transparent 55%,#00000026 70%,#00000099 85%,#000 100%); pointer-events:none; }
+#velocidadeResult .velocidade-result-title { position:relative; margin:clamp(-36px,-7vw,-24px) auto 12px; padding:0 22px 8px; text-align:center; }
+#velocidadeResult .velocidade-result-title h2 { margin:0; color:#fff; font-size:clamp(30px,8vw,38px); line-height:1.1; }
+#velocidadeResult .velocidade-result-title::after { content:""; position:absolute; bottom:0; left:calc(50% - 22px); width:44px; height:3px; border-radius:3px; background:#b899ed; }
+#velocidadeResult :is(.velocidade-result-header,.velocidade-result-review) { padding:16px; border:1px solid #3d3549; border-radius:16px; background:linear-gradient(155deg,#17171d,#101015); box-shadow:inset 0 1px 0 #ffffff0d; margin-bottom:12px; }
+#velocidadeResult .velocidade-result-header { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0; }
+#velocidadeResult .velocidade-result-header :is(.module-kicker,p) { display:none; }
+#velocidadeResult .velocidade-result-header h3 { margin:0; color:#fff; font-size:20px; }
+#velocidadeResult .velocidade-result-icon { margin:0; width:28px; height:28px; background:none; border:0; box-shadow:none; }
+#velocidadeResult .velocidade-result-icon svg { stroke:#b899ed; }
+#velocidadeResult .velocidade-result-performance { margin-bottom:12px; }
+#velocidadeResult #velocidadeResultPercent { font-size:36px; line-height:1.1; color:#fff; background:linear-gradient(90deg,#8F65F1 0%,#BC72F3 50%,#EC69D7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:none; }
+#velocidadeResult .velocidade-result-stats { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:0; }
+#velocidadeResult .velocidade-result-stat { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:14px; border:1px solid #3d3549; border-radius:16px; background:linear-gradient(155deg,#17171d,#101015); box-shadow:none; }
+#velocidadeResult .velocidade-result-stat span { color:#b899ed; font-size:10px; }
+#velocidadeResult .velocidade-result-stat strong { color:#fff; font-size:32px; }
+#velocidadeResult .velocidade-result-review .module-kicker { color:#b899ed; }
+#velocidadeResult .velocidade-result-review-header p { display:block; margin:6px 0 12px; font-size:11px; line-height:1.4; color:#bfa8d4; }
+#velocidadeResult .velocidade-result-errors { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+#velocidadeResult .velocidade-result-error { display:flex; align-items:center; gap:8px; min-width:0; padding:8px; border:1px solid #3d3549; border-radius:10px; background:#101015; box-shadow:none; }
+#velocidadeResult .velocidade-result-error-number { flex:0 0 auto; color:#b899ed; background:#211a2c; border:1px solid #51386e; border-radius:8px; padding:5px; }
+#velocidadeResult .velocidade-result-error-word { min-width:0; color:#fff; font-size:12px; overflow-wrap:anywhere; }
+#velocidadeResult .velocidade-result-actions button { width:100%; min-height:52px; border-radius:15px; border:1px solid #51386e; background:linear-gradient(155deg,#17171d,#101015 65%,#121017); color:#fff; box-shadow:inset 0 1px 0 #ffffff0d; }
+#velocidadeResult :is(#btnRepetirVelocidade,#btnCentralVelocidade,.velocidade-result-header) {
+    --result-border-gradient: linear-gradient(115deg, #39234e, #8650cb 28%, #e0aeff 48%, #6834a0 72%, #33203f);
+    border:1px solid transparent;
+    background:linear-gradient(155deg,#17171d,#101015 65%,#121017) padding-box, var(--result-border-gradient) border-box;
+}
+#velocidadeResult #btnRepetirVelocidade {
+    background:linear-gradient(145deg,#30203f,#1b1424) padding-box, var(--result-border-gradient) border-box;
+}
+#velocidadeResult .velocidade-result-header { position:relative; }
+#velocidadeResult .velocidade-confetes { position:absolute; inset:0; pointer-events:none; }
+#velocidadeResult .velocidade-confetes i { position:absolute; width:4px; height:6px; border-radius:1px; pointer-events:none; }
+@media(prefers-reduced-motion:reduce) { #velocidadeResult .velocidade-confetes { display:none; } }
+@media(max-height:740px) { #velocidadeResult .velocidade-result-art img { max-height:clamp(150px,24svh,168px); } }
+#velocidadeTrainingArea .velocidade-evaluation { padding:0; border:0; border-radius:0; background:none; box-shadow:none; }
+#velocidadeTrainingArea .velocidade-evaluation-actions button { height:54px; min-height:54px; margin:0; gap:8px; border:1px solid #51386e; background:linear-gradient(155deg,#17171d,#101015 65%,#121017); box-shadow:inset 0 1px 0 #ffffff0d; color:#fff; }
+#velocidadeTrainingArea .velocidade-evaluation-actions button svg { width:18px; height:18px; flex:0 0 18px; fill:none; stroke:#b899ed; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+#velocidadeTrainingArea #btnNaoLembreiVelocidade { color:#cf969b; border-color:#61383e; background:linear-gradient(155deg,#211719,#120e10); }
+#velocidadeTrainingArea #btnLembreiVelocidade { color:#b899ed; border-color:#51386e; background:linear-gradient(155deg,#201a29,#120f17); }
+#velocidadeTrainingArea :is(#btnNaoLembreiVelocidade,#btnLembreiVelocidade) svg { stroke:currentColor; }
+body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeTrainingArea:not([hidden])) { background:#000; }
+body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeTrainingArea:not([hidden])) .main-content { padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeTrainingArea:not([hidden])) { background:#000; padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeTrainingArea:not([hidden])) .velocidade-container { padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeTrainingArea:not([hidden])) > .velocidade-container > .velocidade-header { display:none; }
+#velocidadeTrainingArea .velocidade-training-hero { display:block; position:relative; width:100vw; max-width:760px; margin-inline:calc(50% - min(50vw,380px)); padding:0 0 6px; background:#000; text-align:center; }
+#velocidadeTrainingArea .velocidade-training-art { position:relative; }
+#velocidadeTrainingArea .velocidade-training-art img { display:block; width:100%; height:auto; object-fit:contain; }
+#velocidadeTrainingArea .velocidade-training-art::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom,transparent 55%,#00000026 70%,#00000099 85%,#000 100%); }
+#velocidadeTrainingArea .velocidade-training-copy { position:relative; margin:clamp(-36px,-7vw,-24px) auto 0; padding:0 22px 8px; }
+#velocidadeTrainingArea .velocidade-training-copy h2 { margin:0; color:#fff; font-size:clamp(30px,8vw,38px); line-height:1.1; }
+#velocidadeTrainingArea .velocidade-training-copy::after { content:""; position:absolute; bottom:0; left:calc(50% - 22px); width:44px; height:3px; border-radius:3px; background:#b899ed; }
+#velocidadeTrainingArea .velocidade-training-top { background:linear-gradient(155deg,#17171d,#101015); border-color:#3d3549; box-shadow:inset 0 1px 0 #ffffff0d; backdrop-filter:none; -webkit-backdrop-filter:none; }
+#velocidadeTrainingArea :is(.velocidade-progress,.velocidade-training-time) { color:#fff; }
+#velocidadeTrainingArea :is(.velocidade-mode,.module-kicker,.velocidade-timer span) { color:#b899ed; }
+#velocidadeTrainingArea .velocidade-timer { background:#101015; border-color:#3d3549; }
+#velocidadeTrainingArea .velocidade-timer strong { color:#fff; text-shadow:none; }
+#velocidadeTrainingArea .velocidade-question { min-height:clamp(180px,23svh,210px); padding:clamp(16px,2.5svh,24px) 18px; border:1px solid #3d3549; background:linear-gradient(155deg,#17171d,#101015); box-shadow:inset 0 1px 0 #ffffff0d; }
+#velocidadeTrainingArea .velocidade-question::before { content:none; }
+#velocidadeTrainingArea .velocidade-question .module-kicker { margin-bottom:12px; }
+#velocidadeTrainingArea .velocidade-number { font-size:clamp(92px,28vw,128px); font-weight:700; line-height:1.05; letter-spacing:-7px; background:linear-gradient(90deg,#8F65F1 0%,#BC72F3 50%,#EC69D7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; text-shadow:none; }
+@media(max-height:740px) { #velocidadeTrainingArea .velocidade-training-art img { max-height:clamp(150px,24svh,168px); } }
+
+/* Velocidade: configuração inicial com as medidas e o acabamento de Fixar. */
+body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeConfig:not([hidden])) { background:#000; }
+body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeConfig:not([hidden])) .main-content { padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) { background:#000; padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-container { padding-top:0; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-header {
+    display:block; position:relative; width:100vw; max-width:760px;
+    margin-inline:calc(50% - min(50vw,380px)); padding:0 0 6px; background:#000; text-align:center;
+}
+#telaVelocidadeMemoria .velocidade-header-art { display:none; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-header-art { display:block; position:relative; }
+#telaVelocidadeMemoria .velocidade-header-art img { display:block; width:100%; height:auto; object-fit:contain; }
+#telaVelocidadeMemoria .velocidade-header-art::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(to bottom,transparent 55%,#00000026 70%,#00000099 85%,#000 100%); }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-header-copy { position:relative; margin:clamp(-36px,-7vw,-24px) auto 0; padding:0 22px 8px; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-header h2 { margin:0; color:#fff; font-size:clamp(30px,8vw,38px); line-height:1.1; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-header p { max-width:340px; margin:0 auto; color:#d4d0d9; font-size:14px; line-height:1.5; }
+#telaVelocidadeMemoria:has(#velocidadeConfig:not([hidden])) .velocidade-header-copy::after { content:""; position:absolute; bottom:0; left:calc(50% - 22px); width:44px; height:3px; border-radius:3px; background:#b899ed; }
+#telaVelocidadeMemoria #velocidadeConfig .velocidade-config-group { background:linear-gradient(155deg,#17171d,#101015); border-color:#3d3549; box-shadow:inset 0 1px 0 #ffffff0d; }
+#telaVelocidadeMemoria #velocidadeConfig .velocidade-config-header strong,
+#telaVelocidadeMemoria #velocidadeConfig .velocidade-time-option strong { color:#fff; }
+#telaVelocidadeMemoria #velocidadeConfig .module-kicker,
+#telaVelocidadeMemoria #velocidadeConfig .velocidade-time-option span { color:#b899ed; }
+#telaVelocidadeMemoria #velocidadeConfig :is(.velocidade-range-option,.velocidade-time-option) { background:linear-gradient(155deg,#17171d,#101015); border:1px solid #3d3549; color:#d4d0d9; box-shadow:none; }
+#telaVelocidadeMemoria #velocidadeConfig :is(.velocidade-range-option,.velocidade-time-option).is-active { background:linear-gradient(155deg,#302738,#17121f); border-color:#9473ba; color:#fff; box-shadow:none; }
+@media(max-height:740px) { #telaVelocidadeMemoria .velocidade-header-art img { max-height:clamp(150px,24svh,168px); } }
 
 /* Fixar revelado: acabamento isolado, com dimensões e lógica preservadas. */
 #telaFixarMemoria .fixar-card:has(#fixarAnswer:not([hidden])) {
@@ -25626,11 +25728,17 @@ body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
 #telaDesafiarMemoria .desafiar-feedback { width:100%; min-width:0; display:grid; grid-template-columns:22px minmax(0,1fr); gap:6px 10px; margin:14px 0 0; padding:12px; border:1px solid #3d3549; border-radius:14px; background:linear-gradient(155deg,#1b1b24,#101015); box-shadow:none; text-align:left; }
 #telaDesafiarMemoria .treinar-feedback-icon { grid-column:1; grid-row:1/3; width:22px; height:22px; align-self:center; fill:none; stroke:#e0aeff; stroke-width:1.5; stroke-linecap:round; }
 #telaDesafiarMemoria .treinar-feedback-error, #telaDesafiarMemoria .treinar-feedback-success { display:none; }
-#telaDesafiarMemoria [data-resultado="erro"] .treinar-feedback-icon { color:#df9fc8; stroke:currentColor; }
+#telaDesafiarMemoria [data-resultado="erro"] .treinar-feedback-icon { stroke:#b899ed; }
 #telaDesafiarMemoria [data-resultado="erro"] .treinar-feedback-error, #telaDesafiarMemoria [data-resultado="acerto"] .treinar-feedback-success { display:block; }
 #telaDesafiarMemoria .desafiar-feedback:not([data-resultado]) .treinar-feedback-icon { display:none; }
 #telaDesafiarMemoria #desafiarFeedbackStatus { grid-column:2; font-size:9px; font-weight:500; letter-spacing:.12em; color:#e0aeff; }
-#telaDesafiarMemoria [data-resultado="erro"] #desafiarFeedbackStatus { color:#df9fc8; }
+#telaDesafiarMemoria .desafiar-feedback[data-resultado] { grid-template-columns:18px minmax(0,max-content); justify-content:center; align-items:center; gap:8px; min-height:42px; padding:9px 10px; border-radius:12px; background:linear-gradient(155deg,#17171d,#101015); }
+#telaDesafiarMemoria [data-resultado] .treinar-feedback-icon { grid-row:1; width:18px; height:18px; stroke:#b899ed; }
+#telaDesafiarMemoria [data-resultado] #desafiarFeedbackStatus { display:none; }
 #telaDesafiarMemoria #desafiarFeedbackResposta { grid-column:2; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 7px; color:#bfa8d4; font-size:12px; line-height:1.4; }
 #telaDesafiarMemoria #desafiarFeedbackResposta .treinar-feedback-label { font-size:11px; font-weight:400; color:#bfa8d4; letter-spacing:0; }
 #telaDesafiarMemoria #desafiarFeedbackResposta .treinar-feedback-value { min-width:0; max-width:100%; overflow-wrap:anywhere; font-size:19px; font-weight:600; line-height:1.2; background:linear-gradient(90deg,#8F65F1 0%,#BC72F3 50%,#EC69D7 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+#telaDesafiarMemoria [data-resultado] #desafiarFeedbackResposta { flex-wrap:nowrap; align-items:center; gap:8px; white-space:nowrap; }
+#telaDesafiarMemoria [data-resultado] #desafiarFeedbackResposta .treinar-feedback-label { display:none; }
+#telaDesafiarMemoria [data-resultado="erro"] #desafiarFeedbackResposta::before { content:"Resposta certa"; flex-shrink:0; font-size:11px; font-weight:400; color:#bfa8d4; }
+#telaDesafiarMemoria [data-resultado] #desafiarFeedbackResposta .treinar-feedback-value { font-size:16px; color:#fff; background:none; -webkit-text-fill-color:currentColor; overflow-wrap:normal; overflow:hidden; text-overflow:ellipsis; }

@@ -6546,7 +6546,61 @@ document.addEventListener("DOMContentLoaded", () => {
     // INICIAR TREINO — VELOCIDADE
     // =====================================================
 
+    let celebracaoVelocidadeExecutada = false;
+    let limparCelebracaoVelocidade = () => {};
+
+    function celebrarResultadoVelocidade(percentual) {
+        limparCelebracaoVelocidade();
+        if (percentual !== 100 || celebracaoVelocidadeExecutada) return;
+        celebracaoVelocidadeExecutada = true;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+            velocidadeResult.hidden || telaVelocidadeMemoria.hidden) return;
+        const cartao = velocidadeResult.querySelector(".velocidade-result-header");
+        const camada = document.createElement("div");
+        camada.className = "velocidade-confetes";
+        camada.setAttribute("aria-hidden", "true");
+        const animacoes = [];
+        const movimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let temporizador;
+        const observador = new MutationObserver(() => {
+            if (velocidadeResult.hidden || telaVelocidadeMemoria.hidden) limpar();
+        });
+        const limpar = () => {
+            clearTimeout(temporizador);
+            observador.disconnect();
+            movimentoReduzido.removeEventListener("change", limpar);
+            animacoes.forEach(animacao => animacao.cancel());
+            camada.remove();
+            limparCelebracaoVelocidade = () => {};
+        };
+        limparCelebracaoVelocidade = limpar;
+        cartao.append(camada);
+        const queda = window.innerHeight + window.scrollY + 80;
+        for (let i = 0; i < 40; i++) {
+            const particula = document.createElement("i");
+            const lateral = -10 + Math.random() * 20;
+            particula.style.left = i % 2 ? `calc(100% - ${lateral}px)` : `${lateral}px`;
+            particula.style.top = `${-20 - Math.random() * 65}px`;
+            particula.style.backgroundColor = ["#51386e", "#b899ed", "#b9b9c1"][i % 3];
+            camada.append(particula);
+            const deslocamento = (i % 2 ? 1 : -1) * (4 + Math.random() * 8);
+            const rotacao = (Math.random() > 0.5 ? 1 : -1) * (180 + Math.random() * 180);
+            animacoes.push(particula.animate([
+                { transform: "translate(0, 0) rotate(0deg)", opacity: 0.8 },
+                { transform: `translate(${deslocamento}px, ${queda * 0.33}px) rotate(${rotacao * 0.33}deg)`, opacity: 0.8, offset: 0.33 },
+                { transform: `translate(${-deslocamento}px, ${queda * 0.66}px) rotate(${rotacao * 0.66}deg)`, opacity: 0.8, offset: 0.66 },
+                { transform: `translate(${deslocamento}px, ${queda}px) rotate(${rotacao}deg)`, opacity: 0.8 }
+            ], { duration: 4000, easing: "linear", fill: "both" }));
+        }
+        observador.observe(velocidadeResult, { attributes: true, attributeFilter: ["hidden"] });
+        observador.observe(telaVelocidadeMemoria, { attributes: true, attributeFilter: ["hidden"] });
+        movimentoReduzido.addEventListener("change", limpar);
+        temporizador = setTimeout(limpar, 4000);
+    }
+
     function iniciarTreinoVelocidade() {
+        limparCelebracaoVelocidade();
+        celebracaoVelocidadeExecutada = false;
 
         // =================================================
         // REINICIA OS RESULTADOS DA SESSÃO
@@ -7205,6 +7259,8 @@ document.addEventListener("DOMContentLoaded", () => {
             velocidadeResultPercent.textContent =
                 `${percentualAcertos}%`;
 
+            velocidadeResult.style.setProperty("--velocidade-aproveitamento", `${percentualAcertos}%`);
+
 
             velocidadeResultAcertos.textContent =
                 totalAcertos;
@@ -7220,6 +7276,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             velocidadeResultErrors.innerHTML =
                 "";
+
+            velocidadeResultErrors.closest(".velocidade-result-review").hidden = velocidadeErros.length === 0;
 
 
             // =============================================
@@ -7366,6 +7424,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             velocidadeResult.hidden =
                 false;
+
+            celebrarResultadoVelocidade(percentualAcertos);
 
 
             window.scrollTo({
@@ -12884,91 +12944,10 @@ document.addEventListener("DOMContentLoaded", () => {
         btnCentralVelocidade.addEventListener(
             "click",
             () => {
-
-                // =============================================
-                // ESCONDE O RESULTADO
-                // =============================================
-
-                velocidadeResult.hidden =
-                    true;
-
-
-                // =============================================
-                // VELOCIDADE PERSONALIZADO
-                // =============================================
-
-                if (
-                    modoVelocidadePersonalizado
-                ) {
-
-                    modoVelocidadePersonalizado =
-                        false;
-
-
-                    memoriasVelocidadePersonalizado =
-                        [];
-
-
-                    velocidadeFila =
-                        [];
-
-
-                    velocidadeIndiceAtual =
-                        0;
-
-
-                    velocidadeAcertos =
-                        [];
-
-
-                    velocidadeErros =
-                        [];
-
-
-                    memoriasSelecionadasPersonalizado.clear();
-
-
-                    atualizarContadorPersonalizado();
-
-
-                    if (
-                        velocidadeFaixaConfig
-                    ) {
-
-                        velocidadeFaixaConfig.hidden =
-                            false;
-
-                    }
-
-
-                    telaVelocidadeMemoria.hidden =
-                        true;
-
-
-                    abrirTreinoPersonalizado();
-
-
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-
-
-                    return;
-
-                }
-
-
-                // =============================================
-                // VELOCIDADE NORMAL
-                // =============================================
-
-                telaVelocidadeMemoria.hidden =
-                    true;
-
-
-                abrirMemoriaNumerica();
-
+                modoVelocidadePersonalizado = false;
+                memoriasVelocidadePersonalizado = [];
+                if (velocidadeFaixaConfig) velocidadeFaixaConfig.hidden = false;
+                abrirVelocidadeMemoria();
             }
         );
 
