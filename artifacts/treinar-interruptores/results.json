@@ -1,0 +1,221 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "before": {
+        "question": "QUAL É A PALAVRA?",
+        "inputMode": "text",
+        "numberHidden": false,
+        "imageHidden": true,
+        "imageLoaded": false,
+        "pressed": [
+          "true",
+          "false"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 314.390625,
+          "width": 300,
+          "height": 60
+        },
+        "cardY": 386.390625,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "word": {
+        "question": "QUAL É A PALAVRA?",
+        "inputMode": "text",
+        "numberHidden": false,
+        "imageHidden": true,
+        "imageLoaded": false,
+        "pressed": [
+          "true",
+          "false"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 314.390625,
+          "width": 300,
+          "height": 60
+        },
+        "cardY": 386.390625,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "image": {
+        "question": "QUAL É O NÚMERO?",
+        "inputMode": "numeric",
+        "numberHidden": true,
+        "imageHidden": false,
+        "imageLoaded": true,
+        "pressed": [
+          "false",
+          "true"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 314.390625,
+          "width": 300,
+          "height": 60
+        },
+        "cardY": 386.390625,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "returnWord": {
+        "question": "QUAL É A PALAVRA?",
+        "inputMode": "text",
+        "numberHidden": false,
+        "imageHidden": true,
+        "imageLoaded": false,
+        "pressed": [
+          "true",
+          "false"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 314.390625,
+          "width": 300,
+          "height": 60
+        },
+        "cardY": 386.390625,
+        "overflow": false,
+        "storage": "{}"
+      },
+      "frames": {
+        "samples": 90,
+        "maxMs": 16.800000000000182,
+        "over50ms": 0
+      },
+      "focus": true,
+      "motion": "none",
+      "checks": {
+        "word": true,
+        "image": true,
+        "roundTrip": true,
+        "layout": true,
+        "storage": true
+      },
+      "wordCorrection": {
+        "locked": true,
+        "disabled": true,
+        "next": true
+      },
+      "imageCorrection": {
+        "locked": true,
+        "disabled": true,
+        "next": true,
+        "feedback": "\n\n\n                                CORRETO\n\n                                01\n\n                            "
+      }
+    },
+    {
+      "width": 430,
+      "before": {
+        "question": "QUAL É A PALAVRA?",
+        "inputMode": "text",
+        "numberHidden": false,
+        "imageHidden": true,
+        "imageLoaded": false,
+        "pressed": [
+          "true",
+          "false"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 353.71875,
+          "width": 370,
+          "height": 60
+        },
+        "cardY": 425.71875,
+        "overflow": false,
+        "storage": "{\"palacioMentalDominioMemoria\":\"{\\\"0\\\":{\\\"pontos\\\":0,\\\"acertos\\\":0,\\\"erros\\\":1,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:02:59.350Z\\\",\\\"ultimoResultado\\\":\\\"erro\\\",\\\"acertosConsecutivos\\\":0,\\\"errosConsecutivos\\\":1,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":0,\\\"erros\\\":1},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}},\\\"1\\\":{\\\"pontos\\\":6,\\\"acertos\\\":1,\\\"erros\\\":0,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:03:00.881Z\\\",\\\"ultimoResultado\\\":\\\"acerto\\\",\\\"acertosConsecutivos\\\":1,\\\"errosConsecutivos\\\":0,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":1,\\\"erros\\\":0},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}}}\"}"
+      },
+      "word": {
+        "question": "QUAL É A PALAVRA?",
+        "inputMode": "text",
+        "numberHidden": false,
+        "imageHidden": true,
+        "imageLoaded": false,
+        "pressed": [
+          "true",
+          "false"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 353.71875,
+          "width": 370,
+          "height": 60
+        },
+        "cardY": 425.71875,
+        "overflow": false,
+        "storage": "{\"palacioMentalDominioMemoria\":\"{\\\"0\\\":{\\\"pontos\\\":0,\\\"acertos\\\":0,\\\"erros\\\":1,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:02:59.350Z\\\",\\\"ultimoResultado\\\":\\\"erro\\\",\\\"acertosConsecutivos\\\":0,\\\"errosConsecutivos\\\":1,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":0,\\\"erros\\\":1},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}},\\\"1\\\":{\\\"pontos\\\":6,\\\"acertos\\\":1,\\\"erros\\\":0,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:03:00.881Z\\\",\\\"ultimoResultado\\\":\\\"acerto\\\",\\\"acertosConsecutivos\\\":1,\\\"errosConsecutivos\\\":0,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":1,\\\"erros\\\":0},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}}}\"}"
+      },
+      "image": {
+        "question": "QUAL É O NÚMERO?",
+        "inputMode": "numeric",
+        "numberHidden": true,
+        "imageHidden": false,
+        "imageLoaded": true,
+        "pressed": [
+          "false",
+          "true"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 353.71875,
+          "width": 370,
+          "height": 60
+        },
+        "cardY": 425.71875,
+        "overflow": false,
+        "storage": "{\"palacioMentalDominioMemoria\":\"{\\\"0\\\":{\\\"pontos\\\":0,\\\"acertos\\\":0,\\\"erros\\\":1,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:02:59.350Z\\\",\\\"ultimoResultado\\\":\\\"erro\\\",\\\"acertosConsecutivos\\\":0,\\\"errosConsecutivos\\\":1,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":0,\\\"erros\\\":1},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}},\\\"1\\\":{\\\"pontos\\\":6,\\\"acertos\\\":1,\\\"erros\\\":0,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:03:00.881Z\\\",\\\"ultimoResultado\\\":\\\"acerto\\\",\\\"acertosConsecutivos\\\":1,\\\"errosConsecutivos\\\":0,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":1,\\\"erros\\\":0},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}}}\"}"
+      },
+      "returnWord": {
+        "question": "QUAL É A PALAVRA?",
+        "inputMode": "text",
+        "numberHidden": false,
+        "imageHidden": true,
+        "imageLoaded": false,
+        "pressed": [
+          "true",
+          "false"
+        ],
+        "selector": {
+          "x": 30,
+          "y": 353.71875,
+          "width": 370,
+          "height": 60
+        },
+        "cardY": 425.71875,
+        "overflow": false,
+        "storage": "{\"palacioMentalDominioMemoria\":\"{\\\"0\\\":{\\\"pontos\\\":0,\\\"acertos\\\":0,\\\"erros\\\":1,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:02:59.350Z\\\",\\\"ultimoResultado\\\":\\\"erro\\\",\\\"acertosConsecutivos\\\":0,\\\"errosConsecutivos\\\":1,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":0,\\\"erros\\\":1},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}},\\\"1\\\":{\\\"pontos\\\":6,\\\"acertos\\\":1,\\\"erros\\\":0,\\\"ultimaTentativa\\\":\\\"2026-11-13T13:03:00.881Z\\\",\\\"ultimoResultado\\\":\\\"acerto\\\",\\\"acertosConsecutivos\\\":1,\\\"errosConsecutivos\\\":0,\\\"atividades\\\":{\\\"fixar\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"treinoRapido\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"revisao\\\":{\\\"acertos\\\":0,\\\"erros\\\":0},\\\"desafiar\\\":{\\\"acertos\\\":1,\\\"erros\\\":0},\\\"velocidade\\\":{\\\"acertos\\\":0,\\\"erros\\\":0}}}}\"}"
+      },
+      "frames": {
+        "samples": 90,
+        "maxMs": 16.800000000000182,
+        "over50ms": 0
+      },
+      "focus": true,
+      "motion": "none",
+      "checks": {
+        "word": true,
+        "image": true,
+        "roundTrip": true,
+        "layout": true,
+        "storage": true
+      },
+      "wordCorrection": {
+        "locked": true,
+        "disabled": true,
+        "next": true
+      },
+      "imageCorrection": {
+        "locked": true,
+        "disabled": true,
+        "next": true,
+        "feedback": "\n\n\n                                CORRETO\n\n                                01\n\n                            "
+      }
+    }
+  ],
+  "errors": []
+}
