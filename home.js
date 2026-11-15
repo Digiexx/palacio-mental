@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const region = document.querySelector('.home-coverflow');
-  if (!region) return;
+  const status = document.getElementById('homeStatus');
+  if (region) {
   const cards = [...region.querySelectorAll('.home-path-card')];
   const dots = [...document.querySelectorAll('.home-carousel-dots button')];
-  const status = document.getElementById('homeStatus');
   let current = 0, start = null, suppressUntil = 0;
   function select(index) {
     current = Math.max(0, Math.min(cards.length - 1, index));
@@ -61,10 +61,28 @@ document.addEventListener('DOMContentLoaded', () => {
     cards[current].focus({preventScroll:true});
   });
   dots.forEach((dot, i) => dot.addEventListener('click', () => select(i)));
+    select(cards.findIndex(card => card.id === 'btnPalacioBiblico'));
+  }
   ['btnDominio'].forEach(id => document.getElementById(id)?.addEventListener('click', () => {
     status.textContent = 'Este módulo ainda está em desenvolvimento.';
   }));
   const home = document.querySelector('.home-palacio');
+  let reflexoHomeExecutado = false;
+  function atualizarReflexoHome() {
+    if (home.hidden) {
+      home.classList.remove('is-entering');
+      reflexoHomeExecutado = false;
+      return;
+    }
+    if (reflexoHomeExecutado || document.getElementById('aberturaTemporaria')?.hidden === false ||
+        document.getElementById('appInstallBanner')?.hidden === false) return;
+    reflexoHomeExecutado = true;
+    home.classList.add('is-entering');
+  }
+  ['aberturaTemporaria', 'appInstallBanner'].forEach(id => {
+    const camada = document.getElementById(id);
+    if (camada) new MutationObserver(atualizarReflexoHome).observe(camada, {attributes:true, attributeFilter:['hidden']});
+  });
   const nav = document.querySelector('.home-nav button');
   const navArea = nav.closest('.home-nav');
   const handle = document.createElement('button');
@@ -118,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   function sync() {
     document.body.classList.toggle('home-aberta', !home.hidden);
+    atualizarReflexoHome();
     nav.classList.toggle('active', !home.hidden);
     if (!home.hidden) nav.setAttribute('aria-current','page'); else nav.removeAttribute('aria-current');
     setNavOpen(false);
@@ -199,6 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
   aplicarBrilhoInicio();
 
   const portrait = document.querySelector('.home-portrait');
+  if (portrait) {
   const selector = document.getElementById('selectFundoHome');
   const backgrounds = {dourado:'natan-fuentes.webp',cinza:'natan-fuentes-cinza.webp',roxo:'natan-fuentes-roxo.webp'};
   let saved = 'dourado';
@@ -296,7 +316,12 @@ document.addEventListener('DOMContentLoaded', () => {
     saved = choice;
     try { localStorage.setItem('palacioMentalFundoHome',choice); } catch {}
   });
-  select(cards.findIndex(card => card.id === 'btnPalacioBiblico')); sync();
+  } else {
+    // O novo fundo fixo substitui a fotografia; a preferência antiga não é apagada.
+    document.getElementById('selectFundoHome').hidden = true;
+    document.querySelector('label[for="selectFundoHome"]').hidden = true;
+  }
+  sync();
 });
 
 

@@ -25646,12 +25646,10 @@ body:has(#telaVelocidadeMemoria:not([hidden]) #velocidadeConfig:not([hidden])) .
 #telaHistoricoMemoria .history-recent-attempt { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-top:12px; padding-top:12px; border-top:1px solid #3d3549; }
 #telaHistoricoMemoria .history-recent-attempt strong { color:#e0aeff; font-size:11px; font-weight:400; line-height:1.5; }
 
-/* Fixar: preserve dimensions and remove the former number halo. */
+/* Fixar: remove the former number halo. */
 #telaFixarMemoria .fixar-number {
     text-shadow:none;
-    /* Expand the text clipping box while preserving its occupied layout space. */
-    line-height:1.05;
-    margin-block:-.075em;
+    margin-block:0;
 }
 
 /* Treinar: two exercise presentations, one existing correction and progress flow. */
@@ -25686,9 +25684,9 @@ body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
     align-items: center;
     justify-content: center;
     gap: 5px;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
+    border: 1px solid #51386e;
+    border-radius: 12px;
+    background: #101015;
     box-shadow: none;
     color: #b4adbf;
     font: inherit;
@@ -25709,9 +25707,9 @@ body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
     height: 18px;
     flex: 0 0 18px;
     box-sizing: border-box;
-    border: 1px solid #3d3746;
+    border: 1px solid #51386e;
     border-radius: 50%;
-    background: linear-gradient(145deg, #34313a, #16151a);
+    background: #101015;
 }
 
 #telaDesafiarMemoria .treinar-exercise-selector button[data-treinar-tipo="palavra"]::after {
@@ -25720,12 +25718,14 @@ body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
 
 #telaDesafiarMemoria .treinar-exercise-selector button[aria-pressed="true"] {
     color: #c28aff;
+    border-color: #8650cb;
+    background: #39234e;
 }
 
 #telaDesafiarMemoria .treinar-exercise-selector button[aria-pressed="true"]::after {
     border: 3px solid #ae82d8;
-    background: #eadbff;
-    box-shadow: 0 0 5px #a77beb40;
+    background: #39234e;
+    box-shadow: none;
 }
 
 #telaDesafiarMemoria .treinar-exercise-selector button:focus-visible {
@@ -25774,3 +25774,187 @@ body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
 #telaDesafiarMemoria [data-resultado] #desafiarFeedbackResposta .treinar-feedback-label { display:none; }
 #telaDesafiarMemoria [data-resultado="erro"] #desafiarFeedbackResposta::before { content:"Resposta certa"; flex-shrink:0; font-size:11px; font-weight:400; color:#bfa8d4; }
 #telaDesafiarMemoria [data-resultado] #desafiarFeedbackResposta .treinar-feedback-value { font-size:16px; color:#fff; background:none; -webkit-text-fill-color:currentColor; overflow-wrap:normal; overflow:hidden; text-overflow:ellipsis; }
+
+/* Numeros de treino: caixa ampliada sem alterar o tamanho da fonte.
+   Blocos crescem com o conteudo; padding protege os glifos e o gradiente. */
+#telaFixarMemoria .fixar-number,
+#telaDesafiarMemoria .desafiar-number,
+#velocidadeTrainingArea .velocidade-number,
+.revisao-training-number {
+    box-sizing: content-box;
+    height: auto;
+    min-height: 1.2em;
+    padding: .1em .12em;
+    line-height: 1.2;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Personalizado: configuração guiada, isolada das telas de treino. */
+#telaTreinoPersonalizado .personalizado-panel[hidden] { display:none; }
+#telaTreinoPersonalizado .personalizado-panel {
+    position:relative;
+    isolation:isolate;
+    border-color:#51386e;
+    background:linear-gradient(145deg,#1c1823,#0d0c11 70%);
+    box-shadow:0 16px 36px #0009, inset 0 1px 0 #ffffff09;
+    animation:personalizado-painel 250ms ease-out both;
+    scroll-margin-top:16px;
+}
+#telaTreinoPersonalizado .personalizado-header-art { transition:opacity 250ms ease; }
+#telaTreinoPersonalizado.personalizado-segunda-etapa .personalizado-header-art { opacity:.75; }
+#telaTreinoPersonalizado .treino-personalizado-modos-header { margin-bottom:18px; text-align:center; }
+#telaTreinoPersonalizado .treino-personalizado-modos-header h3 { margin:0; color:#f3edf9; font-size:20px; font-weight:600; }
+#telaTreinoPersonalizado .treino-personalizado-modo { min-height:112px; padding:18px 8px; border:1px solid #51386e; border-radius:14px; background:linear-gradient(145deg,#1b1821,#101015); }
+#telaTreinoPersonalizado .treino-personalizado-modo.is-active { background:#39234e; border-color:#8650cb; }
+#telaTreinoPersonalizado .treino-personalizado-modo strong { font-size:16px; }
+#telaTreinoPersonalizado .treino-personalizado-modo span { font-size:11px; line-height:1.4; }
+#telaTreinoPersonalizado .treino-personalizado-numero { min-height:44px; border-radius:10px; }
+#telaTreinoPersonalizado .treino-personalizado-numero.is-selected { background:#39234e; border-color:#8650cb; }
+#telaTreinoPersonalizado .personalizado-primary,
+#telaTreinoPersonalizado .personalizado-back,
+#telaTreinoPersonalizado .personalizado-ordem button {
+    min-height:44px; padding:10px 14px; border:1px solid #51386e; border-radius:12px;
+    background:#101015; color:#eee8f7; font:inherit; cursor:pointer;
+}
+#telaTreinoPersonalizado .personalizado-primary { display:block; width:100%; margin-top:20px; background:#39234e; border-color:#8650cb; font-weight:600; }
+#telaTreinoPersonalizado .personalizado-primary:disabled { opacity:.4; cursor:default; }
+#telaTreinoPersonalizado .personalizado-back { display:block; width:100%; margin-top:10px; }
+#telaTreinoPersonalizado .personalizado-ordem { margin:20px 0 0; padding:0; border:0; min-width:0; }
+#telaTreinoPersonalizado .personalizado-ordem legend { margin-bottom:10px; color:#bfa8d4; font-size:12px; }
+#telaTreinoPersonalizado .personalizado-ordem > div { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px; padding:4px; border:1px solid #51386e; border-radius:14px; background:#08080c; }
+#telaTreinoPersonalizado .personalizado-ordem button { border-color:transparent; background:transparent; font-size:13px; }
+#telaTreinoPersonalizado .personalizado-ordem button[aria-pressed="true"] { background:#39234e; border-color:#8650cb; }
+#telaTreinoPersonalizado button:focus-visible { outline:2px solid #c4a2f5; outline-offset:3px; }
+#telaTreinoPersonalizado :is(h3,strong)[tabindex="-1"]:focus { outline:none; }
+@keyframes personalizado-painel { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@media(prefers-reduced-motion:reduce) {
+    #telaTreinoPersonalizado .personalizado-panel { animation:none; }
+    #telaTreinoPersonalizado .personalizado-header-art { transition:none; }
+}
+#telaTreinoPersonalizado #personalizadoNumerosTitulo { display:block; color:#f3edf9; font-size:18px; line-height:1.3; font-weight:600; }
+
+/* Capas oficiais: estilos exclusivos dos cartões da etapa de modo. */
+#telaTreinoPersonalizado .treino-personalizado-modo {
+    display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start;
+    gap:0; padding:0 0 12px; overflow:hidden;
+    border:1px solid transparent;
+    background:linear-gradient(145deg,#1b1821,#101015) padding-box,
+        linear-gradient(135deg,#39234e,#765299 45%,#33203f) border-box;
+    box-shadow:none;
+}
+#telaTreinoPersonalizado .treino-personalizado-modo.is-active {
+    background:linear-gradient(#39234e,#39234e) padding-box,
+        linear-gradient(135deg,#8650cb,#b899ed 45%,#6834a0) border-box;
+    border-color:transparent;
+}
+#telaTreinoPersonalizado .treino-personalizado-modo .personalizado-modo-capa {
+    display:block; width:100%; height:auto; aspect-ratio:3 / 2; object-fit:contain;
+    object-position:center; background:#0b0910; border-radius:12px 12px 0 0;
+    margin:0 0 12px;
+}
+#telaTreinoPersonalizado .treino-personalizado-modo strong,
+#telaTreinoPersonalizado .treino-personalizado-modo span {
+    display:block; padding-inline:8px; margin:0; text-align:left;
+}
+#telaTreinoPersonalizado .treino-personalizado-modo span { margin-top:5px; }
+
+/* Etapa 2: ritmo uniforme entre controles e grade, sem afetar a etapa de modo. */
+#telaTreinoPersonalizado #personalizadoEtapaNumeros:not([hidden]) {
+    display:grid;
+    gap:14px;
+}
+#telaTreinoPersonalizado #personalizadoEtapaNumeros > :is(.treino-personalizado-selecao-header,.personalizado-ordem,.personalizado-primary,.treino-personalizado-acoes,.treino-personalizado-grid) {
+    margin:0;
+    min-width:0;
+}
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-selecao-header {
+    align-items:center;
+    gap:10px;
+}
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-contador { font-size:10px; font-weight:600; }
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .personalizado-ordem legend { margin-bottom:8px; }
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .personalizado-primary { width:100%; min-height:44px; }
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-acoes { gap:8px; }
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-acoes button {
+    min-height:40px; margin:0; padding:8px;
+    border:1px solid #51386e; background:linear-gradient(155deg,#17171d,#101015);
+    color:#d4d0d9; font-weight:600; box-shadow:none;
+}
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-grid {
+    grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px;
+}
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-numero {
+    min-height:44px; padding:6px 4px; border:1px solid #3d3549; border-radius:10px;
+    background:linear-gradient(155deg,#17171d,#101015); color:#c6bfce;
+    font-size:12px; font-weight:600; line-height:1.2; box-shadow:none;
+}
+#telaTreinoPersonalizado #personalizadoEtapaNumeros .treino-personalizado-numero.is-selected {
+    background:linear-gradient(155deg,#302738,#17121f); border-color:#9473ba; color:#fff; box-shadow:none;
+}
+
+/* Abertura temporária: logo oficial intacta; somente opacity e transform. */
+#aberturaTemporaria {
+    all:unset; box-sizing:border-box; position:fixed; inset:0; z-index:100000;
+    display:grid; place-items:center; width:100%; height:100%; padding:24px;
+    background:#12091F; color:#fff; cursor:pointer; text-align:center;
+    opacity:1; transition:opacity 200ms ease; -webkit-tap-highlight-color:transparent;
+}
+#aberturaTemporaria[hidden] { display:none; }
+#aberturaTemporaria .abertura-temporaria-conteudo {
+    display:flex; flex-direction:column; align-items:center; gap:20px;
+    animation:pm-abertura-entrada 400ms ease-out both;
+}
+#aberturaTemporaria img { display:block; width:clamp(136px,40vw,180px); height:auto; object-fit:contain; }
+#aberturaTemporaria .abertura-temporaria-conteudo > span {
+    font-family:system-ui,sans-serif; font-size:clamp(24px,6vw,28px); font-weight:500; line-height:1.3;
+}
+#aberturaTemporaria.is-leaving { opacity:0; }
+#aberturaTemporaria:focus-visible { outline:2px solid #c4a2f5; outline-offset:-8px; }
+html.pm-abertura-ativa .app-shell { visibility:hidden; }
+@keyframes pm-abertura-entrada {
+    from { opacity:0; transform:translateY(10px) scale(.98); }
+    to { opacity:1; transform:translateY(0) scale(1); }
+}
+@media(prefers-reduced-motion:reduce) {
+    #aberturaTemporaria { display:none; transition:none; }
+    #aberturaTemporaria .abertura-temporaria-conteudo { animation:none; }
+    html.pm-abertura-ativa .app-shell { visibility:visible; }
+}
+
+/* Convite de instalação: visual compacto, isolado da abertura e das outras telas. */
+#appInstallBanner {
+    padding:max(20px,env(safe-area-inset-top)) 18px max(20px,env(safe-area-inset-bottom));
+    background:#000b; backdrop-filter:none; -webkit-backdrop-filter:none;
+}
+#appInstallBanner .app-install-card {
+    max-width:360px; padding:20px 18px 18px; border:1px solid #51386e; border-radius:22px;
+    background:linear-gradient(150deg,#19121f,#0b090f 70%); box-shadow:none; animation:none;
+}
+#appInstallBanner .app-install-card h2 {
+    margin:0; font-size:24px; font-weight:600; line-height:1.2; letter-spacing:0;
+}
+#appInstallBanner .app-install-description {
+    max-width:300px; margin:10px auto 14px; color:#c6bfce; font-size:13px; line-height:1.5;
+}
+#appInstallBanner .app-install-art { margin:0 auto 16px; }
+#appInstallBanner .app-install-art img {
+    width:min(100%,210px); height:auto; max-height:clamp(160px,25svh,210px);
+    aspect-ratio:1; object-fit:contain; margin:auto;
+}
+#appInstallBanner .app-install-actions { gap:10px; }
+#appInstallBanner :is(.app-install-primary,.app-install-secondary) {
+    min-height:46px; padding:10px 12px; font-size:13px; font-weight:600;
+    box-shadow:none; transition:transform 150ms ease; text-shadow:none;
+}
+#appInstallBanner .app-install-primary { background:#39234e; border:1px solid #775496; color:#fff; }
+#appInstallBanner .app-install-primary::before { content:none; animation:none; }
+#appInstallBanner .app-install-secondary { background:#08080b; border:1px solid #51386e; color:#eee8f7; }
+#appInstallBanner .app-install-note { margin:12px 0 0; color:#9b92a4; font-size:10px; line-height:1.5; }
+@media(max-height:620px) {
+    #appInstallBanner .app-install-card { padding:16px; }
+    #appInstallBanner .app-install-art img { max-height:140px; }
+}
+@media(prefers-reduced-motion:reduce) {
+    #appInstallBanner :is(.app-install-primary,.app-install-secondary) { transition:none; }
+}

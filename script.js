@@ -5971,7 +5971,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             history.pushState(
                 {
-                    tela: nomeTela
+                    tela: nomeTela,
+                    ...(nomeTela === "personalizado" ? {etapaPersonalizado: etapaConfiguradaPersonalizado} : {})
                 },
                 "",
                 window.location.href
@@ -6384,7 +6385,37 @@ document.addEventListener("DOMContentLoaded", () => {
     // ATUALIZAR CONTADOR — TREINO PERSONALIZADO
     // =====================================================
 
+    // Configuração transitória: não altera preferências ou dados persistidos.
+    let modoConfiguradoPersonalizado = null;
+    let ordemConfiguradaPersonalizado = "ordem";
+    let etapaConfiguradaPersonalizado = 1;
+    const painelModoPersonalizado = document.getElementById("personalizadoEtapaModo");
+    const painelNumerosPersonalizado = document.getElementById("personalizadoEtapaNumeros");
+    const avancarPersonalizado = document.getElementById("btnPersonalizadoAvancar");
+    const iniciarPersonalizado = document.getElementById("btnPersonalizadoIniciar");
+
+    function mudarEtapaPersonalizado(etapa, focar = true) {
+        etapaConfiguradaPersonalizado = etapa;
+        painelModoPersonalizado.hidden = etapa !== 1;
+        painelNumerosPersonalizado.hidden = etapa !== 2;
+        telaTreinoPersonalizado.classList.toggle("personalizado-segunda-etapa", etapa === 2);
+        if (focar) {
+            const titulo = document.getElementById(etapa === 1 ? "personalizadoModoTitulo" : "personalizadoNumerosTitulo");
+            titulo.focus({preventScroll:true});
+            (etapa === 1 ? painelModoPersonalizado : painelNumerosPersonalizado).scrollIntoView({block:"start", behavior:matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
+        }
+    }
+
+    mudarEtapaPersonalizado(1, false);
+
+    function prepararListaPersonalizado() {
+        const lista = bancoMemoria.filter(memoria => memoriasSelecionadasPersonalizado.has(Number(memoria.numero)))
+            .sort((a,b) => Number(a.numero) - Number(b.numero));
+        return ordemConfiguradaPersonalizado === "aleatorio" ? embaralharListaAncorada(lista) : lista;
+    }
+
     function atualizarContadorPersonalizado() {
+        iniciarPersonalizado.disabled = memoriasSelecionadasPersonalizado.size === 0;
 
         if (
             !treinoPersonalizadoContador
@@ -6474,6 +6505,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
+            botao.setAttribute("aria-pressed", String(memoriasSelecionadasPersonalizado.has(numero)));
+
             botao.addEventListener(
                 "click",
                 () => {
@@ -6507,6 +6540,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
 
+                    botao.setAttribute("aria-pressed", String(memoriasSelecionadasPersonalizado.has(numero)));
                     atualizarContadorPersonalizado();
 
                 }
@@ -6699,7 +6733,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // =================================================
 
         for (
-            let indice = velocidadeFila.length - 1;
+            let indice = modoVelocidadePersonalizado ? 0 : velocidadeFila.length - 1;
             indice > 0;
             indice--
         ) {
@@ -11848,7 +11882,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener(
         "popstate",
-        () => {
+        evento => {
+            // As etapas t?m entradas pr?prias; Voltar apenas restaura o destino.
+            if (evento.state?.tela === "personalizado") {
+                navegarParaTela("personalizado", false);
+                mudarEtapaPersonalizado(evento.state.etapaPersonalizado === 2 ? 2 : 1);
+                return;
+            }
+            if (!telaTreinoPersonalizado.hidden) {
+                abrirMemoriaNumerica(false);
+                return;
+            }
+
 
             // =============================================
             // DESCOBRE QUAL TELA ESTÁ ABERTA
@@ -12331,281 +12376,68 @@ document.addEventListener("DOMContentLoaded", () => {
     // APRENDER — TREINO PERSONALIZADO
     // =====================================================
 
-    if (btnPersonalizadoAprender) {
-
-        btnPersonalizadoAprender.addEventListener(
-            "click",
-            () => {
-
-                if (
-                    memoriasSelecionadasPersonalizado.size === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                memoriasAprenderPersonalizado =
-                    bancoMemoria.filter(
-                        memoria =>
-                            memoriasSelecionadasPersonalizado.has(
-                                memoria.numero
-                            )
-                    );
-
-
-                if (
-                    memoriasAprenderPersonalizado.length === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                modoAprenderPersonalizado =
-                    true;
-
-
-                indiceMemoriaAtual =
-                    0;
-
-
+    Object.entries(modosOrigemPersonalizado).forEach(([modo,id]) => {
+        document.getElementById(id).addEventListener("click", () => {
+            modoConfiguradoPersonalizado = modo;
+            Object.entries(modosOrigemPersonalizado).forEach(([nome,botaoId]) => {
+                const botao = document.getElementById(botaoId);
+                botao.classList.toggle("is-active", nome === modo);
+                botao.setAttribute("aria-pressed", String(nome === modo));
+            });
+            avancarPersonalizado.disabled = false;
+        });
+    });
+    avancarPersonalizado.addEventListener("click", () => {
+        if (!modoConfiguradoPersonalizado || etapaConfiguradaPersonalizado === 2) return;
+        history.pushState({tela:"personalizado", etapaPersonalizado:2}, "", window.location.href);
+        mudarEtapaPersonalizado(2);
+    });
+    document.querySelectorAll("[data-personalizado-ordem]").forEach(botao => {
+        botao.addEventListener("click", () => {
+            ordemConfiguradaPersonalizado = botao.dataset.personalizadoOrdem;
+            document.querySelectorAll("[data-personalizado-ordem]").forEach(opcao => opcao.setAttribute("aria-pressed", String(opcao === botao)));
+        });
+    });
+    iniciarPersonalizado.addEventListener("click", () => {
+        if (!modoConfiguradoPersonalizado || !memoriasSelecionadasPersonalizado.size) return;
+        const lista = prepararListaPersonalizado();
+        if (!lista.length) return;
+        const numeros = lista.map(memoria => Number(memoria.numero));
+        switch (modoConfiguradoPersonalizado) {
+            case "aprender":
+                memoriasAprenderPersonalizado = lista;
+                modoAprenderPersonalizado = true;
+                indiceMemoriaAtual = 0;
+                learningPersonalizadoResult.hidden = true;
                 abrirAprendizado();
-
-            }
-        );
-
-    }
-
-
-    // =====================================================
-    // FIXAR — TREINO PERSONALIZADO
-    // =====================================================
-
-    if (btnPersonalizadoFixar) {
-
-        btnPersonalizadoFixar.addEventListener(
-            "click",
-            () => {
-
-                if (
-                    memoriasSelecionadasPersonalizado.size === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                memoriasFixarPersonalizado =
-                    bancoMemoria
-                        .filter(
-                            memoria =>
-                                memoriasSelecionadasPersonalizado.has(
-                                    memoria.numero
-                                )
-                        )
-                        .map(
-                            memoria =>
-                                Number(
-                                    memoria.numero
-                                )
-                        );
-
-
-                if (
-                    memoriasFixarPersonalizado.length === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                modoFixarPersonalizado =
-                    true;
-
-
-                indiceFixarPersonalizado =
-                    0;
-
-
-                fixarErrosRodada =
-                    [];
-
-
-                fixarAcertosRodada =
-                    [];
-
-
-                limparRevisaoErrosFixar();
-
-
+                break;
+            case "fixar":
+                memoriasFixarPersonalizado = numeros;
+                modoFixarPersonalizado = true;
+                indiceFixarPersonalizado = 0;
                 abrirFixarMemoria();
-
-            }
-        );
-
-    }
-
-
-    // =====================================================
-    // DESAFIAR — TREINO PERSONALIZADO
-    // =====================================================
-
-    if (btnPersonalizadoDesafiar) {
-
-        btnPersonalizadoDesafiar.addEventListener(
-            "click",
-            () => {
-
-                if (
-                    memoriasSelecionadasPersonalizado.size === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                memoriasDesafiarPersonalizado =
-                    bancoMemoria
-                        .filter(
-                            memoria =>
-                                memoriasSelecionadasPersonalizado.has(
-                                    memoria.numero
-                                )
-                        )
-                        .map(
-                            memoria =>
-                                Number(
-                                    memoria.numero
-                                )
-                        );
-
-
-                if (
-                    memoriasDesafiarPersonalizado.length === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                modoDesafiarPersonalizado =
-                    true;
-
-
-                indiceDesafiarPersonalizado =
-                    0;
-
-
-                desafiarAcertosRodada =
-                    [];
-
-
-                desafiarErrosRodada =
-                    [];
-
-
-                desafiarNumeroAtual =
-                    memoriasDesafiarPersonalizado[
-                        indiceDesafiarPersonalizado
-                    ];
-
-
+                break;
+            case "desafiar":
+                memoriasDesafiarPersonalizado = numeros;
+                modoDesafiarPersonalizado = true;
+                indiceDesafiarPersonalizado = 0;
+                desafiarAcertosRodada = [];
+                desafiarErrosRodada = [];
+                desafiarNumeroAtual = numeros[0];
                 abrirDesafiarMemoria();
-
-            }
-        );
-
-    }
-
-
-    // =====================================================
-    // VELOCIDADE — TREINO PERSONALIZADO
-    // =====================================================
-
-    if (btnPersonalizadoVelocidade) {
-
-        btnPersonalizadoVelocidade.addEventListener(
-            "click",
-            () => {
-
-                if (
-                    memoriasSelecionadasPersonalizado.size === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                memoriasVelocidadePersonalizado =
-                    bancoMemoria
-                        .filter(
-                            memoria =>
-                                memoriasSelecionadasPersonalizado.has(
-                                    memoria.numero
-                                )
-                        )
-                        .map(
-                            memoria =>
-                                Number(
-                                    memoria.numero
-                                )
-                        );
-
-
-                if (
-                    memoriasVelocidadePersonalizado.length === 0
-                ) {
-
-                    return;
-
-                }
-
-
-                modoVelocidadePersonalizado =
-                    true;
-
-
-                velocidadeFila =
-                    [];
-
-
-                velocidadeIndiceAtual =
-                    0;
-
-
-                velocidadeAcertos =
-                    [];
-
-
-                velocidadeErros =
-                    [];
-
-
-                if (
-                    velocidadeFaixaConfig
-                ) {
-
-                    velocidadeFaixaConfig.hidden =
-                        true;
-
-                }
-
-
+                break;
+            case "velocidade":
+                memoriasVelocidadePersonalizado = numeros;
+                modoVelocidadePersonalizado = true;
+                velocidadeFila = [];
+                velocidadeIndiceAtual = 0;
+                velocidadeAcertos = [];
+                velocidadeErros = [];
+                if (velocidadeFaixaConfig) velocidadeFaixaConfig.hidden = true;
                 abrirVelocidadeMemoria();
-
-            }
-        );
-
-    }
-
+                break;
+        }
+    });
 
     if (btnSelecionarTodasPersonalizado) {
 
@@ -15282,7 +15114,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // MOSTRAR CONVITE
     // =====================================================
 
+    window.addEventListener("pm-abertura-encerrada", () => {
+        if (pwaInstallPrompt) mostrarBannerInstalacao();
+    }, {once:true});
+
     function mostrarBannerInstalacao() {
+
+        // Aguarda a abertura: o convite torna os demais elementos inert.
+        if (document.getElementById("aberturaTemporaria")?.hidden === false) return;
 
         if (
             !appInstallBanner ||

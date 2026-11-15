@@ -28,6 +28,85 @@
 
 <body>
 
+    <!-- Abertura temporária de teste; nao altera a splash nativa/PWA. -->
+    <button id="aberturaTemporaria" type="button" aria-label="Palácio Mental. Toque para ignorar a abertura" hidden>
+        <span class="abertura-temporaria-conteudo">
+            <img src="assets/icons/logo-branca.png" width="512" height="512" alt="" decoding="async">
+            <span>Palácio Mental</span>
+        </span>
+    </button>
+    <script>
+    (() => {
+        const abertura = document.getElementById('aberturaTemporaria');
+        const movimentoReduzido = matchMedia('(prefers-reduced-motion: reduce)');
+        const navegacao = performance.getEntriesByType('navigation')[0];
+        const chaveSessao = 'palacioMentalAberturaTemporariaVista';
+        // Apenas uma carga nova na Home; recargas e historico podem retomar atividades.
+        try {
+            if (sessionStorage.getItem(chaveSessao)) return;
+            sessionStorage.setItem(chaveSessao, '1');
+        } catch { return; }
+        if (movimentoReduzido.matches || document.hidden ||
+            (navegacao && navegacao.type !== 'navigate') ||
+            (history.state?.tela && history.state.tela !== 'home')) return;
+
+        let encerrada = false;
+        let saida, fim, observador;
+        const focoAnterior = document.activeElement;
+        function encerrar() {
+            if (encerrada) return;
+            encerrada = true;
+            clearTimeout(saida);
+            clearTimeout(fim);
+            observador?.disconnect();
+            abertura.hidden = true;
+            abertura.classList.remove('is-leaving');
+            document.documentElement.classList.remove('pm-abertura-ativa');
+            abertura.removeEventListener('click', encerrar);
+            abertura.removeEventListener('keydown', teclado);
+            document.removeEventListener('visibilitychange', visibilidade);
+            window.removeEventListener('pagehide', encerrar);
+            window.removeEventListener('popstate', encerrar);
+            movimentoReduzido.removeEventListener('change', encerrar);
+            if (document.activeElement === abertura) {
+                abertura.blur();
+                if (focoAnterior?.isConnected) focoAnterior.focus({preventScroll:true});
+            }
+            window.dispatchEvent(new Event('pm-abertura-encerrada'));
+        }
+        function teclado(evento) { if (evento.key === 'Escape') encerrar(); }
+        function visibilidade() { if (document.hidden) encerrar(); }
+        function conferirAtividade() {
+            if (encerrada) return;
+            const home = document.querySelector('.home-palacio');
+            if (!home || home.hidden || (history.state?.tela && history.state.tela !== 'home')) {
+                encerrar();
+                return;
+            }
+            observador = new MutationObserver(() => {
+                if (home.hidden || (history.state?.tela && history.state.tela !== 'home')) encerrar();
+            });
+            observador.observe(document.querySelector('.app-shell'), {subtree:true, attributes:true, attributeFilter:['hidden']});
+        }
+        abertura.hidden = false;
+        document.documentElement.classList.add('pm-abertura-ativa');
+        abertura.focus({preventScroll:true});
+        abertura.addEventListener('click', encerrar);
+        abertura.addEventListener('keydown', teclado);
+        document.addEventListener('visibilitychange', visibilidade);
+        window.addEventListener('pagehide', encerrar);
+        window.addEventListener('popstate', encerrar);
+        movimentoReduzido.addEventListener('change', encerrar);
+        document.addEventListener('DOMContentLoaded', conferirAtividade, {once:true});
+        saida = setTimeout(() => {
+            document.documentElement.classList.remove('pm-abertura-ativa');
+            abertura.classList.add('is-leaving');
+        }, 1000);
+        fim = setTimeout(encerrar, 1200);
+    })();
+    </script>
+
+
 
     <!-- =====================================================
          APLICATIVO PRINCIPAL
@@ -50,21 +129,13 @@
                 aria-labelledby="tituloInstalacaoApp"
                 aria-describedby="descricaoInstalacaoApp">
 
-                <span class="app-install-label">
-                    PALÁCIO MENTAL
-                </span>
-
-
-                <h2 id="tituloInstalacaoApp">
-                    Seu palácio, sempre com você.
-                </h2>
+                <h2 id="tituloInstalacaoApp">Instale o app</h2>
 
 
                 <p class="app-install-description"
                     id="descricaoInstalacaoApp">
 
-                    Instale o aplicativo para acessar seus
-                    treinos direto da tela inicial.
+                    Tenha o Palácio Mental na tela inicial do seu celular.
 
                 </p>
 
@@ -73,7 +144,7 @@
                     aria-hidden="true">
 
                     <img
-                        src="assets/imagens/home/palacio-instalacao.png"
+                        src="assets/imagens/instalacao/instalacao-app.webp"
                         alt="">
 
                 </div>
@@ -86,7 +157,7 @@
                         type="button">
 
                         <span>
-                            Instalar aplicativo
+                            Instalar agora
                         </span>
 
                     </button>
@@ -200,18 +271,7 @@
             </div>
 
 
-            <button class="icon-button" type="button" aria-label="Configurações" id="btnConfig">
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                    <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
-
-                    <path
-                        d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1a1.7 1.7 0 0 0-.4-1.1 1.7 1.7 0 0 0-1-.6 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.8v-4h.1A1.7 1.7 0 0 0 4 9.2a1.7 1.7 0 0 0 .6-1 1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.8h4v.1A1.7 1.7 0 0 0 14.8 4a1.7 1.7 0 0 0 1 .6 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.1.4.3.7.6 1 .3.2.7.4 1.1.4h.1v4h-.1a1.7 1.7 0 0 0-1.1.4c-.3.2-.5.6-.6 1Z" />
-
-                </svg>
-
-            </button>
 
         </header>
 
@@ -3718,13 +3778,11 @@
                          MODO DE TREINO
                     ================================================== -->
 
-                    <section class="treino-personalizado-modos">
+                    <section class="treino-personalizado-modos personalizado-panel" id="personalizadoEtapaModo" aria-labelledby="personalizadoModoTitulo">
 
                         <div class="treino-personalizado-modos-header">
 
-                            <span class="section-label">
-                                MODO
-                            </span>
+                            <h3 id="personalizadoModoTitulo" tabindex="-1">Escolha o modo</h3>
 
 
                         </div>
@@ -3732,7 +3790,8 @@
 
                         <div class="treino-personalizado-modos-grid">
 
-                            <button class="treino-personalizado-modo" id="btnPersonalizadoAprender" type="button">
+                            <button class="treino-personalizado-modo" aria-pressed="false" id="btnPersonalizadoAprender" type="button">
+                                <img class="personalizado-modo-capa" src="assets/imagens/memoria-numerica/carrossel/aprender.webp" alt="" decoding="async">
 
                                 <strong>
                                     Aprender
@@ -3745,7 +3804,8 @@
                             </button>
 
 
-                            <button class="treino-personalizado-modo" id="btnPersonalizadoFixar" type="button">
+                            <button class="treino-personalizado-modo" aria-pressed="false" id="btnPersonalizadoFixar" type="button">
+                                <img class="personalizado-modo-capa" src="assets/imagens/memoria-numerica/carrossel/fixar.webp" alt="" decoding="async">
 
                                 <strong>
                                     Fixar
@@ -3758,7 +3818,8 @@
                             </button>
 
 
-                            <button class="treino-personalizado-modo" id="btnPersonalizadoDesafiar" type="button">
+                            <button class="treino-personalizado-modo" aria-pressed="false" id="btnPersonalizadoDesafiar" type="button">
+                                <img class="personalizado-modo-capa" src="assets/imagens/memoria-numerica/carrossel/treinar.webp" alt="" decoding="async">
 
                                 <strong>
                                     Treinar
@@ -3771,7 +3832,8 @@
                             </button>
 
 
-                            <button class="treino-personalizado-modo" id="btnPersonalizadoVelocidade" type="button">
+                            <button class="treino-personalizado-modo" aria-pressed="false" id="btnPersonalizadoVelocidade" type="button">
+                                <img class="personalizado-modo-capa" src="assets/imagens/memoria-numerica/velocidade-topo.webp" alt="" decoding="async">
 
                                 <strong>
                                     Velocidade
@@ -3785,6 +3847,7 @@
 
                         </div>
 
+                        <button class="personalizado-primary" id="btnPersonalizadoAvancar" type="button" disabled>Avançar</button>
                     </section>
 
 
@@ -3792,7 +3855,7 @@
                          SELEÇÃO DAS MEMÓRIAS
                     ================================================== -->
 
-                    <section class="treino-personalizado-selecao">
+                    <section class="treino-personalizado-selecao personalizado-panel" id="personalizadoEtapaNumeros" aria-labelledby="personalizadoNumerosTitulo" hidden>
 
                         <div class="treino-personalizado-selecao-header">
 
@@ -3802,9 +3865,7 @@
                                     MEMÓRIAS
                                 </span>
 
-                                <strong>
-                                    Escolha os números
-                                </strong>
+                                <strong id="personalizadoNumerosTitulo" tabindex="-1">Escolha os números</strong>
 
                             </div>
 
@@ -3815,6 +3876,15 @@
 
                         </div>
 
+
+                        <fieldset class="personalizado-ordem">
+                            <legend>Ordem do treinamento</legend>
+                            <div role="group" aria-label="Ordem do treinamento">
+                                <button type="button" data-personalizado-ordem="ordem" aria-pressed="true">Em ordem</button>
+                                <button type="button" data-personalizado-ordem="aleatorio" aria-pressed="false">Aleatório</button>
+                            </div>
+                        </fieldset>
+                        <button class="personalizado-primary" id="btnPersonalizadoIniciar" type="button" disabled>Iniciar</button>
 
                         <div class="treino-personalizado-acoes">
 
@@ -3832,6 +3902,7 @@
                         <div class="treino-personalizado-grid" id="treinoPersonalizadoGrid">
 
                         </div>
+
 
                     </section>
 
@@ -5743,19 +5814,37 @@
                  HOME — PALÁCIO MENTAL
             ================================================== -->
 
-            <section class="home-palacio home-v2" aria-label="Página inicial">
-<img class="home-portrait" src="assets/imagens/perfil/natan-fuentes.webp" alt="" fetchpriority="high">
-<div class="home-shade" aria-hidden="true"></div>
-<div class="home-brand"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M3 12 20 4l17 8H3Zm3 3h28M4 35h32M8 18v14m24-14v14M11 15v3m18-3v3"/><circle cx="20" cy="24" r="8"/><path d="M20 17v14m-3-11-2 3 2 3m6-6 2 3-2 3"/></svg><span>PALÁCIO<br>MENTAL</span></div>
-<header class="home-intro"><span class="home-eyebrow">MEMÓRIA EM MOVIMENTO</span><h1>Sua mente.<br>Seu maior<br>palácio.</h1></header>
-<section class="home-carousel-section" aria-label="Escolha seu caminho"><p class="home-carousel-label" style="visibility: hidden;">ESCOLHA SEU CAMINHO</p><div class="home-coverflow" role="region" aria-roledescription="carrossel" aria-label="Módulos de memória"><button class="home-path-card" id="btnMemoriaNumerica" type="button" data-title="Memória numérica"><img class="home-card-art" src="assets/imagens/memoria-numerica/numeros/05-lua.webp" alt="" loading="lazy"><span class="home-path-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
+            <section class="home-palacio home-dashboard" aria-label="Página inicial">
+                <img class="home-dashboard-background" src="assets/imagens/home/background/home-background.webp" alt="" fetchpriority="high">
+                <div class="home-dashboard-content">
+                <section class="home-dashboard-panel" aria-label="Escolha seu módulo">
+                    <button class="home-dashboard-card" id="btnMemoriaNumerica" type="button">
+                        <img src="assets/imagens/home/cards/home-memoria-numerica-card.webp" alt="" decoding="async">
+                        <span class="home-dashboard-copy"><strong>Memória <span>Numérica</span></strong><small>Treinamento de memória</small></span>
+                        <span class="home-dashboard-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span>
+                    </button>
+                    <button class="home-dashboard-card" id="btnPalacioBiblico" type="button">
+                        <img src="assets/imagens/home/cards/home-palacio-biblico-card.webp" alt="" decoding="async">
+                        <span class="home-dashboard-copy"><strong>Palácio <span>Bíblico</span></strong><small>Memorização de versículos</small></span>
+                        <span class="home-dashboard-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span>
+                    </button>
+                </section>
+                <nav class="home-dashboard-menu" aria-label="Menu da Home">
+                    <button id="btnConfig" type="button"><svg viewBox="0 0 24 24" aria-hidden="true">
 
-                                    <path
-                                        d="M9.2 4.2A3.4 3.4 0 0 1 12 2.8a3.4 3.4 0 0 1 2.8 1.4A3.5 3.5 0 0 1 19 7.6c0 .9-.35 1.75-.95 2.4A3.6 3.6 0 0 1 19 12.4a3.5 3.5 0 0 1-4.2 3.4A3.4 3.4 0 0 1 12 17.2a3.4 3.4 0 0 1-2.8-1.4A3.5 3.5 0 0 1 5 12.4c0-.9.35-1.75.95-2.4A3.5 3.5 0 0 1 5 7.6a3.5 3.5 0 0 1 4.2-3.4Z" />
+                    <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
 
-                                    <path d="M12 3v14" />
+                    <path
+                        d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.1a1.7 1.7 0 0 0-.4-1.1 1.7 1.7 0 0 0-1-.6 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H2.8v-4h.1A1.7 1.7 0 0 0 4 9.2a1.7 1.7 0 0 0 .6-1 1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V2.8h4v.1A1.7 1.7 0 0 0 14.8 4a1.7 1.7 0 0 0 1 .6 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.1.4.3.7.6 1 .3.2.7.4 1.1.4h.1v4h-.1a1.7 1.7 0 0 0-1.1.4c-.3.2-.5.6-.6 1Z" />
 
-                                </svg></span><strong>Memória<span>numérica</span></strong><small><span id="numerosDominados">0</span> / <span id="homeTotalMemorias">0</span> dominados</small></button>
+                </svg><span>Configurações</span></button>
+                    <button type="button" disabled aria-label="Biblioteca indisponível"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg><span>Biblioteca</span><small>Indisponível</small></button>
+                    <button type="button" disabled aria-label="Mais opções indisponíveis"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Mais opções</span><small>Indisponível</small></button>
+                </nav>
+                <p class="home-dashboard-credit">Desenvolvido por | Natan Fuentes - Digiex</p>
+                </div>
+                <!-- Acessos preservados para reorganização futura; fora da Home visível. -->
+                <div id="homeAcessosPreservados" hidden>
 <button class="home-path-card" id="btnMemoriaPratica" type="button" data-title="Memória na prática"><img class="home-card-art" src="assets/imagens/cenarios/compras/supermercado-01.webp" alt="" loading="lazy"><span class="home-path-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
 
                                     <path d="M12 3v18" />
@@ -5769,15 +5858,6 @@
                                     <circle cx="12" cy="12" r="3" />
 
                                 </svg></span><strong>Memória na<span>prática</span></strong><small>Aplicações reais</small></button>
-<button class="home-path-card" id="btnPalacioBiblico" type="button" data-title="Palácio bíblico"><img class="home-card-art" src="assets/imagens/home/palacio-home.webp" alt="" loading="lazy"><span class="home-path-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
-
-                                    <path d="M4 21V10l3-2v3h3V6l2-2 2 2v5h3V8l3 2v11" />
-
-                                    <path d="M2 21h20" />
-
-                                    <path d="M10 8h4" />
-
-                                </svg></span><strong>Palácio<span>bíblico</span></strong><small>Biblioteca bíblica</small></button>
 <button class="home-path-card" id="btnDominio" type="button" data-title="Modo domínio"><img class="home-card-art" src="assets/imagens/personagens/mago-memoria.png" alt="" loading="lazy"><span class="home-path-icon"><svg viewBox="0 0 24 24" aria-hidden="true">
 
                                     <path d="M12 2.5 19 5v5.5c0 4.8-2.7 8.6-7 11-4.3-2.4-7-6.2-7-11V5l7-2.5Z" />
@@ -5792,9 +5872,11 @@
                                     <path
                                         d="M12 8.2 13.2 10.7 16 11.1l-2 2 0.5 2.8-2.5-1.3-2.5 1.3.5-2.8-2-2 2.8-.4L12 8.2Z" />
 
-                                </svg></span><strong>Revisão<span>inteligente</span></strong><small><span id="revisoesPendentes">0</span> pendentes</small></button></div><div class="home-carousel-dots"><button type="button" aria-label="Selecionar Memória numérica" aria-pressed="false"></button><button type="button" aria-label="Selecionar Memória na prática" aria-pressed="false"></button><button type="button" aria-label="Selecionar Palácio bíblico" aria-pressed="false"></button><button type="button" aria-label="Selecionar Modo domínio" aria-pressed="false"></button><button type="button" aria-label="Selecionar Revisão inteligente" aria-pressed="false"></button></div><span id="homeCarouselStatus" class="home-sr-only" aria-live="polite"></span></section>
-<p class="home-status" id="homeStatus" role="status"></p>
-</section>
+                                </svg></span><strong>Revisão<span>inteligente</span></strong><small><span id="revisoesPendentes">0</span> pendentes</small></button>
+                    <span id="numerosDominados">0</span><span id="homeTotalMemorias">0</span>
+                </div>
+                <p class="home-status" id="homeStatus" role="status" hidden></p>
+            </section>
 
             <section class="app-screen pb-tela" id="telaBibliotecaBiblica" aria-labelledby="tituloBibliotecaBiblica" hidden>
                 <header class="pb-hero">
