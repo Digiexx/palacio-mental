@@ -28,86 +28,6 @@
 
 <body>
 
-    <!-- Abertura temporária de teste; nao altera a splash nativa/PWA. -->
-    <button id="aberturaTemporaria" type="button" aria-label="Palácio Mental. Toque para ignorar a abertura" hidden>
-        <span class="abertura-temporaria-conteudo">
-            <img src="assets/icons/logo-branca.png" width="512" height="512" alt="" decoding="async">
-            <span>Palácio Mental</span>
-        </span>
-    </button>
-    <script>
-    (() => {
-        const abertura = document.getElementById('aberturaTemporaria');
-        const movimentoReduzido = matchMedia('(prefers-reduced-motion: reduce)');
-        const navegacao = performance.getEntriesByType('navigation')[0];
-        const chaveSessao = 'palacioMentalAberturaTemporariaVista';
-        // Apenas uma carga nova na Home; recargas e historico podem retomar atividades.
-        try {
-            if (sessionStorage.getItem(chaveSessao)) return;
-            sessionStorage.setItem(chaveSessao, '1');
-        } catch { return; }
-        if (movimentoReduzido.matches || document.hidden ||
-            (navegacao && navegacao.type !== 'navigate') ||
-            (history.state?.tela && history.state.tela !== 'home')) return;
-
-        let encerrada = false;
-        let saida, fim, observador;
-        const focoAnterior = document.activeElement;
-        function encerrar() {
-            if (encerrada) return;
-            encerrada = true;
-            clearTimeout(saida);
-            clearTimeout(fim);
-            observador?.disconnect();
-            abertura.hidden = true;
-            abertura.classList.remove('is-leaving');
-            document.documentElement.classList.remove('pm-abertura-ativa');
-            abertura.removeEventListener('click', encerrar);
-            abertura.removeEventListener('keydown', teclado);
-            document.removeEventListener('visibilitychange', visibilidade);
-            window.removeEventListener('pagehide', encerrar);
-            window.removeEventListener('popstate', encerrar);
-            movimentoReduzido.removeEventListener('change', encerrar);
-            if (document.activeElement === abertura) {
-                abertura.blur();
-                if (focoAnterior?.isConnected) focoAnterior.focus({preventScroll:true});
-            }
-            window.dispatchEvent(new Event('pm-abertura-encerrada'));
-        }
-        function teclado(evento) { if (evento.key === 'Escape') encerrar(); }
-        function visibilidade() { if (document.hidden) encerrar(); }
-        function conferirAtividade() {
-            if (encerrada) return;
-            const home = document.querySelector('.home-palacio');
-            if (!home || home.hidden || (history.state?.tela && history.state.tela !== 'home')) {
-                encerrar();
-                return;
-            }
-            observador = new MutationObserver(() => {
-                if (home.hidden || (history.state?.tela && history.state.tela !== 'home')) encerrar();
-            });
-            observador.observe(document.querySelector('.app-shell'), {subtree:true, attributes:true, attributeFilter:['hidden']});
-        }
-        abertura.hidden = false;
-        document.documentElement.classList.add('pm-abertura-ativa');
-        abertura.focus({preventScroll:true});
-        abertura.addEventListener('click', encerrar);
-        abertura.addEventListener('keydown', teclado);
-        document.addEventListener('visibilitychange', visibilidade);
-        window.addEventListener('pagehide', encerrar);
-        window.addEventListener('popstate', encerrar);
-        movimentoReduzido.addEventListener('change', encerrar);
-        document.addEventListener('DOMContentLoaded', conferirAtividade, {once:true});
-        saida = setTimeout(() => {
-            document.documentElement.classList.remove('pm-abertura-ativa');
-            abertura.classList.add('is-leaving');
-        }, 1000);
-        fim = setTimeout(encerrar, 1200);
-    })();
-    </script>
-
-
-
     <!-- =====================================================
          APLICATIVO PRINCIPAL
     ====================================================== -->
@@ -214,42 +134,21 @@
             </p>
 
 
-            <label class="app-theme-label"
-                for="selectTemaApp">
-
-                Aparência
-
-            </label>
-
-
-            <select class="app-theme-select"
-                id="selectTemaApp">
-
-                <option value="magico">
-                    Mágico — preto e roxo
-                </option>
-
-                <option value="medieval">
-                    Medieval — escuro e bronze
-                </option>
-
-                <option value="futurista">
-                    Futurista — azul e ciano
-                </option>
-
-            </select>
-
-
             <label class="app-theme-label" for="selectFundoHome">Fundo da Home</label><select class="app-theme-select" id="selectFundoHome"><option value="dourado">Luzes douradas</option><option value="cinza">Luzes cinza prateadas</option><option value="roxo">Roxo escuro</option></select>
             <div class="appearance-controls" id="appPreferenceControls">
-                <div class="tema-brilho-linha">
-                    <div class="tema-brilho-texto">
-                        <strong id="imageNavigationLabel">Navegação das imagens</strong>
-                        <small id="imageNavigationStatus">Setas</small>
+                <fieldset class="image-navigation-group">
+                    <legend>Navegação das imagens</legend>
+                    <div class="tema-brilho-linha">
+                        <span class="tema-brilho-texto" id="imageNavigationArrowsLabel">Setas</span>
+                        <button class="tema-interruptor" id="imageNavigationArrows" type="button" role="switch"
+                            data-image-navigation="arrows" aria-checked="true" aria-labelledby="imageNavigationArrowsLabel"></button>
                     </div>
-                    <button class="tema-interruptor" id="imageNavigationSwitch" type="button" role="switch"
-                        aria-checked="false" aria-labelledby="imageNavigationLabel" aria-describedby="imageNavigationStatus"></button>
-                </div>
+                    <div class="tema-brilho-linha">
+                        <span class="tema-brilho-texto" id="imageNavigationCarouselLabel">Carrossel</span>
+                        <button class="tema-interruptor" id="imageNavigationCarousel" type="button" role="switch"
+                            data-image-navigation="carousel" aria-checked="false" aria-labelledby="imageNavigationCarouselLabel"></button>
+                    </div>
+                </fieldset>
             </div>
 <p class="app-theme-note">
                 Sua escolha será salva neste navegador.

@@ -67,22 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     status.textContent = 'Este módulo ainda está em desenvolvimento.';
   }));
   const home = document.querySelector('.home-palacio');
-  let reflexoHomeExecutado = false;
-  function atualizarReflexoHome() {
-    if (home.hidden) {
-      home.classList.remove('is-entering');
-      reflexoHomeExecutado = false;
-      return;
-    }
-    if (reflexoHomeExecutado || document.getElementById('aberturaTemporaria')?.hidden === false ||
-        document.getElementById('appInstallBanner')?.hidden === false) return;
-    reflexoHomeExecutado = true;
-    home.classList.add('is-entering');
-  }
-  ['aberturaTemporaria', 'appInstallBanner'].forEach(id => {
-    const camada = document.getElementById(id);
-    if (camada) new MutationObserver(atualizarReflexoHome).observe(camada, {attributes:true, attributeFilter:['hidden']});
-  });
   const nav = document.querySelector('.home-nav button');
   const navArea = nav.closest('.home-nav');
   const handle = document.createElement('button');
@@ -136,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   function sync() {
     document.body.classList.toggle('home-aberta', !home.hidden);
-    atualizarReflexoHome();
     nav.classList.toggle('active', !home.hidden);
     if (!home.hidden) nav.setAttribute('aria-current','page'); else nav.removeAttribute('aria-current');
     setNavOpen(false);
@@ -179,12 +162,16 @@ document.addEventListener('DOMContentLoaded', () => {
   interruptorBrilho.setAttribute('aria-describedby', descricaoBrilho.id);
 
   linhaBrilho.append(textoBrilho, interruptorBrilho);
+  const grupoBrilho = document.createElement('section');
+  grupoBrilho.className = 'appearance-glow-group';
+  grupoBrilho.setAttribute('aria-labelledby', 'tituloBrilhoInicio');
+  grupoBrilho.append(linhaBrilho);
 
   if (notaAparencia) {
-    document.getElementById('appPreferenceControls').append(linhaBrilho);
+    document.getElementById('appPreferenceControls').append(grupoBrilho);
     notaAparencia.textContent = 'Preferências salvas automaticamente.';
   } else {
-    painelAparencia?.append(linhaBrilho);
+    painelAparencia?.append(grupoBrilho);
   }
 
   function aplicarBrilhoInicio() {

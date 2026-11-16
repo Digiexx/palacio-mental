@@ -273,74 +273,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // TEMAS — BOTÕES DE ESCOLHA
     // =====================================================
 
-    if (selectTemaApp && dialogTemasApp) {
-
-        const grupoTemas = document.createElement("div");
-        grupoTemas.className = "temas-opcoes";
-        grupoTemas.setAttribute("role", "group");
-        grupoTemas.setAttribute("aria-label", "Tema do aplicativo");
-
-        const botoesTemas = [];
-
-        function atualizarBotoesTemas() {
-
-            botoesTemas.forEach(botao => {
-
-                botao.setAttribute(
-                    "aria-pressed",
-                    String(botao.dataset.tema === selectTemaApp.value)
-                );
-
-            });
-
-        }
-
-        [
-            ["magico", "Mágico"],
-            ["medieval", "Medieval"],
-            ["futurista", "Futurista"]
-        ].forEach(([valor, nome]) => {
-
-            const botao = document.createElement("button");
-            botao.type = "button";
-            botao.className = "tema-opcao";
-            botao.dataset.tema = valor;
-            botao.textContent = nome;
-
-            botao.addEventListener("click", () => {
-
-                selectTemaApp.value = valor;
-                selectTemaApp.dispatchEvent(
-                    new Event("change", { bubbles: true })
-                );
-                atualizarBotoesTemas();
-
-            });
-
-            botoesTemas.push(botao);
-            grupoTemas.append(botao);
-
-        });
-
-        selectTemaApp.after(grupoTemas);
-        selectTemaApp.style.display = "none";
-
-        selectTemaApp.addEventListener(
-            "change",
-            atualizarBotoesTemas
-        );
-
-        dialogTemasApp.addEventListener("toggle", () => {
-
-            if (dialogTemasApp.open) atualizarBotoesTemas();
-
-        });
-
-        atualizarBotoesTemas();
-
-    }
-
-
     // =====================================================
     // ABRIR PAINEL
     // =====================================================
@@ -370,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const temaSelecionado =
                     dialogTemasApp.querySelector(
-                        '.tema-opcao[data-tema][aria-pressed="true"]'
+                        '[data-image-navigation][aria-checked="true"]'
                     );
 
                 if (temaSelecionado) {
@@ -3243,32 +3175,30 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("fixarGallery"), fixarImage, {navigation: navegacaoImagens}
     );
     fixarImageArea.after(galeriaFixar.dots);
-    const interruptorNavegacaoImagens = document.getElementById("imageNavigationSwitch");
+    const interruptoresNavegacaoImagens = document.querySelectorAll('[data-image-navigation]');
     function atualizarOpcoesNavegacaoImagens() {
-        interruptorNavegacaoImagens.setAttribute("aria-checked", String(navegacaoImagens === "carousel"));
-        document.getElementById("imageNavigationStatus").textContent =
-            navegacaoImagens === "carousel" ? "Carrossel" : "Setas";
+        interruptoresNavegacaoImagens.forEach(botao => {
+            botao.setAttribute('aria-checked', String(botao.dataset.imageNavigation === navegacaoImagens));
+        });
     }
     function definirNavegacaoImagens(modo) {
+        if (!['arrows', 'carousel'].includes(modo) || modo === navegacaoImagens) return;
         navegacaoImagens = modo;
         galeriaAprender.setNavigation(navegacaoImagens);
+        galeriaFixar.setNavigation(navegacaoImagens);
         atualizarOpcoesNavegacaoImagens();
         try { localStorage.setItem(CHAVE_NAVEGACAO_IMAGENS, navegacaoImagens); } catch {}
     }
-    interruptorNavegacaoImagens.addEventListener("click", () => {
-        definirNavegacaoImagens(navegacaoImagens === "carousel" ? "arrows" : "carousel");
-    });
-    interruptorNavegacaoImagens.addEventListener("keydown", event => {
-        if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
-        event.preventDefault();
-        definirNavegacaoImagens(event.key === "ArrowRight" ? "carousel" : "arrows");
+    interruptoresNavegacaoImagens.forEach(botao => {
+        // Tocar na opção ativa a mantém ligada: nunca existem duas opções desligadas.
+        botao.addEventListener('click', () => definirNavegacaoImagens(botao.dataset.imageNavigation));
+        botao.addEventListener('keydown', event => {
+            if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+            event.preventDefault();
+            definirNavegacaoImagens(event.key === 'ArrowRight' ? 'carousel' : 'arrows');
+        });
     });
     atualizarOpcoesNavegacaoImagens();
-    // Fixar acompanha o controle de preferência sem alterar os eventos de Aprender.
-    interruptorNavegacaoImagens.addEventListener("click", () => galeriaFixar.setNavigation(navegacaoImagens));
-    interruptorNavegacaoImagens.addEventListener("keydown", event => {
-        if (["ArrowLeft", "ArrowRight"].includes(event.key)) galeriaFixar.setNavigation(navegacaoImagens);
-    });
     new MutationObserver(() => {
         if (!telaAprenderMemoria.hidden) galeriaAprender.select(0);
     }).observe(telaAprenderMemoria, {attributes: true, attributeFilter: ["hidden"]});
@@ -15114,14 +15044,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // MOSTRAR CONVITE
     // =====================================================
 
-    window.addEventListener("pm-abertura-encerrada", () => {
-        if (pwaInstallPrompt) mostrarBannerInstalacao();
-    }, {once:true});
-
     function mostrarBannerInstalacao() {
-
-        // Aguarda a abertura: o convite torna os demais elementos inert.
-        if (document.getElementById("aberturaTemporaria")?.hidden === false) return;
 
         if (
             !appInstallBanner ||

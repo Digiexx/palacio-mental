@@ -25893,35 +25893,6 @@ body:has(#telaDesafiarMemoria:not([hidden])) .main-content { padding-top:0; }
     background:linear-gradient(155deg,#302738,#17121f); border-color:#9473ba; color:#fff; box-shadow:none;
 }
 
-/* Abertura temporária: logo oficial intacta; somente opacity e transform. */
-#aberturaTemporaria {
-    all:unset; box-sizing:border-box; position:fixed; inset:0; z-index:100000;
-    display:grid; place-items:center; width:100%; height:100%; padding:24px;
-    background:#12091F; color:#fff; cursor:pointer; text-align:center;
-    opacity:1; transition:opacity 200ms ease; -webkit-tap-highlight-color:transparent;
-}
-#aberturaTemporaria[hidden] { display:none; }
-#aberturaTemporaria .abertura-temporaria-conteudo {
-    display:flex; flex-direction:column; align-items:center; gap:20px;
-    animation:pm-abertura-entrada 400ms ease-out both;
-}
-#aberturaTemporaria img { display:block; width:clamp(136px,40vw,180px); height:auto; object-fit:contain; }
-#aberturaTemporaria .abertura-temporaria-conteudo > span {
-    font-family:system-ui,sans-serif; font-size:clamp(24px,6vw,28px); font-weight:500; line-height:1.3;
-}
-#aberturaTemporaria.is-leaving { opacity:0; }
-#aberturaTemporaria:focus-visible { outline:2px solid #c4a2f5; outline-offset:-8px; }
-html.pm-abertura-ativa .app-shell { visibility:hidden; }
-@keyframes pm-abertura-entrada {
-    from { opacity:0; transform:translateY(10px) scale(.98); }
-    to { opacity:1; transform:translateY(0) scale(1); }
-}
-@media(prefers-reduced-motion:reduce) {
-    #aberturaTemporaria { display:none; transition:none; }
-    #aberturaTemporaria .abertura-temporaria-conteudo { animation:none; }
-    html.pm-abertura-ativa .app-shell { visibility:visible; }
-}
-
 /* Convite de instalação: visual compacto, isolado da abertura e das outras telas. */
 #appInstallBanner {
     padding:max(20px,env(safe-area-inset-top)) 18px max(20px,env(safe-area-inset-bottom));
@@ -25957,4 +25928,10 @@ html.pm-abertura-ativa .app-shell { visibility:hidden; }
 }
 @media(prefers-reduced-motion:reduce) {
     #appInstallBanner :is(.app-install-primary,.app-install-secondary) { transition:none; }
+}
+
+/* Realce nativo de toque transparente; foco de teclado continua disponível. */
+html { -webkit-tap-highlight-color:transparent; }
+:where(button,a,input,select,textarea,label,[role="button"],[role="switch"],[tabindex]) {
+    -webkit-tap-highlight-color:transparent;
 }
