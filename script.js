@@ -5578,9 +5578,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const telasApp = {
 
+        homeBiblica: {
+            elemento: document.getElementById("telaHomeBiblica"),
+            pai: "home"
+        },
         bibliotecaBiblica: {
             elemento: document.getElementById("telaBibliotecaBiblica"),
-            pai: "home"
+            pai: "homeBiblica"
         },
         livroBiblico: {
             elemento: document.getElementById("telaLivroBiblico"),
@@ -5668,13 +5672,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // GERENCIADOR CENTRAL — EXIBIR TELA
     // =====================================================
 
-    const bibliotecaBiblica = globalThis.PalacioBiblico?.iniciarBiblioteca({navegar: navegarParaTela});
+    const bibliotecaBiblica = globalThis.PalacioBiblico?.iniciarBiblioteca({
+        navegar: navegarParaTela, fechar: () => history.back()
+    });
+    const homeBiblica = globalThis.PalacioBiblico?.iniciarHomeBiblica({
+        elemento: document.getElementById("telaHomeBiblica"), navegar: navegarParaTela,
+        abrirBiblioteca(filtro) {
+            bibliotecaBiblica.selecionarFiltro(filtro, true);
+            navegarParaTela("bibliotecaBiblica");
+        }
+    });
     const cenarioJoao = globalThis.PalacioBiblico?.iniciarCenarioJoao();
     document.getElementById("btnExplorarCenarioJoao")?.addEventListener("click", () => {
         if (document.getElementById("telaLivroBiblico").dataset.livro === "JHN") navegarParaTela("cenarioJoao");
     });
-    document.getElementById("btnPalacioBiblico")?.addEventListener("click", () => navegarParaTela("bibliotecaBiblica"));
+    document.getElementById("btnPalacioBiblico")?.addEventListener("click", () => navegarParaTela("homeBiblica"));
 
+    let origemBiblioteca = null, rolagemOrigemBiblioteca = 0;
     function exibirTelaApp(
         nomeTela
     ) {
@@ -5702,6 +5716,10 @@ document.addEventListener("DOMContentLoaded", () => {
         // ESCONDE TODAS AS TELAS CADASTRADAS
         // =================================================
 
+        if (nomeTela === "bibliotecaBiblica" && !origemBiblioteca) {
+            origemBiblioteca = Object.keys(telasApp).find(nome => nome !== "bibliotecaBiblica" && !telasApp[nome].elemento?.hidden) || "homeBiblica";
+            rolagemOrigemBiblioteca = window.scrollY;
+        }
         Object.values(
             telasApp
         ).forEach(
@@ -5727,7 +5745,10 @@ document.addEventListener("DOMContentLoaded", () => {
         telaDestino.elemento.hidden =
             false;
 
-        if (nomeTela === "bibliotecaBiblica") bibliotecaBiblica?.abrir();
+        if (nomeTela === "bibliotecaBiblica") telasApp[origemBiblioteca].elemento.hidden = false;
+
+        if (nomeTela === "bibliotecaBiblica") bibliotecaBiblica?.abrir(); else bibliotecaBiblica?.suspender();
+        if (nomeTela === "homeBiblica") homeBiblica?.abrir(); else homeBiblica?.suspender();
         if (nomeTela === "cenarioJoao") cenarioJoao?.abrir(); else cenarioJoao?.suspender();
 
 
@@ -5836,6 +5857,12 @@ document.addEventListener("DOMContentLoaded", () => {
         nomeTela,
         registrarHistorico = true
     ) {
+        const painelBiblioteca = document.getElementById("painelBibliotecaBiblica");
+        if (nomeTela !== "bibliotecaBiblica" && painelBiblioteca.open) {
+            bibliotecaBiblica.encerrar().then(() => navegarParaTela(nomeTela, registrarHistorico));
+            return;
+        }
+        const restaurarOrigem = nomeTela === origemBiblioteca;
 
         // Proteção do rascunho pelo controlador central, inclusive no popstate existente.
         if (nomeTela !== "cenarioJoao" && !document.getElementById("telaCenarioJoao").hidden && !cenarioJoao.permitirSaida()) {
@@ -5861,6 +5888,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // =================================================
         // EXIBE A TELA
         // =================================================
+
+        // Os módulos mantêm o pai original quando abertos fora da central numérica.
+        if (registrarHistorico && ["memoriaPratica", "revisao"].includes(nomeTela) && telasApp[nomeTela].elemento.hidden) {
+            telasApp[nomeTela].pai = telaMemoriaNumerica.hidden ? "home" : "memoriaNumerica";
+        }
 
         if (modosOrigemPersonalizado[nomeTela] && telasApp[nomeTela].elemento.hidden) {
             const peloPersonalizado = !telaTreinoPersonalizado.hidden;
@@ -5911,10 +5943,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        if (restaurarOrigem) {
+            window.scrollTo({top: rolagemOrigemBiblioteca, behavior: "instant"});
+            origemBiblioteca = null;
+        } else if (nomeTela !== "bibliotecaBiblica") {
+            window.scrollTo({top: 0, behavior: "smooth"});
+        }
 
     }
 
@@ -11824,6 +11858,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            // Neste fluxo, Voltar/Avançar restaura a entrada real do histórico.
+            const rotasBiblicas = ["homeBiblica", "bibliotecaBiblica", "livroBiblico", "cenarioJoao"];
+            if (rotasBiblicas.includes(evento.state?.tela) ||
+                rotasBiblicas.some(nome => !telasApp[nome].elemento.hidden)) {
+                const destino = evento.state?.tela;
+                navegarParaTela(telasApp[destino] ? destino : "home", false);
+                return;
+            }
+
 
             // =============================================
             // DESCOBRE QUAL TELA ESTÁ ABERTA
@@ -13129,9 +13172,13 @@ document.addEventListener("DOMContentLoaded", () => {
         abrirFixarMemoria
     );
 
-    const featuredTrack = document.querySelector("#telaMemoriaNumerica .memory-featured-track");
     document.getElementById("btnDesafiarDestaque")?.addEventListener("click", abrirDesafiarMemoria);
-    const featuredDots = document.querySelector("#telaMemoriaNumerica .memory-featured-dots");
+    // Reutiliza os eventos originais, incluindo a preparação real da revisão.
+    document.getElementById("btnMemoriaPraticaComplementar").addEventListener("click", () => btnMemoriaPratica.click());
+    document.getElementById("btnRevisaoComplementar").addEventListener("click", () => btnRevisao.click());
+    document.querySelectorAll("#telaMemoriaNumerica .memory-featured").forEach(carrossel => {
+        const featuredTrack = carrossel.querySelector(".memory-featured-track");
+        const featuredDots = carrossel.querySelector(".memory-featured-dots");
     if (featuredTrack && featuredDots) {
         const cards = [...featuredTrack.querySelectorAll(".memory-featured-card")];
         const snapPosition = card => {
@@ -13173,6 +13220,8 @@ document.addEventListener("DOMContentLoaded", () => {
         new ResizeObserver(updateFeaturedDot).observe(featuredTrack);
         featuredDots.hidden = cards.length < 2;
     }
+
+    });
 
     if (btnVoltarTabelaMental) {
 

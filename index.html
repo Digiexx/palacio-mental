@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="temas.css">
     <link rel="stylesheet" href="assets/palacio-biblico/biblioteca.css">
     <link rel="stylesheet" href="assets/palacio-biblico/cenario.css">
+    <link rel="stylesheet" href="assets/palacio-biblico/home-biblica.css">
 
 </head>
 
@@ -2569,6 +2570,29 @@
 
                     </div>
 
+                </section>
+
+                <section class="memory-featured memory-secondary" id="memorySecondaryCarousel" aria-label="Mais formas de treinar a memória">
+                    <ul class="memory-featured-track">
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card memory-featured-card--pratica" id="btnMemoriaPraticaComplementar" type="button">
+                                <span class="memory-featured-copy"><strong>Memória na Prática</strong><span>Treine em situações do dia a dia</span></span>
+                                <span class="memory-featured-chevron" aria-hidden="true">›</span>
+                            </button>
+                        </li>
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card memory-featured-card--dominio" id="btnDominioComplementar" type="button" disabled aria-describedby="dominioComplementarStatus">
+                                <span class="memory-featured-copy"><strong>Modo Domínio</strong><span id="dominioComplementarStatus">Em desenvolvimento</span></span>
+                            </button>
+                        </li>
+                        <li class="memory-featured-item">
+                            <button class="memory-featured-card memory-featured-card--revisao" id="btnRevisaoComplementar" type="button">
+                                <span class="memory-featured-copy"><strong>Revisão Inteligente</strong><span>Reforce suas memórias</span></span>
+                                <span class="memory-featured-chevron" aria-hidden="true">›</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="memory-featured-dots" role="group" aria-label="Posição no carrossel complementar" hidden></div>
                 </section>
 
                 <!-- =================================================
@@ -5777,36 +5801,40 @@
                 <p class="home-status" id="homeStatus" role="status" hidden></p>
             </section>
 
-            <section class="app-screen pb-tela" id="telaBibliotecaBiblica" aria-labelledby="tituloBibliotecaBiblica" hidden>
-                <header class="pb-hero">
-                    <img class="pb-hero-imagem" src="assets/imagens/palacio-biblico/biblioteca-topo.webp" alt="" width="1200" height="800">
-                    <div class="pb-hero-texto">
-                        <span class="pb-selo">PALÁCIO BÍBLICO</span>
-                        <h1 id="tituloBibliotecaBiblica">Biblioteca Bíblica</h1>
-                        <p>Memorize versículos com cenários e associações visuais.</p>
-                    </div>
-                </header>
-                <div class="pb-conteudo">
-                    <label class="pb-busca" for="buscaBibliotecaBiblica">
+            <section class="app-screen pb-dashboard" id="telaHomeBiblica" aria-label="Home do Palácio Bíblico" hidden></section>
+            <section class="app-screen pb-biblioteca" id="telaBibliotecaBiblica" aria-label="Livros da Bíblia" hidden>
+                <div class="pb-contexto" aria-hidden="true">Palácio Bíblico</div>
+                <dialog class="pb-sheet" id="painelBibliotecaBiblica" aria-labelledby="tituloBibliotecaBiblica" aria-describedby="contadorBibliotecaBiblica">
+                  <button id="fecharBibliotecaBiblica" class="pb-sheet-fechar" type="button" aria-label="Fechar Biblioteca Bíblica" autofocus>×</button>
+                  <div class="pb-sheet-topo">
+                    <span class="pb-sheet-alca" aria-hidden="true"></span>
+                    <header class="pb-sheet-titulo">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="pb-reflexo-biblia" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#795337"/><stop offset=".5" stop-color="#c19a70"/><stop offset="1" stop-color="#A6794D"/></linearGradient></defs><path stroke="url(#pb-reflexo-biblia)" d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/></svg>
+                        <div><h1 id="tituloBibliotecaBiblica">Livros da Bíblia</h1><p id="contadorBibliotecaBiblica">Antigo e Novo Testamento</p></div>
+                    </header>
+                    <div class="pb-busca" role="search" aria-label="Pesquisar livros">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
-                        <span class="pb-sr">Buscar livro da Bíblia</span>
-                        <input id="buscaBibliotecaBiblica" type="search" placeholder="Buscar livro da Bíblia…" autocomplete="off">
-                    </label>
+                        <label class="pb-sr" for="buscaBibliotecaBiblica">Buscar livro da Bíblia</label>
+                        <input id="buscaBibliotecaBiblica" type="search" placeholder="Qual livro deseja encontrar?" autocomplete="off">
+                        <button id="limparBuscaBiblica" class="pb-limpar-busca" type="button" aria-label="Limpar pesquisa" hidden><span aria-hidden="true">×</span></button>
+                    </div>
                     <div class="pb-filtros" role="group" aria-label="Filtrar livros">
                         <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
-                        <button type="button" disabled title="Disponível em uma próxima etapa">Em treino</button>
-                        <button type="button" disabled title="Disponível em uma próxima etapa">Concluídos</button>
+                        <button type="button" disabled title="Disponível em uma próxima etapa" aria-describedby="indisponibilidadeFiltrosBiblicos">Em treino</button>
+                        <button type="button" disabled title="Disponível em uma próxima etapa" aria-describedby="indisponibilidadeFiltrosBiblicos">Concluídos</button>
                         <button type="button" data-filtro="favoritos" aria-pressed="false">Favoritos</button>
                     </div>
-                    <p class="pb-nota">Em treino e Concluídos estarão disponíveis em uma próxima etapa.</p>
+                    <p class="pb-sr" id="indisponibilidadeFiltrosBiblicos">Em treino e Concluídos estarão disponíveis em uma próxima etapa.</p>
+                  </div>
+                  <div class="pb-sheet-scroll" id="rolagemBibliotecaBiblica" tabindex="0" role="region" aria-label="Lista rolável de livros">
                     <p class="pb-status" id="statusBibliotecaBiblica" role="status"></p>
                     <p class="pb-erro" id="erroBibliotecaBiblica" role="alert" hidden></p>
                     <button class="pb-tentar" id="tentarBibliotecaBiblica" type="button" hidden>Tentar novamente</button>
-                    <h2 class="pb-grupo">Novo Testamento</h2>
-                    <ul class="pb-lista" id="livrosBibliotecaBiblica"></ul>
+                    <div id="livrosBibliotecaBiblica"></div>
                     <p class="pb-vazio" id="vazioBibliotecaBiblica" role="status" hidden>Nenhum livro encontrado para esta busca e filtro.</p>
-                    <p class="pb-rodape">Seu acervo começa com uma associação.</p>
-                </div>
+                  </div>
+                  <div class="pb-sheet-rodape" aria-hidden="true"><svg class="pb-indicador-rolagem" viewBox="0 0 24 24"><path d="m7 6 5 4 5-4M7 13l5 4 5-4"/></svg></div>
+                </dialog>
             </section>
             <section class="app-screen pb-tela" id="telaLivroBiblico" aria-labelledby="tituloLivroBiblico" hidden>
                 <header class="pb-hero pb-hero-livro">
@@ -5932,10 +5960,12 @@
     <script src="assets/palacio-biblico/db.js"></script>
     <script src="assets/palacio-biblico/repositorio.js"></script>
     <script src="assets/palacio-biblico/catalogo.js"></script>
+    <script src="assets/palacio-biblico/indice-biblico.js"></script>
     <script src="assets/palacio-biblico/biblioteca.js"></script>
     <script src="assets/palacio-biblico/cenarios/joao.js"></script>
     <script src="assets/palacio-biblico/editor-cenario.js"></script>
     <script src="assets/palacio-biblico/cenario.js"></script>
+    <script src="assets/palacio-biblico/home-biblica.js"></script>
     <script src="script.js"></script>
     <script src="home.js"></script>
 

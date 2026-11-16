@@ -1,5 +1,5 @@
 const CACHE_NAME =
-    "palacio-mental-variacoes-v1";
+    "palacio-mental-v3.4";
 
 
 const ARQUIVOS_CACHE = [
@@ -14,6 +14,9 @@ const ARQUIVOS_CACHE = [
     "./assets/palacio-biblico/db.js",
     "./assets/palacio-biblico/repositorio.js",
     "./assets/palacio-biblico/catalogo.js",
+    "./assets/palacio-biblico/indice-biblico.js",
+    "./assets/palacio-biblico/home-biblica.js",
+    "./assets/palacio-biblico/home-biblica.css",
     "./assets/palacio-biblico/biblioteca.js",
     "./assets/palacio-biblico/biblioteca.css",
     "./assets/palacio-biblico/cenarios/joao.js",
@@ -22,10 +25,22 @@ const ARQUIVOS_CACHE = [
     "./assets/palacio-biblico/cenario.css",
     "./assets/imagens/palacio-biblico/joao/cenario-01.webp",
     "./assets/imagens/palacio-biblico/biblioteca-topo.webp",
-    "./assets/imagens/palacio-biblico/joao.webp",
-    "./assets/imagens/palacio-biblico/filipenses.webp",
-    "./assets/imagens/memoria-numerica/central-numerica-topo.webp",
+    "./assets/imagens/palacio-biblico/topo livros/joao.webp",
+    "./assets/imagens/palacio-biblico/topo livros/filipenses.webp",
+    "./assets/imagens/palacio-biblico/home-palacio-biblico/dfgt.webp",
+    "./assets/imagens/palacio-biblico/home-palacio-biblico/biblia-medalhao.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/01-genesis.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/02-exodo.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/40-mateus.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/41-marcos.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/42-lucas.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/43-joao.webp",
+    "./assets/imagens/palacio-biblico/livros-menu/50-filipenses.webp",
+    "./assets/imagens/memoria-numerica/memoria-numerica-topo.webp",
     "./assets/imagens/memoria-numerica/tabela-mental-topo.webp",
+    "./assets/imagens/memoria-numerica/carrossel/memoria-na-pratica.webp",
+    "./assets/imagens/memoria-numerica/carrossel/modo-dominio.webp",
+    "./assets/imagens/memoria-numerica/carrossel/revisao-inteligente.webp",
     "./assets/banco-memoria.js/banco-memoria.js",
     "./assets/variacoes-memoria.js",
     "./assets/banco-memoria-pratica.js/banco-memoria-pratica.js",

@@ -1,0 +1,603 @@
+
+# V3.4 — preparação final validada para commit local
+
+Base: `main`, HEAD anterior `b545e9a` (V3.3). Mensagem autorizada: `V3.4 - Carrossel Memoria Numerica e melhorias Palacio Biblico`. Sem push, deploy ou publicação. Relatório preparado antes da criação do commit.
+
+## Estado real
+
+- Cenário `assets/imagens/palacio-biblico/joao/cenario-01.webp` restaurado exclusivamente do HEAD `b545e9a`, com autorização específica. Bytes idênticos ao original (660262); imagem 1672×941 compatível com a geometria existente. Nenhuma outra exclusão restaurada.
+- Biblioteca com 66 livros em ordem canônica, painel Black Minimal/Gradient, busca sem acentos e limpeza, filtros, favoritos com toast, cartões diagonais e efeito bronze, navegação e retorno.
+- Capas de Mateus, Marcos, Lucas, João e Filipenses em `livros-menu/`. Cabeçalhos originais de João e Filipenses em `topo livros/` (grafia real com espaço), independentes das capas. Mateus abre uma tela de preparação; Marcos e Lucas permanecem sem conteúdo implementado.
+- Levítico não solicita imagem inexistente; utiliza placeholder. Números ainda não possui imagem mapeada; seu arquivo sem uso fica fora desta entrega.
+- Memória Numérica: carrosséis de 4 e 3 cartões, prática e revisão funcionais, Modo Domínio desabilitado. Índice gerado pelo build: 38 números e 150 variações existentes, sem substituir associações pessoais.
+- Cache identificado como `palacio-mental-v3.4`, com 48 entradas existentes, incluindo cenário, módulos, capas, cabeçalhos, artes da Home bíblica e segundo carrossel. Mantidas estratégia network-first, `reload`, `no-store`, `skipWaiting` e `clients.claim`. Sem alteração do esquema ou limpeza de dados pessoais.
+
+## Testes finais
+
+- `scripts/build.cjs` executado com sucesso; site gerado em pasta temporária `palacio-site-VwugEq`. O índice `assets/variacoes-memoria.js` foi regenerado e integra a seleção.
+- Validação no artefato do build com Chrome headless e perfil descartável. As suítes existentes foram servidas separadamente; não integram o artefato de produção. Nenhum dado real foi usado.
+- Biblioteca em 360×800, 412×924 e 430×932: 66 cartões e sem rolagem horizontal.
+- Cinco capas decodificadas; cabeçalhos de Mateus, João e Filipenses carregados. Cenário de João abre com imagem 1672×941 sem erro.
+- Carrosséis, prática e revisão verificados; índice com 38 números e 150 imagens confirmado no build.
+- Service Worker ativado com cache V3.4 e 48 entradas. Recarga em offline simulado abre Home e Biblioteca com 66 livros; favorito preservado. Cenário, cabeçalhos, arte da Home e arte do segundo carrossel retornam HTTP 200.
+- Suítes `dados`, `cenario`, `objetos` e `editor`: todas passaram com zero falhas. Sintaxe JavaScript, JSON do manifest e `git diff --check` aprovados.
+- Primeiras tentativas de QA foram interrompidas por troca de contexto na recarga; o teste foi ajustado para aguardar o novo documento e repetido com sucesso, sem correção no app para esse problema do teste.
+
+## Seleção do commit
+
+- Modificados: `index.html`, `script.js`, `style.css`, `service-worker.js`, `assets/variacoes-memoria.js`, `assets/palacio-biblico/biblioteca.css`, `biblioteca.js` e `catalogo.js`.
+- Novos módulos: `assets/palacio-biblico/indice-biblico.js`, `home-biblica.js`, `home-biblica.css`.
+- Imagens: três artes de `memoria-numerica/carrossel/`; `dfgt.webp` e `biblia-medalhao.webp` da Home bíblica; capas numeradas 01, 02, 40, 41, 42, 43 e 50; originais `topo livros/joao.webp` e `topo livros/filipenses.webp`.
+- Movimentações intencionais confirmadas por hash: imagens antigas de João e Filipenses saem da raiz `palacio-biblico/` e entram idênticas em `topo livros/`. Nenhuma arte é descartada.
+- Este relatório também integra a documentação selecionada. O cenário restaurado não produz diff, pois é idêntico ao HEAD.
+- Fora da seleção: `artifacts/`, capturas, referências visuais, protótipos, imagens sem uso confirmado e demais exclusões locais. Nada disso foi removido ou restaurado.
+
+## Pendências e limites
+
+- Aparelho físico, fluidez/bateria, quota real, atualização de instalação Android existente e avaliação visual continuam pendentes. Offline simulado não comprova modo avião em dispositivo real.
+- As 150 variações não são individualmente pré-cacheadas; dependem de acesso online para cache dinâmico. Não garantir todas offline logo após instalar.
+- Sem recarga automática de abas por `controllerchange`; uma sessão antiga pode exigir reabrir/recarregar. Não limpar dados pessoais para atualizar.
+- Duas referências CSS históricas ausentes (`home/portal/backgrounds/fundo-portal-cerebro.webp` e `memoria-numerica/central-numerica-topo.webp`) permanecem fora dos fluxos validados. Sem mudança sem evidência de uso ativo ou bloqueio.
+- Nenhum push, deploy ou publicação. Notion não alterado. Versão seguinte depende de nova orientação e conferência do Git.
+
+## Inventário histórico da primeira auditoria
+
+As listas abaixo preservam o retrato anterior; não representam o estado ou a seleção finais. As correções e a restauração acima substituem os diagnósticos antigos. Artefatos relacionados não integram o commit.
+
+
+### Modificados na primeira auditoria
+
+- `assets/palacio-biblico/biblioteca.css`
+- `assets/palacio-biblico/biblioteca.js`
+- `assets/palacio-biblico/catalogo.js`
+- `index.html`
+- `script.js`
+- `service-worker.js`
+- `style.css`
+
+### Excluidos na primeira auditoria
+
+- `assets/icons/logo-branca.png`
+- `assets/imagens/palacio-biblico/filipenses.webp`
+- `assets/imagens/palacio-biblico/joao.webp`
+- `assets/imagens/palacio-biblico/joao/cenario-01.webp`
+- `assets/imagens/palacio-biblico/joao/rascunho-teste.webp`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/270b0b85-0d63-4f8f-a20c-e9186c9b2db5.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/6be997c9-33e8-4589-92d4-71c772a65582.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/896fadaf-636f-4061-9ad0-901a0921d1ca.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/c6e19682-f1ea-4ffa-aafe-90d11f181959.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/ca7b859b-a370-4a29-a0b1-b9d8473e7239.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/d5328d6f-02b3-469d-9c2e-0f80cec18816.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/d95adfa7-03b4-42eb-8949-548d9d2707b6.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/f2f71d2a-9d0d-4021-a6d6-52c905bc3913.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/f41b3495-791f-4d9f-91ab-dfcad05be7df.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/oficial.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/tela memoria numerica.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/13679f92-ab84-43e9-b801-53e87e566cd2.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/23169f66-0c75-4234-8f39-5cad42d97555.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/3e12286f-b651-49a9-984e-999608ccd097.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/53912a4c-749e-4397-8611-d1ef5109ba31.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/5ba38b87-edc3-4815-94e8-cc0d978cda42.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/67ccaf22-1307-418a-882a-ed2380d2020b.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/736aaae3-0914-4b05-ba3b-f6d479273890.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/f40eec5d-478b-4824-9885-5ce8ca082f76.png`
+
+### runtime
+
+- `assets/imagens/memoria-numerica/carrossel/memoria-na-pratica.webp`
+- `assets/imagens/memoria-numerica/carrossel/modo-dominio.webp`
+- `assets/imagens/memoria-numerica/carrossel/revisao-inteligente.webp`
+- `assets/imagens/palacio-biblico/home-palacio-biblico/biblia-medalhao.webp`
+- `assets/imagens/palacio-biblico/home-palacio-biblico/dfgt.webp`
+- `assets/imagens/palacio-biblico/livros-menu/01-genesis.webp`
+- `assets/imagens/palacio-biblico/livros-menu/02-exodo.webp`
+- `assets/imagens/palacio-biblico/livros-menu/04-numeros.webp`
+- `assets/imagens/palacio-biblico/livros-menu/40-mateus.webp`
+- `assets/imagens/palacio-biblico/livros-menu/41-marcos.webp`
+- `assets/imagens/palacio-biblico/livros-menu/42-lucas.webp`
+- `assets/imagens/palacio-biblico/livros-menu/43-joao.webp`
+- `assets/imagens/palacio-biblico/livros-menu/50-filipenses.webp`
+- `assets/palacio-biblico/home-biblica.css`
+- `assets/palacio-biblico/home-biblica.js`
+- `assets/palacio-biblico/indice-biblico.js`
+
+### prototypes
+
+- `assets/palacio-biblico/home-medieval.css`
+- `assets/palacio-biblico/home-medieval.js`
+- `experimentos/home-palacio-biblico/README.md`
+- `experimentos/home-palacio-biblico/home.css`
+- `experimentos/home-palacio-biblico/home.js`
+- `experimentos/home-palacio-biblico/index.html`
+
+### references
+
+- `assets/imagens/referencias/HOME/minimalista 01.png`
+- `assets/imagens/referencias/HOME/minimalista 02.png`
+- `assets/imagens/referencias/HOME/minimalista 03.png`
+- `assets/imagens/referencias/HOME/minimalista 04.png`
+- `assets/imagens/referencias/HOME/minimalista 05.png`
+- `assets/imagens/referencias/HOME/minimalista 06.png`
+- `assets/imagens/referencias/HOME/minimalista 07.png`
+- `assets/imagens/referencias/HOME/minimalista 08.png`
+- `assets/imagens/referencias/HOME/novo carrosel 01.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/270b0b85-0d63-4f8f-a20c-e9186c9b2db5.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/6be997c9-33e8-4589-92d4-71c772a65582.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/896fadaf-636f-4061-9ad0-901a0921d1ca.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/c6e19682-f1ea-4ffa-aafe-90d11f181959.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/ca7b859b-a370-4a29-a0b1-b9d8473e7239.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/d5328d6f-02b3-469d-9c2e-0f80cec18816.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/d95adfa7-03b4-42eb-8949-548d9d2707b6.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/f2f71d2a-9d0d-4021-a6d6-52c905bc3913.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/f41b3495-791f-4d9f-91ab-dfcad05be7df.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/novo carrosel 01.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/oficial.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/tela memoria numerica.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/tela memoria na pratica/01.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/tela memoria na pratica/02.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/tela personalizado/0db36e29-31f2-4098-826c-a8614b66e286.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/tela personalizado/novo conceito.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/tela personalizado/teal nova 01.png`
+- `assets/imagens/referencias/MEMORIA NUMERICA/tela treino rapido/01.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/1400fac2-492f-4c58-8315-2a8f12c3d4c1.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/1bbb9dd0-3018-4799-8eac-d5ff4f5c1a20.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/25809220-8ea7-4d82-8da9-d008f753f1e3.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/315cddd8-78a1-46c0-b71b-5d10d5eb2da8.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/48cb5018-1c33-4364-a977-39ce51feeb82.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/5dd798fc-1e55-4327-9ff3-59e5f8bbe8cf.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/67d6936f-5c4c-4776-bb36-20e5ce1c142e.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/7f32b828-2e8c-4b3a-8ee9-0990b5a13fbc.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/86c011b3-3f73-4937-aa8c-64cd6e4ce722.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/88e7e000-97d9-43b8-a66e-2e3e3cae9764.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/8a8c3ca9-681f-4736-938b-df4e2f26dcc8.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/8b0aa773-574e-4e37-8a53-a4a4e4a5aae6.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/8d926420-a322-4648-9773-f5f262882d56.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/Captura de tela 2026-11-16 152835.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/13679f92-ab84-43e9-b801-53e87e566cd2.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/23169f66-0c75-4234-8f39-5cad42d97555.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/3e12286f-b651-49a9-984e-999608ccd097.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/53912a4c-749e-4397-8611-d1ef5109ba31.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/5ba38b87-edc3-4815-94e8-cc0d978cda42.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/67ccaf22-1307-418a-882a-ed2380d2020b.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/736aaae3-0914-4b05-ba3b-f6d479273890.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/f40eec5d-478b-4824-9885-5ce8ca082f76.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/bc118c49-eac8-40d5-869a-a8fbe601d23d.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/c0afcb45-e1c5-4d40-8a64-e571510a65b3.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/c40becd9-fc45-4262-9344-8dabc1dce55a.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/cf159dbb-be7e-4f0b-af49-2fe4a3483029.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/cfcc6d08-3d84-4e86-847a-54611edde530.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/dd80154d-bfe3-481c-b243-ef7460c99220.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/e9d92b76-4cd0-46aa-8757-2081e1a39efd.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/fe9178e9-d9f2-408d-817d-0ba0d838a77e.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/home 02.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/home 03.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/home 04.png`
+- `assets/imagens/referencias/PALACIO BIBLICO/tela home 01.png`
+- `assets/imagens/referencias/TELA CONFIGURAÇÕES/01.png`
+- `assets/imagens/referencias/TELA DOWNLOAD/017145ae-70ec-4a1f-959a-ed6247ef7bb2.png`
+- `assets/imagens/referencias/TELA DOWNLOAD/FD.png`
+- `assets/imagens/referencias/TELA DOWNLOAD/tela download.png`
+
+### artifacts
+
+- `artifacts/ajustes-numeros-seletor/360-treinar.png`
+- `artifacts/ajustes-numeros-seletor/430-treinar.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Crashpad/metadata`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Crashpad/reports/ede56dd6-db2f-420e-903c-ecaef2e3f2ad.dmp`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Crashpad/settings.dat`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/CrashpadMetrics-active.pma`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Account Web Data`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Account Web Data-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Affiliation Database`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Affiliation Database-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/AutofillAiModelCache/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/AutofillAiModelCache/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/AutofillStrikeDatabase/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/AutofillStrikeDatabase/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/BookmarkMergedSurfaceOrdering`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/BudgetDatabase/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/BudgetDatabase/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/data_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/data_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/data_2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/data_3`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000070`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000075`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000077`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00007c`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00007d`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000083`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000084`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000085`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000086`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000087`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00008a`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00008b`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00008c`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00008d`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00008e`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_00008f`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000090`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000091`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000092`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000093`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000094`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/f_000095`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/Cache_Data/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/No_Vary_Search/journal.baj`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Cache/No_Vary_Search/snapshot.baf`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/ClientCertificates/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/ClientCertificates/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/ClientCertificates/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/01182cca7f22b485_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/13a9bec66d630f29_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/1afef7dfb583747d_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/30ebe6f7d6a8f178_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/3474f0943edad0a2_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/859e161f4c18c2c3_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/92552b518a4147f5_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/abd05c75a40324a0_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/d14892542db778c3_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/e9215974458bd356_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/ef44900870128a11_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/js/index-dir/the-real-index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/wasm/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Code Cache/wasm/index-dir/the-real-index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DIPS`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DIPS-wal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnGraphiteCache/data_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnGraphiteCache/data_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnGraphiteCache/data_2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnGraphiteCache/data_3`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnGraphiteCache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnWebGPUCache/data_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnWebGPUCache/data_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnWebGPUCache/data_2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnWebGPUCache/data_3`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/DawnWebGPUCache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Download Service/EntryDB/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Download Service/EntryDB/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Rules/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Rules/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Rules/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Rules/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Rules/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Rules/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Scripts/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Scripts/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Scripts/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Scripts/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Scripts/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension Scripts/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension State/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension State/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension State/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension State/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension State/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Extension State/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Favicons`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Favicons-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GCM Store/Encryption/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GCM Store/Encryption/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GCM Store/Encryption/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GCM Store/Encryption/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GCM Store/Encryption/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GPUCache/data_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GPUCache/data_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GPUCache/data_2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GPUCache/data_3`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/GPUCache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/History`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/History-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Local Storage/leveldb/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Local Storage/leveldb/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Local Storage/leveldb/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Local Storage/leveldb/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Local Storage/leveldb/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Login Data`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Login Data For Account`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Login Data For Account-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Login Data-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network Action Predictor`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network Action Predictor-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Cookies`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Cookies-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Device Bound Sessions`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Device Bound Sessions-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Network Persistent State`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/NetworkDataMigrated`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Reporting and NEL`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Reporting and NEL-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/TransportSecurity`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Trust Tokens`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Network/Trust Tokens-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/PersistentOriginTrials/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/PersistentOriginTrials/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/PersistentOriginTrials/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Preferences`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/PreferredApps`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/README`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Safe Browsing Network/NetworkDataMigrated`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Secure Preferences`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SegmentInfoDB/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SegmentInfoDB/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SegmentInfoDB/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SignalDB/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SignalDB/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SignalDB/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SignalStorageConfigDB/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SignalStorageConfigDB/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Segmentation Platform/SignalStorageConfigDB/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/ServerCertificate`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/ServerCertificate-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/CacheStorage/cc1e752ddac2d66cc9c1b02d1febfceb93e9851c/cbd397e2-7813-4a25-8397-7ecbbfc790cc/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/CacheStorage/cc1e752ddac2d66cc9c1b02d1febfceb93e9851c/cbd397e2-7813-4a25-8397-7ecbbfc790cc/index-dir/the-real-index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/CacheStorage/cc1e752ddac2d66cc9c1b02d1febfceb93e9851c/index.txt`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/Database/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/Database/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/Database/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/Database/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/Database/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/Database/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/67a473248953641b_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/b6c28cea6ed9dfc1_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/b6c28cea6ed9dfc1_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/ba23d8ecda68de77_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/ba23d8ecda68de77_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/fa813c9ad67834ac_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Service Worker/ScriptCache/index-dir/the-real-index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Session Storage/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Session Storage/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Session Storage/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Session Storage/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Session Storage/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sessions/Session_13439218050622572`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sessions_Encrypted/Session_13439218050623666`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Shared Dictionary/cache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Shared Dictionary/cache/index-dir/the-real-index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Shared Dictionary/db`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Shared Dictionary/db-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Shortcuts`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Shortcuts-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Site Characteristics Database/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Site Characteristics Database/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Site Characteristics Database/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Site Characteristics Database/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Site Characteristics Database/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Site Characteristics Database/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sync Data/LevelDB/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sync Data/LevelDB/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sync Data/LevelDB/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sync Data/LevelDB/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sync Data/LevelDB/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Sync Data/LevelDB/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Top Sites`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Top Sites-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/aghbiahbpaijignceidepookljebhfak/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/agimnkijcaahngcdmfeangaknmldooml/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fhihpiojkbmbpdjeoajapmgkhlnakfjf/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/fmgjjmmmlfnkbppncabfkddbjimcfncm/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/kefjledonklijopmnomlcbpllchaibag/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/mpnpojknpmmopombnjdcgaaiekajbnjb/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/128.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/192.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/256.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/32.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/48.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/64.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Applications/Manifest Resources/pommaclcbfghclhalboakcipcmmndhcj/Trusted Icons/Icons/96.png`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Data`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/Web Data-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/WebStorage/QuotaManager`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/WebStorage/QuotaManager-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/chrome_cart_db/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/chrome_cart_db/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/chrome_cart_db/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/commerce_subscription_db/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/commerce_subscription_db/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/commerce_subscription_db/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/declarative_performance_observer.db`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/declarative_performance_observer.db-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/discount_infos_db/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/discount_infos_db/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/discount_infos_db/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/discounts_db/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/discounts_db/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/discounts_db/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/heavy_ad_intervention_opt_out.db`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/heavy_ad_intervention_opt_out.db-journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/optimization_guide_hint_cache_store/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/optimization_guide_hint_cache_store/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/parcel_tracking_db/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/parcel_tracking_db/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/parcel_tracking_db/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/metadata/000003.log`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/metadata/CURRENT`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/metadata/LOCK`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/metadata/LOG`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/metadata/LOG.old`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Default/shared_proto_db/metadata/MANIFEST-000001`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GPUPersistentCache/DawnGraphiteCache/OMXJKWSVDDS6L3YMYJJRNHVYDBSO7SEM/cache.db`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GPUPersistentCache/DawnGraphiteCache/OMXJKWSVDDS6L3YMYJJRNHVYDBSO7SEM/cache.db-wal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GPUPersistentCache/DawnGraphiteCache/OMXJKWSVDDS6L3YMYJJRNHVYDBSO7SEM/cache.journal`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GrShaderCache/data_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GrShaderCache/data_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GrShaderCache/data_2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GrShaderCache/data_3`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/GrShaderCache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Last Browser`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Last Version`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Local State`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/_metadata/verified_contents.json`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/laya_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/manifest.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/manifest.json`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/prompt_gemma4_12b_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/prompt_gemma4_4b_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/prompt_gemma4_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/prompt_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/proofreader_small_expert_model_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/scam_detection_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/speech_recognition_small_expert_model_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/summarizer_gemma4_12b_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/summarizer_gemma4_4b_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/summarizer_gemma4_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/summarizer_nano_v3_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/summarizer_small_expert_model_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/writing_assistance_gemma4_12b_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/writing_assistance_gemma4_4b_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/writing_assistance_gemma4_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/OptimizationGuideModelsManifest/1.20261018.2/writing_assistance_solution_config.binarypb`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/ShaderCache/data_0`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/ShaderCache/data_1`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/ShaderCache/data_2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/ShaderCache/data_3`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/ShaderCache/index`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/Variations`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/VariationsSafeSeedV2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/VariationsSeedV2`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/component_crx_cache/85daef3a7c36299d39d45219b6d1276396c584376c683798c184b5490e7bc773`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/component_crx_cache/metadata.json`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/extensions_crx_cache/metadata.json`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/segmentation_platform/ukm_db`
+- `artifacts/ajustes-numeros-seletor/chrome-profile/segmentation_platform/ukm_db-wal`
+- `artifacts/ajustes-numeros-seletor/results.json`
+- `artifacts/ajustes-numeros-seletor/validacao.txt`
+- `artifacts/ajustes-numeros-seletor/verify.cjs`
+- `artifacts/bottom-sheet-v4/360.png`
+- `artifacts/bottom-sheet-v4/412.png`
+- `artifacts/bottom-sheet-v4/430.png`
+- `artifacts/personalizado-capas/360-initial.png`
+- `artifacts/personalizado-capas/360-selected.png`
+- `artifacts/personalizado-capas/430-initial.png`
+- `artifacts/personalizado-capas/430-selected.png`
+- `artifacts/personalizado-capas/results.json`
+- `artifacts/personalizado-capas/verify.cjs`
+- `artifacts/personalizado-guiado/360-controles.png`
+- `artifacts/personalizado-guiado/360-etapa1.png`
+- `artifacts/personalizado-guiado/360-etapa2-final.png`
+- `artifacts/personalizado-guiado/360-etapa2.png`
+- `artifacts/personalizado-guiado/430-controles.png`
+- `artifacts/personalizado-guiado/430-etapa1.png`
+- `artifacts/personalizado-guiado/430-etapa2-final.png`
+- `artifacts/personalizado-guiado/430-etapa2.png`
+- `artifacts/personalizado-guiado/results.json`
+- `artifacts/personalizado-guiado/validacao.txt`
+- `artifacts/personalizado-guiado/verify.cjs`
+- `artifacts/personalizado-guiado/visual.cjs`
+- `artifacts/segundo-carrossel/360.png`
+- `artifacts/segundo-carrossel/430.png`
+- `artifacts/segundo-carrossel/results.json`
+
+### review
+
+- `assets/imagens/home/background/df.webp`
+- `assets/imagens/home/background/fd.webp`
+- `assets/imagens/home/background/fg.webp`
+- `assets/imagens/home/background/gfd.webp`
+- `assets/imagens/home/background/vc.webp`
+- `assets/imagens/home/background/vx.webp`
+- `assets/imagens/home/cards/fg.webp`
+- `assets/imagens/palacio-biblico/home-palacio-biblico/dfgg.webp`
+- `assets/imagens/palacio-biblico/home-palacio-biblico/home-background.webp`
+- `assets/imagens/palacio-biblico/joao/01.png`
+- `assets/imagens/palacio-biblico/joao/02.png`
+- `assets/imagens/palacio-biblico/joao/03.png`
+- `assets/imagens/palacio-biblico/topo livros/filipenses.webp`
+- `assets/imagens/palacio-biblico/topo livros/joao.webp`

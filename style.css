@@ -25935,3 +25935,16 @@ html { -webkit-tap-highlight-color:transparent; }
 :where(button,a,input,select,textarea,label,[role="button"],[role="switch"],[tabindex]) {
     -webkit-tap-highlight-color:transparent;
 }
+
+/* Segundo carrossel: mesmos componentes, artes e estado independentes. */
+#telaMemoriaNumerica .memory-secondary { margin-top:16px; }
+#telaMemoriaNumerica .memory-featured-card--pratica {
+    --featured-art:url("assets/imagens/memoria-numerica/carrossel/memoria-na-pratica.webp");
+}
+#telaMemoriaNumerica .memory-featured-card--dominio {
+    --featured-art:url("assets/imagens/memoria-numerica/carrossel/modo-dominio.webp");
+}
+#telaMemoriaNumerica .memory-featured-card--revisao {
+    --featured-art:url("assets/imagens/memoria-numerica/carrossel/revisao-inteligente.webp");
+}
+#telaMemoriaNumerica .memory-secondary .memory-featured-card:disabled { cursor:default; }
