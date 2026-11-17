@@ -20,8 +20,9 @@ body:has(#telaHomeBiblica:not([hidden])) .bottom-nav.home-nav { display: none; }
 .pb-dashboard .pd-fundo-topo { position: absolute; z-index: -2; inset: 0 0 auto; width: 100%; height: auto; pointer-events: none; }
 .pb-dashboard .pd-scroll::before { content: ''; position: absolute; z-index: -1; inset: 0 0 auto; height: 440px; pointer-events: none; background: linear-gradient(#00000038, #00000010 35%, #00000088 70%, #050505); }
 .pb-dashboard .pd-header { position: relative; display: flex; justify-content: center; min-height: calc(37svh + env(safe-area-inset-top)); padding: calc(64px + env(safe-area-inset-top)) 8px 19px; }
-.pb-dashboard .pd-marca { width: 100%; text-align: center; }
-.pb-dashboard h1 { width: 64%; max-width: 290px; margin: 0 auto; padding: 0; line-height: 1; }
+.pb-dashboard .pd-marca { position: absolute; isolation: isolate; left: 8px; right: 8px; bottom: calc(clamp(44px, 12vw, 52px) + 9px); text-align: center; }
+.pb-dashboard .pd-marca::before { content: ''; position: absolute; z-index: -1; inset: -20px -8px; pointer-events: none; background: radial-gradient(ellipse at center, #000b 0, #0008 35%, transparent 70%); }
+.pb-dashboard h1 { width: 51.2%; max-width: 232px; margin: 0 auto; padding: 0; line-height: 1; }
 .pb-dashboard h1 img { display: block; width: 100%; height: auto; }
 .pb-dashboard .pd-marca p { margin: 11px 0 0; color: #e1d4c1; font-size: clamp(10px, 2.65vw, 13px); line-height: 1.4; letter-spacing: .015em; }
 .pb-dashboard .pd-marca p span { margin: 0 2px; color: #bb9061; }
