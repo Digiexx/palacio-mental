@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "fullHeight": true,
+      "scroll": true,
+      "topMenu": true,
+      "otherHomeMenu": true,
+      "unchangedComponents": true
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "fullHeight": true,
+      "scroll": true,
+      "topMenu": true,
+      "otherHomeMenu": true,
+      "unchangedComponents": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "fullHeight": true,
+      "scroll": true,
+      "topMenu": true,
+      "otherHomeMenu": true,
+      "unchangedComponents": true
+    }
+  ],
+  "errors": []
+}

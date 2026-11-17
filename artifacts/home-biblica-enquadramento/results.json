@@ -1,0 +1,143 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "state": {
+        "images": [
+          {
+            "loaded": true,
+            "src": "http://127.0.0.1:8836/assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/home-biblico-topo.webp"
+          },
+          {
+            "loaded": true,
+            "src": "http://127.0.0.1:8836/assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/logo-palacio-biblico.png"
+          }
+        ],
+        "slides": 5,
+        "active": "2",
+        "center": 0.1875,
+        "menu": [
+          "Home",
+          "Explorar",
+          "Livros",
+          "Favoritos",
+          "Ajustes"
+        ],
+        "homeBackground": "rgba(0, 0, 0, 0)",
+        "booksInside": true,
+        "headerUnavailable": true,
+        "oldBrand": false,
+        "overflow": false,
+        "nav": [
+          8,
+          704,
+          344,
+          88
+        ],
+        "journey": "vazio"
+      },
+      "carousel": true,
+      "swipe": true,
+      "navigation": true,
+      "search": true,
+      "favorites": true,
+      "realJourneyData": true,
+      "reducedMotion": true,
+      "scroll": true
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "state": {
+        "images": [
+          {
+            "loaded": true,
+            "src": "http://127.0.0.1:8836/assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/home-biblico-topo.webp"
+          },
+          {
+            "loaded": true,
+            "src": "http://127.0.0.1:8836/assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/logo-palacio-biblico.png"
+          }
+        ],
+        "slides": 5,
+        "active": "2",
+        "center": 0.1875,
+        "menu": [
+          "Home",
+          "Explorar",
+          "Livros",
+          "Favoritos",
+          "Ajustes"
+        ],
+        "homeBackground": "rgba(0, 0, 0, 0)",
+        "booksInside": true,
+        "headerUnavailable": true,
+        "oldBrand": false,
+        "overflow": false,
+        "nav": [
+          8,
+          828,
+          396,
+          88
+        ],
+        "journey": "vazio"
+      },
+      "carousel": true,
+      "swipe": false,
+      "navigation": true,
+      "search": true,
+      "favorites": true,
+      "realJourneyData": true,
+      "reducedMotion": true,
+      "scroll": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "state": {
+        "images": [
+          {
+            "loaded": true,
+            "src": "http://127.0.0.1:8836/assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/home-biblico-topo.webp"
+          },
+          {
+            "loaded": true,
+            "src": "http://127.0.0.1:8836/assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/logo-palacio-biblico.png"
+          }
+        ],
+        "slides": 5,
+        "active": "2",
+        "center": 0.4375,
+        "menu": [
+          "Home",
+          "Explorar",
+          "Livros",
+          "Favoritos",
+          "Ajustes"
+        ],
+        "homeBackground": "rgba(0, 0, 0, 0)",
+        "booksInside": true,
+        "headerUnavailable": true,
+        "oldBrand": false,
+        "overflow": false,
+        "nav": [
+          8,
+          836,
+          414,
+          88
+        ],
+        "journey": "vazio"
+      },
+      "carousel": true,
+      "swipe": false,
+      "navigation": true,
+      "search": true,
+      "favorites": true,
+      "realJourneyData": true,
+      "reducedMotion": true,
+      "scroll": true
+    }
+  ],
+  "errors": []
+}

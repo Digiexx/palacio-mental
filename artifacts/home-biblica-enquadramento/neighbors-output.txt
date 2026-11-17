@@ -1,0 +1,1 @@
+PASS: 360/412/430, carousel raised, central size intact, two visible loaded neighbors, other components/menu visibility intact, swipe and indicators, no console errors or overflow.

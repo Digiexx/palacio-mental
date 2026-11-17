@@ -1,0 +1,259 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "before": {
+        "logo": {
+          "x": 69.921875,
+          "y": 64,
+          "width": 220.15625,
+          "height": 73.375,
+          "bottom": 137.375
+        },
+        "brand": {
+          "x": 8,
+          "y": 64,
+          "width": 344,
+          "height": 213,
+          "bottom": 277
+        },
+        "slide": {
+          "x": 28.609375,
+          "y": 257,
+          "width": 302.40625,
+          "height": 219.125,
+          "bottom": 476.125
+        },
+        "icons": {
+          "x": 268,
+          "y": 10,
+          "width": 83,
+          "height": 44,
+          "bottom": 54
+        },
+        "hamburger": {
+          "x": 11,
+          "y": 10,
+          "width": 44,
+          "height": 44,
+          "bottom": 54
+        },
+        "cards": {
+          "x": 14,
+          "y": 541.125,
+          "width": 332,
+          "height": 86.59375,
+          "bottom": 627.71875
+        },
+        "divider": {
+          "x": 28,
+          "y": 511.125,
+          "width": 304,
+          "height": 18,
+          "bottom": 529.125
+        },
+        "subtitle": {
+          "x": 8,
+          "y": 148.375,
+          "width": 344,
+          "height": 14,
+          "bottom": 162.375
+        },
+        "menuDisplay": "none",
+        "backdrop": "radial-gradient(rgba(0, 0, 0, 0.733) 0px, rgba(0, 0, 0, 0.533) 35%, rgba(0, 0, 0, 0) 70%)",
+        "overflow": false
+      },
+      "after": {
+        "logo": {
+          "x": 91.9375,
+          "y": 159.296875,
+          "width": 176.125,
+          "height": 58.703125,
+          "bottom": 218
+        },
+        "brand": {
+          "x": 8,
+          "y": 159.296875,
+          "width": 344,
+          "height": 83.703125,
+          "bottom": 243
+        },
+        "slide": {
+          "x": 28.609375,
+          "y": 257,
+          "width": 302.40625,
+          "height": 219.125,
+          "bottom": 476.125
+        },
+        "icons": {
+          "x": 268,
+          "y": 10,
+          "width": 83,
+          "height": 44,
+          "bottom": 54
+        },
+        "hamburger": {
+          "x": 11,
+          "y": 10,
+          "width": 44,
+          "height": 44,
+          "bottom": 54
+        },
+        "cards": {
+          "x": 14,
+          "y": 541.125,
+          "width": 332,
+          "height": 86.59375,
+          "bottom": 627.71875
+        },
+        "divider": {
+          "x": 28,
+          "y": 511.125,
+          "width": 304,
+          "height": 18,
+          "bottom": 529.125
+        },
+        "subtitle": {
+          "x": 8,
+          "y": 229,
+          "width": 344,
+          "height": 14,
+          "bottom": 243
+        },
+        "menuDisplay": "none",
+        "backdrop": "radial-gradient(rgba(0, 0, 0, 0.733) 0px, rgba(0, 0, 0, 0.533) 35%, rgba(0, 0, 0, 0) 70%)",
+        "overflow": false
+      },
+      "gap": 14
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "before": {
+        "logo": {
+          "x": 82.515625,
+          "y": 64,
+          "width": 264.953125,
+          "height": 88.3125,
+          "bottom": 152.3125
+        },
+        "brand": {
+          "x": 8,
+          "y": 64,
+          "width": 414,
+          "height": 261.828125,
+          "bottom": 325.828125
+        },
+        "slide": {
+          "x": 34.828125,
+          "y": 298.234375,
+          "width": 361.21875,
+          "height": 261.75,
+          "bottom": 559.984375
+        },
+        "icons": {
+          "x": 338,
+          "y": 10,
+          "width": 83,
+          "height": 44,
+          "bottom": 54
+        },
+        "hamburger": {
+          "x": 11,
+          "y": 10,
+          "width": 44,
+          "height": 44,
+          "bottom": 54
+        },
+        "cards": {
+          "x": 14,
+          "y": 624.984375,
+          "width": 402,
+          "height": 88.015625,
+          "bottom": 713
+        },
+        "divider": {
+          "x": 28,
+          "y": 594.984375,
+          "width": 374,
+          "height": 18,
+          "bottom": 612.984375
+        },
+        "subtitle": {
+          "x": 8,
+          "y": 163.3125,
+          "width": 414,
+          "height": 15.9375,
+          "bottom": 179.25
+        },
+        "menuDisplay": "none",
+        "backdrop": "radial-gradient(rgba(0, 0, 0, 0.733) 0px, rgba(0, 0, 0, 0.533) 35%, rgba(0, 0, 0, 0) 70%)",
+        "overflow": false
+      },
+      "after": {
+        "logo": {
+          "x": 109.015625,
+          "y": 186.65625,
+          "width": 211.953125,
+          "height": 70.640625,
+          "bottom": 257.296875
+        },
+        "brand": {
+          "x": 8,
+          "y": 186.65625,
+          "width": 414,
+          "height": 97.578125,
+          "bottom": 284.234375
+        },
+        "slide": {
+          "x": 34.828125,
+          "y": 298.234375,
+          "width": 361.21875,
+          "height": 261.75,
+          "bottom": 559.984375
+        },
+        "icons": {
+          "x": 338,
+          "y": 10,
+          "width": 83,
+          "height": 44,
+          "bottom": 54
+        },
+        "hamburger": {
+          "x": 11,
+          "y": 10,
+          "width": 44,
+          "height": 44,
+          "bottom": 54
+        },
+        "cards": {
+          "x": 14,
+          "y": 624.984375,
+          "width": 402,
+          "height": 88.015625,
+          "bottom": 713
+        },
+        "divider": {
+          "x": 28,
+          "y": 594.984375,
+          "width": 374,
+          "height": 18,
+          "bottom": 612.984375
+        },
+        "subtitle": {
+          "x": 8,
+          "y": 268.296875,
+          "width": 414,
+          "height": 15.9375,
+          "bottom": 284.234375
+        },
+        "menuDisplay": "none",
+        "backdrop": "radial-gradient(rgba(0, 0, 0, 0.733) 0px, rgba(0, 0, 0, 0.533) 35%, rgba(0, 0, 0, 0) 70%)",
+        "overflow": false
+      },
+      "gap": 14
+    }
+  ],
+  "errors": []
+}

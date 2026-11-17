@@ -1,0 +1,1 @@
+PASS: restored ratio, unchanged carousel top, hidden arrows, swipe and indicators, fixed menu, no overflow/console errors at 360/412/430.

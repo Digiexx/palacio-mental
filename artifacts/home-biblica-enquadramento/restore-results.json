@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "width": 302.40625,
+      "height": 219.125,
+      "y": 301,
+      "index": "2",
+      "arrowsHidden": true,
+      "indicators": 5,
+      "overflow": false,
+      "navTop": 704,
+      "swipe": true
+    },
+    {
+      "width": 346.09375,
+      "height": 250.78125,
+      "y": 346.875,
+      "index": "2",
+      "arrowsHidden": true,
+      "indicators": 5,
+      "overflow": false,
+      "navTop": 828,
+      "swipe": true
+    },
+    {
+      "width": 361.21875,
+      "height": 261.75,
+      "y": 349.828125,
+      "index": "2",
+      "arrowsHidden": true,
+      "indicators": 5,
+      "overflow": false,
+      "navTop": 836,
+      "swipe": true
+    }
+  ],
+  "errors": []
+}

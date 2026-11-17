@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "slide": {
+        "x": 28.609375,
+        "y": 301,
+        "width": 302.40625,
+        "height": 109.953125
+      },
+      "journeyTop": 697.546875,
+      "scrollBottom": 685,
+      "menuTop": 704,
+      "arrowInside": true,
+      "touchWidth": 44,
+      "touchHeight": 44,
+      "legendInside": true,
+      "overflow": false
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "slide": {
+        "x": 33.140625,
+        "y": 346.875,
+        "width": 346.09375,
+        "height": 125.84375
+      },
+      "journeyTop": 812.171875,
+      "scrollBottom": 809,
+      "menuTop": 828,
+      "arrowInside": true,
+      "touchWidth": 44,
+      "touchHeight": 44,
+      "legendInside": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "slide": {
+        "x": 34.828125,
+        "y": 349.828125,
+        "width": 361.21875,
+        "height": 131.34375
+      },
+      "journeyTop": 829.1875,
+      "scrollBottom": 817,
+      "menuTop": 836,
+      "arrowInside": true,
+      "touchWidth": 44,
+      "touchHeight": 44,
+      "legendInside": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

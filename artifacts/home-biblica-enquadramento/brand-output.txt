@@ -1,0 +1,1 @@
+PASS: 360/430, logo 20% smaller, lower centered group, 14px gap, radial black backing; carousel/icons/cards/divider/menu unchanged; no overflow/console errors.

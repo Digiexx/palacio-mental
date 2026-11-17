@@ -1,0 +1,386 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "before": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 296,
+          "bottom": 296
+        },
+        "slide": {
+          "x": 28.609375,
+          "y": 257,
+          "width": 302.40625,
+          "height": 219.125,
+          "bottom": 476.125
+        },
+        "indicators": {
+          "x": 0,
+          "y": 491.125,
+          "width": 360,
+          "height": 6,
+          "bottom": 497.125
+        },
+        "divider": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 567.125,
+          "width": 332,
+          "height": 86.59375,
+          "bottom": 653.71875
+        },
+        "card": {
+          "x": 14,
+          "y": 567.125,
+          "width": 77.75,
+          "height": 86.59375,
+          "bottom": 653.71875
+        },
+        "cardStyle": [
+          "linear-gradient(145deg, rgb(39, 36, 32), rgb(9, 9, 9))",
+          "1px solid rgb(73, 67, 60)",
+          "15px",
+          "11px 2px 8px",
+          "14px"
+        ],
+        "menu": {
+          "x": 8,
+          "y": 704,
+          "width": 344,
+          "height": 88,
+          "bottom": 792
+        },
+        "continueHidden": true,
+        "overflow": false
+      },
+      "after": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 296,
+          "bottom": 296
+        },
+        "slide": {
+          "x": 28.609375,
+          "y": 257,
+          "width": 302.40625,
+          "height": 219.125,
+          "bottom": 476.125
+        },
+        "indicators": {
+          "x": 0,
+          "y": 491.125,
+          "width": 360,
+          "height": 6,
+          "bottom": 497.125
+        },
+        "divider": {
+          "x": 28,
+          "y": 511.125,
+          "width": 304,
+          "height": 18,
+          "bottom": 529.125
+        },
+        "cards": {
+          "x": 14,
+          "y": 541.125,
+          "width": 332,
+          "height": 86.59375,
+          "bottom": 627.71875
+        },
+        "card": {
+          "x": 14,
+          "y": 541.125,
+          "width": 77.75,
+          "height": 86.59375,
+          "bottom": 627.71875
+        },
+        "cardStyle": [
+          "linear-gradient(145deg, rgb(39, 36, 32), rgb(9, 9, 9))",
+          "1px solid rgb(73, 67, 60)",
+          "15px",
+          "11px 2px 8px",
+          "14px"
+        ],
+        "menu": {
+          "x": 8,
+          "y": 704,
+          "width": 344,
+          "height": 88,
+          "bottom": 792
+        },
+        "continueHidden": true,
+        "overflow": false
+      },
+      "gap": 12,
+      "swipe": true,
+      "library": true
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "before": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 341.875,
+          "bottom": 341.875
+        },
+        "slide": {
+          "x": 33.140625,
+          "y": 297.4375,
+          "width": 346.09375,
+          "height": 250.78125,
+          "bottom": 548.21875
+        },
+        "indicators": {
+          "x": 0,
+          "y": 563.21875,
+          "width": 412,
+          "height": 6,
+          "bottom": 569.21875
+        },
+        "divider": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 644.65625,
+          "width": 384,
+          "height": 87.453125,
+          "bottom": 732.109375
+        },
+        "card": {
+          "x": 14,
+          "y": 644.65625,
+          "width": 90.75,
+          "height": 87.453125,
+          "bottom": 732.109375
+        },
+        "cardStyle": [
+          "linear-gradient(145deg, rgb(39, 36, 32), rgb(9, 9, 9))",
+          "1px solid rgb(73, 67, 60)",
+          "15px",
+          "11px 2px 8px",
+          "14px"
+        ],
+        "menu": {
+          "x": 8,
+          "y": 828,
+          "width": 396,
+          "height": 88,
+          "bottom": 916
+        },
+        "continueHidden": true,
+        "overflow": false
+      },
+      "after": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 341.875,
+          "bottom": 341.875
+        },
+        "slide": {
+          "x": 33.140625,
+          "y": 297.4375,
+          "width": 346.09375,
+          "height": 250.78125,
+          "bottom": 548.21875
+        },
+        "indicators": {
+          "x": 0,
+          "y": 563.21875,
+          "width": 412,
+          "height": 6,
+          "bottom": 569.21875
+        },
+        "divider": {
+          "x": 28,
+          "y": 583.21875,
+          "width": 356,
+          "height": 18,
+          "bottom": 601.21875
+        },
+        "cards": {
+          "x": 14,
+          "y": 613.21875,
+          "width": 384,
+          "height": 87.453125,
+          "bottom": 700.671875
+        },
+        "card": {
+          "x": 14,
+          "y": 613.21875,
+          "width": 90.75,
+          "height": 87.453125,
+          "bottom": 700.671875
+        },
+        "cardStyle": [
+          "linear-gradient(145deg, rgb(39, 36, 32), rgb(9, 9, 9))",
+          "1px solid rgb(73, 67, 60)",
+          "15px",
+          "11px 2px 8px",
+          "14px"
+        ],
+        "menu": {
+          "x": 8,
+          "y": 828,
+          "width": 396,
+          "height": 88,
+          "bottom": 916
+        },
+        "continueHidden": true,
+        "overflow": false
+      },
+      "gap": 12,
+      "swipe": true,
+      "library": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "before": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 344.828125,
+          "bottom": 344.828125
+        },
+        "slide": {
+          "x": 34.828125,
+          "y": 298.234375,
+          "width": 361.21875,
+          "height": 261.75,
+          "bottom": 559.984375
+        },
+        "indicators": {
+          "x": 0,
+          "y": 574.984375,
+          "width": 430,
+          "height": 6,
+          "bottom": 580.984375
+        },
+        "divider": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 658.578125,
+          "width": 402,
+          "height": 88.015625,
+          "bottom": 746.59375
+        },
+        "card": {
+          "x": 14,
+          "y": 658.578125,
+          "width": 95.25,
+          "height": 88.015625,
+          "bottom": 746.59375
+        },
+        "cardStyle": [
+          "linear-gradient(145deg, rgb(39, 36, 32), rgb(9, 9, 9))",
+          "1px solid rgb(73, 67, 60)",
+          "15px",
+          "11px 2px 8px",
+          "14px"
+        ],
+        "menu": {
+          "x": 8,
+          "y": 836,
+          "width": 414,
+          "height": 88,
+          "bottom": 924
+        },
+        "continueHidden": true,
+        "overflow": false
+      },
+      "after": {
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 344.828125,
+          "bottom": 344.828125
+        },
+        "slide": {
+          "x": 34.828125,
+          "y": 298.234375,
+          "width": 361.21875,
+          "height": 261.75,
+          "bottom": 559.984375
+        },
+        "indicators": {
+          "x": 0,
+          "y": 574.984375,
+          "width": 430,
+          "height": 6,
+          "bottom": 580.984375
+        },
+        "divider": {
+          "x": 28,
+          "y": 594.984375,
+          "width": 374,
+          "height": 18,
+          "bottom": 612.984375
+        },
+        "cards": {
+          "x": 14,
+          "y": 624.984375,
+          "width": 402,
+          "height": 88.015625,
+          "bottom": 713
+        },
+        "card": {
+          "x": 14,
+          "y": 624.984375,
+          "width": 95.25,
+          "height": 88.015625,
+          "bottom": 713
+        },
+        "cardStyle": [
+          "linear-gradient(145deg, rgb(39, 36, 32), rgb(9, 9, 9))",
+          "1px solid rgb(73, 67, 60)",
+          "15px",
+          "11px 2px 8px",
+          "14px"
+        ],
+        "menu": {
+          "x": 8,
+          "y": 836,
+          "width": 414,
+          "height": 88,
+          "bottom": 924
+        },
+        "continueHidden": true,
+        "overflow": false
+      },
+      "gap": 12,
+      "swipe": true,
+      "library": true
+    }
+  ],
+  "errors": []
+}

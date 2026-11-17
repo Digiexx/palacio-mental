@@ -1,0 +1,1 @@
+PASS: final geometry, touch targets, legend, journey below fold/reachable, fixed menu, no horizontal overflow or console errors, three widths.

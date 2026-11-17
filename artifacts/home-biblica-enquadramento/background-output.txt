@@ -1,0 +1,1 @@
+PASS: 360/412/430, black base/two radial corners, other styles and geometry preserved, no console errors.

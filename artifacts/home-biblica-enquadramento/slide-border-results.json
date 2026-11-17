@@ -1,0 +1,467 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "rise": 0,
+      "before": {
+        "slide": {
+          "x": 28.609375,
+          "y": 257,
+          "width": 302.40625,
+          "height": 219.125,
+          "right": 331.015625,
+          "bottom": 476.125
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 296,
+          "right": 360,
+          "bottom": 296
+        },
+        "continue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 541.125,
+          "width": 332,
+          "height": 86.59375,
+          "right": 346,
+          "bottom": 627.71875
+        },
+        "journey": {
+          "x": 14,
+          "y": 675.71875,
+          "width": 332,
+          "height": 86,
+          "right": 346,
+          "bottom": 761.71875
+        },
+        "menu": {
+          "x": 8,
+          "y": 704,
+          "width": 344,
+          "height": 88,
+          "right": 352,
+          "bottom": 792
+        },
+        "menuDisplay": "grid",
+        "neighbors": [
+          {
+            "x": -277.7487487792969,
+            "y": 261.38250732421875,
+            "width": 290.30999755859375,
+            "height": 210.3599853515625,
+            "right": 12.561248779296875,
+            "bottom": 471.74249267578125,
+            "loaded": true
+          },
+          {
+            "x": 347.0637512207031,
+            "y": 261.38250732421875,
+            "width": 290.3100280761719,
+            "height": 210.3599853515625,
+            "right": 637.373779296875,
+            "bottom": 471.74249267578125,
+            "loaded": true
+          }
+        ],
+        "arrowsHidden": true,
+        "indicators": 5,
+        "overflow": false
+      },
+      "after": {
+        "slide": {
+          "x": 28.609375,
+          "y": 257,
+          "width": 302.40625,
+          "height": 219.125,
+          "right": 331.015625,
+          "bottom": 476.125
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 296,
+          "right": 360,
+          "bottom": 296
+        },
+        "continue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 541.125,
+          "width": 332,
+          "height": 86.59375,
+          "right": 346,
+          "bottom": 627.71875
+        },
+        "journey": {
+          "x": 14,
+          "y": 675.71875,
+          "width": 332,
+          "height": 86,
+          "right": 346,
+          "bottom": 761.71875
+        },
+        "menu": {
+          "x": 8,
+          "y": 704,
+          "width": 344,
+          "height": 88,
+          "right": 352,
+          "bottom": 792
+        },
+        "menuDisplay": "grid",
+        "neighbors": [
+          {
+            "x": -277.7487487792969,
+            "y": 261.38250732421875,
+            "width": 290.30999755859375,
+            "height": 210.3599853515625,
+            "right": 12.561248779296875,
+            "bottom": 471.74249267578125,
+            "loaded": true
+          },
+          {
+            "x": 347.0637512207031,
+            "y": 261.38250732421875,
+            "width": 290.3100280761719,
+            "height": 210.3599853515625,
+            "right": 637.373779296875,
+            "bottom": 471.74249267578125,
+            "loaded": true
+          }
+        ],
+        "arrowsHidden": true,
+        "indicators": 5,
+        "overflow": false
+      },
+      "swipe": true
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "rise": 0,
+      "before": {
+        "slide": {
+          "x": 33.140625,
+          "y": 297.4375,
+          "width": 346.09375,
+          "height": 250.78125,
+          "right": 379.234375,
+          "bottom": 548.21875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 341.875,
+          "right": 412,
+          "bottom": 341.875
+        },
+        "continue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 613.21875,
+          "width": 384,
+          "height": 87.453125,
+          "right": 398,
+          "bottom": 700.671875
+        },
+        "journey": {
+          "x": 14,
+          "y": 800.671875,
+          "width": 384,
+          "height": 87.78125,
+          "right": 398,
+          "bottom": 888.453125
+        },
+        "menu": {
+          "x": 8,
+          "y": 828,
+          "width": 396,
+          "height": 88,
+          "right": 404,
+          "bottom": 916
+        },
+        "menuDisplay": "grid",
+        "neighbors": [
+          {
+            "x": -316.03125,
+            "y": 302.453125,
+            "width": 332.25,
+            "height": 240.75,
+            "right": 16.21875,
+            "bottom": 543.203125,
+            "loaded": true
+          },
+          {
+            "x": 396.15625,
+            "y": 302.453125,
+            "width": 332.25,
+            "height": 240.75,
+            "right": 728.40625,
+            "bottom": 543.203125,
+            "loaded": true
+          }
+        ],
+        "arrowsHidden": true,
+        "indicators": 5,
+        "overflow": false
+      },
+      "after": {
+        "slide": {
+          "x": 33.140625,
+          "y": 297.4375,
+          "width": 346.09375,
+          "height": 250.78125,
+          "right": 379.234375,
+          "bottom": 548.21875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 412,
+          "height": 341.875,
+          "right": 412,
+          "bottom": 341.875
+        },
+        "continue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 613.21875,
+          "width": 384,
+          "height": 87.453125,
+          "right": 398,
+          "bottom": 700.671875
+        },
+        "journey": {
+          "x": 14,
+          "y": 800.671875,
+          "width": 384,
+          "height": 87.78125,
+          "right": 398,
+          "bottom": 888.453125
+        },
+        "menu": {
+          "x": 8,
+          "y": 828,
+          "width": 396,
+          "height": 88,
+          "right": 404,
+          "bottom": 916
+        },
+        "menuDisplay": "grid",
+        "neighbors": [
+          {
+            "x": -316.03125,
+            "y": 302.453125,
+            "width": 332.25,
+            "height": 240.75,
+            "right": 16.21875,
+            "bottom": 543.203125,
+            "loaded": true
+          },
+          {
+            "x": 396.15625,
+            "y": 302.453125,
+            "width": 332.25,
+            "height": 240.75,
+            "right": 728.40625,
+            "bottom": 543.203125,
+            "loaded": true
+          }
+        ],
+        "arrowsHidden": true,
+        "indicators": 5,
+        "overflow": false
+      },
+      "swipe": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "rise": 0,
+      "before": {
+        "slide": {
+          "x": 34.828125,
+          "y": 298.234375,
+          "width": 361.21875,
+          "height": 261.75,
+          "right": 396.046875,
+          "bottom": 559.984375
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 344.828125,
+          "right": 430,
+          "bottom": 344.828125
+        },
+        "continue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 624.984375,
+          "width": 402,
+          "height": 88.015625,
+          "right": 416,
+          "bottom": 713
+        },
+        "journey": {
+          "x": 14,
+          "y": 821,
+          "width": 402,
+          "height": 90.140625,
+          "right": 416,
+          "bottom": 911.140625
+        },
+        "menu": {
+          "x": 8,
+          "y": 836,
+          "width": 414,
+          "height": 88,
+          "right": 422,
+          "bottom": 924
+        },
+        "menuDisplay": "grid",
+        "neighbors": [
+          {
+            "x": -329.166259765625,
+            "y": 303.4693603515625,
+            "width": 346.7699890136719,
+            "height": 251.280029296875,
+            "right": 17.603729248046875,
+            "bottom": 554.7493896484375,
+            "loaded": true
+          },
+          {
+            "x": 413.271240234375,
+            "y": 303.4693603515625,
+            "width": 346.77001953125,
+            "height": 251.280029296875,
+            "right": 760.041259765625,
+            "bottom": 554.7493896484375,
+            "loaded": true
+          }
+        ],
+        "arrowsHidden": true,
+        "indicators": 5,
+        "overflow": false
+      },
+      "after": {
+        "slide": {
+          "x": 34.828125,
+          "y": 298.234375,
+          "width": 361.21875,
+          "height": 261.75,
+          "right": 396.046875,
+          "bottom": 559.984375
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 430,
+          "height": 344.828125,
+          "right": 430,
+          "bottom": 344.828125
+        },
+        "continue": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "cards": {
+          "x": 14,
+          "y": 624.984375,
+          "width": 402,
+          "height": 88.015625,
+          "right": 416,
+          "bottom": 713
+        },
+        "journey": {
+          "x": 14,
+          "y": 821,
+          "width": 402,
+          "height": 90.140625,
+          "right": 416,
+          "bottom": 911.140625
+        },
+        "menu": {
+          "x": 8,
+          "y": 836,
+          "width": 414,
+          "height": 88,
+          "right": 422,
+          "bottom": 924
+        },
+        "menuDisplay": "grid",
+        "neighbors": [
+          {
+            "x": -329.166259765625,
+            "y": 303.4693603515625,
+            "width": 346.7699890136719,
+            "height": 251.280029296875,
+            "right": 17.603729248046875,
+            "bottom": 554.7493896484375,
+            "loaded": true
+          },
+          {
+            "x": 413.271240234375,
+            "y": 303.4693603515625,
+            "width": 346.77001953125,
+            "height": 251.280029296875,
+            "right": 760.041259765625,
+            "bottom": 554.7493896484375,
+            "loaded": true
+          }
+        ],
+        "arrowsHidden": true,
+        "indicators": 5,
+        "overflow": false
+      },
+      "swipe": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,1 @@
+PASS: hidden bottom menu, full content height, scrolling, top menu library/exit, general Home menu preserved, carousel/cards/divider intact, 360/412/430, no console errors.
