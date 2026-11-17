@@ -3,6 +3,7 @@ const path = require('node:path');
 const {execFileSync} = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 execFileSync(process.execPath, [path.join(__dirname, 'gerar-indice-variacoes.cjs')], {stdio: 'inherit'});
+execFileSync(process.execPath, [path.join(__dirname, 'gerar-catalogo-capas.cjs')], {stdio: 'inherit'});
 // Pasta temporária nova a cada build: nunca remove arquivos locais ou referências.
 const output = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'palacio-site-'));
 for (const name of ['index.html', 'style.css', 'script.js', 'home.css', 'home.js', 'temas.css', 'service-worker.js', 'manifest.json']) {

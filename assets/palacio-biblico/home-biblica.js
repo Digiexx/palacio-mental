@@ -1,7 +1,6 @@
 (() => {
     'use strict';
     const PB = globalThis.PalacioBiblico;
-    const imagens = new URL('../imagens/palacio-biblico/home-palacio-biblico/', document.currentScript.src);
     const desenhos = {
         casa: '<path d="m3 11 9-8 9 8M5 10v11h5v-7h4v7h5V10"/>',
         livro: '<path d="M12 5c-3-2-6-2-9-1v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-3-1-6-1-9 1Zm0 0v15"/>',
@@ -13,18 +12,13 @@
         calendario: '<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-12 4h2m3 0h2"/>'
     };
     const icone = nome => `<svg viewBox="0 0 24 24" aria-hidden="true">${desenhos[nome]}</svg>`;
-    const diaLocal = () => {
-        const agora = new Date();
-        return `${agora.getFullYear()}-${String(agora.getMonth() + 1).padStart(2, '0')}-${String(agora.getDate()).padStart(2, '0')}`;
-    };
-    function indiceDoDia(dia, dono, tamanho) {
-        let hash = 2166136261;
-        for (const letra of `${dia}:${dono}`) hash = Math.imul(hash ^ letra.charCodeAt(0), 16777619);
-        return (hash >>> 0) % tamanho;
-    }
-
-    PB.iniciarHomeBiblica = ({elemento, navegar, abrirBiblioteca}) => {
+    PB.iniciarHomeBiblica = ({elemento, navegar, abrirBiblioteca, abrirLivro}) => {
         if (!elemento) return null;
+        // Somente arquivos WebP já verificados no repositório; originais preservados.
+        const slides = ['MRK', 'LUK', 'JHN', 'MAT', 'PHP'].map(codigo => {
+            const indice = PB.indiceBiblico.find(livro => livro.codigo === codigo);
+            return {...indice, disponivel: PB.catalogo.some(livro => livro.codigo === codigo)};
+        });
         elemento.setAttribute('aria-labelledby', 'pdTitulo');
         elemento.innerHTML = `
           <div class="pd-scroll">
@@ -36,124 +30,135 @@
                 <p>Memorização de versículos</p>
               </div>
             </header>
-            <figure class="pd-hero" aria-label="Composição temporária com Bíblia aberta, paisagem e três cruzes">
-              <img class="pd-paisagem" src="${new URL('dfgt.webp', imagens).href}" width="941" height="1671" alt="" draggable="false">
-              <svg class="pd-cruzes" viewBox="0 0 160 115" aria-hidden="true"><path d="M80 12v94M56 35h48M31 41v65M14 58h34M130 43v63M113 61h34"/></svg>
-              <svg class="pd-biblia" viewBox="185 245 400 215" aria-hidden="true"><image href="${new URL('biblia-medalhao.webp', imagens).href}" width="768" height="768"/></svg>
-              <figcaption>Composição visual provisória</figcaption>
-            </figure>
-            <section class="pd-versiculo" aria-labelledby="pdDiaTitulo" aria-busy="true">
-              <div class="pd-card-topo">
-                <h2 id="pdDiaTitulo">${icone('calendario')}<span>Versículo do Dia</span></h2>
-                <button class="pd-favoritar" type="button" disabled aria-label="Favorito de versículo indisponível" aria-describedby="pdLimite" title="Favoritos de versículos ainda não integrados">${icone('estrela')}</button>
+            <section class="pd-carrossel" role="region" aria-roledescription="carrossel" aria-label="Livros bíblicos">
+              <div class="pd-slides" tabindex="0" aria-label="Deslize para escolher um livro. Use também as setas do teclado.">
+                ${slides.map((livro, i) => `<button class="pd-slide" type="button" data-slide="${i}" ${livro.disponivel ? '' : 'aria-disabled="true"'} aria-label="${livro.nome}${livro.disponivel ? ' — abrir livro' : ' — conteúdo indisponível'}" aria-roledescription="slide">
+                  <img data-src="${livro.imagem}" ${livro.codigo === 'JHN' ? 'fetchpriority="high"' : 'loading="lazy"'} width="1024" height="576" alt="" draggable="false" decoding="async">
+                  <span class="pd-slide-legenda"><small>${livro.testamento === 'novo' && ['JHN', 'MAT', 'MRK', 'LUK'].includes(livro.codigo) ? 'Evangelho de' : 'Carta aos'}</small><strong>${livro.nome}</strong><span>${livro.disponivel ? 'Abrir livro' : 'Em breve'} ${icone('livro')}</span></span>
+                </button>`).join('')}
               </div>
-              <p class="pd-vazio" data-vazio>Consultando seus versículos…</p>
-              <blockquote data-texto hidden></blockquote>
-              <p class="pd-referencia" data-referencia hidden></p>
-              <p class="pd-fonte" data-fonte hidden></p>
-              <button class="pd-repetir" type="button" data-acao="recarregar" hidden>Tentar novamente</button>
-              <button class="pd-memorizar" type="button" disabled aria-describedby="pdLimite">${icone('livro')}<span>Memorizar Versículo</span></button>
-              <p class="pd-limite" id="pdLimite">Memorização e favorito de versículos ainda não integrados.</p>
+              <button class="pd-anterior" type="button" data-passo="-1" aria-label="Livro anterior"><span aria-hidden="true">‹</span></button>
+              <button class="pd-proximo" type="button" data-passo="1" aria-label="Próximo livro"><span aria-hidden="true">›</span></button>
+              <div class="pd-indicadores" aria-hidden="true">${slides.map((_, i) => `<span data-indicador="${i}"></span>`).join('')}</div>
+              <p class="pd-sr" role="status" aria-live="polite" data-slide-status></p>
             </section>
-            <nav class="pd-atalhos" aria-label="Acessos do Palácio Bíblico">
-              <button type="button" data-acao="livros">${icone('livro')}<span>Livros</span><small>Biblioteca</small></button>
-              <button type="button" disabled title="Treinamento bíblico ainda indisponível">${icone('alvo')}<span>Meus Treinos</span><small>Indisponível</small></button>
-              <button type="button" disabled title="Progresso bíblico ainda indisponível">${icone('barras')}<span>Progresso</span><small>Indisponível</small></button>
-              <button type="button" data-acao="favoritos">${icone('estrela')}<span>Favoritos</span><small>Livros salvos</small></button>
+            <section class="pd-continuar pd-painel" aria-labelledby="pdContinuarTitulo">
+              <span class="pd-continuar-icone" aria-hidden="true">${icone('livro')}</span>
+              <div><h2 id="pdContinuarTitulo">Continuar Estudando</h2><p>Escolha um livro para começar. Ainda não há uma atividade disponível para retomar.</p>
+              <button type="button" class="pd-escolher" data-acao="livros">Escolher livro <span aria-hidden="true">›</span></button></div>
+            </section>
+            <nav class="pd-atalhos" aria-label="Acessos rápidos">
+              <button type="button" data-acao="livros">${icone('livro')}<span>Biblioteca</span></button>
+              <button type="button" disabled title="Treino bíblico indisponível">${icone('alvo')}<span>Treinar</span><small>Indisponível</small></button>
+              <button type="button" disabled title="Desafios bíblicos indisponíveis">${icone('estrela')}<span>Desafios</span><small>Indisponível</small></button>
+              <button type="button" disabled title="Tela de progresso indisponível">${icone('barras')}<span>Progresso</span><small>Indisponível</small></button>
             </nav>
-            <p class="pd-status" role="status" data-status>Continue sua jornada, no seu ritmo.</p>
+            <section class="pd-jornada pd-painel" aria-labelledby="pdJornadaTitulo" aria-busy="true">
+              <span class="pd-jornada-icone" aria-hidden="true">${icone('barras')}</span>
+              <div><h2 id="pdJornadaTitulo">Sua Jornada Bíblica</h2><p data-jornada-status role="status">Consultando seu acervo…</p>
+                <dl class="pd-estatisticas" hidden><div><dt>Versículos no acervo</dt><dd data-total="versiculos"></dd></div><div><dt>Revisões registradas</dt><dd data-total="revisoes"></dd></div><div><dt>Livros favoritos</dt><dd data-total="favoritos"></dd></div></dl>
+                <button type="button" class="pd-repetir" data-acao="recarregar" hidden>Tentar novamente</button>
+              </div>
+            </section>
           </div>
           <nav class="pd-menu" aria-label="Menu do Palácio Bíblico">
-            <button type="button" data-acao="inicio" aria-current="page">${icone('casa')}<span>Início</span></button>
-            <button type="button" data-acao="livros">${icone('livro')}<span>Livros</span></button>
-            <button type="button" disabled>${icone('explorar')}<span>Explorar</span><small>Indisponível</small></button>
-            <button type="button" disabled>${icone('barras')}<span>Progresso</span><small>Indisponível</small></button>
-            <button type="button" disabled>${icone('ajustes')}<span>Ajustes</span><small>Indisponível</small></button>
+            <button type="button" data-acao="inicio" aria-current="page">${icone('casa')}<span>Home</span></button>
+            <button type="button" disabled title="Treinos bíblicos indisponíveis">${icone('alvo')}<span>Treinos</span><small>Indisponível</small></button>
+            <button type="button" disabled title="Explorar indisponível">${icone('explorar')}<span>Explorar</span><small>Indisponível</small></button>
+            <button type="button" data-acao="livros" class="pd-menu-livros"><span class="pd-livros-circulo">${icone('livro')}</span><span>Livros</span></button>
+            <button type="button" disabled title="Jogar indisponível">${icone('estrela')}<span>Jogar</span><small>Indisponível</small></button>
+            <button type="button" data-acao="favoritos">${icone('estrela')}<span>Favoritos</span></button>
+            <button type="button" disabled title="Ajustes do Palácio Bíblico indisponíveis">${icone('ajustes')}<span>Ajustes</span><small>Indisponível</small></button>
           </nav>`;
-        const card = elemento.querySelector('.pd-versiculo');
-        const vazio = elemento.querySelector('[data-vazio]');
-        const texto = elemento.querySelector('[data-texto]');
-        const referencia = elemento.querySelector('[data-referencia]');
-        const fonte = elemento.querySelector('[data-fonte]');
-        const repetir = elemento.querySelector('.pd-repetir');
-        const status = elemento.querySelector('[data-status]');
-        const cacheSessao = new Map();
-        let sessao = 0;
 
-        function mensagem(estado, conteudo) {
-            elemento.dataset.versiculoEstado = estado;
-            delete elemento.dataset.versiculoId;
-            vazio.hidden = false;
-            vazio.textContent = conteudo;
-            for (const campo of [texto, referencia, fonte]) { campo.hidden = true; campo.textContent = ''; }
-            repetir.hidden = estado !== 'erro';
+        const faixa = elemento.querySelector('.pd-slides');
+        const botoesSlides = [...faixa.querySelectorAll('[data-slide]')];
+        const reduzido = matchMedia('(prefers-reduced-motion: reduce)');
+        const jornada = elemento.querySelector('.pd-jornada');
+        const estado = elemento.querySelector('[data-jornada-status]');
+        const estatisticas = elemento.querySelector('.pd-estatisticas');
+        const repetir = elemento.querySelector('.pd-repetir');
+        let indice = 2, inicializado = false, sessao = 0, frame = 0, ponteiro = null, arrastou = false;
+
+        function carregarImagem(i) {
+            const img = botoesSlides[i]?.querySelector('img');
+            if (img?.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; }
         }
-        function lerEscolha(chave) {
-            if (cacheSessao.has(chave)) return cacheSessao.get(chave);
-            try {
-                const salvo = JSON.parse(localStorage.getItem(chave));
-                if (salvo && typeof salvo.dia === 'string' && typeof salvo.id === 'string') {
-                    cacheSessao.set(chave, salvo);
-                    return salvo;
-                }
-            } catch { /* Armazenamento bloqueado ou preferência inválida: mantém os dados originais. */ }
-            return null;
+        const observador = new IntersectionObserver(entradas => {
+            for (const entrada of entradas) if (entrada.isIntersecting) {
+                carregarImagem(Number(entrada.target.dataset.slide)); observador.unobserve(entrada.target);
+            }
+        }, {root: faixa, rootMargin: '0px 30px'});
+        function atualizarSlide() {
+            const centro = faixa.scrollLeft + faixa.clientWidth / 2;
+            indice = botoesSlides.reduce((melhor, botao, i) => Math.abs(botao.offsetLeft + botao.offsetWidth / 2 - centro) < Math.abs(botoesSlides[melhor].offsetLeft + botoesSlides[melhor].offsetWidth / 2 - centro) ? i : melhor, 0);
+            botoesSlides.forEach((botao, i) => botao.toggleAttribute('data-ativo', i === indice));
+            elemento.querySelectorAll('[data-indicador]').forEach((ponto, i) => ponto.toggleAttribute('data-ativo', i === indice));
+            elemento.querySelector('[data-passo="-1"]').disabled = indice === 0;
+            elemento.querySelector('[data-passo="1"]').disabled = indice === slides.length - 1;
+            elemento.querySelector('[data-slide-status]').textContent = `${slides[indice].nome}, ${indice + 1} de ${slides.length}${slides[indice].disponivel ? '' : ', conteúdo indisponível'}`;
         }
-        function guardarEscolha(chave, escolha) {
-            cacheSessao.set(chave, escolha);
-            try { localStorage.setItem(chave, JSON.stringify(escolha)); }
-            catch { status.textContent = 'Escolha do dia mantida nesta sessão; armazenamento de preferências indisponível.'; }
+        function centrar(i, suave = true) {
+            const botao = botoesSlides[i];
+            if (!botao) return;
+            carregarImagem(i);
+            faixa.scrollTo({left: botao.offsetLeft + botao.offsetWidth / 2 - faixa.clientWidth / 2, behavior: suave && !reduzido.matches ? 'smooth' : 'instant'});
+            if (!suave || reduzido.matches) atualizarSlide();
         }
-        async function carregar() {
-            const atual = ++sessao;
-            let repo;
-            card.setAttribute('aria-busy', 'true');
-            mensagem('carregando', 'Consultando seus versículos…');
-            status.textContent = 'Continue sua jornada, no seu ritmo.';
+        faixa.addEventListener('scroll', () => {
+            if (!frame) frame = requestAnimationFrame(() => { frame = 0; atualizarSlide(); });
+        }, {passive: true});
+        faixa.addEventListener('keydown', e => {
+            if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) {
+                e.preventDefault();
+                centrar(e.key === 'Home' ? 0 : e.key === 'End' ? slides.length - 1 : Math.max(0, Math.min(slides.length - 1, indice + (e.key === 'ArrowRight' ? 1 : -1))));
+            }
+        });
+        faixa.addEventListener('pointerdown', e => {
+            if (!e.isPrimary || e.button !== 0) return;
+            ponteiro = {id: e.pointerId, x: e.clientX, scroll: faixa.scrollLeft, mouse: e.pointerType === 'mouse'}; arrastou = false;
+        });
+        faixa.addEventListener('pointermove', e => {
+            if (!ponteiro || e.pointerId !== ponteiro.id) return;
+            if (Math.abs(e.clientX - ponteiro.x) > 10) arrastou = true;
+            if (ponteiro.mouse && arrastou) { faixa.classList.add('pd-arrastando'); faixa.setPointerCapture(e.pointerId); faixa.scrollLeft = ponteiro.scroll - (e.clientX - ponteiro.x); }
+        });
+        function terminarGesto() {
+            const mouse = ponteiro?.mouse; ponteiro = null;
+            faixa.classList.remove('pd-arrastando');
+            if (mouse && arrastou) { atualizarSlide(); centrar(indice); }
+        }
+        faixa.addEventListener('pointerup', terminarGesto);
+        faixa.addEventListener('pointercancel', terminarGesto);
+        faixa.addEventListener('click', e => { if (arrastou && e.detail !== 0) { e.preventDefault(); e.stopPropagation(); arrastou = false; } }, true);
+        botoesSlides.forEach((botao, i) => botao.addEventListener('click', () => {
+            if (i !== indice) { centrar(i); return; }
+            if (slides[i].disponivel) abrirLivro(slides[i].codigo);
+        }));
+        elemento.querySelectorAll('[data-passo]').forEach(botao => botao.addEventListener('click', () => centrar(indice + Number(botao.dataset.passo))));
+        new ResizeObserver(() => { if (inicializado && !elemento.hidden) centrar(indice, false); }).observe(faixa);
+
+        async function carregarJornada() {
+            const atual = ++sessao; let repo;
+            jornada.setAttribute('aria-busy', 'true'); repetir.hidden = true;
             try {
                 repo = await PB.criarRepositorio();
-                const [livros, versiculos] = await Promise.all([repo.listar('livros'), repo.listar('versiculos')]);
+                const [livros, versiculos, revisoes] = await Promise.all(['livros', 'versiculos', 'revisoes'].map(tipo => repo.listar(tipo)));
                 if (atual !== sessao) return;
-                const porLivro = new Map(livros.map(livro => [livro.id, livro]));
-                const disponiveis = versiculos.filter(v => porLivro.has(v.livroId) &&
-                    typeof v.texto === 'string' && v.texto.trim() && typeof v.fonte === 'string' && v.fonte.trim())
-                    .sort((a, b) => a.id.localeCompare(b.id));
-                const dia = diaLocal();
-                const chave = `palacioBiblicoVersiculoDoDia:${repo.proprietarioLocalId}`;
-                const salva = lerEscolha(chave);
-                let versiculo;
-                if (salva?.dia === dia) {
-                    versiculo = disponiveis.find(v => v.id === salva.id);
-                    if (!versiculo) {
-                        mensagem('indisponivel', 'O versículo escolhido para hoje não está mais disponível no acervo. Uma nova seleção será feita em outro dia.');
-                        return;
-                    }
-                } else {
-                    if (!disponiveis.length) {
-                        mensagem('vazio', 'Ainda não há versículos com texto e fonte cadastrados no seu acervo. Seu Versículo do Dia aparecerá aqui quando houver conteúdo disponível.');
-                        return;
-                    }
-                    versiculo = disponiveis[indiceDoDia(dia, repo.proprietarioLocalId, disponiveis.length)];
-                    guardarEscolha(chave, {dia, id: versiculo.id});
-                }
-                elemento.dataset.versiculoEstado = 'disponivel';
-                elemento.dataset.versiculoId = versiculo.id;
-                vazio.hidden = true;
-                repetir.hidden = true;
-                texto.textContent = versiculo.texto.trim();
-                const intervalo = versiculo.fim && versiculo.fim !== versiculo.inicio
-                    ? `${versiculo.inicio}–${versiculo.fim}` : versiculo.inicio;
-                referencia.textContent = `${porLivro.get(versiculo.livroId).nome} ${versiculo.capitulo}:${intervalo} · ${versiculo.traducao}`;
-                fonte.textContent = `Fonte: ${versiculo.fonte}`;
-                for (const campo of [texto, referencia, fonte]) campo.hidden = false;
+                const livrosIds = new Set(livros.map(l => l.id));
+                const validos = versiculos.filter(v => livrosIds.has(v.livroId));
+                const versiculosIds = new Set(validos.map(v => v.id));
+                const totais = {versiculos: validos.length, revisoes: revisoes.filter(r => versiculosIds.has(r.versiculoId) && ['acerto', 'erro', 'nao-lembrou'].includes(r.resultado) && Number.isFinite(Date.parse(r.ocorridoEm))).length, favoritos: livros.filter(l => l.favorito === true).length};
+                estatisticas.hidden = !Object.values(totais).some(Boolean);
+                for (const [tipo, total] of Object.entries(totais)) elemento.querySelector(`[data-total="${tipo}"]`).textContent = total;
+                estado.textContent = estatisticas.hidden ? 'Sua jornada começa com um livro. Explore a Biblioteca e construa suas associações.' : 'Seu acervo e suas atividades salvas neste dispositivo.';
+                elemento.dataset.jornadaEstado = estatisticas.hidden ? 'vazio' : 'disponivel';
             } catch (erro) {
                 if (atual !== sessao) return;
+                estatisticas.hidden = true; repetir.hidden = false; elemento.dataset.jornadaEstado = 'erro';
+                estado.textContent = 'Não foi possível consultar seu acervo. Seus dados não foram apagados.';
                 console.error('Home Bíblica: consulta local indisponível', erro);
-                mensagem('erro', 'Não foi possível consultar os versículos locais. Seus dados não foram apagados.');
-            } finally {
-                repo?.fechar();
-                if (atual === sessao) card.setAttribute('aria-busy', 'false');
-            }
+            } finally { repo?.fechar(); if (atual === sessao) jornada.setAttribute('aria-busy', 'false'); }
         }
         elemento.querySelectorAll('[data-acao]').forEach(botao => botao.addEventListener('click', () => {
             switch (botao.dataset.acao) {
@@ -161,12 +166,29 @@
                 case 'favoritos': abrirBiblioteca('favoritos'); break;
                 case 'palacioMental': navegar('home'); break;
                 case 'inicio': elemento.querySelector('.pd-scroll').scrollTo({top: 0, behavior: 'instant'}); break;
-                case 'recarregar': carregar(); break;
+                case 'recarregar': carregarJornada(); break;
             }
         }));
-        document.addEventListener('visibilitychange', () => {
-            if (!document.hidden && !elemento.hidden) carregar();
+        document.addEventListener('visibilitychange', () => { if (!document.hidden && !elemento.hidden) carregarJornada(); });
+        globalThis.addEventListener('palacio-biblico-capas', () => {
+            slides.forEach((livro, i) => {
+                const nova = PB.capasBiblicas[livro.codigo] || null;
+                if (nova === livro.imagem) return;
+                livro.imagem = nova;
+                const img = botoesSlides[i].querySelector('img');
+                if (!nova) { img.removeAttribute('src'); delete img.dataset.src; }
+                else if (img.hasAttribute('src')) img.src = nova;
+                else img.dataset.src = nova;
+            });
         });
-        return {abrir: carregar, suspender() { ++sessao; }};
+        return {abrir() {
+            PB.atualizarCapas();
+            requestAnimationFrame(() => {
+                if (elemento.hidden) return;
+                centrar(indice, false);
+                if (!inicializado) { inicializado = true; botoesSlides.forEach(botao => observador.observe(botao)); }
+            });
+            return carregarJornada();
+        }, suspender() { ++sessao; ponteiro = null; faixa.classList.remove('pd-arrastando'); if (frame) cancelAnimationFrame(frame); frame = 0; }};
     };
 })();

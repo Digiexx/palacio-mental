@@ -5677,6 +5677,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     const homeBiblica = globalThis.PalacioBiblico?.iniciarHomeBiblica({
         elemento: document.getElementById("telaHomeBiblica"), navegar: navegarParaTela,
+        abrirLivro: codigo => bibliotecaBiblica.abrirLivro(codigo),
         abrirBiblioteca(filtro) {
             bibliotecaBiblica.selecionarFiltro(filtro, true);
             navegarParaTela("bibliotecaBiblica");

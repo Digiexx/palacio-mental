@@ -113,7 +113,8 @@
                     const preparacao = document.createElement('small'); preparacao.textContent = 'Em preparação';
                     texto.append(preparacao);
                 }
-                const seta = document.createElement('span'); seta.className = 'pb-card-seta'; seta.textContent = '›'; seta.setAttribute('aria-hidden', 'true');
+                const seta = document.createElement('span'); seta.className = 'pb-card-seta'; seta.setAttribute('aria-hidden', 'true');
+                seta.innerHTML = '<svg viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="m2.75 .75 6.5 5.25-6.5 5.25"/></svg>';
                 const diagonal = document.createElement('span'); diagonal.className = 'pb-card-diagonal';
                 diagonal.setAttribute('aria-hidden', 'true');
                 diagonal.innerHTML = `<svg viewBox="0 0 1000 200" preserveAspectRatio="none"><defs><linearGradient id="pb-diagonal-${livro.codigo}" x2="0" y2="1"><stop stop-color="#6f4d2e"/><stop offset=".5" stop-color="#d6b486"/><stop offset="1" stop-color="#775436"/></linearGradient></defs><path d="M530 0 450 200" fill="none" stroke="url(#pb-diagonal-${livro.codigo})" stroke-width="1.2" vector-effect="non-scaling-stroke"/></svg>`;
@@ -163,6 +164,7 @@
             document.getElementById('vazioBibliotecaBiblica').hidden = !pronto || visiveis.length > 0;
         }
         async function abrir() {
+            PB.atualizarCapas();
             if (!painel.open) {
                 painel.classList.toggle('pb-lista-rolada', posicaoLista > 0);
                 painel.showModal();
@@ -230,7 +232,13 @@
             if (pronto && !tela.hidden && rolagem.scrollTop > 0) painel.classList.add('pb-lista-rolada');
             if (pronto && !tela.hidden) posicaoLista = rolagem.scrollTop;
         }, {passive: true});
-        return {abrir, selecionarFiltro, encerrar, suspender() {
+        globalThis.addEventListener('palacio-biblico-capas', () => {
+            if (!pronto || tela.hidden || !painel.open) return;
+            const foco = document.activeElement?.dataset?.favorito;
+            renderizar();
+            if (foco) lista.querySelector(`[data-favorito="${foco}"]`)?.focus({preventScroll: true});
+        });
+        return {abrir, abrirLivro, selecionarFiltro, encerrar, suspender() {
             ocultarToast();
             lista.querySelectorAll('.pb-cartao-interagindo').forEach(card => card.classList.remove('pb-cartao-interagindo'));
             if (painel.open) { ++fechamentosInternos; painel.close(); }

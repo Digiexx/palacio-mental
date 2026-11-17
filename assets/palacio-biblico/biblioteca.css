@@ -81,11 +81,12 @@ body:has(#telaBibliotecaBiblica:not([hidden])) .bottom-nav { display: none; }
 #telaBibliotecaBiblica .pb-busca { display: flex; align-items: center; gap: 10px; margin-top: 6px; padding: 0 13px; border: 1px solid #353538; border-radius: 999px; background: #080809; }
 #telaBibliotecaBiblica .pb-busca > svg { width: 20px; flex: 0 0 20px; color: #ab967a; }
 #telaBibliotecaBiblica .pb-busca input { width: 100%; min-width: 0; height: 44px; margin: 0; padding: 0; border: 0; background: transparent; color: #E6D9C8; font-size: 16px; box-shadow: none; }
-#telaBibliotecaBiblica .pb-busca input::placeholder { color: #a69f94; }
+#telaBibliotecaBiblica .pb-busca input::placeholder { color: #b8b5b0; opacity: .47; font-family: Arial, sans-serif; font-weight: 300; font-style: normal; }
+#telaBibliotecaBiblica .pb-busca input:focus::placeholder { opacity: 0; }
 #telaBibliotecaBiblica .pb-filtros { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; margin-top: 6px; margin-bottom: 9.5px; }
-#telaBibliotecaBiblica .pb-filtros button { position: relative; z-index: 1; overflow: visible; height: 39px; min-height: 39px; margin-block: 2.5px; padding: 4px 2px; border: 1px solid #333336; border-radius: 10px; background: linear-gradient(160deg, #202023, #09090a 85%); box-shadow: inset 0 1px 2px #ffffff06, inset 0 -2px 4px #00000055; color: #c2bfc0; font-size: 11px; }
-#telaBibliotecaBiblica .pb-filtros button[aria-pressed='true'] { color: #fff1dd; border-color: #735033; background: #37251b; }
-#telaBibliotecaBiblica .pb-filtros button:disabled { color: #8e8982; }
+#telaBibliotecaBiblica .pb-filtros button { position: relative; z-index: 1; overflow: visible; height: 39px; min-height: 39px; margin-block: 2.5px; padding: 4px 2px; border: 1px solid #333336; border-radius: 10px; background: linear-gradient(160deg, #202023, #09090a 85%); box-shadow: inset 0 1px 2px #ffffff06, inset 0 -2px 4px #00000055; color: #a6a3a0; font-size: 11px; }
+#telaBibliotecaBiblica .pb-filtros button[aria-pressed='true'] { color: #fff; border-color: #735033; background: #37251b; }
+#telaBibliotecaBiblica .pb-filtros button:disabled { color: #a6a3a0; }
 /* Amplia o alvo sem aumentar a superf?cie visual dos filtros. */
 #telaBibliotecaBiblica .pb-filtros button::after { content: ''; position: absolute; inset: -3.5px 0; width: auto; height: auto; }
 #telaBibliotecaBiblica .pb-nota { margin: 4px 0 5px; color: #9c958b; font-size: 10px; line-height: 1.4; }
@@ -94,6 +95,15 @@ body:has(#telaBibliotecaBiblica:not([hidden])) .bottom-nav { display: none; }
 #telaBibliotecaBiblica .pb-grupo small { font-size: 11px; letter-spacing: 0; text-transform: none; }
 #telaBibliotecaBiblica .pb-lista { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
 #telaBibliotecaBiblica .pb-card { position: relative; min-width: 0; overflow: visible; border: 1px solid transparent; border-radius: 15px; background: linear-gradient(#171416, #171416) padding-box, linear-gradient(125deg, #35251d 0%, #795438 19%, #A6794D 26%, #473025 40%, #281e19 61%, #805b3d 79%, #3c2a20 100%) border-box; }
+/* Black Gradient: camada recortada somente na área de conteúdo dos 66 livros. */
+#telaBibliotecaBiblica .pb-card .pb-abrir-livro::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    clip-path: polygon(53% 0, 100% 0, 100% 100%, 45% 100%);
+    background:
+        radial-gradient(ellipse 13% 36px at 54% 0, #1b1b1e 0%, #111113 35%, transparent 85%),
+        radial-gradient(ellipse 13% 36px at 100% 0, #1b1b1e 0%, #111113 35%, transparent 85%),
+        #080809;
+}
 #telaBibliotecaBiblica .pb-abrir-livro { position: relative; display: block; width: 100%; height: 68px; overflow: hidden; margin: 0; padding: 0; border: 0; border-radius: 14px; background: transparent; color: #E6D9C8; text-align: left; }
 #telaBibliotecaBiblica .pb-card-imagem { position: absolute; inset: 0 auto 0 0; width: 53%; overflow: hidden; clip-path: polygon(0 0, 100% 0, 84.91% 100%, 0 100%); }
 #telaBibliotecaBiblica .pb-card-imagem img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -104,8 +114,9 @@ body:has(#telaBibliotecaBiblica:not([hidden])) .bottom-nav { display: none; }
 #telaBibliotecaBiblica .pb-card-texto { position: absolute; inset: 0 82px 0 54%; display: flex; flex-direction: column; justify-content: center; overflow-wrap: anywhere; }
 #telaBibliotecaBiblica .pb-card-texto strong { font-size: 14px; line-height: 1.25; font-weight: 500; }
 #telaBibliotecaBiblica .pb-card-texto strong.pb-nome-longo { font-size: 13px; }
-#telaBibliotecaBiblica .pb-card-texto small { margin-top: 4px; color: #9c9188; font-size: 9px; }
+#telaBibliotecaBiblica .pb-card-texto small { margin-top: 4px; color: #9c9188; font-size: 9px; visibility: hidden; } /* Preserva a posição vertical do nome. */
 #telaBibliotecaBiblica .pb-card-seta { position: absolute; top: 50%; right: 9px; display: grid; place-items: center; width: 28px; height: 28px; transform: translateY(-50%); border: 1px solid #735033; border-radius: 50%; background: #37251b; color: #E6D9C8; font-size: 26px; line-height: 1; }
+#telaBibliotecaBiblica .pb-card-seta svg { display: block; width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 #telaBibliotecaBiblica .pb-favorito { position: absolute; right: 37px; top: 50%; transform: translateY(-50%); z-index: 1; width: 44px; height: 44px; min-height: 44px; margin: 0; padding: 0; border: 0; border-radius: 8px; background: transparent; color: #ad9581; font-size: 19px; }
 #telaBibliotecaBiblica .pb-favorito[aria-pressed='true'] { color: #A6794D; background: transparent; }
 #telaBibliotecaBiblica .pb-sheet-rodape { position: absolute; inset: auto 0 env(safe-area-inset-bottom); z-index: 1; display: grid; place-items: center; height: 32px; margin: 0; padding: 0; border: 0; background: transparent; pointer-events: none; color: #A6794D; }

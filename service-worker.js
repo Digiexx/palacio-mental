@@ -14,6 +14,10 @@ const ARQUIVOS_CACHE = [
     "./assets/palacio-biblico/db.js",
     "./assets/palacio-biblico/repositorio.js",
     "./assets/palacio-biblico/catalogo.js",
+    "./assets/palacio-biblico/livros-biblicos.js",
+    "./assets/palacio-biblico/capas-biblicas.js",
+    "./assets/palacio-biblico/capas-biblicas.json",
+    "./assets/palacio-biblico/atualizar-capas.js",
     "./assets/palacio-biblico/indice-biblico.js",
     "./assets/palacio-biblico/home-biblica.js",
     "./assets/palacio-biblico/home-biblica.css",
@@ -27,8 +31,6 @@ const ARQUIVOS_CACHE = [
     "./assets/imagens/palacio-biblico/biblioteca-topo.webp",
     "./assets/imagens/palacio-biblico/topo livros/joao.webp",
     "./assets/imagens/palacio-biblico/topo livros/filipenses.webp",
-    "./assets/imagens/palacio-biblico/home-palacio-biblico/dfgt.webp",
-    "./assets/imagens/palacio-biblico/home-palacio-biblico/biblia-medalhao.webp",
     "./assets/imagens/palacio-biblico/livros-menu/01-genesis.webp",
     "./assets/imagens/palacio-biblico/livros-menu/02-exodo.webp",
     "./assets/imagens/palacio-biblico/livros-menu/40-mateus.webp",
@@ -200,6 +202,9 @@ self.addEventListener(
             return;
 
         }
+
+        // Canal de eventos do servidor local: fluxo contínuo não deve entrar no cache.
+        if (url.pathname === '/__capas/eventos') return;
 
 
         event.respondWith(

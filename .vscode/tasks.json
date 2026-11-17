@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "Palácio Mental: servidor com capas automáticas",
+        "type": "process",
+        "command": "${execPath}",
+        "args": ["${workspaceFolder}/scripts/servir-local.cjs"],
+        "options": {"cwd": "${workspaceFolder}", "env": {"ELECTRON_RUN_AS_NODE": "1"}},
+        "isBackground": true,
+        "runOptions": {"runOn": "folderOpen", "instanceLimit": 1},
+        "presentation": {"reveal": "silent", "panel": "dedicated"},
+        "problemMatcher": []
+    }]
+}
