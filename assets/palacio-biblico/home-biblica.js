@@ -53,9 +53,10 @@
               <button class="pd-anterior" type="button" data-passo="-1" aria-label="Livro anterior"><span aria-hidden="true">‹</span></button>
               <button class="pd-proximo" type="button" data-passo="1" aria-label="Próximo livro"><span aria-hidden="true">›</span></button>
               <div class="pd-indicadores" aria-hidden="true">${slides.map((_, i) => `<span data-indicador="${i}"></span>`).join('')}</div>
+              <div class="pd-divisor" aria-hidden="true">${icone('livro')}</div>
               <p class="pd-sr" role="status" aria-live="polite" data-slide-status></p>
             </section>
-            <section class="pd-continuar pd-painel" aria-labelledby="pdContinuarTitulo">
+            <section class="pd-continuar pd-painel" aria-labelledby="pdContinuarTitulo" hidden>
               <span class="pd-continuar-icone" aria-hidden="true">${icone('livroCheio')}</span>
               <div><h2 id="pdContinuarTitulo">Continuar Estudando</h2><p>Escolha um livro para começar.</p></div>
               <button type="button" class="pd-escolher" data-acao="livros" aria-label="Escolher livro para começar">${icone('seta')}</button>
