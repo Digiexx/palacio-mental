@@ -1,0 +1,4 @@
+{"value":"","placeholder":"Pesquisar Livro","opacity":"0","weight":"300","color":"rgb(184, 181, 176)","style":"normal","shadow":"none","transition":"0s","rect":[60,398.25,270,44],"visible":true,"focus":true,"count":66,"overflow":false}
+{"value":"","placeholder":"Pesquisar Livro","opacity":"0","weight":"300","color":"rgb(184, 181, 176)","style":"normal","shadow":"none","transition":"0s","rect":[60,445.375,322,44],"visible":true,"focus":true,"count":66,"overflow":false}
+{"value":"","placeholder":"Pesquisar Livro","opacity":"0","weight":"300","color":"rgb(184, 181, 176)","style":"normal","shadow":"none","transition":"0s","rect":[60,448.421875,340,44],"visible":true,"focus":true,"count":66,"overflow":false}
+PASS: focus/blur/typing/clear/scroll/label/layout at 360, 412, 430; no console errors.

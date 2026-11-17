@@ -1,0 +1,52 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "4D1D60EFA43F5C5343979148D46F4C2C34A13379D2B96E524AAC370B714E4445",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\01-genesis.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A93480D99867313F7810FAB86D90B86C61FF005BA9FB65A11C03339C36AB3C56",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\02-exodo.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "6AF20F6767B804CFB08FEA4B40DDBD9D64DFC3EABAED3904503A328B654D059B",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\03-levitico.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "26C792D98F2F743B9E6B9577133F240F35B5FDBB4A8BDB90CF3FC99EE0365FC8",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\04-numeros.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C25D08331BE1B0FC11143164BFE449B1CF9737A0E20751A3F900BEDA8EC07B27",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\32-jonas.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "68C68CD069E4E40D17B2FDC9E2259E70820236658C1EE69C1EEA4BFDC8154AA2",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\40-mateus.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "1594B964070C1F2EB401AB394AE14422FB46E522545022D1BBDB30F38258DA08",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\41-marcos.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B4020BBDDF98BFFF5A3C6A4C87689AD8BD9E81EF9456846E2C52F15C78AAA73A",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\42-lucas.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "4976F53A4223C68EE13639F76CDD2570D3AFC75129E71B7BB1D98F8A12BA5E7A",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\43-joao.webp"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E51B1F508DE74013E9E0A6AF64193D32FCF2DD291CD64307D6CD750EFB91CF77",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\imagens\\palacio-biblico\\livros-menu\\50-filipenses.webp"
+    }
+]

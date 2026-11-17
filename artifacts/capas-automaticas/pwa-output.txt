@@ -1,0 +1,1 @@
+PASS: GitHub Pages subpath, real SW install, cold/warm offline, Jonas, 4 other covers, generic fallback, search, favorites and carousel.

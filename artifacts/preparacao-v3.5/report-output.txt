@@ -1,0 +1,1 @@
+PASS final: seleção e HEAD inalterados; staging vazio; relatório de 29 arquivos pronto para aprovação.

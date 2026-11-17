@@ -1,0 +1,79 @@
+{"width":360,"initial":{"hidden":false,"active":2,"centerOffset":0.375,"peek":3,"menu":[{"name":"Home","active":"page","width":48,"height":62,"disabled":false},{"name":"Treinos","active":null,"width":48,"height":62,"disabled":true},{"name":"Explorar","active":null,"width":48,"height":62,"disabled":true},{"name":"Livros","active":null,"width":48,"height":62,"disabled":false},{"name":"Jogar","active":null,"width":48,"height":62,"disabled":true},{"name":"Favoritos","active":null,"width":48,"height":62,"disabled":false},{"name":"Ajustes","active":null,"width":48,"height":62,"disabled":true}],"navRect":[8,718,344,74],"overflow":false,"journey":"vazio","loaded":[{"src":null,"loaded":false},{"src":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","loaded":true},{"src":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","loaded":true},{"src":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","loaded":true},{"src":null,"loaded":false}],"title":"Palácio Bíblico"}}
+after-reload {
+  open: true,
+  count: 1,
+  filter: [
+    [ 'acertos', 'false' ],
+    [ 'erros', 'false' ],
+    [ 'naoLembrados', 'false' ],
+    [ 'todos', 'false' ],
+    [ 'favoritos', 'true' ]
+  ],
+  books: [
+    {
+      id: '5be085da-a81b-4b53-8e3a-7926cd3c2fd9',
+      proprietarioLocalId: 'd688350b-d4a1-4c23-b604-4bbadeb3284c',
+      nome: 'João',
+      codigo: 'JHN',
+      favorito: true,
+      criadoEm: '2026-11-17T19:17:09.434Z',
+      atualizadoEm: '2026-11-17T19:17:09.434Z',
+      revisao: 1
+    }
+  ],
+  home: false,
+  search: ''
+}
+{"width":412,"initial":{"hidden":false,"active":2,"centerOffset":0.25,"peek":3,"menu":[{"name":"Home","active":"page","width":55.421875,"height":62,"disabled":false},{"name":"Treinos","active":null,"width":55.421875,"height":62,"disabled":true},{"name":"Explorar","active":null,"width":55.4375,"height":62,"disabled":true},{"name":"Livros","active":null,"width":55.421875,"height":62,"disabled":false},{"name":"Jogar","active":null,"width":55.4375,"height":62,"disabled":true},{"name":"Favoritos","active":null,"width":55.421875,"height":62,"disabled":false},{"name":"Ajustes","active":null,"width":55.421875,"height":62,"disabled":true}],"navRect":[8,842,396,74],"overflow":false,"journey":"vazio","loaded":[{"src":null,"loaded":false},{"src":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","loaded":true},{"src":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","loaded":true},{"src":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","loaded":true},{"src":null,"loaded":false}],"title":"Palácio Bíblico"}}
+after-reload {
+  open: true,
+  count: 1,
+  filter: [
+    [ 'acertos', 'false' ],
+    [ 'erros', 'false' ],
+    [ 'naoLembrados', 'false' ],
+    [ 'todos', 'false' ],
+    [ 'favoritos', 'true' ]
+  ],
+  books: [
+    {
+      id: '5be085da-a81b-4b53-8e3a-7926cd3c2fd9',
+      proprietarioLocalId: 'd688350b-d4a1-4c23-b604-4bbadeb3284c',
+      nome: 'João',
+      codigo: 'JHN',
+      favorito: true,
+      criadoEm: '2026-11-17T19:17:09.434Z',
+      atualizadoEm: '2026-11-17T19:17:40.930Z',
+      revisao: 3
+    }
+  ],
+  home: false,
+  search: ''
+}
+{"width":430,"initial":{"hidden":false,"active":2,"centerOffset":0.1875,"peek":3,"menu":[{"name":"Home","active":"page","width":58,"height":62,"disabled":false},{"name":"Treinos","active":null,"width":58,"height":62,"disabled":true},{"name":"Explorar","active":null,"width":58,"height":62,"disabled":true},{"name":"Livros","active":null,"width":58,"height":62,"disabled":false},{"name":"Jogar","active":null,"width":58,"height":62,"disabled":true},{"name":"Favoritos","active":null,"width":58,"height":62,"disabled":false},{"name":"Ajustes","active":null,"width":58,"height":62,"disabled":true}],"navRect":[8,850,414,74],"overflow":false,"journey":"vazio","loaded":[{"src":null,"loaded":false},{"src":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","loaded":true},{"src":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","loaded":true},{"src":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","loaded":true},{"src":null,"loaded":false}],"title":"Palácio Bíblico"}}
+after-reload {
+  open: true,
+  count: 1,
+  filter: [
+    [ 'acertos', 'false' ],
+    [ 'erros', 'false' ],
+    [ 'naoLembrados', 'false' ],
+    [ 'todos', 'false' ],
+    [ 'favoritos', 'true' ]
+  ],
+  books: [
+    {
+      id: '5be085da-a81b-4b53-8e3a-7926cd3c2fd9',
+      proprietarioLocalId: 'd688350b-d4a1-4c23-b604-4bbadeb3284c',
+      nome: 'João',
+      codigo: 'JHN',
+      favorito: true,
+      criadoEm: '2026-11-17T19:17:09.434Z',
+      atualizadoEm: '2026-11-17T19:18:12.278Z',
+      revisao: 5
+    }
+  ],
+  home: false,
+  search: ''
+}
+PASS mobile, gestures, routes, favorites, real data and four existing suites

@@ -1,0 +1,12 @@
+﻿{
+    "version":  "V3.5",
+    "commit":  "d47bbc235c10c9429e7f27ee05ea3d1f4ccb3a8b",
+    "files":  29,
+    "push":  "success",
+    "workflow":  "https://github.com/Digiexx/palacio-mental/actions/runs/44157734783",
+    "deploy":  "success",
+    "published":  "https://digiexx.github.io/palacio-mental/",
+    "httpChecks":  "6 recursos HTTP 200; capas Atos/Jonas conferidas por SHA-256",
+    "otherLocalChanges":  "preservadas",
+    "notion":  "não alterado"
+}

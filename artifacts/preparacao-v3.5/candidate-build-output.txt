@@ -1,0 +1,6 @@
+Candidato: C:\Users\NATHAN~1\AppData\Local\Temp\palacio-v3.5-candidato-2K0lbH\source
+Selecionados: 29 arquivos; 13 capas novas/alteradas.
+Índice: 38 números, 150 variações.
+Catálogo: 19 capas WebP verificadas para 66 livros.
+Site preparado em: C:\Users\NATHAN~1\AppData\Local\Temp\palacio-site-K2PYkS
+PASS candidato: sem exclusões locais; capas atuais preservadas; catálogo consistente após build.

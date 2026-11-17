@@ -1,0 +1,127 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "structure": {
+        "mainCards": 4,
+        "secondCards": 3,
+        "dots": [
+          4,
+          3
+        ],
+        "order": true,
+        "last": true,
+        "shortcuts": 4,
+        "disabled": true,
+        "overflow": false
+      },
+      "initial": {
+        "scroll": [
+          0,
+          0
+        ],
+        "active": [
+          0,
+          0
+        ]
+      },
+      "second": {
+        "scroll": [
+          0,
+          278
+        ],
+        "active": [
+          0,
+          1
+        ]
+      },
+      "first": {
+        "scroll": [
+          278,
+          278
+        ],
+        "active": [
+          1,
+          1
+        ]
+      },
+      "last": {
+        "scroll": [
+          278,
+          497
+        ],
+        "active": [
+          1,
+          2
+        ]
+      },
+      "practice": true,
+      "review": true,
+      "mainRoute": true,
+      "originalOrigins": true,
+      "storageUnchanged": true
+    },
+    {
+      "width": 430,
+      "structure": {
+        "mainCards": 4,
+        "secondCards": 3,
+        "dots": [
+          4,
+          3
+        ],
+        "order": true,
+        "last": true,
+        "shortcuts": 4,
+        "disabled": true,
+        "overflow": false
+      },
+      "initial": {
+        "scroll": [
+          0,
+          0
+        ],
+        "active": [
+          0,
+          0
+        ]
+      },
+      "second": {
+        "scroll": [
+          0,
+          335
+        ],
+        "active": [
+          0,
+          1
+        ]
+      },
+      "first": {
+        "scroll": [
+          335,
+          335
+        ],
+        "active": [
+          1,
+          1
+        ]
+      },
+      "last": {
+        "scroll": [
+          335,
+          599
+        ],
+        "active": [
+          1,
+          2
+        ]
+      },
+      "practice": true,
+      "review": true,
+      "mainRoute": true,
+      "originalOrigins": true,
+      "storageUnchanged": true
+    }
+  ],
+  "errors": []
+}

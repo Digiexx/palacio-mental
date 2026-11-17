@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "noPreloadBeforeEntry": true,
+      "initialLoaded": 3,
+      "reducedMotion": true,
+      "librarySearch": true,
+      "placeholder": true,
+      "filters": true,
+      "activeMenu": true
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "noPreloadBeforeEntry": true,
+      "initialLoaded": 3,
+      "reducedMotion": true,
+      "librarySearch": true,
+      "placeholder": true,
+      "filters": true,
+      "activeMenu": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "noPreloadBeforeEntry": true,
+      "initialLoaded": 3,
+      "reducedMotion": true,
+      "librarySearch": true,
+      "placeholder": true,
+      "filters": true,
+      "activeMenu": true
+    }
+  ],
+  "errors": []
+}

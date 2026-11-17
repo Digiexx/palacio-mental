@@ -1,0 +1,109 @@
+﻿ D assets/icons/logo-branca.png
+ D assets/imagens/palacio-biblico/home-palacio-biblico/biblia-medalhao.webp
+ D assets/imagens/palacio-biblico/home-palacio-biblico/dfgt.webp
+ D assets/imagens/palacio-biblico/joao/rascunho-teste.webp
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/270b0b85-0d63-4f8f-a20c-e9186c9b2db5.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/6be997c9-33e8-4589-92d4-71c772a65582.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/896fadaf-636f-4061-9ad0-901a0921d1ca.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/c6e19682-f1ea-4ffa-aafe-90d11f181959.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/ca7b859b-a370-4a29-a0b1-b9d8473e7239.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/d5328d6f-02b3-469d-9c2e-0f80cec18816.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/d95adfa7-03b4-42eb-8949-548d9d2707b6.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/f2f71d2a-9d0d-4021-a6d6-52c905bc3913.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/f41b3495-791f-4d9f-91ab-dfcad05be7df.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/oficial.png"
+ D "assets/imagens/referencias/MEMORIA NUMERICA/home memoria numerica/tela memoria numerica.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/13679f92-ab84-43e9-b801-53e87e566cd2.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/23169f66-0c75-4234-8f39-5cad42d97555.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/3e12286f-b651-49a9-984e-999608ccd097.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/53912a4c-749e-4397-8611-d1ef5109ba31.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/5ba38b87-edc3-4815-94e8-cc0d978cda42.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/67ccaf22-1307-418a-882a-ed2380d2020b.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/736aaae3-0914-4b05-ba3b-f6d479273890.png"
+ D "assets/imagens/referencias/PALACIO BIBLICO/f40eec5d-478b-4824-9885-5ce8ca082f76.png"
+?? artifacts/ajustes-numeros-seletor/
+?? artifacts/biblioteca-busca-foco/
+?? artifacts/biblioteca-pesquisar-livro/
+?? artifacts/biblioteca-v10/
+?? artifacts/black-gradient-v9/
+?? artifacts/bottom-sheet-v4/
+?? artifacts/capas-automaticas/
+?? artifacts/catalogo-capas/
+?? artifacts/home-biblica-17-11/
+?? artifacts/home-biblica-v3.6/
+?? artifacts/personalizado-capas/
+?? artifacts/personalizado-guiado/
+?? artifacts/preparacao-v3.5/
+?? artifacts/segundo-carrossel/
+?? assets/imagens/home/background/df.webp
+?? assets/imagens/home/background/fd.webp
+?? assets/imagens/home/background/fg.webp
+?? assets/imagens/home/background/gfd.webp
+?? assets/imagens/home/background/vc.webp
+?? assets/imagens/home/background/vx.webp
+?? assets/imagens/home/cards/fg.webp
+?? assets/imagens/palacio-biblico/home-palacio-biblico/home-topo/
+?? assets/imagens/palacio-biblico/joao/01.png
+?? assets/imagens/palacio-biblico/joao/02.png
+?? assets/imagens/palacio-biblico/joao/03.png
+?? "assets/imagens/referencias/HOME/minimalista 01.png"
+?? "assets/imagens/referencias/HOME/minimalista 02.png"
+?? "assets/imagens/referencias/HOME/minimalista 03.png"
+?? "assets/imagens/referencias/HOME/minimalista 04.png"
+?? "assets/imagens/referencias/HOME/minimalista 05.png"
+?? "assets/imagens/referencias/HOME/minimalista 06.png"
+?? "assets/imagens/referencias/HOME/minimalista 07.png"
+?? "assets/imagens/referencias/HOME/minimalista 08.png"
+?? "assets/imagens/referencias/HOME/novo carrosel 01.png"
+?? "assets/imagens/referencias/MEMORIA NUMERICA/home - memoria numerica/"
+?? "assets/imagens/referencias/MEMORIA NUMERICA/tela memoria na pratica/"
+?? "assets/imagens/referencias/MEMORIA NUMERICA/tela personalizado/0db36e29-31f2-4098-826c-a8614b66e286.png"
+?? "assets/imagens/referencias/MEMORIA NUMERICA/tela personalizado/novo conceito.png"
+?? "assets/imagens/referencias/MEMORIA NUMERICA/tela personalizado/teal nova 01.png"
+?? "assets/imagens/referencias/MEMORIA NUMERICA/tela treino rapido/"
+?? "assets/imagens/referencias/PALACIO BIBLICO/0811fab5-8d21-4bc5-b047-b68b4fa8e6a2.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/482d9c88-6f4f-40b6-a15d-d38d660462df.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/4a23139b-b268-44ed-92cb-9740a19a9701.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/69a0d8ed-6793-4f39-bf1f-aaa0d0840a97.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/72081857-cce9-4a51-a045-8580665a1b9a.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/7b7d73c7-43cf-4634-ae0c-c777063e984d.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/80e82654-303e-49f2-85cd-396aa97de5d9.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/837a1dce-ca57-4995-a0d6-096efbfe9c3e.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/85a0eb8c-69f8-4cb2-89f6-828d4d0655a0.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/86c011b3-3f73-4937-aa8c-64cd6e4ce722.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/90d2b683-afd7-45bd-951a-99775295c1a5.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/9474abc7-e8fa-4c46-9c04-e956840bba12.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/99d0e511-6216-4968-99b0-33e80c11e227.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/TEMA ROXO/"
+?? "assets/imagens/referencias/PALACIO BIBLICO/a02c6f10-053f-4c13-905c-10642fb5c308 (1).png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/b2d8963f-4470-4e02-bac3-0b57c534d6e6.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/b7699b90-b672-4de2-8cbb-4a538db79299.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/bd485bfa-18f0-4b38-852a-6587128f35b0.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/c59eda30-5646-48bb-b640-9848c650c6d9.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/cb151a38-0036-457f-944d-83418dc66b12.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/cf159dbb-be7e-4f0b-af49-2fe4a3483029.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/db643eae-1c63-473c-92bd-7033310b1ead.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/dd80154d-bfe3-481c-b243-ef7460c99220.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/e9d92b76-4cd0-46aa-8757-2081e1a39efd.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/fe9178e9-d9f2-408d-817d-0ba0d838a77e.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home 03.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home 04.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home escolhida/"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home-palacio-biblico-01.webp"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home-palacio-biblico-02.webp"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home-palacio-biblico-03.webp"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home-palacio-biblico-04.webp"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home-palacio-biblico-05.webp"
+?? "assets/imagens/referencias/PALACIO BIBLICO/home-palacio-biblico-06.webp"
+?? "assets/imagens/referencias/PALACIO BIBLICO/livros pagina/"
+?? "assets/imagens/referencias/PALACIO BIBLICO/menu.png"
+?? "assets/imagens/referencias/PALACIO BIBLICO/vers\303\243o medieval antiga/"
+?? "assets/imagens/referencias/PALACIO BIBLICO/xxx.png"
+?? "assets/imagens/referencias/TELA CONFIGURA\303\207\303\225ES/"
+?? "assets/imagens/referencias/TELA DOWNLOAD/"
+?? assets/palacio-biblico/home-medieval.css
+?? assets/palacio-biblico/home-medieval.js
+?? docs/catalogo-capas-biblicas.md
+?? experimentos/
+?? tests/capas-automaticas.cjs
+?? tests/catalogo-capas.cjs

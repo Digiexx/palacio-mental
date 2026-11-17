@@ -1,0 +1,1 @@
+PASS: Home 360/412/430, real assets, five-item menu, gestures, routes, library/favorites, real journey, reduced motion; no console errors.

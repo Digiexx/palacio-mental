@@ -1,0 +1,10 @@
+warning: in the working copy of 'assets/palacio-biblico/biblioteca.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/palacio-biblico/biblioteca.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/palacio-biblico/home-biblica.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/palacio-biblico/home-biblica.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/palacio-biblico/indice-biblico.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'assets/variacoes-memoria.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'script.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/build.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'service-worker.js', LF will be replaced by CRLF the next time Git touches it

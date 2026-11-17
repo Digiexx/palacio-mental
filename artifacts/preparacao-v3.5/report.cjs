@@ -1,0 +1,68 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
+const dir=__dirname,root=process.cwd(),m=JSON.parse(fs.readFileSync(path.join(dir,'selection.json'),'utf8')),checks=JSON.parse(fs.readFileSync(path.join(dir,'package-check.json'),'utf8'));
+const home=JSON.parse(fs.readFileSync(path.join(dir,'browser-home/results.json'),'utf8')),pwa=JSON.parse(fs.readFileSync(path.join(dir,'browser-pwa/production-results.json'),'utf8'));
+for(const f of m.selected)if(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f.file))).digest('hex')!==f.sha256)throw Error('Arquivo selecionado mudou após testes: '+f.file);
+if(execFileSync('git',['diff','--cached','--name-only'],{encoding:'utf8'}).trim())throw Error('Staging não está vazio');
+if(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim()!==m.base)throw Error('HEAD mudou');
+const imageFiles=m.selected.filter(f=>f.file.endsWith('.webp'));
+const lines=[
+'# Preparação da publicação — V3.5 proposta',
+'',
+`Base conferida: **V3.4**, commit \`${m.base}\`, branch main. Notion: Regras de Trabalho e Estado de Implementação consultados; resumo vigente indica V3.5 como próxima versão sugerida. Versão ainda não criada.`,
+'',
+'**Situação:** build e testes essenciais aprovados em cópia candidata. Sem staging, commit, push, deploy ou escrita no Notion. Arquivos locais preservados, inclusive exclusões e não rastreados. Esta é uma seleção para aprovação final.',
+'',
+`## Seleção exata — ${m.selected.length} arquivos`,
+'',
+'### Código, configuração e geração — 16 arquivos',
+'',
+...m.selected.filter(f=>!f.file.endsWith('.webp')).map(f=>`- \`${f.file}\` — ${f.tipo}.`),
+'',
+'`scripts/servir-local.cjs` e `.vscode/tasks.json` preservam a automação local sem build manual. São parte do código-fonte selecionado, mas o build não os envia ao site. Os demais scripts/módulos dão suporte direto à Home, Biblioteca, catálogo e cache em produção.',
+'',
+`### Capas novas/alteradas — ${imageFiles.length} arquivos`,
+'',
+...imageFiles.map(f=>`- \`${f.file}\` — ${f.tipo}; ${f.bytes.toLocaleString('pt-BR')} bytes.`),
+'',
+'As seis outras capas já existentes permanecem no último commit e não precisam ser incluídas novamente. O catálogo completo contém 19 capas. Gênesis é uma substituição local já existente, incluída para publicar o estado atual da Biblioteca, sem alterar o original durante a preparação.',
+'',
+'## Fora da seleção',
+'',
+'- Todas as exclusões locais, incluindo logo-branca.png, dfgt.webp, biblia-medalhao.webp, rascunho-teste.webp e referências. A cópia candidata mantém os arquivos do último commit; nada foi restaurado ou removido na pasta de trabalho.',
+'- artifacts/, experimentos/, assets/imagens/referencias/ e antigas prévias home-medieval.js/.css.',
+'- Imagens sem dependência no app: fundos/cards avulsos, PNGs joao/01–03 e home-topo (imagem de topo e logomarca ainda não integradas).',
+'- Testes novos e documentação de apoio: executados durante a validação, mas fora desta seleção mínima de funcionamento. Continuam locais.',
+'',
+'## Validação executada',
+'',
+'- Build do estado local aprovado. Em seguida, cópia isolada do último commit com sobreposição somente dos 29 arquivos selecionados, sem aplicar exclusões ou copiar outros arquivos não rastreados. Build dessa cópia aprovado.',
+`- ${checks.covers} capas reais verificadas; ${checks.precacheEntries} entradas válidas no precache e todas as dependências de scripts do HTML presentes no pacote.`,
+'- Arquivos selecionados conferidos por SHA-256 após o build e ao finalizar; sintaxe JS e JSON válida. Home geral, estilos numéricos, modelo/repositório de dados e cenário de João preservados em relação ao último commit (textos comparados normalizando apenas CRLF/LF; imagem comparada byte a byte).',
+'- Pacote do site sem artifacts, experimentos ou referências. Arquivos novos não selecionados não aparecem na cópia candidata nem no pacote.',
+...home.results.map(r=>`- Chrome ${r.width}×${r.height}: João centralizado e vizinhos visíveis; sete itens de menu e apenas Home ativo; toque, gesto, teclado e navegação funcionando; favoritos persistem após recarga; Biblioteca com 66 cartões; menu fixo e conteúdo acessível; sem overflow horizontal. Mouse também conferido em 360 px.`),
+...home.suites.map(s=>`- Suíte existente ${s.name}: ${s.state}; ${s.output.split('\n').at(-1)}`),
+'- Cinco grupos dos testes do catálogo aprovados contra os módulos candidatos: descoberta, nome/ordem/extensão, WebP real/truncado/animado, serialização e contrato dos 66 livros.',
+'- Testes do observador local aprovados contra o candidato: Atos detectado por evento sem build, catálogo virtual, cópia parcial inválida, proteção de rotas e canal contínuo fora do cache.',
+`- Produção/PWA em ${pwa.prefix}: catálogo JS antigo atualizado pelo JSON, Service Worker ativo, Atos e favorito mantidos em recarga offline; sem conexão de eventos em produção.`,
+'- Sem exceções JavaScript ou console.error nas execuções finais; git diff --check aprovado. Staging vazio.',
+'',
+'## Riscos e limites',
+'',
+'- Avaliação estética final e teste em Android físico desta candidata ainda pendentes. Os testes em navegador são emulação, sem medição de bateria, CPU ou fluidez prolongada.',
+'- Capas novas ficam offline depois de carregadas e armazenadas; não há cobertura offline integral de todas as imagens. As sete capas já precacheadas permanecem.',
+'- Novas imagens locais só chegam ao PWA remoto após uma publicação autorizada. O servidor local observa a pasta; GitHub Pages usa o catálogo gerado automaticamente no workflow.',
+'- O cache técnico continua palacio-mental-v3.4. Isso não define a versão do próximo commit. O código do SW mudou, portanto sua atualização pode ocorrer sem trocar o identificador do cache, preservando o conteúdo dinâmico já salvo.',
+'- A tarefa automática local pode solicitar permissão do VS Code e usa a porta 5501. Ela não roda no site publicado.',
+'- A seleção representa os hashes registrados. Se arquivos forem alterados ou novas capas adicionadas antes da autorização, reconferir a lista e regenerar/testar o candidato afetado.',
+'',
+'## Próxima ação — aguardando autorização',
+'',
+'Aprovar ou ajustar os 29 arquivos e a versão V3.5. Nenhuma autorização de commit, push ou deploy foi presumida nesta preparação. Sugestão de mensagem futura: `V3.5 - Home do Palacio Biblico, Biblioteca e catalogo automatico de capas`. Gravação no Notion também não foi realizada.',
+'',
+`Cópia candidata testada: \`${checks.candidate}\`. Pacote gerado: \`${checks.output}\`. Ambos são temporários; não houve publicação.`,
+'',
+'Evidências: selection.json (lista e hashes), selected-files.txt, package-check.json, logs de build/validação, browser-home/results.json, browser-pwa/production-results.json e capturas nas pastas correspondentes.',
+''
+];
+fs.writeFileSync(path.join(dir,'PUBLICACAO-PROPOSTA.md'),lines.join('\n'));
+console.log('PASS final: seleção e HEAD inalterados; staging vazio; relatório de 29 arquivos pronto para aprovação.');

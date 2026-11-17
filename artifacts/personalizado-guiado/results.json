@@ -1,0 +1,239 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "runs": [
+        {
+          "mode": "aprender",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "fixar",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "desafiar",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "velocidade",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "aprender",
+          "order": "aleatorio",
+          "queue": [
+            4,
+            5,
+            1
+          ],
+          "observed": [
+            4,
+            5,
+            1
+          ]
+        },
+        {
+          "mode": "fixar",
+          "order": "aleatorio",
+          "queue": [
+            5,
+            1,
+            4
+          ],
+          "observed": [
+            5,
+            1,
+            4
+          ]
+        },
+        {
+          "mode": "desafiar",
+          "order": "aleatorio",
+          "queue": [
+            4,
+            5,
+            1
+          ],
+          "observed": [
+            4,
+            5,
+            1
+          ]
+        },
+        {
+          "mode": "velocidade",
+          "order": "aleatorio",
+          "queue": [
+            5,
+            1,
+            4
+          ],
+          "observed": [
+            5,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "runs": [
+        {
+          "mode": "aprender",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "fixar",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "desafiar",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "velocidade",
+          "order": "ordem",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "aprender",
+          "order": "aleatorio",
+          "queue": [
+            1,
+            4,
+            5
+          ],
+          "observed": [
+            1,
+            4,
+            5
+          ]
+        },
+        {
+          "mode": "fixar",
+          "order": "aleatorio",
+          "queue": [
+            5,
+            4,
+            1
+          ],
+          "observed": [
+            5,
+            4,
+            1
+          ]
+        },
+        {
+          "mode": "desafiar",
+          "order": "aleatorio",
+          "queue": [
+            4,
+            5,
+            1
+          ],
+          "observed": [
+            4,
+            5,
+            1
+          ]
+        },
+        {
+          "mode": "velocidade",
+          "order": "aleatorio",
+          "queue": [
+            5,
+            1,
+            4
+          ],
+          "observed": [
+            5,
+            1,
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

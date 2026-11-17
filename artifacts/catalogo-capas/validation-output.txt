@@ -1,0 +1,3 @@
+Hash do contrato dos 66 livros: a52d77f6bb6796a345336c0a1203cfbbf357405aebd0cec274e5bc725ef65f81
+Precache: 48 entradas; 7 capas existentes; 854060 bytes de capas.
+Sintaxe válida; imagens e arquivos protegidos idênticos; referências do precache válidas.

@@ -1,0 +1,21 @@
+{
+  "liveAtos": true,
+  "noBuild": true,
+  "noReload": true,
+  "generatedFileUnchanged": true,
+  "favoriteAndQueryPreserved": true,
+  "slides": 5,
+  "initialJohn": true,
+  "widths": [
+    360,
+    412,
+    430
+  ],
+  "invalidCopyPreserved": true,
+  "logs": [
+    "Palácio Mental: http://127.0.0.1:56134/ — capas automáticas ativas.",
+    "Capas atualizadas automaticamente: 14.",
+    "Catálogo anterior preservado: 08-rute.webp: conteúdo não é WebP"
+  ],
+  "errors": []
+}

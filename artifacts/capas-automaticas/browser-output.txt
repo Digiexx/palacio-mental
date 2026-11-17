@@ -1,0 +1,1 @@
+PASS: live Atos without build/reload; favorite/query preserved; fixed five slides; 360/412/430; invalid-copy fallback.

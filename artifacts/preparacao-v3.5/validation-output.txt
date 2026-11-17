@@ -1,0 +1,9 @@
+PASS pacote: 29 arquivos selecionados, 19 capas, 50 entradas válidas no precache; sem arquivos locais excluídos da seleção; hashes/sintaxe verificados.
+OK descoberta de arquivo novo sem cadastro manual
+OK ordem, nome, extensão e caixa rigorosos para GitHub Pages
+OK formato real, truncamento, blocos inválidos e animação rejeitados
+OK catálogo atual contém somente arquivos reais e é reproduzível
+OK 66 livros preservados; capa não altera disponibilidade ou nomes de busca
+RESULTADO: 5 grupos aprovados.
+PASS servidor: Atos detectado por evento sem build, sem catálogo em disco, validação de cópia parcial e rotas protegidas.
+PASS cache: fluxo de eventos ignorado pelo SW; requisições normais continuam gerenciadas.

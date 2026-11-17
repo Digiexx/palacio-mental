@@ -1,0 +1,324 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "initial": {
+        "hidden": false,
+        "active": 2,
+        "centerOffset": 0.375,
+        "peek": 3,
+        "menu": [
+          {
+            "name": "Home",
+            "active": "page",
+            "width": 48,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Treinos",
+            "active": null,
+            "width": 48,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Explorar",
+            "active": null,
+            "width": 48,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Livros",
+            "active": null,
+            "width": 48,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Jogar",
+            "active": null,
+            "width": 48,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Favoritos",
+            "active": null,
+            "width": 48,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Ajustes",
+            "active": null,
+            "width": 48,
+            "height": 62,
+            "disabled": true
+          }
+        ],
+        "navRect": [
+          8,
+          718,
+          344,
+          74
+        ],
+        "overflow": false,
+        "journey": "vazio",
+        "loaded": [
+          {
+            "src": null,
+            "loaded": false
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/42-lucas.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/43-joao.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/40-mateus.webp",
+            "loaded": true
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "title": "Palácio Bíblico"
+      },
+      "manualSwipe": true,
+      "keyboard": true,
+      "navigation": true,
+      "favoritesPersistence": true,
+      "library": true,
+      "numericHome": true,
+      "fixedMenu": true
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "initial": {
+        "hidden": false,
+        "active": 2,
+        "centerOffset": 0.25,
+        "peek": 3,
+        "menu": [
+          {
+            "name": "Home",
+            "active": "page",
+            "width": 55.421875,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Treinos",
+            "active": null,
+            "width": 55.421875,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Explorar",
+            "active": null,
+            "width": 55.4375,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Livros",
+            "active": null,
+            "width": 55.421875,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Jogar",
+            "active": null,
+            "width": 55.4375,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Favoritos",
+            "active": null,
+            "width": 55.421875,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Ajustes",
+            "active": null,
+            "width": 55.421875,
+            "height": 62,
+            "disabled": true
+          }
+        ],
+        "navRect": [
+          8,
+          842,
+          396,
+          74
+        ],
+        "overflow": false,
+        "journey": "vazio",
+        "loaded": [
+          {
+            "src": null,
+            "loaded": false
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/42-lucas.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/43-joao.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/40-mateus.webp",
+            "loaded": true
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "title": "Palácio Bíblico"
+      },
+      "manualSwipe": true,
+      "keyboard": true,
+      "navigation": true,
+      "favoritesPersistence": true,
+      "library": true,
+      "numericHome": true,
+      "fixedMenu": true
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "initial": {
+        "hidden": false,
+        "active": 2,
+        "centerOffset": 0.1875,
+        "peek": 3,
+        "menu": [
+          {
+            "name": "Home",
+            "active": "page",
+            "width": 58,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Treinos",
+            "active": null,
+            "width": 58,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Explorar",
+            "active": null,
+            "width": 58,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Livros",
+            "active": null,
+            "width": 58,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Jogar",
+            "active": null,
+            "width": 58,
+            "height": 62,
+            "disabled": true
+          },
+          {
+            "name": "Favoritos",
+            "active": null,
+            "width": 58,
+            "height": 62,
+            "disabled": false
+          },
+          {
+            "name": "Ajustes",
+            "active": null,
+            "width": 58,
+            "height": 62,
+            "disabled": true
+          }
+        ],
+        "navRect": [
+          8,
+          850,
+          414,
+          74
+        ],
+        "overflow": false,
+        "journey": "vazio",
+        "loaded": [
+          {
+            "src": null,
+            "loaded": false
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/42-lucas.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/43-joao.webp",
+            "loaded": true
+          },
+          {
+            "src": "assets/imagens/palacio-biblico/livros-menu/40-mateus.webp",
+            "loaded": true
+          },
+          {
+            "src": null,
+            "loaded": false
+          }
+        ],
+        "title": "Palácio Bíblico"
+      },
+      "manualSwipe": true,
+      "keyboard": true,
+      "navigation": true,
+      "favoritesPersistence": true,
+      "library": true,
+      "numericHome": true,
+      "fixedMenu": true
+    }
+  ],
+  "suites": [
+    {
+      "name": "dados",
+      "state": "passou",
+      "output": "OK: criação e identidade local\nOK: cadastro encadeado sem texto bíblico\nOK: edição preserva identidade, posição e proprietário\nOK: duplicatas e referências inválidas não entram na fila\nOK: duas conexões concorrentes não ocupam o mesmo objeto\nOK: versículo ocupado, campos inválidos e cruzamento de livros\nOK: falha na fila reverte a gravação de dados\nOK: reabertura preserva dados e fila\nOK: operações sem APIs de rede\nOK: indisponibilidade e erro de abertura são propagados\nPENDENTE: recarregue para confirmar persistência entre páginas\nOK: persistência entre carregamentos reais da página\nOK: localStorage preservado\nOK: favoritos compatíveis com livros antigos, idempotentes e sem duplicação\nRESULTADO: 0 falhas. Rede física offline e quota real exigem teste adicional."
+    },
+    {
+      "name": "cenario",
+      "state": "passou",
+      "output": "OK: IDs únicos, geometria normalizada e catálogo imutável\nOK: regiões cobrem a imagem sem sobreposição de toque\nOK: quatro objetos e ausência de conflito entre seus retângulos\nOK: panorama integral e proporcional em 360 × 432\nOK: objetos visíveis e alinhados em suas regiões: 360 × 432\nOK: panorama integral e proporcional em 430 × 503.28\nOK: objetos visíveis e alinhados em suas regiões: 430 × 503.28\nOK: panorama integral e proporcional em 800 × 300\nOK: objetos visíveis e alinhados em suas regiões: 800 × 300\nOK: panorama integral e proporcional em 240 × 290\nOK: objetos visíveis e alinhados em suas regiões: 240 × 290\nOK: ampliação limitada e coordenadas originais preservadas\nRESULTADO: 0 falhas. Interação, navegação e offline exigem testes no aplicativo."
+    },
+    {
+      "name": "editor",
+      "state": "passou",
+      "output": "OK: ativar e sair sem área não exige descarte\nOK: criar área pelo controle acessível, sem UUID\nOK: coordenadas numéricas são limitadas à imagem\nOK: alças somente na seleção e ajuste preciso inicialmente recolhido\nOK: nome e confirmação permanecem somente em memória\nOK: revisão e aviso de sobreposição preservam objetos oficiais\nOK: recusar descarte preserva rascunho e modo\nOK: cancelar e sair com confirmação descartam apenas memória\nOK: conversão de toque em panorama e zoom\nOK: faixas vazias e retângulos degenerados\nOK: borda adjacente não é sobreposição; interseção real é\nOK: sem banco, UUID, localStorage ou mutação do manifesto\nRESULTADO: 0 falhas. Arraste real, navegação central e mobile exigem teste no aplicativo."
+    },
+    {
+      "name": "objetos",
+      "state": "passou",
+      "output": "OK: consulta vazia não cria contexto, objeto ou fila; schema 1 preservado\nOK: cadastro sem versículo cria contexto e fila atomicamente\nOK: mesma operação repetida não grava nada novamente\nOK: duplo envio concorrente com o mesmo token\nOK: tokens diferentes não duplicam objeto idêntico em duas conexões\nOK: objetos diferentes concorrentes compartilham contexto e região\nOK: reutiliza livro favorito, cenário e região preexistentes sem modificá-los\nOK: segunda região do mesmo cenário não duplica livro/cenário\nOK: rollback real de contexto, objeto, mapeamento e fila\nOK: rollback quando falha a gravação final do comprovante\nOK: limites geométricos e referências rejeitados antes de gravar\nOK: área na borda da imagem é válida\nOK: mudança de geometria oficial é rejeitada sem migração silenciosa\nOK: contexto ambíguo é rejeitado sem duplicar nem alterar dados antigos\nOK: reabertura preserva UUIDs, coordenadas, mapeamento e fila\nOK: máximo um vínculo por objeto e índice inverso preservados\nOK: consulta não mistura proprietários e contextos corrompidos são rejeitados\nPENDENTE: recarregar a página para confirmar persistência entre carregamentos\nOK: persistência entre carregamentos reais\nOK: objetos oficiais e localStorage preservados\nRESULTADO: 0 falhas. Quota real e aparelho físico exigem validação adicional."
+    }
+  ],
+  "errors": []
+}

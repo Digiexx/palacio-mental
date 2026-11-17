@@ -1,0 +1,7 @@
+PASS sintaxe, imagens originais por SHA-256 e tarefa automática.
+OK descoberta de arquivo novo sem cadastro manual
+OK ordem, nome, extensão e caixa rigorosos para GitHub Pages
+OK formato real, truncamento, blocos inválidos e animação rejeitados
+OK catálogo atual contém somente arquivos reais e é reproduzível
+OK 66 livros preservados; capa não altera disponibilidade ou nomes de busca
+RESULTADO: 5 grupos aprovados.

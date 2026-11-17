@@ -1,0 +1,1 @@
+PASS production: stale JS refreshed by single JSON; subpath; real SW; cached Atos/favorite offline; no event stream.

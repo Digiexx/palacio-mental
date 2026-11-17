@@ -1,0 +1,91 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "cards": [
+        {
+          "id": "btnPersonalizadoAprender",
+          "src": "assets/imagens/memoria-numerica/carrossel/aprender.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 32,
+          "y": 329.40625,
+          "width": 144
+        },
+        {
+          "id": "btnPersonalizadoFixar",
+          "src": "assets/imagens/memoria-numerica/carrossel/fixar.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 184,
+          "y": 329.40625,
+          "width": 144
+        },
+        {
+          "id": "btnPersonalizadoDesafiar",
+          "src": "assets/imagens/memoria-numerica/carrossel/treinar.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 32,
+          "y": 499.453125,
+          "width": 144
+        },
+        {
+          "id": "btnPersonalizadoVelocidade",
+          "src": "assets/imagens/memoria-numerica/velocidade-topo.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 184,
+          "y": 499.453125,
+          "width": 144
+        }
+      ],
+      "navigation": true,
+      "selection": true
+    },
+    {
+      "width": 430,
+      "cards": [
+        {
+          "id": "btnPersonalizadoAprender",
+          "src": "assets/imagens/memoria-numerica/carrossel/aprender.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 32,
+          "y": 368.75,
+          "width": 179
+        },
+        {
+          "id": "btnPersonalizadoFixar",
+          "src": "assets/imagens/memoria-numerica/carrossel/fixar.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 219,
+          "y": 368.75,
+          "width": 179
+        },
+        {
+          "id": "btnPersonalizadoDesafiar",
+          "src": "assets/imagens/memoria-numerica/carrossel/treinar.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 32,
+          "y": 562.140625,
+          "width": 179
+        },
+        {
+          "id": "btnPersonalizadoVelocidade",
+          "src": "assets/imagens/memoria-numerica/velocidade-topo.webp",
+          "loaded": true,
+          "fit": "contain",
+          "x": 219,
+          "y": 562.140625,
+          "width": 179
+        }
+      ],
+      "navigation": true,
+      "selection": true
+    }
+  ],
+  "errors": []
+}

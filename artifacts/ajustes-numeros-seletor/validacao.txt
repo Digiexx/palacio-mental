@@ -1,0 +1,7 @@
+﻿Validação local do ajuste CSS (15/11/2026).
+- Código alterado: somente style.css. Sem alteração de fonte, JavaScript ou armazenamento.
+- Chrome headless, perfil isolado, service worker ignorado: troca de modos em 360x800 e 430x932; seleção exclusiva e localStorage inalterado. Nenhuma exceção JS observada.
+- 32 verificações de dimensões: 00/08/88/99 em Fixar, Treinar, Velocidade e Revisão. Para medir componentes ocultos, a automação os revelou e forçou layout em coluna; isto não substitui teste dos fluxos completos dessas telas.
+- Capturas de Treinar no layout real em ambas as larguras; 360 px inspecionada visualmente.
+- git diff --check passou. Celular físico e fluxos completos de Fixar/Velocidade/Revisão pendentes.
+- Sem commit, push, publicação ou escrita no Notion.

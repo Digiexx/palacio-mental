@@ -1,0 +1,1 @@
+PASS: sintaxe da Home; Biblioteca, catálogo, dados, outras telas, versão/cache e assets originais preservados por SHA-256.

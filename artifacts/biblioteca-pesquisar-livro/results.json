@@ -1,0 +1,497 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "before": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.65",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          270,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "idle": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          270,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "focus": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          270,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 66,
+        "overflow": false
+      },
+      "blur": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          270,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "typed": {
+        "value": "joao",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          224,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 4,
+        "overflow": false
+      },
+      "kept": {
+        "value": "joao",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          224,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 4,
+        "overflow": false
+      },
+      "clear": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          270,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 66,
+        "overflow": false
+      },
+      "restored": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          398.25,
+          270,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      }
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "before": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.65",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          322,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "idle": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          322,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "focus": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          322,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 66,
+        "overflow": false
+      },
+      "blur": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          322,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "typed": {
+        "value": "joao",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          276,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 4,
+        "overflow": false
+      },
+      "kept": {
+        "value": "joao",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          276,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 4,
+        "overflow": false
+      },
+      "clear": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          322,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 66,
+        "overflow": false
+      },
+      "restored": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          445.375,
+          322,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "before": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.65",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          340,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "idle": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          340,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "focus": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          340,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 66,
+        "overflow": false
+      },
+      "blur": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          340,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      },
+      "typed": {
+        "value": "joao",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          294,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 4,
+        "overflow": false
+      },
+      "kept": {
+        "value": "joao",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          294,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 4,
+        "overflow": false
+      },
+      "clear": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          340,
+          44
+        ],
+        "visible": true,
+        "focus": true,
+        "count": 66,
+        "overflow": false
+      },
+      "restored": {
+        "value": "",
+        "placeholder": "Pesquisar Livro",
+        "opacity": "0.47",
+        "weight": "300",
+        "color": "rgb(184, 181, 176)",
+        "style": "normal",
+        "shadow": "none",
+        "transition": "0s",
+        "rect": [
+          60,
+          448.421875,
+          340,
+          44
+        ],
+        "visible": true,
+        "focus": false,
+        "count": 66,
+        "overflow": false
+      }
+    }
+  ],
+  "errors": []
+}

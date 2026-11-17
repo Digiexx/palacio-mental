@@ -1,0 +1,8 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),vm=require('node:vm');
+const root=process.cwd();
+for(const file of ['scripts/gerar-catalogo-capas.cjs','scripts/build.cjs','assets/palacio-biblico/livros-biblicos.js','assets/palacio-biblico/capas-biblicas.js','assets/palacio-biblico/indice-biblico.js','service-worker.js'])new vm.Script(fs.readFileSync(file,'utf8'),{filename:file});
+for(const list of ['images-before.json','protected-before.json'])for(const file of JSON.parse(fs.readFileSync(path.join(__dirname,list),'utf8').replace(/^\uFEFF/,''))){if(crypto.createHash('sha256').update(fs.readFileSync(file.Path)).digest('hex')!==file.Hash.toLowerCase())throw Error('Arquivo preservado alterado: '+file.Path)}
+const antigo={PalacioBiblico:{catalogo:[{codigo:'JHN'},{codigo:'PHP'},{codigo:'MAT',emPreparacao:true}]}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'before-indice.js'),'utf8'),antigo);
+console.log('Hash do contrato dos 66 livros:',crypto.createHash('sha256').update(JSON.stringify(antigo.PalacioBiblico.indiceBiblico.map(({imagem,...resto})=>resto))).digest('hex'));
+const source=fs.readFileSync('service-worker.js','utf8'), pre=source.match(/const ARQUIVOS_CACHE = \[([\s\S]*?)\];/)[1];const urls=[...pre.matchAll(/"(\.\/[^"\r\n]*)"/g)].map(m=>m[1]);for(const url of urls)if(url!=='./'&&!fs.existsSync(path.join(root,url)))throw Error('Precache ausente: '+url);
+const covers=urls.filter(u=>u.includes('/livros-menu/'));console.log('Precache:',urls.length,'entradas;',covers.length,'capas existentes;',covers.reduce((sum,u)=>sum+fs.statSync(u).size,0),'bytes de capas.');console.log('Sintaxe válida; imagens e arquivos protegidos idênticos; referências do precache válidas.');

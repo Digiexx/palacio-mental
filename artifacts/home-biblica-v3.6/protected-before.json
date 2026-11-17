@@ -1,0 +1,67 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C8EA8B93F8324CD39DE462CC2CDD46EC085CDA37DDEE1345E76F5E0FC06B2C01",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\biblioteca.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E552094F30B13A39987C9430939399886F9B0FEDE9A9FDD00455DABDEB87C0E9",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\biblioteca.css"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "BDCCDE2BC3D6050F59A76F9416F09ACB41182A086D0DDEEA3F8F47F7BC34DA2F",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\indice-biblico.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "85A6BF80691B0727B8DD7616550F82405CB0A0DB4826539B0B0586C0540E1BC6",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\atualizar-capas.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "27205C023AEA738987304BA86AAE07D7E12FA0991104F308688F04694BB4CD00",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\capas-biblicas.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8C46FFAEDF17C084B20F6EB6FD4DD200E564CAC8C058D5BE0EA84E831A120026",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\capas-biblicas.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "4195CD971A1E90C0824ED239B708ED8166DF2A27BDA47CE98ACA8C7EE20961DF",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\repositorio.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C87A7C40A89A4CA7B9E7B3AFA3E4C5A23FB1F2F68DBBD23FFD7F173163CA7DE5",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\modelo.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "56799C547265862A3FE3F232F71FDCF62F76DA534DC45E28324426987EA4326F",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\script.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "57941761C49B5D0BC16388B2288AFD82F40F0DD4E1678F79D7DC8E1E7BB1CD11",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\index.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D505E54949B745A9A97B55E27A95A72FCAA3E64E8A7A49387E9CF6043FE0710F",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\service-worker.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "81DDC4B18B3485038882A85429D2965A4BA77DF29E017F120FA8EB7B7DF82CF2",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\home.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B5CB1018F938961E05E4A0272172757EF323392D76059A88AF60F9DA2E2A88FE",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\home.css"
+    }
+]

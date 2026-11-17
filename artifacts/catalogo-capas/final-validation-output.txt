@@ -1,0 +1,9 @@
+OK descoberta de arquivo novo sem cadastro manual
+OK ordem, nome, extensão e caixa rigorosos para GitHub Pages
+OK formato real, truncamento, blocos inválidos e animação rejeitados
+OK catálogo atual contém somente arquivos reais e é reproduzível
+OK 66 livros preservados; capa não altera disponibilidade ou nomes de busca
+RESULTADO: 5 grupos aprovados.
+Hash do contrato dos 66 livros: a52d77f6bb6796a345336c0a1203cfbbf357405aebd0cec274e5bc725ef65f81
+Precache: 48 entradas; 7 capas existentes; 854060 bytes de capas.
+Sintaxe válida; imagens e arquivos protegidos idênticos; referências do precache válidas.

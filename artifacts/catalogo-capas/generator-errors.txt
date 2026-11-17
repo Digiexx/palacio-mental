@@ -1,0 +1,29 @@
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"GEN":"assets/imagens/palacio-biblico/livros-menu/01-genesis.webp","EXO":"assets/imagens/palacio-biblico/livros-menu/02-exodo.webp","LEV":"assets/imagens/palacio-biblico/livros-menu/03-levitico.webp","NUM":"assets/imagens/palacio-biblico/livros-menu/04-numeros.webp","JON":"assets/imagens/palacio-biblico/livros-menu/32-jonas.webp","MAT":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","MRK":"assets/imagens/palacio-biblico/livros-menu/41-marcos.webp","LUK":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","JHN":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","PHP":"assets/imagens/palacio-biblico/livros-menu/50-filipenses.webp"}'
+- '{"GEN":"assets/imagens/palacio-biblico/livros-menu/01-genesis.webp","EXO":"assets/imagens/palacio-biblico/livros-menu/02-exodo.webp","LEV":"assets/imagens/palacio-biblico/livros-menu/03-levitico.webp","NUM":"assets/imagens/palacio-biblico/livros-menu/04-numeros.webp","PSA":"assets/imagens/palacio-biblico/livros-menu/19-salmos.webp","JON":"assets/imagens/palacio-biblico/livros-menu/32-jonas.webp","MAT":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","MRK":"assets/imagens/palacio-biblico/livros-menu/41-marcos.webp","LUK":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","JHN":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","PHP":"assets/imagens/palacio-biblico/livros-menu/50-filipenses.webp","REV":"assets/imagens/palacio-biblico/livros-menu/66-apocalipse.webp"}'
+
+    at C:\projetos-natan-programação\palacio-mental\tests\catalogo-capas.cjs:50:12
+    at testar (C:\projetos-natan-programação\palacio-mental\tests\catalogo-capas.cjs:13:35)
+    at Object.<anonymous> (C:\projetos-natan-programação\palacio-mental\tests\catalogo-capas.cjs:42:1)
+    at Module._compile (node:internal/modules/cjs/loader:1937:14)
+    at Object..js (node:internal/modules/cjs/loader:2070:10)
+    at Module.load (node:internal/modules/cjs/loader:1658:32)
+    at node:internal/modules/cjs/loader:1450:12
+    at Module._load (node:electron/js2c/node_init:2:18263)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:268:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:169:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '{"GEN":"assets/imagens/palacio-biblico/livros-menu/01-genesis.webp","EXO":"assets/imagens/palacio-biblico/livros-menu/02-exodo.webp","LEV":"assets/imagens/palacio-biblico/livros-menu/03-levitico.webp","NUM":"assets/imagens/palacio-biblico/livros-menu/04-numeros.webp","JON":"assets/imagens/palacio-biblico/livros-menu/32-jonas.webp","MAT":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","MRK":"assets/imagens/palacio-biblico/livros-menu/41-marcos.webp","LUK":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","JHN":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","PHP":"assets/imagens/palacio-biblico/livros-menu/50-filipenses.webp"}',
+  expected: '{"GEN":"assets/imagens/palacio-biblico/livros-menu/01-genesis.webp","EXO":"assets/imagens/palacio-biblico/livros-menu/02-exodo.webp","LEV":"assets/imagens/palacio-biblico/livros-menu/03-levitico.webp","NUM":"assets/imagens/palacio-biblico/livros-menu/04-numeros.webp","PSA":"assets/imagens/palacio-biblico/livros-menu/19-salmos.webp","JON":"assets/imagens/palacio-biblico/livros-menu/32-jonas.webp","MAT":"assets/imagens/palacio-biblico/livros-menu/40-mateus.webp","MRK":"assets/imagens/palacio-biblico/livros-menu/41-marcos.webp","LUK":"assets/imagens/palacio-biblico/livros-menu/42-lucas.webp","JHN":"assets/imagens/palacio-biblico/livros-menu/43-joao.webp","PHP":"assets/imagens/palacio-biblico/livros-menu/50-filipenses.webp","REV":"assets/imagens/palacio-biblico/livros-menu/66-apocalipse.webp"}',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

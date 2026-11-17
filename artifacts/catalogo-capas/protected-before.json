@@ -1,0 +1,37 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C007E9F56867AE3AA05574B3A42719B23A486D37A5952FBA39C9D8F0EDDEEDDF",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\biblioteca.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E552094F30B13A39987C9430939399886F9B0FEDE9A9FDD00455DABDEB87C0E9",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\biblioteca.css"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "898169BC7964D3C5FFC4E6B31B85E49A4112F6CF1D7B411E90581B7AF2CDD176",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\home-biblica.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "2E3490D5026491CB5FC413A8624BC8D3483EA5B536D03E051F1CD55C758E4603",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\home-biblica.css"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "56799C547265862A3FE3F232F71FDCF62F76DA534DC45E28324426987EA4326F",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\script.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "4195CD971A1E90C0824ED239B708ED8166DF2A27BDA47CE98ACA8C7EE20961DF",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\repositorio.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C87A7C40A89A4CA7B9E7B3AFA3E4C5A23FB1F2F68DBBD23FFD7F173163CA7DE5",
+        "Path":  "C:\\projetos-natan-programação\\palacio-mental\\assets\\palacio-biblico\\modelo.js"
+    }
+]

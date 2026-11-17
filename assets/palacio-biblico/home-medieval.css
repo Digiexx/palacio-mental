@@ -1,0 +1,56 @@
+.pb-home { color-scheme: dark; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #171310; color: #f1e2ca; }
+.pb-home * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+.pb-home button { font: inherit; color: inherit; cursor: pointer; }
+.pb-home button:focus-visible { outline: 2px solid #f5d99e; outline-offset: 3px; }
+.pb-home { position: relative; isolation: isolate; width: 100%; max-width: 560px; height: 100vh; height: 100dvh; margin: auto; overflow: hidden; background: #21170e; }
+.pb-home .cenario { position: absolute; inset: 0; z-index: -2; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center center; pointer-events: none; user-select: none; }
+.pb-home::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, #120a05a3 0%, #140c08a6 24%, #140c0800 46%, #140c0800 78%, #100906ab 100%); }
+.pb-home .titulos { position: absolute; top: max(26px, 5vh); top: max(26px, 5dvh); left: 0; width: 100%; padding: 0 15px; text-align: center; text-shadow: 0 2px 4px #100904; }
+.pb-home .coroa { width: 41px; height: 29px; fill: #cfaa70; stroke: #e5c48d; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.pb-home h1 { margin: 8px 0 8px; font: 400 clamp(16px, 4.4vw, 22px)/1.25 Georgia, "Times New Roman", serif; letter-spacing: .19em; text-transform: uppercase; color: #e3be83; }
+.pb-home .ornamento { position: relative; width: 53%; max-width: 250px; height: 12px; margin: 0 auto; display: grid; place-items: center; color: #d9b071; font: 17px/1 Georgia, serif; }
+.pb-home .ornamento::before, .pb-home .ornamento::after { content: ""; position: absolute; top: 6px; height: 1px; width: calc(50% - 15px); background: linear-gradient(90deg, transparent, #c79b5a); }
+.pb-home .ornamento::before { left: 0; }
+.pb-home .ornamento::after { right: 0; transform: rotate(180deg); }
+.pb-home h2 { margin: 17px 0 9px; font: 400 clamp(27px, 7.5vw, 39px)/1.13 Georgia, "Times New Roman", serif; letter-spacing: -.03em; color: #f1ddbb; }
+.pb-home .titulos p { margin: 0; font: 400 clamp(12px, 3.2vw, 16px)/1.45 Georgia, "Times New Roman", serif; color: #f0e4d2; }
+.pb-home .medalhao { position: absolute; left: 50%; top: 71%; transform: translate(-50%, -50%); width: min(86%, 360px); aspect-ratio: 1; padding: 0; border: 0; border-radius: 50%; background: transparent; }
+.pb-home .medalhao:focus-visible { outline-offset: -12px; }
+.pb-home .medalhao img { display: block; width: 100%; height: auto; pointer-events: none; user-select: none; }
+.pb-home .anel { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; pointer-events: none; }
+.pb-home .anel-base { stroke: #d9a14e; stroke-width: 2; opacity: .3; }
+.pb-home .anel-rastro, .pb-home .anel-luz { stroke-dasharray: 8 92; stroke-linecap: round; animation: pb-home-percurso-anel 12s linear infinite; }
+.pb-home .anel-rastro { stroke: #efb45b; stroke-width: 13; opacity: .14; }
+.pb-home .anel-luz { stroke: #ffe1a0; stroke-width: 3; opacity: .85; }
+@keyframes pb-home-percurso-anel { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+.pb-home[data-pausado="true"] .anel-rastro, .pb-home[data-pausado="true"] .anel-luz { animation-play-state: paused; }
+.pb-home .controles { position: absolute; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); }
+.pb-home .estado-demo { width: fit-content; max-width: 100%; margin: 0 auto 10px; padding: 5px 10px; border-radius: 6px; background: #21150ee8; color: #ead4b2; text-align: center; font-size: 10px; line-height: 1.4; }
+.pb-home .menu { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 7px 3px; border: 1px solid #ac7b42; border-radius: 19px; background: linear-gradient(135deg, #49301fee, #24170ff5 65%, #3b281bf5); box-shadow: inset 0 1px 0 #f2c17b33, 0 6px 16px #09050066; }
+.pb-home .menu button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 7px; min-width: 0; min-height: 61px; padding: 6px 0; border: 1px solid transparent; border-radius: 14px; background: transparent; color: #e0c7a3; font-size: clamp(9px, 2.5vw, 12px); line-height: 1.2; }
+.pb-home .menu button svg { width: 25px; height: 25px; fill: none; stroke: #d9b782; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+.pb-home .menu button span { white-space: nowrap; }
+.pb-home .menu button[aria-current="page"] { border-color: #b17e4380; background: linear-gradient(145deg, #79491c66, #4c2d1255); color: #f6deb5; }
+.pb-home .menu button:focus-visible { outline-offset: -2px; }
+@media (max-height: 650px) {
+.pb-home .titulos { top: 16px; }
+.pb-home .coroa { height: 22px; }
+.pb-home h1 { font-size: 15px; }
+.pb-home h2 { margin-top: 10px; font-size: 26px; }
+.pb-home .titulos p { font-size: 12px; }
+.pb-home .medalhao { top: 65%; width: min(70%, 280px); }
+.pb-home .menu button { min-height: 49px; }
+.pb-home .menu button svg { width: 22px; height: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+.pb-home .anel-rastro, .pb-home .anel-luz { animation: none; stroke-dasharray: none; }
+.pb-home .anel-rastro { opacity: .06; }
+.pb-home .anel-luz { opacity: .3; }
+}
+
+/* Integração limitada à nova tela: a Biblioteca e as demais áreas conservam seus estilos. */
+.pb-home[hidden] { display: none !important; }
+#telaHomeBiblica.pb-home { position: fixed; inset: 0; z-index: 20; --folga-topo-telas: 0px; }
+body:has(#telaHomeBiblica:not([hidden])) { overflow: hidden; background: #171310; }
+body:has(#telaHomeBiblica:not([hidden])) .bottom-nav.home-nav { display: none; }
+

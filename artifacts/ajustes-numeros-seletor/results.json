@@ -1,0 +1,363 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "modeSwitch": true,
+      "storageUnchanged": true,
+      "layout": [
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "00",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "08",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "88",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "99",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "00",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "08",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "88",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "99",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "00",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "08",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "88",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "99",
+          "font": "100.8px",
+          "line": "120.96px",
+          "padding": "10.08px 12.096px",
+          "height": 141.109375,
+          "width": 126.15625,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "00",
+          "font": "72px",
+          "line": "86.4px",
+          "padding": "7.2px 8.64px",
+          "height": 100.765625,
+          "width": 93.53125,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "08",
+          "font": "72px",
+          "line": "86.4px",
+          "padding": "7.2px 8.64px",
+          "height": 100.765625,
+          "width": 93.53125,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "88",
+          "font": "72px",
+          "line": "86.4px",
+          "padding": "7.2px 8.64px",
+          "height": 100.765625,
+          "width": 93.53125,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "99",
+          "font": "72px",
+          "line": "86.4px",
+          "padding": "7.2px 8.64px",
+          "height": 100.765625,
+          "width": 93.53125,
+          "pass": true
+        }
+      ],
+      "colors": [
+        {
+          "active": "true",
+          "background": "rgb(57, 35, 78)",
+          "indicator": "rgb(57, 35, 78)"
+        },
+        {
+          "active": "false",
+          "background": "rgb(16, 16, 21)",
+          "indicator": "rgb(16, 16, 21)"
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "modeSwitch": true,
+      "storageUnchanged": true,
+      "layout": [
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "00",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "08",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "88",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaFixarMemoria .fixar-number",
+          "value": "99",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "00",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "08",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "88",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#telaDesafiarMemoria .desafiar-number",
+          "value": "99",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "00",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "08",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "88",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": "#velocidadeTrainingArea .velocidade-number",
+          "value": "99",
+          "font": "120.4px",
+          "line": "144.48px",
+          "padding": "12.04px 14.448px",
+          "height": 168.546875,
+          "width": 153.390625,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "00",
+          "font": "86px",
+          "line": "103.2px",
+          "padding": "8.6px 10.32px",
+          "height": 120.375,
+          "width": 113.6875,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "08",
+          "font": "86px",
+          "line": "103.2px",
+          "padding": "8.6px 10.32px",
+          "height": 120.375,
+          "width": 113.6875,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "88",
+          "font": "86px",
+          "line": "103.2px",
+          "padding": "8.6px 10.32px",
+          "height": 120.375,
+          "width": 113.6875,
+          "pass": true
+        },
+        {
+          "sel": ".revisao-training-number",
+          "value": "99",
+          "font": "86px",
+          "line": "103.2px",
+          "padding": "8.6px 10.32px",
+          "height": 120.375,
+          "width": 113.6875,
+          "pass": true
+        }
+      ],
+      "colors": [
+        {
+          "active": "true",
+          "background": "rgb(57, 35, 78)",
+          "indicator": "rgb(57, 35, 78)"
+        },
+        {
+          "active": "false",
+          "background": "rgb(16, 16, 21)",
+          "indicator": "rgb(16, 16, 21)"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

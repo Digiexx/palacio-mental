@@ -1,0 +1,13 @@
+﻿Treino Personalizado guiado — validação local
+Base conferida: commit 88dcd89 (3.2). Sem commit, versão nova, publicação ou escrita no Notion.
+Código: index.html, script.js, style.css. Preservadas alterações CSS anteriores e referências não rastreadas.
+Chrome headless, perfil isolado, servidor local, service worker ignorado. Testes acessam estado interno por instrumentação apenas da resposta HTTP do script, sem inserir ganchos no código do aplicativo.
+- 360x800 e 430x932: estado inicial sem modo; troca de modo; 101 números, cinco colunas; seleção/desmarcação, todas/limpar, contador e botão desabilitado; voltar explícito e nativo entre etapas.
+- Configurar não alterou localStorage.
+- 16 rodadas: quatro modos x em ordem/aleatório x duas larguras, com 01/04/05. Filas válidas; números apresentados na sequência da fila; retorno à configuração preserva modo, números e etapa.
+- Velocidade: configuração de tempo preservada; fila não embaralhada novamente. Avanço acionado pela função existente; não foi aguardada a expiração de cada cronômetro.
+- Aprender: avanço pela função existente. Fixar e Treinar: controles de resposta existentes. Resultados gerados somente no perfil de teste.
+- Entradas normais dos quatro modos conferidas quanto ao retorno/origem independente do Personalizado; não houve regressão integral de todas as rodadas normais.
+- Movimento reduzido sem animação; teste final de toque, foco com Tab, ausência de overflow horizontal; capturas reais das duas etapas e controles. Capturas 360 px inspecionadas visualmente.
+- Sem exceções JavaScript no teste de 16 rodadas. Sintaxe de script.js e git diff --check aprovados.
+Limites: celular físico, bateria/FPS, leitor de tela, cronômetros em tempo real e PWA publicada não testados. Sem mudança no service worker.

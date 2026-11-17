@@ -1,0 +1,182 @@
+{
+  "base": "4c872722125fa702787728615c5b290d45524309",
+  "proximaVersao": "V3.5 (proposta; não criada)",
+  "candidate": "C:\\Users\\NATHAN~1\\AppData\\Local\\Temp\\palacio-v3.5-candidato-2K0lbH\\source",
+  "selected": [
+    {
+      "file": "index.html",
+      "bytes": 221488,
+      "sha256": "57941761c49b5d0bc16388b2288afd82f40f0dd4e1678f79d7dc8e1e7bb1cd11",
+      "tipo": "modificado"
+    },
+    {
+      "file": "script.js",
+      "bytes": 378452,
+      "sha256": "56799c547265862a3fe3f232f71fdcf62f76da534dc45e28324426987ea4326f",
+      "tipo": "modificado"
+    },
+    {
+      "file": "service-worker.js",
+      "bytes": 9587,
+      "sha256": "d505e54949b745a9a97b55e27a95a72fcaa3e64e8a7a49387e9cf6043fe0710f",
+      "tipo": "modificado"
+    },
+    {
+      "file": "scripts/build.cjs",
+      "bytes": 1126,
+      "sha256": "9f3803666de2267811f576f049174ca81422e7275da5e43afa0b58ce7c686b40",
+      "tipo": "modificado"
+    },
+    {
+      "file": "scripts/gerar-catalogo-capas.cjs",
+      "bytes": 4005,
+      "sha256": "c9ede84809a6f3d3973e832983399eff55083aae8fd97190280be66860393633",
+      "tipo": "novo"
+    },
+    {
+      "file": "scripts/servir-local.cjs",
+      "bytes": 4550,
+      "sha256": "ec74ac5006eccc220663a9d8605d3c05ff2002b067f64dfbf3b0c454b2c2da53",
+      "tipo": "novo"
+    },
+    {
+      "file": ".vscode/tasks.json",
+      "bytes": 528,
+      "sha256": "f30529a2619ed7b50737c76a2c577100a4de91283a07c0ad05232dcad2f1c76f",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/palacio-biblico/biblioteca.css",
+      "bytes": 20217,
+      "sha256": "e552094f30b13a39987c9430939399886f9b0fede9a9fdd00455dabdeb87c0e9",
+      "tipo": "modificado"
+    },
+    {
+      "file": "assets/palacio-biblico/biblioteca.js",
+      "bytes": 16109,
+      "sha256": "c8ea8b93f8324cd39de462cc2cdd46ec085cda37ddee1345e76f5e0fc06b2c01",
+      "tipo": "modificado"
+    },
+    {
+      "file": "assets/palacio-biblico/home-biblica.css",
+      "bytes": 9429,
+      "sha256": "2e3490d5026491cb5fc413a8624bc8d3483ea5b536d03e051f1cd55c758e4603",
+      "tipo": "modificado"
+    },
+    {
+      "file": "assets/palacio-biblico/home-biblica.js",
+      "bytes": 15206,
+      "sha256": "f56f6246725fe07a67434df7353d8067c7ff66eba3921e12d577f812d9137f1f",
+      "tipo": "modificado"
+    },
+    {
+      "file": "assets/palacio-biblico/indice-biblico.js",
+      "bytes": 1085,
+      "sha256": "bdccde2bc3d6050f59a76f9416f09acb41182a086d0ddeea3f8f47f7bc34da2f",
+      "tipo": "modificado"
+    },
+    {
+      "file": "assets/palacio-biblico/livros-biblicos.js",
+      "bytes": 1848,
+      "sha256": "13ea967a7292c3ea0f0164eeb9410c725cf50241b97a20ba98ca5ff6d6dd727a",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/palacio-biblico/capas-biblicas.js",
+      "bytes": 1449,
+      "sha256": "27205c023aea738987304ba86aae07d7e12fa0991104f308688f04694bb4cd00",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/palacio-biblico/capas-biblicas.json",
+      "bytes": 1339,
+      "sha256": "8c46ffaedf17c084b20f6eb6fd4dd200e564cac8c058d5be0ea84e831a120026",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/palacio-biblico/atualizar-capas.js",
+      "bytes": 2664,
+      "sha256": "85a6bf80691b0727b8dd7616550f82405cb0a0db4826539b0b0586c0540e1bc6",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/01-genesis.webp",
+      "bytes": 164986,
+      "sha256": "4d1d60efa43f5c5343979148d46f4c2c34a13379d2b96e524aac370b714e4445",
+      "tipo": "modificado"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/03-levitico.webp",
+      "bytes": 50034,
+      "sha256": "6af20f6767b804cfb08fea4b40ddbd9d64dfc3eabaed3904503a328b654d059b",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/04-numeros.webp",
+      "bytes": 75698,
+      "sha256": "26c792d98f2f743b9e6b9577133f240f35b5fdbb4a8bdb90cf3fc99ee0365fc8",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/08-rute.webp",
+      "bytes": 164894,
+      "sha256": "c1caef30cf15ee70f80915767fb5ec2554ca272b39ca4d19d174f84cbf1e1e1b",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/09-1-samuel.webp",
+      "bytes": 80134,
+      "sha256": "c069c43cf0b96fa78feebfed02699d9fab404c9057ff35a7308d668d87bd1c20",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/10-2-samuel.webp",
+      "bytes": 140802,
+      "sha256": "447fe74726c83a62cf4d1fa484a4a605ec77989c330a23ddfc82337f3b4142b9",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/17-ester.webp",
+      "bytes": 168268,
+      "sha256": "90da2a225f7feb63a51197a376fb0ae4e0e7dde25377dbec197ba337a5f8e75b",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/18-jo.webp",
+      "bytes": 150396,
+      "sha256": "189369d35c174be1c0f7cb5ae1643feb74b8c4907a000c0e7e28829b51c4b8df",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/19-salmos.webp",
+      "bytes": 136864,
+      "sha256": "d6392d089923170d2e7534f35e0e30e56365fd1fc0504a4e20fbe1dc7058722a",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/20-proverbios.webp",
+      "bytes": 162286,
+      "sha256": "60aa959f2050a178d7960c74f3b7587b42966479d41e2a4e85e9c84c481b603c",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/32-jonas.webp",
+      "bytes": 112184,
+      "sha256": "c25d08331be1b0fc11143164bfe449b1cf9737a0e20751a3f900beda8ec07b27",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/44-atos.webp",
+      "bytes": 101404,
+      "sha256": "0184592506a81e2699b69d05ad9a2990adf944f6f716fcf8329b6978fab80a68",
+      "tipo": "novo"
+    },
+    {
+      "file": "assets/imagens/palacio-biblico/livros-menu/66-apocalipse.webp",
+      "bytes": 135732,
+      "sha256": "d009a606581af9e236b3cb8dac948f822ee26c66a2b157b9ea73761e316d28cc",
+      "tipo": "novo"
+    }
+  ],
+  "excluded": "Todas as exclusões locais; artifacts, experimentos, referências, testes/docs novos e imagens sem dependência no app."
+}

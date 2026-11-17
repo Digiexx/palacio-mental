@@ -1,0 +1,3 @@
+OK descoberta de arquivo novo sem cadastro manual
+OK ordem, nome, extensão e caixa rigorosos para GitHub Pages
+OK formato real, truncamento, blocos inválidos e animação rejeitados

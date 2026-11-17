@@ -1,0 +1,2 @@
+PASS servidor: Atos detectado por evento sem build, sem catálogo em disco, validação de cópia parcial e rotas protegidas.
+PASS cache: fluxo de eventos ignorado pelo SW; requisições normais continuam gerenciadas.

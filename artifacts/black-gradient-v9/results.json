@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "height": 800,
+      "cards": 66,
+      "targets": 3,
+      "unchangedCards": 63,
+      "filtersUnchanged": true,
+      "imagePixelsUnchanged": true,
+      "favoritesAndPersistence": true,
+      "selection": true,
+      "overflow": false
+    },
+    {
+      "width": 412,
+      "height": 924,
+      "cards": 66,
+      "targets": 3,
+      "unchangedCards": 63,
+      "filtersUnchanged": true,
+      "imagePixelsUnchanged": true,
+      "favoritesAndPersistence": true,
+      "selection": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "cards": 66,
+      "targets": 3,
+      "unchangedCards": 63,
+      "filtersUnchanged": true,
+      "imagePixelsUnchanged": true,
+      "favoritesAndPersistence": true,
+      "selection": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}
