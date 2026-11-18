@@ -61,10 +61,10 @@
             const livro = PB.catalogo.find(l => l.codigo === codigo);
             if (!livro) return;
             const imagem = document.getElementById('imagemLivroBiblico');
-            imagem.src = livro.imagem;
+            imagem.src = codigo === 'JHN' ? 'assets/imagens/palacio-biblico/livros-menu/43-joao.webp' : livro.imagem;
             document.getElementById('tituloLivroBiblico').textContent = livro.nome;
-            document.getElementById('categoriaLivroBiblico').textContent = livro.categoria;
-            document.getElementById('descricaoLivroBiblico').textContent = livro.descricao;
+            document.getElementById('categoriaLivroBiblico').textContent = codigo === 'JHN' ? 'Evangelho de' : livro.categoria;
+            document.getElementById('descricaoLivroBiblico').textContent = codigo === 'JHN' ? 'Estudo · Memorização · Treinamento' : livro.descricao;
             document.getElementById('telaLivroBiblico').dataset.livro = codigo;
             document.getElementById('acessoCenarioJoao').hidden = codigo !== 'JHN';
             document.getElementById('provisorioLivroBiblico').hidden = codigo === 'JHN';

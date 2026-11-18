@@ -5846,11 +5846,42 @@
                     </div>
                 </header>
                 <div class="pb-conteudo">
-                    <div class="pb-desenvolvimento" id="acessoCenarioJoao" hidden>
-                        <span class="pb-selo">MUNDO DE JOÃO</span>
-                        <h2>Explore seu cenário</h2>
-                        <p>Conheça a casa, o jardim e o porto. Aproxime-se dos detalhes e descubra os primeiros objetos.</p>
-                        <button class="cj-entrar" id="btnExplorarCenarioJoao" type="button">Explorar cenário</button>
+                    <div class="jh-home" id="acessoCenarioJoao" hidden>
+                        <section class="jh-retomada jh-cartao" aria-labelledby="jhContinuar">
+                            <svg class="jh-icone jh-play" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13"/><path d="m13 10 9 6-9 6Z"/></svg>
+                            <div><h2 id="jhContinuar">Continuar de onde parei</h2><p>Retomada ainda indisponível.</p></div>
+                        </section>
+                        <section class="jh-versiculos" aria-labelledby="jhVersiculos">
+                            <div class="jh-versiculos-topo">
+                                <h2 id="jhVersiculos"><svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 8C11 4 6 5 3 6v20c5-2 9-1 13 2 4-3 8-4 13-2V6c-3-1-8-2-13 2Zm0 0v20"/></svg>Meus versículos</h2>
+                                <span class="jh-ver-todos">Ver todos <small>Demonstração</small></span>
+                            </div>
+                            <p class="jh-demo-nota" id="jhDemoNota">Demonstração visual · não faz parte do seu acervo.</p>
+                            <!-- Miniaturas demonstrativas isoladas; sem dados pessoais. -->
+                            <div class="jh-demonstracoes" role="group" aria-describedby="jhDemoNota" aria-label="Versículos demonstrativos">
+                                <figure class="jh-demo-cartao"><div class="jh-demo-imagem jh-demo-uvas"><img src="assets/imagens/palacio-biblico/joao/joao-15-5-demo.webp" width="128" height="108" alt="Uvas — imagem demonstrativa" loading="lazy" decoding="async"></div><figcaption>João 15:5</figcaption></figure>
+                                <figure class="jh-demo-cartao"><div class="jh-demo-imagem jh-demo-luminaria"><img src="assets/imagens/palacio-biblico/joao/joao-01-01-demo.webp" width="128" height="108" alt="Luminária — imagem demonstrativa" loading="lazy" decoding="async"></div><figcaption>João 1:1</figcaption></figure>
+                                <figure class="jh-demo-cartao"><div class="jh-demo-imagem jh-demo-caminho"><img src="assets/imagens/palacio-biblico/joao/joao-14-06-demo.webp" width="128" height="108" alt="Caminho — imagem demonstrativa" loading="lazy" decoding="async"></div><figcaption>João 14:6</figcaption></figure>
+                            </div>
+                        </section>
+                        <div class="jh-acoes">
+                            <button class="jh-cartao jh-explorar" id="btnExplorarCenarioJoao" type="button">
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28V12h7v16M21 28V12h7v16M11 28V6h10v22M3 12V7h3v3h3V7h3m8 0h3v3h3V7h3v5M11 6V2h3v3h4V2h3v4M14 28v-7a2 2 0 0 1 4 0v7M2 28h28"/></svg>
+                                <span><strong class="jh-titulo">Explorar cenários</strong><span class="jh-descricao">Entre no panorama de João.</span></span><span class="jh-seta" aria-hidden="true">›</span>
+                            </button>
+                            <section class="jh-cartao jh-indisponivel" aria-labelledby="jhTreinar">
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M10 9h12c4 0 6 5 7 13 0 4-3 4-5 1l-3-3H11l-3 3c-2 3-5 3-5-1 1-8 3-13 7-13ZM10 12v8m-4-4h8m8-3h1m2 4h1"/></svg>
+                                <div><h2 id="jhTreinar">Treinar João</h2><p>Exercícios de memorização.</p><small>Indisponível</small></div>
+                            </section>
+                            <section class="jh-cartao jh-indisponivel" aria-labelledby="jhEstudio">
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="m5 21 17-17a3 3 0 0 1 5 5L10 26l-7 3 2-8Zm14-14 6 6M5 21l5 5"/></svg>
+                                <div><h2 id="jhEstudio">Estúdio de Edição</h2><p>Objetos e associações.</p><small>Indisponível</small></div>
+                            </section>
+                            <section class="jh-cartao jh-cenarios" aria-labelledby="jhCenarios">
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 27 12 6l8 15 4-8 7 14ZM8 14l4 3 3-3"/></svg>
+                                <div><h2 id="jhCenarios">Cenários do livro</h2><p>Panorama principal disponível em Explorar cenários.</p><small>Seletor indisponível</small></div>
+                            </section>
+                        </div>
                     </div>
                     <div class="pb-desenvolvimento" id="provisorioLivroBiblico">
                         <span class="pb-selo">PRÓXIMA ETAPA</span>
