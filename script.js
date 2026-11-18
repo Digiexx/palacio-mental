@@ -5590,9 +5590,13 @@ document.addEventListener("DOMContentLoaded", () => {
             elemento: document.getElementById("telaLivroBiblico"),
             pai: "bibliotecaBiblica"
         },
+        cenariosJoao: {
+            elemento: document.getElementById("telaCenariosJoao"),
+            pai: "livroBiblico"
+        },
         cenarioJoao: {
             elemento: document.getElementById("telaCenarioJoao"),
-            pai: "livroBiblico"
+            pai: "cenariosJoao"
         },
 
         home: {
@@ -5684,9 +5688,119 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     const cenarioJoao = globalThis.PalacioBiblico?.iniciarCenarioJoao();
+    // Visualizações novas não compartilham coordenadas ou dados do panorama original.
+    const mundosJoao = (() => {
+        const tela = document.getElementById("telaCenariosJoao");
+        const visor = document.getElementById("listaCenariosJoao");
+        const imagem = document.getElementById("sjImagem");
+        const menu = document.getElementById("sjMenu");
+        const abrirMenu = document.getElementById("sjAbrirMenu");
+        const fecharMenu = document.getElementById("sjFecharMenu");
+        const seletor = document.getElementById("sjSeletor");
+        const cenarios = document.getElementById("btnCenariosAtual");
+        const explorar = document.getElementById("btnAbrirPanoramaJoao");
+        const aviso = document.getElementById("sjAviso");
+        const status = document.getElementById("sjStatus");
+        const tentar = document.getElementById("sjTentar");
+        const base = "assets/imagens/palacio-biblico/cenarios-mundos/joao/";
+        const mundos = [
+            {arquivo: "cenario-principal.webp", nome: "Cenário Principal", curto: "Principal", alt: "Pátio junto ao lago, com casa, poço e barco ao pôr do sol."},
+            {arquivo: "mundo-01-casa.webp", nome: "Mundo 1 — Casa", curto: "Casa", alt: "Interior da casa, com cama, baú, mesa e porta voltada para o lago."},
+            {arquivo: "mundo-02-barco.webp", nome: "Mundo 2 — Barco", curto: "Barco", alt: "Interior do barco, com vela, redes e objetos sobre o convés."}
+        ];
+        const posicoes = mundos.map(() => 0.5);
+        let atual = 0, pedido = 0, carregado = null, sessao = 0, ativo = false, gesto = null;
+        function guardarVista() {
+            if (carregado !== null && ativo && visor.scrollWidth > visor.clientWidth) {
+                posicoes[carregado] = visor.scrollLeft / (visor.scrollWidth - visor.clientWidth);
+            }
+        }
+        function restaurarVista() {
+            if (!ativo || carregado === null) return;
+            visor.scrollLeft = Math.max(0, visor.scrollWidth - visor.clientWidth) * posicoes[carregado];
+            visor.dataset.arrastavel = String(visor.scrollWidth > visor.clientWidth + 1);
+        }
+        function mostrarSeletor(mostrar, focar = true) {
+            seletor.hidden = !mostrar;
+            cenarios.setAttribute("aria-expanded", String(mostrar));
+            if (focar) (mostrar ? seletor.querySelector('[aria-pressed="true"]') : cenarios).focus({preventScroll: true});
+        }
+        function mostrarMenu(mostrar, focar = true) {
+            mostrarSeletor(false, false);
+            menu.hidden = !mostrar;
+            abrirMenu.hidden = mostrar;
+            abrirMenu.setAttribute("aria-expanded", String(mostrar));
+            if (focar) (mostrar ? fecharMenu : abrirMenu).focus({preventScroll: true});
+        }
+        async function selecionar(indice) {
+            if (!mundos[indice]) return;
+            guardarVista(); pedido = indice;
+            const token = ++sessao;
+            aviso.hidden = false; tentar.hidden = true;
+            status.textContent = "Carregando cenário…";
+            tela.setAttribute("aria-busy", "true");
+            try {
+                const nova = new Image(); nova.src = base + mundos[indice].arquivo;
+                await nova.decode();
+                if (!ativo || token !== sessao) return;
+                imagem.src = nova.src; imagem.alt = mundos[indice].alt;
+                imagem.width = nova.naturalWidth; imagem.height = nova.naturalHeight;
+                await imagem.decode();
+                if (!ativo || token !== sessao) return;
+                atual = indice; carregado = indice;
+                visor.setAttribute("aria-label", `${mundos[indice].nome}; deslize para explorar a imagem`);
+                document.getElementById("sjMundoAtual").textContent = mundos[indice].curto;
+                seletor.querySelectorAll("[data-mundo]").forEach(b => b.setAttribute("aria-pressed", String(Number(b.dataset.mundo) === indice)));
+                // A rota verificada leva à imagem antiga, com sua própria geometria.
+                explorar.disabled = indice !== 0;
+                document.getElementById("sjExplorarNota").textContent = indice === 0 ? "Panorama original" : "Indisponível";
+                aviso.hidden = true; status.textContent = mundos[indice].nome;
+                restaurarVista();
+            } catch {
+                if (!ativo || token !== sessao) return;
+                status.textContent = `Não foi possível carregar ${mundos[indice].nome}.`;
+                tentar.hidden = false;
+            } finally { if (token === sessao) tela.setAttribute("aria-busy", "false"); }
+        }
+        abrirMenu.addEventListener("click", () => mostrarMenu(true));
+        fecharMenu.addEventListener("click", () => mostrarMenu(false));
+        document.getElementById("sjFecharSeletor").addEventListener("click", () => mostrarSeletor(false));
+        cenarios.addEventListener("click", () => mostrarSeletor(seletor.hidden));
+        seletor.querySelectorAll("[data-mundo]").forEach(b => b.addEventListener("click", () => {
+            mostrarSeletor(false); selecionar(Number(b.dataset.mundo));
+        }));
+        tentar.addEventListener("click", () => selecionar(pedido));
+        tela.addEventListener("keydown", e => {
+            if (e.key !== "Escape") return;
+            if (!seletor.hidden) { e.preventDefault(); mostrarSeletor(false); }
+            else if (!menu.hidden) { e.preventDefault(); mostrarMenu(false); }
+        });
+        visor.addEventListener("scroll", guardarVista, {passive: true});
+        visor.addEventListener("keydown", e => {
+            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
+            e.preventDefault();
+            visor.scrollLeft = e.key === "Home" ? 0 : e.key === "End" ? visor.scrollWidth : visor.scrollLeft + (e.key === "ArrowLeft" ? -60 : 60);
+        });
+        visor.addEventListener("pointerdown", e => {
+            if (e.pointerType !== "mouse" || e.button !== 0 || !e.isPrimary || visor.scrollWidth <= visor.clientWidth + 1) return;
+            gesto = {id: e.pointerId, x: e.clientX, esquerda: visor.scrollLeft};
+            visor.setPointerCapture(e.pointerId); visor.dataset.arrastando = "true";
+        });
+        visor.addEventListener("pointermove", e => {
+            if (gesto?.id === e.pointerId) visor.scrollLeft = gesto.esquerda - (e.clientX - gesto.x);
+        });
+        const terminarArraste = () => { gesto = null; delete visor.dataset.arrastando; };
+        ["pointerup", "pointercancel", "lostpointercapture"].forEach(tipo => visor.addEventListener(tipo, terminarArraste));
+        new ResizeObserver(restaurarVista).observe(visor);
+        return {
+            abrir() { ativo = true; mostrarMenu(false, false); selecionar(atual); },
+            suspender() { guardarVista(); ativo = false; ++sessao; terminarArraste(); mostrarMenu(false, false); tela.setAttribute("aria-busy", "false"); }
+        };
+    })();
     document.getElementById("btnExplorarCenarioJoao")?.addEventListener("click", () => {
-        if (document.getElementById("telaLivroBiblico").dataset.livro === "JHN") navegarParaTela("cenarioJoao");
+        if (document.getElementById("telaLivroBiblico").dataset.livro === "JHN") navegarParaTela("cenariosJoao");
     });
+    document.getElementById("btnAbrirPanoramaJoao")?.addEventListener("click", () => navegarParaTela("cenarioJoao"));
     document.getElementById("btnPalacioBiblico")?.addEventListener("click", () => navegarParaTela("homeBiblica"));
 
     let origemBiblioteca = null, rolagemOrigemBiblioteca = 0;
@@ -5751,6 +5865,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (nomeTela === "bibliotecaBiblica") bibliotecaBiblica?.abrir(); else bibliotecaBiblica?.suspender();
         if (nomeTela === "homeBiblica") homeBiblica?.abrir(); else homeBiblica?.suspender();
         if (nomeTela === "cenarioJoao") cenarioJoao?.abrir(); else cenarioJoao?.suspender();
+        if (nomeTela === "cenariosJoao") mundosJoao.abrir(); else mundosJoao.suspender();
 
 
         // =================================================
@@ -11860,7 +11975,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Neste fluxo, Voltar/Avançar restaura a entrada real do histórico.
-            const rotasBiblicas = ["homeBiblica", "bibliotecaBiblica", "livroBiblico", "cenarioJoao"];
+            const rotasBiblicas = ["homeBiblica", "bibliotecaBiblica", "livroBiblico", "cenariosJoao", "cenarioJoao"];
             if (rotasBiblicas.includes(evento.state?.tela) ||
                 rotasBiblicas.some(nome => !telasApp[nome].elemento.hidden)) {
                 const destino = evento.state?.tela;

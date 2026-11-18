@@ -170,50 +170,117 @@ body:has(#telaLivroBiblico[data-livro="JHN"]:not([hidden])) .home-nav { --home-a
 body:has(#telaLivroBiblico[data-livro="JHN"]:not([hidden])) .home-nav .home-nav-handle span { animation: none; filter: none; width: 28px; height: 3px; border-radius: 3px; background: #b18c64; opacity: .7; box-shadow: none; }
 body:has(#telaLivroBiblico[data-livro="JHN"]:not([hidden])) .home-nav .nav-item { animation: none; }
 body:has(#telaLivroBiblico[data-livro="JHN"]:not([hidden])) .home-nav .nav-item svg { border-color: #806343; background: #17110b; box-shadow: none; }
-#telaLivroBiblico[data-livro="JHN"] { background: #060504; color: #e8ded0; }
-#telaLivroBiblico[data-livro="JHN"] .pb-hero-livro { min-height: 360px; padding: 196px 16px 18px; text-align: center; }
-#telaLivroBiblico[data-livro="JHN"] .pb-hero-imagem { object-position: 43% 22%; background: #100d09; }
-#telaLivroBiblico[data-livro="JHN"] .pb-hero::after { background: linear-gradient(180deg, #06050408 8%, #06050410 32%, #060504b8 64%, #060504 100%); }
-#telaLivroBiblico[data-livro="JHN"] .pb-selo { color: #dfd1bd; font: 400 16px/1.3 Arial, sans-serif; letter-spacing: 0; }
-#telaLivroBiblico[data-livro="JHN"] h1 { margin: 3px 0 10px; color: #eee1ce; font: 600 50px/1.08 Arial, sans-serif; letter-spacing: -.035em; }
-#telaLivroBiblico[data-livro="JHN"] .pb-hero p { max-width: 280px; margin: 0 auto; padding-top: 10px; border-top: 1px solid #86674870; color: #d5c8b7; font: 400 11px/1.5 Arial, sans-serif; }
-#telaLivroBiblico[data-livro="JHN"] .pb-conteudo { padding: 0 16px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-home { display: grid; gap: 18px; padding-bottom: 14px; }
-/* Mesmo empilhamento padding-box/border-box dos cartões da Biblioteca; reflexo estático. */
-#telaLivroBiblico[data-livro="JHN"] .jh-cartao, #telaLivroBiblico[data-livro="JHN"] .jh-demo-cartao {
-    --jh-borda: linear-gradient(125deg, #8e8e8b 0%, #b4b4ae 8%, #6f5a44 24%, #332c26 43%, #19191a 61%, #645442 81%, #29292a 100%);
-    border: 1px solid transparent; border-radius: 16px;
-    background: radial-gradient(ellipse 48% 28px at 27% 0, #ffffff09, transparent 90%) padding-box, linear-gradient(145deg, #19191bed, #080809f5 78%) padding-box, var(--jh-borda) border-box;
-    box-shadow: inset 0 1px 0 #ffffff12; color: #e8ded0;
+#telaLivroBiblico[data-livro="JHN"] { position: relative; isolation: isolate; background: #060504; color: #e8ded0; }
+#telaLivroBiblico[data-livro="JHN"] .pb-hero-livro { position: static; isolation: auto; min-height: clamp(400px, 56svh, 520px); padding: clamp(290px, 40svh, 380px) 20px 20px; overflow: visible; text-align: center; }
+#telaLivroBiblico[data-livro="JHN"] .pb-hero-imagem { position: absolute; inset: 0 0 auto; height: clamp(400px, 52svh, 500px); object-position: 55% 22%; background: #100d09; }
+#telaLivroBiblico[data-livro="JHN"] .pb-hero::after { inset: 0 0 auto; height: clamp(400px, 52svh, 500px); background: linear-gradient(180deg, #06050400 15%, #06050412 36%, #06050480 64%, #060504d9 84%, #060504 100%); }
+#telaLivroBiblico[data-livro="JHN"] .pb-selo { color: #dfd1bd; font: 400 18px/1.35 Arial, sans-serif; letter-spacing: .01em; }
+#telaLivroBiblico[data-livro="JHN"] h1 { margin: 3px 0 0; color: #eee1ce; font: 600 clamp(60px, 16vw, 72px)/1.08 Arial, sans-serif; letter-spacing: -.04em; }
+#telaLivroBiblico[data-livro="JHN"] .pb-hero p { display: none; }
+#telaLivroBiblico[data-livro="JHN"] .pb-conteudo { padding: 0 18px; }
+#telaLivroBiblico[data-livro="JHN"] .jh-home { padding-bottom: 16px; }
+/* Técnica padding-box/border-box da Biblioteca, sem animação ou filtro de vidro. */
+#telaLivroBiblico[data-livro="JHN"] .jh-cartao {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px;
+    min-width: 0; min-height: 126px; margin: 0; padding: 17px 6px 13px;
+    border: 1px solid transparent; border-radius: 20px;
+    background: radial-gradient(ellipse 70% 25px at 30% 0, #ffffff08, transparent 90%) padding-box, linear-gradient(145deg, #19191bf2, #080809f5 85%) padding-box, linear-gradient(125deg, #979792, #63503c 27%, #252222 55%, #6d5741 82%, #252222) border-box;
+    box-shadow: inset 0 1px 0 #ffffff0c; color: #e8ded0; text-align: center;
 }
-#telaLivroBiblico[data-livro="JHN"] .jh-cartao { display: flex; align-items: center; gap: 14px; min-width: 0; padding: 17px 16px; text-align: left; }
-#telaLivroBiblico[data-livro="JHN"] .jh-cartao > div, #telaLivroBiblico[data-livro="JHN"] .jh-cartao > span:not(.jh-seta) { flex: 1; min-width: 0; }
-#telaLivroBiblico[data-livro="JHN"] .jh-icone { display: block; flex: 0 0 28px; width: 28px; height: 28px; fill: none; stroke: #b18c64; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-#telaLivroBiblico[data-livro="JHN"] .jh-play { flex-basis: 34px; width: 34px; height: 34px; padding: 4px; border-radius: 50%; background: #302216; }
-#telaLivroBiblico[data-livro="JHN"] h2, #telaLivroBiblico[data-livro="JHN"] .jh-titulo { display: block; margin: 0; color: #ece1d2; font: 500 18px/1.3 Arial, sans-serif; letter-spacing: -.02em; }
-#telaLivroBiblico[data-livro="JHN"] .jh-retomada h2 { font-size: 15px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-cartao p, #telaLivroBiblico[data-livro="JHN"] .jh-descricao { display: block; margin: 7px 0 0; color: #c2b4a1; font: 400 13px/1.55 Arial, sans-serif; }
-#telaLivroBiblico[data-livro="JHN"] .jh-cartao small { display: block; margin-top: 6px; color: #b6a18a; font: 400 11px/1.4 Arial, sans-serif; }
-#telaLivroBiblico[data-livro="JHN"] .jh-versiculos h2 { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-versiculos .jh-icone { flex-basis: 22px; width: 22px; height: 22px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-versiculos-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-versiculos-topo h2 { margin: 0; font-size: 17px; white-space: nowrap; }
-#telaLivroBiblico[data-livro="JHN"] .jh-ver-todos { color: #bcb5aa; font: 400 12px/1.4 Arial, sans-serif; text-align: right; white-space: nowrap; }
-#telaLivroBiblico[data-livro="JHN"] .jh-ver-todos small { display: block; color: #a09789; font-size: 9px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-demo-nota { margin: 9px 0 12px; color: #a69e91; font: 400 10px/1.5 Arial, sans-serif; }
-#telaLivroBiblico[data-livro="JHN"] .jh-demonstracoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-demo-cartao { min-width: 0; margin: 0; padding: 3px; overflow: hidden; border-radius: 14px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-demo-imagem { position: relative; width: 100%; aspect-ratio: 128 / 108; overflow: hidden; border-radius: 10px 10px 3px 3px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-demo-imagem img { display: block; width: 100%; height: 100%; object-fit: cover; }
-#telaLivroBiblico[data-livro="JHN"] .jh-demo-cartao figcaption { padding: 9px 1px 7px; color: #e0d8cb; font: 400 13px/1.3 Arial, sans-serif; text-align: center; white-space: nowrap; }
-#telaLivroBiblico[data-livro="JHN"] .jh-acoes { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-acoes .jh-cartao { min-height: 98px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-acoes h2, #telaLivroBiblico[data-livro="JHN"] .jh-acoes .jh-titulo { font-size: 18px; line-height: 1.3; }
-#telaLivroBiblico[data-livro="JHN"] .jh-explorar { width: 100%; cursor: pointer; }
+#telaLivroBiblico[data-livro="JHN"] .jh-icone { display: block; flex: 0 0 34px; width: 34px; height: 34px; fill: none; stroke: #b99b77; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+#telaLivroBiblico[data-livro="JHN"] .jh-titulo { display: block; color: #e5d9c9; font: 500 16px/1.3 Arial, sans-serif; letter-spacing: -.02em; }
+#telaLivroBiblico[data-livro="JHN"] .jh-cartao small { display: block; color: #a99e8d; font: 400 10px/1.4 Arial, sans-serif; }
+#telaLivroBiblico[data-livro="JHN"] .jh-acoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+#telaLivroBiblico[data-livro="JHN"] .jh-cartao:disabled { cursor: default; opacity: 1; }
+#telaLivroBiblico[data-livro="JHN"] .jh-explorar { cursor: pointer; }
 #telaLivroBiblico[data-livro="JHN"] .jh-explorar:active { box-shadow: inset 0 1px 0 #ffffff25; }
 #telaLivroBiblico[data-livro="JHN"] .jh-explorar:focus-visible { outline: 2px solid #c3a581; outline-offset: 4px; }
-#telaLivroBiblico[data-livro="JHN"] .jh-seta { color: #c6ad8b; font: 300 26px/1 Arial, sans-serif; }
+#telaLivroBiblico[data-livro="JHN"] .jh-destaque { padding-top: 27px; text-align: center; }
+#telaLivroBiblico[data-livro="JHN"] .jh-separador { height: 1px; margin: 0 12px 23px; background: linear-gradient(90deg, transparent, #8a7053a6, transparent); }
+#telaLivroBiblico[data-livro="JHN"] blockquote { margin: 0; padding: 0 12px; border: 0; background: none; }
+#telaLivroBiblico[data-livro="JHN"] blockquote p { margin: 0 0 12px; color: #ded3c3; font: 400 20px/1.55 Arial, sans-serif; }
+#telaLivroBiblico[data-livro="JHN"] cite { color: #b49c7d; font: 400 12px/1.5 Arial, sans-serif; }
+#telaLivroBiblico[data-livro="JHN"] .jh-demo-nota { margin: 16px 0 0; color: #a69e91; font: 400 10px/1.5 Arial, sans-serif; }
 @media (min-width: 400px) {
-    #telaLivroBiblico[data-livro="JHN"] .pb-hero-livro { min-height: 390px; padding-top: 222px; }
-    #telaLivroBiblico[data-livro="JHN"] .pb-conteudo { padding-inline: 20px; }
+    #telaLivroBiblico[data-livro="JHN"] .pb-conteudo { padding-inline: 24px; }
+    #telaLivroBiblico[data-livro="JHN"] .jh-cartao { min-height: 138px; }
+    #telaLivroBiblico[data-livro="JHN"] .jh-titulo { font-size: 18px; }
+}
+
+/* Visualização dos mundos: controles independentes da imagem e da geometria antiga. */
+body:has(#telaCenariosJoao:not([hidden])) { overflow: hidden; }
+body:has(#telaCenariosJoao:not([hidden])) .bottom-nav.home-nav { display: none; }
+.main-content #telaCenariosJoao { position: fixed; inset: 0; z-index: 25; width: 100%; max-width: 560px; height: 100dvh; min-height: 0; margin: auto; padding: 0; overflow: hidden; background: #080706; color: #e5d9c9; }
+#telaCenariosJoao[hidden], #telaCenariosJoao [hidden] { display: none !important; }
+#telaCenariosJoao .sj-visor { position: absolute; inset: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: none; touch-action: pan-x pan-y; }
+#telaCenariosJoao .sj-visor::-webkit-scrollbar { display: none; }
+#telaCenariosJoao .sj-visor[data-arrastavel="true"] { cursor: grab; }
+#telaCenariosJoao .sj-visor[data-arrastando="true"] { cursor: grabbing; }
+#telaCenariosJoao .sj-visor img { display: block; width: auto; min-width: 100%; max-width: none; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
+#telaCenariosJoao .sj-circular { display: grid; place-items: center; width: 48px; height: 48px; min-height: 48px; padding: 11px; border: 1px solid #76634e; border-radius: 50%; background: #11100fed; color: #d1b99b; box-shadow: none; }
+#telaCenariosJoao .sj-circular svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+#telaCenariosJoao .sj-camadas { position: absolute; z-index: 2; top: calc(12px + env(safe-area-inset-top)); left: max(12px, env(safe-area-inset-left)); width: 44px; height: 44px; min-height: 44px; padding: 11px; border-color: #76634e80; color: #d1b99bb3; cursor: default; }
+#telaCenariosJoao .sj-controles { position: absolute; z-index: 3; left: max(12px, env(safe-area-inset-left)); right: max(12px, env(safe-area-inset-right)); bottom: calc(14px + env(safe-area-inset-bottom)); pointer-events: none; }
+#telaCenariosJoao .sj-controles button, #telaCenariosJoao .sj-seletor { pointer-events: auto; }
+#telaCenariosJoao .sj-abrir-menu { margin: 0 auto; }
+#telaCenariosJoao .sj-menu { position: relative; padding-top: 54px; }
+#telaCenariosJoao .sj-fechar-menu { position: absolute; top: 0; right: 0; width: 44px; height: 44px; min-height: 44px; padding: 0; font: 300 28px/1 Arial, sans-serif; }
+#telaCenariosJoao .sj-nav, #telaCenariosJoao .sj-seletor { border: 1px solid transparent; border-radius: 18px; background: linear-gradient(145deg, #1c1b1af5, #080809f5) padding-box, linear-gradient(125deg, #85817b, #6d5943 28%, #282322 57%, #64513c 82%, #242222) border-box; }
+#telaCenariosJoao .sj-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 7px 4px; pointer-events: auto; }
+#telaCenariosJoao .sj-nav button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; min-width: 0; min-height: 68px; padding: 6px 1px; border: 0; border-radius: 12px; background: transparent; color: #d0bca3; box-shadow: none; }
+#telaCenariosJoao .sj-nav button:disabled { color: #9f978c; cursor: default; }
+#telaCenariosJoao .sj-nav button[aria-expanded="true"] { background: #31271c; }
+#telaCenariosJoao .sj-nav svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+#telaCenariosJoao .sj-nav span { font: 400 11px/1.3 Arial, sans-serif; }
+#telaCenariosJoao .sj-nav small { font: 400 9px/1.2 Arial, sans-serif; }
+#telaCenariosJoao .sj-seletor { position: absolute; right: 0; bottom: 148px; width: min(100%, 260px); padding: 7px; }
+#telaCenariosJoao .sj-seletor button { display: block; width: 100%; min-height: 44px; padding: 11px 12px; border: 0; border-radius: 11px; background: transparent; color: #d6c8b6; text-align: left; font: 400 13px/1.4 Arial, sans-serif; box-shadow: none; }
+#telaCenariosJoao .sj-seletor button[aria-pressed="true"] { background: #30261b; color: #f0e1ca; }
+#telaCenariosJoao .sj-aviso { position: absolute; z-index: 2; top: calc(12px + env(safe-area-inset-top)); left: 68px; right: 12px; padding: 10px 12px; border: 1px solid #544532; border-radius: 12px; background: #0b0a09ed; }
+#telaCenariosJoao .sj-aviso p { margin: 0; color: #d6c8b6; font: 400 12px/1.5 Arial, sans-serif; }
+#telaCenariosJoao .sj-aviso button { min-height: 44px; margin-top: 6px; padding: 8px 10px; border: 1px solid #76634e; border-radius: 10px; background: #211c16; color: #e5d9c9; font: 400 12px/1.4 Arial, sans-serif; }
+#telaCenariosJoao button:focus-visible, #telaCenariosJoao .sj-visor:focus-visible { outline: 2px solid #b99b77; outline-offset: -3px; }
+
+/* Calibração visual dos controles de Cenários; rotas e geometria preservadas. */
+#telaCenariosJoao { --sj-borda-genesis: linear-gradient(125deg, #35251d 0%, #795438 19%, #A6794D 26%, #473025 40%, #281e19 61%, #805b3d 79%, #3c2a20 100%); }
+/* Mesmo degradê de borda da .pb-card da Biblioteca, com preenchimento Black Glass. */
+#telaCenariosJoao .sj-circular,
+#telaCenariosJoao .sj-nav { border: 1px solid transparent; background: linear-gradient(#110c09e0, #080809ef) padding-box, var(--sj-borda-genesis) border-box; box-shadow: inset 0 1px 0 #ffffff0d; }
+#telaCenariosJoao .sj-circular { color: #F2E6D8; }
+#telaCenariosJoao .sj-circular svg { display: block; width: 22px; height: 22px; stroke-width: 1.8; }
+#telaCenariosJoao .sj-camadas { top: calc(14px + env(safe-area-inset-top)); left: max(14px, env(safe-area-inset-left)); padding: 10px; color: #E9D8C2; }
+#telaCenariosJoao .sj-menu { padding-top: 51px; }
+#telaCenariosJoao .sj-fechar-menu { top: 0; right: 0; padding: 10px; }
+#telaCenariosJoao .sj-nav { gap: 0; padding: 5px; border-radius: 33px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+#telaCenariosJoao .sj-nav button { position: relative; gap: 6px; min-height: 54px; padding: 5px 2px; color: #F2E6D8; }
+#telaCenariosJoao .sj-nav button:disabled { color: #AAA29C; }
+#telaCenariosJoao .sj-nav button + button::before { content: ''; position: absolute; left: 0; top: 13px; bottom: 13px; width: 1px; background: rgba(170,112,63,.16); }
+#telaCenariosJoao .sj-nav #btnCenariosAtual { border-radius: 22px; background: transparent; color: #C0A07A; box-shadow: none; }
+#telaCenariosJoao .sj-nav #btnCenariosAtual::after { content: ''; position: absolute; left: 50%; bottom: 3px; width: 18px; height: 1px; transform: translateX(-50%); background: #A6794D; pointer-events: none; }
+#telaCenariosJoao .sj-nav svg { width: 23px; height: 23px; stroke-width: 1.8; }
+#telaCenariosJoao .sj-nav span { font: 400 12px/1.3 Arial, sans-serif; }
+#telaCenariosJoao .sj-nav small { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#telaCenariosJoao:has(#sjSeletor:not([hidden])) .sj-visor { filter: blur(6px) brightness(.5); }
+#telaCenariosJoao:has(#sjSeletor:not([hidden])) .sj-menu,
+#telaCenariosJoao:has(#sjSeletor:not([hidden])) .sj-camadas { display: none; }
+#telaCenariosJoao .sj-seletor { position: fixed; z-index: 5; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%); width: min(calc(100% - 32px), 420px); max-height: calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 40px); overflow: visible; overscroll-behavior: contain; padding: 22px 18px 18px; border: 1px solid transparent; border-radius: 24px; background: linear-gradient(#110c09f0, #080809f5) padding-box, var(--sj-borda-genesis) border-box; box-shadow: inset 0 1px 0 #ffffff0d, 0 12px 40px #0006; }
+#telaCenariosJoao .sj-seletor-cabecalho { padding: 0 12px 20px; text-align: center; }
+#telaCenariosJoao .sj-seletor-cabecalho > svg { display: block; width: 28px; height: 28px; margin: 0 auto 8px; fill: none; stroke: #C89A68; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+#telaCenariosJoao .sj-seletor h2 { margin: 0 0 6px; color: #F2E6D8; font: 500 23px/1.25 Arial, sans-serif; }
+#telaCenariosJoao .sj-seletor-cabecalho p { margin: 0; color: #AAA29C; font: 400 12px/1.5 Arial, sans-serif; }
+#telaCenariosJoao .sj-seletor button[data-mundo] { display: grid; grid-template-columns: 82px minmax(0, 1fr) 22px; align-items: center; gap: 11px; min-height: 86px; margin: 0 0 10px; padding: 5px; border: 1px solid #ffffff1c; border-radius: 16px; background: rgba(33,25,20,.35); color: #F2E6D8; }
+#telaCenariosJoao .sj-seletor button[data-mundo]:last-child { margin-bottom: 0; }
+#telaCenariosJoao .sj-seletor button[data-mundo][aria-pressed="true"] { border-color: rgba(170,112,63,.65); background: rgba(73,48,30,.4); }
+#telaCenariosJoao .sj-seletor button[data-mundo] img { display: block; width: 82px; height: 74px; object-fit: cover; object-position: center 60%; border-radius: 11px; }
+#telaCenariosJoao .sj-seletor button[data-mundo] > span { min-width: 0; }
+#telaCenariosJoao .sj-seletor strong { display: block; color: #F2E6D8; font: 500 15px/1.35 Arial, sans-serif; }
+#telaCenariosJoao .sj-seletor small { display: block; margin-top: 5px; color: #AAA29C; font: 400 12px/1.35 Arial, sans-serif; }
+#telaCenariosJoao .sj-selecao { display: block; width: 22px; height: 22px; padding: 3px; border-radius: 50%; background: rgba(138,86,48,.5); fill: none; stroke: #F2E6D8; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; visibility: hidden; }
+#telaCenariosJoao [aria-pressed="true"] .sj-selecao { visibility: visible; }
+#telaCenariosJoao .sj-seletor .sj-fechar-seletor { position: absolute; top: -54px; right: 0; display: grid; place-items: center; width: 44px; height: 44px; min-height: 44px; padding: 10px; border: 1px solid transparent; border-radius: 50%; background: linear-gradient(#110c09e0, #080809ef) padding-box, var(--sj-borda-genesis) border-box; box-shadow: inset 0 1px 0 #ffffff0d; color: #F2E6D8; }
+@media (min-width: 400px) {
+    #telaCenariosJoao .sj-seletor { padding: 24px 20px 20px; }
+    #telaCenariosJoao .sj-seletor button[data-mundo] { grid-template-columns: 96px minmax(0, 1fr) 24px; min-height: 94px; gap: 13px; }
+    #telaCenariosJoao .sj-seletor button[data-mundo] img { width: 96px; height: 82px; }
+    #telaCenariosJoao .sj-seletor strong { font-size: 16px; }
 }

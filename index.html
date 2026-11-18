@@ -5847,47 +5847,84 @@
                 </header>
                 <div class="pb-conteudo">
                     <div class="jh-home" id="acessoCenarioJoao" hidden>
-                        <section class="jh-retomada jh-cartao" aria-labelledby="jhContinuar">
-                            <svg class="jh-icone jh-play" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13"/><path d="m13 10 9 6-9 6Z"/></svg>
-                            <div><h2 id="jhContinuar">Continuar de onde parei</h2><p>Retomada ainda indisponível.</p></div>
-                        </section>
-                        <section class="jh-versiculos" aria-labelledby="jhVersiculos">
-                            <div class="jh-versiculos-topo">
-                                <h2 id="jhVersiculos"><svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 8C11 4 6 5 3 6v20c5-2 9-1 13 2 4-3 8-4 13-2V6c-3-1-8-2-13 2Zm0 0v20"/></svg>Meus versículos</h2>
-                                <span class="jh-ver-todos">Ver todos <small>Demonstração</small></span>
-                            </div>
-                            <p class="jh-demo-nota" id="jhDemoNota">Demonstração visual · não faz parte do seu acervo.</p>
-                            <!-- Miniaturas demonstrativas isoladas; sem dados pessoais. -->
-                            <div class="jh-demonstracoes" role="group" aria-describedby="jhDemoNota" aria-label="Versículos demonstrativos">
-                                <figure class="jh-demo-cartao"><div class="jh-demo-imagem jh-demo-uvas"><img src="assets/imagens/palacio-biblico/joao/joao-15-5-demo.webp" width="128" height="108" alt="Uvas — imagem demonstrativa" loading="lazy" decoding="async"></div><figcaption>João 15:5</figcaption></figure>
-                                <figure class="jh-demo-cartao"><div class="jh-demo-imagem jh-demo-luminaria"><img src="assets/imagens/palacio-biblico/joao/joao-01-01-demo.webp" width="128" height="108" alt="Luminária — imagem demonstrativa" loading="lazy" decoding="async"></div><figcaption>João 1:1</figcaption></figure>
-                                <figure class="jh-demo-cartao"><div class="jh-demo-imagem jh-demo-caminho"><img src="assets/imagens/palacio-biblico/joao/joao-14-06-demo.webp" width="128" height="108" alt="Caminho — imagem demonstrativa" loading="lazy" decoding="async"></div><figcaption>João 14:6</figcaption></figure>
-                            </div>
-                        </section>
-                        <div class="jh-acoes">
-                            <button class="jh-cartao jh-explorar" id="btnExplorarCenarioJoao" type="button">
-                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 28V12h7v16M21 28V12h7v16M11 28V6h10v22M3 12V7h3v3h3V7h3m8 0h3v3h3V7h3v5M11 6V2h3v3h4V2h3v4M14 28v-7a2 2 0 0 1 4 0v7M2 28h28"/></svg>
-                                <span><strong class="jh-titulo">Explorar cenários</strong><span class="jh-descricao">Entre no panorama de João.</span></span><span class="jh-seta" aria-hidden="true">›</span>
+                        <nav class="jh-acoes" aria-label="Acessos de João">
+                            <button class="jh-cartao jh-explorar" id="btnExplorarCenarioJoao" type="button" aria-label="Cenários — abrir panorama de João">
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 28V12h22v16M5 12V5h5v4h4V5h4v4h4V5h5v7M12 28v-8a4 4 0 0 1 8 0v8M3 28h26"/></svg>
+                                <span class="jh-titulo">Cenários</span>
+                                <small>Explorar</small>
                             </button>
-                            <section class="jh-cartao jh-indisponivel" aria-labelledby="jhTreinar">
-                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M10 9h12c4 0 6 5 7 13 0 4-3 4-5 1l-3-3H11l-3 3c-2 3-5 3-5-1 1-8 3-13 7-13ZM10 12v8m-4-4h8m8-3h1m2 4h1"/></svg>
-                                <div><h2 id="jhTreinar">Treinar João</h2><p>Exercícios de memorização.</p><small>Indisponível</small></div>
-                            </section>
-                            <section class="jh-cartao jh-indisponivel" aria-labelledby="jhEstudio">
-                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="m5 21 17-17a3 3 0 0 1 5 5L10 26l-7 3 2-8Zm14-14 6 6M5 21l5 5"/></svg>
-                                <div><h2 id="jhEstudio">Estúdio de Edição</h2><p>Objetos e associações.</p><small>Indisponível</small></div>
-                            </section>
-                            <section class="jh-cartao jh-cenarios" aria-labelledby="jhCenarios">
-                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 27 12 6l8 15 4-8 7 14ZM8 14l4 3 3-3"/></svg>
-                                <div><h2 id="jhCenarios">Cenários do livro</h2><p>Panorama principal disponível em Explorar cenários.</p><small>Seletor indisponível</small></div>
-                            </section>
-                        </div>
+                            <button class="jh-cartao" type="button" disabled>
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><circle cx="15" cy="17" r="12"/><circle cx="15" cy="17" r="7"/><circle cx="15" cy="17" r="2"/><path d="m15 17 12-12m-5 0h5v5"/></svg>
+                                <span class="jh-titulo">Treino</span>
+                                <small>Indisponível</small>
+                            </button>
+                            <button class="jh-cartao" type="button" disabled>
+                                <svg class="jh-icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 8C11 4 6 5 3 6v20c5-2 9-1 13 2 4-3 8-4 13-2V6c-3-1-8-2-13 2Zm0 0v20"/></svg>
+                                <span class="jh-titulo">Versos</span>
+                                <small>Indisponível</small>
+                            </button>
+                        </nav>
+                        <section class="jh-destaque" aria-label="Versículo demonstrativo">
+                            <div class="jh-separador" aria-hidden="true"></div>
+                            <blockquote>
+                                <p>“Eu sou a luz do mundo.”</p>
+                                <cite>João 8:12 · trecho</cite>
+                            </blockquote>
+                            <p class="jh-demo-nota">Demonstração visual · não faz parte do seu acervo.</p>
+                        </section>
                     </div>
                     <div class="pb-desenvolvimento" id="provisorioLivroBiblico">
                         <span class="pb-selo">PRÓXIMA ETAPA</span>
                         <h2>Seu cenário está em desenvolvimento</h2>
                         <p>Em breve, este espaço receberá o cenário interativo, os objetos e suas associações pessoais.</p>
                         <p class="pb-nota">Nenhum cenário ou versículo foi cadastrado automaticamente.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="app-screen pb-tela" id="telaCenariosJoao" aria-labelledby="sjTitulo" hidden>
+                <h1 class="pb-sr" id="sjTitulo">Cenários de João</h1>
+                <div class="sj-visor" id="listaCenariosJoao" tabindex="0" role="region" aria-label="Cenário de João; deslize para explorar a imagem">
+                    <img id="sjImagem" alt="" draggable="false" decoding="async">
+                </div>
+                <button class="sj-camadas sj-circular" type="button" disabled aria-label="Portal do Palácio indisponível" title="Portal do Palácio — disponível futuramente">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 7 9-5 9 5-9 5-9-5Zm0 5 9 5 9-5M3 17l9 5 9-5"/></svg>
+                </button>
+                <div class="sj-aviso" id="sjAviso" hidden><p id="sjStatus" role="status" aria-live="polite"></p><button id="sjTentar" type="button" hidden>Tentar novamente</button></div>
+                <div class="sj-controles">
+                    <div class="sj-seletor" id="sjSeletor" role="group" aria-labelledby="sjSeletorTitulo" hidden>
+                        <button class="sj-fechar-seletor sj-circular" id="sjFecharSeletor" type="button" aria-label="Fechar painel de cenários"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+                        <header class="sj-seletor-cabecalho">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 20 7-15 6 10 3-6 5 11ZM6 11l3 2 2-2"/></svg>
+                            <h2 id="sjSeletorTitulo">Cenários</h2>
+                            <p>Escolha o mundo que deseja explorar</p>
+                        </header>
+                        <button type="button" data-mundo="0" aria-pressed="true">
+                            <img src="assets/imagens/palacio-biblico/cenarios-mundos/joao/cenario-principal.webp" width="1086" height="1448" alt="" loading="lazy" decoding="async">
+                            <span><strong>Cenário Principal</strong><small>Pátio junto ao lago</small></span>
+                            <svg class="sj-selecao" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12 4 4 8-8"/></svg>
+                        </button>
+                        <button type="button" data-mundo="1" aria-pressed="false">
+                            <img src="assets/imagens/palacio-biblico/cenarios-mundos/joao/mundo-01-casa.webp" width="1086" height="1448" alt="" loading="lazy" decoding="async">
+                            <span><strong>Mundo 1 — Casa</strong><small>Interior da casa</small></span>
+                            <svg class="sj-selecao" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12 4 4 8-8"/></svg>
+                        </button>
+                        <button type="button" data-mundo="2" aria-pressed="false">
+                            <img src="assets/imagens/palacio-biblico/cenarios-mundos/joao/mundo-02-barco.webp" width="1086" height="1448" alt="" loading="lazy" decoding="async">
+                            <span><strong>Mundo 2 — Barco</strong><small>A bordo do barco</small></span>
+                            <svg class="sj-selecao" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12 4 4 8-8"/></svg>
+                        </button>
+                    </div>
+                    <button class="sj-abrir-menu sj-circular" id="sjAbrirMenu" type="button" aria-label="Abrir menu do cenário" aria-expanded="false" aria-controls="sjMenu">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h14"/></svg>
+                    </button>
+                    <div class="sj-menu" id="sjMenu" hidden>
+                        <button class="sj-fechar-menu sj-circular" id="sjFecharMenu" type="button" aria-label="Recolher menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+                        <nav class="sj-nav" aria-label="Menu do cenário de João">
+                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 16 12-12 4 4L8 20l-5 1 1-5Zm10-10 4 4"/></svg><span>Editar</span><small>Indisponível</small></button>
+                            <button type="button" id="btnCenariosAtual" aria-expanded="false" aria-controls="sjSeletor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 20 7-15 6 10 3-6 5 11ZM6 11l3 2 2-2"/></svg><span>Cenários</span><small id="sjMundoAtual">Principal</small></button>
+                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5C8 2 5 3 2 4v15c4-2 7-1 10 1 3-2 6-3 10-1V4c-3-1-6-2-10 1Zm0 0v15"/></svg><span>Versos</span><small>Indisponível</small></button>
+                            <button type="button" id="btnAbrirPanoramaJoao" aria-label="Explorar panorama original de João"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m16 8-3 5-5 3 3-5 5-3Z"/></svg><span>Explorar</span><small id="sjExplorarNota">Panorama original</small></button>
+                        </nav>
                     </div>
                 </div>
             </section>
