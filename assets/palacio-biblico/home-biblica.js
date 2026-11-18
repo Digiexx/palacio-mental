@@ -67,7 +67,7 @@
               <button type="button" disabled title="Desafios bíblicos indisponíveis">${icone('trofeu')}<span>Desafios</span><small>Indisponível</small></button>
               <button type="button" disabled title="Tela de progresso indisponível">${icone('barrasCheias')}<span>Progresso</span><small>Indisponível</small></button>
             </nav>
-            <section class="pd-jornada pd-painel" aria-labelledby="pdJornadaTitulo" aria-busy="true">
+            <section class="pd-jornada pd-painel" aria-labelledby="pdJornadaTitulo" aria-busy="true" hidden>
               <span class="pd-jornada-icone" aria-hidden="true">${icone('escudo')}</span>
               <div><h2 id="pdJornadaTitulo">Sua Jornada Bíblica</h2><p data-jornada-status role="status">Consultando seu acervo…</p>
                 <dl class="pd-estatisticas" hidden><div><dt>Versículos no acervo</dt><dd data-total="versiculos"></dd></div><div><dt>Revisões registradas</dt><dd data-total="revisoes"></dd></div><div><dt>Livros favoritos</dt><dd data-total="favoritos"></dd></div></dl>
