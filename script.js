@@ -5702,6 +5702,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const aviso = document.getElementById("sjAviso");
         const status = document.getElementById("sjStatus");
         const tentar = document.getElementById("sjTentar");
+        const acoesMenu = [...menu.querySelectorAll(".sj-nav button")];
+        const limparPressaoMenu = () => acoesMenu.forEach(botao => botao.classList.remove("sj-pressionado"));
+        acoesMenu.forEach(botao => botao.addEventListener("pointerdown", evento => {
+            if (!botao.disabled && evento.isPrimary && evento.button === 0) botao.classList.add("sj-pressionado");
+        }));
+        ["pointerup", "pointercancel"].forEach(tipo => window.addEventListener(tipo, limparPressaoMenu, {passive: true}));
+        window.addEventListener("blur", limparPressaoMenu);
         const base = "assets/imagens/palacio-biblico/cenarios-mundos/joao/";
         const mundos = [
             {arquivo: "cenario-principal.webp", nome: "Cenário Principal", curto: "Principal", alt: "Pátio junto ao lago, com casa, poço e barco ao pôr do sol."},
@@ -5721,6 +5728,7 @@ document.addEventListener("DOMContentLoaded", () => {
             visor.dataset.arrastavel = String(visor.scrollWidth > visor.clientWidth + 1);
         }
         function mostrarSeletor(mostrar, focar = true) {
+            limparPressaoMenu();
             seletor.hidden = !mostrar;
             cenarios.setAttribute("aria-expanded", String(mostrar));
             if (focar) (mostrar ? seletor.querySelector('[aria-pressed="true"]') : cenarios).focus({preventScroll: true});
