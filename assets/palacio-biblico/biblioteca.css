@@ -266,6 +266,72 @@ body:has(#telaCenariosJoao:not([hidden])) .bottom-nav.home-nav { display: none; 
 #telaCenariosJoao .sj-nav svg { width: 23px; height: 23px; stroke-width: 1.8; }
 #telaCenariosJoao .sj-nav span { font: 400 12px/1.3 Arial, sans-serif; }
 #telaCenariosJoao .sj-nav small { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+#telaCenariosJoao .sj-ferramentas { grid-template-columns: repeat(6, minmax(44px, 1fr)); }
+#telaCenariosJoao .sj-ferramentas span { font-size: 11px; white-space: nowrap; }
+#telaCenariosJoao .sj-estudio-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 7px; }
+#telaCenariosJoao .sj-estudio-topo p { margin: 0; padding: 7px 9px; border-radius: 10px; background: rgba(0,0,0,.5); color: #F2E6D8; font: 400 11px/1.4 Arial,sans-serif; }
+#telaCenariosJoao .sj-ferramentas #sjSairEdicao::before { background: #ffffff20; }
+#telaCenariosJoao .sj-rascunho-camada { position: absolute; pointer-events: none; }
+#telaCenariosJoao .sj-moldura { position: absolute; box-sizing: border-box; border: 1px solid #ecececcc; border-radius: 3px; background: #0002; pointer-events: auto; touch-action: none; cursor: move; }
+#telaCenariosJoao .sj-moldura:focus-visible { outline: 2px solid #fff; outline-offset: -4px; }
+#telaCenariosJoao .sj-alca { position: absolute; display: none; place-items: center; width: 44px; height: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; touch-action: none; -webkit-tap-highlight-color: transparent; }
+#telaCenariosJoao .sj-moldura[data-selecionado="true"] .sj-alca { display: grid; }
+#telaCenariosJoao .sj-alca::after { content: ''; position: absolute; width: 16px; height: 16px; border: solid #eee; border-width: 0; border-radius: 2px; background: transparent; }
+#telaCenariosJoao .sj-alca-no::after { top: 0; left: 0; border-top-width: 3px; border-left-width: 3px; }
+#telaCenariosJoao .sj-alca-ne::after { top: 0; right: 0; border-top-width: 3px; border-right-width: 3px; }
+#telaCenariosJoao .sj-alca-so::after { bottom: 0; left: 0; border-bottom-width: 3px; border-left-width: 3px; }
+#telaCenariosJoao .sj-alca-se::after { bottom: 0; right: 0; border-bottom-width: 3px; border-right-width: 3px; }
+#telaCenariosJoao .sj-alca-no { left: 0; top: 0; cursor: nwse-resize; }
+#telaCenariosJoao .sj-alca-ne { right: 0; top: 0; cursor: nesw-resize; }
+#telaCenariosJoao .sj-alca-so { left: 0; bottom: 0; cursor: nesw-resize; }
+#telaCenariosJoao .sj-alca-se { right: 0; bottom: 0; cursor: nwse-resize; }
+#telaCenariosJoao .sj-visor.sj-adicionando { touch-action: none; cursor: crosshair; }
+#telaCenariosJoao .sj-visor.sj-ajustando { overflow: hidden; touch-action: none; }
+#telaCenariosJoao #sjAdicionar[aria-expanded="true"] { background: #593b2866; }
+#telaCenariosJoao .sj-estudio { position: relative; }
+#telaCenariosJoao .sj-adicionar-submenu { position: absolute; z-index: 4; left: 5px; bottom: calc(100% + 20px); box-sizing: border-box; width: min(260px,calc(100% - 10px)); padding: 12px; border: 1px solid #99725399; border-radius: 26px; background: rgba(53,33,20,.88); color: #f2e6d8; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(12px) scale(.2); transform-origin: 22px calc(100% + 20px); transition: transform 250ms cubic-bezier(.2,.75,.25,1), opacity 250ms ease, visibility 0s linear 250ms; }
+#telaCenariosJoao .sj-adicionar-submenu::before, #telaCenariosJoao .sj-adicionar-submenu::after { content: ''; position: absolute; pointer-events: none; clip-path: polygon(0 0,100% 0,50% 100%); }
+#telaCenariosJoao .sj-adicionar-submenu::before { left: 22px; bottom: -17px; width: 26px; height: 17px; background: #99725399; }
+#telaCenariosJoao .sj-adicionar-submenu::after { left: 23px; bottom: -15px; width: 24px; height: 16px; background: rgba(53,33,20,.88); }
+#telaCenariosJoao .sj-adicionar-submenu[data-aberto="true"] { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1); transition-delay: 0s; }
+#telaCenariosJoao .sj-adicionar-submenu button { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 56px; padding: 12px; border: 0; border-radius: 12px; background: transparent; color: #f2e6d8; box-shadow: none; text-align: left; font: 400 14px/1.4 Arial,sans-serif; -webkit-tap-highlight-color: transparent; }
+#telaCenariosJoao .sj-adicionar-submenu button + button { border-top: 1px solid #c6a58740; border-radius: 0; }
+#telaCenariosJoao .sj-adicionar-submenu svg { flex: 0 0 21px; width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+#telaCenariosJoao .sj-adicionar-submenu button:disabled { color: #d0c4b9; cursor: default; }
+#telaCenariosJoao .sj-adicionar-submenu small { margin-left: auto; font-size: 10px; }
+#telaCenariosJoao #sjCancelarAdicionar { justify-content: center; margin-top: 0; border-radius: 0 0 12px 12px; color: #ded2c6; }
+#telaCenariosJoao .sj-adicionar-submenu button:focus-visible { outline: 2px solid #d4c4b2; outline-offset: -2px; background: #49312466; }
+@media (prefers-reduced-motion: reduce) {
+    #telaCenariosJoao .sj-adicionar-submenu { transform: none; transition: none; }
+}
+#telaCenariosJoao .sj-selecao-acoes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+#telaCenariosJoao .sj-selecao-acoes button { min-height: 52px; padding: 10px 12px; border: 1px solid #74625280; border-radius: 24px; background: rgba(0,0,0,.65); color: #f2e6d8; box-shadow: none; font: 500 16px/1.3 Arial,sans-serif; -webkit-tap-highlight-color: transparent; }
+#telaCenariosJoao #sjConfirmarSelecao { background: #37271ce6; }
+#telaCenariosJoao .sj-selecao-acoes button:disabled { opacity: .5; cursor: default; }
+#telaCenariosJoao .sj-selecao-acoes span { margin-right: 6px; font-size: 22px; }
+#telaCenariosJoao .sj-objeto-dialog { box-sizing: border-box; position: fixed; inset: 0; margin: auto; width: min(440px,calc(100% - 24px)); max-width: none; max-height: calc(100dvh - 28px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); padding: 18px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #69513c; border-radius: 24px; background: #100d0af5; color: #f2e6d8; box-shadow: none; font: 400 14px/1.4 Arial,sans-serif; }
+#telaCenariosJoao .sj-objeto-dialog::backdrop { background: #0006; }
+#telaCenariosJoao .sj-objeto-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+#telaCenariosJoao .sj-objeto-topo h2 { margin: 0; font: 600 22px/1.3 Arial,sans-serif; }
+#telaCenariosJoao #sjFecharObjetoForm { width: 44px; min-height: 44px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: #f2e6d8; box-shadow: none; font: 300 28px/1 Arial,sans-serif; }
+#telaCenariosJoao .sj-objeto-contexto { display: flex; align-items: center; gap: 14px; padding: 8px; margin-bottom: 16px; border: 1px solid #65503a55; border-radius: 16px; background: #ffffff05; }
+#telaCenariosJoao .sj-objeto-contexto span { color: #c9beb2; font-size: 12px; }
+#telaCenariosJoao .sj-objeto-contexto p { margin: 6px 0 0; }
+#telaCenariosJoao .sj-objeto-recorte { position: relative; flex: 0 0 88px; overflow: hidden; border-radius: 10px; }
+#telaCenariosJoao #sjObjetoPreview { position: absolute; max-width: none; object-fit: fill; }
+#telaCenariosJoao #sjObjetoForm label { display: block; margin: 12px 0 5px; }
+#telaCenariosJoao #sjObjetoForm :is(input,textarea) { box-sizing: border-box; display: block; width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #695744; border-radius: 10px; background: #ffffff09; color: #f2e6d8; font: 400 16px/1.4 Arial,sans-serif; }
+#telaCenariosJoao #sjObjetoForm textarea { resize: vertical; }
+#telaCenariosJoao #sjObjetoForm fieldset { min-width: 0; margin: 16px 0 0; padding: 0; border: 0; }
+#telaCenariosJoao #sjObjetoForm legend { padding: 0; }
+#telaCenariosJoao #sjObjetoForm small { font-size: 11px; color: #bcb0a3; font-weight: 400; }
+#telaCenariosJoao .sj-referencia-campos { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 8px; }
+#telaCenariosJoao .sj-referencia-campos label { font-size: 12px; }
+#telaCenariosJoao #sjSalvarNota { margin: 16px 0 8px; color: #c9beb2; font-size: 12px; }
+#telaCenariosJoao #sjSalvarObjeto { width: 100%; min-height: 48px; padding: 10px; border: 1px solid #695744; border-radius: 18px; background: #33251b; color: #d3c3b3; box-shadow: none; font: 500 16px/1.4 Arial,sans-serif; opacity: .6; cursor: default; }
+#telaCenariosJoao .sj-objeto-dialog :is(button,input,textarea) { -webkit-tap-highlight-color: transparent; }
+#telaCenariosJoao .sj-objeto-dialog :is(button,input,textarea):focus-visible { outline: 2px solid #d4c4b2; outline-offset: 2px; }
+#telaCenariosJoao:has(#sjObjetoDialog[open]) .sj-controles { visibility: hidden; }
 #telaCenariosJoao:has(#sjSeletor:not([hidden])) .sj-visor { filter: blur(6px) brightness(.5); }
 #telaCenariosJoao:has(#sjSeletor:not([hidden])) .sj-menu,
 #telaCenariosJoao:has(#sjSeletor:not([hidden])) .sj-camadas { display: none; }

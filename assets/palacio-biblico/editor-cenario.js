@@ -164,8 +164,57 @@
             get ativo() { return ativo; }, get arrastando() { return Boolean(gesto); },
             get rascunho() { return rascunho ? structuredClone(rascunho) : null; },
             permitirSaida: podeDescartar,
-            suspender() { ativo = false; limpar(); },
+            suspender() { document.getElementById('ceObjetosDialog')?.close(); ativo = false; limpar(); },
             atualizarEscala(escala) { encerrarGesto(); camada.style.setProperty('--ce-escala', escala); }
         });
     };
+})();
+
+// Prévia independente: não consulta nem grava no repositório e não altera o editor.
+(() => {
+    const dialog = document.getElementById('ceObjetosDialog');
+    const abrir = document.getElementById('ceAbrirObjetos');
+    if (!dialog || !abrir) return;
+    const lista = document.getElementById('ceObjetosLista');
+    const busca = document.getElementById('ceBuscaObjetos');
+    const base = 'assets/imagens/palacio-biblico/joao/';
+    // Referências e estados são exclusivamente ilustrativos. Sem seleção no cenário.
+    const exemplos = Object.freeze([
+        {nome: 'Videira', referencia: 'João 15:5', imagem: 'joao-15-5-demo.webp', selecionado: true},
+        {nome: 'Luminária', referencia: 'João 1:1', imagem: 'joao-01-01-demo.webp'},
+        {nome: 'Caminho', referencia: 'João 14:6', imagem: 'joao-14-06-demo.webp'},
+        {nome: 'Porta da casa', imagem: 'cenario-01.webp'},
+        {nome: 'Oliveira', imagem: 'cenario-01.webp'},
+        {nome: 'Poço', imagem: 'cenario-01.webp'},
+        {nome: 'Barco', imagem: 'cenario-01.webp'}
+    ]);
+    function renderizar() {
+        const termo = busca.value.trim().toLocaleLowerCase('pt-BR');
+        lista.replaceChildren();
+        for (const exemplo of exemplos.filter(e => `${e.nome} ${e.referencia || ''}`.toLocaleLowerCase('pt-BR').includes(termo))) {
+            const item = document.createElement('li');
+            item.className = 'ce-objeto-demo';
+            item.dataset.selecionado = String(Boolean(exemplo.selecionado));
+            const imagem = document.createElement('img');
+            imagem.src = base + exemplo.imagem; imagem.alt = ''; imagem.width = 64; imagem.height = 64;
+            const texto = document.createElement('div');
+            const nome = document.createElement('strong'); nome.textContent = exemplo.nome;
+            const referencia = document.createElement('span'); referencia.textContent = exemplo.referencia || 'Sem referência';
+            const estado = document.createElement('small'); estado.textContent = exemplo.referencia ? 'Cadastrado' : 'Livre';
+            texto.append(nome, referencia, estado);
+            const indicador = document.createElement('span');
+            indicador.className = 'ce-objeto-indicador'; indicador.textContent = exemplo.selecionado ? '✓' : '○';
+            indicador.setAttribute('aria-label', exemplo.selecionado ? 'Exemplo selecionado' : 'Exemplo não selecionado');
+            item.append(imagem, texto, indicador); lista.append(item);
+        }
+        document.getElementById('ceObjetosVazio').hidden = lista.childElementCount !== 0;
+    }
+    abrir.addEventListener('click', () => {
+        busca.value = ''; renderizar(); dialog.showModal(); lista.scrollTop = 0;
+    });
+    document.getElementById('ceFecharObjetos').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+        if (abrir.getClientRects().length) abrir.focus({preventScroll: true});
+    });
+    busca.addEventListener('input', renderizar);
 })();

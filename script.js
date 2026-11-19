@@ -5696,6 +5696,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = document.getElementById("sjMenu");
         const abrirMenu = document.getElementById("sjAbrirMenu");
         const fecharMenu = document.getElementById("sjFecharMenu");
+        const editarMundo = document.getElementById("sjEditar");
+        const estudio = document.getElementById("sjEstudio");
+        const sairEdicao = document.getElementById("sjSairEdicao");
+        let editandoMundo = false;
         const seletor = document.getElementById("sjSeletor");
         const cenarios = document.getElementById("btnCenariosAtual");
         const explorar = document.getElementById("btnAbrirPanoramaJoao");
@@ -5717,6 +5721,170 @@ document.addEventListener("DOMContentLoaded", () => {
         ];
         const posicoes = mundos.map(() => 0.5);
         let atual = 0, pedido = 0, carregado = null, sessao = 0, ativo = false, gesto = null;
+        const adicionar = document.getElementById("sjAdicionar");
+        const submenuAdicionar = document.getElementById("sjAdicionarSubmenu");
+        const cadastrarObjeto = document.getElementById("sjCadastrarObjeto");
+        let submenuAberto = false;
+        function mostrarSubmenuAdicionar(mostrar, focar = true) {
+            submenuAberto = mostrar;
+            submenuAdicionar.dataset.aberto = String(mostrar);
+            submenuAdicionar.inert = !mostrar;
+            submenuAdicionar.setAttribute("aria-hidden", String(!mostrar));
+            adicionar.setAttribute("aria-expanded", String(mostrar));
+            if (focar) (mostrar ? cadastrarObjeto : adicionar).focus({preventScroll: true});
+        }
+        adicionar.addEventListener("click", () => mostrarSubmenuAdicionar(!submenuAberto));
+        document.getElementById("sjCancelarAdicionar").addEventListener("click", () => mostrarSubmenuAdicionar(false));
+        document.addEventListener("pointerdown", e => {
+            if (!submenuAberto || submenuAdicionar.contains(e.target) || adicionar.contains(e.target)) return;
+            mostrarSubmenuAdicionar(false, false);
+            if (visor.contains(e.target)) { e.preventDefault(); e.stopPropagation(); }
+        }, {capture: true});
+        submenuAdicionar.addEventListener("focusout", e => {
+            if (submenuAberto && e.relatedTarget && !submenuAdicionar.contains(e.relatedTarget) && !adicionar.contains(e.relatedTarget)) mostrarSubmenuAdicionar(false, false);
+        });
+        const instrucao = document.getElementById("sjInstrucao");
+        const barraFerramentas = estudio.querySelector(".sj-ferramentas");
+        const acoesSelecao = document.getElementById("sjSelecaoAcoes");
+        const confirmarSelecao = document.getElementById("sjConfirmarSelecao");
+        const cancelarSelecao = document.getElementById("sjCancelarSelecao");
+        const formularioObjeto = document.getElementById("sjObjetoDialog");
+        let selecionandoObjeto = false;
+        function fecharFormularioObjeto() {
+            if (!formularioObjeto.open) return false;
+            formularioObjeto.close();
+            confirmarSelecao.focus({preventScroll: true});
+            return true;
+        }
+        document.getElementById("sjFecharObjetoForm").addEventListener("click", fecharFormularioObjeto);
+        formularioObjeto.addEventListener("cancel", e => { e.preventDefault(); fecharFormularioObjeto(); });
+        document.getElementById("sjObjetoForm").addEventListener("submit", e => e.preventDefault());
+        cancelarSelecao.addEventListener("click", () => {
+            if (!permitirSaidaMundo()) return;
+            instrucao.textContent = "Rascunho descartado. Nenhum dado foi salvo.";
+            adicionar.focus({preventScroll: true});
+        });
+        confirmarSelecao.addEventListener("click", () => {
+            if (confirmarSelecao.disabled || !rascunhoMundo || gestoObjeto) return;
+            const r = rascunhoMundo, preview = document.getElementById("sjObjetoPreview");
+            preview.src = imagem.src;
+            Object.assign(preview.style, {width: `${100 / r.w}%`, height: `${100 / r.h}%`, left: `${-r.x / r.w * 100}%`, top: `${-r.y / r.h * 100}%`});
+            preview.parentElement.style.aspectRatio = String(r.w * imagem.naturalWidth / (r.h * imagem.naturalHeight));
+            document.getElementById("sjObjetoLivro").value = document.getElementById("sjTitulo").textContent.replace(/^Cenários de\s+/, "");
+            document.getElementById("sjObjetoContexto").textContent = `${document.getElementById("sjObjetoLivro").value} · ${mundos[atual].nome}`;
+            formularioObjeto.showModal();
+        });
+        const camadaRascunho = document.createElement("div");
+        camadaRascunho.className = "sj-rascunho-camada";
+        const moldura = document.createElement("div");
+        moldura.className = "sj-moldura"; moldura.tabIndex = 0;
+        moldura.setAttribute("role", "button");
+        moldura.setAttribute("aria-label", "Área temporária do objeto; arraste para mover ou use as setas");
+        for (const canto of ["no", "ne", "so", "se"]) {
+            const alca = document.createElement("button");
+            alca.type = "button"; alca.className = `sj-alca sj-alca-${canto}`; alca.dataset.canto = canto;
+            alca.setAttribute("aria-label", `Redimensionar canto ${canto}`);
+            moldura.append(alca);
+        }
+        camadaRascunho.append(moldura); visor.append(camadaRascunho);
+        let rascunhoMundo = null, selecionado = false, adicionando = false, gestoObjeto = null, toqueLivre = null;
+        const limitar = (v, min, max) => Math.max(min, Math.min(max, v));
+        function renderizarRascunho() {
+            barraFerramentas.hidden = selecionandoObjeto;
+            acoesSelecao.hidden = !selecionandoObjeto;
+            confirmarSelecao.disabled = !rascunhoMundo || !selecionado || Boolean(gestoObjeto);
+            camadaRascunho.hidden = !editandoMundo || !rascunhoMundo;
+            const caixa = imagem.getBoundingClientRect();
+            Object.assign(camadaRascunho.style, {left: `${imagem.offsetLeft}px`, top: `${imagem.offsetTop}px`, width: `${caixa.width}px`, height: `${caixa.height}px`});
+            if (rascunhoMundo) {
+                const r = rascunhoMundo;
+                Object.assign(moldura.style, {left: `${r.x * 100}%`, top: `${r.y * 100}%`, width: `${r.w * 100}%`, height: `${r.h * 100}%`});
+            }
+            moldura.dataset.selecionado = String(selecionado);
+            moldura.setAttribute("aria-pressed", String(selecionado));
+            visor.classList.toggle("sj-adicionando", adicionando);
+        }
+        function encerrarGestoObjeto(e) {
+            if (!gestoObjeto || (e && e.pointerId !== gestoObjeto.id)) return;
+            const id = gestoObjeto.id; gestoObjeto = null;
+            visor.classList.remove("sj-ajustando"); estudio.style.visibility = "";
+            if (moldura.hasPointerCapture(id)) moldura.releasePointerCapture(id);
+            renderizarRascunho();
+        }
+        function permitirSaidaMundo() {
+            if (rascunhoMundo && !window.confirm("Este objeto é um rascunho temporário e não foi salvo. Descartar e continuar?")) return false;
+            mostrarSubmenuAdicionar(false, false);
+            encerrarGestoObjeto(); rascunhoMundo = null; selecionado = false; adicionando = false; toqueLivre = null; selecionandoObjeto = false;
+            formularioObjeto.close(); document.getElementById("sjObjetoForm").reset();
+            renderizarRascunho(); return true;
+        }
+        cadastrarObjeto.addEventListener("click", () => {
+            mostrarSubmenuAdicionar(false, false);
+            selecionandoObjeto = true;
+            if (rascunhoMundo) { selecionado = true; instrucao.textContent = "Ajuste o rascunho existente. Há somente um objeto temporário nesta etapa."; }
+            else {
+                const c = imagem.getBoundingClientRect(), v = visor.getBoundingClientRect();
+                const x = ((Math.max(c.left, v.left) + Math.min(c.right, v.right)) / 2 - c.left) / c.width;
+                const y = ((Math.max(c.top, v.top) + Math.min(c.bottom, v.bottom)) / 2 - c.top) / c.height;
+                const w = Math.min(1, 120 / c.width), h = Math.min(1, 120 / c.height);
+                rascunhoMundo = {mundo: atual, x: limitar(x - w / 2, 0, 1 - w), y: limitar(y - h / 2, 0, 1 - h), w, h};
+                adicionando = false; selecionado = true;
+                instrucao.textContent = "Ajuste a área temporária e confirme. Nada foi salvo.";
+            }
+            renderizarRascunho();
+            moldura.focus({preventScroll: true});
+        });
+        visor.addEventListener("pointerdown", e => {
+            if (!editandoMundo || !e.isPrimary || e.button !== 0 || moldura.contains(e.target)) return;
+            if (rascunhoMundo) { selecionado = false; renderizarRascunho(); }
+            else if (adicionando) {
+                toqueLivre = {id: e.pointerId, x: e.clientX, y: e.clientY};
+                visor.setPointerCapture(e.pointerId); e.preventDefault();
+            }
+        });
+        visor.addEventListener("pointerup", e => {
+            if (!toqueLivre || toqueLivre.id !== e.pointerId) return;
+            const t = toqueLivre; toqueLivre = null;
+            if (Math.hypot(e.clientX - t.x, e.clientY - t.y) > 8 || rascunhoMundo) return;
+            const c = imagem.getBoundingClientRect(), x = (e.clientX - c.left) / c.width, y = (e.clientY - c.top) / c.height;
+            if (x < 0 || x > 1 || y < 0 || y > 1) return;
+            const w = Math.min(1, 120 / c.width), h = Math.min(1, 120 / c.height);
+            rascunhoMundo = {mundo: atual, x: limitar(x - w / 2, 0, 1 - w), y: limitar(y - h / 2, 0, 1 - h), w, h};
+            adicionando = false; selecionado = true; renderizarRascunho();
+            instrucao.textContent = "Área temporária criada. Arraste a moldura ou suas quatro alças para ajustar.";
+        });
+        visor.addEventListener("pointercancel", () => { toqueLivre = null; });
+        moldura.addEventListener("pointerdown", e => {
+            if (!rascunhoMundo || !editandoMundo || gestoObjeto || !e.isPrimary || e.button !== 0) return;
+            e.preventDefault(); e.stopPropagation(); selecionado = true;
+            gestoObjeto = {id: e.pointerId, x: e.clientX, y: e.clientY, area: {...rascunhoMundo}, caixa: imagem.getBoundingClientRect(), canto: e.target.dataset.canto || ""};
+            visor.classList.add("sj-ajustando"); estudio.style.visibility = "hidden";
+            moldura.setPointerCapture(e.pointerId); renderizarRascunho();
+        });
+        moldura.addEventListener("pointermove", e => {
+            if (!gestoObjeto || e.pointerId !== gestoObjeto.id) return;
+            const g = gestoObjeto, r = {...g.area}, dx = (e.clientX - g.x) / g.caixa.width, dy = (e.clientY - g.y) / g.caixa.height;
+            if (!g.canto) { r.x = limitar(r.x + dx, 0, 1 - r.w); r.y = limitar(r.y + dy, 0, 1 - r.h); }
+            else {
+                let left = r.x, top = r.y, right = r.x + r.w, bottom = r.y + r.h;
+                const minW = Math.min(1, 88 / g.caixa.width), minH = Math.min(1, 88 / g.caixa.height);
+                if (g.canto.includes("o")) left = limitar(left + dx, 0, right - minW); else right = limitar(right + dx, left + minW, 1);
+                if (g.canto.includes("n")) top = limitar(top + dy, 0, bottom - minH); else bottom = limitar(bottom + dy, top + minH, 1);
+                r.x = left; r.y = top; r.w = right - left; r.h = bottom - top;
+            }
+            rascunhoMundo = r; renderizarRascunho();
+        });
+        ["pointerup", "pointercancel", "lostpointercapture"].forEach(tipo => moldura.addEventListener(tipo, encerrarGestoObjeto));
+        window.addEventListener("blur", () => { encerrarGestoObjeto(); toqueLivre = null; });
+        window.addEventListener("beforeunload", e => { if (rascunhoMundo) { e.preventDefault(); e.returnValue = ""; } });
+        moldura.addEventListener("keydown", e => {
+            if (!rascunhoMundo || !["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) return;
+            e.preventDefault(); e.stopPropagation(); selecionado = true;
+            const c = imagem.getBoundingClientRect(), r = rascunhoMundo;
+            r.x = limitar(r.x + (e.key === "ArrowLeft" ? -2 / c.width : e.key === "ArrowRight" ? 2 / c.width : 0), 0, 1 - r.w);
+            r.y = limitar(r.y + (e.key === "ArrowUp" ? -2 / c.height : e.key === "ArrowDown" ? 2 / c.height : 0), 0, 1 - r.h);
+            renderizarRascunho();
+        });
         function guardarVista() {
             if (carregado !== null && ativo && visor.scrollWidth > visor.clientWidth) {
                 posicoes[carregado] = visor.scrollLeft / (visor.scrollWidth - visor.clientWidth);
@@ -5726,6 +5894,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!ativo || carregado === null) return;
             visor.scrollLeft = Math.max(0, visor.scrollWidth - visor.clientWidth) * posicoes[carregado];
             visor.dataset.arrastavel = String(visor.scrollWidth > visor.clientWidth + 1);
+            encerrarGestoObjeto(); renderizarRascunho();
         }
         function mostrarSeletor(mostrar, focar = true) {
             limparPressaoMenu();
@@ -5740,8 +5909,24 @@ document.addEventListener("DOMContentLoaded", () => {
             abrirMenu.setAttribute("aria-expanded", String(mostrar));
             if (focar) (mostrar ? fecharMenu : abrirMenu).focus({preventScroll: true});
         }
+        function mostrarEdicao(mostrar, focar = true) {
+            if (mostrar && (!ativo || carregado === null || tela.getAttribute("aria-busy") === "true")) return;
+            if (!mostrar && !permitirSaidaMundo()) return;
+            mostrarSubmenuAdicionar(false, false);
+            editandoMundo = mostrar;
+            editarMundo.setAttribute("aria-pressed", String(mostrar));
+            estudio.hidden = !mostrar;
+            if (mostrar) {
+                mostrarSeletor(false, false);
+                menu.hidden = true; abrirMenu.hidden = true;
+                abrirMenu.setAttribute("aria-expanded", "false");
+            } else mostrarMenu(true, false);
+            if (focar) (mostrar ? sairEdicao : editarMundo).focus({preventScroll: true});
+            renderizarRascunho();
+        }
         async function selecionar(indice) {
             if (!mundos[indice]) return;
+            if (indice !== atual && !permitirSaidaMundo()) return;
             guardarVista(); pedido = indice;
             const token = ++sessao;
             aviso.hidden = false; tentar.hidden = true;
@@ -5771,6 +5956,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } finally { if (token === sessao) tela.setAttribute("aria-busy", "false"); }
         }
         abrirMenu.addEventListener("click", () => mostrarMenu(true));
+        editarMundo.addEventListener("click", () => mostrarEdicao(true));
+        sairEdicao.addEventListener("click", () => mostrarEdicao(false));
         fecharMenu.addEventListener("click", () => mostrarMenu(false));
         document.getElementById("sjFecharSeletor").addEventListener("click", () => mostrarSeletor(false));
         cenarios.addEventListener("click", () => mostrarSeletor(seletor.hidden));
@@ -5780,16 +5967,21 @@ document.addEventListener("DOMContentLoaded", () => {
         tentar.addEventListener("click", () => selecionar(pedido));
         tela.addEventListener("keydown", e => {
             if (e.key !== "Escape") return;
-            if (!seletor.hidden) { e.preventDefault(); mostrarSeletor(false); }
+            if (submenuAberto) { e.preventDefault(); mostrarSubmenuAdicionar(false); return; }
+            if (formularioObjeto.open) { e.preventDefault(); fecharFormularioObjeto(); return; }
+            if (editandoMundo) { e.preventDefault(); mostrarEdicao(false); }
+            else if (!seletor.hidden) { e.preventDefault(); mostrarSeletor(false); }
             else if (!menu.hidden) { e.preventDefault(); mostrarMenu(false); }
         });
         visor.addEventListener("scroll", guardarVista, {passive: true});
         visor.addEventListener("keydown", e => {
+            if (gestoObjeto || adicionando) return;
             if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
             e.preventDefault();
             visor.scrollLeft = e.key === "Home" ? 0 : e.key === "End" ? visor.scrollWidth : visor.scrollLeft + (e.key === "ArrowLeft" ? -60 : 60);
         });
         visor.addEventListener("pointerdown", e => {
+            if (gestoObjeto || adicionando) return;
             if (e.pointerType !== "mouse" || e.button !== 0 || !e.isPrimary || visor.scrollWidth <= visor.clientWidth + 1) return;
             gesto = {id: e.pointerId, x: e.clientX, esquerda: visor.scrollLeft};
             visor.setPointerCapture(e.pointerId); visor.dataset.arrastando = "true";
@@ -5801,8 +5993,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ["pointerup", "pointercancel", "lostpointercapture"].forEach(tipo => visor.addEventListener(tipo, terminarArraste));
         new ResizeObserver(restaurarVista).observe(visor);
         return {
+            permitirSaida: permitirSaidaMundo,
+            fecharFormulario: fecharFormularioObjeto,
             abrir() { ativo = true; mostrarMenu(false, false); selecionar(atual); },
-            suspender() { guardarVista(); ativo = false; ++sessao; terminarArraste(); mostrarMenu(false, false); tela.setAttribute("aria-busy", "false"); }
+            suspender() { guardarVista(); mostrarEdicao(false, false); ativo = false; ++sessao; terminarArraste(); mostrarMenu(false, false); tela.setAttribute("aria-busy", "false"); }
         };
     })();
     document.getElementById("btnExplorarCenarioJoao")?.addEventListener("click", () => {
@@ -5987,6 +6181,16 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         const restaurarOrigem = nomeTela === origemBiblioteca;
+
+        if (!registrarHistorico && !document.getElementById("telaCenariosJoao").hidden && mundosJoao.fecharFormulario()) {
+            history.pushState({tela: "cenariosJoao"}, "", window.location.href);
+            return;
+        }
+
+        if (nomeTela !== "cenariosJoao" && !document.getElementById("telaCenariosJoao").hidden && !mundosJoao.permitirSaida()) {
+            if (!registrarHistorico) history.pushState({tela: "cenariosJoao"}, "", window.location.href);
+            return;
+        }
 
         // Proteção do rascunho pelo controlador central, inclusive no popstate existente.
         if (nomeTela !== "cenarioJoao" && !document.getElementById("telaCenarioJoao").hidden && !cenarioJoao.permitirSaida()) {

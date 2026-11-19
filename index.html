@@ -5920,13 +5920,45 @@
                     <div class="sj-menu" id="sjMenu" hidden>
                         <button class="sj-fechar-menu sj-circular" id="sjFecharMenu" type="button" aria-label="Recolher menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
                         <nav class="sj-nav" aria-label="Menu do cenário de João">
-                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 16 12-12 4 4L8 20l-5 1 1-5Zm10-10 4 4"/></svg><span>Editar</span><small>Indisponível</small></button>
+                            <button type="button" id="sjEditar" aria-pressed="false" aria-controls="sjEstudio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 16 12-12 4 4L8 20l-5 1 1-5Zm10-10 4 4"/></svg><span>Editar</span></button>
                             <button type="button" id="btnCenariosAtual" aria-expanded="false" aria-controls="sjSeletor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 20 7-15 6 10 3-6 5 11ZM6 11l3 2 2-2"/></svg><span>Cenários</span><small id="sjMundoAtual">Principal</small></button>
                             <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5C8 2 5 3 2 4v15c4-2 7-1 10 1 3-2 6-3 10-1V4c-3-1-6-2-10 1Zm0 0v15"/></svg><span>Versos</span><small>Indisponível</small></button>
                             <button type="button" id="btnAbrirPanoramaJoao" aria-label="Explorar panorama original de João"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m16 8-3 5-5 3 3-5 5-3Z"/></svg><span>Explorar</span><small id="sjExplorarNota">Panorama original</small></button>
                         </nav>
                     </div>
+                    <section class="sj-estudio" id="sjEstudio" aria-label="Estúdio de Edição — prévia visual" hidden>
+                        <p class="pb-sr" id="sjInstrucao" role="status"></p>
+                        <div id="sjAdicionarSubmenu" class="sj-adicionar-submenu" role="group" aria-label="Adicionar" aria-hidden="true" inert>
+                            <button type="button" id="sjCadastrarObjeto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg><span>Cadastrar objeto</span></button>
+                            <button type="button" disabled aria-label="Novo verso — indisponível"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5C8 2 5 3 2 4v15c4-2 7-1 10 1 3-2 6-3 10-1V4c-3-1-6-2-10 1Zm0 0v15"/></svg><span>Novo verso</span><small>Indisponível</small></button>
+                            <button type="button" id="sjCancelarAdicionar">Cancelar</button>
+                        </div>
+                        <nav class="sj-nav sj-ferramentas" aria-label="Menu do Estúdio de Edição">
+                            <button type="button" id="sjAdicionar" aria-expanded="false" aria-controls="sjAdicionarSubmenu" aria-describedby="sjInstrucao"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Adicionar</span></button>
+                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M9 6l3-3 3 3M9 18l3 3 3-3M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg><span>Mover</span></button>
+                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg><span>Ajustar</span></button>
+                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M9 6V3h6v3M6 6l1 15h10l1-15M10 10v7M14 10v7"/></svg><span>Excluir</span></button>
+                            <button type="button" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>Objetos</span></button>
+                            <button type="button" id="sjSairEdicao" aria-label="Sair do modo de edição"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H4v16h6M10 12h11M17 8l4 4-4 4"/></svg><span>Sair</span></button>
+                        </nav>
+                        <div id="sjSelecaoAcoes" class="sj-selecao-acoes" hidden>
+                            <button type="button" id="sjCancelarSelecao"><span aria-hidden="true">×</span> Cancelar</button>
+                            <button type="button" id="sjConfirmarSelecao" disabled><span aria-hidden="true">✓</span> Confirmar</button>
+                        </div>
+                    </section>
                 </div>
+                <dialog id="sjObjetoDialog" class="sj-objeto-dialog" aria-labelledby="sjObjetoTitulo" aria-describedby="sjSalvarNota">
+                    <header class="sj-objeto-topo"><h2 id="sjObjetoTitulo">Editar objeto</h2><button type="button" id="sjFecharObjetoForm" aria-label="Fechar formulário e ajustar seleção">×</button></header>
+                    <form id="sjObjetoForm">
+                        <div class="sj-objeto-contexto"><div class="sj-objeto-recorte"><img id="sjObjetoPreview" alt="Área selecionada no cenário"></div><div><span>Posição no cenário</span><p id="sjObjetoContexto"></p></div></div>
+                        <label for="sjObjetoNome">Nome do objeto <span aria-hidden="true">*</span></label><input id="sjObjetoNome" name="nome" required maxlength="100" autocomplete="off">
+                        <fieldset><legend>Referência bíblica <small>opcional</small></legend><div class="sj-referencia-campos"><div><label for="sjObjetoLivro">Livro</label><input id="sjObjetoLivro" readonly></div><div><label for="sjObjetoCapitulo">Capítulo</label><input id="sjObjetoCapitulo" name="capitulo" type="number" min="1" step="1" inputmode="numeric"></div><div><label for="sjObjetoVersiculo">Versículo</label><input id="sjObjetoVersiculo" name="versiculo" type="number" min="1" step="1" inputmode="numeric"></div></div></fieldset>
+                        <label for="sjObjetoTexto">Texto bíblico <small>opcional</small></label><textarea id="sjObjetoTexto" name="texto" rows="4" placeholder="Digite o texto que deseja associar"></textarea>
+                        <label for="sjObjetoAssociacao">Minha associação mental <small>opcional</small></label><textarea id="sjObjetoAssociacao" name="associacao" rows="3"></textarea>
+                        <p id="sjSalvarNota">Rascunho temporário. O salvamento ainda está indisponível.</p>
+                        <button type="button" id="sjSalvarObjeto" disabled>Salvar objeto</button>
+                    </form>
+                </dialog>
             </section>
             <section class="app-screen pb-tela" id="telaCenarioJoao" aria-labelledby="cjTitulo" hidden>
                 <header class="cj-cabecalho">
@@ -5955,6 +5987,7 @@
                         <p id="ceMensagem" class="ce-mensagem" role="status">Nada será gravado nesta etapa.</p>
                         <div class="cj-toolbar">
                             <button type="button" id="ceAdicionar">Adicionar objeto</button>
+                            <button type="button" id="ceAbrirObjetos" aria-haspopup="dialog" aria-controls="ceObjetosDialog">Objetos do Cenário</button>
                             <button type="button" id="ceCentro" hidden>Criar área ao centro</button>
                         </div>
                         <form id="ceFormulario" class="ce-formulario" hidden>
@@ -5992,6 +6025,16 @@
                         <button class="cj-fechar" id="cjFecharObjeto" type="button">Fechar detalhes</button>
                     </section>
                 </div>
+                <dialog id="ceObjetosDialog" class="ce-objetos-dialog" aria-labelledby="ceObjetosTitulo" aria-describedby="ceObjetosDemo" data-livro="JHN" data-mundo="joao-cenario-01">
+                    <header class="ce-objetos-topo">
+                        <div><h2 id="ceObjetosTitulo">Objetos do Cenário</h2><p>João · Panorama original</p></div>
+                        <button id="ceFecharObjetos" type="button" aria-label="Fechar Objetos do Cenário" autofocus>×</button>
+                    </header>
+                    <p id="ceObjetosDemo" class="ce-objetos-demo">Prévia visual · exemplos demonstrativos, sem dados do seu acervo.</p>
+                    <label class="ce-objetos-busca" for="ceBuscaObjetos">Buscar nos exemplos<input id="ceBuscaObjetos" type="search" placeholder="Nome ou referência" autocomplete="off"></label>
+                    <ul id="ceObjetosLista" class="ce-objetos-lista" aria-label="Objetos demonstrativos"></ul>
+                    <p id="ceObjetosVazio" class="ce-objetos-vazio" role="status" hidden>Nenhum exemplo encontrado.</p>
+                </dialog>
             </section>
         </main>
 
